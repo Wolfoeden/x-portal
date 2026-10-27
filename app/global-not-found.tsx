@@ -14,7 +14,7 @@ export default function GlobalNotFound() {
     <html lang="de" className={inter.variable}>
       <body className="font-sans">
         <main className="mx-auto flex min-h-svh w-full max-w-[720px] flex-col justify-center gap-10 px-5 py-16 md:px-8">
-          <Wordmark className="h-[17px] w-[120px] text-ink" title="XPORTAL" />
+          <Wordmark className="h-7 w-auto self-start text-ink" title="XPORTAL" />
           <div className="flex flex-col gap-4">
             <h1 className="text-[clamp(2.5rem,6vw,4.5rem)] font-medium leading-[0.98] tracking-[-0.04em] text-ink">Diese Seite gibt es nicht.</h1>
             <p lang="en" className="text-[clamp(1.5rem,3vw,2.25rem)] font-medium leading-tight tracking-[-0.02em] text-muted">

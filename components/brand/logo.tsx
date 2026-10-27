@@ -17,7 +17,7 @@ export function LogoMark({ className = '', title }: { className?: string; title?
   )
 }
 
-/** Wortmarke: Die Bildmarke ist das X von XPORTAL. */
+/** Wortmarke: das Logo mit dem X als Bildmarke, ein Pfad. */
 export function Wordmark({ className = '', title }: { className?: string; title?: string }) {
   return (
     <svg
@@ -29,8 +29,7 @@ export function Wordmark({ className = '', title }: { className?: string; title?
       focusable="false"
     >
       {title ? <title>{title}</title> : null}
-      <path fillRule="evenodd" d={WORDMARK.mark} />
-      <path d={WORDMARK.text} />
+      <path fillRule="evenodd" d={WORDMARK.d} />
     </svg>
   )
 }

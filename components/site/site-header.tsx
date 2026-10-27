@@ -22,6 +22,7 @@ import { useLocale } from '@/components/i18n/locale-provider'
 import { useLanguageSwitch } from '@/components/i18n/language-link'
 import { pageHref, pagePath, type Locale } from '@/lib/i18n/routes'
 import type { MenuEntry } from '@/lib/i18n/types'
+import { APP_START_PATH } from '@/lib/site'
 
 const icons: Record<MenuEntry['icon'], ComponentType<LucideProps>> = {
   talent: Users,
@@ -154,7 +155,7 @@ export function SiteHeader() {
     >
       <Container className="flex h-16 items-center gap-6">
         <Link href={pagePath('home', locale)} className="shrink-0 rounded-md text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand" aria-label={text.homeLabel}>
-          <Wordmark className="h-[17px] w-auto" />
+          <Wordmark className="h-7 w-auto" />
         </Link>
 
         <nav aria-label={text.navLabel} className="ml-4 hidden items-center text-[15px] text-ink xl:flex">
@@ -187,10 +188,17 @@ export function SiteHeader() {
             <Globe aria-hidden size={16} strokeWidth={1.75} />
             {text.otherLanguage}
           </Link>
-          <Link href={pagePath('signIn', locale)} className="hidden h-10 items-center rounded-full px-3 text-[15px] text-ink transition-colors hover:text-brand sm:inline-flex">
+          {/* Angemeldet oder nicht entscheidet data-auth am <html> (components/auth/auth-state-script.tsx). */}
+          <Link href={pagePath('signIn', locale)} className="auth-out hidden h-10 items-center rounded-full px-3 text-[15px] text-ink transition-colors hover:text-brand sm:inline-flex">
             {text.signIn}
           </Link>
-          <ButtonLink href={pageHref('home', locale, 'project')} className="ml-1 h-10 px-[18px] max-sm:h-9 max-sm:px-4 max-sm:text-[14px]">
+          <Link href={pagePath('account', locale)} className="auth-in hidden h-10 items-center rounded-full px-3 text-[15px] text-ink transition-colors hover:text-brand sm:inline-flex">
+            {text.account}
+          </Link>
+          <ButtonLink href={pageHref('home', locale, 'project')} className="auth-out ml-1 h-10 px-[18px] max-sm:h-9 max-sm:px-4 max-sm:text-[14px]">
+            {text.start}
+          </ButtonLink>
+          <ButtonLink href={APP_START_PATH} prefetch={false} className="auth-in ml-1 h-10 px-[18px] max-sm:h-9 max-sm:px-4 max-sm:text-[14px]">
             {text.start}
           </ButtonLink>
           <button
@@ -241,11 +249,17 @@ export function SiteHeader() {
             })}
           </ul>
           <div className="flex flex-col gap-3">
-            <ButtonLink href={pageHref('home', locale, 'project')} onClick={() => setMobileOpen(false)} className="h-12 w-full">
+            <ButtonLink href={pageHref('home', locale, 'project')} onClick={() => setMobileOpen(false)} className="auth-out h-12 w-full">
               {text.start}
             </ButtonLink>
-            <ButtonLink href={pagePath('signIn', locale)} variant="secondary" onClick={() => setMobileOpen(false)} className="h-12 w-full">
+            <ButtonLink href={APP_START_PATH} prefetch={false} onClick={() => setMobileOpen(false)} className="auth-in h-12 w-full">
+              {text.start}
+            </ButtonLink>
+            <ButtonLink href={pagePath('signIn', locale)} variant="secondary" onClick={() => setMobileOpen(false)} className="auth-out h-12 w-full">
               {text.signIn}
+            </ButtonLink>
+            <ButtonLink href={pagePath('account', locale)} variant="secondary" onClick={() => setMobileOpen(false)} className="auth-in h-12 w-full">
+              {text.account}
             </ButtonLink>
             <Link
               href={language.href}
