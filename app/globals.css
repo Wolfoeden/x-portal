@@ -1,0 +1,208 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #0e1411;
+  --color-body: #2b322e;
+  --color-muted: #5f6762;
+  --color-faint: #6b726d;
+  --color-line: #e7eae7;
+  --color-line-strong: #d5dbd6;
+  --color-surface: #f4f5f3;
+  --color-surface-2: #eceeeb;
+
+  --color-brand: #17643b;
+  --color-brand-hover: #0f4d2c;
+  --color-brand-soft: #e8f2ec;
+  --color-brand-ink: #135a34;
+  --color-brand-deep: #12402a;
+
+  --color-amber-soft: #fbf1dc;
+  --color-amber-ink: #7a4d0c;
+
+  --shadow-frame: 0 1px 2px rgb(14 20 17 / 0.04), 0 30px 70px -30px rgb(14 20 17 / 0.28);
+  --shadow-field: 0 1px 2px rgb(14 20 17 / 0.04), 0 10px 30px -14px rgb(14 20 17 / 0.16);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: #fff;
+    color: var(--color-body);
+  }
+
+  ::selection {
+    background: var(--color-brand-soft);
+    color: var(--color-ink);
+  }
+}
+
+@layer components {
+  .t-display {
+    color: var(--color-ink);
+    font-size: 2.5rem;
+    font-weight: 450;
+    letter-spacing: -0.035em;
+    line-height: 1.06;
+    text-wrap: balance;
+  }
+
+  .t-h2 {
+    color: var(--color-ink);
+    font-size: 1.875rem;
+    font-weight: 450;
+    letter-spacing: -0.03em;
+    line-height: 1.14;
+    text-wrap: balance;
+  }
+
+  .t-h3 {
+    color: var(--color-ink);
+    font-size: 1.5rem;
+    font-weight: 450;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  .t-lead {
+    color: var(--color-muted);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    text-wrap: pretty;
+  }
+
+  .fade-in {
+    animation: fade-in 320ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .accent-text {
+    background: linear-gradient(90deg, #17643b 0%, #23784a 45%, #3a9466 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  @media (min-width: 768px) {
+    .t-display {
+      font-size: 4rem;
+      line-height: 1.03;
+    }
+
+    .t-h2 {
+      font-size: 2.5rem;
+      line-height: 1.12;
+    }
+
+    .t-h3 {
+      font-size: 1.875rem;
+    }
+
+    .t-lead {
+      font-size: 1.1875rem;
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -5px, 0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(var(--dx), calc(var(--dy) * -1), 0);
+  }
+  50% {
+    transform: translate3d(calc(var(--dx) * -0.4), calc(var(--dy) * -0.3), 0);
+  }
+  75% {
+    transform: translate3d(calc(var(--dx) * -0.8), var(--dy), 0);
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+@keyframes hub-pulse {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.6);
+  }
+}
+
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+.drift {
+  animation: drift 7s ease-in-out infinite;
+}
+
+.caret {
+  animation: caret 1s steps(1) infinite;
+}
+
+.float {
+  animation: float 12s ease-in-out infinite;
+}
+
+.hub-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hub-pulse 2.4s ease-out infinite;
+}
+
+.bob {
+  animation: bob 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .drift,
+  .caret,
+  .float,
+  .bob,
+  .hub-pulse {
+    animation: none;
+  }
+}

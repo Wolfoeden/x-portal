@@ -1,0 +1,12 @@
+# Next.js auf Netlify: Seiten und /api laufen über den OpenNext-Adapter (@netlify/plugin-nextjs).
+# Er ist hier ausdrücklich eingebunden, weil Uploads ohne Git ihn nicht automatisch installieren.
+# Variablen (Supabase, OpenAI, …) stehen in der Netlify-Oberfläche, nicht hier.
+[build]
+  command = "pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

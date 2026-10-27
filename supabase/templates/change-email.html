@@ -1,0 +1,13 @@
+<!-- Supabase → Authentication → Emails → Change Email Address. Betreff: Neue E-Mail-Adresse bestätigen -->
+<div style="margin:0;padding:32px 16px;background:#f7f6f3;font-family:Inter,Helvetica,Arial,sans-serif;color:#0e1411">
+  <div style="max-width:520px;margin:0 auto;background:#ffffff;border:1px solid #e6e9e7;border-radius:20px;padding:32px">
+    <p style="margin:0 0 24px;font-size:15px;font-weight:600;letter-spacing:0.12em">XPORTAL</p>
+    <h1 style="margin:0 0 12px;font-size:24px;font-weight:500;letter-spacing:-0.02em">Neue E-Mail-Adresse bestätigen</h1>
+    <p style="margin:0 0 24px;font-size:16px;line-height:1.55;color:#4b524e">Ihr Konto soll künftig {{ .NewEmail }} statt {{ .Email }} verwenden. Bitte bestätigen Sie die Änderung.</p>
+    <p style="margin:0 0 28px">
+      <a href="{{ .SiteURL }}/auth/callback?token_hash={{ .TokenHash }}&type=email_change" style="display:inline-block;background:#17643b;color:#ffffff;text-decoration:none;font-size:15px;font-weight:500;padding:13px 24px;border-radius:999px">Änderung bestätigen</a>
+    </p>
+    <p style="margin:0 0 8px;font-size:13px;line-height:1.5;color:#7c847f">Das waren nicht Sie? Dann ignorieren Sie diese Mail; Ihre Adresse bleibt, wie sie ist.</p>
+    <p style="margin:0;font-size:13px;line-height:1.5;color:#7c847f">English: Confirm the new email address for your XPORTAL account with the button above.</p>
+  </div>
+</div>
