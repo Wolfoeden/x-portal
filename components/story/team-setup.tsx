@@ -57,7 +57,6 @@ export function TeamSetup() {
       </ul>
       {scenario.ai ? (
         <div className="mt-1 flex flex-col items-start gap-2.5 border-t border-line pt-4">
-          <p className="text-[14px] font-medium text-ink">{copy.model.title}</p>
           <ModelPicker value={choices.model} onChange={setModel} />
         </div>
       ) : null}

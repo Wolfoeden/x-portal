@@ -366,7 +366,7 @@ export function Opener({ pool = [] }: { pool?: Talent[] }) {
                         className="ml-[calc(var(--off)*0.35)] lg:ml-[var(--off)]"
                         style={{ '--off': `${offset}px` } as CSSProperties}
                       >
-                        <div className="bob" style={{ animationDuration: `${5.5 + index * 0.9}s`, animationDelay: `${-index * 1.3}s` }}>
+                        <div>
                           {visible ? (
                             <div className="flex h-16 items-center gap-3 rounded-2xl border border-line bg-white px-3.5 shadow-[0_1px_2px_rgb(14_20_17/0.05),0_22px_44px_-22px_rgb(14_20_17/0.32)]">
                               <Avatar talent={talent} size={40} />
@@ -433,7 +433,6 @@ export function Opener({ pool = [] }: { pool?: Talent[] }) {
 
                 {/* Bei KI-Projekten wählt der Auftraggeber das Modell. Der Platz bleibt reserviert, damit nichts springt. */}
                 <div inert={!showModel} className={`mt-3 flex min-h-9 flex-wrap items-center gap-x-3 gap-y-2 px-1 transition-opacity duration-300 ${showModel ? 'opacity-100' : 'opacity-0'}`}>
-                  <span className="text-[13px] text-faint">{dict.choices.model.label}</span>
                   <ModelPicker compact value={isStory ? story.choices.model : null} onChange={chooseModel} />
                 </div>
               </div>

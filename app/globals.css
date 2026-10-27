@@ -206,3 +206,35 @@
     animation: none;
   }
 }
+
+/* Angemeldet oder nicht: setzt components/auth/auth-state-script.tsx am <html>. */
+html[data-auth='in'] .auth-out,
+html:not([data-auth='in']) .auth-in {
+  display: none !important;
+}
+
+/* Ladeanimation (components/brand/loading-mark.tsx). */
+@keyframes loader-slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(300%);
+  }
+}
+
+.loader-bar {
+  animation: loader-slide 1.3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader-bar {
+    animation: none;
+    width: 100%;
+    opacity: 0.35;
+  }
+
+  .loader-shine {
+    display: none;
+  }
+}

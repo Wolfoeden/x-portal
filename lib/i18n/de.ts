@@ -84,6 +84,7 @@ export const de = {
     ]),
     otherLanguage: 'English',
     signIn: 'Anmelden',
+    account: 'Konto',
     start: 'Projekt starten',
     openMenu: 'Menü öffnen',
     closeMenu: 'Menü schließen',
@@ -497,6 +498,7 @@ export const de = {
     covered: 'deckt Ihr Team ab',
     budgetNote: 'Ohne die Stellen Ihres Teams.',
     model: {
+      // title nur für Screenreader an der Modellwahl, label für die Zeile in der Anforderungsliste.
       title: 'Welches KI-Modell?',
       label: 'KI-Modell',
       open: 'Ihre Wahl: Claude, OpenAI, unsere oder Ihre Server',
@@ -618,12 +620,13 @@ export const de = {
     label: 'Team',
     title: 'Die Menschen dahinter.',
     photoPending: 'Foto folgt',
+    linkedinLabel: '{name} auf LinkedIn',
     people: typed<TeamMember[]>([
-      { name: 'Roman Dering', role: 'Product Manager', photo: '/team/roman-dering.webp' },
-      { name: 'Name folgt', role: 'CEO', pending: true },
-      { name: 'Name folgt', role: 'Lead Developer', pending: true },
-      { name: 'Name folgt', role: 'Architekt · Hubs', pending: true },
-      { name: 'Name folgt', role: 'Jurist', pending: true },
+      { name: 'Roman Dering', role: 'Product Manager', photo: '/team/roman-dering.webp', linkedin: 'https://www.linkedin.com/in/roman-dering/' },
+      { name: 'Paul D.', role: 'CEO' },
+      { name: 'Pavel J.', role: 'Lead Developer' },
+      { name: 'Nazar D.', role: 'Architekt · Hubs' },
+      { name: 'Max H.', role: 'Jurist' },
     ]),
   },
 

@@ -12,7 +12,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
       <Container className="flex flex-col gap-14 py-16">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-[minmax(0,2fr)_repeat(4,minmax(0,1fr))]">
           <div className="col-span-2 flex flex-col gap-4 md:col-span-1">
-            <Wordmark className="h-[17px] w-[120px] text-ink" title="XPORTAL" />
+            <Wordmark className="h-7 w-auto self-start text-ink" title="XPORTAL" />
             <p className="max-w-[280px] text-[14px] leading-relaxed text-muted">{text.tagline}</p>
           </div>
           {text.columns.map((column) => (
