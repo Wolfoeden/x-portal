@@ -1,15 +1,11 @@
-import { Image as ImageIcon, Map as MapIcon, Ruler } from 'lucide-react'
+import Image from 'next/image'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, type Locale } from '@/lib/i18n/routes'
 
-// Platzhalter, bis Pläne, Renderings und Fotos vom Architekten da sind.
-const frames = [
-  { icon: Ruler, className: 'aspect-[4/3] md:col-span-2' },
-  { icon: ImageIcon, className: 'aspect-[4/3] md:aspect-auto' },
-  { icon: MapIcon, className: 'aspect-[4/3] md:col-span-3 md:aspect-[3/1]' },
-]
+// Hub 01: Visualisierungen auf dem echten Grundstück und der Entwurf Stufe 1. Ort nur als Region, ohne Kataster.
+const frames = ['aspect-[4/3] md:col-span-2', 'aspect-[4/3] bg-white md:aspect-auto', 'aspect-[16/10] md:col-span-3']
 
 export function ChapterHub({ locale }: { locale: Locale }) {
   const copy = getDictionary(locale).investors.hub
@@ -24,6 +20,7 @@ export function ChapterHub({ locale }: { locale: Locale }) {
             {copy.title}
           </h2>
           <p className="max-w-[420px] text-[18px] leading-relaxed text-[#cfe2d6]">{copy.text}</p>
+          <p className="max-w-[420px] text-[15px] leading-relaxed text-[#bfd8c8]">{copy.kind}</p>
           <div className="mt-6 flex flex-col gap-3">
             <div className="flex items-center gap-1.5" aria-label={copy.squaresLabel}>
               {Array.from({ length: 10 }, (_, index) => (
@@ -36,15 +33,20 @@ export function ChapterHub({ locale }: { locale: Locale }) {
         </div>
 
         <div className="grid grid-cols-[minmax(0,1fr)] gap-3 md:grid-cols-3">
-          {frames.map(({ icon: Icon, className }, index) => (
-            <div key={copy.frames[index]} className={`relative grid place-items-center overflow-hidden rounded-[22px] border border-dashed border-white/25 bg-white/[0.03] ${className}`}>
-              <div aria-hidden className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:28px_28px]" />
-              <p className="relative flex flex-col items-center gap-2 text-center">
-                <Icon aria-hidden size={22} strokeWidth={1.5} className="text-[#bfd8c8]" />
-                <span className="text-[15px] font-medium">{copy.frames[index]}</span>
-                <span className="text-[13px] text-[#bfd8c8]">{copy.pending}</span>
-              </p>
-            </div>
+          {copy.images.map((image, index) => (
+            <figure key={image.src} className={`relative overflow-hidden rounded-[22px] ${frames[index] ?? 'aspect-[4/3]'}`}>
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes={index === 1 ? '(min-width: 1024px) 220px, (min-width: 768px) 33vw, 100vw' : '(min-width: 1024px) 660px, 100vw'}
+                className={index === 1 ? 'object-contain p-2' : 'object-cover'}
+                priority={index === 0}
+              />
+              <figcaption className="absolute bottom-3 left-3 rounded-full bg-black/55 px-3 py-1 text-[12.5px] font-medium text-white backdrop-blur-sm">
+                {image.caption}
+              </figcaption>
+            </figure>
           ))}
         </div>
       </Container>

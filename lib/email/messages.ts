@@ -74,3 +74,65 @@ export function freelancerPublishedNotification(input: { firstName: string; role
     ].join('\n'),
   }
 }
+
+const INTEREST_NAMES: Record<string, string> = { buy: 'Kaufen', rent: 'Mieten', both: 'Noch offen' }
+const MOVE_IN_NAMES: Record<string, string> = { spring_2027: 'Frühjahr 2027', later: 'Später' }
+
+/** Bestätigungslink für die Warteliste Hub 01, in der Sprache des Eintrags. Wiederholt keine Eingaben. */
+export function waitlistConfirmLink(input: { locale: Locale; link: string }) {
+  if (input.locale === 'en') {
+    return {
+      subject: 'Please confirm: waiting list for Hub 01',
+      text: [
+        'Hello,',
+        '',
+        'please confirm that you would like to join the waiting list for Hub 01 in the Carpathians:',
+        '',
+        input.link,
+        '',
+        'The link is valid for seven days. Joining is not binding and involves no payment. We will write to you once prices and dates are set.',
+        '',
+        'XPORTAL',
+        'https://x-portal.eu',
+        '',
+        'You are receiving this email because this address was entered on x-portal.eu. If that was not you, simply ignore it; without confirmation nothing happens.',
+      ].join('\n'),
+    }
+  }
+  return {
+    subject: 'Bitte bestätigen: Warteliste Hub 01',
+    text: [
+      'Guten Tag,',
+      '',
+      'bitte bestätigen Sie, dass Sie auf die Warteliste für Hub 01 in den Karpaten möchten:',
+      '',
+      input.link,
+      '',
+      'Der Link gilt sieben Tage. Der Eintrag ist unverbindlich und ohne Zahlung. Wir schreiben Ihnen, sobald Preise und Termine feststehen.',
+      '',
+      'XPORTAL',
+      'https://x-portal.eu',
+      '',
+      'Sie erhalten diese Mail, weil diese Adresse auf x-portal.eu eingetragen wurde. Waren Sie das nicht, ignorieren Sie sie einfach; ohne Bestätigung passiert nichts.',
+    ].join('\n'),
+  }
+}
+
+/** An das Postfach des Betreibers, sobald ein Eintrag bestätigt ist. */
+export function waitlistNotification(input: { name: string; email: string; interest: string; move_in: string | null; note: string | null; locale: string }) {
+  return {
+    subject: `Warteliste Hub 01: ${INTEREST_NAMES[input.interest] ?? input.interest} · ${input.name}`.slice(0, 160),
+    text: [
+      `Name: ${input.name}`,
+      `E-Mail: ${input.email}`,
+      `Möchte: ${INTEREST_NAMES[input.interest] ?? input.interest}`,
+      `Einzug: ${input.move_in ? (MOVE_IN_NAMES[input.move_in] ?? input.move_in) : '–'}`,
+      `Sprache: ${input.locale === 'en' ? 'Englisch' : 'Deutsch'}`,
+      '',
+      input.note || '(keine Nachricht)',
+      '',
+      '—',
+      'Bestätigt per Link. Alle Einträge in Supabase unter public.waitlist_entries.',
+    ].join('\n'),
+  }
+}
