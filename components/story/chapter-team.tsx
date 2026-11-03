@@ -18,7 +18,7 @@ export function ChapterTeam({ locale, number = '07' }: { locale: Locale; number?
             {copy.title}
           </h2>
         </div>
-        <ul className="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 lg:grid-cols-5">
+        <ul className="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4">
           {copy.people.map((person) => (
             <li key={person.role} className="flex flex-col gap-3">
               {person.photo && person.linkedin ? (

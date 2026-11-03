@@ -623,7 +623,6 @@ export const de = {
     linkedinLabel: '{name} auf LinkedIn',
     people: typed<TeamMember[]>([
       { name: 'Roman Dering', role: 'Product Manager', photo: '/team/roman-dering.webp', linkedin: 'https://www.linkedin.com/in/roman-dering/' },
-      { name: 'Paul D.', role: 'CEO' },
       { name: 'Pavel J.', role: 'Lead Developer' },
       { name: 'Nazar D.', role: 'Architekt · Hubs' },
       { name: 'Max H.', role: 'Jurist' },

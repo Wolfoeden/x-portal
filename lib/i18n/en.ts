@@ -614,7 +614,6 @@ export const en: Dictionary = {
     linkedinLabel: '{name} on LinkedIn',
     people: [
       { name: 'Roman Dering', role: 'Product Manager', photo: '/team/roman-dering.webp', linkedin: 'https://www.linkedin.com/in/roman-dering/' },
-      { name: 'Paul D.', role: 'CEO' },
       { name: 'Pavel J.', role: 'Lead Developer' },
       { name: 'Nazar D.', role: 'Architect · Hubs' },
       { name: 'Max H.', role: 'Legal counsel' },
