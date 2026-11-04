@@ -29,7 +29,7 @@ export const en: Dictionary = {
     },
     investors: {
       title: 'For investors · XPORTAL',
-      description: 'Talent, projects, places: XPORTAL connects AI freelancers, project delivery and its own nodes across Europe. Roadmap, revenue streams and deck request.',
+      description: 'Talent, projects, places: XPORTAL connects AI freelancers, project delivery and nodes across Europe. Roadmap, revenue streams and deck request.',
     },
     contact: {
       title: 'Contact · XPORTAL',
@@ -62,7 +62,7 @@ export const en: Dictionary = {
         entries: [
           { label: 'Talent', page: 'home', anchor: 'reasons', text: 'Find AI freelancers, with reasons for every match', icon: 'talent' },
           { label: 'Projects', page: 'home', anchor: 'platform', text: 'Team, sign-off and payment in one place', icon: 'projects' },
-          { label: 'Nodes', page: 'home', anchor: 'hubs', text: 'Workplaces on our own sites', icon: 'hubs' },
+          { label: 'Nodes', page: 'home', anchor: 'hubs', text: 'Workplaces across Europe, the first in the Carpathians', icon: 'hubs' },
         ],
       },
       {
@@ -587,7 +587,7 @@ export const en: Dictionary = {
       andThen: 'And then …',
       label: 'Nodes',
       title: 'And then we build places.',
-      text: 'Workplaces on our own sites, for teams on site. The first one is planned.',
+      text: 'Workplaces across Europe, for teams on site. The first, in the Carpathians, is planned.',
       squaresLabel: 'One node planned, a goal of ten nodes',
       count: '01 of 10 · Goal: ten nodes in Europe',
       investors: 'For investors',
@@ -613,7 +613,7 @@ export const en: Dictionary = {
     photoPending: 'Photo to follow',
     linkedinLabel: '{name} on LinkedIn',
     people: [
-      { name: 'Roman Dering', role: 'Product Manager', photo: '/team/roman-dering.webp', linkedin: 'https://www.linkedin.com/in/roman-dering/' },
+      { name: 'Roman Dering', role: 'Product and project', photo: '/team/roman-dering.webp', linkedin: 'https://www.linkedin.com/in/roman-dering/' },
       { name: 'Paul D.', role: 'CEO' },
       { name: 'Pavel J.', role: 'Lead Developer' },
       { name: 'Nazar D.', role: 'Architect · Nodes' },
@@ -885,7 +885,7 @@ export const en: Dictionary = {
       nodes: [
         { name: 'Talent', text: 'AI freelancers from across Europe, matched with reasons.' },
         { name: 'Projects', text: 'Led from request to sign-off, with data in the EU.' },
-        { name: 'Places', text: 'Our own nodes for on-site work with customer data.' },
+        { name: 'Places', text: 'Nodes for on-site work with customer data.' },
       ],
     },
     whyNow: {

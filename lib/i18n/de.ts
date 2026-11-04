@@ -32,7 +32,7 @@ export const de = {
     },
     investors: {
       title: 'Für Investoren · XPORTAL',
-      description: 'Talente, Projekte, Orte: XPORTAL verbindet KI-Freelancer, Projektführung und eigene Nodes in Europa. Roadmap, Erlösquellen und Deck-Anfrage.',
+      description: 'Talente, Projekte, Orte: XPORTAL verbindet KI-Freelancer, Projektführung und Nodes in Europa. Roadmap, Erlösquellen und Deck-Anfrage.',
     },
     contact: {
       title: 'Kontakt · XPORTAL',
@@ -65,7 +65,7 @@ export const de = {
         entries: typed<MenuEntry[]>([
           { label: 'Talent', page: 'home', anchor: 'reasons', text: 'KI-Freelancer finden, mit Begründung je Treffer', icon: 'talent' },
           { label: 'Projekte', page: 'home', anchor: 'platform', text: 'Team, Abnahme und Zahlung an einem Ort', icon: 'projects' },
-          { label: 'Nodes', page: 'home', anchor: 'hubs', text: 'Arbeitsorte auf eigenen Grundstücken', icon: 'hubs' },
+          { label: 'Nodes', page: 'home', anchor: 'hubs', text: 'Arbeitsorte in Europa, der erste in den Karpaten', icon: 'hubs' },
         ]),
       },
       {
@@ -596,7 +596,7 @@ export const de = {
       andThen: 'Und dann …',
       label: 'Nodes',
       title: 'Und dann bauen wir Orte.',
-      text: 'Arbeitsorte auf eigenen Grundstücken, für Teams vor Ort. Der erste ist geplant.',
+      text: 'Arbeitsorte in Europa, für Teams vor Ort. Der erste in den Karpaten ist geplant.',
       squaresLabel: 'Ein Node geplant, Ziel zehn Nodes',
       count: '01 von 10 · Ziel: zehn Nodes in Europa',
       investors: 'Für Investoren',
@@ -622,7 +622,7 @@ export const de = {
     photoPending: 'Foto folgt',
     linkedinLabel: '{name} auf LinkedIn',
     people: typed<TeamMember[]>([
-      { name: 'Roman Dering', role: 'Product Manager', photo: '/team/roman-dering.webp', linkedin: 'https://www.linkedin.com/in/roman-dering/' },
+      { name: 'Roman Dering', role: 'Produkt und Projekt', photo: '/team/roman-dering.webp', linkedin: 'https://www.linkedin.com/in/roman-dering/' },
       { name: 'Paul D.', role: 'CEO' },
       { name: 'Pavel J.', role: 'Lead Developer' },
       { name: 'Nazar D.', role: 'Architekt · Nodes' },
@@ -895,7 +895,7 @@ export const de = {
       nodes: [
         { name: 'Talente', text: 'KI-Freelancer aus Europa, gefunden mit Begründung.' },
         { name: 'Projekte', text: 'Geführt von der Anfrage bis zur Abnahme, Daten in der EU.' },
-        { name: 'Orte', text: 'Eigene Nodes für Arbeit mit Kundendaten vor Ort.' },
+        { name: 'Orte', text: 'Nodes für Arbeit mit Kundendaten vor Ort.' },
       ],
     },
     whyNow: {
