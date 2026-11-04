@@ -65,7 +65,7 @@ export const de = {
         entries: typed<MenuEntry[]>([
           { label: 'Talent', page: 'home', anchor: 'reasons', text: 'KI-Freelancer finden, mit Begründung je Treffer', icon: 'talent' },
           { label: 'Projekte', page: 'home', anchor: 'platform', text: 'Team, Abnahme und Zahlung an einem Ort', icon: 'projects' },
-          { label: 'Nodes', page: 'home', anchor: 'hubs', text: 'Arbeitsorte in Europa, der erste in den Karpaten', icon: 'hubs' },
+          { label: 'Nodes', page: 'home', anchor: 'hubs', text: 'Europaweite Arbeitsorte, der erste in der Ukraine', icon: 'hubs' },
         ]),
       },
       {
@@ -596,7 +596,7 @@ export const de = {
       andThen: 'Und dann …',
       label: 'Nodes',
       title: 'Und dann bauen wir Orte.',
-      text: 'Arbeitsorte in Europa, für Teams vor Ort. Der erste in den Karpaten ist geplant.',
+      text: 'Europaweite Arbeitsorte für Teams vor Ort. Der erste in der Ukraine ist geplant.',
       squaresLabel: 'Ein Node geplant, Ziel zehn Nodes',
       count: '01 von 10 · Ziel: zehn Nodes in Europa',
       investors: 'Für Investoren',
@@ -824,7 +824,7 @@ export const de = {
       title: 'Vor Ort oder remote.',
       text: 'Im Node arbeiten Sie mit Kundendaten. Remote mit synthetischen Testdaten. Sie wählen.',
       you: 'Sie',
-      hubNote: 'Node001 ist geplant: erste Häuser ab Frühjahr 2027 in den Karpaten, Ukraine.',
+      hubNote: 'Node001 ist geplant: erste Häuser ab Frühjahr 2027 in der Ukraine.',
     },
     free: {
       label: 'Kosten',
@@ -968,7 +968,7 @@ export const de = {
     hub: {
       label: 'Node001',
       title: 'Der erste Ort.',
-      text: 'Karpaten bei Werchowyna, Ukraine, etwa 1.050 m hoch. Die ersten Häuser stehen frühestens im Frühjahr 2027, sobald der Boden frostfrei ist.',
+      text: 'In den Bergen der Ukraine, etwa 1.050 m hoch. Die ersten Häuser stehen frühestens im Frühjahr 2027, sobald der Boden frostfrei ist.',
       kind: 'Gedämmte Wohncontainer als Tiny Houses. Welches Modell, hängt an Lieferbarkeit, Zufahrt und Preis.',
       squaresLabel: 'Ein Node geplant, Ziel zehn Nodes',
       count: '01 von 10 · Warteliste offen',
@@ -980,7 +980,7 @@ export const de = {
     },
     plots: {
       label: 'Kaufen oder mieten',
-      title: 'Ein eigenes Tiny House in den Karpaten.',
+      title: 'Ein eigenes Tiny House in der Ukraine.',
       text: 'Für Menschen, die remote arbeiten und günstig in der Natur leben wollen. Zuerst kommt die Warteliste. Gekauft wird erst, wenn alles geprüft ist.',
       steps: [
         { when: 'Jetzt', title: 'Warteliste', text: 'Unverbindlich und ohne Zahlung. Sie sagen uns, ob Sie kaufen oder mieten möchten.' },
@@ -990,7 +990,7 @@ export const de = {
       ],
       factsLabel: 'Vor Ort',
       facts: [
-        { label: 'Ort', value: 'Karpaten bei Werchowyna, etwa 1.050 m' },
+        { label: 'Ort', value: 'Ukraine, in den Bergen, etwa 1.050 m' },
         { label: 'Internet', value: 'eigener Anschluss, Starlink als Reserve' },
         { label: 'Strom', value: 'Netz mit Batterie oder Generator, dazu Solar' },
         { label: 'Gemeinsam', value: 'Platz zum Arbeiten mit Küche und Sanitär' },
@@ -1019,7 +1019,7 @@ export const de = {
     },
     waitlist: {
       title: 'Auf die Warteliste.',
-      text: 'Für Node001 in den Karpaten. Unverbindlich und ohne Zahlung. Wir schreiben Ihnen, sobald Preise und Termine feststehen.',
+      text: 'Für Node001 in der Ukraine. Unverbindlich und ohne Zahlung. Wir schreiben Ihnen, sobald Preise und Termine feststehen.',
       legal: 'Der Eintrag ist unverbindlich und kein Kaufvertrag. Diese Seite ist kein öffentliches Angebot von Wertpapieren, Vermögensanlagen oder Kryptowerten und keine Anlageberatung.',
       name: 'Name',
       email: 'E-Mail',

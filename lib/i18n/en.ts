@@ -62,7 +62,7 @@ export const en: Dictionary = {
         entries: [
           { label: 'Talent', page: 'home', anchor: 'reasons', text: 'Find AI freelancers, with reasons for every match', icon: 'talent' },
           { label: 'Projects', page: 'home', anchor: 'platform', text: 'Team, sign-off and payment in one place', icon: 'projects' },
-          { label: 'Nodes', page: 'home', anchor: 'hubs', text: 'Workplaces across Europe, the first in the Carpathians', icon: 'hubs' },
+          { label: 'Nodes', page: 'home', anchor: 'hubs', text: 'Workplaces across Europe, the first in Ukraine', icon: 'hubs' },
         ],
       },
       {
@@ -587,7 +587,7 @@ export const en: Dictionary = {
       andThen: 'And then …',
       label: 'Nodes',
       title: 'And then we build places.',
-      text: 'Workplaces across Europe, for teams on site. The first, in the Carpathians, is planned.',
+      text: 'Workplaces across Europe for teams on site. The first, in Ukraine, is planned.',
       squaresLabel: 'One node planned, a goal of ten nodes',
       count: '01 of 10 · Goal: ten nodes in Europe',
       investors: 'For investors',
@@ -814,7 +814,7 @@ export const en: Dictionary = {
       title: 'On site or remote.',
       text: 'At a node you work with customer data. Remotely with synthetic test data. Your choice.',
       you: 'You',
-      hubNote: 'Node001 is planned: first homes from spring 2027 in the Carpathians, Ukraine.',
+      hubNote: 'Node001 is planned: first homes from spring 2027 in Ukraine.',
     },
     free: {
       label: 'Costs',
@@ -958,7 +958,7 @@ export const en: Dictionary = {
     hub: {
       label: 'Node001',
       title: 'The first place.',
-      text: 'The Carpathians near Verkhovyna, Ukraine, at about 1,050 m. The first homes go up in spring 2027 at the earliest, once the ground has thawed.',
+      text: 'In the mountains of Ukraine, at about 1,050 m. The first homes go up in spring 2027 at the earliest, once the ground has thawed.',
       kind: 'Insulated living containers as tiny houses. Which model depends on availability, the access road and price.',
       squaresLabel: 'One node planned, a goal of ten nodes',
       count: '01 of 10 · waiting list open',
@@ -970,7 +970,7 @@ export const en: Dictionary = {
     },
     plots: {
       label: 'Buy or rent',
-      title: 'Your own tiny house in the Carpathians.',
+      title: 'Your own tiny house in Ukraine.',
       text: 'For people who work remotely and want to live affordably in nature. The waiting list comes first. Nothing is sold until everything has been checked.',
       steps: [
         { when: 'Now', title: 'Waiting list', text: 'No obligation and no payment. Tell us whether you would like to buy or rent.' },
@@ -980,7 +980,7 @@ export const en: Dictionary = {
       ],
       factsLabel: 'On site',
       facts: [
-        { label: 'Location', value: 'Carpathians near Verkhovyna, about 1,050 m' },
+        { label: 'Location', value: 'Ukraine, in the mountains, about 1,050 m' },
         { label: 'Internet', value: 'own connection, Starlink as backup' },
         { label: 'Power', value: 'grid with battery or generator, plus solar' },
         { label: 'Shared', value: 'a workspace with kitchen and bathrooms' },
@@ -1009,7 +1009,7 @@ export const en: Dictionary = {
     },
     waitlist: {
       title: 'Join the waiting list.',
-      text: 'For Node001 in the Carpathians. No obligation and no payment. We will write to you once prices and dates are set.',
+      text: 'For Node001 in Ukraine. No obligation and no payment. We will write to you once prices and dates are set.',
       legal: 'Joining is not binding and is not a purchase contract. This page is not a public offer of securities, investment products or crypto-assets and is not investment advice.',
       name: 'Name',
       email: 'Email',

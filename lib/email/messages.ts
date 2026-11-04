@@ -86,7 +86,7 @@ export function waitlistConfirmLink(input: { locale: Locale; link: string }) {
       text: [
         'Hello,',
         '',
-        'please confirm that you would like to join the waiting list for Node001 in the Carpathians:',
+        'please confirm that you would like to join the waiting list for Node001 in Ukraine:',
         '',
         input.link,
         '',
@@ -104,7 +104,7 @@ export function waitlistConfirmLink(input: { locale: Locale; link: string }) {
     text: [
       'Guten Tag,',
       '',
-      'bitte bestätigen Sie, dass Sie auf die Warteliste für Node001 in den Karpaten möchten:',
+      'bitte bestätigen Sie, dass Sie auf die Warteliste für Node001 in der Ukraine möchten:',
       '',
       input.link,
       '',
