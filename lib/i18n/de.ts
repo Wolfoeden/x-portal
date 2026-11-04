@@ -36,7 +36,7 @@ export const de = {
     },
     contact: {
       title: 'Kontakt · XPORTAL',
-      description: 'KI-Automatisierung ab 490 €, KI-Schulung nach EU AI Act oder ISMS nach ISO 27001: Schreiben Sie uns, wir melden uns persönlich.',
+      description: 'KI-Automatisierung, KI-Schulung nach EU AI Act oder ISMS nach ISO 27001: Schreiben Sie uns, wir melden uns persönlich.',
     },
     signIn: {
       title: 'Anmelden · XPORTAL',
@@ -71,7 +71,7 @@ export const de = {
       {
         label: 'Leistungen',
         entries: typed<MenuEntry[]>([
-          { label: 'KI-Automatisierung', page: 'contact', anchor: 'topicAutomation', text: 'Ein Ablauf automatisiert, ab 490 €', icon: 'automation' },
+          { label: 'KI-Automatisierung', page: 'contact', anchor: 'topicAutomation', text: 'Ein Ablauf automatisiert, Preis nach Absprache', icon: 'automation' },
           { label: 'KI-Schulung', page: 'contact', anchor: 'topicTraining', text: 'Pflicht nach EU AI Act, Art. 4', icon: 'training' },
           { label: 'ISMS', page: 'contact', anchor: 'topicIsms', text: 'Informationssicherheit nach ISO 27001', icon: 'isms' },
         ]),
@@ -464,7 +464,7 @@ export const de = {
     text: 'Wählen Sie ein Thema und schreiben Sie uns ein paar Sätze. Wir melden uns persönlich.',
     topicsLabel: 'Worum geht es?',
     topics: typed<Record<ContactTopic, { label: string; text: string; placeholder: string }>>({
-      automation: { label: 'KI-Automatisierung', text: 'Ein Ablauf automatisiert, ab 490 €', placeholder: 'Welcher Ablauf kostet Sie heute am meisten Zeit?' },
+      automation: { label: 'KI-Automatisierung', text: 'Ein Ablauf automatisiert, Preis nach Absprache', placeholder: 'Welcher Ablauf kostet Sie heute am meisten Zeit?' },
       training: { label: 'KI-Schulung', text: 'Pflicht nach EU AI Act, Art. 4', placeholder: 'Wie viele Personen sollen geschult werden, und wo stehen sie heute?' },
       isms: { label: 'ISMS', text: 'Informationssicherheit nach ISO 27001', placeholder: 'Wo stehen Sie heute, und bis wann brauchen Sie das Zertifikat?' },
       general: { label: 'Etwas anderes', text: 'Partnerschaft, Presse oder eine Frage', placeholder: 'Worum geht es?' },
@@ -936,7 +936,7 @@ export const de = {
           status: 'Heute im Angebot',
           live: true,
           items: [
-            { label: 'KI-Automatisierung', value: 'ab 490 €' },
+            { label: 'KI-Automatisierung', value: 'nach Absprache' },
             { label: 'KI-Schulung', value: 'nach EU AI Act' },
             { label: 'ISMS', value: 'nach ISO 27001' },
           ],

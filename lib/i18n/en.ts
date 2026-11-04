@@ -33,7 +33,7 @@ export const en: Dictionary = {
     },
     contact: {
       title: 'Contact · XPORTAL',
-      description: 'AI automation from €490, AI training under the EU AI Act or an ISMS to ISO 27001: write to us and we will get back to you personally.',
+      description: 'AI automation, AI training under the EU AI Act or an ISMS to ISO 27001: write to us and we will get back to you personally.',
     },
     signIn: {
       title: 'Sign in · XPORTAL',
@@ -68,7 +68,7 @@ export const en: Dictionary = {
       {
         label: 'Services',
         entries: [
-          { label: 'AI automation', page: 'contact', anchor: 'topicAutomation', text: 'One workflow automated, from €490', icon: 'automation' },
+          { label: 'AI automation', page: 'contact', anchor: 'topicAutomation', text: 'One workflow automated, price on request', icon: 'automation' },
           { label: 'AI training', page: 'contact', anchor: 'topicTraining', text: 'Required by the EU AI Act, Art. 4', icon: 'training' },
           { label: 'ISMS', page: 'contact', anchor: 'topicIsms', text: 'Information security to ISO 27001', icon: 'isms' },
         ],
@@ -458,7 +458,7 @@ export const en: Dictionary = {
     text: 'Pick a topic and write us a few lines. We will get back to you personally.',
     topicsLabel: 'What is it about?',
     topics: {
-      automation: { label: 'AI automation', text: 'One workflow automated, from €490', placeholder: 'Which process costs you the most time today?' },
+      automation: { label: 'AI automation', text: 'One workflow automated, price on request', placeholder: 'Which process costs you the most time today?' },
       training: { label: 'AI training', text: 'Required by the EU AI Act, Art. 4', placeholder: 'How many people need training, and where do they stand today?' },
       isms: { label: 'ISMS', text: 'Information security to ISO 27001', placeholder: 'Where do you stand today, and when do you need the certificate?' },
       general: { label: 'Something else', text: 'Partnership, press or a question', placeholder: 'What is it about?' },
@@ -926,7 +926,7 @@ export const en: Dictionary = {
           status: 'Available today',
           live: true,
           items: [
-            { label: 'AI automation', value: 'from €490' },
+            { label: 'AI automation', value: 'on request' },
             { label: 'AI training', value: 'under the EU AI Act' },
             { label: 'ISMS', value: 'to ISO 27001' },
           ],
