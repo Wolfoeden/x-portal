@@ -92,9 +92,9 @@ describe('confirmWaitlist', () => {
 describe('Mails der Warteliste', () => {
   it('wiederholen keine Eingaben an den Eintragenden und nennen die Wahl dem Betreiber', () => {
     const mail = waitlistConfirmLink({ locale: 'de', link: 'https://x-portal.eu/api/waitlist/confirm?token=x' })
-    expect(mail.subject).toBe('Bitte bestätigen: Warteliste Hub 01')
+    expect(mail.subject).toBe('Bitte bestätigen: Warteliste Node001')
     expect(mail.text).not.toContain('Lena')
-    expect(waitlistConfirmLink({ locale: 'en', link: 'l' }).subject).toContain('Hub 01')
+    expect(waitlistConfirmLink({ locale: 'en', link: 'l' }).subject).toContain('Node001')
     expect(waitlistNotification({ name: 'Lena', email: 'lena@example.de', interest: 'both', move_in: null, note: null, locale: 'de' }).text).toContain('Möchte: Noch offen')
   })
 })

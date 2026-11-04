@@ -32,7 +32,7 @@ export const de = {
     },
     investors: {
       title: 'Für Investoren · XPORTAL',
-      description: 'Talente, Projekte, Orte: XPORTAL verbindet KI-Freelancer, Projektführung und eigene Hubs in Europa. Roadmap, Erlösquellen und Deck-Anfrage.',
+      description: 'Talente, Projekte, Orte: XPORTAL verbindet KI-Freelancer, Projektführung und eigene Nodes in Europa. Roadmap, Erlösquellen und Deck-Anfrage.',
     },
     contact: {
       title: 'Kontakt · XPORTAL',
@@ -65,7 +65,7 @@ export const de = {
         entries: typed<MenuEntry[]>([
           { label: 'Talent', page: 'home', anchor: 'reasons', text: 'KI-Freelancer finden, mit Begründung je Treffer', icon: 'talent' },
           { label: 'Projekte', page: 'home', anchor: 'platform', text: 'Team, Abnahme und Zahlung an einem Ort', icon: 'projects' },
-          { label: 'Hubs', page: 'home', anchor: 'hubs', text: 'Arbeitsorte auf eigenen Grundstücken', icon: 'hubs' },
+          { label: 'Nodes', page: 'home', anchor: 'hubs', text: 'Arbeitsorte auf eigenen Grundstücken', icon: 'hubs' },
         ]),
       },
       {
@@ -98,7 +98,7 @@ export const de = {
         links: [
           { label: 'Talent', page: 'home', anchor: 'reasons' },
           { label: 'Projekte', page: 'home', anchor: 'platform' },
-          { label: 'Hubs', page: 'home', anchor: 'hubs' },
+          { label: 'Nodes', page: 'home', anchor: 'hubs' },
           { label: 'Für Freelancer', page: 'freelancer' },
         ],
       },
@@ -172,7 +172,7 @@ export const de = {
       rate: '980 € / Tag',
       requirements: [
         { label: 'RAG auf eigenen Dokumenten', met: true, by: 'Mara, 3 Projekte', who: 'mara' },
-        { label: 'Kundendaten nach DSGVO', met: true, by: 'Mara, vor Ort im Hub', who: 'mara' },
+        { label: 'Kundendaten nach DSGVO', met: true, by: 'Mara, vor Ort im Node', who: 'mara' },
         { label: 'Antworten mit Quellenangabe', met: true, by: 'Dokumenten-Assistent, Ergebnis prüft Mara', who: 'agent-docs' },
         { label: 'Start im Dezember', met: false, by: 'Noah erst ab 15.12., im Gespräch klären', who: 'noah' },
       ],
@@ -197,7 +197,7 @@ export const de = {
       requirements: [
         { label: 'n8n oder Make', met: true, by: 'Jonas, 12 Abläufe live', who: 'jonas' },
         { label: 'Belege automatisch lesen', met: true, by: 'Beleg-Agent, Ergebnis prüft Jonas', who: 'agent-receipts' },
-        { label: 'DATEV-Anbindung', met: true, by: 'Aylin, vor Ort im Hub', who: 'aylin' },
+        { label: 'DATEV-Anbindung', met: true, by: 'Aylin, vor Ort im Node', who: 'aylin' },
         { label: 'Start sofort', met: false, by: 'Aylin erst ab 01.12., im Gespräch klären', who: 'aylin' },
       ],
       deliveries: ['Belege werden gelesen', 'Angebote als Entwurf', 'Freigabe in DATEV'],
@@ -221,7 +221,7 @@ export const de = {
       requirements: [
         { label: 'Prognose für Abwanderung', met: true, by: 'Sara, 4 Modelle im Betrieb', who: 'sara' },
         { label: 'Daten aus CRM und Shop', met: true, by: 'Leon', who: 'leon' },
-        { label: 'DSGVO bei Kundendaten', met: true, by: 'Yara, vor Ort im Hub', who: 'yara' },
+        { label: 'DSGVO bei Kundendaten', met: true, by: 'Yara, vor Ort im Node', who: 'yara' },
         { label: 'Bericht für den Vertrieb', met: true, by: 'Auswertungs-Agent, Ergebnis prüft Sara', who: 'agent-insights' },
       ],
       deliveries: ['Datenpipeline steht', 'Modell trifft 8 von 10', 'Bericht für den Vertrieb'],
@@ -244,7 +244,7 @@ export const de = {
       requirements: [
         { label: 'ISO 27001 aus der Praxis', met: true, by: 'Clara, 6 Audits begleitet', who: 'clara' },
         { label: 'Lückenliste gegen NIS2 und ISO 27001', met: true, by: 'NIS2-Pre-Assessment, Ergebnis prüft Clara', who: 'agent-nis2' },
-        { label: 'NIS2-Pflichten', met: true, by: 'Tobias, vor Ort im Hub', who: 'tobias' },
+        { label: 'NIS2-Pflichten', met: true, by: 'Tobias, vor Ort im Node', who: 'tobias' },
         { label: 'Datenschutz im ISMS', met: true, by: 'Yara', who: 'yara' },
         { label: 'Fertig bis Sommer', met: false, by: 'Zeitplan im Gespräch klären' },
       ],
@@ -582,7 +582,7 @@ export const de = {
       label: 'Daten',
       title: 'Ihre Daten bleiben in Europa.',
       text: 'Wer Kundendaten braucht, arbeitet vor Ort. Alle anderen nie damit.',
-      onSiteZone: 'Vor Ort im Hub',
+      onSiteZone: 'Vor Ort im Node',
       access: 'Zugriff auf Kundendaten',
       remoteZone: 'Remote',
       synthetic: 'Nur synthetische Testdaten',
@@ -594,15 +594,15 @@ export const de = {
     },
     hubs: {
       andThen: 'Und dann …',
-      label: 'Hubs',
+      label: 'Nodes',
       title: 'Und dann bauen wir Orte.',
       text: 'Arbeitsorte auf eigenen Grundstücken, für Teams vor Ort. Der erste ist geplant.',
-      squaresLabel: 'Ein Hub geplant, Ziel zehn Hubs',
-      count: '01 von 10 · Ziel: zehn Hubs in Europa',
+      squaresLabel: 'Ein Node geplant, Ziel zehn Nodes',
+      count: '01 von 10 · Ziel: zehn Nodes in Europa',
       investors: 'Für Investoren',
       disclaimer: 'Schematische Darstellung. Künftige Meilensteine sind Ziele, keine Zusagen.',
-      mapLabel: 'Karte Europas mit Hub 01 in der Ukraine',
-      hubName: 'Hub 01 · Ukraine',
+      mapLabel: 'Karte Europas mit Node001 in der Ukraine',
+      hubName: 'Node001 · Ukraine',
       hubStatus: 'Erste Häuser ab Frühjahr 2027 · Warteliste offen',
     },
     doors: {
@@ -610,8 +610,8 @@ export const de = {
       title: 'Wo wollen Sie einsteigen?',
       doors: typed<Door[]>([
         { key: 'companies', who: 'Unternehmen', title: 'Team finden.', text: 'Ein Satz genügt. Die erste Analyse ist kostenlos.', action: 'Projekt beschreiben' },
-        { key: 'freelancers', who: 'KI-Freelancer', title: 'Profil in drei Minuten.', text: 'Sofort sichtbar, ohne Provision. Vor Ort im Hub oder remote.', action: 'Profil anlegen' },
-        { key: 'investors', who: 'Investoren', title: 'Deck anfordern.', text: 'Talente, Projekte und Hubs: der Plan und die Zahlen.', action: 'Deck anfordern' },
+        { key: 'freelancers', who: 'KI-Freelancer', title: 'Profil in drei Minuten.', text: 'Sofort sichtbar, ohne Provision. Vor Ort im Node oder remote.', action: 'Profil anlegen' },
+        { key: 'investors', who: 'Investoren', title: 'Deck anfordern.', text: 'Talente, Projekte und Nodes: der Plan und die Zahlen.', action: 'Deck anfordern' },
       ]),
     },
   },
@@ -625,7 +625,7 @@ export const de = {
       { name: 'Roman Dering', role: 'Product Manager', photo: '/team/roman-dering.webp', linkedin: 'https://www.linkedin.com/in/roman-dering/' },
       { name: 'Paul D.', role: 'CEO' },
       { name: 'Pavel J.', role: 'Lead Developer' },
-      { name: 'Nazar D.', role: 'Architekt · Hubs' },
+      { name: 'Nazar D.', role: 'Architekt · Nodes' },
       { name: 'Max H.', role: 'Jurist' },
     ]),
   },
@@ -786,7 +786,7 @@ export const de = {
       { id: 'part', label: 'Teilzeit', card: 'in Teilzeit' },
     ]),
     workModes: typed<WorkModeOption[]>([
-      { id: 'onsite', label: 'Vor Ort im Hub', text: 'Mit Zugriff auf Kundendaten', badge: 'Vor Ort' },
+      { id: 'onsite', label: 'Vor Ort im Node', text: 'Mit Zugriff auf Kundendaten', badge: 'Vor Ort' },
       { id: 'remote', label: 'Remote', text: 'Mit synthetischen Testdaten', badge: 'Remote' },
       { id: 'both', label: 'Beides', text: 'Je nach Projekt', badge: 'Vor Ort und remote' },
     ]),
@@ -822,9 +822,9 @@ export const de = {
     mode: {
       label: 'Arbeitsort',
       title: 'Vor Ort oder remote.',
-      text: 'Im Hub arbeiten Sie mit Kundendaten. Remote mit synthetischen Testdaten. Sie wählen.',
+      text: 'Im Node arbeiten Sie mit Kundendaten. Remote mit synthetischen Testdaten. Sie wählen.',
       you: 'Sie',
-      hubNote: 'Hub 01 ist geplant: erste Häuser ab Frühjahr 2027 in den Karpaten, Ukraine.',
+      hubNote: 'Node001 ist geplant: erste Häuser ab Frühjahr 2027 in den Karpaten, Ukraine.',
     },
     free: {
       label: 'Kosten',
@@ -878,24 +878,24 @@ export const de = {
       text: 'XPORTAL verbindet KI-Freelancer, Projektführung und eigene Arbeitsorte in Europa. Ein Kreislauf, der sich selbst verstärkt.',
       deck: 'Deck anfordern',
       roadmap: 'Roadmap',
-      mapLabel: 'Europakarte: KI-Freelancer in vielen Ländern, Hub 01 in der Ukraine, Daten in der EU',
-      hubName: 'Hub 01 · Ukraine',
+      mapLabel: 'Europakarte: KI-Freelancer in vielen Ländern, Node001 in der Ukraine, Daten in der EU',
+      hubName: 'Node001 · Ukraine',
       hubStatus: 'Erste Häuser ab Frühjahr 2027 · Warteliste offen',
       dataSite: 'Daten in der EU',
       figures: [
-        { value: '01 → 10', text: 'Hubs: der erste geplant, Ziel zehn in Europa' },
-        { value: '2027', text: 'Erste Häuser auf Hub 01 ab Frühjahr, geplant' },
+        { value: '01 → 10', text: 'Nodes: der erste geplant, Ziel zehn in Europa' },
+        { value: '2027', text: 'Erste Häuser auf Node001 ab Frühjahr, geplant' },
         { value: '0 %', text: 'Provision. Erlöse aus Software und Leistungen' },
       ],
     },
     loop: {
       label: 'Modell',
       title: 'Ein Kreislauf.',
-      text: 'Projekte füllen die Hubs. Die Hubs machen Projekte mit sensiblen Daten möglich. Beides zieht Talente an.',
+      text: 'Projekte füllen die Nodes. Die Nodes machen Projekte mit sensiblen Daten möglich. Beides zieht Talente an.',
       nodes: [
         { name: 'Talente', text: 'KI-Freelancer aus Europa, gefunden mit Begründung.' },
         { name: 'Projekte', text: 'Geführt von der Anfrage bis zur Abnahme, Daten in der EU.' },
-        { name: 'Orte', text: 'Eigene Hubs für Arbeit mit Kundendaten vor Ort.' },
+        { name: 'Orte', text: 'Eigene Nodes für Arbeit mit Kundendaten vor Ort.' },
       ],
     },
     whyNow: {
@@ -953,7 +953,7 @@ export const de = {
           ],
         },
         {
-          name: 'Hubs',
+          name: 'Nodes',
           status: 'Ab 2027 · in Ausarbeitung',
           live: false,
           items: [
@@ -966,18 +966,17 @@ export const de = {
       note: 'Software-Preise netto zuzüglich Umsatzsteuer, 14 Tage kostenlos testen.',
     },
     hub: {
-      label: 'Hub 01',
+      label: 'Node001',
       title: 'Der erste Ort.',
       text: 'Karpaten bei Werchowyna, Ukraine, etwa 1.050 m hoch. Die ersten Häuser stehen frühestens im Frühjahr 2027, sobald der Boden frostfrei ist.',
-      kind: 'Wohncontainer oder Modulhaus, je nach Lieferbarkeit und Preis.',
-      squaresLabel: 'Ein Hub geplant, Ziel zehn Hubs',
+      kind: 'Gedämmte Wohncontainer als Tiny Houses. Welches Modell, hängt an Lieferbarkeit, Zufahrt und Preis.',
+      squaresLabel: 'Ein Node geplant, Ziel zehn Nodes',
       count: '01 von 10 · Warteliste offen',
       images: [
-        { src: '/hubs/hub-01/visualisierung-1.webp', alt: 'Holzverkleidete Wohncontainer mit Terrasse und Sauna auf einer Bergwiese', caption: 'Visualisierung auf dem Grundstück' },
+        { src: '/hubs/hub-01/visualisierung.webp', alt: 'Holzverkleidete Wohncontainer mit Terrassen am grünen Hang zwischen Fichten und Birken, verbunden durch einen Weg, oben ein überdachter Gemeinschaftsplatz', caption: 'Visualisierung auf dem Grundstück' },
         { src: '/hubs/hub-01/entwurf-stufe-1.webp', alt: 'Lageplan-Ausschnitt mit drei Wohncontainern, Gemeinschaftsplatz und Solarfläche', caption: 'Entwurf Stufe 1, Lageplan M 1:500' },
-        { src: '/hubs/hub-01/visualisierung-2.webp', alt: 'Drei Wohncontainer mit Terrassen am Hang zwischen Fichten', caption: 'Visualisierung auf dem Grundstück' },
       ],
-      disclaimer: 'Visualisierungen auf dem echten Grundstück. Lage, Anzahl und Ausführung werden noch geplant. Künftige Meilensteine sind Ziele, keine Zusagen.',
+      disclaimer: 'Visualisierung auf dem echten Grundstück. Lage, Anzahl und Ausführung werden noch geplant. Künftige Meilensteine sind Ziele, keine Zusagen.',
     },
     plots: {
       label: 'Kaufen oder mieten',
@@ -986,7 +985,7 @@ export const de = {
       steps: [
         { when: 'Jetzt', title: 'Warteliste', text: 'Unverbindlich und ohne Zahlung. Sie sagen uns, ob Sie kaufen oder mieten möchten.' },
         { when: 'Ab Januar 2027', title: 'Kauf für die Warteliste', text: 'Wer auf der Warteliste steht, kann zuerst kaufen, sobald Technik und rechtliche Prüfung fertig sind.' },
-        { when: 'Beim Kauf', title: 'Das Haus gehört Ihnen', text: 'Ihr Tiny House gehört Ihnen, festgehalten als digitaler Nachweis (Token). Den Grund pachten Sie.' },
+        { when: 'Beim Kauf', title: 'Das Haus gehört Ihnen', text: 'Ihr Container ist Ihr Tiny House und bleibt auf dem Grundstück. Er gehört Ihnen, festgehalten als digitaler Nachweis (Token). Den Grund pachten Sie.' },
         { when: 'Ab Frühjahr 2027', title: 'Einziehen oder mieten', text: 'Eingezogen wird, wenn der Boden frostfrei und alles abgenommen ist. Wer nicht kauft, mietet und zahlt erst nach dem Einzug.' },
       ],
       factsLabel: 'Vor Ort',
@@ -1002,14 +1001,14 @@ export const de = {
     },
     roadmap: {
       label: 'Roadmap',
-      title: 'Von Talenten zu zehn Hubs.',
+      title: 'Von Talenten zu zehn Nodes.',
       milestones: [
         { when: '2026', title: 'Talente und KI-Matching', status: 'läuft', live: true },
         { when: 'Heute', title: 'Erstes Projekt läuft', status: 'Abschluss geplant Anfang 2027', live: true },
-        { when: 'Jetzt', title: 'Warteliste für Hub 01', status: 'offen', live: true },
+        { when: 'Jetzt', title: 'Warteliste für Node001', status: 'offen', live: true },
         { when: 'Januar 2027', title: 'Verkauf an die Warteliste', status: 'geplant', live: false },
-        { when: 'Frühjahr 2027', title: 'Erste Häuser auf Hub 01', status: 'geplant, sobald frostfrei', live: false },
-        { when: 'Ziel', title: 'Zehn Hubs auf zehn Grundstücken in Europa', status: 'Ziel', live: false },
+        { when: 'Frühjahr 2027', title: 'Erste Häuser auf Node001', status: 'geplant, sobald frostfrei', live: false },
+        { when: 'Ziel', title: 'Zehn Nodes auf zehn Grundstücken in Europa', status: 'Ziel', live: false },
       ],
       parallelLabel: 'Parallel',
       parallel: [
@@ -1020,7 +1019,7 @@ export const de = {
     },
     waitlist: {
       title: 'Auf die Warteliste.',
-      text: 'Für Hub 01 in den Karpaten. Unverbindlich und ohne Zahlung. Wir schreiben Ihnen, sobald Preise und Termine feststehen.',
+      text: 'Für Node001 in den Karpaten. Unverbindlich und ohne Zahlung. Wir schreiben Ihnen, sobald Preise und Termine feststehen.',
       legal: 'Der Eintrag ist unverbindlich und kein Kaufvertrag. Diese Seite ist kein öffentliches Angebot von Wertpapieren, Vermögensanlagen oder Kryptowerten und keine Anlageberatung.',
       name: 'Name',
       email: 'E-Mail',
@@ -1030,7 +1029,7 @@ export const de = {
       moveInLegend: 'Einzug',
       moveIns: { spring_2027: 'Frühjahr 2027', later: 'Später' },
       note: 'Nachricht',
-      consent: 'Ich möchte per E-Mail Neuigkeiten zu Hub 01 erhalten. Abmelden kann ich mich jederzeit mit einer kurzen Antwort auf eine dieser Mails.',
+      consent: 'Ich möchte per E-Mail Neuigkeiten zu Node001 erhalten. Abmelden kann ich mich jederzeit mit einer kurzen Antwort auf eine dieser Mails.',
       submit: 'Eintragen',
       sending: 'Wird gesendet …',
       error: 'Bitte Name, eine gültige E-Mail, Ihre Wahl und die Einwilligung angeben.',

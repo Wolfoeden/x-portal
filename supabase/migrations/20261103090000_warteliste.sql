@@ -1,11 +1,11 @@
--- Warteliste für Hub 01 (Karpaten): Interessenten zum Kaufen oder Mieten eines Tiny House.
+-- Warteliste für Node001 (Karpaten): Interessenten zum Kaufen oder Mieten eines Tiny House.
 -- Double-Opt-in: Ein Eintrag zählt erst, wenn der Link aus der Mail geklickt wurde. Nur der Server liest und schreibt.
 
 create type public.waitlist_interest as enum ('buy', 'rent', 'both');
 
 create table public.waitlist_entries (
   id uuid primary key default gen_random_uuid(),
-  hub text not null default 'hub-01' check (hub ~ '^[a-z0-9-]{1,40}$'),
+  node text not null default 'node001' check (node ~ '^[a-z0-9-]{1,40}$'),
   name text not null check (char_length(trim(name)) between 2 and 120),
   email extensions.citext not null check (private.valid_email(email::text)),
   interest public.waitlist_interest not null,
@@ -21,8 +21,8 @@ create table public.waitlist_entries (
   updated_at timestamptz not null default now(),
   check (status <> 'confirmed' or confirmed_at is not null)
 );
-create index waitlist_entries_status_idx on public.waitlist_entries (hub, status, created_at desc);
-comment on table public.waitlist_entries is 'Warteliste je Hub. pending = Link verschickt, confirmed = per Link bestätigt, unsubscribed = abgemeldet.';
+create index waitlist_entries_status_idx on public.waitlist_entries (node, status, created_at desc);
+comment on table public.waitlist_entries is 'Warteliste je Node. pending = Link verschickt, confirmed = per Link bestätigt, unsubscribed = abgemeldet.';
 comment on column public.waitlist_entries.confirm_token_hash is 'SHA-256 des Bestätigungslinks. Der Link selbst wird nie gespeichert.';
 
 create trigger waitlist_entries_touch before update on public.waitlist_entries
@@ -37,8 +37,8 @@ create policy "Nur Server" on public.waitlist_entries for all to service_role us
 
 -- Übersicht für Paul und Roman: bestätigte Einträge je Wunsch.
 create view ops.warteliste with (security_invoker = true) as
-  select hub, interest, count(*) filter (where status = 'confirmed') as bestaetigt, count(*) filter (where status = 'pending') as offen
+  select node, interest, count(*) filter (where status = 'confirmed') as bestaetigt, count(*) filter (where status = 'pending') as offen
     from public.waitlist_entries
-   group by hub, interest;
+   group by node, interest;
 revoke all on ops.warteliste from public, anon, authenticated;
 grant select on ops.warteliste to service_role;

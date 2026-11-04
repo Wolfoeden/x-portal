@@ -7,14 +7,14 @@ import { deliverEmail, operatorAddress, type EmailMessage } from '@/lib/email/de
 import { waitlistConfirmLink, waitlistNotification } from '@/lib/email/messages'
 import type { Visitor } from '@/lib/server/request'
 
-// Warteliste für Hub 01 → public.waitlist_entries. Erst der Klick auf den Link in der Mail bestätigt den Eintrag
+// Warteliste für Node001 → public.waitlist_entries. Erst der Klick auf den Link in der Mail bestätigt den Eintrag
 // (Double-Opt-in); gespeichert wird nur der SHA-256 des Links. Nach der Bestätigung geht ein Hinweis ans Postfach.
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 export const WAITLIST_INTERESTS = ['buy', 'rent', 'both'] as const
 export const WAITLIST_MOVE_INS = ['spring_2027', 'later'] as const
 export const WAITLIST_PER_DAY = 3
-export const CONSENT_VERSION = 'warteliste-2026-11-03'
+export const CONSENT_VERSION = 'warteliste-2026-11-04'
 const LINK_DAYS = 7
 
 export const WaitlistBody = z.object({

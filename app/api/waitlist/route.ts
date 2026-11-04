@@ -2,7 +2,7 @@ import { WaitlistBody, submitWaitlist, type WaitlistInput } from '@/lib/waitlist
 import { isSameOrigin, readJson, visitorKey } from '@/lib/server/request'
 import { supabaseAdmin } from '@/lib/server/supabase-admin'
 
-// Warteliste Hub 01. Antwort: { ok: true } (Bestätigungsmail ist unterwegs) oder der Grund, warum nicht.
+// Warteliste Node001. Antwort: { ok: true } (Bestätigungsmail ist unterwegs) oder der Grund, warum nicht.
 
 const noStore = { 'cache-control': 'no-store' }
 

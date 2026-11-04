@@ -78,15 +78,15 @@ export function freelancerPublishedNotification(input: { firstName: string; role
 const INTEREST_NAMES: Record<string, string> = { buy: 'Kaufen', rent: 'Mieten', both: 'Noch offen' }
 const MOVE_IN_NAMES: Record<string, string> = { spring_2027: 'Frühjahr 2027', later: 'Später' }
 
-/** Bestätigungslink für die Warteliste Hub 01, in der Sprache des Eintrags. Wiederholt keine Eingaben. */
+/** Bestätigungslink für die Warteliste Node001, in der Sprache des Eintrags. Wiederholt keine Eingaben. */
 export function waitlistConfirmLink(input: { locale: Locale; link: string }) {
   if (input.locale === 'en') {
     return {
-      subject: 'Please confirm: waiting list for Hub 01',
+      subject: 'Please confirm: waiting list for Node001',
       text: [
         'Hello,',
         '',
-        'please confirm that you would like to join the waiting list for Hub 01 in the Carpathians:',
+        'please confirm that you would like to join the waiting list for Node001 in the Carpathians:',
         '',
         input.link,
         '',
@@ -100,11 +100,11 @@ export function waitlistConfirmLink(input: { locale: Locale; link: string }) {
     }
   }
   return {
-    subject: 'Bitte bestätigen: Warteliste Hub 01',
+    subject: 'Bitte bestätigen: Warteliste Node001',
     text: [
       'Guten Tag,',
       '',
-      'bitte bestätigen Sie, dass Sie auf die Warteliste für Hub 01 in den Karpaten möchten:',
+      'bitte bestätigen Sie, dass Sie auf die Warteliste für Node001 in den Karpaten möchten:',
       '',
       input.link,
       '',
@@ -121,7 +121,7 @@ export function waitlistConfirmLink(input: { locale: Locale; link: string }) {
 /** An das Postfach des Betreibers, sobald ein Eintrag bestätigt ist. */
 export function waitlistNotification(input: { name: string; email: string; interest: string; move_in: string | null; note: string | null; locale: string }) {
   return {
-    subject: `Warteliste Hub 01: ${INTEREST_NAMES[input.interest] ?? input.interest} · ${input.name}`.slice(0, 160),
+    subject: `Warteliste Node001: ${INTEREST_NAMES[input.interest] ?? input.interest} · ${input.name}`.slice(0, 160),
     text: [
       `Name: ${input.name}`,
       `E-Mail: ${input.email}`,

@@ -4,8 +4,8 @@ import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, type Locale } from '@/lib/i18n/routes'
 
-// Hub 01: Visualisierungen auf dem echten Grundstück und der Entwurf Stufe 1. Ort nur als Region, ohne Kataster.
-const frames = ['aspect-[4/3] md:col-span-2', 'aspect-[4/3] bg-white md:aspect-auto', 'aspect-[16/10] md:col-span-3']
+// Node001: Visualisierung auf dem echten Grundstück und der Entwurf Stufe 1. Ort nur als Region, ohne Kataster.
+const frames = ['aspect-[16/10] md:col-span-2', 'aspect-[4/3] bg-white md:aspect-auto']
 
 export function ChapterHub({ locale }: { locale: Locale }) {
   const copy = getDictionary(locale).investors.hub
@@ -32,7 +32,7 @@ export function ChapterHub({ locale }: { locale: Locale }) {
           <p className="mt-auto pt-6 text-[12.5px] text-[#bfd8c8]/80">{copy.disclaimer}</p>
         </div>
 
-        <div className="grid grid-cols-[minmax(0,1fr)] gap-3 md:grid-cols-3">
+        <div className="grid grid-cols-[minmax(0,1fr)] gap-3 self-center md:grid-cols-3">
           {copy.images.map((image, index) => (
             <figure key={image.src} className={`relative overflow-hidden rounded-[22px] ${frames[index] ?? 'aspect-[4/3]'}`}>
               <Image
@@ -43,7 +43,7 @@ export function ChapterHub({ locale }: { locale: Locale }) {
                 className={index === 1 ? 'object-contain p-2' : 'object-cover'}
                 priority={index === 0}
               />
-              <figcaption className="absolute bottom-3 left-3 rounded-full bg-black/55 px-3 py-1 text-[12.5px] font-medium text-white backdrop-blur-sm">
+              <figcaption className="absolute bottom-3 left-3 right-3 w-fit rounded-2xl bg-black/55 px-3 py-1 text-[12.5px] font-medium text-white backdrop-blur-sm">
                 {image.caption}
               </figcaption>
             </figure>

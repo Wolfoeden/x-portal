@@ -7,7 +7,7 @@ import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { useLocale } from '@/components/i18n/locale-provider'
 
-// Nach der Roadmap „Von Talenten zu zehn Hubs“ von XPORTAL; Texte im Wörterbuch.
+// Nach der Roadmap „Von Talenten zu zehn Nodes“ von XPORTAL; Texte im Wörterbuch.
 export function ChapterRoadmap() {
   const reduceMotion = useReducedMotion()
   const { dict, ids } = useLocale()

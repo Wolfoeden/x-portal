@@ -13,7 +13,7 @@ import { useMediaQuery } from '@/lib/use-media-query'
 import { useLocale } from '@/components/i18n/locale-provider'
 import { pagePath } from '@/lib/i18n/routes'
 
-// Hub 01: nur das Land wird gezeigt, nicht der genaue Ort.
+// Node001: nur das Land wird gezeigt, nicht der genaue Ort.
 const [HUB_X, HUB_Y] = projectLonLat(31, 49)
 
 // Geometrie der Bildmarke (Einheiten der viewBox 123 × 100).

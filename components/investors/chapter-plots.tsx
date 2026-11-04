@@ -4,7 +4,7 @@ import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, type Locale } from '@/lib/i18n/routes'
 
-// Kaufen oder mieten auf Hub 01: Ablauf in vier Schritten. Kein Preis und keine Rendite, bis die Prüfung abgeschlossen ist.
+// Kaufen oder mieten auf Node001: Ablauf in vier Schritten. Kein Preis und keine Rendite, bis die Prüfung abgeschlossen ist.
 export function ChapterPlots({ locale }: { locale: Locale }) {
   const copy = getDictionary(locale).investors.plots
   const ids = IDS[locale]

@@ -29,7 +29,7 @@ export const en: Dictionary = {
     },
     investors: {
       title: 'For investors · XPORTAL',
-      description: 'Talent, projects, places: XPORTAL connects AI freelancers, project delivery and its own hubs across Europe. Roadmap, revenue streams and deck request.',
+      description: 'Talent, projects, places: XPORTAL connects AI freelancers, project delivery and its own nodes across Europe. Roadmap, revenue streams and deck request.',
     },
     contact: {
       title: 'Contact · XPORTAL',
@@ -62,7 +62,7 @@ export const en: Dictionary = {
         entries: [
           { label: 'Talent', page: 'home', anchor: 'reasons', text: 'Find AI freelancers, with reasons for every match', icon: 'talent' },
           { label: 'Projects', page: 'home', anchor: 'platform', text: 'Team, sign-off and payment in one place', icon: 'projects' },
-          { label: 'Hubs', page: 'home', anchor: 'hubs', text: 'Workplaces on our own sites', icon: 'hubs' },
+          { label: 'Nodes', page: 'home', anchor: 'hubs', text: 'Workplaces on our own sites', icon: 'hubs' },
         ],
       },
       {
@@ -95,7 +95,7 @@ export const en: Dictionary = {
         links: [
           { label: 'Talent', page: 'home', anchor: 'reasons' },
           { label: 'Projects', page: 'home', anchor: 'platform' },
-          { label: 'Hubs', page: 'home', anchor: 'hubs' },
+          { label: 'Nodes', page: 'home', anchor: 'hubs' },
           { label: 'For freelancers', page: 'freelancer' },
         ],
       },
@@ -169,7 +169,7 @@ export const en: Dictionary = {
       rate: '€980/day',
       requirements: [
         { label: 'RAG on your own documents', met: true, by: 'Mara, 3 projects', who: 'mara' },
-        { label: 'Customer data under GDPR', met: true, by: 'Mara, on site at the hub', who: 'mara' },
+        { label: 'Customer data under GDPR', met: true, by: 'Mara, on site at the node', who: 'mara' },
         { label: 'Answers with sources', met: true, by: 'Document assistant, reviewed by Mara', who: 'agent-docs' },
         { label: 'Start in December', met: false, by: 'Noah from 15 Dec, to discuss', who: 'noah' },
       ],
@@ -194,7 +194,7 @@ export const en: Dictionary = {
       requirements: [
         { label: 'n8n or Make', met: true, by: 'Jonas, 12 live workflows', who: 'jonas' },
         { label: 'Read receipts automatically', met: true, by: 'Receipt agent, reviewed by Jonas', who: 'agent-receipts' },
-        { label: 'DATEV integration', met: true, by: 'Aylin, on site at the hub', who: 'aylin' },
+        { label: 'DATEV integration', met: true, by: 'Aylin, on site at the node', who: 'aylin' },
         { label: 'Start now', met: false, by: 'Aylin from 1 Dec, to discuss', who: 'aylin' },
       ],
       deliveries: ['Receipts are read', 'Quotes as drafts', 'Approval in DATEV'],
@@ -218,7 +218,7 @@ export const en: Dictionary = {
       requirements: [
         { label: 'Churn forecast', met: true, by: 'Sara, 4 models in production', who: 'sara' },
         { label: 'Data from CRM and shop', met: true, by: 'Leon', who: 'leon' },
-        { label: 'GDPR for customer data', met: true, by: 'Yara, on site at the hub', who: 'yara' },
+        { label: 'GDPR for customer data', met: true, by: 'Yara, on site at the node', who: 'yara' },
         { label: 'Report for sales', met: true, by: 'Insights agent, reviewed by Sara', who: 'agent-insights' },
       ],
       deliveries: ['Data pipeline in place', 'Model right 8 times in 10', 'Report for sales'],
@@ -241,7 +241,7 @@ export const en: Dictionary = {
       requirements: [
         { label: 'Hands-on ISO 27001', met: true, by: 'Clara, 6 audits supported', who: 'clara' },
         { label: 'Gap list against NIS2 and ISO 27001', met: true, by: 'NIS2 pre-assessment, reviewed by Clara', who: 'agent-nis2' },
-        { label: 'NIS2 obligations', met: true, by: 'Tobias, on site at the hub', who: 'tobias' },
+        { label: 'NIS2 obligations', met: true, by: 'Tobias, on site at the node', who: 'tobias' },
         { label: 'Data protection in the ISMS', met: true, by: 'Yara', who: 'yara' },
         { label: 'Done by summer', met: false, by: 'Timeline to discuss' },
       ],
@@ -573,7 +573,7 @@ export const en: Dictionary = {
       label: 'Data',
       title: 'Your data stays in Europe.',
       text: 'Whoever needs customer data works on site. Everyone else never touches it.',
-      onSiteZone: 'On site at the hub',
+      onSiteZone: 'On site at the node',
       access: 'Access to customer data',
       remoteZone: 'Remote',
       synthetic: 'Synthetic test data only',
@@ -585,15 +585,15 @@ export const en: Dictionary = {
     },
     hubs: {
       andThen: 'And then …',
-      label: 'Hubs',
+      label: 'Nodes',
       title: 'And then we build places.',
       text: 'Workplaces on our own sites, for teams on site. The first one is planned.',
-      squaresLabel: 'One hub planned, a goal of ten hubs',
-      count: '01 of 10 · Goal: ten hubs in Europe',
+      squaresLabel: 'One node planned, a goal of ten nodes',
+      count: '01 of 10 · Goal: ten nodes in Europe',
       investors: 'For investors',
       disclaimer: 'Schematic illustration. Future milestones are goals, not commitments.',
-      mapLabel: 'Map of Europe with Hub 01 in Ukraine',
-      hubName: 'Hub 01 · Ukraine',
+      mapLabel: 'Map of Europe with Node001 in Ukraine',
+      hubName: 'Node001 · Ukraine',
       hubStatus: 'First homes from spring 2027 · waiting list open',
     },
     doors: {
@@ -601,8 +601,8 @@ export const en: Dictionary = {
       title: 'Where do you start?',
       doors: [
         { key: 'companies', who: 'Companies', title: 'Find a team.', text: 'One sentence is enough. The first analysis is free.', action: 'Describe your project' },
-        { key: 'freelancers', who: 'AI freelancers', title: 'A profile in three minutes.', text: 'Visible right away, no commission. On site at a hub or remote.', action: 'Create profile' },
-        { key: 'investors', who: 'Investors', title: 'Request the deck.', text: 'Talent, projects and hubs: the plan and the numbers.', action: 'Request the deck' },
+        { key: 'freelancers', who: 'AI freelancers', title: 'A profile in three minutes.', text: 'Visible right away, no commission. On site at a node or remote.', action: 'Create profile' },
+        { key: 'investors', who: 'Investors', title: 'Request the deck.', text: 'Talent, projects and nodes: the plan and the numbers.', action: 'Request the deck' },
       ],
     },
   },
@@ -616,7 +616,7 @@ export const en: Dictionary = {
       { name: 'Roman Dering', role: 'Product Manager', photo: '/team/roman-dering.webp', linkedin: 'https://www.linkedin.com/in/roman-dering/' },
       { name: 'Paul D.', role: 'CEO' },
       { name: 'Pavel J.', role: 'Lead Developer' },
-      { name: 'Nazar D.', role: 'Architect · Hubs' },
+      { name: 'Nazar D.', role: 'Architect · Nodes' },
       { name: 'Max H.', role: 'Legal counsel' },
     ],
   },
@@ -777,7 +777,7 @@ export const en: Dictionary = {
       { id: 'part', label: 'Part-time', card: 'part-time' },
     ],
     workModes: [
-      { id: 'onsite', label: 'On site at a hub', text: 'With access to customer data', badge: 'On site' },
+      { id: 'onsite', label: 'On site at a node', text: 'With access to customer data', badge: 'On site' },
       { id: 'remote', label: 'Remote', text: 'With synthetic test data', badge: 'Remote' },
       { id: 'both', label: 'Both', text: 'Depending on the project', badge: 'On site and remote' },
     ],
@@ -812,9 +812,9 @@ export const en: Dictionary = {
     mode: {
       label: 'Workplace',
       title: 'On site or remote.',
-      text: 'At a hub you work with customer data. Remotely with synthetic test data. Your choice.',
+      text: 'At a node you work with customer data. Remotely with synthetic test data. Your choice.',
       you: 'You',
-      hubNote: 'Hub 01 is planned: first homes from spring 2027 in the Carpathians, Ukraine.',
+      hubNote: 'Node001 is planned: first homes from spring 2027 in the Carpathians, Ukraine.',
     },
     free: {
       label: 'Costs',
@@ -868,24 +868,24 @@ export const en: Dictionary = {
       text: 'XPORTAL connects AI freelancers, project delivery and our own workplaces across Europe. A flywheel that reinforces itself.',
       deck: 'Request the deck',
       roadmap: 'Roadmap',
-      mapLabel: 'Map of Europe: AI freelancers in many countries, Hub 01 in Ukraine, data in the EU',
-      hubName: 'Hub 01 · Ukraine',
+      mapLabel: 'Map of Europe: AI freelancers in many countries, Node001 in Ukraine, data in the EU',
+      hubName: 'Node001 · Ukraine',
       hubStatus: 'First homes from spring 2027 · waiting list open',
       dataSite: 'Data in the EU',
       figures: [
-        { value: '01 → 10', text: 'Hubs: the first planned, ten across Europe as the goal' },
-        { value: '2027', text: 'First homes on Hub 01 from spring, planned' },
+        { value: '01 → 10', text: 'Nodes: the first planned, ten across Europe as the goal' },
+        { value: '2027', text: 'First homes on Node001 from spring, planned' },
         { value: '0%', text: 'Commission. Revenue from software and services' },
       ],
     },
     loop: {
       label: 'Model',
       title: 'A flywheel.',
-      text: 'Projects fill the hubs. The hubs make projects with sensitive data possible. Both attract talent.',
+      text: 'Projects fill the nodes. The nodes make projects with sensitive data possible. Both attract talent.',
       nodes: [
         { name: 'Talent', text: 'AI freelancers from across Europe, matched with reasons.' },
         { name: 'Projects', text: 'Led from request to sign-off, with data in the EU.' },
-        { name: 'Places', text: 'Our own hubs for on-site work with customer data.' },
+        { name: 'Places', text: 'Our own nodes for on-site work with customer data.' },
       ],
     },
     whyNow: {
@@ -943,7 +943,7 @@ export const en: Dictionary = {
           ],
         },
         {
-          name: 'Hubs',
+          name: 'Nodes',
           status: 'From 2027 · in development',
           live: false,
           items: [
@@ -956,18 +956,17 @@ export const en: Dictionary = {
       note: 'Software prices exclude VAT; 14-day free trial.',
     },
     hub: {
-      label: 'Hub 01',
+      label: 'Node001',
       title: 'The first place.',
       text: 'The Carpathians near Verkhovyna, Ukraine, at about 1,050 m. The first homes go up in spring 2027 at the earliest, once the ground has thawed.',
-      kind: 'Living containers or modular homes, depending on availability and price.',
-      squaresLabel: 'One hub planned, a goal of ten hubs',
+      kind: 'Insulated living containers as tiny houses. Which model depends on availability, the access road and price.',
+      squaresLabel: 'One node planned, a goal of ten nodes',
       count: '01 of 10 · waiting list open',
       images: [
-        { src: '/hubs/hub-01/visualisierung-1.webp', alt: 'Timber-clad living containers with a deck and sauna on a mountain meadow', caption: 'Visualisation on the site' },
+        { src: '/hubs/hub-01/visualisierung.webp', alt: 'Timber-clad living containers with decks on a green slope among spruce and birch trees, linked by a path, with a covered shared space above', caption: 'Visualisation on the site' },
         { src: '/hubs/hub-01/entwurf-stufe-1.webp', alt: 'Site plan detail with three living containers, a shared space and a solar area', caption: 'Stage 1 draft, site plan 1:500' },
-        { src: '/hubs/hub-01/visualisierung-2.webp', alt: 'Three living containers with decks on a slope among spruce trees', caption: 'Visualisation on the site' },
       ],
-      disclaimer: 'Visualisations on the real site. Layout, number and finish are still being planned. Future milestones are goals, not commitments.',
+      disclaimer: 'Visualisation on the real site. Layout, number and finish are still being planned. Future milestones are goals, not commitments.',
     },
     plots: {
       label: 'Buy or rent',
@@ -976,7 +975,7 @@ export const en: Dictionary = {
       steps: [
         { when: 'Now', title: 'Waiting list', text: 'No obligation and no payment. Tell us whether you would like to buy or rent.' },
         { when: 'From January 2027', title: 'Sale to the waiting list', text: 'People on the waiting list can buy first, once the technology and the legal review are complete.' },
-        { when: 'On purchase', title: 'The house is yours', text: 'Your tiny house belongs to you, recorded as a digital certificate (token). You lease the land.' },
+        { when: 'On purchase', title: 'The house is yours', text: 'Your container is your tiny house and stays on the site. It belongs to you, recorded as a digital certificate (token). You lease the land.' },
         { when: 'From spring 2027', title: 'Move in or rent', text: 'You move in once the ground has thawed and everything has been signed off. If you rent instead, you pay only after moving in.' },
       ],
       factsLabel: 'On site',
@@ -992,14 +991,14 @@ export const en: Dictionary = {
     },
     roadmap: {
       label: 'Roadmap',
-      title: 'From talent to ten hubs.',
+      title: 'From talent to ten nodes.',
       milestones: [
         { when: '2026', title: 'Talent and AI matching', status: 'running', live: true },
         { when: 'Today', title: 'First project under way', status: 'completion planned for early 2027', live: true },
-        { when: 'Now', title: 'Waiting list for Hub 01', status: 'open', live: true },
+        { when: 'Now', title: 'Waiting list for Node001', status: 'open', live: true },
         { when: 'January 2027', title: 'Sale to the waiting list', status: 'planned', live: false },
-        { when: 'Spring 2027', title: 'First homes on Hub 01', status: 'planned, once thawed', live: false },
-        { when: 'Goal', title: 'Ten hubs on ten sites across Europe', status: 'goal', live: false },
+        { when: 'Spring 2027', title: 'First homes on Node001', status: 'planned, once thawed', live: false },
+        { when: 'Goal', title: 'Ten nodes on ten sites across Europe', status: 'goal', live: false },
       ],
       parallelLabel: 'In parallel',
       parallel: [
@@ -1010,7 +1009,7 @@ export const en: Dictionary = {
     },
     waitlist: {
       title: 'Join the waiting list.',
-      text: 'For Hub 01 in the Carpathians. No obligation and no payment. We will write to you once prices and dates are set.',
+      text: 'For Node001 in the Carpathians. No obligation and no payment. We will write to you once prices and dates are set.',
       legal: 'Joining is not binding and is not a purchase contract. This page is not a public offer of securities, investment products or crypto-assets and is not investment advice.',
       name: 'Name',
       email: 'Email',
@@ -1020,7 +1019,7 @@ export const en: Dictionary = {
       moveInLegend: 'Move in',
       moveIns: { spring_2027: 'Spring 2027', later: 'Later' },
       note: 'Message',
-      consent: 'I would like to receive news about Hub 01 by email. I can unsubscribe at any time by replying to one of these emails.',
+      consent: 'I would like to receive news about Node001 by email. I can unsubscribe at any time by replying to one of these emails.',
       submit: 'Join',
       sending: 'Sending …',
       error: 'Please enter your name, a valid email, your choice and your consent.',

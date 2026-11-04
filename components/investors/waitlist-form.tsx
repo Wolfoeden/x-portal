@@ -10,7 +10,7 @@ type Interest = 'buy' | 'rent' | 'both'
 type MoveIn = 'spring_2027' | 'later'
 type Status = 'idle' | 'sending' | 'sent' | 'confirmed' | 'expired' | 'failed' | 'limit'
 
-/** Warteliste Hub 01. Speichert über /api/waitlist; erst der Link in der Mail bestätigt den Eintrag. */
+/** Warteliste Node001. Speichert über /api/waitlist; erst der Link in der Mail bestätigt den Eintrag. */
 export function WaitlistForm() {
   const id = useId()
   const { dict, ids, locale } = useLocale()
