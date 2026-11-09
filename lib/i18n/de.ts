@@ -988,8 +988,8 @@ export const de = {
       text: 'XPORTAL verbindet KI-Freelancer, Projektführung und eigene Arbeitsorte in Europa. Ein Kreislauf, der sich selbst verstärkt.',
       deck: 'Deck anfordern',
       roadmap: 'Roadmap',
-      mapLabel: 'Europakarte: KI-Freelancer in vielen Ländern, Hub 01 in der Ukraine, Daten in der EU',
-      hubName: 'Hub 01 · Ukraine',
+      mapLabel: 'Europakarte mit Geländehöhen: KI-Freelancer in vielen Ländern, Hub 01 in den Karpaten der Westukraine, Daten in der EU',
+      hubName: 'Hub 01 · Westukraine',
       hubStatus: 'Baubeginn Frühjahr 2027 · geplant',
       dataSite: 'Daten in der EU',
       figures: [

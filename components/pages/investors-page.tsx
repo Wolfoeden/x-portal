@@ -8,6 +8,8 @@ import { ChapterHub } from '@/components/investors/chapter-hub'
 import { ChapterRoadmap } from '@/components/investors/chapter-roadmap'
 import { ChapterTeam } from '@/components/story/chapter-team'
 import { DeckForm } from '@/components/investors/deck-form'
+import { ReliefLayer, reliefPoint } from '@/components/map/relief-map'
+import { HUB_01 } from '@/lib/map/hubs'
 import type { Locale } from '@/lib/i18n/routes'
 
 export function InvestorsPage({ locale }: { locale: Locale }) {
@@ -15,7 +17,7 @@ export function InvestorsPage({ locale }: { locale: Locale }) {
     <>
       <SiteHeader />
       <main>
-        <InvestorOpener />
+        <InvestorOpener relief={<ReliefLayer focus={HUB_01} />} hub={reliefPoint(HUB_01[0], HUB_01[1])} />
         <ChapterLoop />
         <ChapterWhyNow locale={locale} />
         <ChapterRevenue locale={locale} />

@@ -1,11 +1,12 @@
 'use client'
 
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 import { MotionConfig, motion } from 'motion/react'
 import { useReducedMotion } from '@/lib/use-reduced-motion'
 import { ArrowDown, ArrowRight, Lock } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
-import { EUROPE_DOTS, projectLonLat } from '@/lib/map/europe'
+import { projectLonLat } from '@/lib/map/europe'
 import { useLocale } from '@/components/i18n/locale-provider'
 
 // Beispielhafte Orte, an denen KI-Freelancer arbeiten. Keine Kundenliste, nur das Bild eines europäischen Netzes.
@@ -13,7 +14,6 @@ const CITIES: [number, number][] = [
   [-9.14, 38.72], [-3.7, 40.42], [2.17, 41.39], [2.35, 48.86], [-6.26, 53.35], [4.9, 52.37], [13.4, 52.52],
   [11.58, 48.14], [9.19, 45.46], [16.37, 48.21], [14.42, 50.08], [21.01, 52.23], [18.07, 59.33], [26.1, 44.43], [24.94, 60.17],
 ]
-const [HUB_X, HUB_Y] = projectLonLat(31, 49)
 // Ausschnitt ohne den hohen Norden, damit die Karte neben den Text passt.
 const VIEW = { y: 250, width: 1000, height: 870 }
 const leftOf = (x: number) => `${(x / VIEW.width) * 100}%`
@@ -30,7 +30,12 @@ function arc(x1: number, y1: number, x2: number, y2: number) {
   return `M${x1.toFixed(1)} ${y1.toFixed(1)} Q${(mx + sign * dy * bend).toFixed(1)} ${(my - sign * dx * bend).toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}`
 }
 
-export function InvestorOpener() {
+/**
+ * relief: die Höhenblöcke der Karte (components/map/relief-map.tsx), auf dem Server gezeichnet, damit die Höhendaten nicht im Browser-Bundle landen.
+ * hub: Hub 01 oben auf seinem Block, in Einheiten der Karte.
+ */
+export function InvestorOpener({ relief, hub }: { relief: ReactNode; hub: { x: number; top: number } }) {
+  const [HUB_X, HUB_Y] = [hub.x, hub.top]
   const reduceMotion = useReducedMotion()
   const { dict, ids } = useLocale()
   const copy = dict.investors.opener
@@ -79,7 +84,7 @@ export function InvestorOpener() {
 
           <div className="relative -mx-5 sm:mx-0 lg:-mr-[10%] lg:-mt-6">
             <svg viewBox={`0 ${VIEW.y} ${VIEW.width} ${VIEW.height}`} className="h-auto w-full" role="img" aria-label={copy.mapLabel}>
-              <motion.path d={EUROPE_DOTS} fill="#bfd8c8" initial={reduceMotion ? false : { opacity: 0 }} animate={{ opacity: 0.3 }} transition={{ duration: 1.2 }} />
+              {relief}
               {points.map(([x, y], index) => (
                 <motion.path
                   key={`arc-${index}`}
@@ -109,7 +114,7 @@ export function InvestorOpener() {
               <circle cx={HUB_X} cy={HUB_Y} r="22" fill="none" stroke="#fff" strokeWidth="2.5" className="hub-pulse" />
               <circle cx={HUB_X} cy={HUB_Y} r="12" fill="#fff" />
             </svg>
-            <div className="pointer-events-none absolute rounded-2xl bg-white px-4 py-3 text-ink shadow-[0_24px_48px_-24px_rgb(0_0_0/0.5)]" style={{ left: `calc(${leftOf(HUB_X)} - 200px)`, top: `calc(${topOf(HUB_Y)} + 30px)` }}>
+            <div className="pointer-events-none absolute rounded-2xl bg-white px-4 py-3 text-ink shadow-[0_24px_48px_-24px_rgb(0_0_0/0.5)]" style={{ left: `max(12px, calc(${leftOf(HUB_X)} - 260px))`, top: `calc(${topOf(HUB_Y)} - 118px)` }}>
               <p className="text-[15px] font-medium">{copy.hubName}</p>
               <p className="text-[13px] text-muted">{copy.hubStatus}</p>
             </div>

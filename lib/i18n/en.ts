@@ -978,8 +978,8 @@ export const en: Dictionary = {
       text: 'XPORTAL connects AI freelancers, project delivery and our own workplaces across Europe. A flywheel that reinforces itself.',
       deck: 'Request the deck',
       roadmap: 'Roadmap',
-      mapLabel: 'Map of Europe: AI freelancers in many countries, Hub 01 in Ukraine, data in the EU',
-      hubName: 'Hub 01 · Ukraine',
+      mapLabel: 'Map of Europe with terrain height: AI freelancers in many countries, Hub 01 in the Carpathians of western Ukraine, data in the EU',
+      hubName: 'Hub 01 · Western Ukraine',
       hubStatus: 'Construction starts spring 2027 · planned',
       dataSite: 'Data in the EU',
       figures: [
