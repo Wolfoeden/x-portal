@@ -703,8 +703,8 @@ export const en: Dictionary = {
       count: '01 of 10 · Goal: ten hubs in Europe',
       investors: 'For investors',
       disclaimer: 'Schematic illustration. Future milestones are goals, not commitments.',
-      mapLabel: 'Map of Europe with Hub 01 in Ukraine',
-      hubName: 'Hub 01 · Ukraine',
+      mapLabel: 'Map of Europe with terrain height and Hub 01 in the Carpathians of western Ukraine',
+      hubName: 'Hub 01 · Western Ukraine',
       hubStatus: 'Construction starts spring 2027 · planned',
     },
     doors: {

@@ -712,8 +712,8 @@ export const de = {
       count: '01 von 10 · Ziel: zehn Hubs in Europa',
       investors: 'Für Investoren',
       disclaimer: 'Schematische Darstellung. Künftige Meilensteine sind Ziele, keine Zusagen.',
-      mapLabel: 'Karte Europas mit Hub 01 in der Ukraine',
-      hubName: 'Hub 01 · Ukraine',
+      mapLabel: 'Europakarte mit Geländehöhen und Hub 01 in den Karpaten der Westukraine',
+      hubName: 'Hub 01 · Westukraine',
       hubStatus: 'Baubeginn Frühjahr 2027 · geplant',
     },
     doors: {
