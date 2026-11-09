@@ -74,9 +74,9 @@ export function PlaceFacts({ locale }: { locale: Locale }) {
 }
 
 const OFFERS = [
-  { use: 'mieten' as const, tone: 'light' as const },
-  { use: 'workation' as const, tone: 'soft' as const },
-  { use: 'mieten' as const, tone: 'deep' as const },
+  { use: 'mieten' as const, tone: 'light' as const, image: '/orte/modul-wald.webp' },
+  { use: 'workation' as const, tone: 'soft' as const, image: '/orte/coworking-hang.webp' },
+  { use: 'mieten' as const, tone: 'deep' as const, image: '/orte/haus-gross-hang.webp' },
 ]
 
 const offerTones = {
@@ -106,7 +106,10 @@ export function ChapterOffers({ locale }: { locale: Locale }) {
             const tone = offerTones[offer.tone]
             return (
               <li key={item.title} className={`flex flex-col overflow-hidden rounded-[28px] ${tone.card} ${card}`}>
-                <ImageSlot label={dict.imageSoon} tone={offer.tone} className="aspect-[4/5]" />
+                <div className="group/media relative aspect-[1122/1402] overflow-hidden">
+                  <Image src={offer.image} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, 100vw" className="object-cover transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover/media:scale-[1.04]" />
+                  <AiBadge text={dict.aiImage} label={dict.aiImageLabel} />
+                </div>
                 <div className="flex flex-1 flex-col gap-3 p-7">
                   <span className={`self-start rounded-full px-2.5 py-1 text-[13px] font-medium ${tone.tag}`}>{item.tag}</span>
                   <h3 className={`text-[26px] font-medium leading-[1.1] tracking-[-0.03em] md:text-[28px] ${tone.title}`}>{item.title}</h3>

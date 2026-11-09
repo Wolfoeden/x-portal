@@ -496,9 +496,9 @@ export const en: Dictionary = {
       text: 'Three ways to get to know the place. All of them start with renting. Buying comes only once it is clear what is sold and on which terms.',
       action: 'Register interest',
       items: [
-        { tag: 'Short stay · rent planned', title: 'Get to know it first. Then decide.', text: 'Rent a module or a larger house, get to know the area and try everyday life on site.' },
-        { tag: 'Live & work remotely · in planning', title: 'Your home for a while. Your desk on site.', text: 'A place to stay with access to coworking: desks with a view of the valley and shared spaces.' },
-        { tag: 'Settle long-term · rent planned', title: 'Thinking about a life in Ukraine?', text: 'Rent for longer, including larger houses. Buying as a separate option once the model is settled.' },
+        { tag: 'Short stay · rent planned', title: 'Get to know it first. Then decide.', text: 'Rent a module or a larger house, get to know the area and try everyday life on site.', imageAlt: 'Illustration: dark living module with large windows and a terrace on stilts at the edge of the forest, a meadow with a path and an old wooden fence in front' },
+        { tag: 'Live & work remotely · in planning', title: 'Your home for a while. Your desk on site.', text: 'A place to stay with access to coworking: desks with a view of the valley and shared spaces.', imageAlt: 'Illustration: community house with desks behind large windows at the top of the slope, a living module on the meadow in front, the valley behind' },
+        { tag: 'Settle long-term · rent planned', title: 'Thinking about a life in Ukraine?', text: 'Rent for longer, including larger houses. Buying as a separate option once the model is settled.', imageAlt: 'Illustration: larger two-storey house with a pitched roof between birch and spruce, a path leads up through the meadow' },
       ],
     },
     everyday: {

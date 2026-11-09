@@ -502,9 +502,9 @@ export const de = {
       text: 'Drei Wege, den Ort kennenzulernen. Alle beginnen mit Miete. Kauf kommt erst, wenn feststeht, was verkauft wird und zu welchen Bedingungen.',
       action: 'Interesse vormerken',
       items: [
-        { tag: 'Wohnen auf Zeit · Miete geplant', title: 'Erst kennenlernen. Dann entscheiden.', text: 'Ein Modul oder ein größeres Haus mieten, die Umgebung kennenlernen und den Alltag vor Ort ausprobieren.' },
-        { tag: 'Wohnen & remote arbeiten · in Planung', title: 'Dein Zuhause auf Zeit. Dein Arbeitsplatz vor Ort.', text: 'Eine Unterkunft mit Zugang zum Coworking: Arbeitsplätze mit Blick ins Tal und Gemeinschaftsbereiche.' },
-        { tag: 'Langfristig ankommen · Miete geplant', title: 'Du denkst über ein Leben in der Ukraine nach?', text: 'Längerfristig mieten, auch in größeren Häusern. Kauf als eigene Option, sobald das Modell geklärt ist.' },
+        { tag: 'Wohnen auf Zeit · Miete geplant', title: 'Erst kennenlernen. Dann entscheiden.', text: 'Ein Modul oder ein größeres Haus mieten, die Umgebung kennenlernen und den Alltag vor Ort ausprobieren.', imageAlt: 'Schaubild: dunkles Wohnmodul mit großen Fenstern und Terrasse auf Stützen am Waldrand, davor eine Wiese mit Pfad und altem Holzzaun' },
+        { tag: 'Wohnen & remote arbeiten · in Planung', title: 'Dein Zuhause auf Zeit. Dein Arbeitsplatz vor Ort.', text: 'Eine Unterkunft mit Zugang zum Coworking: Arbeitsplätze mit Blick ins Tal und Gemeinschaftsbereiche.', imageAlt: 'Schaubild: Gemeinschaftshaus mit Arbeitsplätzen hinter großen Fenstern oben am Hang, davor ein Wohnmodul auf der Wiese, im Hintergrund das Tal' },
+        { tag: 'Langfristig ankommen · Miete geplant', title: 'Du denkst über ein Leben in der Ukraine nach?', text: 'Längerfristig mieten, auch in größeren Häusern. Kauf als eigene Option, sobald das Modell geklärt ist.', imageAlt: 'Schaubild: größeres zweigeschossiges Haus mit Satteldach zwischen Birken und Fichten, ein Pfad führt durch die Wiese hinauf' },
       ],
     },
     everyday: {
