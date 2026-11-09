@@ -5,7 +5,7 @@ import { useLocale } from '@/components/i18n/locale-provider'
 import { useWaitlist } from '@/components/places/waitlist-state'
 
 /** E-Mail im Hero: übernimmt die Adresse in die Warteliste und springt zum Formular. */
-export function HeroEmailForm() {
+export function HeroEmailForm({ showNote = true }: { showNote?: boolean }) {
   const copy = useLocale().dict.places.hero
   const { email, setEmail, goToForm } = useWaitlist()
   return (
@@ -36,7 +36,7 @@ export function HeroEmailForm() {
           <ArrowRight aria-hidden size={16} strokeWidth={2} className="transition-transform group-hover:translate-x-1" />
         </button>
       </div>
-      <p className="mt-3.5 text-[14px] text-[#bfd8c8]">{copy.note}</p>
+      {showNote ? <p className="mt-3.5 text-[14px] text-[#bfd8c8]">{copy.note}</p> : null}
     </form>
   )
 }

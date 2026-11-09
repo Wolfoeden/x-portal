@@ -1,9 +1,11 @@
+import type { CSSProperties } from 'react'
 import { EUROPE_RELIEF } from '@/lib/map/europe-relief'
 import { projectLonLat } from '@/lib/map/europe'
 
 /**
  * Punktkarte Europas als Höhenblöcke: Jeder Punkt steht als kleiner Block auf der Karte, so hoch wie das Gelände.
  * Alpen, Karpaten und Skandinavien ragen heraus, Ebenen bleiben flach. Um den gezeigten Punkt (focus) leuchten die Blöcke grün.
+ * Hohe Blöcke (ab 900 m) bewegen sich leicht auf und ab (move), reine CSS-Animation, bei reduzierter Bewegung still.
  * Reine SVG-Gruppe ohne Client-Code; sie gehört in ein <svg> mit EUROPE_VIEWBOX.
  */
 
@@ -56,8 +58,24 @@ const TONES = {
 } as const
 
 type Group = { key: string; fill: string; opacity: number; d: string }
+type Mover = { key: string; x: number; top: number; h: number; side: string; sideOpacity: number; fill: string; opacity: number; style: CSSProperties }
 
-function buildRows(focus: [number, number] | undefined, radius: number, tone: keyof typeof TONES) {
+const MOVE_FROM = 900 // ab dieser Höhe (m) bewegt sich ein Block leicht auf und ab
+
+/** Leichte Bewegung hoher Blöcke: Hub in Karteneinheiten, Takt und Versatz aus der Lage, damit eine ruhige Welle über die Gebirge läuft. */
+function motion(cell: Cell): CSSProperties {
+  const lift = 2 + (5 * (Math.min(cell.e, 2800) - MOVE_FROM)) / (2800 - MOVE_FROM)
+  const period = 3.6 + ((cell.x * 7 + cell.y * 3) % 17) / 10
+  const delay = -((cell.x / 1000) * 6 + (cell.y / 1129) * 2)
+  return {
+    '--grow': ((cell.h + lift) / cell.h).toFixed(3),
+    '--lift': `${(-lift).toFixed(2)}px`,
+    '--period': `${period.toFixed(2)}s`,
+    '--delay': `${delay.toFixed(2)}s`,
+  } as CSSProperties
+}
+
+function buildRows(focus: [number, number] | undefined, radius: number, tone: keyof typeof TONES, move: boolean) {
   const colors = TONES[tone]
   const [fx, fy] = focus ? projectLonLat(focus[0], focus[1]) : [Infinity, Infinity]
   const rows = new Map<number, Cell[]>()
@@ -71,12 +89,27 @@ function buildRows(focus: [number, number] | undefined, radius: number, tone: ke
     .map(([key, cells]) => {
       const sides = new Map<string, Group>()
       const tops = new Map<string, Group>()
+      const movers: Mover[] = []
       for (const cell of cells) {
         const stage = level(cell.e)
         const near = Math.hypot(cell.x - fx, cell.y - fy) < radius
         const id = `${near ? 'f' : 'n'}${stage}`
         const left = cell.x - SIZE / 2
         const top = cell.y - SIZE / 2 - cell.h
+        if (move && cell.e >= MOVE_FROM && cell.h >= 2) {
+          movers.push({
+            key: `m${cell.x}`,
+            x: left,
+            top,
+            h: cell.h,
+            side: near ? colors.focusSide : colors.side,
+            sideOpacity: colors.sideOpacity[stage],
+            fill: near ? colors.focusTop : colors.top[stage],
+            opacity: near ? Math.min(1, colors.topOpacity[stage] + 0.35) : colors.topOpacity[stage],
+            style: motion(cell),
+          })
+          continue
+        }
         if (cell.h >= 0.8) {
           const side = sides.get(id) ?? { key: `s${id}`, fill: near ? colors.focusSide : colors.side, opacity: colors.sideOpacity[stage], d: '' }
           side.d += `M${left.toFixed(1)} ${(top + SIZE).toFixed(1)}h${SIZE}v${cell.h.toFixed(1)}h-${SIZE}z`
@@ -86,18 +119,24 @@ function buildRows(focus: [number, number] | undefined, radius: number, tone: ke
         face.d += `M${left.toFixed(1)} ${top.toFixed(1)}h${SIZE}v${SIZE}h-${SIZE}z`
         tops.set(id, face)
       }
-      return { key, groups: [...sides.values(), ...tops.values()] }
+      return { key, groups: [...sides.values(), ...tops.values()], movers }
     })
 }
 
-export function ReliefLayer({ focus, radius = 110, tone = 'dark', animate = true }: { focus?: [number, number]; radius?: number; tone?: keyof typeof TONES; animate?: boolean }) {
-  const rows = buildRows(focus, radius, tone)
+export function ReliefLayer({ focus, radius = 110, tone = 'dark', animate = true, move = true }: { focus?: [number, number]; radius?: number; tone?: keyof typeof TONES; animate?: boolean; move?: boolean }) {
+  const rows = buildRows(focus, radius, tone, move)
   return (
     <g aria-hidden>
       {rows.map((row, index) => (
         <g key={row.key} className={animate ? 'relief-row' : undefined} style={animate ? { animationDelay: `${index * 18}ms` } : undefined}>
           {row.groups.map((group) => (
             <path key={group.key} d={group.d} fill={group.fill} opacity={group.opacity} />
+          ))}
+          {row.movers.map((block) => (
+            <g key={block.key} style={block.style}>
+              <rect className="relief-side" x={block.x} y={(block.top + SIZE).toFixed(1)} width={SIZE} height={block.h.toFixed(1)} fill={block.side} opacity={block.sideOpacity} />
+              <rect className="relief-top" x={block.x} y={block.top.toFixed(1)} width={SIZE} height={SIZE} fill={block.fill} opacity={block.opacity} />
+            </g>
           ))}
         </g>
       ))}

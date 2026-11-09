@@ -1,24 +1,42 @@
-import Image from 'next/image'
+import { ImageIcon } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
-import { AiBadge } from '@/components/places/ai-badge'
 import { OfferAction } from '@/components/places/hero-form'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, type Locale } from '@/lib/i18n/routes'
 
 const card = 'transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(.2,.7,.2,1)] hover:-translate-y-1.5 hover:shadow-[0_2px_4px_rgb(14_20_17/0.05),0_34px_64px_-30px_rgb(14_20_17/0.38)]'
-const media = 'relative overflow-hidden after:pointer-events-none after:absolute after:inset-0 after:bg-[linear-gradient(180deg,rgb(14_20_17/0.18)_0%,transparent_26%,transparent_72%,rgb(14_20_17/0.14)_100%)]'
-const zoom = 'object-cover transition-[transform,filter] duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-105 group-hover:saturate-[1.06]'
 
-/** 01 Der Ort: Bild über die ganze Breite, Text unten auf der Wiese. */
+/** Platzhalter, bis die Bilder einzeln und gezielt eingesetzt werden. */
+function ImageSlot({ label, tone = 'light', className = '' }: { label: string; tone?: 'light' | 'soft' | 'deep'; className?: string }) {
+  const tones = {
+    light: 'bg-surface text-faint',
+    soft: 'bg-[#d6e8dc] text-brand-ink/70',
+    deep: 'bg-[#1b4f34] text-[#bfd8c8]',
+  }
+  return (
+    <div className={`relative grid place-items-center overflow-hidden ${tones[tone]} ${className}`}>
+      <span aria-hidden className="absolute inset-0 bg-[radial-gradient(circle,currentColor_1px,transparent_1.5px)] bg-[length:18px_18px] opacity-[0.18]" />
+      <span className="relative inline-flex items-center gap-2 rounded-full border border-current/25 px-3 py-1.5 text-[13px] font-medium">
+        <ImageIcon aria-hidden size={15} strokeWidth={1.75} />
+        {label}
+      </span>
+    </div>
+  )
+}
+
+/** 01 Der Ort: großer Bildplatz über die ganze Breite, Text unten. Das Bild folgt. */
 export function ChapterPlace({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale).places
   const copy = dict.place
   return (
-    <section id={IDS[locale].place} aria-labelledby="ort-title" className="relative h-[780px] scroll-mt-16 overflow-hidden text-white md:h-[880px] lg:h-[1000px]">
-      <Image src="/orte/wohnmodul.webp" alt={copy.imageAlt} fill sizes="100vw" className="object-cover object-[42%_0%] md:object-[50%_36%]" />
-      <AiBadge text={dict.aiImage} label={dict.aiImageLabel} className="left-5 top-5 md:left-8 md:top-6" />
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgb(10_24_16/0.18)_0%,transparent_22%,transparent_50%,rgb(10_24_16/0.55)_72%,rgb(10_24_16/0.85)_100%)]" />
+    <section id={IDS[locale].place} aria-labelledby="ort-title" className="relative h-[620px] scroll-mt-16 overflow-hidden bg-[#1b4f34] text-white md:h-[720px]">
+      <span aria-hidden className="absolute inset-0 bg-[radial-gradient(circle,#bfd8c8_1px,transparent_1.5px)] bg-[length:22px_22px] opacity-[0.12]" />
+      <span className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/20 px-3 py-1.5 text-[13px] font-medium text-[#bfd8c8] md:left-8 md:top-6">
+        <ImageIcon aria-hidden size={15} strokeWidth={1.75} />
+        {dict.imageSoon}
+      </span>
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_45%,rgb(10_24_16/0.45)_100%)]" />
       <Container className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-x-12 gap-y-4 pb-7 md:pb-[72px]">
         <div className="flex flex-col gap-4 md:gap-6">
           <p className="flex items-center gap-3 text-[13px] tracking-[0.02em] text-[#d9eadf]">
@@ -26,12 +44,12 @@ export function ChapterPlace({ locale }: { locale: Locale }) {
             <span aria-hidden className="h-px w-8 bg-[#d9eadf]/60" />
             {copy.label}
           </p>
-          <h2 id="ort-title" className="text-[clamp(3rem,7.2vw,6.5rem)] font-medium leading-[0.94] tracking-[-0.045em] [text-shadow:0_2px_30px_rgb(0_0_0/0.25)]">
+          <h2 id="ort-title" className="text-[clamp(3rem,7.2vw,6.5rem)] font-medium leading-[0.94] tracking-[-0.045em]">
             <span className="block text-[#cfe6d8]">{copy.titleGray}</span>
             <span className="block">{copy.title}</span>
           </h2>
         </div>
-        <p className="max-w-[460px] text-[16px] leading-relaxed text-[#e6f0e9] [text-shadow:0_1px_16px_rgb(0_0_0/0.35)] md:text-[18px]">{copy.text}</p>
+        <p className="max-w-[460px] text-[16px] leading-relaxed text-[#e6f0e9] md:text-[18px]">{copy.text}</p>
       </Container>
     </section>
   )
@@ -56,9 +74,9 @@ export function PlaceFacts({ locale }: { locale: Locale }) {
 }
 
 const OFFERS = [
-  { image: '/orte/wohnmodul.webp', position: 'object-[100%_50%]', use: 'mieten' as const, tone: 'light' },
-  { image: '/orte/coworking.webp', position: 'object-[55%_50%]', use: 'workation' as const, tone: 'soft' },
-  { image: '/orte/haus-gross.webp', position: 'object-[68%_50%]', use: 'mieten' as const, tone: 'deep' },
+  { use: 'mieten' as const, tone: 'light' as const },
+  { use: 'workation' as const, tone: 'soft' as const },
+  { use: 'mieten' as const, tone: 'deep' as const },
 ]
 
 const offerTones = {
@@ -85,13 +103,10 @@ export function ChapterOffers({ locale }: { locale: Locale }) {
         <ul className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] gap-4">
           {copy.items.map((item, index) => {
             const offer = OFFERS[index]
-            const tone = offerTones[offer.tone as keyof typeof offerTones]
+            const tone = offerTones[offer.tone]
             return (
-              <li key={item.title} className={`group flex flex-col overflow-hidden rounded-[28px] ${tone.card} ${card}`}>
-                <div className={`${media} aspect-[4/5]`}>
-                  <Image src={offer.image} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, 100vw" className={`${zoom} ${offer.position}`} />
-                  <AiBadge text={dict.aiImage} label={dict.aiImageLabel} />
-                </div>
+              <li key={item.title} className={`flex flex-col overflow-hidden rounded-[28px] ${tone.card} ${card}`}>
+                <ImageSlot label={dict.imageSoon} tone={offer.tone} className="aspect-[4/5]" />
                 <div className="flex flex-1 flex-col gap-3 p-7">
                   <span className={`self-start rounded-full px-2.5 py-1 text-[13px] font-medium ${tone.tag}`}>{item.tag}</span>
                   <h3 className={`text-[26px] font-medium leading-[1.1] tracking-[-0.03em] md:text-[28px] ${tone.title}`}>{item.title}</h3>
@@ -109,12 +124,6 @@ export function ChapterOffers({ locale }: { locale: Locale }) {
   )
 }
 
-const EVERYDAY = [
-  { image: '/orte/gemeinschaftshaus.webp', position: 'object-[0%_50%]' },
-  { image: '/orte/feierabend.webp', position: 'object-[30%_50%]' },
-  { image: '/orte/bar.webp', position: 'object-[35%_50%]' },
-]
-
 export function ChapterEveryday({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale).places
   const copy = dict.everyday
@@ -131,12 +140,9 @@ export function ChapterEveryday({ locale }: { locale: Locale }) {
           <p className="max-w-[380px] text-[16px] text-muted">{copy.text}</p>
         </div>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] gap-4">
-          {copy.items.map((item, index) => (
-            <figure key={item.title} className={`group overflow-hidden rounded-[28px] border border-line bg-white ${card}`}>
-              <div className={`${media} aspect-[4/5]`}>
-                <Image src={EVERYDAY[index].image} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, 100vw" className={`${zoom} ${EVERYDAY[index].position}`} />
-                <AiBadge text={dict.aiImage} label={dict.aiImageLabel} />
-              </div>
+          {copy.items.map((item) => (
+            <figure key={item.title} className={`overflow-hidden rounded-[28px] border border-line bg-white ${card}`}>
+              <ImageSlot label={dict.imageSoon} className="aspect-[4/5]" />
               <figcaption className="flex flex-col gap-1 px-6 pb-6 pt-5">
                 <strong className="text-[20px] font-medium tracking-[-0.02em] text-ink">{item.title}</strong>
                 <span className="text-muted">{item.text}</span>

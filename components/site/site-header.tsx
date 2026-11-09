@@ -197,7 +197,7 @@ export function SiteHeader() {
           <Link href={pagePath('account', locale)} className="auth-in hidden h-10 items-center rounded-full px-3 text-[15px] text-ink transition-colors hover:text-brand sm:inline-flex">
             {text.account}
           </Link>
-          <ButtonLink href={pageHref('places', locale, 'waitlist')} className="auth-out ml-1 h-10 px-[18px] max-sm:h-9 max-sm:px-4 max-sm:text-[14px]">
+          <ButtonLink href={pageHref('places', locale, 'waitlist')} data-waitlist-cta className="auth-out ml-1 h-10 px-[18px] max-sm:h-9 max-sm:px-4 max-sm:text-[14px]">
             {text.waitlist}
           </ButtonLink>
           <ButtonLink href={APP_START_PATH} prefetch={false} className="auth-in ml-1 h-10 px-[18px] max-sm:h-9 max-sm:px-4 max-sm:text-[14px]">
