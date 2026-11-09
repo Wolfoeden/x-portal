@@ -1,4 +1,4 @@
-/** Kleines i auf Schaubildern: zeigt beim Überfahren oder Antippen „Schaubild · mit KI erstellt“. */
+/** Kleines i auf den Bildern: zeigt beim Überfahren oder Antippen, dass es Drohnenfotos sind und die Gebäude mit KI eingesetzt wurden. */
 export function AiBadge({ text, label, className = 'left-3.5 top-3.5' }: { text: string; label: string; className?: string }) {
   return (
     <span className={`group/ki absolute z-10 flex items-center ${className}`}>
@@ -9,7 +9,7 @@ export function AiBadge({ text, label, className = 'left-3.5 top-3.5' }: { text:
       >
         i
       </button>
-      <span role="tooltip" className="pointer-events-none ml-2 whitespace-nowrap rounded-full bg-[rgb(14_20_17/0.78)] px-3 py-1.5 text-[12.5px] font-medium text-white opacity-0 backdrop-blur-md transition-opacity group-hover/ki:opacity-100 group-focus-within/ki:opacity-100">
+      <span role="tooltip" className="pointer-events-none ml-2 w-max max-w-[min(300px,70vw)] rounded-2xl bg-[rgb(14_20_17/0.82)] px-3.5 py-2 leading-snug text-[12.5px] font-medium text-white opacity-0 backdrop-blur-md transition-opacity group-hover/ki:opacity-100 group-focus-within/ki:opacity-100">
         {text}
       </span>
     </span>

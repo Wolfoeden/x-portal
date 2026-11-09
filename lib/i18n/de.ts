@@ -480,8 +480,8 @@ export const de = {
       hubsOf: '01 von 10 Hubs',
       hubsLabel: 'Ein Hub geplant, Ziel zehn Hubs',
     },
-    aiImage: 'Schaubild · mit KI erstellt',
-    aiImageLabel: 'Bildinformation: Schaubild, mit KI erstellt',
+    aiImage: 'Foto: Drohnenaufnahme unseres Grundstücks, gemacht zur Vermessung und Analyse. Die Gebäude sind mit KI eingesetzt.',
+    aiImageLabel: 'Bildinformation: Drohnenfoto des Grundstücks, Gebäude mit KI eingesetzt',
     imageSoon: 'Bild folgt',
     place: {
       label: 'Der Ort',

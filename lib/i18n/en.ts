@@ -474,8 +474,8 @@ export const en: Dictionary = {
       hubsOf: '01 of 10 hubs',
       hubsLabel: 'One hub planned, goal of ten hubs',
     },
-    aiImage: 'Illustration · made with AI',
-    aiImageLabel: 'Image information: illustration, made with AI',
+    aiImage: 'Photo: drone shot of our site, taken to survey and analyse it. The buildings were added with AI.',
+    aiImageLabel: 'Image information: drone photo of the site, buildings added with AI',
     imageSoon: 'Image to follow',
     place: {
       label: 'The place',
