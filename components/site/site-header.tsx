@@ -11,6 +11,7 @@ import {
   Globe,
   Menu,
   ShieldCheck,
+  UserPlus,
   Users,
   Workflow,
   X,
@@ -31,6 +32,7 @@ const icons: Record<MenuEntry['icon'], ComponentType<LucideProps>> = {
   automation: Workflow,
   training: BookOpenCheck,
   isms: ShieldCheck,
+  freelancer: UserPlus,
 }
 
 function DesktopMenu({ label, entries, locale }: { label: string; entries: MenuEntry[]; locale: Locale }) {
@@ -195,8 +197,8 @@ export function SiteHeader() {
           <Link href={pagePath('account', locale)} className="auth-in hidden h-10 items-center rounded-full px-3 text-[15px] text-ink transition-colors hover:text-brand sm:inline-flex">
             {text.account}
           </Link>
-          <ButtonLink href={pageHref('home', locale, 'project')} className="auth-out ml-1 h-10 px-[18px] max-sm:h-9 max-sm:px-4 max-sm:text-[14px]">
-            {text.start}
+          <ButtonLink href={pageHref('places', locale, 'waitlist')} className="auth-out ml-1 h-10 px-[18px] max-sm:h-9 max-sm:px-4 max-sm:text-[14px]">
+            {text.waitlist}
           </ButtonLink>
           <ButtonLink href={APP_START_PATH} prefetch={false} className="auth-in ml-1 h-10 px-[18px] max-sm:h-9 max-sm:px-4 max-sm:text-[14px]">
             {text.start}
@@ -249,8 +251,8 @@ export function SiteHeader() {
             })}
           </ul>
           <div className="flex flex-col gap-3">
-            <ButtonLink href={pageHref('home', locale, 'project')} onClick={() => setMobileOpen(false)} className="auth-out h-12 w-full">
-              {text.start}
+            <ButtonLink href={pageHref('places', locale, 'waitlist')} onClick={() => setMobileOpen(false)} className="auth-out h-12 w-full">
+              {text.waitlist}
             </ButtonLink>
             <ButtonLink href={APP_START_PATH} prefetch={false} onClick={() => setMobileOpen(false)} className="auth-in h-12 w-full">
               {text.start}
