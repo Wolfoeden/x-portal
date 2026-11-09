@@ -311,24 +311,6 @@ html:not([data-auth='in']) .auth-in {
   }
 }
 
-/* Knopf „Interesse vormerken“ in der Kopfzeile leuchtet auf, wenn das E-Mail-Feld der Seite Orte darin aufgeht. */
-@keyframes waitlist-merge {
-  0% {
-    box-shadow: 0 0 0 0 rgb(143 217 171 / 0.9);
-    transform: scale(1);
-  }
-  35% {
-    transform: scale(1.06);
-  }
-  100% {
-    box-shadow: 0 0 0 14px rgb(143 217 171 / 0);
-    transform: scale(1);
-  }
-}
-
-.waitlist-merge {
-  animation: waitlist-merge 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
-}
 
 /* Höhere Blöcke der Europakarte bewegen sich leicht: die Wand wächst, die Oberseite hebt sich mit. */
 @keyframes relief-grow {
@@ -362,7 +344,6 @@ html:not([data-auth='in']) .auth-in {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .waitlist-merge,
   .relief-side,
   .relief-top {
     animation: none;

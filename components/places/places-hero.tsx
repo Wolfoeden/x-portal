@@ -68,9 +68,8 @@ export function PlacesHero({ locale }: { locale: Locale }) {
           </figure>
           {/* Direkt im mitlaufenden Bereich, sonst endet sticky zu früh. Der Hinweis bleibt an seinem Platz. */}
           <StickyEmail>
-            <HeroEmailForm showNote={false} />
+            <HeroEmailForm />
           </StickyEmail>
-          <p className="mx-auto -mt-7 w-full max-w-[600px] text-[14px] text-[#bfd8c8]">{copy.note}</p>
 
           <div className="grid grid-cols-[minmax(0,1fr)] items-center gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
             <figure className="relative mx-auto w-full max-w-[640px]">

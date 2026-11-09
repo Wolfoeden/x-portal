@@ -465,7 +465,6 @@ export const en: Dictionary = {
       emailLabel: 'Email address',
       emailPlaceholder: 'Your email address',
       submit: 'Register interest',
-      note: 'Free and without obligation. You get rental terms, prices and services first, as soon as they are set.',
       mapLabel: 'Map of Europe with terrain height. Hub 01 lies in the Carpathians of western Ukraine, on the Hungarian border.',
       hubName: 'Hub 01 · Western Ukraine',
       hubStatus: 'Construction from spring 2027 · planned',

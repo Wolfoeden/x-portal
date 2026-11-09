@@ -5,7 +5,7 @@ import { useLocale } from '@/components/i18n/locale-provider'
 import { useWaitlist } from '@/components/places/waitlist-state'
 
 /** E-Mail im Hero: übernimmt die Adresse in die Warteliste und springt zum Formular. */
-export function HeroEmailForm({ showNote = true }: { showNote?: boolean }) {
+export function HeroEmailForm({ id = 'orte-hero-email' }: { id?: string }) {
   const copy = useLocale().dict.places.hero
   const { email, setEmail, goToForm } = useWaitlist()
   return (
@@ -18,11 +18,11 @@ export function HeroEmailForm({ showNote = true }: { showNote?: boolean }) {
       className="w-full max-w-[560px]"
     >
       <div className="flex flex-col gap-2 rounded-[22px] bg-white p-2 shadow-[0_1px_2px_rgb(0_0_0/0.1),0_24px_48px_-24px_rgb(0_0_0/0.55)] focus-within:ring-2 focus-within:ring-[#8fd9ab] sm:flex-row sm:items-center sm:pl-5">
-        <label htmlFor="orte-hero-email" className="sr-only">
+        <label htmlFor={id} className="sr-only">
           {copy.emailLabel}
         </label>
         <input
-          id="orte-hero-email"
+          id={id}
           type="email"
           name="email"
           autoComplete="email"
@@ -36,7 +36,6 @@ export function HeroEmailForm({ showNote = true }: { showNote?: boolean }) {
           <ArrowRight aria-hidden size={16} strokeWidth={2} className="transition-transform group-hover:translate-x-1" />
         </button>
       </div>
-      {showNote ? <p className="mt-3.5 text-[14px] text-[#bfd8c8]">{copy.note}</p> : null}
     </form>
   )
 }

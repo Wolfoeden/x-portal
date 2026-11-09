@@ -471,7 +471,6 @@ export const de = {
       emailLabel: 'E-Mail-Adresse',
       emailPlaceholder: 'Deine E-Mail-Adresse',
       submit: 'Interesse vormerken',
-      note: 'Kostenlos und unverbindlich. Mietdauer, Preise und Leistungen bekommst du zuerst, sobald sie feststehen.',
       mapLabel: 'Europakarte mit Geländehöhen. Hub 01 liegt in den Karpaten der Westukraine, an der Grenze zu Ungarn.',
       hubName: 'Hub 01 · Westukraine',
       hubStatus: 'Baubeginn Frühjahr 2027 · geplant',
