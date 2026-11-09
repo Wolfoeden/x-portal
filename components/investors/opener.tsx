@@ -114,7 +114,7 @@ export function InvestorOpener({ locale }: { locale: Locale }) {
     </div>
   )
   const figures = (
-    <dl className="grid grid-cols-[minmax(0,1fr)] gap-6 border-t border-white/15 pt-6 sm:grid-cols-3">
+    <dl className="grid grid-cols-[minmax(0,1fr)] gap-6 border-t border-white/15 pt-6 sm:grid-cols-[repeat(auto-fit,minmax(0,1fr))]">
       {copy.figures.map((figure) => (
         <div key={figure.value}>
           <dt className="text-[clamp(1.75rem,2.4vw,2.125rem)] font-medium tracking-[-0.03em] tabular-nums">{figure.value}</dt>

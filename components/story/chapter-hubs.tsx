@@ -8,6 +8,7 @@ import { ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { MARK } from '@/components/brand/logo-paths'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
+import { HubPreview } from '@/components/investors/hub-preview'
 import { MAP } from '@/lib/map/europe'
 import { useMediaQuery } from '@/lib/use-media-query'
 import { useLocale } from '@/components/i18n/locale-provider'
@@ -45,6 +46,7 @@ const easeInOut = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t 
 function HubsContent({ relief, hub }: MapProps) {
   const { locale, dict } = useLocale()
   const copy = dict.home.hubs
+  const opener = dict.investors.opener
   return (
     <Container className="relative grid h-full grid-cols-[minmax(0,1fr)] items-center gap-10 py-16 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
       <div className="relative z-10 flex flex-col gap-5">
@@ -73,15 +75,19 @@ function HubsContent({ relief, hub }: MapProps) {
       <div className="relative">
         <svg viewBox={`0 ${VIEW.y} ${MAP.width} ${VIEW.height}`} className="h-auto w-full" role="img" aria-label={copy.mapLabel}>
           {relief}
-          <circle cx={hub.x} cy={hub.top} r="16" fill="none" stroke="#fff" strokeWidth="2" className="hub-pulse" />
-          <circle cx={hub.x} cy={hub.top} r="9" fill="#fff" />
         </svg>
-        <div
-          className="absolute rounded-2xl bg-white px-4 py-3 shadow-[0_24px_48px_-24px_rgb(0_0_0/0.5)]"
-          style={{ left: `max(0px, calc(${(hub.x / MAP.width) * 100}% - 250px))`, top: `calc(${((hub.top - VIEW.y) / VIEW.height) * 100}% - 112px)` }}
-        >
-          <p className="text-[15px] font-medium text-ink">{copy.hubName}</p>
-          <p className="text-[13px] text-muted">{copy.hubStatus}</p>
+        <div className="absolute z-10" style={{ left: `${(hub.x / MAP.width) * 100}%`, top: `${((hub.top - VIEW.y) / VIEW.height) * 100}%` }}>
+          <HubPreview
+            href={pagePath('places', locale)}
+            name={copy.hubName}
+            status={copy.hubStatus}
+            show={opener.hubShow}
+            title={opener.hubPreviewTitle}
+            text={opener.hubPreviewText}
+            action={opener.hubPreviewAction}
+            label={opener.hubPreviewLabel}
+            imageAlt={opener.hubImageAlt}
+          />
         </div>
       </div>
     </Container>

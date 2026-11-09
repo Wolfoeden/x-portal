@@ -1002,7 +1002,6 @@ export const de = {
       figures: [
         { value: '01 → 10', text: 'Hubs: der erste geplant, Ziel zehn in Europa' },
         { value: '2027', text: 'Baubeginn Hub 01 im Frühjahr, geplant' },
-        { value: '0 %', text: 'Provision. Erlöse aus Software und Leistungen' },
       ],
     },
     loop: {
@@ -1046,16 +1045,16 @@ export const de = {
     revenue: {
       label: 'Erlöse',
       title: 'Drei Erlösquellen.',
-      text: 'Keine Vermittlungsprovision. Unternehmen zahlen für Leistungen und Software, später für Arbeitsorte.',
+      text: 'Erlöse aus Miete und späterem Verkauf der Häuser, aus der Software und aus Leistungen vor Ort im Hub.',
       streams: [
         {
-          name: 'Leistungen',
-          status: 'Heute im Angebot',
-          live: true,
+          name: 'Miete & Verkauf',
+          status: 'Ab Hub 01',
+          live: false,
           items: [
-            { label: 'KI-Automatisierung', value: 'ab 490 €' },
-            { label: 'KI-Schulung', value: 'nach EU AI Act' },
-            { label: 'ISMS', value: 'nach ISO 27001' },
+            { label: 'Workation und Miete', value: 'Module und Häuser' },
+            { label: 'Verkauf', value: 'sobald das Modell steht' },
+            { label: 'Hubs', value: 'Ziel: zehn in Europa' },
           ],
         },
         {
@@ -1070,12 +1069,13 @@ export const de = {
           ],
         },
         {
-          name: 'Hubs',
+          name: 'Leistungen vor Ort',
           status: 'Ab Hub 01',
           live: false,
           items: [
-            { label: 'Arbeitsorte vor Ort', value: 'für Projektteams' },
-            { label: 'Modell', value: 'in Ausarbeitung' },
+            { label: 'Coworking', value: 'Arbeitsplätze im Gemeinschaftshaus' },
+            { label: 'Restaurant und Bar', value: 'für alle, die oben wohnen' },
+            { label: 'Service', value: 'Betrieb und Pflege der Häuser' },
           ],
         },
       ],

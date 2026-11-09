@@ -992,7 +992,6 @@ export const en: Dictionary = {
       figures: [
         { value: '01 → 10', text: 'Hubs: the first planned, ten across Europe as the goal' },
         { value: '2027', text: 'Construction of Hub 01 starts in spring, planned' },
-        { value: '0%', text: 'Commission. Revenue from software and services' },
       ],
     },
     loop: {
@@ -1036,16 +1035,16 @@ export const en: Dictionary = {
     revenue: {
       label: 'Revenue',
       title: 'Three revenue streams.',
-      text: 'No placement commission. Companies pay for services and software, and later for workplaces.',
+      text: 'Revenue from renting and later selling the houses, from the software and from on-site services at the hub.',
       streams: [
         {
-          name: 'Services',
-          status: 'Available today',
-          live: true,
+          name: 'Rent & sale',
+          status: 'From Hub 01',
+          live: false,
           items: [
-            { label: 'AI automation', value: 'from €490' },
-            { label: 'AI training', value: 'under the EU AI Act' },
-            { label: 'ISMS', value: 'to ISO 27001' },
+            { label: 'Workation and rent', value: 'modules and houses' },
+            { label: 'Sale', value: 'once the model is set' },
+            { label: 'Hubs', value: 'goal: ten in Europe' },
           ],
         },
         {
@@ -1060,12 +1059,13 @@ export const en: Dictionary = {
           ],
         },
         {
-          name: 'Hubs',
+          name: 'On-site services',
           status: 'From Hub 01',
           live: false,
           items: [
-            { label: 'On-site workplaces', value: 'for project teams' },
-            { label: 'Model', value: 'in development' },
+            { label: 'Coworking', value: 'desks in the community house' },
+            { label: 'Restaurant and bar', value: 'for everyone living up there' },
+            { label: 'Service', value: 'running and caring for the houses' },
           ],
         },
       ],
