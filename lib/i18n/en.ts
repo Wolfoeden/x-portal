@@ -482,6 +482,7 @@ export const en: Dictionary = {
       label: 'The place',
       titleGray: 'A place.',
       title: 'For you.',
+      imageAlt: 'Illustration: two-storey community house with a dark facade, large windows and a covered terrace on a meadow slope, spruce and the Carpathian valley behind',
       text: 'XPORTAL is planning a place in the Carpathians of western Ukraine with rental homes, coworking and room for community. For people who want to live and work remotely there for a while, or who are thinking about a long-term fresh start.',
     },
     facts: [

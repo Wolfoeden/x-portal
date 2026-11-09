@@ -488,6 +488,7 @@ export const de = {
       label: 'Der Ort',
       titleGray: 'Ein Ort.',
       title: 'Für Dich.',
+      imageAlt: 'Schaubild: zweigeschossiges Gemeinschaftshaus mit dunkler Fassade, großen Fenstern und überdachter Terrasse an einem Wiesenhang, dahinter Fichten und das Tal der Karpaten',
       text: 'XPORTAL plant in den Karpaten der Westukraine einen Ort mit Mietunterkünften, Coworking und Raum für Gemeinschaft. Für Menschen, die dort zeitweise leben und remote arbeiten möchten oder über einen langfristigen Neuanfang nachdenken.',
     },
     facts: [

@@ -1,4 +1,6 @@
+import Image from 'next/image'
 import { ImageIcon } from 'lucide-react'
+import { AiBadge } from '@/components/places/ai-badge'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { OfferAction } from '@/components/places/hero-form'
@@ -25,31 +27,25 @@ function ImageSlot({ label, tone = 'light', className = '' }: { label: string; t
   )
 }
 
-/** 01 Der Ort: großer Bildplatz über die ganze Breite, Text unten. Das Bild folgt. */
+/** 01 Der Ort: genau ein Bildschirm hoch, das Hochformat-Bild ganz sichtbar neben dem Text. */
 export function ChapterPlace({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale).places
   const copy = dict.place
   return (
-    <section id={IDS[locale].place} aria-labelledby="ort-title" className="relative h-[620px] scroll-mt-16 overflow-hidden bg-[#1b4f34] text-white md:h-[720px]">
-      <span aria-hidden className="absolute inset-0 bg-[radial-gradient(circle,#bfd8c8_1px,transparent_1.5px)] bg-[length:22px_22px] opacity-[0.12]" />
-      <span className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/20 px-3 py-1.5 text-[13px] font-medium text-[#bfd8c8] md:left-8 md:top-6">
-        <ImageIcon aria-hidden size={15} strokeWidth={1.75} />
-        {dict.imageSoon}
-      </span>
-      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_45%,rgb(10_24_16/0.45)_100%)]" />
-      <Container className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-x-12 gap-y-4 pb-7 md:pb-[72px]">
-        <div className="flex flex-col gap-4 md:gap-6">
-          <p className="flex items-center gap-3 text-[13px] tracking-[0.02em] text-[#d9eadf]">
-            <span className="tabular-nums">01</span>
-            <span aria-hidden className="h-px w-8 bg-[#d9eadf]/60" />
-            {copy.label}
-          </p>
-          <h2 id="ort-title" className="text-[clamp(3rem,7.2vw,6.5rem)] font-medium leading-[0.94] tracking-[-0.045em]">
-            <span className="block text-[#cfe6d8]">{copy.titleGray}</span>
-            <span className="block">{copy.title}</span>
+    <section id={IDS[locale].place} aria-labelledby="ort-title" className="scroll-mt-16 bg-surface lg:h-[calc(100svh-4rem)] lg:min-h-[600px]">
+      <Container className="grid h-full grid-cols-[minmax(0,1fr)] gap-8 py-16 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-16 lg:py-8">
+        <div className="flex flex-col gap-5">
+          <ChapterLabel number="01">{copy.label}</ChapterLabel>
+          <h2 id="ort-title" className="text-[clamp(3rem,7vw,6.5rem)] font-medium leading-[0.94] tracking-[-0.045em] text-ink">
+            <span className="block whitespace-nowrap text-[#7c847f]">{copy.titleGray}</span>
+            <span className="block whitespace-nowrap">{copy.title}</span>
           </h2>
+          <p className="max-w-[460px] text-[17px] leading-relaxed text-muted md:text-[18px]">{copy.text}</p>
         </div>
-        <p className="max-w-[460px] text-[16px] leading-relaxed text-[#e6f0e9] md:text-[18px]">{copy.text}</p>
+        <figure className="group relative aspect-[1122/1402] w-full overflow-hidden rounded-[28px] shadow-[0_1px_2px_rgb(14_20_17/0.04),0_30px_70px_-30px_rgb(14_20_17/0.35)] lg:h-full lg:max-h-[820px] lg:w-auto lg:self-center">
+          <Image src="/orte/gemeinschaftshaus-hang.webp" alt={copy.imageAlt} fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.03]" />
+          <AiBadge text={dict.aiImage} label={dict.aiImageLabel} />
+        </figure>
       </Container>
     </section>
   )
