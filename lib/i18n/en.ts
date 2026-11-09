@@ -1039,6 +1039,7 @@ export const en: Dictionary = {
       streams: [
         {
           name: 'Rent & sale',
+          link: '',
           status: 'From Hub 01',
           live: false,
           items: [
@@ -1051,15 +1052,12 @@ export const en: Dictionary = {
           name: 'Software',
           status: 'Available today',
           live: true,
-          items: [
-            { label: 'Basic', value: '€9/month' },
-            { label: 'Pro', value: '€19/month' },
-            { label: 'Business', value: '€50/month' },
-            { label: 'Enterprise', value: '2 cents per credit' },
-          ],
+          items: [],
+          link: 'See the platform on the home page',
         },
         {
           name: 'On-site services',
+          link: '',
           status: 'From Hub 01',
           live: false,
           items: [
@@ -1069,7 +1067,7 @@ export const en: Dictionary = {
           ],
         },
       ],
-      note: 'Software prices exclude VAT; 14-day free trial.',
+      note: '',
     },
     hub: {
       label: 'Hub 01',

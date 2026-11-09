@@ -1,9 +1,11 @@
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { getDictionary } from '@/lib/i18n/dictionary'
-import { IDS, type Locale } from '@/lib/i18n/routes'
+import { IDS, pagePath, type Locale } from '@/lib/i18n/routes'
 
-// Preise wie auf der heutigen Preisseite von XPORTAL (netto, monatlich kündbar).
+// Software ohne Preise, mit Verweis auf die Plattform auf der Startseite.
 export function ChapterRevenue({ locale }: { locale: Locale }) {
   const copy = getDictionary(locale).investors.revenue
   return (
@@ -32,10 +34,16 @@ export function ChapterRevenue({ locale }: { locale: Locale }) {
                   </div>
                 ))}
               </dl>
+              {stream.link ? (
+                <Link href={pagePath('home', locale)} className="group mt-6 inline-flex w-fit items-center gap-2 text-[15px] font-medium text-brand underline decoration-brand/30 underline-offset-[6px] hover:decoration-brand">
+                  {stream.link}
+                  <ArrowRight aria-hidden size={16} strokeWidth={2} className="transition-transform group-hover:translate-x-1" />
+                </Link>
+              ) : null}
             </article>
           ))}
         </div>
-        <p className="text-[13px] text-faint">{copy.note}</p>
+        {copy.note ? <p className="text-[13px] text-faint">{copy.note}</p> : null}
       </Container>
     </section>
   )

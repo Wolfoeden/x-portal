@@ -1049,6 +1049,7 @@ export const de = {
       streams: [
         {
           name: 'Miete & Verkauf',
+          link: '',
           status: 'Ab Hub 01',
           live: false,
           items: [
@@ -1061,15 +1062,12 @@ export const de = {
           name: 'Software',
           status: 'Heute im Angebot',
           live: true,
-          items: [
-            { label: 'Basic', value: '9 € / Monat' },
-            { label: 'Pro', value: '19 € / Monat' },
-            { label: 'Business', value: '50 € / Monat' },
-            { label: 'Enterprise', value: '2 Cent je Credit' },
-          ],
+          items: [],
+          link: 'Zur Plattform auf der Startseite',
         },
         {
           name: 'Leistungen vor Ort',
+          link: '',
           status: 'Ab Hub 01',
           live: false,
           items: [
@@ -1079,7 +1077,7 @@ export const de = {
           ],
         },
       ],
-      note: 'Software-Preise netto zuzüglich Umsatzsteuer, 14 Tage kostenlos testen.',
+      note: '',
     },
     hub: {
       label: 'Hub 01',
