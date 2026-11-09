@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { ImageIcon } from 'lucide-react'
 import { AiBadge } from '@/components/places/ai-badge'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
@@ -10,23 +9,6 @@ import { IDS, type Locale } from '@/lib/i18n/routes'
 
 const card = 'transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(.2,.7,.2,1)] hover:-translate-y-1.5 hover:shadow-[0_2px_4px_rgb(14_20_17/0.05),0_34px_64px_-30px_rgb(14_20_17/0.38)]'
 
-/** Platzhalter, bis die Bilder einzeln und gezielt eingesetzt werden. */
-function ImageSlot({ label, tone = 'light', className = '' }: { label: string; tone?: 'light' | 'soft' | 'deep'; className?: string }) {
-  const tones = {
-    light: 'bg-surface text-faint',
-    soft: 'bg-[#d6e8dc] text-brand-ink/70',
-    deep: 'bg-[#1b4f34] text-[#bfd8c8]',
-  }
-  return (
-    <div className={`relative grid place-items-center overflow-hidden ${tones[tone]} ${className}`}>
-      <span aria-hidden className="absolute inset-0 bg-[radial-gradient(circle,currentColor_1px,transparent_1.5px)] bg-[length:18px_18px] opacity-[0.18]" />
-      <span className="relative inline-flex items-center gap-2 rounded-full border border-current/25 px-3 py-1.5 text-[13px] font-medium">
-        <ImageIcon aria-hidden size={15} strokeWidth={1.75} />
-        {label}
-      </span>
-    </div>
-  )
-}
 
 /** 01 Der Ort: genau ein Bildschirm hoch, das Hochformat-Bild ganz sichtbar neben dem Text. */
 export function ChapterPlace({ locale }: { locale: Locale }) {
@@ -127,6 +109,13 @@ export function ChapterOffers({ locale }: { locale: Locale }) {
   )
 }
 
+// Bilder zu „Alltag“; render: reines KI-Schaubild (kein Drohnenfoto), bekommt den anderen Hinweis.
+const EVERYDAY = [
+  { image: '/orte/gemeinschaft-weg.webp', render: false },
+  { image: '/orte/holzbloecke.webp', render: true },
+  { image: '/orte/terrasse-abend.webp', render: false },
+]
+
 export function ChapterEveryday({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale).places
   const copy = dict.everyday
@@ -143,9 +132,12 @@ export function ChapterEveryday({ locale }: { locale: Locale }) {
           <p className="max-w-[380px] text-[16px] text-muted">{copy.text}</p>
         </div>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] gap-4">
-          {copy.items.map((item) => (
+          {copy.items.map((item, index) => (
             <figure key={item.title} className={`overflow-hidden rounded-[28px] border border-line bg-white ${card}`}>
-              <ImageSlot label={dict.imageSoon} className="aspect-[4/5]" />
+              <div className="group/media relative aspect-[1122/1402] overflow-hidden">
+                <Image src={EVERYDAY[index].image} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, 100vw" className="object-cover transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover/media:scale-[1.04]" />
+                {EVERYDAY[index].render ? <AiBadge text={dict.renderImage} label={dict.renderImageLabel} /> : <AiBadge text={dict.aiImage} label={dict.aiImageLabel} />}
+              </div>
               <figcaption className="flex flex-col gap-1 px-6 pb-6 pt-5">
                 <strong className="text-[20px] font-medium tracking-[-0.02em] text-ink">{item.title}</strong>
                 <span className="text-muted">{item.text}</span>

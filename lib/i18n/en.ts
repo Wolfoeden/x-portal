@@ -476,7 +476,8 @@ export const en: Dictionary = {
     },
     aiImage: 'Photo: drone shot of our site, taken to survey and analyse it. The buildings were added with AI.',
     aiImageLabel: 'Image information: drone photo of the site, buildings added with AI',
-    imageSoon: 'Image to follow',
+    renderImage: 'Illustration · made with AI',
+    renderImageLabel: 'Image information: illustration, made with AI',
     place: {
       label: 'The place',
       titleGray: 'A place.',
@@ -506,9 +507,9 @@ export const en: Dictionary = {
       title: 'Eat together. Meet people. A retreat of your own.',
       text: 'This is how everyday life up there should feel. Restaurant, bar and community house are part of all three ways.',
       items: [
-        { title: 'Arrive. Together.', text: 'Community house with coworking, kitchen and meals. In planning.' },
-        { title: 'After work. The others are already outside.', text: 'After work, the community is waiting. Your retreat stays private.' },
-        { title: 'Evening. Together.', text: 'Bar and restaurant for everyone living up there. In planning.' },
+        { title: 'Arrive. Together.', text: 'Community house with coworking, kitchen and meals. In planning.', imageAlt: 'Community house with a dark facade and covered terrace on the slope, a wooden boardwalk leads up through the meadow, birches in front' },
+        { title: 'Built from natural materials.', text: 'We build sustainably and in the most efficient way, with timber and other natural materials. Configurable on request, or as a prefabricated premium model, adapted to the site with 3D models and optimisation.', imageAlt: 'Illustration: wall of solid timber blocks with timber posts in a shell building, a large window looks out to the mountains' },
+        { title: 'Evening. Together.', text: 'Bar and restaurant for everyone living up there. In planning.', imageAlt: 'Terrace with tables in front of the community house between birch and spruce, a wooden boardwalk winds through the meadow' },
       ],
     },
     waitlist: {

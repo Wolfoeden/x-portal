@@ -482,7 +482,8 @@ export const de = {
     },
     aiImage: 'Foto: Drohnenaufnahme unseres Grundstücks, gemacht zur Vermessung und Analyse. Die Gebäude sind mit KI eingesetzt.',
     aiImageLabel: 'Bildinformation: Drohnenfoto des Grundstücks, Gebäude mit KI eingesetzt',
-    imageSoon: 'Bild folgt',
+    renderImage: 'Schaubild · mit KI erstellt',
+    renderImageLabel: 'Bildinformation: Schaubild, mit KI erstellt',
     place: {
       label: 'Der Ort',
       titleGray: 'Ein Ort.',
@@ -512,9 +513,9 @@ export const de = {
       title: 'Gemeinsam essen. Menschen treffen. Ein eigener Rückzugsort.',
       text: 'So soll sich der Alltag oben anfühlen. Restaurant, Bar und Gemeinschaftshaus gehören zu allen drei Wegen.',
       items: [
-        { title: 'Ankommen. Gemeinsam.', text: 'Gemeinschaftshaus mit Coworking, Küche und Essen. In Planung.' },
-        { title: 'Feierabend. Die anderen sind schon draußen.', text: 'Nach der Arbeit wartet die Gemeinschaft. Der Rückzugsort bleibt privat.' },
-        { title: 'Feierabend. In Gemeinschaft.', text: 'Bar und Restaurant für alle, die oben wohnen. In Planung.' },
+        { title: 'Ankommen. Gemeinsam.', text: 'Gemeinschaftshaus mit Coworking, Küche und Essen. In Planung.', imageAlt: 'Gemeinschaftshaus mit dunkler Fassade und überdachter Terrasse am Hang, ein Holzsteg führt durch die Wiese hinauf, Birken im Vordergrund' },
+        { title: 'Gebaut aus natürlichen Stoffen.', text: 'Wir bauen nachhaltig und auf dem effizientesten Weg, mit Holz und anderen natürlichen Stoffen. Konfigurierbar auf Anfrage, oder als vorgefertigtes Premium-Modell, mit 3D-Modellen und Optimierung an das Grundstück angepasst.', imageAlt: 'Schaubild: Wand aus massiven Holzblöcken mit Holzstützen in einem Rohbau, durch ein großes Fenster der Blick auf die Berge' },
+        { title: 'Feierabend. In Gemeinschaft.', text: 'Bar und Restaurant für alle, die oben wohnen. In Planung.', imageAlt: 'Terrasse mit Tischen vor dem Gemeinschaftshaus zwischen Birken und Fichten, ein Holzsteg schlängelt sich durch die Wiese' },
       ],
     },
     waitlist: {
