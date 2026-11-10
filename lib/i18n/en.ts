@@ -496,13 +496,13 @@ export const en: Dictionary = {
     ],
     offers: {
       label: 'Offers',
-      title: 'How would you like to use XPORTAL?',
-      text: 'Whether for a few weeks, for work or for a longer chapter of your life: every offer starts with a rental home. Terms for a later purchase will be published once they are final.',
+      title: 'Live. Work. Unwind.',
+      text: 'A retreat of your own in the Carpathians. Coworking, a restaurant and community right on site. In planning.',
       action: 'Register interest',
       items: [
-        { tag: 'Short stay · rent planned', title: 'Get to know it first. Then decide.', text: 'Rent a module or a larger house, get to know the area and try everyday life on site.', imageAlt: 'Illustration: dark living module with large windows and a terrace on stilts at the edge of the forest, a meadow with a path and an old wooden fence in front' },
-        { tag: 'Live & work remotely · in planning', title: 'Your home for a while. Your desk on site.', text: 'A place to stay with access to coworking: desks with a view of the valley and shared spaces.', imageAlt: 'Illustration: community house with desks behind large windows at the top of the slope, a living module on the meadow in front, the valley behind' },
-        { tag: 'Settle long-term · rent planned', title: 'Thinking about a life in Ukraine?', text: 'Rent for longer, including larger houses. Buying as a separate option once the model is settled.', imageAlt: 'Illustration: larger two-storey house with a pitched roof between birch and spruce, a path leads up through the meadow' },
+        { tag: 'Living & renting', title: 'Your house. Your peace.', text: 'Modules and larger houses to rent. With privacy and nature on your doorstep.', imageAlt: 'Illustration: dark living module with large windows and a terrace on stilts at the edge of the forest, a meadow with a path and an old wooden fence in front' },
+        { tag: 'Remote work', title: 'Your desk right next door.', text: 'Your own place and coworking on one site. Focused work, sharing ideas, making connections.', imageAlt: 'Illustration: community house with desks behind large windows at the top of the slope, a living module on the meadow in front, the valley behind' },
+        { tag: 'Leisure & community', title: 'Eat together. Meet people.', text: 'Restaurant, bar and shared meeting places. You decide when to join in and when you want your peace and quiet.', imageAlt: 'Illustration: larger two-storey house with a pitched roof between birch and spruce, a path leads up through the meadow' },
       ],
     },
     everyday: {

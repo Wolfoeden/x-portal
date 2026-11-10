@@ -502,13 +502,13 @@ export const de = {
     ],
     offers: {
       label: 'Angebote',
-      title: 'Wie möchtest du XPORTAL nutzen?',
-      text: 'Ob für einige Wochen, zum Arbeiten oder für einen längeren Lebensabschnitt: Jedes Angebot beginnt mit einer Mietunterkunft. Konditionen für einen späteren Kauf veröffentlichen wir, sobald sie verbindlich feststehen.',
+      title: 'Wohnen. Arbeiten. Freizeit.',
+      text: 'Dein eigener Rückzugsort in den Karpaten. Coworking, Restaurant und Gemeinschaft direkt vor Ort. In Planung.',
       action: 'Interesse vormerken',
       items: [
-        { tag: 'Wohnen auf Zeit · Miete geplant', title: 'Erst kennenlernen. Dann entscheiden.', text: 'Ein Modul oder ein größeres Haus mieten, die Umgebung kennenlernen und den Alltag vor Ort ausprobieren.', imageAlt: 'Schaubild: dunkles Wohnmodul mit großen Fenstern und Terrasse auf Stützen am Waldrand, davor eine Wiese mit Pfad und altem Holzzaun' },
-        { tag: 'Wohnen & remote arbeiten · in Planung', title: 'Dein Zuhause auf Zeit. Dein Arbeitsplatz vor Ort.', text: 'Eine Unterkunft mit Zugang zum Coworking: Arbeitsplätze mit Blick ins Tal und Gemeinschaftsbereiche.', imageAlt: 'Schaubild: Gemeinschaftshaus mit Arbeitsplätzen hinter großen Fenstern oben am Hang, davor ein Wohnmodul auf der Wiese, im Hintergrund das Tal' },
-        { tag: 'Langfristig ankommen · Miete geplant', title: 'Du denkst über ein Leben in der Ukraine nach?', text: 'Längerfristig mieten, auch in größeren Häusern. Kauf als eigene Option, sobald das Modell geklärt ist.', imageAlt: 'Schaubild: größeres zweigeschossiges Haus mit Satteldach zwischen Birken und Fichten, ein Pfad führt durch die Wiese hinauf' },
+        { tag: 'Wohnen & Mieten', title: 'Dein Haus. Deine Ruhe.', text: 'Module und größere Häuser zur Miete. Mit Privatsphäre und Natur vor der Tür.', imageAlt: 'Schaubild: dunkles Wohnmodul mit großen Fenstern und Terrasse auf Stützen am Waldrand, davor eine Wiese mit Pfad und altem Holzzaun' },
+        { tag: 'Remote arbeiten', title: 'Dein Arbeitsplatz gleich nebenan.', text: 'Eigene Unterkunft und Coworking auf einem Grundstück. Konzentriert arbeiten, Ideen austauschen, Kontakte knüpfen.', imageAlt: 'Schaubild: Gemeinschaftshaus mit Arbeitsplätzen hinter großen Fenstern oben am Hang, davor ein Wohnmodul auf der Wiese, im Hintergrund das Tal' },
+        { tag: 'Freizeit & Gemeinschaft', title: 'Zusammen essen. Leute treffen.', text: 'Restaurant, Bar und gemeinsame Treffpunkte. Du entscheidest, wann du dazukommst und wann du deine Ruhe möchtest.', imageAlt: 'Schaubild: größeres zweigeschossiges Haus mit Satteldach zwischen Birken und Fichten, ein Pfad führt durch die Wiese hinauf' },
       ],
     },
     everyday: {
