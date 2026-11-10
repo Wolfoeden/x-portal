@@ -468,7 +468,9 @@ export const de = {
     hero: {
       label: 'Hub 01',
       region: 'Westukraine · Karpaten, an der Grenze zu Ungarn',
-      title: 'Hub 01 in der Westukraine, in den Karpaten',
+      eyebrow: 'Hub 01 · Westukraine',
+      title: 'Wohnen und arbeiten in den Karpaten.',
+      pill: 'Warteliste · Workation, Miete, später Kauf',
       emailLabel: 'E-Mail-Adresse',
       emailPlaceholder: 'Deine E-Mail-Adresse',
       submit: 'Interesse vormerken',

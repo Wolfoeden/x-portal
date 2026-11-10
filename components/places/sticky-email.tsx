@@ -35,7 +35,9 @@ export function StickyEmail({ children }: { children: ReactNode }) {
       const slide = easeInOut(clamp01((TOP - (before + GAP)) / SLIDE))
       const left = range.getBoundingClientRect().bottom - from.bottom
       const fade = easeInOut(clamp01(1 - left / FADE))
-      const container = range.getBoundingClientRect()
+      // Rechter Rand des Inhalts (Container 1272 px, Rand 20 bzw. 32 px), nicht des Bildschirms.
+      const gutter = window.innerWidth >= 768 ? 32 : 20
+      const contentRight = Math.min(window.innerWidth, (window.innerWidth + 1272) / 2) - gutter
 
       if (reduce) {
         box.style.opacity = String(1 - fade)
@@ -43,7 +45,7 @@ export function StickyEmail({ children }: { children: ReactNode }) {
         const narrow = Math.min(1, NARROW_WIDTH / from.width)
         const scale = (1 + (narrow - 1) * slide) * (1 - 0.45 * fade)
         // Rechtsbündig mit dem Inhalt: der rechte Rand des Felds wandert zum rechten Rand des Inhaltsbereichs.
-        const dx = (container.right - from.right) * slide
+        const dx = (contentRight - from.right) * slide
         box.style.transform = `translate3d(${dx}px, 0, 0) scale(${scale})`
         box.style.opacity = String(1 - fade)
       }
@@ -65,7 +67,7 @@ export function StickyEmail({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    <div ref={outer} className="sticky z-30 mx-auto w-full max-w-[600px]" style={{ top: TOP, bottom: 20 }}>
+    <div ref={outer} className="sticky z-30 mx-auto w-[calc(100%-2.5rem)] max-w-[600px]" style={{ top: TOP, bottom: 20 }}>
       <div ref={inner} className="origin-top-right will-change-transform">
         {children}
       </div>

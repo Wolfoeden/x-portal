@@ -462,7 +462,9 @@ export const en: Dictionary = {
     hero: {
       label: 'Hub 01',
       region: 'Western Ukraine · Carpathians, on the Hungarian border',
-      title: 'Hub 01 in the Carpathians of western Ukraine',
+      eyebrow: 'Hub 01 · Western Ukraine',
+      title: 'Live and work in the Carpathians.',
+      pill: 'Waitlist · workation, rent, later buy',
       emailLabel: 'Email address',
       emailPlaceholder: 'Your email address',
       submit: 'Register interest',

@@ -59,3 +59,22 @@ export function OfferAction({ use, label, className }: { use: 'workation' | 'mie
     </a>
   )
 }
+
+/** Weißer Knopf im Hero („Warteliste · Workation, Miete, später Kauf“): führt direkt zum Formular. */
+export function HeroPill({ label }: { label: string }) {
+  const { ids } = useLocale()
+  const { goToForm } = useWaitlist()
+  return (
+    <a
+      href={`#${ids.waitlist}`}
+      onClick={(event) => {
+        event.preventDefault()
+        goToForm()
+      }}
+      className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-[clamp(0.95rem,1.3vw,1.125rem)] font-medium text-brand-deep shadow-[0_12px_30px_-14px_rgb(0_0_0/0.6)] transition-colors hover:bg-brand-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+    >
+      {label}
+      <ArrowRight aria-hidden size={16} strokeWidth={2} className="transition-transform group-hover:translate-x-1" />
+    </a>
+  )
+}
