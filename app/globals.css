@@ -238,3 +238,165 @@ html:not([data-auth='in']) .auth-in {
     display: none;
   }
 }
+
+/* Höhenblöcke der Europakarte (components/map/relief-map.tsx): Reihe für Reihe von Norden nach Süden einblenden. */
+@keyframes relief-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.relief-row {
+  animation: relief-rise 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .relief-row {
+    animation: none;
+  }
+}
+
+/* Seite Orte (components/places): Nummern auf dem Luftbild und sanfter Bildeinstieg. */
+@keyframes orte-zoom {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.orte-pin {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -135%);
+}
+
+.orte-pin-dot {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(255 255 255 / 0.5);
+  border-radius: 999px;
+  background: rgb(200 236 214 / 0.42);
+  color: #103522;
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1;
+  backdrop-filter: blur(3px);
+}
+
+.orte-pin-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgb(200 236 214 / 0.4);
+  border-radius: 999px;
+  animation: hub-pulse 2.4s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orte-pin-ring {
+    animation: none;
+  }
+}
+
+
+/* Höhere Blöcke der Europakarte bewegen sich leicht: die Wand wächst, die Oberseite hebt sich mit. */
+@keyframes relief-grow {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(var(--grow));
+  }
+}
+
+@keyframes relief-lift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(var(--lift));
+  }
+}
+
+.relief-side {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: relief-grow var(--period) ease-in-out var(--delay) infinite;
+}
+
+.relief-top {
+  animation: relief-lift var(--period) ease-in-out var(--delay) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .relief-side,
+  .relief-top {
+    animation: none;
+  }
+}
+
+/* Einstieg Investoren (components/investors/opener.tsx): Linien laufen zum Logo, Orte ploppen auf. */
+@keyframes opener-flow {
+  to {
+    stroke-dashoffset: -60;
+  }
+}
+
+@keyframes opener-pop {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.opener-flow {
+  fill: none;
+  stroke: #bfd8c8;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-dasharray: 2 10;
+  opacity: 0.55;
+  animation: opener-flow 2.2s linear infinite;
+}
+
+.opener-hubflow {
+  fill: none;
+  stroke: #8fd9ab;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 6 8;
+  animation: opener-flow 1.6s linear infinite;
+}
+
+.opener-city {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: opener-pop 0.6s cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opener-flow,
+  .opener-hubflow,
+  .opener-city {
+    animation: none;
+  }
+}

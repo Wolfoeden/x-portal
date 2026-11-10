@@ -1,135 +1,193 @@
-'use client'
-
 import Link from 'next/link'
-import { MotionConfig, motion } from 'motion/react'
-import { useReducedMotion } from '@/lib/use-reduced-motion'
 import { ArrowDown, ArrowRight, Lock } from 'lucide-react'
-import { Container } from '@/components/ui/primitives'
-import { EUROPE_DOTS, projectLonLat } from '@/lib/map/europe'
-import { useLocale } from '@/components/i18n/locale-provider'
+import { Wordmark } from '@/components/brand/logo'
+import { ReliefLayer, reliefPoint } from '@/components/map/relief-map'
+import { HubPreview } from '@/components/investors/hub-preview'
+import { getDictionary } from '@/lib/i18n/dictionary'
+import { IDS, pagePath, type Locale } from '@/lib/i18n/routes'
+import { projectLonLat } from '@/lib/map/europe'
+import { HUB_01 } from '@/lib/map/hubs'
+
+/**
+ * Einstieg der Investorenseite: Das grüne XPORTAL-Logo steht in der Mitte, alle Orte Europas laufen dorthin zusammen.
+ * Darunter die Höhenkarte; Hub 01 in den Karpaten hat eine eigene grüne Linie zum Logo und zeigt beim Überfahren oder Antippen ein Vorschaubild.
+ * Gezeichnet in einer festen Bühne von 1440 × 980; ab xl wird sie als Ganzes skaliert, darunter stehen Text und Karte untereinander.
+ */
+
+const STAGE = { width: 1440, height: 980 }
+const LOGO = { x: 720, y: 330 } // Mitte des Logos in der Bühne
+const SCALE = 1.1 // Karteneinheiten → Bühne
+// Die Karte so legen, dass Mitteleuropa um das Logo liegt und Hub 01 rechts neben dem Text frei steht.
+const [ANCHOR_X, ANCHOR_Y] = projectLonLat(12, 52)
+const MAP_X = LOGO.x - ANCHOR_X * SCALE + 100
+const MAP_Y = LOGO.y - ANCHOR_Y * SCALE + 40
+// Ausschnitt der Karte für schmale Bildschirme (ohne hohen Norden), in Bühnen-Einheiten.
+const SMALL = { x: MAP_X, y: MAP_Y + 220 * SCALE, width: 1000 * SCALE, height: 900 * SCALE }
+const toStage = (x: number, y: number): [number, number] => [MAP_X + x * SCALE, MAP_Y + y * SCALE]
 
 // Beispielhafte Orte, an denen KI-Freelancer arbeiten. Keine Kundenliste, nur das Bild eines europäischen Netzes.
 const CITIES: [number, number][] = [
-  [-9.14, 38.72], [-3.7, 40.42], [2.17, 41.39], [2.35, 48.86], [-6.26, 53.35], [4.9, 52.37], [13.4, 52.52],
-  [11.58, 48.14], [9.19, 45.46], [16.37, 48.21], [14.42, 50.08], [21.01, 52.23], [18.07, 59.33], [26.1, 44.43], [24.94, 60.17],
+  [-9.14, 38.72], [-3.7, 40.42], [2.17, 41.39], [-8.61, 41.15], [-6.26, 53.35], [-3.19, 55.95], [12.5, 41.9], [18.07, 59.33],
+  [10.75, 59.91], [24.94, 60.17], [24.1, 56.95], [25.28, 54.69], [26.1, 44.43], [23.32, 42.7], [5.32, 60.39], [-0.13, 51.5],
+  [2.35, 48.86], [16.37, 48.21], [14.42, 50.08], [13.4, 52.52], [21.01, 52.23], [19.04, 47.5], [-0.58, 44.84], [-1.55, 47.22],
+  [-4.49, 48.39], [-8.47, 51.9], [-4.25, 55.86], [-2.24, 53.48], [-0.38, 39.47],
 ]
-const [HUB_X, HUB_Y] = projectLonLat(31, 49)
-// Ausschnitt ohne den hohen Norden, damit die Karte neben den Text passt.
-const VIEW = { y: 250, width: 1000, height: 870 }
-const leftOf = (x: number) => `${(x / VIEW.width) * 100}%`
-const topOf = (y: number) => `${((y - VIEW.y) / VIEW.height) * 100}%`
+// Flächen von Text, Logo und Knöpfen in der Bühne: Dort stehen keine Punkte.
+const TEXT_BOXES = [
+  [540, 136, 900, 226],
+  [470, 181, 970, 351],
+  [400, 361, 1040, 436],
+  [545, 461, 895, 521],
+]
+const POINTS = CITIES.map(([lon, lat]) => toStage(...projectLonLat(lon, lat))).filter(
+  ([x, y]) => y < 800 && !TEXT_BOXES.some(([a, b, c, d]) => x > a - 30 && x < c + 30 && y > b - 30 && y < d + 30),
+)
 
-function arc(x1: number, y1: number, x2: number, y2: number) {
+function arc(x1: number, y1: number, x2: number, y2: number, bend = 0.22) {
   const mx = (x1 + x2) / 2
   const my = (y1 + y2) / 2
   const dx = x2 - x1
   const dy = y2 - y1
-  const bend = 0.22
-  // Kontrollpunkt senkrecht zur Strecke, immer nach oben gewölbt.
   const sign = dx >= 0 ? -1 : 1
   return `M${x1.toFixed(1)} ${y1.toFixed(1)} Q${(mx + sign * dy * bend).toFixed(1)} ${(my - sign * dx * bend).toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}`
 }
 
-export function InvestorOpener() {
-  const reduceMotion = useReducedMotion()
-  const { dict, ids } = useLocale()
-  const copy = dict.investors.opener
-  const points = CITIES.map(([lon, lat]) => projectLonLat(lon, lat))
+const pct = (value: number, total: number) => `${((value / total) * 100).toFixed(3)}%`
+
+function Stage({ hub, mapLabel }: { hub: [number, number]; mapLabel: string }) {
+  return (
+    <svg viewBox={`0 0 ${STAGE.width} ${STAGE.height}`} className="absolute inset-0 size-full" role="img" aria-label={mapLabel}>
+      <defs>
+        <radialGradient id="opener-clear" cx={LOGO.x} cy="380" r="330" gradientUnits="userSpaceOnUse" gradientTransform={`translate(${LOGO.x} 380) scale(1.25 0.72) translate(-${LOGO.x} -380)`}>
+          <stop offset="0" stopColor="#174d32" stopOpacity="1" />
+          <stop offset="0.62" stopColor="#174d32" stopOpacity="0.92" />
+          <stop offset="1" stopColor="#174d32" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <g transform={`translate(${MAP_X.toFixed(1)} ${MAP_Y.toFixed(1)}) scale(${SCALE})`} opacity="0.75">
+        <ReliefLayer focus={HUB_01} tone="dark" />
+      </g>
+      {POINTS.map(([x, y], index) => (
+        <path key={index} d={arc(x, y, LOGO.x, LOGO.y)} className="opener-flow" style={{ animationDelay: `${(index * -0.37).toFixed(2)}s` }} />
+      ))}
+      <path d={arc(hub[0], hub[1], LOGO.x, LOGO.y, 0.18)} className="opener-hubflow" />
+      <rect width={STAGE.width} height={STAGE.height} fill="url(#opener-clear)" />
+      {POINTS.map(([x, y], index) => (
+        <circle key={index} cx={x} cy={y} r="6" fill="#e8f2ec" className="opener-city" style={{ animationDelay: `${(0.3 + index * 0.06).toFixed(2)}s` }} />
+      ))}
+    </svg>
+  )
+}
+
+export function InvestorOpener({ locale }: { locale: Locale }) {
+  const copy = getDictionary(locale).investors.opener
+  const ids = IDS[locale]
+  const point = reliefPoint(HUB_01[0], HUB_01[1])
+  const hub = toStage(point.x, point.top)
+
+  const words = (
+    <p className="text-[clamp(1.5rem,2.1vw,1.875rem)] font-medium leading-none tracking-[-0.03em]">
+      {copy.words.map((word, index) => (
+        <span key={word} className={index === 0 ? 'text-[#7fa58f]' : index === 1 ? 'text-[#a9c8b5]' : 'text-white'}>
+          {index > 0 ? ' ' : ''}
+          {word}
+        </span>
+      ))}
+    </p>
+  )
+  const title = (
+    // Sichtbar zweimal (Bühne ab xl, darunter gestapelt), für Screenreader und Suchmaschinen nur einmal als h1 oben im Abschnitt.
+    <div aria-hidden className="flex flex-col items-center gap-[clamp(1rem,1.8vw,1.625rem)] font-normal">
+      <Wordmark className="h-auto w-[min(480px,78vw)] text-[#8fd9ab] drop-shadow-[0_0_32px_rgb(143_217_171/0.35)] xl:w-[33.3vw] xl:max-w-[480px]" />
+      <span className="max-w-[620px] text-[clamp(1.125rem,1.55vw,1.375rem)] leading-normal tracking-[-0.01em] text-[#e3efe7]">{copy.textAfterLogo}</span>
+    </div>
+  )
+  const actions = (
+    <div className="flex flex-wrap justify-center gap-3">
+      <Link href={`#${ids.deck}`} className="inline-flex h-12 items-center gap-2 rounded-full bg-white px-6 text-[15px] font-medium text-ink transition-colors hover:bg-brand-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+        {copy.deck}
+        <ArrowRight aria-hidden size={17} strokeWidth={2} />
+      </Link>
+      <Link href={`#${ids.roadmap}`} className="inline-flex h-12 items-center gap-2 rounded-full border border-white/25 px-5 text-[15px] font-medium text-white transition-colors hover:border-white/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+        {copy.roadmap}
+        <ArrowDown aria-hidden size={16} strokeWidth={2} />
+      </Link>
+    </div>
+  )
+  const figures = (
+    <dl className="grid grid-cols-[minmax(0,1fr)] gap-6 border-t border-white/15 pt-6 sm:grid-cols-[repeat(auto-fit,minmax(0,1fr))]">
+      {copy.figures.map((figure) => (
+        <div key={figure.value}>
+          <dt className="text-[clamp(1.75rem,2.4vw,2.125rem)] font-medium tracking-[-0.03em] tabular-nums">{figure.value}</dt>
+          <dd className="mt-1 max-w-[260px] text-[14px] text-[#bfd8c8]">{figure.text}</dd>
+        </div>
+      ))}
+    </dl>
+  )
+  const dataPill = (
+    <p className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-[12.5px] font-medium text-white backdrop-blur">
+      <Lock aria-hidden size={12} strokeWidth={2} />
+      {copy.dataSite}
+    </p>
+  )
+  const preview = (
+    <HubPreview
+      href={pagePath('places', locale)}
+      name={copy.hubName}
+      status={copy.hubStatus}
+      show={copy.hubShow}
+      title={copy.hubPreviewTitle}
+      text={copy.hubPreviewText}
+      action={copy.hubPreviewAction}
+      label={copy.hubPreviewLabel}
+      imageAlt={copy.hubImageAlt}
+    />
+  )
 
   return (
-    <MotionConfig reducedMotion="user">
-      <section className="relative overflow-hidden bg-brand-deep text-white" aria-labelledby="investoren-title">
-        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_72%_40%,#1b5c39_0%,transparent_60%)]" />
-        <Container className="relative grid min-h-[calc(100svh-4rem)] grid-cols-[minmax(0,1fr)] content-center gap-10 py-14 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-6 lg:py-10">
-          <div className="relative z-10 flex flex-col">
-            <p className="text-[14px] text-[#bfd8c8]">{copy.label}</p>
-            <h1 id="investoren-title" className="mt-5 text-[clamp(3.25rem,7.2vw,6.5rem)] font-medium leading-[0.94] tracking-[-0.045em]">
-              {copy.words.map((word, index) => (
-                <motion.span
-                  key={word}
-                  initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ type: 'spring', stiffness: 140, damping: 20, delay: 0.1 + index * 0.12 }}
-                  className={`block ${index === 0 ? 'text-[#7fa58f]' : index === 1 ? 'text-[#a9c8b5]' : 'text-white'}`}
-                >
-                  {word}
-                </motion.span>
-              ))}
-            </h1>
-            <p className="mt-7 max-w-[440px] text-[18px] leading-relaxed text-[#cfe2d6]">
-              {copy.text}
-            </p>
-            <div className="mt-9 flex flex-wrap items-center gap-3">
-              <Link
-                href={`#${ids.deck}`}
-                className="inline-flex h-12 items-center gap-2 rounded-full bg-white px-6 text-[15px] font-medium text-ink transition-colors hover:bg-brand-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                {copy.deck}
-                <ArrowRight aria-hidden size={17} strokeWidth={2} />
-              </Link>
-              <Link
-                href={`#${ids.roadmap}`}
-                className="inline-flex h-12 items-center gap-2 rounded-full border border-white/25 px-5 text-[15px] font-medium text-white transition-colors hover:border-white/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                {copy.roadmap}
-                <ArrowDown aria-hidden size={16} strokeWidth={2} />
-              </Link>
-            </div>
-          </div>
+    <section className="relative overflow-hidden bg-brand-deep text-white" aria-labelledby="investoren-title">
+      <h1 id="investoren-title" className="sr-only">
+        {copy.text}
+      </h1>
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_55%_at_50%_38%,#1b5c39_0%,transparent_70%)]" />
 
-          <div className="relative -mx-5 sm:mx-0 lg:-mr-[10%] lg:-mt-6">
-            <svg viewBox={`0 ${VIEW.y} ${VIEW.width} ${VIEW.height}`} className="h-auto w-full" role="img" aria-label={copy.mapLabel}>
-              <motion.path d={EUROPE_DOTS} fill="#bfd8c8" initial={reduceMotion ? false : { opacity: 0 }} animate={{ opacity: 0.3 }} transition={{ duration: 1.2 }} />
-              {points.map(([x, y], index) => (
-                <motion.path
-                  key={`arc-${index}`}
-                  d={arc(x, y, HUB_X, HUB_Y)}
-                  fill="none"
-                  stroke="#bfd8c8"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  initial={reduceMotion ? false : { pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 0.38 }}
-                  transition={{ duration: 1.4, ease: [0.4, 0, 0.2, 1], delay: 0.9 + index * 0.09 }}
-                />
-              ))}
-              {points.map(([x, y], index) => (
-                <motion.circle
-                  key={`city-${index}`}
-                  cx={x}
-                  cy={y}
-                  r="7"
-                  fill="#e8f2ec"
-                  initial={reduceMotion ? false : { scale: 0, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ type: 'spring', stiffness: 260, damping: 16, delay: 0.5 + index * 0.06 }}
-                  style={{ transformBox: 'fill-box', transformOrigin: 'center' }}
-                />
-              ))}
-              <circle cx={HUB_X} cy={HUB_Y} r="22" fill="none" stroke="#fff" strokeWidth="2.5" className="hub-pulse" />
-              <circle cx={HUB_X} cy={HUB_Y} r="12" fill="#fff" />
-            </svg>
-            <div className="pointer-events-none absolute rounded-2xl bg-white px-4 py-3 text-ink shadow-[0_24px_48px_-24px_rgb(0_0_0/0.5)]" style={{ left: `calc(${leftOf(HUB_X)} - 200px)`, top: `calc(${topOf(HUB_Y)} + 30px)` }}>
-              <p className="text-[15px] font-medium">{copy.hubName}</p>
-              <p className="text-[13px] text-muted">{copy.hubStatus}</p>
-            </div>
-            {/* Ohne Ortsangabe: Der Standort der Datenbank wird bewusst nicht genannt, nur die EU. */}
-            <div className="pointer-events-none absolute left-[6%] top-[4%] inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-[12.5px] font-medium text-white backdrop-blur">
-              <Lock aria-hidden size={12} strokeWidth={2} />
-              {copy.dataSite}
-            </div>
-          </div>
+      {/* Ab xl: eine Bühne, in der Logo, Linien und Karte genau übereinanderliegen. */}
+      <div className="relative mx-auto hidden w-full max-w-[1440px] xl:block" style={{ aspectRatio: `${STAGE.width} / ${STAGE.height}` }}>
+        <Stage hub={hub} mapLabel={copy.mapLabel} />
+        <div className="absolute left-8 top-8">{dataPill}</div>
+        <div className="absolute inset-x-0 flex flex-col items-center px-8 text-center" style={{ top: pct(150, STAGE.height) }}>
+          <p className="mb-3.5 text-[14px] text-[#bfd8c8]">{copy.label}</p>
+          {words}
+          <div className="mt-[clamp(1rem,2vw,1.875rem)]">{title}</div>
+          <div className="mt-[clamp(1.25rem,2.4vw,2.125rem)]">{actions}</div>
+        </div>
+        <div className="absolute z-10" style={{ left: pct(hub[0], STAGE.width), top: pct(hub[1], STAGE.height) }}>
+          {preview}
+        </div>
+        <div className="absolute inset-x-[116px] bottom-10">{figures}</div>
+      </div>
 
-          <dl className="relative z-10 grid grid-cols-[minmax(0,1fr)] gap-6 border-t border-white/15 pt-6 sm:grid-cols-3 lg:col-span-2">
-            {copy.figures.map((figure) => (
-              <div key={figure.value}>
-                <dt className="text-[clamp(1.75rem,2.6vw,2.25rem)] font-medium tracking-[-0.03em] tabular-nums">{figure.value}</dt>
-                <dd className="mt-1 max-w-[260px] text-[14px] text-[#bfd8c8]">{figure.text}</dd>
-              </div>
-            ))}
-          </dl>
-        </Container>
-      </section>
-    </MotionConfig>
+      {/* Darunter: Text oben, Karte mit Hub 01 darunter, Zahlen am Ende. */}
+      <div className="relative flex flex-col items-center gap-8 px-5 pb-12 pt-12 text-center md:px-8 xl:hidden">
+        {dataPill}
+        <div className="flex flex-col items-center gap-4">
+          <p className="text-[14px] text-[#bfd8c8]">{copy.label}</p>
+          {words}
+        </div>
+        {title}
+        {actions}
+        <div className="relative w-full max-w-[640px]">
+          <svg viewBox={`${SMALL.x.toFixed(1)} ${SMALL.y.toFixed(1)} ${SMALL.width} ${SMALL.height}`} className="h-auto w-full overflow-visible" aria-hidden>
+            <g transform={`translate(${MAP_X.toFixed(1)} ${MAP_Y.toFixed(1)}) scale(${SCALE})`} opacity="0.85">
+              <ReliefLayer focus={HUB_01} tone="dark" animate={false} />
+            </g>
+          </svg>
+          <div className="absolute z-10" style={{ left: pct(hub[0] - SMALL.x, SMALL.width), top: pct(hub[1] - SMALL.y, SMALL.height) }}>
+            {preview}
+          </div>
+        </div>
+        <div className="w-full max-w-[1208px] text-left">{figures}</div>
+      </div>
+    </section>
   )
 }

@@ -27,6 +27,9 @@ describe('Kontaktthemen in der Adresse', () => {
     expect(topicFromSearch(new URLSearchParams('thema=unbekannt'), 'de')).toBe('general')
     expect(translateTopic('?thema=ki-schulung', 'de', 'en')).toBe('?topic=ai-training')
     expect(translateTopic('', 'de', 'en')).toBe('')
+    expect(pageHref('contact', 'de', 'topicPlaces')).toBe('/kontakt?thema=orte')
+    expect(topicFromSearch(new URLSearchParams('topic=places'), 'en')).toBe('places')
+    expect(translateTopic('?thema=orte', 'de', 'en')).toBe('?topic=places')
   })
 })
 
@@ -45,6 +48,12 @@ describe('submitContact', () => {
     await submitContact({ ...input, topic: 'general' }, { key: 'xportal-test-bucket', bucket: 'analyse_test' }, db, noMail)
     expect(rpcs[0]).toMatchObject({ p_bucket: 'kontakt_test' })
     expect(rows[0]).toMatchObject({ topic: 'general', service: null })
+  })
+
+  it('speichert Fragen zu den Orten als Allgemein, erkennbar am Kennzeichen vorn', async () => {
+    const { db, rows } = fakeDb()
+    await submitContact({ ...input, topic: 'places', message: 'Gibt es dort Kinderbetreuung?' }, visitor, db, noMail)
+    expect(rows[0]).toMatchObject({ topic: 'general', service: null, message: '[Orte und Hub 01] Gibt es dort Kinderbetreuung?' })
   })
 
   it('hält das Tageslimit ein und speichert dann nichts', async () => {

@@ -1,11 +1,11 @@
 import { IDS, TOPIC_PARAM, pageHref, type IdKey, type Locale } from '@/lib/i18n/routes'
 
-// Themen der Kontaktseite. Die drei Leistungen kommen aus dem Menü, „general“ ist alles andere.
+// Themen der Kontaktseite. Die drei Leistungen kommen aus dem Menü, „places“ sind Fragen zu den Orten (Hub 01), „general“ ist alles andere.
 
-export const CONTACT_TOPICS = ['automation', 'training', 'isms', 'general'] as const
+export const CONTACT_TOPICS = ['automation', 'training', 'isms', 'places', 'general'] as const
 export type ContactTopic = (typeof CONTACT_TOPICS)[number]
 
-const ANCHOR: Record<Exclude<ContactTopic, 'general'>, IdKey> = { automation: 'topicAutomation', training: 'topicTraining', isms: 'topicIsms' }
+const ANCHOR: Record<Exclude<ContactTopic, 'general'>, IdKey> = { automation: 'topicAutomation', training: 'topicTraining', isms: 'topicIsms', places: 'topicPlaces' }
 
 export function contactHref(topic: ContactTopic, locale: Locale) {
   return topic === 'general' ? pageHref('contact', locale) : pageHref('contact', locale, ANCHOR[topic])

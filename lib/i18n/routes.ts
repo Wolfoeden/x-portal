@@ -7,6 +7,7 @@ export const PAGES = {
   home: { de: '/', en: '/en' },
   freelancer: { de: '/freelancer', en: '/en/freelancers' },
   investors: { de: '/investoren', en: '/en/investors' },
+  places: { de: '/orte', en: '/en/places' },
   contact: { de: '/kontakt', en: '/en/contact' },
   signIn: { de: '/anmelden', en: '/en/sign-in' },
   account: { de: '/konto', en: '/en/account' },
@@ -45,9 +46,14 @@ export const IDS = {
     hub01: 'hub-01',
     roadmap: 'roadmap',
     deck: 'deck',
+    place: 'ort',
+    offers: 'angebote',
+    everyday: 'alltag',
+    waitlist: 'warteliste',
     topicAutomation: 'ki-automatisierung',
     topicTraining: 'ki-schulung',
     topicIsms: 'isms',
+    topicPlaces: 'orte',
   },
   en: {
     project: 'project',
@@ -79,9 +85,14 @@ export const IDS = {
     hub01: 'hub-01',
     roadmap: 'roadmap',
     deck: 'deck',
+    place: 'place',
+    offers: 'offers',
+    everyday: 'everyday',
+    waitlist: 'waitlist',
     topicAutomation: 'ai-automation',
     topicTraining: 'ai-training',
     topicIsms: 'isms',
+    topicPlaces: 'places',
   },
 } satisfies Record<Locale, Record<string, string>>
 export type Ids = (typeof IDS)['de']
@@ -93,7 +104,7 @@ export function pagePath(page: PageKey, locale: Locale) {
 
 /** Kontaktthemen stehen in der Adresse, damit auch ein Klick im Menü auf der Kontaktseite das Thema wechselt. */
 export const TOPIC_PARAM = { de: 'thema', en: 'topic' } as const
-export const TOPIC_ANCHORS = ['topicAutomation', 'topicTraining', 'topicIsms'] as const satisfies readonly IdKey[]
+export const TOPIC_ANCHORS = ['topicAutomation', 'topicTraining', 'topicIsms', 'topicPlaces'] as const satisfies readonly IdKey[]
 
 /** Pfad mit Anker, z. B. pageHref('home', 'en', 'deck') → /en#deck. Themen der Kontaktseite → /kontakt?thema=isms. */
 export function pageHref(page: PageKey, locale: Locale, anchor?: IdKey) {

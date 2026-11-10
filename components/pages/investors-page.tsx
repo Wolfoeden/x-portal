@@ -15,7 +15,7 @@ export function InvestorsPage({ locale }: { locale: Locale }) {
     <>
       <SiteHeader />
       <main>
-        <InvestorOpener />
+        <InvestorOpener locale={locale} />
         <ChapterLoop />
         <ChapterWhyNow locale={locale} />
         <ChapterRevenue locale={locale} />

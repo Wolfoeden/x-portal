@@ -72,10 +72,12 @@ export function ContactSection({ topic }: { topic: ContactTopic }) {
           <nav aria-label={copy.topicsLabel} className="mt-2">
             <p className="mb-3 text-[14px] font-medium text-ink">{copy.topicsLabel}</p>
             <ul className="grid grid-cols-[minmax(0,1fr)] gap-2 sm:grid-cols-2">
-              {CONTACT_TOPICS.map((item) => {
+              {CONTACT_TOPICS.map((item, index) => {
                 const active = item === topic
+                // Bei ungerader Zahl füllt das letzte Thema die Zeile, statt allein zu stehen.
+                const wide = CONTACT_TOPICS.length % 2 === 1 && index === CONTACT_TOPICS.length - 1
                 return (
-                  <li key={item}>
+                  <li key={item} className={wide ? 'sm:col-span-2' : undefined}>
                     <Link
                       href={contactHref(item, locale)}
                       scroll={false}
@@ -109,7 +111,7 @@ export function ContactSection({ topic }: { topic: ContactTopic }) {
             </div>
           ) : (
             <form onSubmit={onSubmit} noValidate className="flex flex-col gap-4">
-              <p className="text-[20px] font-medium tracking-[-0.015em] text-ink">{fill(copy.formTitle, { topic: copy.topics[topic].label })}</p>
+              <p className="text-[20px] font-medium tracking-[-0.015em] text-ink">{topic === 'general' ? copy.formTitleGeneral : fill(copy.formTitle, { topic: copy.topics[topic].label })}</p>
               <div className="grid grid-cols-[minmax(0,1fr)] gap-4 sm:grid-cols-2">
                 <label className="flex flex-col gap-1.5 text-[14px] font-medium text-ink" htmlFor={`${id}-name`}>
                   {copy.name}
