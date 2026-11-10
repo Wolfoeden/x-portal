@@ -80,7 +80,7 @@ export function ChapterOffers({ locale }: { locale: Locale }) {
               {copy.title}
             </h2>
           </div>
-          <p className="max-w-[380px] text-[16px] text-muted">{copy.text}</p>
+          <p className="max-w-[440px] text-[16px] leading-relaxed text-muted">{copy.text}</p>
         </div>
         <ul className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] gap-4">
           {copy.items.map((item, index) => {
@@ -111,8 +111,8 @@ export function ChapterOffers({ locale }: { locale: Locale }) {
 
 // Bilder zu „Alltag“; render: reines KI-Schaubild (kein Drohnenfoto), bekommt den anderen Hinweis.
 const EVERYDAY = [
-  { image: '/orte/gemeinschaft-weg.webp', render: false },
   { image: '/orte/holzbloecke.webp', render: true },
+  { image: '/orte/gemeinschaft-weg.webp', render: false },
   { image: '/orte/terrasse-abend.webp', render: false },
 ]
 
@@ -122,14 +122,18 @@ export function ChapterEveryday({ locale }: { locale: Locale }) {
   return (
     <section id={IDS[locale].everyday} aria-labelledby="alltag-title" className="scroll-mt-16 border-y border-line bg-surface">
       <Container className="flex flex-col gap-12 py-24 md:py-32">
-        <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-5">
+        <div className="grid grid-cols-[minmax(0,1fr)] gap-x-16 gap-y-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end">
           <div className="flex flex-col gap-5">
             <ChapterLabel number="03">{copy.label}</ChapterLabel>
             <h2 id="alltag-title" className={`${chapterTitle} max-w-[820px] text-ink`}>
               {copy.title}
             </h2>
           </div>
-          <p className="max-w-[380px] text-[16px] text-muted">{copy.text}</p>
+          <div className="flex max-w-[520px] flex-col gap-4 text-[17px] leading-relaxed text-muted">
+            {copy.text.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
         </div>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] gap-4">
           {copy.items.map((item, index) => (

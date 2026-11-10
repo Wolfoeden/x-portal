@@ -503,7 +503,7 @@ export const de = {
     offers: {
       label: 'Angebote',
       title: 'Wie möchtest du XPORTAL nutzen?',
-      text: 'Drei Wege, den Ort kennenzulernen. Alle beginnen mit Miete. Kauf kommt erst, wenn feststeht, was verkauft wird und zu welchen Bedingungen.',
+      text: 'Ob für einige Wochen, zum Arbeiten oder für einen längeren Lebensabschnitt: Jedes Angebot beginnt mit einer Mietunterkunft. Konditionen für einen späteren Kauf veröffentlichen wir, sobald sie verbindlich feststehen.',
       action: 'Interesse vormerken',
       items: [
         { tag: 'Wohnen auf Zeit · Miete geplant', title: 'Erst kennenlernen. Dann entscheiden.', text: 'Ein Modul oder ein größeres Haus mieten, die Umgebung kennenlernen und den Alltag vor Ort ausprobieren.', imageAlt: 'Schaubild: dunkles Wohnmodul mit großen Fenstern und Terrasse auf Stützen am Waldrand, davor eine Wiese mit Pfad und altem Holzzaun' },
@@ -513,18 +513,22 @@ export const de = {
     },
     everyday: {
       label: 'Alltag',
-      title: 'Gemeinsam essen. Menschen treffen. Ein eigener Rückzugsort.',
-      text: 'So soll sich der Alltag oben anfühlen. Restaurant, Bar und Gemeinschaftshaus gehören zu allen drei Wegen.',
+      title: 'Dein Freiraum. Zum Leben, Arbeiten und Zusammensein.',
+      text: [
+        'Dein eigenes Zuhause als Rückzugsort. Ein Arbeitsplatz für konzentrierte Stunden. Und Menschen, mit denen du Interessen teilen, Ideen entwickeln oder einfach gemeinsam essen kannst.',
+        'Du entscheidest, wann du für dich bist und wann du dazukommst. Für Menschen, die eigenständig leben und arbeiten möchten und Freude am Austausch haben.',
+        'Geplant sind private Mietunterkünfte, Coworking und gemeinsame Treffpunkte auf einem Grundstück.',
+      ],
       items: [
-        { title: 'Ankommen. Gemeinsam.', text: 'Gemeinschaftshaus mit Coworking, Küche und Essen. In Planung.', imageAlt: 'Gemeinschaftshaus mit dunkler Fassade und überdachter Terrasse am Hang, ein Holzsteg führt durch die Wiese hinauf, Birken im Vordergrund' },
-        { title: 'Gebaut aus natürlichen Stoffen.', text: 'Wir bauen nachhaltig und auf dem effizientesten Weg, mit Holz und anderen natürlichen Stoffen. Konfigurierbar auf Anfrage, oder als vorgefertigtes Premium-Modell, mit 3D-Modellen und Optimierung an das Grundstück angepasst.', imageAlt: 'Schaubild: Wand aus massiven Holzblöcken mit Holzstützen in einem Rohbau, durch ein großes Fenster der Blick auf die Berge' },
-        { title: 'Feierabend. In Gemeinschaft.', text: 'Bar und Restaurant für alle, die oben wohnen. In Planung.', imageAlt: 'Terrasse mit Tischen vor dem Gemeinschaftshaus zwischen Birken und Fichten, ein Holzsteg schlängelt sich durch die Wiese' },
+        { title: 'Dein Rückzugsort.', text: 'Eine eigene Unterkunft mit Privatsphäre, eingebettet in die Natur. Platz für deinen Alltag und deine Ruhe.', imageAlt: 'Schaubild: Wand aus massiven Holzblöcken mit Holzstützen in einem Rohbau, durch ein großes Fenster der Blick auf die Berge' },
+        { title: 'Dein Platz zum Arbeiten.', text: 'Geplante Coworking-Arbeitsplätze in der Nähe deiner Unterkunft. Raum für konzentriertes Arbeiten und den Austausch zwischendurch.', imageAlt: 'Gemeinschaftshaus mit dunkler Fassade und überdachter Terrasse am Hang, ein Holzsteg führt durch die Wiese hinauf, Birken im Vordergrund' },
+        { title: 'Gemeinschaft nach deinem Gefühl.', text: 'Gemeinsam essen, Ideen teilen, etwas unternehmen. Menschen mit ähnlichen Interessen begegnen und andere Perspektiven kennenlernen. Du entscheidest, wie viel Gemeinschaft zu deinem Alltag gehört.', imageAlt: 'Terrasse mit Tischen vor dem Gemeinschaftshaus zwischen Birken und Fichten, ein Holzsteg schlängelt sich durch die Wiese' },
       ],
     },
     waitlist: {
       label: 'Warteliste',
-      title: 'Früh informiert. Zuerst gefragt.',
-      text: 'Sag uns, ob du zur Workation kommen, mieten oder kaufen möchtest. So sehen wir, welche Angebote gebraucht werden, und du bekommst sie als Erste.',
+      title: 'So möchtest du leben und arbeiten?',
+      text: 'Lass dich über die geplanten Unterkünfte, Arbeitsmöglichkeiten und Mietangebote informieren.',
       steps: ['Interesse vormerken, kostenlos und unverbindlich', 'Infopaket mit Mietdauer, Preisen und Leistungen', 'Erste Mietangebote, die Warteliste zuerst', 'Ankommen, geplant ab Frühjahr 2027'],
       quote: '„Ich bin von Anfang an oben. Frag mich.“',
       quoteName: 'Roman Dering',
@@ -550,7 +554,7 @@ export const de = {
       privacy: 'Datenschutz',
       selection: 'Deine Auswahl:',
       submit: 'Interesse vormerken',
-      trust: ['Kostenlos', 'Unverbindlich', 'Keine Weitergabe deiner Daten'],
+      trust: ['Kostenlos und unverbindlich', 'Keine Weitergabe deiner Daten'],
       emailMissing: 'Bitte trag deine E-Mail-Adresse ein.',
       emailInvalid: 'Bitte prüf die E-Mail-Adresse, sie sieht unvollständig aus.',
       consentMissing: 'Bitte setz das Häkchen, damit wir dir schreiben dürfen.',

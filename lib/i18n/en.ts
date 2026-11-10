@@ -497,7 +497,7 @@ export const en: Dictionary = {
     offers: {
       label: 'Offers',
       title: 'How would you like to use XPORTAL?',
-      text: 'Three ways to get to know the place. All of them start with renting. Buying comes only once it is clear what is sold and on which terms.',
+      text: 'Whether for a few weeks, for work or for a longer chapter of your life: every offer starts with a rental home. Terms for a later purchase will be published once they are final.',
       action: 'Register interest',
       items: [
         { tag: 'Short stay · rent planned', title: 'Get to know it first. Then decide.', text: 'Rent a module or a larger house, get to know the area and try everyday life on site.', imageAlt: 'Illustration: dark living module with large windows and a terrace on stilts at the edge of the forest, a meadow with a path and an old wooden fence in front' },
@@ -507,18 +507,22 @@ export const en: Dictionary = {
     },
     everyday: {
       label: 'Everyday life',
-      title: 'Eat together. Meet people. A retreat of your own.',
-      text: 'This is how everyday life up there should feel. Restaurant, bar and community house are part of all three ways.',
+      title: 'Your own space. To live, work and spend time together.',
+      text: [
+        'A home of your own to retreat to. A desk for focused hours. And people to share interests with, develop ideas or simply eat together.',
+        'You decide when you keep to yourself and when you join in. For people who want to live and work independently and enjoy exchange with others.',
+        'Planned are private rental homes, coworking and shared meeting places on one site.',
+      ],
       items: [
-        { title: 'Arrive. Together.', text: 'Community house with coworking, kitchen and meals. In planning.', imageAlt: 'Community house with a dark facade and covered terrace on the slope, a wooden boardwalk leads up through the meadow, birches in front' },
-        { title: 'Built from natural materials.', text: 'We build sustainably and in the most efficient way, with timber and other natural materials. Configurable on request, or as a prefabricated premium model, adapted to the site with 3D models and optimisation.', imageAlt: 'Illustration: wall of solid timber blocks with timber posts in a shell building, a large window looks out to the mountains' },
-        { title: 'Evening. Together.', text: 'Bar and restaurant for everyone living up there. In planning.', imageAlt: 'Terrace with tables in front of the community house between birch and spruce, a wooden boardwalk winds through the meadow' },
+        { title: 'Your retreat.', text: 'A place of your own with privacy, set in nature. Room for your everyday life and your peace and quiet.', imageAlt: 'Illustration: wall of solid timber blocks with timber posts in a shell building, a large window looks out to the mountains' },
+        { title: 'Your place to work.', text: 'Planned coworking desks close to where you stay. Room for focused work and a chat in between.', imageAlt: 'Community house with a dark facade and covered terrace on the slope, a wooden boardwalk leads up through the meadow, birches in front' },
+        { title: 'Community on your terms.', text: 'Eat together, share ideas, do things. Meet people with similar interests and discover other perspectives. You decide how much community belongs in your everyday life.', imageAlt: 'Terrace with tables in front of the community house between birch and spruce, a wooden boardwalk winds through the meadow' },
       ],
     },
     waitlist: {
       label: 'Waitlist',
-      title: 'Informed early. Asked first.',
-      text: 'Tell us whether you want to come for a workation, rent or buy. That shows us which offers are needed, and you get them first.',
+      title: 'Is this how you want to live and work?',
+      text: 'Get updates on the planned homes, workspaces and rental offers.',
       steps: ['Register interest, free and without obligation', 'Info pack with rental terms, prices and services', 'First rental offers, waitlist first', 'Moving in, planned from spring 2027'],
       quote: '“I have been up there from the start. Ask me.”',
       quoteName: 'Roman Dering',
@@ -544,7 +548,7 @@ export const en: Dictionary = {
       privacy: 'Privacy',
       selection: 'Your choice:',
       submit: 'Register interest',
-      trust: ['Free', 'No obligation', 'Your data is not passed on'],
+      trust: ['Free and without obligation', 'Your data is not passed on'],
       emailMissing: 'Please enter your email address.',
       emailInvalid: 'Please check the email address, it looks incomplete.',
       consentMissing: 'Please tick the box so that we may write to you.',
