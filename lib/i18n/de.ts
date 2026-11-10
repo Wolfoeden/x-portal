@@ -469,7 +469,7 @@ export const de = {
       label: 'Node001',
       region: 'Westukraine · Karpaten, an der Grenze zu Ungarn',
       eyebrow: 'Node001 · Westukraine',
-      title: 'Wohnen und arbeiten in den Karpaten.',
+      title: 'Privat wohnen. Gemeinsam arbeiten. Beruflich verbunden bleiben.',
       pill: 'Warteliste · Workation, Miete oder Kauf',
       emailLabel: 'E-Mail-Adresse',
       emailPlaceholder: 'Deine E-Mail-Adresse',
@@ -492,7 +492,7 @@ export const de = {
       titleGray: 'Ein Ort.',
       title: 'Für Dich.',
       imageAlt: 'Schaubild: zweigeschossiges Gemeinschaftshaus mit dunkler Fassade, großen Fenstern und überdachter Terrasse an einem Wiesenhang, dahinter Fichten und das Tal der Karpaten',
-      text: 'XPORTAL plant in den Karpaten der Westukraine einen Ort mit Mietunterkünften, Coworking und Raum für Gemeinschaft. Für Menschen, die dort zeitweise leben und remote arbeiten möchten oder über einen langfristigen Neuanfang nachdenken.',
+      text: 'XPORTAL plant eigene Häuser und Coworking in den Karpaten der Westukraine. Für Menschen, die ihren Rückzugsort in der Natur suchen und sich mit anderen Freelancern und den Projektteams von XPORTAL verbinden möchten. Wohnen zur Miete oder geplanter Hauskauf mit Grundstückspacht.',
     },
     facts: [
       { value: '2 ha', text: 'eigenes Grundstück am Hang' },
@@ -506,7 +506,7 @@ export const de = {
       text: 'Dein eigener Rückzugsort in den Karpaten. Coworking, Restaurant und Gemeinschaft direkt vor Ort. In Planung.',
       action: 'Interesse vormerken',
       items: [
-        { tag: 'Wohnen & Mieten', title: 'Dein Haus. Deine Ruhe.', text: 'Module und größere Häuser zur Miete. Mit Privatsphäre und Natur vor der Tür.', imageAlt: 'Schaubild: dunkles Wohnmodul mit großen Fenstern und Terrasse auf Stützen am Waldrand, davor eine Wiese mit Pfad und altem Holzzaun' },
+        { tag: 'Wohnen & Mieten', title: 'Dein Haus. Deine Ruhe.', text: 'Module und größere Häuser zur Miete, oder geplant: Haus kaufen, Grundstück pachten. Mit Privatsphäre und Natur vor der Tür.', imageAlt: 'Schaubild: dunkles Wohnmodul mit großen Fenstern und Terrasse auf Stützen am Waldrand, davor eine Wiese mit Pfad und altem Holzzaun' },
         { tag: 'Remote arbeiten', title: 'Dein Arbeitsplatz gleich nebenan.', text: 'Eigene Unterkunft und Coworking auf einem Grundstück. Konzentriert arbeiten, Ideen austauschen, Kontakte knüpfen.', imageAlt: 'Schaubild: Gemeinschaftshaus mit Arbeitsplätzen hinter großen Fenstern oben am Hang, davor ein Wohnmodul auf der Wiese, im Hintergrund das Tal' },
         { tag: 'Freizeit & Gemeinschaft', title: 'Zusammen essen. Leute treffen.', text: 'Restaurant, Bar und gemeinsame Treffpunkte. Du entscheidest, wann du dazukommst und wann du deine Ruhe möchtest.', imageAlt: 'Schaubild: größeres zweigeschossiges Haus mit Satteldach zwischen Birken und Fichten, ein Pfad führt durch die Wiese hinauf' },
       ],

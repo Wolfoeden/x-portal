@@ -463,7 +463,7 @@ export const en: Dictionary = {
       label: 'Node001',
       region: 'Western Ukraine · Carpathians, on the Hungarian border',
       eyebrow: 'Node001 · Western Ukraine',
-      title: 'Live and work in the Carpathians.',
+      title: 'Live privately. Work together. Stay professionally connected.',
       pill: 'Waitlist · workation, rent or buy',
       emailLabel: 'Email address',
       emailPlaceholder: 'Your email address',
@@ -486,7 +486,7 @@ export const en: Dictionary = {
       titleGray: 'A place.',
       title: 'For you.',
       imageAlt: 'Illustration: two-storey community house with a dark facade, large windows and a covered terrace on a meadow slope, spruce and the Carpathian valley behind',
-      text: 'XPORTAL is planning a place in the Carpathians of western Ukraine with rental homes, coworking and room for community. For people who want to live and work remotely there for a while, or who are thinking about a long-term fresh start.',
+      text: 'XPORTAL is planning private houses and coworking in the Carpathians of western Ukraine. For people who are looking for a retreat in nature and want to connect with other freelancers and the XPORTAL project teams. Rent a home, or, as planned, buy a house and lease the land.',
     },
     facts: [
       { value: '2 ha', text: 'our own site on the slope' },
@@ -500,7 +500,7 @@ export const en: Dictionary = {
       text: 'A retreat of your own in the Carpathians. Coworking, a restaurant and community right on site. In planning.',
       action: 'Register interest',
       items: [
-        { tag: 'Living & renting', title: 'Your house. Your peace.', text: 'Modules and larger houses to rent. With privacy and nature on your doorstep.', imageAlt: 'Illustration: dark living module with large windows and a terrace on stilts at the edge of the forest, a meadow with a path and an old wooden fence in front' },
+        { tag: 'Living & renting', title: 'Your house. Your peace.', text: 'Modules and larger houses to rent, or as planned: buy a house, lease the land. With privacy and nature on your doorstep.', imageAlt: 'Illustration: dark living module with large windows and a terrace on stilts at the edge of the forest, a meadow with a path and an old wooden fence in front' },
         { tag: 'Remote work', title: 'Your desk right next door.', text: 'Your own place and coworking on one site. Focused work, sharing ideas, making connections.', imageAlt: 'Illustration: community house with desks behind large windows at the top of the slope, a living module on the meadow in front, the valley behind' },
         { tag: 'Leisure & community', title: 'Eat together. Meet people.', text: 'Restaurant, bar and shared meeting places. You decide when to join in and when you want your peace and quiet.', imageAlt: 'Illustration: larger two-storey house with a pitched roof between birch and spruce, a path leads up through the meadow' },
       ],
