@@ -1,0 +1,4617 @@
+{
+ "titel": "X-PORTAL Index 3.0",
+ "stand": "2026-11-05",
+ "artefakt": "https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F",
+ "zielblatt": [
+  {
+   "nr": "Z1",
+   "ebene": "Node001",
+   "ziel": "2–3 Leute wohnen und arbeiten ganzjährig oben",
+   "messgroesse": "Personen, die den ersten Winter oben gewohnt und gearbeitet haben",
+   "zielwert": "2–3 Personen; ausgelegt für Team plus 5 Käufer (E79)",
+   "klaerungsauftrag": false,
+   "termin": "Einzug ab Frühjahr 2027 (E55), ganzjährig nach dem ersten Winter 2027/28",
+   "wer_review": "Roman oben; Paul mit Nazar für den Bau · Review G2, G3, G4",
+   "grenze": "Zeit: Einzug erst ohne Frost (E21). Kapital: der Ort trägt sich aus Käufergeld (E57)",
+   "globalziel": "1 und 3",
+   "quelle": "E01, E23, E24"
+  },
+  {
+   "nr": "Z2",
+   "ebene": "Node001",
+   "ziel": "Das Grundstück voll bekommen",
+   "messgroesse": "Verkaufte oder vermietete Plots von der Zahl, die die Geologie erlaubt",
+   "zielwert": "Zahl der Plots nach O01, Paul mit Nazar. Schwelle zum Bestellen: 5 Käufer mit belegtem Geld, 100 auf der Warteliste (E78)",
+   "klaerungsauftrag": true,
+   "termin": "Verkauf ab Januar 2027 (E52)",
+   "wer_review": "Roman (Verkauf), Paul (Grundstück) · Review G0, G1",
+   "grenze": "Kapital: bestellt wird erst mit dem Geld der 5 Käufer (E78); weniger als 5 entscheidet O23",
+   "globalziel": "1 und 2",
+   "quelle": "E46, E51"
+  },
+  {
+   "nr": "Z3",
+   "ebene": "Node001",
+   "ziel": "Erster bezahlter Umsatz",
+   "messgroesse": "Bezahlte Rechnungen je Monat in €, getrennt von Interesse und Marge",
+   "zielwert": "Monatswert festlegen. Planwert der Matrix (S06, 03.11.2026): mindestens Pauls 8.000 € netto plus laufende Kosten oben",
+   "klaerungsauftrag": true,
+   "termin": "bis zum Verkaufsstart im Januar 2027 (E77), dann monatlich",
+   "wer_review": "Roman und Paul · Review monatlich (3.3)",
+   "grenze": "Vorschlag S06, nicht entschieden: ohne bezahltes Projekt bis 31.12.2026 nur Stufe „1 Person“",
+   "globalziel": "1",
+   "quelle": "E07, E08, E31, E77"
+  },
+  {
+   "nr": "Z4",
+   "ebene": "Node001",
+   "ziel": "Schema für den nächsten Node",
+   "messgroesse": "Schema, Planung, Nutzbarkeit und Sinn getrennt von den Werten dieses Grundstücks; ein geänderter Standortparameter macht betroffene Anforderungen, Varianten und Beschlüsse auffindbar (2.6.6)",
+   "zielwert": "Probe vor G1; zweite Standortkonfiguration nach Stufe 1",
+   "klaerungsauftrag": false,
+   "termin": "nach Stufe 1, Probe vor G1",
+   "wer_review": "Paul · Review nach Stufe 1",
+   "grenze": "–",
+   "globalziel": "2",
+   "quelle": "E11"
+  },
+  {
+   "nr": "X1",
+   "ebene": "Aufteilung: X-PORTAL, DT Agentur, Grundstücke",
+   "ziel": "X-PORTAL: Dachfirma",
+   "messgroesse": "festlegen, je Aufgabe",
+   "zielwert": "Was genau zur Dachfirma gehört (2.5.3). Aufgaben laut Vorgabe: Grundstücke bebauen und verwalten; Freelancer verwalten und Projekten zuordnen; eigene Projekte bauen, etwa KI-Agenten, Blockchain und Finance Engineering",
+   "klaerungsauftrag": true,
+   "termin": "Aufteilung vor G0, eigene Ziele nach Stufe 1 (E69)",
+   "wer_review": "Paul (Gesellschaft, Geld, Nodes) und Roman (Produkt, Projekt) (E62)",
+   "grenze": "heute tritt Romans Einzelunternehmen auf, die UG wird gegründet; Sitz offen (E61, O11)",
+   "globalziel": "1 und 2",
+   "quelle": "Vorgabe 05.11.2026; E17, E62, E63, E70"
+  },
+  {
+   "nr": "X2",
+   "ebene": "Aufteilung: X-PORTAL, DT Agentur, Grundstücke",
+   "ziel": "DT Agentur: übernimmt die Projekte aus Deutschland",
+   "messgroesse": "Bezahlter Umsatz, Interesse und Marge getrennt (M09)",
+   "zielwert": "Welche Projekte, welche Verträge und welches Geld bei der DT Agentur liegen und was an X-PORTAL geht (2.5.3). Heute kein Umsatz, keine dauerhaften Nutzer (E08)",
+   "klaerungsauftrag": true,
+   "termin": "erster Auftrag bis Januar 2027 (E77)",
+   "wer_review": "Roman und Paul",
+   "grenze": "–",
+   "globalziel": "1",
+   "quelle": "Vorgabe 05.11.2026; E07, E08, E31"
+  },
+  {
+   "nr": "X3",
+   "ebene": "Aufteilung: X-PORTAL, DT Agentur, Grundstücke",
+   "ziel": "Grundstücke: wem sie gehören, wer baut und verpachtet",
+   "messgroesse": "festlegen",
+   "zielwert": "Wer Eigentümer ist, wer baut, wer an die Käufer verpachtet und wer den Betrieb stellt (2.5.5); wie Pauls Unternehmen dazu steht (2.5.2). Bekannt: das eigene und höchstens ein weiteres Grundstück, die übrigen von Dritten (E18); ein SPV je Grundstück, später tokenisiert (E17); Node001 steht auf Pauls Namen",
+   "klaerungsauftrag": true,
+   "termin": "vor dem Verkauf im Januar 2027 (G0)",
+   "wer_review": "Paul (Grundstücke, E62); Anwälte (O05)",
+   "grenze": "Kapital: der Ort trägt sich aus Käufergeld (E57)",
+   "globalziel": "1 und 2",
+   "quelle": "E17, E18, E52, E57, E62"
+  }
+ ],
+ "anforderungen_m02": [
+  {
+   "group": "Grundbedürfnisse",
+   "id": "H01",
+   "stufe": "von Anfang an",
+   "sinn": "Hören",
+   "bereich": "Raum",
+   "bedarf": "Ruhig schlafen",
+   "anf": "Jede Person hat einen eigenen Schlafplatz, vom Arbeits- und Küchenbereich getrennt.",
+   "pruef": "Nachts messen, während im Nachbarbereich gesprochen wird.",
+   "grenz": "Nachtwert festlegen",
+   "plan": "Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22).",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr",
+   "abnahme": "Roman (ist von Anfang an oben)",
+   "paket": "N12"
+  },
+  {
+   "group": "Grundbedürfnisse",
+   "id": "H02",
+   "stufe": "von Anfang an",
+   "sinn": "Fühlen",
+   "bereich": "Raum, Versorgung",
+   "bedarf": "Warm aufwachen",
+   "anf": "Der Raum kühlt über Nacht, wenn der Ofen ausgeht, nicht unter einen festgelegten Morgenwert ab. Dafür braucht jedes Modul eine Heizlastrechnung bei −20 °C, und die Ofenleistung muss dazu passen: ein überdimensionierter Ofen wird gedrosselt, schwelt und bildet CO.",
+   "pruef": "Heizlastrechnung vor der Bestellung; im Oktober Auskühlkurve über eine Nacht messen und auf −20 °C umrechnen; im ersten Winter bei Frost nachmessen.",
+   "grenz": "Annahme: grob 1,5–3 kW Heizlast je gut gedämmtem Modul bei −20 °C (Auslegungstemperatur als Annahme; Klimadaten für Werchowyna trägt der Rechercheur bis 21.11.2026 ein (Terminvorschlag)), Annahme: Öfen mit Kochplatte haben meist 6–10 kW; Rechnung durch Fachperson",
+   "plan": "Annahme: mindestens 12 °C im Schlafbereich und 16 °C im Arbeitsbereich nach 8 Stunden ohne Feuer Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22).",
+   "nachweis": "vor Nutzung: Rechnung oder Abnahme vor dem Einzug; im ersten Winter: Rechnung vor Bestellung (N16); Messung im Oktober und bei Frost im ersten Winter",
+   "abnahme": "Nazar (über Paul, Preis unbekannt, E27) und Roman (ist von Anfang an oben)",
+   "paket": "N07, N12"
+  },
+  {
+   "group": "Grundbedürfnisse",
+   "id": "H03",
+   "stufe": "von Anfang an",
+   "sinn": "Fühlen",
+   "bereich": "Raum, Versorgung",
+   "bedarf": "Warm arbeiten",
+   "anf": "Am Arbeitsplatz ist es tagsüber warm genug für Sitzarbeit.",
+   "pruef": "Temperatur am Platz messen, morgens und nachmittags.",
+   "grenz": "mindestens 20 °C ( ASR A3.5 Raumtemperatur )",
+   "plan": "",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost",
+   "abnahme": "Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)",
+   "paket": "N07"
+  },
+  {
+   "group": "Grundbedürfnisse",
+   "id": "H04",
+   "stufe": "von Anfang an",
+   "sinn": "Schmecken",
+   "bereich": "Versorgung",
+   "bedarf": "Trinken",
+   "anf": "Trinkwasser ist lebensmitteltauglich und auch bei Frost verfügbar. Ob die Quelle im Winter genug liefert, ist offen und wird im Februar 2027 gemessen; ein Vorrat überbrückt eine gesperrte Auffahrt.",
+   "pruef": "Quellschüttung im Februar messen (Eimer und Stoppuhr); zwei Laborproben, im Winter und bei Schneeschmelze; Leitung bei Frost testen.",
+   "grenz": "Notvorrat 2 l je Person und Tag für 10 Tage, bei 3 Personen 60 l ( BBK: Notvorrat (Checkliste) )",
+   "plan": "Trinkwasser-Notvorrat 60 l für 3 Personen (2 l je Person und Tag, 10 Tage, [bbk]); Gesamtbedarf aus H05",
+   "nachweis": "vor Nutzung: Schüttung Februar 2027; Labor vor dem Einzug",
+   "abnahme": "Nazar; Labor",
+   "paket": "N08"
+  },
+  {
+   "group": "Grundbedürfnisse",
+   "id": "H05",
+   "stufe": "von Anfang an",
+   "sinn": "Fühlen",
+   "bereich": "Versorgung",
+   "bedarf": "Waschen und duschen",
+   "anf": "Warmes Wasser zum Waschen und Duschen, im Winter ohne Weg nach draußen. Daraus folgt die Größe von Tank und Boiler und die Wassermenge für 10 Tage Sperre.",
+   "pruef": "Duschtest im Wintertest.",
+   "grenz": "Rechnung aus den Annahmen: Ein 1.000-l-Tank reicht in der Anfangsstufe knapp 7 Tage, in der Ausbaustufe knapp 3 Tage. 1.000 l wiegen 1 t: Bodenlast prüft eine Fachperson Statik.",
+   "plan": "Stufe Anfang: 50 l je Person und Tag, für 3 Personen 150 l am Tag und 1.500 l für 10 Tage Sperre (Annahme). Stufe Ausbau: 120 l je Person und Tag, für 3 Personen 360 l am Tag und 3.600 l für 10 Tage (Romans Vergleich mit dem Durchschnitt in Deutschland, E26). Tank, Boiler und Leitung werden für die Ausbaustufe vorbereitet, gebaut wird zuerst die Anfangsstufe. Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22).",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost",
+   "abnahme": "Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)",
+   "paket": "N08, N09"
+  },
+  {
+   "group": "Grundbedürfnisse",
+   "id": "H06",
+   "stufe": "von Anfang an",
+   "sinn": "Riechen",
+   "bereich": "Raum, Versorgung",
+   "bedarf": "Toilette",
+   "anf": "Toilette ohne Geruch im Wohnbereich, im Winter im Warmen erreichbar, frostsicher.",
+   "pruef": "Nutzung im Wintertest; Geruch und Erreichbarkeit beurteilen.",
+   "grenz": "ja oder nein",
+   "plan": "",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost",
+   "abnahme": "Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)",
+   "paket": "N09"
+  },
+  {
+   "group": "Grundbedürfnisse",
+   "id": "H07",
+   "stufe": "von Anfang an",
+   "sinn": "Schmecken",
+   "bereich": "Service, Versorgung",
+   "bedarf": "Essen",
+   "anf": "Kochen für drei Personen, Kühlung, Vorrat für eine gesperrte Auffahrt.",
+   "pruef": "Eine Woche Selbstversorgung im Wintertest.",
+   "grenz": "Vorrat für 10 Tage ( BBK: Notvorrat (Checkliste) ); gilt auch für N22",
+   "plan": "",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr",
+   "abnahme": "Roman (ist von Anfang an oben)",
+   "paket": "N10, N27"
+  },
+  {
+   "group": "Grundbedürfnisse",
+   "id": "H08",
+   "stufe": "von Anfang an",
+   "sinn": "Riechen",
+   "bereich": "Raum",
+   "bedarf": "Gute Luft",
+   "anf": "Frische Luft in Arbeits- und Schlafbereich, auch bei geschlossenen Fenstern im Winter. Lüftung mit Frostschutz; der Ofen bekommt Verbrennungsluft von außen, damit er keinen Rauch in den Raum zieht.",
+   "pruef": "CO₂-Messgerät im Raum.",
+   "grenz": "unter 1.000 ppm ohne weitere Maßnahme, 1.000–2.000 ppm lüften ( DGUV 215-510: CO₂ und Lüften )",
+   "plan": "Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22).",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost",
+   "abnahme": "Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)",
+   "paket": "N12"
+  },
+  {
+   "group": "Grundbedürfnisse",
+   "id": "H09",
+   "stufe": "von Anfang an",
+   "sinn": "Bewegung, Orientierung",
+   "bereich": "Raum, Service",
+   "bedarf": "Wege bei Schnee und Dunkelheit",
+   "anf": "Wege zu Holzlager, Toilette, Auffahrt und Generator sind bei Schnee und im Dunkeln sicher begehbar: Licht, Geländer, Räumen.",
+   "pruef": "Begehung im Dunkeln und bei Schnee.",
+   "grenz": "ja oder nein",
+   "plan": "",
+   "nachweis": "vor Nutzung: Rechnung oder Abnahme vor dem Einzug; im ersten Winter: Erster Schnee 2027",
+   "abnahme": "Roman (ist von Anfang an oben)",
+   "paket": "N12, N13"
+  },
+  {
+   "group": "Sicherheit",
+   "id": "S01",
+   "stufe": "von Anfang an",
+   "sinn": "Riechen, Sehen",
+   "bereich": "Raum",
+   "bedarf": "Sicher heizen",
+   "anf": "Rauch- und CO-Melder, Abstand zum Ofen, Feuerlöscher, trockenes Holzlager. Ofen und Schornstein nach ukrainischer Zulassung; Generator nur draußen.",
+   "pruef": "Abnahme durch Fachperson; Melder testen.",
+   "grenz": "nach ukrainischer Vorschrift",
+   "plan": "",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost",
+   "abnahme": "Fachperson Brandschutz",
+   "paket": "N07, N22"
+  },
+  {
+   "group": "Sicherheit",
+   "id": "S02",
+   "stufe": "von Anfang an",
+   "sinn": "Hören, Sehen",
+   "bereich": "Service",
+   "bedarf": "Hilfe kommt",
+   "anf": "Notfallplan für gesperrte Auffahrt: Erste Hilfe, Kontakt nach unten, wer holt jemanden ab und womit, wer räumt Schnee und zu welchem Preis.",
+   "pruef": "Notfall einmal durchspielen.",
+   "grenz": "Dauer bis Hilfe da ist festlegen",
+   "plan": "Bestätigt von Roman (03.11.2026): Im Notfall ist man in unter 2 Stunden unten.",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr",
+   "abnahme": "Paul mit Nazar",
+   "paket": "N13, N22"
+  },
+  {
+   "group": "Sicherheit",
+   "id": "S03",
+   "stufe": "von Anfang an",
+   "sinn": "Sehen, Hören",
+   "bereich": "Versorgung",
+   "bedarf": "Bei Stromausfall weiter",
+   "anf": "Licht, Laptops, Bildschirme, Starlink, Router, Pumpe und Kühlschrank laufen bei Netzausfall eine festgelegte Zeit weiter. Frostschutz der Wasserleitung hängt nicht am Strom (Tiefe statt Heizkabel). Batterie steht im Warmen; Generator draußen mit Kraftstoff für 3 Tage (Annahme, passend zur Sperre im Störungstag).",
+   "pruef": "Netz im Test absichtlich abschalten und Zeit messen; Lastliste mit Watt und Stunden.",
+   "grenz": "Die 4,8-kWh-Batterie aus N06 reicht nach dieser Rechnung nicht sicher: ohne Pumpe 3,8–4,56 kWh, dazu Verluste und Pumpe. Batteriegröße rechnet die Fachperson.",
+   "plan": "Annahme: Muss-Lasten etwa 380 W ohne Pumpe (3 Laptops à 50 W, 3 Bildschirme à 25 W, Starlink 75 W, Router 10 W, LED-Licht 30 W, Kühlschrank im Mittel 40 W). Über 10–12 Stunden sind das 3,8–4,56 kWh vor Verlusten. Die Pumpe fehlt in dieser Summe; ihre Leistung und Laufzeit kommen nach der Pumpenwahl dazu. Eine ausreichende Batteriegröße ist damit noch nicht nachgewiesen. Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22).",
+   "nachweis": "vor Nutzung: Lastliste mit Pumpe und Batterierechnung; im ersten Winter: Netzausfall-Test",
+   "abnahme": "Nazar (über Paul, Preis unbekannt, E27)",
+   "paket": "N06"
+  },
+  {
+   "group": "Sicherheit",
+   "id": "S04",
+   "stufe": "von Anfang an",
+   "sinn": "Fühlen",
+   "bereich": "Raum",
+   "bedarf": "Privatheit",
+   "anf": "Jede Person hat einen eigenen, abschließbaren Bereich.",
+   "pruef": "Begehung.",
+   "grenz": "ja oder nein",
+   "plan": "",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr",
+   "abnahme": "Roman (ist von Anfang an oben)",
+   "paket": "N12"
+  },
+  {
+   "group": "Sicherheit",
+   "id": "S05",
+   "stufe": "von Anfang an",
+   "sinn": "—",
+   "bereich": "Digital",
+   "bedarf": "Arbeit bleibt erhalten",
+   "anf": "Projektdaten sind gesichert; Zugang zu OneDrive und x-portal.eu geschützt.",
+   "pruef": "Wiederherstellung einer Datei testen.",
+   "grenz": "ja oder nein",
+   "plan": "",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr",
+   "abnahme": "Roman",
+   "paket": "N14"
+  },
+  {
+   "group": "Sicherheit",
+   "id": "S06",
+   "stufe": "von Anfang an",
+   "sinn": "—",
+   "bereich": "Service",
+   "bedarf": "Einkommen",
+   "anf": "Wer oben ist, kann über x-portal.eu bezahlte Arbeit bekommen.",
+   "pruef": "Erstes bezahltes Projekt einer Person, die oben wohnt; bis 31.12.2026 erstes bezahltes Projekt über x-portal.eu überhaupt (Ereignis Umsatz).",
+   "grenz": "Gibt es bis 31.12.2026 kein bezahltes Projekt, gilt nur die Stufe „1 Person“",
+   "plan": "Monatsumsatz über x-portal.eu mindestens Pauls 8.000 € netto (brutto rechnet ein Steuerberater) plus laufende Kosten oben aus N02 (bekannt: Starlink laut Suchergebnissen um 2.950 UAH im Monat, auf starlink.com für die Adresse prüfen, siehe N11, rund 59 € bei 50 UAH/EUR (E20)); Paul und Roman bis 21.11.2026 (Terminvorschlag)",
+   "nachweis": "vor Nutzung: 31.12.2026 und monatlich",
+   "abnahme": "Roman",
+   "paket": "N26"
+  },
+  {
+   "group": "Sicherheit",
+   "id": "S07",
+   "stufe": "von Anfang an",
+   "sinn": "—",
+   "bereich": "Service",
+   "bedarf": "Haftung und Versicherung",
+   "anf": "Klar ist, wer haftet, wenn sich jemand oben verletzt, eine CO-Vergiftung oder ein Brand passiert, und welche Versicherung das deckt.",
+   "pruef": "Prüfauftrag an eine Fachperson Recht und Versicherung in der Ukraine.",
+   "grenz": "Ergebnis mit Kosten der Versicherung",
+   "plan": "",
+   "nachweis": "vor Nutzung: bevor der erste Freelancer oder Käufer oben wohnt",
+   "abnahme": "Paul",
+   "paket": "N05, N22"
+  },
+  {
+   "group": "Zugehörigkeit",
+   "id": "Z01",
+   "stufe": "von Anfang an",
+   "sinn": "Schmecken, Hören",
+   "bereich": "Raum",
+   "bedarf": "Gemeinsam essen und reden",
+   "anf": "Ein gemeinsamer Bereich zum Essen und Reden. Liegt er im Gemeinschaftscontainer mit Arbeitsplätzen, Küche und Sanitär (E40), muss der Grundriss zeigen: Küche und Calls stören die konzentrierte Arbeit nicht (D02).",
+   "pruef": "Grundriss des Gemeinschaftscontainers prüfen; Schallpegel am Arbeitsplatz messen, während gekocht und telefoniert wird.",
+   "grenz": "ja oder nein",
+   "plan": "",
+   "nachweis": "vor Nutzung: Grundriss vor der Bestellung; Messung vor dem Einzug",
+   "abnahme": "Roman (ist von Anfang an oben)",
+   "paket": "N10, N12"
+  },
+  {
+   "group": "Zugehörigkeit",
+   "id": "Z02",
+   "stufe": "von Anfang an",
+   "sinn": "Hören, Sehen",
+   "bereich": "Digital",
+   "bedarf": "Kontakt zu Familie und Freunden",
+   "anf": "Private Videoanrufe abends ohne Störung der anderen.",
+   "pruef": "Abendtest mit gleichzeitiger Nutzung.",
+   "grenz": "mit D01",
+   "plan": "",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr",
+   "abnahme": "Roman",
+   "paket": "N11"
+  },
+  {
+   "group": "Zugehörigkeit",
+   "id": "Z03",
+   "stufe": "später",
+   "sinn": "—",
+   "bereich": "Service",
+   "bedarf": "Teil des Ortes sein",
+   "anf": "Kontakt zu Nachbarn und Anbietern vor Ort.",
+   "pruef": "Liste N27 vor Ort bestätigt.",
+   "grenz": "—",
+   "plan": "",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr",
+   "abnahme": "Paul mit Nazar",
+   "paket": "N27, N28"
+  },
+  {
+   "group": "Anerkennung",
+   "id": "A01",
+   "stufe": "von Anfang an",
+   "sinn": "—",
+   "bereich": "Digital, Service",
+   "bedarf": "Arbeit wird gesehen und bezahlt",
+   "anf": "Profil und Projekte auf x-portal.eu; verlässliche Verbindung bei Kundenterminen.",
+   "pruef": "Kundentermin ohne Abbruch (D01).",
+   "grenz": "—",
+   "plan": "",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr",
+   "abnahme": "Roman",
+   "paket": "N26, N11"
+  },
+  {
+   "group": "Anerkennung",
+   "id": "A02",
+   "stufe": "von Anfang an",
+   "sinn": "—",
+   "bereich": "Service",
+   "bedarf": "Klare Absprachen",
+   "anf": "Wer oben was übernimmt: Holz, Wasser, Putzen, Einkauf, Notfall.",
+   "pruef": "Absprache schriftlich; nach vier Wochen überprüfen.",
+   "grenz": "—",
+   "plan": "",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr",
+   "abnahme": "Roman",
+   "paket": "N29"
+  },
+  {
+   "group": "Anerkennung",
+   "id": "A03",
+   "stufe": "von Anfang an",
+   "sinn": "—",
+   "bereich": "Service",
+   "bedarf": "Kundentermin trotz Ausfall",
+   "anf": "Fällt oben Strom oder Internet aus und ist die Auffahrt passierbar: Ausweicharbeitsplatz unten mit bekannter Fahrzeit. Sind Verbindung und Auffahrt gleichzeitig weg, läuft die Arbeit oben weiter (E46, E54): Starlink, Batterie und Generator mit Vorrat reichen, bis Auffahrt oder Netz zurück sind.",
+   "pruef": "Beide Fälle einmal durchspielen. Wie lange die Auffahrt im Winter gesperrt sein kann und wie groß Batterie und Vorrat dafür sein müssen, legen Nazar und die Fachperson fest (E22).",
+   "grenz": "Vorlaufzeit festlegen",
+   "plan": "",
+   "nachweis": "vor Nutzung: Ablauf schriftlich vor dem ersten Kundencall von oben",
+   "abnahme": "Roman",
+   "paket": "N27, N26"
+  },
+  {
+   "group": "Selbstverwirklichung",
+   "id": "V01",
+   "stufe": "später",
+   "sinn": "Sehen",
+   "bereich": "Raum",
+   "bedarf": "Natur und Aussicht",
+   "anf": "Fenster mit Blick in die Landschaft am Arbeits- oder Gemeinschaftsplatz.",
+   "pruef": "Begehung.",
+   "grenz": "—",
+   "plan": "",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr",
+   "abnahme": "Paul",
+   "paket": "N12"
+  },
+  {
+   "group": "Selbstverwirklichung",
+   "id": "V02",
+   "stufe": "später",
+   "sinn": "—",
+   "bereich": "Service",
+   "bedarf": "Eigene Vorhaben",
+   "anf": "Raum und Zeit für eigene Projekte und Versuche am Ort.",
+   "pruef": "Nach dem ersten Winter fragen.",
+   "grenz": "—",
+   "plan": "",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr",
+   "abnahme": "Paul",
+   "paket": "N23"
+  },
+  {
+   "group": "Beispiel: konzentriert digital arbeiten",
+   "id": "D01",
+   "stufe": "von Anfang an",
+   "sinn": "Hören, Sehen",
+   "bereich": "Digital",
+   "bedarf": "Gleichzeitige Nutzung",
+   "anf": "Zwei Personen können gleichzeitig in Videocalls sein, während die dritte arbeitet, auch bei Schnee. Hauptanschluss ist ein eigener Internetanschluss, Reserve ist Starlink; Mobilfunk gibt es oben nicht (E49). Die Reserve muss den Upload ebenfalls schaffen.",
+   "pruef": "30 Minuten zwei Calls gleichzeitig, Upload je Minute und Abbrüche messen, einmal über den Hauptanschluss und einmal nur über Starlink.",
+   "grenz": "Zoom nennt für 1080p 3,8 Mbit/s hoch und 3,0 runter je Teilnehmer; für zwei Calls also mindestens etwa 8 Mbit/s Upload plus Reserve ( Zoom: Bandbreite berechnen )",
+   "plan": "Annahme: mindestens 8 Mbit/s Upload in 95 % der Minuten, kein Abbruch; Paul und Roman bis 21.11.2026 (Terminvorschlag)",
+   "nachweis": "vor Nutzung: Messung über beide Anschlüsse; im ersten Winter: Starlink bei Schnee",
+   "abnahme": "Roman (ist von Anfang an oben)",
+   "paket": "N11"
+  },
+  {
+   "group": "Beispiel: konzentriert digital arbeiten",
+   "id": "D02",
+   "stufe": "von Anfang an",
+   "sinn": "Hören",
+   "bereich": "Raum",
+   "bedarf": "Akustik",
+   "anf": "Calls finden nicht am Platz der Person statt, die konzentriert arbeitet. Konzentriertes Arbeiten geht im eigenen Wohncontainer (E40); der Gemeinschaftsplatz braucht dafür eine Trennung oder eine Telefonecke.",
+   "pruef": "Schallpegel am Platz messen, während nebenan telefoniert wird.",
+   "grenz": "höchstens 55 dB(A) für Tätigkeiten mit hoher Konzentration ( ASR A3.7 Lärm, Abschnitt 5 )",
+   "plan": "Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22).",
+   "nachweis": "vor Nutzung: Grundriss; Messung vor dem Einzug",
+   "abnahme": "Roman (ist von Anfang an oben)",
+   "paket": "N12"
+  },
+  {
+   "group": "Beispiel: konzentriert digital arbeiten",
+   "id": "D03",
+   "stufe": "von Anfang an",
+   "sinn": "Sehen",
+   "bereich": "Raum, Versorgung",
+   "bedarf": "Licht",
+   "anf": "Tageslicht am Platz, blendfrei zum Bildschirm, im Winter ausreichend Kunstlicht.",
+   "pruef": "Luxmeter auf der Arbeitsfläche, mittags und um 17 Uhr im Dezember.",
+   "grenz": "mindestens 500 lx auf der Arbeitsfläche ( ASR A3.4 Beleuchtung )",
+   "plan": "",
+   "nachweis": "vor Nutzung: Rechnung oder Abnahme vor dem Einzug; im ersten Winter: Mittags und 17 Uhr im Dezember 2027",
+   "abnahme": "Roman (ist von Anfang an oben)",
+   "paket": "N12, N06"
+  },
+  {
+   "group": "Beispiel: konzentriert digital arbeiten",
+   "id": "D04",
+   "stufe": "von Anfang an",
+   "sinn": "—",
+   "bereich": "Versorgung",
+   "bedarf": "Strom am Platz",
+   "anf": "Laptop, Bildschirm und Internet laufen auch bei kurzem Netzausfall.",
+   "pruef": "Netz trennen während eines Calls.",
+   "grenz": "wie S03",
+   "plan": "wie S03",
+   "nachweis": "vor Nutzung: Lastliste mit Pumpe und Batterierechnung; im ersten Winter: Netzausfall-Test",
+   "abnahme": "Nazar (über Paul, Preis unbekannt, E27)",
+   "paket": "N06"
+  },
+  {
+   "group": "Beispiel: konzentriert digital arbeiten",
+   "id": "D05",
+   "stufe": "von Anfang an",
+   "sinn": "Fühlen, Riechen",
+   "bereich": "Raum",
+   "bedarf": "Wärme und Luft am Platz",
+   "anf": "Siehe H03 und H08.",
+   "pruef": "Mit H03 und H08 messen.",
+   "grenz": "siehe H03, H08",
+   "plan": "",
+   "nachweis": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost",
+   "abnahme": "Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)",
+   "paket": "N07, N12"
+  }
+ ],
+ "baum": [
+  {
+   "kind": "group",
+   "id": "b-zielblatt",
+   "title": "Grundlage: Endprodukt und Ziele"
+  },
+  {
+   "kind": "group",
+   "id": "b-hauptweg",
+   "title": "1 · Der Weg ab jetzt: Geologie, Haus, Zufahrt, Lieferant, Technik, dann bis zum ersten Winter",
+   "text": "In dieser Reihenfolge wird jetzt gearbeitet. Zuerst die Geologie: Sie zeigt, welche Hausart geht. Dann, ob das Haus die Zufahrt hochkommt, wer es liefert und baut, und wer Zugang, Server und Netzwerk stellt. Danach Kosten, Preis, Verkauf und die Gates bis zum ersten Winter.",
+   "kids": [
+    {
+     "kind": "chance",
+     "id": "O01",
+     "title": "Geologie: Wo trägt der Grund, wie viele Stellplätze gehen?",
+     "state": "wait",
+     "meta": "Paul mit Nazar · Bericht bis 30.11.2026 (Vorschlag KI)",
+     "text": "3 Schürfe bis 2,5 m, 12 Bohrpunkte bis 1,5 m. Nazar hatte den Bericht am 20.10.2026 für die folgende Woche angekündigt; er liegt nicht vor. Ob der Grund trägt, legt die Fachperson fest (E22). Davon hängen Stellplätze, Fundament, Bauweise und alle Kosten ab.",
+     "kids": [
+      {
+       "kind": "outcome",
+       "title": "Paul fragt nach dem Ergebnis.",
+       "state": "rule",
+       "text": "Wiedervorlage 30.11.2026 (Vorschlag KI). Widersprechen sich Daten oder fehlen sie, geht ein konkreter Nachweisauftrag an Nazar (A3)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Der Grund trägt; die Stellplätze gehen wie im Entwurf unten links (E34).",
+       "state": "wait",
+       "text": "Als Nächstes: Plots ausmessen, Kosten mit leichtem Fundament rechnen, Bausätze anfragen (O31).",
+       "kids": [
+        {
+         "kind": "decision",
+         "title": "Zahl der Plots und Kaufpreis festlegen; der Verkauf im Januar bleibt.",
+         "state": "wait",
+         "meta": "Paul und Roman · nach O01",
+         "beschlussblatt": {
+          "Vorbereitung": "KI bereitet vor (E13)",
+          "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+          "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+          "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+          "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+          "Wiedervorlage": "nach O01"
+         }
+        }
+       ]
+      },
+      {
+       "kind": "outcome",
+       "title": "Der Grund trägt nur mit aufwendigem Fundament, oder es gibt weniger Stellplätze.",
+       "state": "wait",
+       "text": "Als Nächstes: Kosten mit schwerem Fundament rechnen und vergleichen, ob Häuser in Teilen oder feste Häuser günstiger sind.",
+       "kids": [
+        {
+         "kind": "decision",
+         "title": "Bauweise endgültig: bleibt es bei Häusern in Teilen (E75)?",
+         "state": "wait",
+         "meta": "Paul und Roman · nach O01",
+         "beschlussblatt": {
+          "Vorbereitung": "KI bereitet vor (E13)",
+          "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+          "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+          "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+          "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+          "Wiedervorlage": "nach O01"
+         }
+        },
+        {
+         "kind": "decision",
+         "title": "Preis je Plot neu.",
+         "state": "wait",
+         "meta": "Paul und Roman · nach O01",
+         "beschlussblatt": {
+          "Vorbereitung": "KI bereitet vor (E13)",
+          "Fachliche Prüfung": "–",
+          "Freigabe": "Paul und Roman gemeinsam (3.2)",
+          "Budgetgrenze": "–",
+          "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+          "Wiedervorlage": "nach O01"
+         }
+        },
+        {
+         "kind": "decision",
+         "title": "Reichen die 5 Käufer (E78)?",
+         "state": "wait",
+         "meta": "Paul und Roman · nach O01",
+         "beschlussblatt": {
+          "Vorbereitung": "KI bereitet vor (E13)",
+          "Fachliche Prüfung": "–",
+          "Freigabe": "Paul und Roman gemeinsam (3.2)",
+          "Budgetgrenze": "–",
+          "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+          "Wiedervorlage": "nach O01"
+         }
+        }
+       ]
+      },
+      {
+       "kind": "outcome",
+       "title": "Die Fläche ist an den geplanten Stellen ungeeignet.",
+       "state": "wait",
+       "text": "Als Nächstes: Nazar schlägt andere Flächen auf dem Grundstück vor; der Lageplan wird neu (2.2.2).",
+       "kids": [
+        {
+         "kind": "decision",
+         "title": "Neuer Platz für Stufe 1.",
+         "state": "wait",
+         "meta": "Paul und Roman · nach O01",
+         "beschlussblatt": {
+          "Vorbereitung": "KI bereitet vor (E13)",
+          "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+          "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+          "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+          "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+          "Wiedervorlage": "nach O01"
+         }
+        },
+        {
+         "kind": "decision",
+         "title": "Termine Januar und März neu (O24).",
+         "state": "wait",
+         "meta": "Paul und Roman · nach O01",
+         "beschlussblatt": {
+          "Vorbereitung": "KI bereitet vor (E13)",
+          "Fachliche Prüfung": "–",
+          "Freigabe": "Paul und Roman gemeinsam (3.2)",
+          "Budgetgrenze": "–",
+          "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+          "Wiedervorlage": "nach O01"
+         }
+        }
+       ]
+      }
+     ],
+     "ziel": [
+      "Z1",
+      "Z2"
+     ]
+    },
+    {
+     "kind": "decision",
+     "id": "hausart",
+     "title": "Welche Hausart trägt der Grund: Containerhaus, Tiny House in Teilen oder festes Haus?",
+     "state": "wait",
+     "meta": "Paul und Roman · nach O01",
+     "text": "Die Geologie zeigt, welches Fundament und damit welche Hausart geht (Fall A oder B). Bis dahin gilt: Häuser in Teilen, oben montiert (E75).",
+     "ziel": [
+      "Z1",
+      "Z2"
+     ],
+     "see": [
+      [
+       "#b-mb-haus",
+       "Varianten im Make-or-Buy"
+      ]
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+      "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "nach O01"
+     }
+    },
+    {
+     "kind": "chance",
+     "id": "zufahrt",
+     "title": "Kommt das Haus die Zufahrt hoch, im Sommer und im Winter (2.2.4)?",
+     "state": "wait",
+     "meta": "Roman; Paul mit Nazar · Vorschlag KI bis 15.12.2026",
+     "text": "Die letzten etwa 200 m haben über 15 % Steigung. Bis 2,6 m Breite geht ein Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug (A3). Ein Spediteur bestätigt schriftlich, dass die Teile auf kleinem Fahrzeug hochkommen; Nazar sagt, wer im Winter räumt.",
+     "kids": [
+      {
+       "kind": "outcome",
+       "title": "Die Lieferform steht fest.",
+       "state": "wait",
+       "text": "Damit ist klar, welche Hersteller in Frage kommen."
+      },
+      {
+       "kind": "outcome",
+       "title": "Kleinere Teile oder eine andere Lieferform.",
+       "state": "wait",
+       "text": "Hausart und Hersteller werden neu bewertet (2.2.3)."
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ]
+    },
+    {
+     "kind": "decision",
+     "id": "lieferant",
+     "title": "Wer liefert und baut: welcher Hersteller, mit oder ohne Montage?",
+     "state": "wait",
+     "meta": "Roman schickt die Anfrage, Paul entscheidet die Bestellung (E71) · nach O31",
+     "text": "Angefragt werden Servus und Supersip, dann Unitbud (O31). Die Anfrage enthält die Raumliste aus M02 und die Maße der Zufahrt als Lieferbedingung. Wer was selbst macht, steht in 2.4.8.",
+     "ziel": [
+      "Z1",
+      "Z2"
+     ],
+     "see": [
+      [
+       "#b-mb-eigen",
+       "Selbst, mit Hilfe oder extern"
+      ]
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+      "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "nach O31"
+     }
+    },
+    {
+     "kind": "decision",
+     "id": "technik",
+     "title": "Technik im Haus: Zugang, Server, Netzwerk. Liefert der Hersteller sie mit, oder beschaffen wir sie selbst?",
+     "state": "open",
+     "meta": "Planungspunkt neu (Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog) · Paul und Roman",
+     "text": "Zum Beispiel eine Zugangskontrolle mit Chip an den Türen, Server und Netzwerktechnik. Maßstab: alles läuft immer, kein Serverausfall (E46); Projektdaten sind gesichert (S05). Die Server oben werden für personenbezogene Daten mit Deutschland verbunden; ob das zulässig ist, prüfen die Anwälte (E85, A5). IT in Deutschland soll über das Matching der BW Bank laufen (2.1.7).",
+     "opts": [
+      {
+       "kind": "option",
+       "letter": "A",
+       "title": "Der Hersteller liefert und baut ein",
+       "text": "Ein Ansprechpartner; die Anforderungen gehen in die Anfrage O31."
+      },
+      {
+       "kind": "option",
+       "letter": "B",
+       "title": "Wir beschaffen selbst",
+       "text": "Eigene Auswahl und eigener Einbau; die Stunden gehören in 2.4.8."
+      },
+      {
+       "kind": "option",
+       "letter": "C",
+       "title": "Gemischt",
+       "text": "Zugang und Leitungen vom Hersteller, Server und IT selbst."
+      }
+     ],
+     "hint": "Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt).",
+     "ziel": [
+      "Z1",
+      "Z3"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+      "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "Montagsrunde (3.3)"
+     }
+    },
+    {
+     "kind": "step",
+     "id": "O03",
+     "title": "Kosten je Plot gegen Erlös je Plot, dann das Preisblatt",
+     "state": "open",
+     "meta": "KI rechnet, Paul und Roman entscheiden · nach O01 und O31",
+     "text": "Kosten je Plot (2.1.2): Bausatz, Transport, Montage, Fundament, Anschlüsse, Anteil an Kommunalgebäude und Team-Plätzen. Preisblatt (2.1.1): Kaufpreis Tiny House, Pacht für den Grund, Monatsmiete. Ausgangspunkt sind etwa 30.000 € je Käufer (E78).",
+     "needs": [
+      "O01",
+      "O31",
+      "D36",
+      "D37",
+      "D38",
+      "D40",
+      "D41"
+     ],
+     "ziel": [
+      "Z2"
+     ]
+    },
+    {
+     "kind": "gate",
+     "id": "G0",
+     "title": "Können wir verkaufen?",
+     "state": "wait",
+     "meta": "bis zum Verkauf im Januar 2027 · Paul und Roman geben frei oder lassen nacharbeiten",
+     "text": "Muss fertig sein: 2.1.1, 2.1.2, 2.1.3, 2.1.8, 2.2.1, 2.2.2, 2.2.3, 2.2.4, 2.2.6, 2.3.1, 2.3.3 als Entwurf, 2.4.1 bis 2.4.4, 2.5.4, 2.5.5, 2.5.6.",
+     "needs": [
+      "O05",
+      "O11",
+      "O12",
+      "D34",
+      "D35",
+      "D36",
+      "D37",
+      "D38"
+     ],
+     "ziel": [
+      "Z2"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI stellt die Nachweise der Liste zusammen (E13)",
+      "Fachliche Prüfung": "je Teilergebnis die genannte Fachperson (E22)",
+      "Freigabe": "Paul und Roman (3.1, 3.2)",
+      "Budgetgrenze": "Vorbereitungsbudget (O12)",
+      "Gültigkeit": "bis zum Verkauf im Januar 2027",
+      "Wiedervorlage": "nicht frei: nacharbeiten und neu vorlegen"
+     }
+    },
+    {
+     "kind": "step",
+     "id": "verkauf",
+     "title": "Verkauf an die Warteliste ab Januar 2027",
+     "state": "wait",
+     "meta": "Roman · Warteliste gebaut, nicht live (2.4.2)",
+     "text": "Wer auf der Warteliste steht, kauft sein Tiny House als Token und pachtet den Grund; mieten geht auch, die Miete kommt nach dem Einzug (E47, E51, E52, E59). Vorher: Rechtsprüfung (O05, A5) und ein Testkauf mit der Verkaufstechnik (2.5.6).",
+     "ziel": [
+      "Z2"
+     ]
+    },
+    {
+     "kind": "chance",
+     "id": "O23",
+     "title": "Belegen 5 Käufer ihr Geld bis zum Bestelltermin für März?",
+     "state": "open",
+     "meta": "Paul und Roman · vor G1",
+     "text": "Bestellt wird, wenn 5 Käufer ihr Geld belegt haben, je etwa 30.000 € (E78). Zwei Fragen sind offen: was als Beleg gilt und was bei weniger als 5 Käufern passiert.",
+     "kids": [
+      {
+       "kind": "decision",
+       "title": "Was belegt „Geld bereit“?",
+       "state": "open",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Anzahlung",
+         "text": "Anzahlungen erst nach der Antwort der Anwälte (O05)."
+        },
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Vertrag",
+         "text": "Unterschriebener Kaufvertrag."
+        },
+        {
+         "kind": "option",
+         "letter": "C",
+         "title": "Finanzierungszusage",
+         "text": "Käufer können finanzieren (E50); die Zusage der Bank gilt als Beleg."
+        }
+       ],
+       "hint": "Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt).",
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "Anwälte (O05, A5)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      },
+      {
+       "kind": "outcome",
+       "title": "Bestellen.",
+       "state": "rule",
+       "text": "Paul entscheidet über Bestellung und Betrag (E71). Mit dem Nachweis und 100 auf der Warteliste geht die Firma in die Pre-Seed-Runde (E57, E78)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Was dann?",
+       "state": "open",
+       "kids": [
+        {
+         "kind": "decision",
+         "title": "Bei weniger als 5 Käufern zum Bestelltermin",
+         "state": "open",
+         "opts": [
+          {
+           "kind": "option",
+           "letter": "A",
+           "title": "Einzug verschieben",
+           "text": "Bestellt wird, sobald 5 Käufer belegt sind; März und Einzug rücken nach hinten (O24)."
+          },
+          {
+           "kind": "option",
+           "letter": "B",
+           "title": "Kleiner anfangen",
+           "text": "Mit weniger Häusern bestellen, wie in E41; die Kosten je Plot werden neu gerechnet (2.1.2)."
+          },
+          {
+           "kind": "option",
+           "letter": "C",
+           "title": "Nicht bestellen",
+           "text": "Es wird nicht bestellt."
+          }
+         ],
+         "hint": "Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt).",
+         "beschlussblatt": {
+          "Vorbereitung": "KI bereitet vor (E13)",
+          "Fachliche Prüfung": "–",
+          "Freigabe": "Paul und Roman gemeinsam (3.2)",
+          "Budgetgrenze": "–",
+          "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+          "Wiedervorlage": "Montagsrunde (3.3)"
+         }
+        }
+       ]
+      }
+     ],
+     "ziel": [
+      "Z2"
+     ]
+    },
+    {
+     "kind": "gate",
+     "id": "G1",
+     "title": "Ist genug Geld da, ist bestellt?",
+     "state": "wait",
+     "meta": "Januar 2027",
+     "text": "5 Käufer haben ihr Geld belegt (O23); Geldfluss 2.1.3 bestätigt; Häuser als Bausatz bestellt mit Lieferung im März; Leitungen geplant (2.2.7); kritische Fehlerarten bewertet (2.3.7); Prüfsituation T00 vor der Bestellung (2.4.9).",
+     "needs": [
+      "O17",
+      "O23"
+     ],
+     "ziel": [
+      "Z2"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI rechnet den Geldfluss (2.1.3)",
+      "Fachliche Prüfung": "Anwälte zum Beleg „Geld bereit“ (O23, O05)",
+      "Freigabe": "Gate: Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "Geld der 5 Käufer (E78); nur Geld auf dem Konto (3.2)",
+      "Gültigkeit": "für die Bestellung März 2027",
+      "Wiedervorlage": "neue Information zu Container, Kapital oder Budget: G1 und G2 neu (A6)"
+     }
+    },
+    {
+     "kind": "chance",
+     "id": "frost",
+     "title": "Ist der Boden im März frostfrei?",
+     "state": "wait",
+     "meta": "frühestens März 2027 (E55)",
+     "kids": [
+      {
+       "kind": "outcome",
+       "title": "Hausteile hoch und oben montieren.",
+       "state": "rule",
+       "text": "Sie kommen auf kleinem Fahrzeug hoch und werden oben montiert (E75), auf dem Fundament, das Nazar festlegt (2.2.8)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Warten, bis der Boden frei ist.",
+       "state": "rule",
+       "text": "Baubeginn erst ohne Frost (E21, E55)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Anderes Einsatzfenster nötig.",
+       "state": "rule",
+       "text": "Einsatzplan aktualisieren, G2 neu vorlegen; Nazar (A6)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Container, Kapital oder Budget ändern sich.",
+       "state": "rule",
+       "text": "Auswirkung rechnen, dann G1 und G2 neu; Roman koordiniert, Paul prüft (A6)."
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ]
+    },
+    {
+     "kind": "gate",
+     "id": "G2",
+     "title": "Darf eingezogen werden?",
+     "state": "wait",
+     "meta": "ab März 2027, sobald frostfrei",
+     "text": "Nazar oder eine Fachperson bestätigt Heizung, Wasser, Strom und Brandschutz schriftlich (E53). Muss fertig sein: 2.2.8, 2.3.2, 2.3.3 abgenommen, 2.4.6, 2.4.9 mit T00, T01, T05, T06 und dem Fachnachweis aus T02.",
+     "kids": [
+      {
+       "kind": "outcome",
+       "title": "Einzug.",
+       "state": "rule",
+       "text": "Die Werbung nennt „Einzug ab Frühjahr 2027“ (E55)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Nacharbeiten und neu vorlegen.",
+       "state": "rule",
+       "text": "Die Abnahmeliste ist noch auszuarbeiten (2.3.3)."
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI stellt Abnahmen und Prüfsituationen zusammen",
+      "Fachliche Prüfung": "Nazar oder eine Fachperson, schriftlich (E53)",
+      "Freigabe": "Paul und Roman nach der Fachprüfung (A6)",
+      "Budgetgrenze": "im Beschluss genannt (A6)",
+      "Gültigkeit": "für den Abschnitt, im Beschluss genannt (A6)",
+      "Wiedervorlage": "Wetter oder Straße: Einsatzplan neu, G2 neu (A6)"
+     }
+    },
+    {
+     "kind": "gate",
+     "id": "G3",
+     "title": "Hält es im Winter?",
+     "state": "wait",
+     "meta": "vor dem ersten Frost 2027",
+     "text": "Heizung nach Heizlast, frostfreie Wasserleitung, Toilette und Batterie im Warmen, Generator draußen; Nazar legt fest und nimmt ab (E38). Dazu Betrieb oben (2.4.5) und Absprachen mit Notfallplan (2.4.7).",
+     "ziel": [
+      "Z1"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI stellt die Winterliste zusammen (E38)",
+      "Fachliche Prüfung": "Nazar (E38)",
+      "Freigabe": "Paul und Roman",
+      "Budgetgrenze": "festlegen",
+      "Gültigkeit": "erster Winter 2027/28",
+      "Wiedervorlage": "vor dem ersten Frost"
+     }
+    },
+    {
+     "kind": "gate",
+     "id": "G4",
+     "title": "Haben die Leute oben Geld verdient?",
+     "state": "wait",
+     "meta": "erster Winter 2027/28",
+     "text": "Messung bei Frost im ersten Winter (2.3.5); Ziele Z1 bis Z3 gemessen; die nächste Stufe wird entschieden (E01, E53).",
+     "kids": [
+      {
+       "kind": "end",
+       "id": "ende",
+       "title": "2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld.",
+       "text": "Ausgelegt für das Team plus die ersten 5 Käufer (E79). Danach bekommen Pitch, Website, DT Agentur, Plattform, weitere Nodes und Chain eigene Pläne (E69): Agenten über Masumi (2.6.4), Kapital über die Chain (2.6.5), Schema für den nächsten Node (2.6.6)."
+      }
+     ],
+     "ziel": [
+      "Z1",
+      "Z3"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI misst Z1 bis Z3",
+      "Fachliche Prüfung": "–",
+      "Freigabe": "Paul und Roman",
+      "Budgetgrenze": "–",
+      "Gültigkeit": "Stufe 1",
+      "Wiedervorlage": "Entscheidung über die nächste Stufe"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "group",
+   "id": "b-anforderungen",
+   "title": "2 · Alltag oben: prüfbare Anforderungen nach Maslow und Sinnen (M02)",
+   "text": "Pauls Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und Digitales, jede mit Prüfverfahren und Abnahme. Stand: die 29 Zeilen vom 03.11.2026 (Artefakt „Node001 Anforderungen Mensch“) und die Spielregeln vom 05.11.2026; die M02 im Repo hat inzwischen 46 Zeilen, keine ist geprüft. Technische Werte legt eine Fachperson fest (E22).",
+   "kids": [
+    {
+     "kind": "step",
+     "id": "b-personen",
+     "title": "Für wen: drei Teammitglieder oben",
+     "state": "open",
+     "text": "Roman vor Ort: ist von Anfang an oben (E24), führt Produkt und Projekt (E62) und koordiniert den Betrieb. Zwei weitere Teammitglieder bauen Agenten und liefern die Projekte aus Deutschland, auch Cybersecurity und Blockchain (E70). Käuferinnen und Käufer wohnen in ihrem eigenen Haus und sind frei: Sie können mitmachen, müssen aber nicht (E63). Sie stehen deshalb in keinem Tagesablauf.",
+     "dom": "b-personen"
+    },
+    {
+     "kind": "step",
+     "id": "b-spielregeln",
+     "title": "Spielregeln oben: ein einfaches Leben aus Arbeit und Erholung",
+     "state": "open",
+     "meta": "Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog",
+     "text": "Wer oben ist, soll sich nur auf Arbeit und Erholung konzentrieren müssen. Versorgung, Technik und Betrieb laufen im Hintergrund; deshalb sind Grundbedürfnisse und Sicherheit nach Maslow geklärt, bevor jemand oben arbeitet (E53).",
+     "ziel": [
+      "Z1"
+     ],
+     "facts": [
+      {
+       "feld": "Arbeitszeit",
+       "wert": "Kernzeit 9 bis 14 Uhr als Gleitzeit. Wer Kunden in einer anderen Zeitzone hat, verlegt sie, zum Beispiel auf den Abend."
+      },
+      {
+       "feld": "Pflicht",
+       "wert": "Jour fixe am Morgen und gemeinsame Aktivitäten wie Sport."
+      },
+      {
+       "feld": "Angebot",
+       "wert": "Zusammen arbeiten steht offen, ist aber keine Voraussetzung."
+      },
+      {
+       "feld": "Frei",
+       "wert": "Wellness, Sauna und Entspannung teilt sich jede und jeder selbst ein."
+      },
+      {
+       "feld": "Geteilt",
+       "wert": "Betriebsarbeiten wie Holz hacken, Wasser und Schnee übernimmt das Team im Wechsel, nach einem Plan (2.4.5)."
+      },
+      {
+       "feld": "Käufer",
+       "wert": "frei; sie können bei allem mitmachen."
+      }
+     ],
+     "dom": "b-spielregeln"
+    },
+    {
+     "kind": "group",
+     "id": "g-m-leben",
+     "title": "Einfaches Leben: Arbeit und Erholung (neu)",
+     "text": "Aus den Spielregeln; diese Zeilen fehlen noch in M02 und brauchen dort Prüfverfahren und Abnahme.",
+     "kids": [
+      {
+       "kind": "req",
+       "title": "Kernzeit 9–14 Uhr, verlegbar bei Zeitverschiebung",
+       "state": "untested",
+       "meta": "Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog",
+       "facts": [
+        {
+         "feld": "Prüfverfahren",
+         "wert": "festlegen; zum Beispiel ein Kundencall am Abend über den Hauptanschluss (D01)"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman"
+        }
+       ],
+       "tags": [
+        "Service",
+        "Digital"
+       ],
+       "ber": "Service, Digital",
+       "dom": "b-r-L01"
+      },
+      {
+       "kind": "req",
+       "title": "Jour fixe und gemeinsamer Sport sind Pflicht",
+       "state": "untested",
+       "meta": "Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog · Jour fixe ist M02-44",
+       "tags": [
+        "Service"
+       ],
+       "ber": "Service",
+       "dom": "b-r-L02"
+      },
+      {
+       "kind": "req",
+       "title": "Betriebsarbeit im Team geteilt, nach Plan",
+       "state": "untested",
+       "meta": "Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog · Plan in 2.4.5, Absprache A02",
+       "tags": [
+        "Service"
+       ],
+       "ber": "Service",
+       "dom": "b-r-L03"
+      },
+      {
+       "kind": "req",
+       "title": "Wellness, Sauna und Entspannung frei einteilen",
+       "state": "untested",
+       "meta": "Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog · Sauna M02-46, offen über D35",
+       "tags": [
+        "Raum",
+        "Service"
+       ],
+       "ber": "Raum, Service",
+       "dom": "b-r-L04"
+      },
+      {
+       "kind": "req",
+       "title": "Nichts im Hintergrund muss man selbst lösen: Essen, Strom, Wasser, Internet laufen",
+       "state": "untested",
+       "meta": "aus E46 und E54",
+       "tags": [
+        "Versorgung",
+        "Service"
+       ],
+       "ber": "Versorgung, Service",
+       "dom": "b-r-L05"
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "g-m-grundbedürfnisse",
+     "title": "Grundbedürfnisse",
+     "kids": [
+      {
+       "kind": "req",
+       "id": "H01",
+       "title": "Ruhig schlafen",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Jede Person hat einen eigenen Schlafplatz, vom Arbeits- und Küchenbereich getrennt."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Nachts messen, während im Nachbarbereich gesprochen wird."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "Nachtwert festlegen"
+        },
+        {
+         "feld": "Planwert",
+         "wert": "Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22)."
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman (ist von Anfang an oben)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.2.3 (früher N12)"
+        }
+       ],
+       "tags": [
+        "Raum",
+        "Sinn: Hören"
+       ],
+       "ber": "Raum",
+       "dom": "b-r-H01"
+      },
+      {
+       "kind": "req",
+       "id": "H02",
+       "title": "Warm aufwachen",
+       "state": "untested",
+       "meta": "von Anfang an · heute in M02 als M02-06 (laut Index)",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Der Raum kühlt über Nacht, wenn der Ofen ausgeht, nicht unter einen festgelegten Morgenwert ab. Dafür braucht jedes Modul eine Heizlastrechnung bei −20 °C, und die Ofenleistung muss dazu passen: ein überdimensionierter Ofen wird gedrosselt, schwelt und bildet CO."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Heizlastrechnung vor der Bestellung; im Oktober Auskühlkurve über eine Nacht messen und auf −20 °C umrechnen; im ersten Winter bei Frost nachmessen."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "Annahme: grob 1,5–3 kW Heizlast je gut gedämmtem Modul bei −20 °C (Auslegungstemperatur als Annahme; Klimadaten für Werchowyna trägt der Rechercheur bis 21.11.2026 ein (Terminvorschlag)), Annahme: Öfen mit Kochplatte haben meist 6–10 kW; Rechnung durch Fachperson"
+        },
+        {
+         "feld": "Planwert",
+         "wert": "Annahme: mindestens 12 °C im Schlafbereich und 16 °C im Arbeitsbereich nach 8 Stunden ohne Feuer. Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22)."
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Rechnung oder Abnahme vor dem Einzug; im ersten Winter: Rechnung vor Bestellung (N16); Messung im Oktober und bei Frost im ersten Winter"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Nazar (über Paul, Preis unbekannt, E27) und Roman (ist von Anfang an oben)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.3.2 (früher N07), 2.2.3 (früher N12)"
+        }
+       ],
+       "tags": [
+        "Raum, Versorgung",
+        "Sinn: Fühlen"
+       ],
+       "ber": "Raum, Versorgung",
+       "dom": "b-r-H02"
+      },
+      {
+       "kind": "req",
+       "id": "H03",
+       "title": "Warm arbeiten",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Am Arbeitsplatz ist es tagsüber warm genug für Sitzarbeit."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Temperatur am Platz messen, morgens und nachmittags."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "mindestens 20 °C ( ASR A3.5 Raumtemperatur )"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.3.2 (früher N07)"
+        }
+       ],
+       "tags": [
+        "Raum, Versorgung",
+        "Sinn: Fühlen"
+       ],
+       "ber": "Raum, Versorgung",
+       "dom": "b-r-H03"
+      },
+      {
+       "kind": "req",
+       "id": "H04",
+       "title": "Trinken",
+       "state": "untested",
+       "meta": "von Anfang an · heute in M02 als M02-04 (laut Index)",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Trinkwasser ist lebensmitteltauglich und auch bei Frost verfügbar. Ob die Quelle im Winter genug liefert, ist offen und wird im Februar 2027 gemessen; ein Vorrat überbrückt eine gesperrte Auffahrt."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Quellschüttung im Februar messen (Eimer und Stoppuhr); zwei Laborproben, im Winter und bei Schneeschmelze; Leitung bei Frost testen."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "Notvorrat 2 l je Person und Tag für 10 Tage, bei 3 Personen 60 l ( BBK: Notvorrat (Checkliste) )"
+        },
+        {
+         "feld": "Planwert",
+         "wert": "Trinkwasser-Notvorrat 60 l für 3 Personen (2 l je Person und Tag, 10 Tage, [bbk]); Gesamtbedarf aus H05"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Schüttung Februar 2027; Labor vor dem Einzug"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Nazar; Labor"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.3.2 (früher N08)"
+        }
+       ],
+       "tags": [
+        "Versorgung",
+        "Sinn: Schmecken"
+       ],
+       "ber": "Versorgung",
+       "dom": "b-r-H04"
+      },
+      {
+       "kind": "req",
+       "id": "H05",
+       "title": "Waschen und duschen",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Warmes Wasser zum Waschen und Duschen, im Winter ohne Weg nach draußen. Daraus folgt die Größe von Tank und Boiler und die Wassermenge für 10 Tage Sperre."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Duschtest im Wintertest."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "Rechnung aus den Annahmen: Ein 1.000-l-Tank reicht in der Anfangsstufe knapp 7 Tage, in der Ausbaustufe knapp 3 Tage. 1.000 l wiegen 1 t: Bodenlast prüft eine Fachperson Statik."
+        },
+        {
+         "feld": "Planwert",
+         "wert": "Stufe Anfang: 50 l je Person und Tag, für 3 Personen 150 l am Tag und 1.500 l für 10 Tage Sperre (Annahme). Stufe Ausbau: 120 l je Person und Tag, für 3 Personen 360 l am Tag und 3.600 l für 10 Tage (Romans Vergleich mit dem Durchschnitt in Deutschland, E26). Tank, Boiler und Leitung werden für die Ausbaustufe vorbereitet, gebaut wird zuerst die Anfangsstufe. Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22)."
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.3.2 (früher N08), 2.3.2 (früher N09)"
+        }
+       ],
+       "tags": [
+        "Versorgung",
+        "Sinn: Fühlen"
+       ],
+       "ber": "Versorgung",
+       "dom": "b-r-H05"
+      },
+      {
+       "kind": "req",
+       "id": "H06",
+       "title": "Toilette",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Toilette ohne Geruch im Wohnbereich, im Winter im Warmen erreichbar, frostsicher."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Nutzung im Wintertest; Geruch und Erreichbarkeit beurteilen."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "ja oder nein"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.3.2 (früher N09)"
+        }
+       ],
+       "tags": [
+        "Raum, Versorgung",
+        "Sinn: Riechen"
+       ],
+       "ber": "Raum, Versorgung",
+       "dom": "b-r-H06"
+      },
+      {
+       "kind": "req",
+       "id": "H07",
+       "title": "Essen",
+       "state": "untested",
+       "meta": "von Anfang an · heute in M02 als M02-08 (laut Index)",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Kochen für drei Personen, Kühlung, Vorrat für eine gesperrte Auffahrt."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Eine Woche Selbstversorgung im Wintertest."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "Vorrat für 10 Tage ( BBK: Notvorrat (Checkliste) ); gilt auch für N22"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman (ist von Anfang an oben)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.4.4 (früher N10), 2.4.6 (früher N27)"
+        }
+       ],
+       "tags": [
+        "Service, Versorgung",
+        "Sinn: Schmecken"
+       ],
+       "ber": "Service, Versorgung",
+       "dom": "b-r-H07"
+      },
+      {
+       "kind": "req",
+       "id": "H08",
+       "title": "Gute Luft",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Frische Luft in Arbeits- und Schlafbereich, auch bei geschlossenen Fenstern im Winter. Lüftung mit Frostschutz; der Ofen bekommt Verbrennungsluft von außen, damit er keinen Rauch in den Raum zieht."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "CO₂-Messgerät im Raum."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "unter 1.000 ppm ohne weitere Maßnahme, 1.000–2.000 ppm lüften ( DGUV 215-510: CO₂ und Lüften )"
+        },
+        {
+         "feld": "Planwert",
+         "wert": "Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22)."
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.2.3 (früher N12)"
+        }
+       ],
+       "tags": [
+        "Raum",
+        "Sinn: Riechen"
+       ],
+       "ber": "Raum",
+       "dom": "b-r-H08"
+      },
+      {
+       "kind": "req",
+       "id": "H09",
+       "title": "Wege bei Schnee und Dunkelheit",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Wege zu Holzlager, Toilette, Auffahrt und Generator sind bei Schnee und im Dunkeln sicher begehbar: Licht, Geländer, Räumen."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Begehung im Dunkeln und bei Schnee."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "ja oder nein"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Rechnung oder Abnahme vor dem Einzug; im ersten Winter: Erster Schnee 2027"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman (ist von Anfang an oben)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.2.3 (früher N12), 2.2.4 (früher N13)"
+        }
+       ],
+       "tags": [
+        "Raum, Service",
+        "Sinn: Bewegung, Orientierung"
+       ],
+       "ber": "Raum, Service",
+       "dom": "b-r-H09"
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "g-m-sicherheit",
+     "title": "Sicherheit",
+     "kids": [
+      {
+       "kind": "req",
+       "id": "S01",
+       "title": "Sicher heizen",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Rauch- und CO-Melder, Abstand zum Ofen, Feuerlöscher, trockenes Holzlager. Ofen und Schornstein nach ukrainischer Zulassung; Generator nur draußen."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Abnahme durch Fachperson; Melder testen."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "nach ukrainischer Vorschrift"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Fachperson Brandschutz"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.3.2 (früher N07), 2.4.7 (früher N22)"
+        }
+       ],
+       "tags": [
+        "Raum",
+        "Sinn: Riechen, Sehen"
+       ],
+       "ber": "Raum",
+       "dom": "b-r-S01"
+      },
+      {
+       "kind": "req",
+       "id": "S02",
+       "title": "Hilfe kommt",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Notfallplan für gesperrte Auffahrt: Erste Hilfe, Kontakt nach unten, wer holt jemanden ab und womit, wer räumt Schnee und zu welchem Preis."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Notfall einmal durchspielen."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "Dauer bis Hilfe da ist festlegen"
+        },
+        {
+         "feld": "Planwert",
+         "wert": "Bestätigt von Roman (03.11.2026): Im Notfall ist man in unter 2 Stunden unten."
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Paul mit Nazar"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.2.4 (früher N13), 2.4.7 (früher N22)"
+        }
+       ],
+       "tags": [
+        "Service",
+        "Sinn: Hören, Sehen"
+       ],
+       "ber": "Service",
+       "dom": "b-r-S02"
+      },
+      {
+       "kind": "req",
+       "id": "S03",
+       "title": "Bei Stromausfall weiter",
+       "state": "untested",
+       "meta": "von Anfang an · heute in M02 als M02-30 (laut Index)",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Licht, Laptops, Bildschirme, Starlink, Router, Pumpe und Kühlschrank laufen bei Netzausfall eine festgelegte Zeit weiter. Frostschutz der Wasserleitung hängt nicht am Strom (Tiefe statt Heizkabel). Batterie steht im Warmen; Generator draußen mit Kraftstoff für 3 Tage (Annahme, passend zur Sperre im Störungstag)."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Netz im Test absichtlich abschalten und Zeit messen; Lastliste mit Watt und Stunden."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "Die 4,8-kWh-Batterie aus N06 reicht nach dieser Rechnung nicht sicher: ohne Pumpe 3,8–4,56 kWh, dazu Verluste und Pumpe. Batteriegröße rechnet die Fachperson."
+        },
+        {
+         "feld": "Planwert",
+         "wert": "Annahme: Muss-Lasten etwa 380 W ohne Pumpe (3 Laptops à 50 W, 3 Bildschirme à 25 W, Starlink 75 W, Router 10 W, LED-Licht 30 W, Kühlschrank im Mittel 40 W). Über 10–12 Stunden sind das 3,8–4,56 kWh vor Verlusten. Die Pumpe fehlt in dieser Summe; ihre Leistung und Laufzeit kommen nach der Pumpenwahl dazu. Eine ausreichende Batteriegröße ist damit noch nicht nachgewiesen. Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22)."
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Lastliste mit Pumpe und Batterierechnung; im ersten Winter: Netzausfall-Test"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Nazar (über Paul, Preis unbekannt, E27)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.3.2 (früher N06)"
+        }
+       ],
+       "tags": [
+        "Versorgung",
+        "Sinn: Sehen, Hören"
+       ],
+       "ber": "Versorgung",
+       "dom": "b-r-S03"
+      },
+      {
+       "kind": "req",
+       "id": "S04",
+       "title": "Privatheit",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Jede Person hat einen eigenen, abschließbaren Bereich."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Begehung."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "ja oder nein"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman (ist von Anfang an oben)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.2.3 (früher N12)"
+        }
+       ],
+       "tags": [
+        "Raum",
+        "Sinn: Fühlen"
+       ],
+       "ber": "Raum",
+       "dom": "b-r-S04"
+      },
+      {
+       "kind": "req",
+       "id": "S05",
+       "title": "Arbeit bleibt erhalten",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Projektdaten sind gesichert; Zugang zu OneDrive und x-portal.eu geschützt."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Wiederherstellung einer Datei testen."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "ja oder nein"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.5.7 (früher N14)"
+        }
+       ],
+       "tags": [
+        "Digital"
+       ],
+       "ber": "Digital",
+       "dom": "b-r-S05"
+      },
+      {
+       "kind": "req",
+       "id": "S06",
+       "title": "Einkommen",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Wer oben ist, kann über x-portal.eu bezahlte Arbeit bekommen."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Erstes bezahltes Projekt einer Person, die oben wohnt; bis 31.12.2026 erstes bezahltes Projekt über x-portal.eu überhaupt (Ereignis Umsatz)."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "Gibt es bis 31.12.2026 kein bezahltes Projekt, gilt nur die Stufe „1 Person“"
+        },
+        {
+         "feld": "Planwert",
+         "wert": "Monatsumsatz über x-portal.eu mindestens Pauls 8.000 € netto (brutto rechnet ein Steuerberater) plus laufende Kosten oben aus N02 (bekannt: Starlink laut Suchergebnissen um 2.950 UAH im Monat, auf starlink.com für die Adresse prüfen, siehe N11, rund 59 € bei 50 UAH/EUR (E20)); Paul und Roman bis 21.11.2026 (Terminvorschlag)"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: 31.12.2026 und monatlich"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.6.1 (früher N26)"
+        }
+       ],
+       "tags": [
+        "Service"
+       ],
+       "ber": "Service",
+       "dom": "b-r-S06"
+      },
+      {
+       "kind": "req",
+       "id": "S07",
+       "title": "Haftung und Versicherung",
+       "state": "untested",
+       "meta": "von Anfang an · heute in M02 als M02-43 (laut Index)",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Klar ist, wer haftet, wenn sich jemand oben verletzt, eine CO-Vergiftung oder ein Brand passiert, und welche Versicherung das deckt."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Prüfauftrag an eine Fachperson Recht und Versicherung in der Ukraine."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "Ergebnis mit Kosten der Versicherung"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: bevor der erste Freelancer oder Käufer oben wohnt"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Paul"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.2.6 (früher N05), 2.4.7 (früher N22)"
+        }
+       ],
+       "tags": [
+        "Service"
+       ],
+       "ber": "Service",
+       "dom": "b-r-S07"
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "g-m-zugehörigkeit",
+     "title": "Zugehörigkeit",
+     "kids": [
+      {
+       "kind": "req",
+       "id": "Z01",
+       "title": "Gemeinsam essen und reden",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Ein gemeinsamer Bereich zum Essen und Reden. Liegt er im Gemeinschaftscontainer mit Arbeitsplätzen, Küche und Sanitär (E40), muss der Grundriss zeigen: Küche und Calls stören die konzentrierte Arbeit nicht (D02)."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Grundriss des Gemeinschaftscontainers prüfen; Schallpegel am Arbeitsplatz messen, während gekocht und telefoniert wird."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "ja oder nein"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Grundriss vor der Bestellung; Messung vor dem Einzug"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman (ist von Anfang an oben)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.4.4 (früher N10), 2.2.3 (früher N12)"
+        }
+       ],
+       "tags": [
+        "Raum",
+        "Sinn: Schmecken, Hören"
+       ],
+       "ber": "Raum",
+       "dom": "b-r-Z01"
+      },
+      {
+       "kind": "req",
+       "id": "Z02",
+       "title": "Kontakt zu Familie und Freunden",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Private Videoanrufe abends ohne Störung der anderen."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Abendtest mit gleichzeitiger Nutzung."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "mit D01"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.3.2 (früher N11)"
+        }
+       ],
+       "tags": [
+        "Digital",
+        "Sinn: Hören, Sehen"
+       ],
+       "ber": "Digital",
+       "dom": "b-r-Z02"
+      },
+      {
+       "kind": "req",
+       "id": "Z03",
+       "title": "Teil des Ortes sein",
+       "state": "later",
+       "meta": "später",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Kontakt zu Nachbarn und Anbietern vor Ort."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Liste N27 vor Ort bestätigt."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "—"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Paul mit Nazar"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.4.6 (früher N27), 2.4.6 (früher N28)"
+        }
+       ],
+       "tags": [
+        "Service"
+       ],
+       "ber": "Service",
+       "dom": "b-r-Z03"
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "g-m-anerkennung",
+     "title": "Anerkennung",
+     "kids": [
+      {
+       "kind": "req",
+       "id": "A01",
+       "title": "Arbeit wird gesehen und bezahlt",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Profil und Projekte auf x-portal.eu; verlässliche Verbindung bei Kundenterminen."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Kundentermin ohne Abbruch (D01)."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "—"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.6.1 (früher N26), 2.3.2 (früher N11)"
+        }
+       ],
+       "tags": [
+        "Digital, Service"
+       ],
+       "ber": "Digital, Service",
+       "dom": "b-r-A01"
+      },
+      {
+       "kind": "req",
+       "id": "A02",
+       "title": "Klare Absprachen",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Wer oben was übernimmt: Holz, Wasser, Putzen, Einkauf, Notfall."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Absprache schriftlich; nach vier Wochen überprüfen."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "—"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.4.5 (früher N29)"
+        }
+       ],
+       "tags": [
+        "Service"
+       ],
+       "ber": "Service",
+       "dom": "b-r-A02"
+      },
+      {
+       "kind": "req",
+       "id": "A03",
+       "title": "Kundentermin trotz Ausfall",
+       "state": "untested",
+       "meta": "von Anfang an · heute in M02 als M02-39 (laut Index)",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Fällt oben Strom oder Internet aus und ist die Auffahrt passierbar: Ausweicharbeitsplatz unten mit bekannter Fahrzeit. Sind Verbindung und Auffahrt gleichzeitig weg, läuft die Arbeit oben weiter (E46, E54): Starlink, Batterie und Generator mit Vorrat reichen, bis Auffahrt oder Netz zurück sind."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Beide Fälle einmal durchspielen. Wie lange die Auffahrt im Winter gesperrt sein kann und wie groß Batterie und Vorrat dafür sein müssen, legen Nazar und die Fachperson fest (E22)."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "Vorlaufzeit festlegen"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Ablauf schriftlich vor dem ersten Kundencall von oben"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.4.6 (früher N27), 2.6.1 (früher N26)"
+        }
+       ],
+       "tags": [
+        "Service"
+       ],
+       "ber": "Service",
+       "dom": "b-r-A03"
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "g-m-selbstverwirklichung",
+     "title": "Selbstverwirklichung",
+     "kids": [
+      {
+       "kind": "req",
+       "id": "V01",
+       "title": "Natur und Aussicht",
+       "state": "later",
+       "meta": "später",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Fenster mit Blick in die Landschaft am Arbeits- oder Gemeinschaftsplatz."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Begehung."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "—"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Paul"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.2.3 (früher N12)"
+        }
+       ],
+       "tags": [
+        "Raum",
+        "Sinn: Sehen"
+       ],
+       "ber": "Raum",
+       "dom": "b-r-V01"
+      },
+      {
+       "kind": "req",
+       "id": "V02",
+       "title": "Eigene Vorhaben",
+       "state": "later",
+       "meta": "später",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Raum und Zeit für eigene Projekte und Versuche am Ort."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Nach dem ersten Winter fragen."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "—"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Paul"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "3.3 (früher N23)"
+        }
+       ],
+       "tags": [
+        "Service"
+       ],
+       "ber": "Service",
+       "dom": "b-r-V02"
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "g-m-beispiel-konzentriert-digital-arbeiten",
+     "title": "Beispiel: konzentriert digital arbeiten",
+     "kids": [
+      {
+       "kind": "req",
+       "id": "D01",
+       "title": "Gleichzeitige Nutzung",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Zwei Personen können gleichzeitig in Videocalls sein, während die dritte arbeitet, auch bei Schnee. Hauptanschluss ist ein eigener Internetanschluss, Reserve ist Starlink; Mobilfunk gibt es oben nicht (E49). Die Reserve muss den Upload ebenfalls schaffen."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "30 Minuten zwei Calls gleichzeitig, Upload je Minute und Abbrüche messen, einmal über den Hauptanschluss und einmal nur über Starlink."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "Zoom nennt für 1080p 3,8 Mbit/s hoch und 3,0 runter je Teilnehmer; für zwei Calls also mindestens etwa 8 Mbit/s Upload plus Reserve ( Zoom: Bandbreite berechnen )"
+        },
+        {
+         "feld": "Planwert",
+         "wert": "Annahme: mindestens 8 Mbit/s Upload in 95 % der Minuten, kein Abbruch; Paul und Roman bis 21.11.2026 (Terminvorschlag)"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Messung über beide Anschlüsse; im ersten Winter: Starlink bei Schnee"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman (ist von Anfang an oben)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.3.2 (früher N11)"
+        }
+       ],
+       "tags": [
+        "Digital",
+        "Sinn: Hören, Sehen"
+       ],
+       "ber": "Digital",
+       "dom": "b-r-D01"
+      },
+      {
+       "kind": "req",
+       "id": "D02",
+       "title": "Akustik",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Calls finden nicht am Platz der Person statt, die konzentriert arbeitet. Konzentriertes Arbeiten geht im eigenen Wohncontainer (E40); der Gemeinschaftsplatz braucht dafür eine Trennung oder eine Telefonecke."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Schallpegel am Platz messen, während nebenan telefoniert wird."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "höchstens 55 dB(A) für Tätigkeiten mit hoher Konzentration ( ASR A3.7 Lärm, Abschnitt 5 )"
+        },
+        {
+         "feld": "Planwert",
+         "wert": "Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22)."
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Grundriss; Messung vor dem Einzug"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman (ist von Anfang an oben)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.2.3 (früher N12)"
+        }
+       ],
+       "tags": [
+        "Raum",
+        "Sinn: Hören"
+       ],
+       "ber": "Raum",
+       "dom": "b-r-D02"
+      },
+      {
+       "kind": "req",
+       "id": "D03",
+       "title": "Licht",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Tageslicht am Platz, blendfrei zum Bildschirm, im Winter ausreichend Kunstlicht."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Luxmeter auf der Arbeitsfläche, mittags und um 17 Uhr im Dezember."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "mindestens 500 lx auf der Arbeitsfläche ( ASR A3.4 Beleuchtung )"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Rechnung oder Abnahme vor dem Einzug; im ersten Winter: Mittags und 17 Uhr im Dezember 2027"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Roman (ist von Anfang an oben)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.2.3 (früher N12), 2.3.2 (früher N06)"
+        }
+       ],
+       "tags": [
+        "Raum, Versorgung",
+        "Sinn: Sehen"
+       ],
+       "ber": "Raum, Versorgung",
+       "dom": "b-r-D03"
+      },
+      {
+       "kind": "req",
+       "id": "D04",
+       "title": "Strom am Platz",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Laptop, Bildschirm und Internet laufen auch bei kurzem Netzausfall."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Netz trennen während eines Calls."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "wie S03"
+        },
+        {
+         "feld": "Planwert",
+         "wert": "wie S03"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Lastliste mit Pumpe und Batterierechnung; im ersten Winter: Netzausfall-Test"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Nazar (über Paul, Preis unbekannt, E27)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.3.2 (früher N06)"
+        }
+       ],
+       "tags": [
+        "Versorgung"
+       ],
+       "ber": "Versorgung",
+       "dom": "b-r-D04"
+      },
+      {
+       "kind": "req",
+       "id": "D05",
+       "title": "Wärme und Luft am Platz",
+       "state": "untested",
+       "meta": "von Anfang an",
+       "facts": [
+        {
+         "feld": "Anforderung",
+         "wert": "Siehe H03 und H08."
+        },
+        {
+         "feld": "Prüfverfahren",
+         "wert": "Mit H03 und H08 messen."
+        },
+        {
+         "feld": "Grenzwert",
+         "wert": "siehe H03, H08"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost"
+        },
+        {
+         "feld": "Abnahme",
+         "wert": "Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)"
+        },
+        {
+         "feld": "Teilergebnis",
+         "wert": "2.3.2 (früher N07), 2.2.3 (früher N12)"
+        }
+       ],
+       "tags": [
+        "Raum",
+        "Sinn: Fühlen, Riechen"
+       ],
+       "ber": "Raum",
+       "dom": "b-r-D05"
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "g-m-neu",
+     "title": "In M02 dazugekommen, im Index nur als Nummer",
+     "text": "Der Text dieser Zeilen steht in plan/daten/m02.json. Hier steht, was der Index über sie sagt.",
+     "kids": [
+      {
+       "kind": "req",
+       "title": "Jour fixe am Morgen im Kommunalgebäude",
+       "state": "untested",
+       "meta": "M02-44 · aus E81 (Vorschlag KI, E80)",
+       "tags": [
+        "Service"
+       ],
+       "ber": "Service",
+       "dom": "b-M02-44"
+      },
+      {
+       "kind": "req",
+       "title": "Laufen, Wandern und Yoga",
+       "state": "untested",
+       "meta": "M02-45 · aus E81",
+       "tags": [
+        "Service"
+       ],
+       "ber": "Service",
+       "dom": "b-M02-45"
+      },
+      {
+       "kind": "req",
+       "title": "Sauna und Wellness",
+       "state": "untested",
+       "meta": "M02-46 · aus E81; wo sie hinkommt, fragt D35",
+       "tags": [
+        "Raum",
+        "Versorgung"
+       ],
+       "ber": "Raum, Versorgung",
+       "dom": "b-M02-46"
+      },
+      {
+       "kind": "req",
+       "title": "Feuerstelle: Brandschutz und ein Platz mit wenig Wind",
+       "state": "untested",
+       "meta": "M02-21, M02-22 · offen über D34",
+       "tags": [
+        "Raum"
+       ],
+       "ber": "Raum",
+       "dom": "b-M02-21"
+      },
+      {
+       "kind": "req",
+       "title": "Gastronomie: Gäste, Personal, Hygiene, eigene Nachweise",
+       "state": "later",
+       "meta": "M02-25 bis M02-27 · offen über D34",
+       "tags": [
+        "Service",
+        "Versorgung"
+       ],
+       "ber": "Service, Versorgung",
+       "dom": "b-M02-25"
+      },
+      {
+       "kind": "req",
+       "title": "Gemeinsamer Weg, private Abzweige",
+       "state": "untested",
+       "meta": "M02-14 · Zielbild Bereich 7, 2.2.4",
+       "tags": [
+        "Raum"
+       ],
+       "ber": "Raum",
+       "dom": "b-M02-14"
+      },
+      {
+       "kind": "req",
+       "title": "Gemüsegarten am Kommunalgebäude, freiwillig mitarbeiten",
+       "state": "untested",
+       "meta": "M02-20, M02-23 · E74, Alltag oben",
+       "tags": [
+        "Versorgung",
+        "Service"
+       ],
+       "ber": "Versorgung, Service",
+       "dom": "b-M02-23"
+      },
+      {
+       "kind": "req",
+       "title": "Technik: Strom, Solar, Wasser",
+       "state": "untested",
+       "meta": "M02-28 · Zielbild Bereich 6, 2.3.1, 2.3.7",
+       "tags": [
+        "Versorgung"
+       ],
+       "ber": "Versorgung",
+       "dom": "b-M02-28"
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "g-szen",
+     "title": "Szenariotests: drei Tage, gegen die jede Variante geprüft wird",
+     "text": "Aus der Matrix vom 03.11.2026. Jeder Schritt nennt die Anforderungen, die er prüft. Die Prüfsituationen T00 bis T06 im Nutzungstest (2.4.9) setzen sie um; Ausfalltests nur mit einem von einer Fachperson freigegebenen Ablauf (E22).",
+     "kids": [
+      {
+       "kind": "chance",
+       "title": "Sommer-Arbeitstag",
+       "state": "untested",
+       "meta": "Juli, trocken, 15–16 Stunden Tageslicht",
+       "kids": [
+        {
+         "kind": "outcome",
+         "title": "Aufstehen, Toilette, Waschen, Kaffee",
+         "state": "untested",
+         "text": "prüft H06, H05, H07"
+        },
+        {
+         "kind": "outcome",
+         "title": "B und C arbeiten konzentriert; A holt die Lieferung unten an der Auffahrt",
+         "state": "untested",
+         "text": "prüft D01, D05, S02"
+        },
+        {
+         "kind": "outcome",
+         "title": "B und C gleichzeitig in Videocalls",
+         "state": "untested",
+         "text": "prüft D01, D02"
+        },
+        {
+         "kind": "outcome",
+         "title": "A macht Holz für den Winter; Abendessen; Kontakt mit Familie",
+         "state": "untested",
+         "text": "prüft Z02, H04"
+        },
+        {
+         "kind": "outcome",
+         "title": "Schlafen bei offenem Fenster ohne Insekten und Lärm",
+         "state": "untested",
+         "text": "prüft H01, H08"
+        }
+       ],
+       "dom": "b-szen-sommer"
+      },
+      {
+       "kind": "chance",
+       "title": "Winter-Arbeitstag",
+       "state": "untested",
+       "meta": "Dezember, −15 °C, Schnee, etwa 8–9 Stunden Tageslicht",
+       "kids": [
+        {
+         "kind": "outcome",
+         "title": "Der Ofen ist über Nacht ausgegangen: Wie warm ist es beim Aufstehen?",
+         "state": "untested",
+         "text": "prüft H02"
+        },
+        {
+         "kind": "outcome",
+         "title": "Leitung und Tank sind nicht eingefroren",
+         "state": "untested",
+         "text": "prüft H06, H04"
+        },
+        {
+         "kind": "outcome",
+         "title": "Arbeit bei Kunstlicht; Fenster zu, die Luft wird schlecht",
+         "state": "untested",
+         "text": "prüft D03, H08"
+        },
+        {
+         "kind": "outcome",
+         "title": "Schnee liegt auf der Starlink-Antenne",
+         "state": "untested",
+         "text": "prüft D01"
+        },
+        {
+         "kind": "outcome",
+         "title": "Es wird dunkel; Solar liefert kaum Strom",
+         "state": "untested",
+         "text": "prüft D04, S03"
+        },
+        {
+         "kind": "outcome",
+         "title": "Ofen brennt herunter; Rauch- und CO-Melder aktiv",
+         "state": "untested",
+         "text": "prüft S01, H02"
+        }
+       ],
+       "dom": "b-szen-winter"
+      },
+      {
+       "kind": "chance",
+       "title": "Störungstag",
+       "state": "untested",
+       "meta": "Februar: Strom 6 Stunden weg, Auffahrt 3 Tage zugeschneit",
+       "kids": [
+        {
+         "kind": "outcome",
+         "title": "Netzstrom fällt aus: Was läuft weiter, und wie lange?",
+         "state": "untested",
+         "text": "prüft S03, D04"
+        },
+        {
+         "kind": "outcome",
+         "title": "Laufende Kundencalls über die Reserve halten oder absagen",
+         "state": "untested",
+         "text": "prüft D01, A01"
+        },
+        {
+         "kind": "outcome",
+         "title": "Pumpe steht: Wasser aus Tank und Notvorrat",
+         "state": "untested",
+         "text": "prüft H04"
+        },
+        {
+         "kind": "outcome",
+         "title": "Keine Lieferung, kein Arzt erreichbar: Vorräte, Erste Hilfe, wer entscheidet",
+         "state": "untested",
+         "text": "prüft S02, H07"
+        },
+        {
+         "kind": "outcome",
+         "title": "Jemand verletzt sich: Wie kommt Hilfe hoch?",
+         "state": "untested",
+         "text": "prüft S02"
+        }
+       ],
+       "dom": "b-szen-stoerung"
+      },
+      {
+       "kind": "step",
+       "title": "Nutzungstest „konzentriert digital arbeiten“",
+       "state": "untested",
+       "text": "Zwei Personen je eine Stunde gleichzeitig im Videocall, die dritte arbeitet konzentriert. Gemessen werden Upload und Abbrüche (D01), Schall am ruhigen Platz (D02), Licht (D03), Überbrückung bei Netzausfall (D04), Temperatur und CO₂ (D05). Einmal als Rechnung in der Planung, einmal als Messung im ersten Winter."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "group",
+   "id": "b-ressourcen",
+   "title": "3 · Versorgung je Ressource: Grundbetrieb, Störung, Ausbau (M06)",
+   "text": "Je Ressource drei Zustände: normaler Betrieb, Störung und Ausbau auf das Team plus die ersten 5 Käufer (E79). Daraus folgt, was an Technik geplant werden muss.",
+   "kids": [
+    {
+     "kind": "step",
+     "title": "Energie",
+     "state": "open",
+     "kids": [
+      {
+       "kind": "outcome",
+       "title": "Netz mit Batterie oder Generator, dazu Solar (E35).",
+       "state": "rule",
+       "text": "Muss-Lasten etwa 380 W ohne Pumpe, über 10–12 Stunden 3,8–4,56 kWh vor Verlusten (S03, Annahme)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Netz 6 Stunden weg: Licht, Laptops, Starlink, Router, Pumpe und Kühlschrank laufen weiter.",
+       "state": "untested",
+       "text": "Batterie im Warmen, Generator draußen mit Kraftstoff für 3 Tage (S03, Annahme). Die Batteriegröße ist nicht nachgewiesen."
+      },
+      {
+       "kind": "outcome",
+       "title": "Lasten für das Team plus die ersten 5 Käufer, dazu das Laden der E-Bikes.",
+       "state": "wait",
+       "text": "Neu rechnen nach der Geologie (O29); E-Bikes in 2.3.6 (E73)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Stufe 0 Netz plus Reserve, Stufe 1 zum Beispiel Solar plus Speicher.",
+       "state": "open",
+       "text": "Vorschlag aus der Methodenbewertung (M06). Die nächste Stufe kommt erst nach bestandenem Test."
+      },
+      {
+       "kind": "outcome",
+       "title": "Netzkapazität und Anschlussrecht.",
+       "state": "open",
+       "text": "Anschluss beim Nachbarn möglich, laut Eigentümer (A4); Nazar klärt (A3)."
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ],
+     "dom": "b-res-strom"
+    },
+    {
+     "kind": "step",
+     "title": "Wärme",
+     "state": "open",
+     "kids": [
+      {
+       "kind": "outcome",
+       "title": "Lösung offen (2.3.2).",
+       "state": "open",
+       "text": "Heizlast je Modul bei −20 °C rechnen (H02). Annahme: mindestens 12 °C im Schlafbereich und 16 °C im Arbeitsbereich nach 8 Stunden ohne Feuer; am Arbeitsplatz mindestens 20 °C (H03)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Der Ofen ist über Nacht aus.",
+       "state": "untested",
+       "text": "Winter-Arbeitstag 06:30; Rauch- und CO-Melder, Generator nur draußen (S01)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Je weiteres Haus eine eigene Heizlast.",
+       "state": "wait",
+       "text": "Person A soll nachts nicht mehrere Öfen versorgen (Matrix, Folgen für den Plan)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Holz aus der Umgebung.",
+       "state": "open",
+       "text": "Was es vor Ort gibt, mit Preis und Winterzugang (E15, 2.4.6)."
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ],
+     "dom": "b-res-waerme"
+    },
+    {
+     "kind": "step",
+     "title": "Wasser",
+     "state": "open",
+     "kids": [
+      {
+       "kind": "outcome",
+       "title": "Quellen auf oder bei dem Gelände, 50 l je Person und Tag.",
+       "state": "rule",
+       "text": "Für 3 Personen 150 l am Tag (E26, H05)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Pumpe steht oder Auffahrt 10 Tage gesperrt.",
+       "state": "untested",
+       "text": "Trinkwasser-Notvorrat 60 l für 3 Personen (H04); für 10 Tage Sperre 1.500 l (H05, Annahme)."
+      },
+      {
+       "kind": "outcome",
+       "title": "120 l je Person und Tag.",
+       "state": "wait",
+       "text": "Für 3 Personen 360 l am Tag und 3.600 l für 10 Tage (H05, nach E26). Tank, Boiler und Leitung werden für den Ausbau vorbereitet, gebaut wird zuerst die Anfangsstufe (H05)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Schüttung im Februar, Laborwerte, Abwasser.",
+       "state": "open",
+       "text": "O27; genehmigungsfähiges Abwasserkonzept (O28)."
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ],
+     "dom": "b-res-wasser"
+    },
+    {
+     "kind": "step",
+     "title": "Internet",
+     "state": "open",
+     "kids": [
+      {
+       "kind": "outcome",
+       "title": "Eigener Anschluss (E49).",
+       "state": "rule",
+       "text": "Zwei Videocalls gleichzeitig: mindestens etwa 8 Mbit/s Upload in 95 % der Minuten (D01, Annahme)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Starlink als Reserve, auch bei Schnee; Mobilfunk gibt es oben nicht (E49).",
+       "state": "untested",
+       "text": "Ist zusätzlich die Auffahrt frei: Ausweicharbeitsplatz unten (A03, M02-39)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Bandbreite für das Team plus die ersten 5 Käufer.",
+       "state": "wait",
+       "text": "Neu rechnen (O29)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Anbieter oben und gemessene Bandbreite.",
+       "state": "open",
+       "text": "A4."
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ],
+     "dom": "b-res-netz"
+    },
+    {
+     "kind": "step",
+     "title": "Essen",
+     "state": "open",
+     "kids": [
+      {
+       "kind": "outcome",
+       "title": "Kochen für drei Personen mit Kühlung, gemeinsam oder privat.",
+       "state": "open",
+       "text": "H07, E81; Küche im Kommunalgebäude (E74, 2.4.4); Kühlschrank im Mittel 40 W in der Lastliste (S03)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Gemüsegarten, Höfe in der Umgebung, Lieferung über die Zufahrt.",
+       "state": "open",
+       "text": "Garten am Kommunalgebäude (E74); Milch und Käse vor Ort prüfen (E15, 2.4.6); Person A holt Lieferungen unten an der Auffahrt (Sommer-Arbeitstag)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Auffahrt gesperrt: keine Lieferung.",
+       "state": "untested",
+       "text": "Vorrat für 10 Tage nach BBK (H07, M02-08); Notfallplan 2.4.7."
+      },
+      {
+       "kind": "outcome",
+       "title": "Essen für das Team plus die ersten 5 Käufer.",
+       "state": "wait",
+       "text": "Wer zahlt, fragt D36."
+      },
+      {
+       "kind": "outcome",
+       "title": "Was der Garten wann liefert; Anbieter mit Preis, Entfernung und Winterzugang; Lieferweg im Winter.",
+       "state": "open",
+       "text": "2.4.6, 2.2.4, 2.4.7."
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ],
+     "dom": "b-res-essen"
+    },
+    {
+     "kind": "step",
+     "title": "Daten und digitale Arbeit",
+     "state": "open",
+     "kids": [
+      {
+       "kind": "outcome",
+       "title": "Projektdaten gesichert, Zugang zu OneDrive und x-portal.eu geschützt.",
+       "state": "open",
+       "text": "S05; die KI arbeitet DSGVO-konform auf OneDrive (E12, 2.5.7)."
+      },
+      {
+       "kind": "outcome",
+       "title": "Eine Datei wiederherstellen; kein Serverausfall.",
+       "state": "untested",
+       "text": "S05, E46."
+      },
+      {
+       "kind": "outcome",
+       "title": "Server oben für personenbezogene Daten mit Deutschland verbunden.",
+       "state": "wait",
+       "text": "Ob das zulässig ist, prüfen die Anwälte (E85, A5)."
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ],
+     "dom": "b-res-digital"
+    },
+    {
+     "kind": "group",
+     "id": "g-ausbau",
+     "title": "Ausbaupfad: von drei Personen bis zum nächsten Node",
+     "text": "Jede Stufe beginnt erst, wenn die vorige ihren Test bestanden hat (M06).",
+     "kids": [
+      {
+       "kind": "step",
+       "id": "b-aus-1",
+       "title": "Drei Personen: das Team oben",
+       "state": "wait",
+       "text": "2–3 Leute wohnen und arbeiten ganzjährig oben (E01, E23); Grundbetrieb aller Ressourcen.",
+       "ziel": [
+        "Z1"
+       ],
+       "dom": "b-aus-1"
+      },
+      {
+       "kind": "chance",
+       "title": "Test: Nutzungstest und erster Winter",
+       "state": "untested",
+       "text": "T00 bis T06 (2.4.9) und die Messung bei Frost (2.3.5)."
+      },
+      {
+       "kind": "step",
+       "id": "b-aus-2",
+       "title": "Team plus die ersten 5 Käufer",
+       "state": "wait",
+       "text": "Strom, Wasser und Wärme sind im ersten Winter schon dafür ausgelegt, sobald die Geologie so viele Häuser zulässt (E79).",
+       "ziel": [
+        "Z1",
+        "Z2"
+       ],
+       "dom": "b-aus-2"
+      },
+      {
+       "kind": "step",
+       "id": "b-aus-3",
+       "title": "Das Grundstück voll",
+       "state": "wait",
+       "text": "So viele Plots, wie die Geologie erlaubt; bei großem Andrang auf der Warteliste mehr (E51).",
+       "ziel": [
+        "Z2"
+       ],
+       "dom": "b-aus-3"
+      },
+      {
+       "kind": "end",
+       "title": "Der nächste Node mit demselben Schema",
+       "text": "Schema, Planung, Nutzbarkeit und Sinn sind wiederholbar; Geologie und Gelände sind an jedem Ort neu (E11, 2.6.6).",
+       "ziel": [
+        "Z4"
+       ]
+      },
+      {
+       "kind": "outcome",
+       "title": "Nur eine Person oben.",
+       "state": "open",
+       "text": "Vorschlag aus der Matrix (S06, 03.11.2026), nicht entschieden: Gibt es bis 31.12.2026 kein bezahltes Projekt, gilt nur die Stufe „1 Person“. E77 nennt als Termin für den ersten Auftrag Januar 2027."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "group",
+   "id": "b-makebuy",
+   "title": "4 · Make-or-Buy: Varianten mit Kosten, Sensitivität und Test (M05)",
+   "text": "Verglichen wird die betriebsfähige Drei-Personen-Lösung mit Ausbaupfad. Zuerst die Mindestbedingungen aus M02, dann Varianten mit gleichem Leistungsumfang über denselben Zeitraum mit Euro-Vollkosten und Betriebskosten, dann Nutzwert und kritische Annahmen. Sensitivität: ab welcher Änderung bei Transport, Gründung, Energiepreis oder Termin eine andere Variante besser ist. Preise aus dem Internet, bei 50 UAH/EUR (E20), ohne Montage, Transport und Anschluss, sofern nicht anders genannt. Keine Variante ist bisher vollständig gerechnet.",
+   "kids": [
+    {
+     "kind": "decision",
+     "id": "mb-zeitraum",
+     "title": "Betrachtungszeitraum für alle Vergleiche",
+     "state": "open",
+     "text": "Vollkosten sind nur vergleichbar, wenn jede Variante über denselben Zeitraum gerechnet wird (M05). Festgelegt ist er nicht.",
+     "opts": [
+      {
+       "kind": "option",
+       "letter": "A",
+       "title": "Bis zum Ende von Stufe 1, Winter 2027/28"
+      },
+      {
+       "kind": "option",
+       "letter": "B",
+       "title": "Über die Nutzungsdauer der Häuser",
+       "text": "Die Häuser bleiben stehen (E59)."
+      }
+     ],
+     "hint": "Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt).",
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+      "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "Montagsrunde (3.3)"
+     }
+    },
+    {
+     "kind": "decision",
+     "id": "mb-haus",
+     "title": "Haus für die Drei-Personen-Lösung (2.2.3)",
+     "state": "open",
+     "text": "Bauweise entschieden: Häuser in Teilen, oben montiert (E75). Mindestbedingungen aus M02: H01, H02, H06, H08, S04, D02, D03. Kippt bei: Transport (bis 2,6 m Breite ohne Genehmigung, über 3,5 m mit Begleitfahrzeug, A3), Gründung (Geologie Fall A oder B), Termin (Lieferung bis März) und Energiepreis (Heizlast). Test: Winter-Arbeitstag und Störungstag.",
+     "opts": [
+      {
+       "kind": "option",
+       "letter": "A",
+       "title": "Bausatz in Teilen",
+       "facts": [
+        [
+         "Kosten",
+         "fehlt; Anfrage an Servus, Supersip, dann Unitbud (O31)"
+        ],
+        [
+         "Transport",
+         "kleines Fahrzeug; Teilegewicht nennt kein Anbieter (A3)"
+        ],
+        [
+         "Eigenleistung",
+         "Montage oben (2.4.8)"
+        ],
+        [
+         "Termin",
+         "Unitbud etwa zwei Monate bis fertig (A3)"
+        ]
+       ],
+       "state": "done"
+      },
+      {
+       "kind": "option",
+       "letter": "B",
+       "title": "Fertiger Wohncontainer, zum Beispiel BlokModul BK1",
+       "facts": [
+        [
+         "Kosten",
+         "ab 444.000 UAH, rund 8.900 € je Container ohne Heizung (E39, A2); Listenpreis nicht bestätigt (O31)"
+        ],
+        [
+         "Transport",
+         "verlangt 3,6 m Wegbreite und 4,5 m Durchfahrtshöhe; die letzten 200 m haben über 15 % Steigung (A3)"
+        ],
+        [
+         "Stand",
+         "durch E75 präzisiert: in Teilen statt im Ganzen"
+        ]
+       ]
+      },
+      {
+       "kind": "option",
+       "letter": "C",
+       "title": "40-Fuß-Containergerippe",
+       "facts": [
+        [
+         "Kosten",
+         "fehlt"
+        ],
+        [
+         "Stand",
+         "als Option untersucht (2.2.3)"
+        ]
+       ]
+      },
+      {
+       "kind": "option",
+       "letter": "D",
+       "title": "Feste Häuser",
+       "facts": [
+        [
+         "Stand",
+         "kommt in Frage, wenn der Grund nur mit aufwendigem Fundament trägt (Fall B, O01)"
+        ]
+       ]
+      },
+      {
+       "kind": "option",
+       "letter": "E",
+       "title": "Das erste Haus selbst bauen",
+       "facts": [
+        [
+         "Kosten",
+         "Romans Schätzung: höchstens 10.000–15.000 € ohne Wasser und Strom"
+        ],
+        [
+         "Quelle",
+         "Kommentar zu D11 auf der Entscheidungsseite, 03.11.2026"
+        ],
+        [
+         "Stand",
+         "Idee, nicht entschieden"
+        ]
+       ]
+      }
+     ],
+     "ziel": [
+      "Z1",
+      "Z2"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+      "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "Montagsrunde (3.3)"
+     }
+    },
+    {
+     "kind": "decision",
+     "id": "mb-strom",
+     "title": "Strom: Größen und Kosten (2.3.2)",
+     "state": "open",
+     "text": "Entschieden ist das Prinzip: Netz mit Batterie oder Generator, dazu Solar (E35). Mindestbedingungen: S03, D04. Kippt bei: Netzkapazität, Energiepreis, Lasten im Ausbau (O29). Test: Störungstag.",
+     "opts": [
+      {
+       "kind": "option",
+       "letter": "A",
+       "title": "Netzanschluss",
+       "facts": [
+        [
+         "Kosten",
+         "2.927 UAH je kW, für 10–15 kW 29.270–43.905 UAH, rund 590–880 €, ohne Leitung zum Haus (A4)"
+        ],
+        [
+         "Kippt bei",
+         "Netzkapazität und Anschlussrecht offen"
+        ]
+       ]
+      },
+      {
+       "kind": "option",
+       "letter": "B",
+       "title": "Solar-Inselanlage 4,8 kWp mit 4,8-kWh-Batterie",
+       "facts": [
+        [
+         "Kosten",
+         "189.900 UAH, rund 3.800 € ohne Montage (A4)"
+        ],
+        [
+         "Kippt bei",
+         "reicht im Winter nicht zum Heizen; die Batterie reicht nach S03 nicht sicher"
+        ]
+       ]
+      },
+      {
+       "kind": "option",
+       "letter": "C",
+       "title": "Generator als Reserve",
+       "facts": [
+        [
+         "Kosten",
+         "fehlt"
+        ],
+        [
+         "Betrieb",
+         "Kraftstoff für 3 Tage, steht draußen (S03, Annahme)"
+        ]
+       ]
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+      "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "Montagsrunde (3.3)"
+     }
+    },
+    {
+     "kind": "decision",
+     "id": "mb-waerme",
+     "title": "Wärme: Ofen je Haus oder zentral (2.3.2)",
+     "state": "open",
+     "text": "Mindestbedingungen: H02, H03, S01, H08. Annahme: grob 1,5–3 kW Heizlast je gut gedämmtem Modul bei −20 °C (H02). Test: Winter-Arbeitstag.",
+     "opts": [
+      {
+       "kind": "option",
+       "letter": "A",
+       "title": "Holzofen mit Kochplatte je Haus",
+       "facts": [
+        [
+         "Kosten",
+         "6.000–13.000 UAH, rund 120–260 € je Ofen, ohne Schornstein und Montage (A4)"
+        ],
+        [
+         "Kippt bei",
+         "Öfen haben meist 6–10 kW; zu groß gedrosselt schwelen sie und bilden CO (H02)"
+        ],
+        [
+         "Eigenleistung",
+         "Holz machen und nachlegen, Person A"
+        ]
+       ]
+      },
+      {
+       "kind": "option",
+       "letter": "B",
+       "title": "Zentrale Wärmequelle",
+       "facts": [
+        [
+         "Kosten",
+         "fehlt"
+        ],
+        [
+         "Grund",
+         "Person A soll nachts nicht mehrere Öfen versorgen"
+        ]
+       ]
+      },
+      {
+       "kind": "option",
+       "letter": "C",
+       "title": "Ofen plus zweite Wärmequelle",
+       "facts": [
+        [
+         "Stand",
+         "ob nötig, entscheidet der Morgenwert aus H02"
+        ],
+        [
+         "Kosten",
+         "fehlt"
+        ]
+       ]
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+      "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "Montagsrunde (3.3)"
+     }
+    },
+    {
+     "kind": "decision",
+     "id": "mb-wasser",
+     "title": "Wasser: wie groß wird der Speicher (2.3.2)",
+     "state": "open",
+     "text": "Mindestbedingungen: H04, H05. Kippt bei: Quellschüttung im Februar und Laborwerten (O27). Ausbaupfad: zuerst die Anfangsstufe, Tank, Boiler und Leitung für den Ausbau vorbereitet (H05).",
+     "opts": [
+      {
+       "kind": "option",
+       "letter": "A",
+       "title": "Tank 1.000 l",
+       "facts": [
+        [
+         "Kosten",
+         "7.000–13.000 UAH, rund 140–260 €, ohne Quellfassung, Leitung und Filter (A4)"
+        ],
+        [
+         "Reicht",
+         "knapp 7 Tage in der Anfangsstufe, knapp 3 Tage im Ausbau (H05)"
+        ],
+        [
+         "Kippt bei",
+         "1.000 l wiegen 1 t; die Bodenlast prüft eine Fachperson"
+        ]
+       ]
+      },
+      {
+       "kind": "option",
+       "letter": "B",
+       "title": "Speicher für 10 Tage Sperre",
+       "facts": [
+        [
+         "Menge",
+         "1.500 l in der Anfangsstufe, 3.600 l im Ausbau (H05, Annahme)"
+        ],
+        [
+         "Kosten",
+         "fehlt"
+        ]
+       ]
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+      "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "Montagsrunde (3.3)"
+     }
+    },
+    {
+     "kind": "decision",
+     "id": "mb-toilette",
+     "title": "Toilette: Übergang oder dauerhaft (2.3.2)",
+     "state": "open",
+     "text": "Mindestbedingung: H06.",
+     "opts": [
+      {
+       "kind": "option",
+       "letter": "A",
+       "title": "Campingtoilette als Übergang",
+       "facts": [
+        [
+         "Kosten",
+         "1.600–3.700 UAH, rund 30–75 € (A4)"
+        ]
+       ]
+      },
+      {
+       "kind": "option",
+       "letter": "B",
+       "title": "Trenntoilette",
+       "facts": [
+        [
+         "Kosten",
+         "in der Ukraine noch kein Preis (A4)"
+        ]
+       ]
+      },
+      {
+       "kind": "option",
+       "letter": "C",
+       "title": "Toilette mit Abwasser",
+       "facts": [
+        [
+         "Stand",
+         "ein genehmigungsfähiges Abwasserkonzept fehlt (O28)"
+        ]
+       ]
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+      "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "Montagsrunde (3.3)"
+     }
+    },
+    {
+     "kind": "decision",
+     "id": "mb-netz",
+     "title": "Internet: Anschluss und Reserve",
+     "state": "done",
+     "text": "Entschieden (E49). Mindestbedingungen: D01, Z02, A01. Test: D01 über beide Anschlüsse, Starlink bei Schnee.",
+     "opts": [
+      {
+       "kind": "option",
+       "letter": "A",
+       "title": "Eigener Anschluss",
+       "facts": [
+        [
+         "Kosten",
+         "fehlt; Anbieter oben und Bandbreite fehlen (A4)"
+        ]
+       ],
+       "state": "done"
+      },
+      {
+       "kind": "option",
+       "letter": "B",
+       "title": "Starlink Mini als Reserve",
+       "facts": [
+        [
+         "Kosten",
+         "20.820–25.900 UAH, rund 420–520 €, dazu etwa 2.950 UAH, rund 59 € im Monat (A4)"
+        ]
+       ],
+       "state": "done"
+      }
+     ],
+     "ziel": [
+      "Z1",
+      "Z3"
+     ]
+    },
+    {
+     "kind": "decision",
+     "id": "mb-essen",
+     "title": "Essen: selbst anbauen, vor Ort kaufen oder liefern lassen",
+     "state": "open",
+     "text": "Mindestbedingung: H07, Kochen für drei Personen, Kühlung, Vorrat für 10 Tage. Wer zahlt, fragt D36. Test: Störungstag.",
+     "opts": [
+      {
+       "kind": "option",
+       "letter": "A",
+       "title": "Gemüsegarten am Kommunalgebäude",
+       "facts": [
+        [
+         "Quelle",
+         "E74"
+        ],
+        [
+         "Eigenleistung",
+         "freiwillig mitarbeiten (M02-23)"
+        ],
+        [
+         "fehlt",
+         "was der Garten wann liefert"
+        ]
+       ]
+      },
+      {
+       "kind": "option",
+       "letter": "B",
+       "title": "Vor Ort kaufen",
+       "facts": [
+        [
+         "Quelle",
+         "Milch, Käse und Holz prüfen (E15, 2.4.6)"
+        ],
+        [
+         "fehlt",
+         "Anbieter, Preis, Entfernung, Zugang im Winter"
+        ]
+       ]
+      },
+      {
+       "kind": "option",
+       "letter": "C",
+       "title": "Lieferung über die Zufahrt",
+       "facts": [
+        [
+         "Ablauf",
+         "Person A holt sie unten an der Auffahrt"
+        ],
+        [
+         "Kippt bei",
+         "Auffahrt im Winter gesperrt (2.4.7)"
+        ]
+       ]
+      },
+      {
+       "kind": "option",
+       "letter": "D",
+       "title": "Vorrat",
+       "facts": [
+        [
+         "Menge",
+         "10 Tage nach BBK (H07, M02-08)"
+        ]
+       ]
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+      "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "Montagsrunde (3.3)"
+     }
+    },
+    {
+     "kind": "decision",
+     "id": "mb-eigen",
+     "title": "Selbst, mit Hilfe oder extern: je Leistung (2.4.8)",
+     "state": "open",
+     "text": "Planung, Transport, Fundament, Aufstellen, Anschlüsse, Innenausbau. Je Leistung Fähigkeit, Gerät, Stunden, Fachkosten, Vertretung und wer verantwortet. Eigenleistung bekommt Zeit-, Qualitäts- und Kapazitätsansätze (M05). Paul und Roman sind nicht vom Bau; technische Werte legt eine Fachperson fest (E22). Es fehlen die Wochenstunden von Paul (O13) und Roman.",
+     "opts": [
+      {
+       "kind": "option",
+       "letter": "A",
+       "title": "Selbst"
+      },
+      {
+       "kind": "option",
+       "letter": "B",
+       "title": "Mit Hilfe"
+      },
+      {
+       "kind": "option",
+       "letter": "C",
+       "title": "Extern"
+      }
+     ],
+     "ziel": [
+      "Z1",
+      "Z2"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+      "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "Montagsrunde (3.3)"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "group",
+   "id": "b-parallel",
+   "title": "5 · Parallel, ohne auf die Geologie zu warten",
+   "kids": [
+    {
+     "kind": "step",
+     "id": "O05",
+     "title": "Anwälte in Deutschland und der Ukraine finden und die Prüfaufträge stellen",
+     "state": "open",
+     "meta": "Paul und Roman · vor G0",
+     "text": "Prüfaufträge in A5: Token mit Pacht als Anlageprodukt, Werbung, Warteliste, Datenverbindung zwischen den Servern oben und in Deutschland, UG als Pauls Tochter, Hausbesitz und Pacht für Ausländer, Steuern, Einnahmen in USDM über Masumi.",
+     "kids": [
+      {
+       "kind": "decision",
+       "id": "O22",
+       "title": "Mieter als Investition darstellen (W07)?",
+       "state": "wait",
+       "meta": "Anwalt, dann Paul und Roman · nach O05",
+       "text": "Bis zur Antwort des Anwalts nur im Pitch.",
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "Anwälte (O05, A5)",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "nach O05"
+       }
+      },
+      {
+       "kind": "step",
+       "title": "Verhältnis zu Pauls Unternehmen (2.5.2)",
+       "state": "wait",
+       "meta": "Anwalt Deutschland · nach O05",
+       "text": "Wie „Pauls Tochterunternehmen ist Romans Unternehmen“ rechtlich geht (E61)."
+      }
+     ],
+     "ziel": [
+      "Z2"
+     ]
+    },
+    {
+     "kind": "step",
+     "id": "O12",
+     "title": "Vorbereitungsbudget: wie viel Geld ist vor dem ersten Verkauf da?",
+     "state": "open",
+     "meta": "Paul entscheidet (E71) · vor G0",
+     "text": "Vor dem ersten Verkauf kosten Nazar, Anwälte und die Verkaufstechnik Geld; Eigenleistung zählt nicht als Geld (2.1.6). Die 3.500 € aus dem Ausführungsplan sind ein Diskussionsvorschlag, kein Budget (3.2).",
+     "ziel": [
+      "Z2"
+     ]
+    },
+    {
+     "kind": "step",
+     "id": "texte",
+     "title": "Texte von Warteliste und Website prüfen lassen (2.5.4)",
+     "state": "open",
+     "meta": "Roman · Termin festlegen",
+     "text": "Der Jurist (Max H.) oder ein Anwalt sieht die Texte, auch die Aussage „Daten in der EU“ gegen die Server oben (E85). Veröffentlicht wird erst nach seinem Blick (3.2).",
+     "ziel": [
+      "Z2"
+     ]
+    },
+    {
+     "kind": "step",
+     "id": "O31",
+     "title": "Angebote für Häuser in Teilen einholen",
+     "state": "open",
+     "meta": "KI bereitet vor, Roman schickt nach Freigabe",
+     "text": "Zuerst Servus (Iwano-Frankiwsk) und Supersip (Chmelnyzkyj), dann Unitbud. Teilegewicht, Montageaufwand und Winterwerte nennt kein Anbieter öffentlich.",
+     "kids": [
+      {
+       "kind": "decision",
+       "id": "haus",
+       "title": "Welches Haus (2.2.3)?",
+       "state": "wait",
+       "meta": "Roman, Paul · nach O31",
+       "text": "Angebot mit Preis, Lieferform, schwerstem Teil und Montageaufwand; Kriterium leichter Transport (E72, E75). Ein 40-Fuß-Containergerippe bleibt als Option untersucht.",
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "nach O31"
+       }
+      }
+     ],
+     "ziel": [
+      "Z1",
+      "Z2"
+     ]
+    },
+    {
+     "kind": "step",
+     "id": "O04",
+     "title": "Erster bezahlter Auftrag mit Testkarte",
+     "state": "open",
+     "meta": "Roman und Paul · bis Januar 2027 (E77)",
+     "text": "Der erste Auftrag braucht keinen Berg; er ist der schnellste Weg aus dem Huhn-Ei-Problem (2.6). Testkarte nach M09: Problem, Annahme, Zielgruppe, Test, Erfolgsschwelle, Zeit- und Euro-Rahmen.",
+     "kids": [
+      {
+       "kind": "decision",
+       "id": "preis",
+       "title": "Preismodell für Agenten (2.6.2)",
+       "state": "open",
+       "meta": "KI rechnet die Kosten, Paul und Roman entscheiden",
+       "text": "Projekte werden verkauft, ihr Preis ist offen (E83).",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Abo"
+        },
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Einmalzahlung mit Betreuung und Instandhaltung"
+        },
+        {
+         "kind": "option",
+         "letter": "C",
+         "title": "Nach Nutzung",
+         "text": "Passt zum Verkauf je Aufruf über Masumi (E56)."
+        }
+       ],
+       "ziel": [
+        "Z3"
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "KI rechnet, Paul prüft (2.1.3)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      }
+     ],
+     "ziel": [
+      "Z3",
+      "X2"
+     ]
+    },
+    {
+     "kind": "decision",
+     "id": "O11",
+     "title": "Sitz der UG (W09)",
+     "state": "open",
+     "meta": "Paul und Roman · vor 2.1.5",
+     "text": "Heute tritt Romans Einzelunternehmen auf, mit Sitz in Kaufbeuren; die UG wird gegründet (E61). Start-up BW verlangt Baden-Württemberg (O11).",
+     "opts": [
+      {
+       "kind": "option",
+       "letter": "A",
+       "title": "Sitz in Baden-Württemberg",
+       "text": "Pre-Seed aus Start-up BW bleibt möglich (2.1.5, 2.5.8)."
+      },
+      {
+       "kind": "option",
+       "letter": "B",
+       "title": "Sitz in Kaufbeuren",
+       "text": "Wie das Einzelunternehmen; Start-up BW setzt Baden-Württemberg voraus."
+      }
+     ],
+     "hint": "Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt).",
+     "ziel": [
+      "X1"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Anwälte (O05, A5)",
+      "Freigabe": "Paul und Roman gemeinsam (3.2)",
+      "Budgetgrenze": "–",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "vor 2.1.5"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "group",
+   "id": "b-seite",
+   "title": "6 · Offen auf der Entscheidungsseite: D34 bis D41",
+   "text": "Für diese acht gibt es dort noch keine Stimme (Stand 04.11.2026). Wählt dort; der Baum zeigt die Möglichkeiten und was davon abhängt.",
+   "kids": [
+    {
+     "kind": "group",
+     "id": "g-zielbild",
+     "title": "Zielbild und Alltag",
+     "kids": [
+      {
+       "kind": "decision",
+       "id": "D34",
+       "title": "Feuerstelle sowie Restaurant und Bar aus dem Zielbild: wann?",
+       "state": "open",
+       "text": "Stufe 1 ist nur Team plus 5 Käufer (E69, E79). Gastronomie braucht Gäste, Personal, Hygiene und eigene Nachweise (M02-25 bis M02-27); die Feuerstelle braucht nur Brandschutz und einen Platz mit wenig Wind (M02-21, M02-22).",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Beides später",
+         "text": "Stufe 1 ohne Feuerstelle und Gastronomie; beides bekommt nach Stufe 1 einen eigenen Plan."
+        },
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Feuerstelle jetzt, Gastronomie später",
+         "text": "Feuerstelle mit Grill am Kommunalgebäude in Stufe 1, mit Prüfauftrag Brandschutz. Restaurant und Bar bekommen nach Stufe 1 einen eigenen Plan."
+        },
+        {
+         "kind": "option",
+         "letter": "C",
+         "title": "Beides in Stufe 1",
+         "text": "Dann braucht der Plan Gästezahl, Personal, Hygiene, Wasser und Kosten dafür, vor G0."
+        }
+       ],
+       "feeds": [
+        "2.3.1",
+        "2.1.2",
+        "G0",
+        "T03 in 2.4.9"
+       ],
+       "page": true,
+       "ziel": [
+        "Z1"
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      },
+      {
+       "kind": "decision",
+       "id": "D35",
+       "title": "Sauna: eigene oder im Ort?",
+       "state": "open",
+       "text": "Zum Alltag oben gehören Sauna und Wellness (E81). Eine eigene Sauna braucht Holz oder Strom, Wasser und Brandschutz und geht in die Kosten je Plot (2.1.2).",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Eigene Sauna in Stufe 1",
+         "text": "Am Kommunalgebäude, geplant mit Kosten, Strom- oder Holzbedarf und Brandschutz, vor G0."
+        },
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Erst im Ort, eigene später",
+         "text": "Am Anfang eine Sauna in der Umgebung (2.4.6); die eigene kommt in einer späteren Stufe."
+        },
+        {
+         "kind": "option",
+         "letter": "C",
+         "title": "Keine Sauna",
+         "text": "Gesundheit oben heißt Laufen, Wandern und Yoga (M02-45)."
+        }
+       ],
+       "feeds": [
+        "2.1.2",
+        "2.3.1"
+       ],
+       "page": true,
+       "ziel": [
+        "Z1"
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "g-leistungen",
+     "title": "Geld und Leistungen oben (2.1.8, O32)",
+     "kids": [
+      {
+       "kind": "decision",
+       "id": "D36",
+       "title": "Essen oben: wie wird es bezahlt?",
+       "state": "open",
+       "text": "Gegessen wird gemeinsam oder privat (E81). Offen ist, ob Essen inklusive ist, bezahlt wird oder gegen Mitarbeit geht.",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Inklusive in einer Monatspauschale",
+         "text": "Gemeinsames Essen ist in einer monatlichen Pauschale enthalten; privat kocht jede und jeder auf eigene Kosten."
+        },
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Selbst bezahlt",
+         "text": "Jede Mahlzeit oder jeder Einkauf wird bezahlt, gemeinsam oder privat."
+        },
+        {
+         "kind": "option",
+         "letter": "C",
+         "title": "Gegen Mitarbeit",
+         "text": "Wer in Küche oder Garten mitarbeitet, isst gemeinsam ohne Zahlung; die Stunden werden erfasst (2.4.9)."
+        }
+       ],
+       "feeds": [
+        "2.1.8",
+        "2.1.2",
+        "O03"
+       ],
+       "page": true,
+       "ziel": [
+        "Z1"
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      },
+      {
+       "kind": "decision",
+       "id": "D37",
+       "title": "Wie wird das Team oben bezahlt?",
+       "state": "open",
+       "text": "Das Team baut Agenten und liefert die Projekte (E70). Das geht in 2.1.8 und in das Vertrags- und Rollenmodell (2.5.5).",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Honorar je Projekt",
+         "text": "Die UG zahlt je Projekt ein Honorar; Wohnen und Essen zahlen die Leute selbst."
+        },
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Anteil am Umsatz",
+         "text": "Jede Person bekommt einen festen Anteil am Umsatz der Projekte und Agenten, an denen sie arbeitet."
+        },
+        {
+         "kind": "option",
+         "letter": "C",
+         "title": "Wohnen und Essen frei, dazu Anteil",
+         "text": "Wohnen und Essen oben sind frei; dazu kommt ein kleinerer Anteil am Projektumsatz."
+        }
+       ],
+       "feeds": [
+        "2.1.8",
+        "2.5.5",
+        "2.4.1"
+       ],
+       "page": true,
+       "ziel": [
+        "Z1",
+        "Z3"
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "KI rechnet, Paul prüft (2.1.3)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      },
+      {
+       "kind": "decision",
+       "id": "D38",
+       "title": "Wie zahlen Käufer für Leistungen oben?",
+       "state": "open",
+       "text": "Käufer zahlen ihr Haus (E50) und pachten den Grund (E52). Offen ist, wie sie Strom, Wasser, Internet, Sauna und Coworking bezahlen.",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Monatliche Pauschale",
+         "text": "Eine feste Nebenkostenpauschale im Monat für alle Leistungen oben."
+        },
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Nach Verbrauch",
+         "text": "Strom und Wasser nach Zähler, Sauna und Coworking je Nutzung."
+        },
+        {
+         "kind": "option",
+         "letter": "C",
+         "title": "In Kaufpreis oder Pacht",
+         "text": "Die Leistungen stecken im Kaufpreis oder in der Pacht; es gibt keine eigene Abrechnung."
+        }
+       ],
+       "feeds": [
+        "2.1.8",
+        "2.1.1",
+        "O03"
+       ],
+       "page": true,
+       "ziel": [
+        "Z2"
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "KI rechnet, Paul prüft (2.1.3)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "g-papier",
+     "title": "Papierrechnung (E84)",
+     "kids": [
+      {
+       "kind": "decision",
+       "id": "D39",
+       "title": "Wofür stehen die rund 12 Mio. €?",
+       "state": "open",
+       "text": "E84 rechnet auf dem Papier rund 12 Mio. €; E65 nennt 12,5 Mio. € als Hochrechnung der Kosten; nach E57 braucht der Ort keinen Investor.",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Erlös auf dem Papier",
+         "text": "Die 12 Mio. € sind der mögliche Erlös aus Plots auf 2 ha. Sie zeigen, dass die Kosten von 12,5 Mio. € in der Größenordnung gedeckt wären; E57 bleibt."
+        },
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Bewertung für die Firma",
+         "text": "Die Rechnung begründet im Pitch den Wert, auf den die Firma Pre-Seed und Kapital aufnimmt. Der Ort trägt sich weiter aus Käufergeld."
+        },
+        {
+         "kind": "option",
+         "letter": "C",
+         "title": "Invest in den Ort",
+         "text": "Für den Ausbau über Stufe 1 hinaus darf ein Investor in den Ort kommen; dann gilt E57 nur für Stufe 1."
+        }
+       ],
+       "feeds": [
+        "Business Case",
+        "O06",
+        "O30"
+       ],
+       "page": true,
+       "ziel": [
+        "X1"
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "Anwälte (O05, A5)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      },
+      {
+       "kind": "decision",
+       "id": "D40",
+       "title": "Was kaufen Käufer für 30.000 €?",
+       "state": "open",
+       "text": "E78 nennt etwa 30.000 € je Käufer, E84 30.000 € je Plot. Verkauft wird das Haus, den Grund pachten die Käufer (E52, E59); E50 spricht von Plots als Token.",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Das Haus",
+         "text": "30.000 € sind der Preis des Hauses in Teilen; der Grund wird extra gepachtet."
+        },
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Haus und Plot als Token",
+         "text": "30.000 € umfassen das Haus und den Token auf den Plot; Pacht kommt dazu, wenn der Grund nicht verkauft wird."
+        },
+        {
+         "kind": "option",
+         "letter": "C",
+         "title": "Alles für den Einzug",
+         "text": "30.000 € decken Haus, Anschluss und Anteil am Kommunalgebäude; Pacht und Leistungen laufen monatlich (2.1.8)."
+        }
+       ],
+       "feeds": [
+        "2.1.1",
+        "O03",
+        "Business Case"
+       ],
+       "page": true,
+       "ziel": [
+        "Z2"
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "Anwälte (O05, A5)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      },
+      {
+       "kind": "decision",
+       "id": "D41",
+       "title": "Was sind die 45 m² je Haus?",
+       "state": "open",
+       "text": "E84 rechnet mit 45 m² je Haus. Der Container aus E39 hat 6 × 2,5 m, also 15 m²; 2.2.3 fragt Preise für 15–30 m² an.",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Haus mit Terrasse und Abstand",
+         "text": "45 m² ist die Fläche, die ein Haus samt Terrasse, Bike-Unterstand und Abstand braucht."
+        },
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Ein größeres Haus",
+         "text": "Die Häuser in Teilen werden größer als der Container, etwa 45 m² Wohnfläche; die Herstelleranfrage (O31) wird angepasst."
+        },
+        {
+         "kind": "option",
+         "letter": "C",
+         "title": "Nur ein Rechenwert",
+         "text": "45 m² ist ein grober Wert für die Papierrechnung; Größe und Fläche legt erst die Geologie mit dem Lageplan fest (O01)."
+        }
+       ],
+       "feeds": [
+        "O31",
+        "2.2.3",
+        "Business Case"
+       ],
+       "page": true,
+       "ziel": [
+        "Z2"
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      }
+     ]
+    }
+   ],
+   "page": true
+  },
+  {
+   "kind": "group",
+   "id": "b-plan",
+   "title": "7 · Offen im Plan, noch ohne Karte auf der Entscheidungsseite",
+   "text": "Aus Kapitel 4 (Art E), den Teilergebnissen, die nur ihr entscheidet, und den neuen Planungspunkten vom 05.11.2026.",
+   "kids": [
+    {
+     "kind": "decision",
+     "id": "O16",
+     "title": "Drei ältere Entscheidungen passen nicht ganz zu jüngeren",
+     "state": "open",
+     "meta": "Paul und Roman",
+     "kids": [
+      {
+       "kind": "decision",
+       "title": "E02 gegen E55: gebaut wird im Sommer, oder die Container kommen ab März?",
+       "state": "open",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Die jüngere gilt"
+        },
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Die ältere gilt"
+        }
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      },
+      {
+       "kind": "decision",
+       "title": "E41 gegen E23: stufenweise mit weniger Leuten, oder 2–3 Personen von Anfang an?",
+       "state": "open",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Die jüngere gilt"
+        },
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Die ältere gilt"
+        }
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      },
+      {
+       "kind": "decision",
+       "title": "E10 gegen E51: die Grundstücksdaten reichen, oder die Plots werden ausgemessen?",
+       "state": "open",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Die jüngere gilt"
+        },
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Die ältere gilt"
+        }
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      }
+     ],
+     "hint": "Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt)."
+    },
+    {
+     "kind": "chance",
+     "id": "O17",
+     "title": "Krise: der Krieg verschärft sich, die Auffahrt ist gesperrt oder etwas fällt länger aus",
+     "state": "open",
+     "meta": "Paul und Roman · vor G1",
+     "kids": [
+      {
+       "kind": "outcome",
+       "title": "Notfallplan zuerst.",
+       "state": "rule",
+       "text": "Schutzmaßnahmen folgen sofort dem Notfallplan (2.4.7); er geht jeder anderen Regel vor (A6). Im Notfall ist man in unter 2 Stunden unten (E26)."
+      },
+      {
+       "kind": "decision",
+       "title": "Ab wann wird abgebrochen?",
+       "state": "open",
+       "text": "Noch ohne Entwürfe.",
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      }
+     ],
+     "ziel": [
+      "Z1"
+     ]
+    },
+    {
+     "kind": "decision",
+     "id": "O18",
+     "title": "Methodenpilot nach Methodenbewertung 06: macht ihr ihn, und in welchem Umfang?",
+     "state": "open",
+     "meta": "Paul und Roman",
+     "text": "Vier Wochen mit dem Pilotfall Geologie-Eingang. Vor Beginn ein Aufwandrahmen in Stunden und Euro; gemessen werden Durchlaufzeit, Nachweise, Rückfragen und Nacharbeit.",
+     "opts": [
+      {
+       "kind": "option",
+       "letter": "A",
+       "title": "Ja, vier Wochen mit dem Pilotfall Geologie-Eingang"
+      },
+      {
+       "kind": "option",
+       "letter": "B",
+       "title": "Nein, nicht in Stufe 1"
+      }
+     ],
+     "hint": "Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt).",
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "–",
+      "Freigabe": "Paul und Roman gemeinsam (3.2)",
+      "Budgetgrenze": "–",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "Montagsrunde (3.3)"
+     }
+    },
+    {
+     "kind": "decision",
+     "id": "O25",
+     "title": "E-Bikes: wie viele, wo geladen wird, wer zahlt (2.3.6)",
+     "state": "open",
+     "meta": "Paul entscheidet (E71), KI bereitet vor · vor 2.3.1",
+     "text": "Damit niemand Benzin holen muss (E73). Die Last geht in 2.3.1, die Kosten in 2.1.2.",
+     "ziel": [
+      "Z1"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+      "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "vor 2.3.1"
+     }
+    },
+    {
+     "kind": "decision",
+     "id": "versorgung",
+     "title": "Wasser, Heizung, Abwasser, Toilette und Küche: welche Lösung (2.3.2)?",
+     "state": "wait",
+     "meta": "Paul mit Nazar, Roman für Toilette und Küche · nach O01 · Vorschlag KI bis 15.01.2027",
+     "text": "Entschieden sind Strom aus dem Netz mit Batterie oder Generator und Solar (E35) und ein eigener Internetanschluss mit Starlink als Reserve (E49).",
+     "ziel": [
+      "Z1"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+      "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+      "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "spätestens 15.01.2027"
+     }
+    },
+    {
+     "kind": "group",
+     "id": "g-rollen",
+     "title": "Rollen und Betrieb oben",
+     "kids": [
+      {
+       "kind": "decision",
+       "title": "Team oben: wer, wie viele, welcher Platz, wer zahlt (2.4.1)",
+       "state": "open",
+       "meta": "Paul und Roman · Vorschlag KI bis 15.12.2026",
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "spätestens 15.12.2026"
+       }
+      },
+      {
+       "kind": "decision",
+       "title": "Betrieb oben: wer Holz, Wasser, Schnee und Wartung übernimmt (2.4.5)",
+       "state": "open",
+       "meta": "Paul und Roman · nach 2.4.1",
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "nach 2.4.1"
+       }
+      },
+      {
+       "kind": "decision",
+       "title": "Wer macht was selbst: Planung, Transport, Fundament, Aufstellen, Anschlüsse, Innenausbau (2.4.8)",
+       "state": "open",
+       "meta": "Paul und Roman, KI bereitet vor",
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      },
+      {
+       "kind": "decision",
+       "id": "O13",
+       "title": "Pauls Vollzeit: ab wann, und bis dahin wie viele Stunden je Woche (2.1.4)?",
+       "state": "open",
+       "meta": "Paul",
+       "text": "Ist Paul Vollzeit dabei, sind seine 8.000 € netto im Monat unabdingbar; sie stehen nicht im Mittelpunkt des Plans (E67).",
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "KI rechnet, Paul prüft (2.1.3)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "g-aufteilung",
+     "title": "Aufteilung: X-PORTAL, DT Agentur, Grundstücke",
+     "text": "X-PORTAL ist die Dachfirma: Sie bebaut und verwaltet die Grundstücke, verwaltet die Freelancer, ordnet sie Projekten zu und baut eigene Projekte wie KI-Agenten, Blockchain und Finance Engineering. Die DT Agentur übernimmt die Projekte aus Deutschland (Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog).",
+     "kids": [
+      {
+       "kind": "decision",
+       "id": "aufteilung",
+       "title": "Was gehört zu X-PORTAL, was zur DT Agentur: Arbeit, Verträge, Geld, Rechte (2.5.3)?",
+       "state": "open",
+       "meta": "Roman und Paul · Vorschlag KI bis 20.11.2026",
+       "ziel": [
+        "X1",
+        "X2"
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "KI rechnet, Paul prüft (2.1.3)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "spätestens 20.11.2026"
+       }
+      },
+      {
+       "kind": "decision",
+       "id": "rechnung",
+       "title": "Wer stellt welche Rechnung: Hauskauf, Pacht, Miete, Projekte, Agenten?",
+       "state": "open",
+       "meta": "Paul und Roman · vor G0",
+       "text": "Davon hängen Verträge (2.5.5), Steuern (A5) und der Geldfluss (2.1.3) ab.",
+       "ziel": [
+        "X1",
+        "X2",
+        "X3"
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "Fachperson (E22), über Nazar (E27)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "vor G0"
+       }
+      },
+      {
+       "kind": "decision",
+       "id": "grund",
+       "title": "Grundstücke: wer ist Eigentümer, wer baut, wer verpachtet an die Käufer, wer stellt den Betrieb?",
+       "state": "open",
+       "meta": "Paul mit den Anwälten · vor G0",
+       "text": "Bekannt: ein SPV je Grundstück, später tokenisiert (E17); das eigene und höchstens ein weiteres Grundstück (E18); Node001 steht auf Pauls Namen. Offen: wie Romans Unternehmen zu Pauls steht (2.5.2) und wo die UG sitzt (O11).",
+       "ziel": [
+        "X3"
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "vor G0"
+       }
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "g-kapital",
+     "title": "Kapitalentscheidungen",
+     "kids": [
+      {
+       "kind": "decision",
+       "id": "krypto",
+       "title": "Häuser über die Blockchain verkaufen: etwa 30.000 € je Käufer, bezugsfähig im Frühjahr 2027?",
+       "state": "open",
+       "meta": "Paul und Roman · vor dem Verkauf im Januar 2027 (G0)",
+       "text": "Entschieden ist: Kaufen und mieten über die Blockchain, das Tiny House tokenisiert, den Grund pachten die Käufer (E52, E59); Einzug ab Frühjahr 2027 (E55). Damit das trägt, muss vorher feststehen:",
+       "ziel": [
+        "Z2"
+       ],
+       "facts": [
+        {
+         "feld": "Recht Deutschland",
+         "wert": "Ist der Token mit Pacht ein Anlageprodukt mit Prospekt- oder Whitepaper-Pflicht, und was darf die Werbung versprechen (A5)?"
+        },
+        {
+         "feld": "Recht Ukraine",
+         "wert": "Dürfen Ausländer ein Haus auf fremdem Grund besitzen und den Grund pachten; ist der Container ein Gebäude (A5)?"
+        },
+        {
+         "feld": "Zahlung an den Lieferanten",
+         "wert": "Nimmt der Hersteller Zahlung in USD-Stablecoin über die Blockchain, oder muss in UAH oder EUR getauscht werden, und braucht der Umtausch eine Erlaubnis (A5)?"
+        },
+        {
+         "feld": "Was die 30.000 € kaufen",
+         "wert": "offen über D40: nur das Haus, Haus und Plot als Token, oder alles für den Einzug"
+        },
+        {
+         "feld": "Geld bereit",
+         "wert": "was als Beleg gilt und was bei weniger als 5 Käufern passiert (O23)"
+        },
+        {
+         "feld": "Technik",
+         "wert": "ein Testkauf läuft durch: Token, Pachtvertrag, Zahlung (2.5.6)"
+        },
+        {
+         "feld": "Bezugsfähig",
+         "wert": "Lieferzeit bis März (O31) und schriftliche Abnahme vor dem Einzug (E53)"
+        }
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "vor dem Verkauf im Januar 2027 (G0)"
+       }
+      },
+      {
+       "kind": "decision",
+       "id": "preseed",
+       "title": "Pre-Seed für die Firma: wer investiert, was braucht die Runde, wofür ist das Geld?",
+       "state": "open",
+       "meta": "Paul · nach dem Nachweis aus Z2",
+       "text": "Erlaubt ist eine Runde nur für die Firma, nicht für den Ort (E57). Offen ist alles Weitere: wer investiert (VC, Start-up BW, andere), welche Belege die Runde braucht (O21), welcher Sitz dafür nötig ist (O11) und wofür das Geld verwendet wird. Der Nachweis aus 5 Käufern und 100 auf der Warteliste ist Romans Ausgangspunkt (E78).",
+       "ziel": [
+        "X1"
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "KI rechnet, Paul prüft (2.1.3)",
+        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
+        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "nach dem Nachweis aus Z2"
+       }
+      }
+     ]
+    },
+    {
+     "kind": "decision",
+     "id": "gleitzeit",
+     "title": "Gleitzeit: wie wird die Kernzeit 9–14 Uhr verlegt, und wer ist für Betrieb und Notfall erreichbar?",
+     "state": "open",
+     "meta": "Planungspunkt neu (Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog) · Paul und Roman",
+     "text": "Kunden in anderen Zeitzonen verschieben Arbeit auf den Abend. Offen ist, wie die Verlegung angemeldet wird und wer in dieser Zeit für Betrieb und Notfall da ist (2.4.5, 2.4.7).",
+     "ziel": [
+      "Z1",
+      "Z3"
+     ],
+     "beschlussblatt": {
+      "Vorbereitung": "KI bereitet vor (E13)",
+      "Fachliche Prüfung": "–",
+      "Freigabe": "Paul und Roman gemeinsam (3.2)",
+      "Budgetgrenze": "–",
+      "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+      "Wiedervorlage": "Montagsrunde (3.3)"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "group",
+   "id": "b-entschieden",
+   "title": "8 · Entschieden: 84 im Log, nach Thema",
+   "text": "Je Thema ein Satz, mit den Entscheidungen dahinter. Die vollständige Liste steht unten unter „Entscheidungen E01–E85“.",
+   "kids": [
+    {
+     "kind": "decision",
+     "title": "Ort",
+     "state": "done",
+     "text": "Node001: Bereschnyzja, Ortsteil Hrun, bei Werchowyna. Der Name ist überall Node001, der Oberbegriff Nodes. Als Ort nennt die Website, wenn überhaupt, nur „Ukraine“, dazu europaweite Standorte. (E33, E63, E66)"
+    },
+    {
+     "kind": "decision",
+     "title": "Ziel",
+     "state": "done",
+     "text": "2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld. Roman ist von Anfang an dabei. (E01, E23, E24)"
+    },
+    {
+     "kind": "decision",
+     "title": "Vorrang",
+     "state": "done",
+     "text": "Das Grundstück voll bekommen, auf Autarkie hinarbeiten, alles läuft immer. Der Betrieb trägt sich selbst. (E46, E54)"
+    },
+    {
+     "kind": "decision",
+     "title": "Geld",
+     "state": "done",
+     "text": "Reihenfolge: Pauls Lebensunterhalt, Kosten auf dem Berg, Weiterentwicklung, Kapital über die Chain. (E05)"
+    },
+    {
+     "kind": "decision",
+     "title": "Paul",
+     "state": "done",
+     "text": "Ist Paul Vollzeit dabei, sind seine 8.000 € netto im Monat unabdingbar. Sie stehen nicht im Mittelpunkt des Plans. (E03, E32, E67)"
+    },
+    {
+     "kind": "decision",
+     "title": "Kapital",
+     "state": "done",
+     "text": "Der Ort braucht keinen Investor: Käufergeld ist Umsatz und kommt zuerst. Die Firma darf Pre-Seed aufnehmen. Kapital über die Chain erst, wenn Umsatz da ist. (E04, E30, E57)"
+    },
+    {
+     "kind": "decision",
+     "title": "Kosten",
+     "state": "done",
+     "text": "Die 12,5 Mio. € sind eure Hochrechnung der Kosten in Werchowyna, keine Finanzierung. (E65)"
+    },
+    {
+     "kind": "decision",
+     "title": "Umsatz",
+     "state": "done",
+     "text": "Projekte und Freelancer-Aufträge aus Deutschland; oben werden daraus Agenten, verkauft über Masumi. Projekte werden verkauft, ihr Preis ist offen; für Agenten ist das Modell offen: Abo, Einmalzahlung mit Betreuung oder nach Nutzung. Erster bezahlter Auftrag bis Januar 2027. (E31, E56, E77, E83)"
+    },
+    {
+     "kind": "decision",
+     "title": "Verkauf",
+     "state": "done",
+     "text": "Warteliste; ab Januar 2027 kaufen als Token, Grund pachten; mieten mit Miete nach dem Einzug. (E47, E51, E52)"
+    },
+    {
+     "kind": "decision",
+     "title": "Preis",
+     "state": "done",
+     "text": "Etwa 30.000 € je Plot als Ausgangspunkt der Rechnung. Bestellt wird, wenn 5 Käufer ihr Geld belegt haben. (E50, E78)"
+    },
+    {
+     "kind": "decision",
+     "title": "Nachfrage",
+     "state": "done",
+     "text": "Die Warteliste zeigt die Nachfrage; bei großem Andrang gibt es mehr Plots. Umfragen ohne Angebot gibt es nicht. (E09, E51, E58)"
+    },
+    {
+     "kind": "decision",
+     "title": "Bauweise",
+     "state": "done",
+     "text": "Die Häuser kommen in Teilen und werden oben montiert; sie sind die Tiny Houses der Käufer und bleiben, den Grund pachten sie. (E39, E52, E59, E75)"
+    },
+    {
+     "kind": "decision",
+     "title": "Zeit",
+     "state": "done",
+     "text": "Die Häuser kommen frühestens im März 2027 hoch, sobald frostfrei, in Teilen (E75); Werbung „Einzug ab Frühjahr 2027“. (E21, E55)"
+    },
+    {
+     "kind": "decision",
+     "title": "Versorgung",
+     "state": "done",
+     "text": "Netzstrom mit Batterie oder Generator und Solar; eigener Internetanschluss, Starlink als Reserve; 50 l Wasser je Person und Tag. (E26, E35, E49)"
+    },
+    {
+     "kind": "decision",
+     "title": "Abnahme",
+     "state": "done",
+     "text": "Vor dem Einzug schriftlich abgenommen durch Nazar oder eine Fachperson. (E22, E27, E53)"
+    },
+    {
+     "kind": "decision",
+     "title": "Pläne",
+     "state": "done",
+     "text": "Generalplan Variante 1 ist die Grundlage. Nazar ist beauftragt, seine Ergebnisse sind offen. (E37, E43, E64)"
+    },
+    {
+     "kind": "decision",
+     "title": "Firma",
+     "state": "done",
+     "text": "Heute Romans Einzelunternehmen; UG in Gründung, Sitz offen (W09). (E17, E61)"
+    },
+    {
+     "kind": "decision",
+     "title": "Grundstücke",
+     "state": "done",
+     "text": "Das eigene und höchstens ein weiteres; die übrigen von Dritten. (E18)"
+    },
+    {
+     "kind": "decision",
+     "title": "Rollen",
+     "state": "done",
+     "text": "Paul ist CEO, hält den Kontakt zu Nazar und entscheidet über Bestellungen und den Betrag; Roman führt Produkt und Projekt und ist oben. Die KI macht, was sie kann; ein Mensch prüft. (E06, E13, E19, E62, E71)"
+    },
+    {
+     "kind": "decision",
+     "title": "Arbeit oben",
+     "state": "done",
+     "text": "Das Team baut Agenten und liefert alle Projekte, auch Cybersecurity und Blockchain; das eigene Produkt sind nur Agenten. Käufer und Mieter bilden eine Community. (E63, E70)"
+    },
+    {
+     "kind": "decision",
+     "title": "Grundmodell",
+     "state": "done",
+     "text": "Leichter Transport, kommunal, gemeinschaftlich, autark; Privatsphäre im eigenen Haus, Community vorausgesetzt. E-Bikes statt Benzin, Kommunalgebäude mit Gemüsegarten. (E72, E73, E74)"
+    },
+    {
+     "kind": "decision",
+     "title": "Alltag",
+     "state": "done",
+     "text": "Arbeit, Gesundheit und Freizeit gehören zusammen: Jour fixe am Morgen, gemeinsam oder privat essen, Sauna, Wandern, Laufen, Yoga; abgelegen und doch im Team. (E81)"
+    },
+    {
+     "kind": "decision",
+     "title": "Ablage",
+     "state": "done",
+     "text": "OneDrive in Microsoft 365, DSGVO-konform. (E12)"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1231 @@
+# X-PORTAL Index 3.0: Entscheidungsbaum
+
+Stand 05.11.2026. Erzeugt aus `werkzeug/baum.py`; die lesbare Seite ist `index-3.html`. Quellen in Klammern (E = Entscheidung, O = offener Punkt, 2.x.y = Teilergebnis, H01 … = Anforderung).
+
+## Zielblatt
+
+| Nr | Ziel | Messgröße | Zielwert oder Klärungsauftrag | Termin | Wer · Review | Grenze | Globalziel | Quelle |
+|---|---|---|---|---|---|---|---|---|
+| Z1 | 2–3 Leute wohnen und arbeiten ganzjährig oben | Personen, die den ersten Winter oben gewohnt und gearbeitet haben | 2–3 Personen; ausgelegt für Team plus 5 Käufer (E79) | Einzug ab Frühjahr 2027 (E55), ganzjährig nach dem ersten Winter 2027/28 | Roman oben; Paul mit Nazar für den Bau · Review G2, G3, G4 | Zeit: Einzug erst ohne Frost (E21). Kapital: der Ort trägt sich aus Käufergeld (E57) | 1 und 3 | E01, E23, E24 |
+| Z2 | Das Grundstück voll bekommen | Verkaufte oder vermietete Plots von der Zahl, die die Geologie erlaubt | Klärungsauftrag: Zahl der Plots nach O01, Paul mit Nazar. Schwelle zum Bestellen: 5 Käufer mit belegtem Geld, 100 auf der Warteliste (E78) | Verkauf ab Januar 2027 (E52) | Roman (Verkauf), Paul (Grundstück) · Review G0, G1 | Kapital: bestellt wird erst mit dem Geld der 5 Käufer (E78); weniger als 5 entscheidet O23 | 1 und 2 | E46, E51 |
+| Z3 | Erster bezahlter Umsatz | Bezahlte Rechnungen je Monat in €, getrennt von Interesse und Marge | Klärungsauftrag: Monatswert festlegen. Planwert der Matrix (S06, 03.11.2026): mindestens Pauls 8.000 € netto plus laufende Kosten oben | bis zum Verkaufsstart im Januar 2027 (E77), dann monatlich | Roman und Paul · Review monatlich (3.3) | Vorschlag S06, nicht entschieden: ohne bezahltes Projekt bis 31.12.2026 nur Stufe „1 Person“ | 1 | E07, E08, E31, E77 |
+| Z4 | Schema für den nächsten Node | Schema, Planung, Nutzbarkeit und Sinn getrennt von den Werten dieses Grundstücks; ein geänderter Standortparameter macht betroffene Anforderungen, Varianten und Beschlüsse auffindbar (2.6.6) | Probe vor G1; zweite Standortkonfiguration nach Stufe 1 | nach Stufe 1, Probe vor G1 | Paul · Review nach Stufe 1 | – | 2 | E11 |
+| X1 | X-PORTAL: Dachfirma | festlegen, je Aufgabe | Klärungsauftrag: Was genau zur Dachfirma gehört (2.5.3). Aufgaben laut Vorgabe: Grundstücke bebauen und verwalten; Freelancer verwalten und Projekten zuordnen; eigene Projekte bauen, etwa KI-Agenten, Blockchain und Finance Engineering | Aufteilung vor G0, eigene Ziele nach Stufe 1 (E69) | Paul (Gesellschaft, Geld, Nodes) und Roman (Produkt, Projekt) (E62) | heute tritt Romans Einzelunternehmen auf, die UG wird gegründet; Sitz offen (E61, O11) | 1 und 2 | Vorgabe 05.11.2026; E17, E62, E63, E70 |
+| X2 | DT Agentur: übernimmt die Projekte aus Deutschland | Bezahlter Umsatz, Interesse und Marge getrennt (M09) | Klärungsauftrag: Welche Projekte, welche Verträge und welches Geld bei der DT Agentur liegen und was an X-PORTAL geht (2.5.3). Heute kein Umsatz, keine dauerhaften Nutzer (E08) | erster Auftrag bis Januar 2027 (E77) | Roman und Paul | – | 1 | Vorgabe 05.11.2026; E07, E08, E31 |
+| X3 | Grundstücke: wem sie gehören, wer baut und verpachtet | festlegen | Klärungsauftrag: Wer Eigentümer ist, wer baut, wer an die Käufer verpachtet und wer den Betrieb stellt (2.5.5); wie Pauls Unternehmen dazu steht (2.5.2). Bekannt: das eigene und höchstens ein weiteres Grundstück, die übrigen von Dritten (E18); ein SPV je Grundstück, später tokenisiert (E17); Node001 steht auf Pauls Namen | vor dem Verkauf im Januar 2027 (G0) | Paul (Grundstücke, E62); Anwälte (O05) | Kapital: der Ort trägt sich aus Käufergeld (E57) | 1 und 2 | E17, E18, E52, E57, E62 |
+
+
+## Grundlage: Endprodukt und Ziele
+
+Wofür X-PORTAL steht (Leitlinie P01)
+Vision: ein weltweit vernetztes Ökosystem menschenzentrierter Lebens- und Arbeitsorte. Jeder Standort passt sich an die Menschen und den Ort an und entwickelt sich durch Technik, lernende Organisation und zunehmend eigene Versorgung weiter.
+Mission: „Wir schaffen und vernetzen menschenzentrierte Innovationshubs, in denen Menschen leben, arbeiten und gemeinsam neue Lösungen entwickeln. Dafür verbinden wir moderne Technologien, geeignete Arbeits- und Lebensbedingungen und einen verantwortungsvollen Umgang mit Ressourcen.“ (E28)
+Globalziele, in dieser Rangfolge (E29): 1. wirtschaftliche Tragfähigkeit und Resilienz; 2. internationale Skalierung; 3. gesellschaftlicher Nutzen: sichere, menschenzentrierte Orte. Dazu gehört die Wirkung auf die Region, beurteilt an echten Erfahrungen.
+Entscheidungsgrundsatz: Was angefangen wird, richtet sich nach seinem Beitrag zu diesen drei Zielen. Menschenwürde, Sicherheit und gesetzliche Anforderungen sind verbindliche Grenzen (Leitlinie P01).
+Endprodukt Stufe 1
+2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld (E01, E23, E24). Der Betrieb trägt sich selbst, X-PORTAL stellt die Basis (E54).
+Grundmodell eines Node (E72–E74)
+
+Leichter Transport: Die Häuser sollen mit wenig Gerät hochkommen; darum kommen sie in Teilen und werden oben montiert (E75; 2.2.3). Ob ein kleines Fahrzeug die Teile hochbringt, prüft 2.2.4.
+Kommunal und gemeinschaftlich: Ein Kommunalgebäude ist der gemeinsame Ort zum Arbeiten, mit Küche und Sanitär (E40, E74; 2.4.4).
+Privatsphäre: Jede Person hat ihren eigenen Container (E40), der ihr Tiny House ist (E59). Community und Gesellschaft sind vorausgesetzt.
+Autark: Strom, Wasser und Wärme wachsen Schritt für Schritt (2.3). Mobilität läuft mit elektrischen Bikes statt Benzin, das Netz oben wird dafür ausgebaut (2.3.6). Der Gemüsegarten am Kommunalgebäude steht für die weitere Autarkie (E74).
+
+
+## 1 · Der Weg ab jetzt: Geologie, Haus, Zufahrt, Lieferant, Technik, dann bis zum ersten Winter
+
+In dieser Reihenfolge wird jetzt gearbeitet. Zuerst die Geologie: Sie zeigt, welche Hausart geht. Dann, ob das Haus die Zufahrt hochkommt, wer es liefert und baut, und wer Zugang, Server und Netzwerk stellt. Danach Kosten, Preis, Verkauf und die Gates bis zum ersten Winter.
+
+- **Ereignis O01:** Geologie: Wo trägt der Grund, wie viele Stellplätze gehen? _[wartet]_
+  - Paul mit Nazar · Bericht bis 30.11.2026 (Vorschlag KI)
+  - 3 Schürfe bis 2,5 m, 12 Bohrpunkte bis 1,5 m. Nazar hatte den Bericht am 20.10.2026 für die folgende Woche angekündigt; er liegt nicht vor. Ob der Grund trägt, legt die Fachperson fest (E22). Davon hängen Stellplätze, Fundament, Bauweise und alle Kosten ab.
+  - Dient: Z1, Z2
+  - **Ausgang (kein Bericht):** Paul fragt nach dem Ergebnis. _[Regel steht]_
+    - Wiedervorlage 30.11.2026 (Vorschlag KI). Widersprechen sich Daten oder fehlen sie, geht ein konkreter Nachweisauftrag an Nazar (A3).
+  - **Ausgang (Fall A):** Der Grund trägt; die Stellplätze gehen wie im Entwurf unten links (E34). _[wartet]_
+    - Als Nächstes: Plots ausmessen, Kosten mit leichtem Fundament rechnen, Bausätze anfragen (O31).
+    - **Entscheidung:** Zahl der Plots und Kaufpreis festlegen; der Verkauf im Januar bleibt. _[wartet]_
+      - Paul und Roman · nach O01
+      - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+      - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+      - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+      - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+      - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+      - Beschlussblatt, Wiedervorlage: nach O01
+  - **Ausgang (Fall B):** Der Grund trägt nur mit aufwendigem Fundament, oder es gibt weniger Stellplätze. _[wartet]_
+    - Als Nächstes: Kosten mit schwerem Fundament rechnen und vergleichen, ob Häuser in Teilen oder feste Häuser günstiger sind.
+    - **Entscheidung:** Bauweise endgültig: bleibt es bei Häusern in Teilen (E75)? _[wartet]_
+      - Paul und Roman · nach O01
+      - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+      - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+      - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+      - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+      - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+      - Beschlussblatt, Wiedervorlage: nach O01
+    - **Entscheidung:** Preis je Plot neu. _[wartet]_
+      - Paul und Roman · nach O01
+      - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+      - Beschlussblatt, Fachliche Prüfung: –
+      - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+      - Beschlussblatt, Budgetgrenze: –
+      - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+      - Beschlussblatt, Wiedervorlage: nach O01
+    - **Entscheidung:** Reichen die 5 Käufer (E78)? _[wartet]_
+      - Paul und Roman · nach O01
+      - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+      - Beschlussblatt, Fachliche Prüfung: –
+      - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+      - Beschlussblatt, Budgetgrenze: –
+      - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+      - Beschlussblatt, Wiedervorlage: nach O01
+  - **Ausgang (Fall C):** Die Fläche ist an den geplanten Stellen ungeeignet. _[wartet]_
+    - Als Nächstes: Nazar schlägt andere Flächen auf dem Grundstück vor; der Lageplan wird neu (2.2.2).
+    - **Entscheidung:** Neuer Platz für Stufe 1. _[wartet]_
+      - Paul und Roman · nach O01
+      - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+      - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+      - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+      - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+      - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+      - Beschlussblatt, Wiedervorlage: nach O01
+    - **Entscheidung:** Termine Januar und März neu (O24). _[wartet]_
+      - Paul und Roman · nach O01
+      - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+      - Beschlussblatt, Fachliche Prüfung: –
+      - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+      - Beschlussblatt, Budgetgrenze: –
+      - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+      - Beschlussblatt, Wiedervorlage: nach O01
+- **Entscheidung:** Welche Hausart trägt der Grund: Containerhaus, Tiny House in Teilen oder festes Haus? _[wartet]_
+  - Paul und Roman · nach O01
+  - Die Geologie zeigt, welches Fundament und damit welche Hausart geht (Fall A oder B). Bis dahin gilt: Häuser in Teilen, oben montiert (E75).
+  - Dient: Z1, Z2
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+  - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: nach O01
+- **Ereignis:** Kommt das Haus die Zufahrt hoch, im Sommer und im Winter (2.2.4)? _[wartet]_
+  - Roman; Paul mit Nazar · Vorschlag KI bis 15.12.2026
+  - Die letzten etwa 200 m haben über 15 % Steigung. Bis 2,6 m Breite geht ein Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug (A3). Ein Spediteur bestätigt schriftlich, dass die Teile auf kleinem Fahrzeug hochkommen; Nazar sagt, wer im Winter räumt.
+  - Dient: Z1
+  - **Ausgang (ja):** Die Lieferform steht fest. _[wartet]_
+    - Damit ist klar, welche Hersteller in Frage kommen.
+  - **Ausgang (nein):** Kleinere Teile oder eine andere Lieferform. _[wartet]_
+    - Hausart und Hersteller werden neu bewertet (2.2.3).
+- **Entscheidung:** Wer liefert und baut: welcher Hersteller, mit oder ohne Montage? _[wartet]_
+  - Roman schickt die Anfrage, Paul entscheidet die Bestellung (E71) · nach O31
+  - Angefragt werden Servus und Supersip, dann Unitbud (O31). Die Anfrage enthält die Raumliste aus M02 und die Maße der Zufahrt als Lieferbedingung. Wer was selbst macht, steht in 2.4.8.
+  - Dient: Z1, Z2
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+  - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: nach O31
+- **Entscheidung:** Technik im Haus: Zugang, Server, Netzwerk. Liefert der Hersteller sie mit, oder beschaffen wir sie selbst? _[offen]_
+  - Planungspunkt neu (Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog) · Paul und Roman
+  - Zum Beispiel eine Zugangskontrolle mit Chip an den Türen, Server und Netzwerktechnik. Maßstab: alles läuft immer, kein Serverausfall (E46); Projektdaten sind gesichert (S05). Die Server oben werden für personenbezogene Daten mit Deutschland verbunden; ob das zulässig ist, prüfen die Anwälte (E85, A5). IT in Deutschland soll über das Matching der BW Bank laufen (2.1.7).
+  - Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt).
+  - Dient: Z1, Z3
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+  - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+  - Möglichkeit A: Der Hersteller liefert und baut ein — Ein Ansprechpartner; die Anforderungen gehen in die Anfrage O31.
+  - Möglichkeit B: Wir beschaffen selbst — Eigene Auswahl und eigener Einbau; die Stunden gehören in 2.4.8.
+  - Möglichkeit C: Gemischt — Zugang und Leitungen vom Hersteller, Server und IT selbst.
+- **Schritt O03:** Kosten je Plot gegen Erlös je Plot, dann das Preisblatt _[offen]_
+  - KI rechnet, Paul und Roman entscheiden · nach O01 und O31
+  - Kosten je Plot (2.1.2): Bausatz, Transport, Montage, Fundament, Anschlüsse, Anteil an Kommunalgebäude und Team-Plätzen. Preisblatt (2.1.1): Kaufpreis Tiny House, Pacht für den Grund, Monatsmiete. Ausgangspunkt sind etwa 30.000 € je Käufer (E78).
+  - Dient: Z2
+  - Braucht: O01, O31, D36, D37, D38, D40, D41
+- **Gate G0:** Können wir verkaufen? _[wartet]_
+  - bis zum Verkauf im Januar 2027 · Paul und Roman geben frei oder lassen nacharbeiten
+  - Muss fertig sein: 2.1.1, 2.1.2, 2.1.3, 2.1.8, 2.2.1, 2.2.2, 2.2.3, 2.2.4, 2.2.6, 2.3.1, 2.3.3 als Entwurf, 2.4.1 bis 2.4.4, 2.5.4, 2.5.5, 2.5.6.
+  - Dient: Z2
+  - Braucht: O05, O11, O12, D34, D35, D36, D37, D38
+  - Beschlussblatt, Vorbereitung: KI stellt die Nachweise der Liste zusammen (E13)
+  - Beschlussblatt, Fachliche Prüfung: je Teilergebnis die genannte Fachperson (E22)
+  - Beschlussblatt, Freigabe: Paul und Roman (3.1, 3.2)
+  - Beschlussblatt, Budgetgrenze: Vorbereitungsbudget (O12)
+  - Beschlussblatt, Gültigkeit: bis zum Verkauf im Januar 2027
+  - Beschlussblatt, Wiedervorlage: nicht frei: nacharbeiten und neu vorlegen
+- **Schritt:** Verkauf an die Warteliste ab Januar 2027 _[wartet]_
+  - Roman · Warteliste gebaut, nicht live (2.4.2)
+  - Wer auf der Warteliste steht, kauft sein Tiny House als Token und pachtet den Grund; mieten geht auch, die Miete kommt nach dem Einzug (E47, E51, E52, E59). Vorher: Rechtsprüfung (O05, A5) und ein Testkauf mit der Verkaufstechnik (2.5.6).
+  - Dient: Z2
+- **Ereignis O23:** Belegen 5 Käufer ihr Geld bis zum Bestelltermin für März? _[offen]_
+  - Paul und Roman · vor G1
+  - Bestellt wird, wenn 5 Käufer ihr Geld belegt haben, je etwa 30.000 € (E78). Zwei Fragen sind offen: was als Beleg gilt und was bei weniger als 5 Käufern passiert.
+  - Dient: Z2
+  - **Entscheidung:** Was belegt „Geld bereit“? _[offen]_
+    - Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt).
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: Anwälte (O05, A5)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Anzahlung — Anzahlungen erst nach der Antwort der Anwälte (O05).
+    - Möglichkeit B: Vertrag — Unterschriebener Kaufvertrag.
+    - Möglichkeit C: Finanzierungszusage — Käufer können finanzieren (E50); die Zusage der Bank gilt als Beleg.
+  - **Ausgang (ja):** Bestellen. _[Regel steht]_
+    - Paul entscheidet über Bestellung und Betrag (E71). Mit dem Nachweis und 100 auf der Warteliste geht die Firma in die Pre-Seed-Runde (E57, E78).
+  - **Ausgang (weniger als 5):** Was dann? _[offen]_
+    - **Entscheidung:** Bei weniger als 5 Käufern zum Bestelltermin _[offen]_
+      - Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt).
+      - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+      - Beschlussblatt, Fachliche Prüfung: –
+      - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+      - Beschlussblatt, Budgetgrenze: –
+      - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+      - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+      - Möglichkeit A: Einzug verschieben — Bestellt wird, sobald 5 Käufer belegt sind; März und Einzug rücken nach hinten (O24).
+      - Möglichkeit B: Kleiner anfangen — Mit weniger Häusern bestellen, wie in E41; die Kosten je Plot werden neu gerechnet (2.1.2).
+      - Möglichkeit C: Nicht bestellen — Es wird nicht bestellt.
+- **Gate G1:** Ist genug Geld da, ist bestellt? _[wartet]_
+  - Januar 2027
+  - 5 Käufer haben ihr Geld belegt (O23); Geldfluss 2.1.3 bestätigt; Häuser als Bausatz bestellt mit Lieferung im März; Leitungen geplant (2.2.7); kritische Fehlerarten bewertet (2.3.7); Prüfsituation T00 vor der Bestellung (2.4.9).
+  - Dient: Z2
+  - Braucht: O17, O23
+  - Beschlussblatt, Vorbereitung: KI rechnet den Geldfluss (2.1.3)
+  - Beschlussblatt, Fachliche Prüfung: Anwälte zum Beleg „Geld bereit“ (O23, O05)
+  - Beschlussblatt, Freigabe: Gate: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: Geld der 5 Käufer (E78); nur Geld auf dem Konto (3.2)
+  - Beschlussblatt, Gültigkeit: für die Bestellung März 2027
+  - Beschlussblatt, Wiedervorlage: neue Information zu Container, Kapital oder Budget: G1 und G2 neu (A6)
+- **Ereignis:** Ist der Boden im März frostfrei? _[wartet]_
+  - frühestens März 2027 (E55)
+  - Dient: Z1
+  - **Ausgang (ja):** Hausteile hoch und oben montieren. _[Regel steht]_
+    - Sie kommen auf kleinem Fahrzeug hoch und werden oben montiert (E75), auf dem Fundament, das Nazar festlegt (2.2.8).
+  - **Ausgang (nein):** Warten, bis der Boden frei ist. _[Regel steht]_
+    - Baubeginn erst ohne Frost (E21, E55).
+  - **Ausgang (Wetter, Straße):** Anderes Einsatzfenster nötig. _[Regel steht]_
+    - Einsatzplan aktualisieren, G2 neu vorlegen; Nazar (A6).
+  - **Ausgang (neue Information):** Container, Kapital oder Budget ändern sich. _[Regel steht]_
+    - Auswirkung rechnen, dann G1 und G2 neu; Roman koordiniert, Paul prüft (A6).
+- **Gate G2:** Darf eingezogen werden? _[wartet]_
+  - ab März 2027, sobald frostfrei
+  - Nazar oder eine Fachperson bestätigt Heizung, Wasser, Strom und Brandschutz schriftlich (E53). Muss fertig sein: 2.2.8, 2.3.2, 2.3.3 abgenommen, 2.4.6, 2.4.9 mit T00, T01, T05, T06 und dem Fachnachweis aus T02.
+  - Dient: Z1
+  - Beschlussblatt, Vorbereitung: KI stellt Abnahmen und Prüfsituationen zusammen
+  - Beschlussblatt, Fachliche Prüfung: Nazar oder eine Fachperson, schriftlich (E53)
+  - Beschlussblatt, Freigabe: Paul und Roman nach der Fachprüfung (A6)
+  - Beschlussblatt, Budgetgrenze: im Beschluss genannt (A6)
+  - Beschlussblatt, Gültigkeit: für den Abschnitt, im Beschluss genannt (A6)
+  - Beschlussblatt, Wiedervorlage: Wetter oder Straße: Einsatzplan neu, G2 neu (A6)
+  - **Ausgang (abgenommen):** Einzug. _[Regel steht]_
+    - Die Werbung nennt „Einzug ab Frühjahr 2027“ (E55).
+  - **Ausgang (nicht abgenommen):** Nacharbeiten und neu vorlegen. _[Regel steht]_
+    - Die Abnahmeliste ist noch auszuarbeiten (2.3.3).
+- **Gate G3:** Hält es im Winter? _[wartet]_
+  - vor dem ersten Frost 2027
+  - Heizung nach Heizlast, frostfreie Wasserleitung, Toilette und Batterie im Warmen, Generator draußen; Nazar legt fest und nimmt ab (E38). Dazu Betrieb oben (2.4.5) und Absprachen mit Notfallplan (2.4.7).
+  - Dient: Z1
+  - Beschlussblatt, Vorbereitung: KI stellt die Winterliste zusammen (E38)
+  - Beschlussblatt, Fachliche Prüfung: Nazar (E38)
+  - Beschlussblatt, Freigabe: Paul und Roman
+  - Beschlussblatt, Budgetgrenze: festlegen
+  - Beschlussblatt, Gültigkeit: erster Winter 2027/28
+  - Beschlussblatt, Wiedervorlage: vor dem ersten Frost
+- **Gate G4:** Haben die Leute oben Geld verdient? _[wartet]_
+  - erster Winter 2027/28
+  - Messung bei Frost im ersten Winter (2.3.5); Ziele Z1 bis Z3 gemessen; die nächste Stufe wird entschieden (E01, E53).
+  - Dient: Z1, Z3
+  - Beschlussblatt, Vorbereitung: KI misst Z1 bis Z3
+  - Beschlussblatt, Fachliche Prüfung: –
+  - Beschlussblatt, Freigabe: Paul und Roman
+  - Beschlussblatt, Budgetgrenze: –
+  - Beschlussblatt, Gültigkeit: Stufe 1
+  - Beschlussblatt, Wiedervorlage: Entscheidung über die nächste Stufe
+  - **Ende:** 2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld.
+    - Ausgelegt für das Team plus die ersten 5 Käufer (E79). Danach bekommen Pitch, Website, DT Agentur, Plattform, weitere Nodes und Chain eigene Pläne (E69): Agenten über Masumi (2.6.4), Kapital über die Chain (2.6.5), Schema für den nächsten Node (2.6.6).
+
+## 2 · Alltag oben: prüfbare Anforderungen nach Maslow und Sinnen (M02)
+
+Pauls Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und Digitales, jede mit Prüfverfahren und Abnahme. Stand: die 29 Zeilen vom 03.11.2026 (Artefakt „Node001 Anforderungen Mensch“) und die Spielregeln vom 05.11.2026; die M02 im Repo hat inzwischen 46 Zeilen, keine ist geprüft. Technische Werte legt eine Fachperson fest (E22).
+
+- **Schritt:** Für wen: drei Teammitglieder oben _[offen]_
+  - Roman vor Ort: ist von Anfang an oben (E24), führt Produkt und Projekt (E62) und koordiniert den Betrieb. Zwei weitere Teammitglieder bauen Agenten und liefern die Projekte aus Deutschland, auch Cybersecurity und Blockchain (E70). Käuferinnen und Käufer wohnen in ihrem eigenen Haus und sind frei: Sie können mitmachen, müssen aber nicht (E63). Sie stehen deshalb in keinem Tagesablauf.
+- **Schritt:** Spielregeln oben: ein einfaches Leben aus Arbeit und Erholung _[offen]_
+  - Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog
+  - Wer oben ist, soll sich nur auf Arbeit und Erholung konzentrieren müssen. Versorgung, Technik und Betrieb laufen im Hintergrund; deshalb sind Grundbedürfnisse und Sicherheit nach Maslow geklärt, bevor jemand oben arbeitet (E53).
+  - Arbeitszeit: Kernzeit 9 bis 14 Uhr als Gleitzeit. Wer Kunden in einer anderen Zeitzone hat, verlegt sie, zum Beispiel auf den Abend.
+  - Pflicht: Jour fixe am Morgen und gemeinsame Aktivitäten wie Sport.
+  - Angebot: Zusammen arbeiten steht offen, ist aber keine Voraussetzung.
+  - Frei: Wellness, Sauna und Entspannung teilt sich jede und jeder selbst ein.
+  - Geteilt: Betriebsarbeiten wie Holz hacken, Wasser und Schnee übernimmt das Team im Wechsel, nach einem Plan (2.4.5).
+  - Käufer: frei; sie können bei allem mitmachen.
+  - Dient: Z1
+- **Ast:** Einfaches Leben: Arbeit und Erholung (neu)
+  - Aus den Spielregeln; diese Zeilen fehlen noch in M02 und brauchen dort Prüfverfahren und Abnahme.
+  - **Anforderung:** Kernzeit 9–14 Uhr, verlegbar bei Zeitverschiebung _[nicht geprüft]_
+    - Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog
+    - Prüfverfahren: festlegen; zum Beispiel ein Kundencall am Abend über den Hauptanschluss (D01)
+    - Abnahme: Roman
+  - **Anforderung:** Jour fixe und gemeinsamer Sport sind Pflicht _[nicht geprüft]_
+    - Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog · Jour fixe ist M02-44
+  - **Anforderung:** Betriebsarbeit im Team geteilt, nach Plan _[nicht geprüft]_
+    - Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog · Plan in 2.4.5, Absprache A02
+  - **Anforderung:** Wellness, Sauna und Entspannung frei einteilen _[nicht geprüft]_
+    - Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog · Sauna M02-46, offen über D35
+  - **Anforderung:** Nichts im Hintergrund muss man selbst lösen: Essen, Strom, Wasser, Internet laufen _[nicht geprüft]_
+    - aus E46 und E54
+- **Ast:** Grundbedürfnisse
+  - **Anforderung H01:** Ruhig schlafen _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Jede Person hat einen eigenen Schlafplatz, vom Arbeits- und Küchenbereich getrennt.
+    - Prüfverfahren: Nachts messen, während im Nachbarbereich gesprochen wird.
+    - Grenzwert: Nachtwert festlegen
+    - Planwert: Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22).
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr
+    - Abnahme: Roman (ist von Anfang an oben)
+    - Teilergebnis: 2.2.3 (früher N12)
+  - **Anforderung H02:** Warm aufwachen _[nicht geprüft]_
+    - von Anfang an · heute in M02 als M02-06 (laut Index)
+    - Anforderung: Der Raum kühlt über Nacht, wenn der Ofen ausgeht, nicht unter einen festgelegten Morgenwert ab. Dafür braucht jedes Modul eine Heizlastrechnung bei −20 °C, und die Ofenleistung muss dazu passen: ein überdimensionierter Ofen wird gedrosselt, schwelt und bildet CO.
+    - Prüfverfahren: Heizlastrechnung vor der Bestellung; im Oktober Auskühlkurve über eine Nacht messen und auf −20 °C umrechnen; im ersten Winter bei Frost nachmessen.
+    - Grenzwert: Annahme: grob 1,5–3 kW Heizlast je gut gedämmtem Modul bei −20 °C (Auslegungstemperatur als Annahme; Klimadaten für Werchowyna trägt der Rechercheur bis 21.11.2026 ein (Terminvorschlag)), Annahme: Öfen mit Kochplatte haben meist 6–10 kW; Rechnung durch Fachperson
+    - Planwert: Annahme: mindestens 12 °C im Schlafbereich und 16 °C im Arbeitsbereich nach 8 Stunden ohne Feuer. Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22).
+    - Nachweis: vor Nutzung: Rechnung oder Abnahme vor dem Einzug; im ersten Winter: Rechnung vor Bestellung (N16); Messung im Oktober und bei Frost im ersten Winter
+    - Abnahme: Nazar (über Paul, Preis unbekannt, E27) und Roman (ist von Anfang an oben)
+    - Teilergebnis: 2.3.2 (früher N07), 2.2.3 (früher N12)
+  - **Anforderung H03:** Warm arbeiten _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Am Arbeitsplatz ist es tagsüber warm genug für Sitzarbeit.
+    - Prüfverfahren: Temperatur am Platz messen, morgens und nachmittags.
+    - Grenzwert: mindestens 20 °C ( ASR A3.5 Raumtemperatur )
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost
+    - Abnahme: Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)
+    - Teilergebnis: 2.3.2 (früher N07)
+  - **Anforderung H04:** Trinken _[nicht geprüft]_
+    - von Anfang an · heute in M02 als M02-04 (laut Index)
+    - Anforderung: Trinkwasser ist lebensmitteltauglich und auch bei Frost verfügbar. Ob die Quelle im Winter genug liefert, ist offen und wird im Februar 2027 gemessen; ein Vorrat überbrückt eine gesperrte Auffahrt.
+    - Prüfverfahren: Quellschüttung im Februar messen (Eimer und Stoppuhr); zwei Laborproben, im Winter und bei Schneeschmelze; Leitung bei Frost testen.
+    - Grenzwert: Notvorrat 2 l je Person und Tag für 10 Tage, bei 3 Personen 60 l ( BBK: Notvorrat (Checkliste) )
+    - Planwert: Trinkwasser-Notvorrat 60 l für 3 Personen (2 l je Person und Tag, 10 Tage, [bbk]); Gesamtbedarf aus H05
+    - Nachweis: vor Nutzung: Schüttung Februar 2027; Labor vor dem Einzug
+    - Abnahme: Nazar; Labor
+    - Teilergebnis: 2.3.2 (früher N08)
+  - **Anforderung H05:** Waschen und duschen _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Warmes Wasser zum Waschen und Duschen, im Winter ohne Weg nach draußen. Daraus folgt die Größe von Tank und Boiler und die Wassermenge für 10 Tage Sperre.
+    - Prüfverfahren: Duschtest im Wintertest.
+    - Grenzwert: Rechnung aus den Annahmen: Ein 1.000-l-Tank reicht in der Anfangsstufe knapp 7 Tage, in der Ausbaustufe knapp 3 Tage. 1.000 l wiegen 1 t: Bodenlast prüft eine Fachperson Statik.
+    - Planwert: Stufe Anfang: 50 l je Person und Tag, für 3 Personen 150 l am Tag und 1.500 l für 10 Tage Sperre (Annahme). Stufe Ausbau: 120 l je Person und Tag, für 3 Personen 360 l am Tag und 3.600 l für 10 Tage (Romans Vergleich mit dem Durchschnitt in Deutschland, E26). Tank, Boiler und Leitung werden für die Ausbaustufe vorbereitet, gebaut wird zuerst die Anfangsstufe. Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22).
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost
+    - Abnahme: Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)
+    - Teilergebnis: 2.3.2 (früher N08), 2.3.2 (früher N09)
+  - **Anforderung H06:** Toilette _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Toilette ohne Geruch im Wohnbereich, im Winter im Warmen erreichbar, frostsicher.
+    - Prüfverfahren: Nutzung im Wintertest; Geruch und Erreichbarkeit beurteilen.
+    - Grenzwert: ja oder nein
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost
+    - Abnahme: Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)
+    - Teilergebnis: 2.3.2 (früher N09)
+  - **Anforderung H07:** Essen _[nicht geprüft]_
+    - von Anfang an · heute in M02 als M02-08 (laut Index)
+    - Anforderung: Kochen für drei Personen, Kühlung, Vorrat für eine gesperrte Auffahrt.
+    - Prüfverfahren: Eine Woche Selbstversorgung im Wintertest.
+    - Grenzwert: Vorrat für 10 Tage ( BBK: Notvorrat (Checkliste) ); gilt auch für N22
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr
+    - Abnahme: Roman (ist von Anfang an oben)
+    - Teilergebnis: 2.4.4 (früher N10), 2.4.6 (früher N27)
+  - **Anforderung H08:** Gute Luft _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Frische Luft in Arbeits- und Schlafbereich, auch bei geschlossenen Fenstern im Winter. Lüftung mit Frostschutz; der Ofen bekommt Verbrennungsluft von außen, damit er keinen Rauch in den Raum zieht.
+    - Prüfverfahren: CO₂-Messgerät im Raum.
+    - Grenzwert: unter 1.000 ppm ohne weitere Maßnahme, 1.000–2.000 ppm lüften ( DGUV 215-510: CO₂ und Lüften )
+    - Planwert: Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22).
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost
+    - Abnahme: Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)
+    - Teilergebnis: 2.2.3 (früher N12)
+  - **Anforderung H09:** Wege bei Schnee und Dunkelheit _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Wege zu Holzlager, Toilette, Auffahrt und Generator sind bei Schnee und im Dunkeln sicher begehbar: Licht, Geländer, Räumen.
+    - Prüfverfahren: Begehung im Dunkeln und bei Schnee.
+    - Grenzwert: ja oder nein
+    - Nachweis: vor Nutzung: Rechnung oder Abnahme vor dem Einzug; im ersten Winter: Erster Schnee 2027
+    - Abnahme: Roman (ist von Anfang an oben)
+    - Teilergebnis: 2.2.3 (früher N12), 2.2.4 (früher N13)
+- **Ast:** Sicherheit
+  - **Anforderung S01:** Sicher heizen _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Rauch- und CO-Melder, Abstand zum Ofen, Feuerlöscher, trockenes Holzlager. Ofen und Schornstein nach ukrainischer Zulassung; Generator nur draußen.
+    - Prüfverfahren: Abnahme durch Fachperson; Melder testen.
+    - Grenzwert: nach ukrainischer Vorschrift
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost
+    - Abnahme: Fachperson Brandschutz
+    - Teilergebnis: 2.3.2 (früher N07), 2.4.7 (früher N22)
+  - **Anforderung S02:** Hilfe kommt _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Notfallplan für gesperrte Auffahrt: Erste Hilfe, Kontakt nach unten, wer holt jemanden ab und womit, wer räumt Schnee und zu welchem Preis.
+    - Prüfverfahren: Notfall einmal durchspielen.
+    - Grenzwert: Dauer bis Hilfe da ist festlegen
+    - Planwert: Bestätigt von Roman (03.11.2026): Im Notfall ist man in unter 2 Stunden unten.
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr
+    - Abnahme: Paul mit Nazar
+    - Teilergebnis: 2.2.4 (früher N13), 2.4.7 (früher N22)
+  - **Anforderung S03:** Bei Stromausfall weiter _[nicht geprüft]_
+    - von Anfang an · heute in M02 als M02-30 (laut Index)
+    - Anforderung: Licht, Laptops, Bildschirme, Starlink, Router, Pumpe und Kühlschrank laufen bei Netzausfall eine festgelegte Zeit weiter. Frostschutz der Wasserleitung hängt nicht am Strom (Tiefe statt Heizkabel). Batterie steht im Warmen; Generator draußen mit Kraftstoff für 3 Tage (Annahme, passend zur Sperre im Störungstag).
+    - Prüfverfahren: Netz im Test absichtlich abschalten und Zeit messen; Lastliste mit Watt und Stunden.
+    - Grenzwert: Die 4,8-kWh-Batterie aus N06 reicht nach dieser Rechnung nicht sicher: ohne Pumpe 3,8–4,56 kWh, dazu Verluste und Pumpe. Batteriegröße rechnet die Fachperson.
+    - Planwert: Annahme: Muss-Lasten etwa 380 W ohne Pumpe (3 Laptops à 50 W, 3 Bildschirme à 25 W, Starlink 75 W, Router 10 W, LED-Licht 30 W, Kühlschrank im Mittel 40 W). Über 10–12 Stunden sind das 3,8–4,56 kWh vor Verlusten. Die Pumpe fehlt in dieser Summe; ihre Leistung und Laufzeit kommen nach der Pumpenwahl dazu. Eine ausreichende Batteriegröße ist damit noch nicht nachgewiesen. Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22).
+    - Nachweis: vor Nutzung: Lastliste mit Pumpe und Batterierechnung; im ersten Winter: Netzausfall-Test
+    - Abnahme: Nazar (über Paul, Preis unbekannt, E27)
+    - Teilergebnis: 2.3.2 (früher N06)
+  - **Anforderung S04:** Privatheit _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Jede Person hat einen eigenen, abschließbaren Bereich.
+    - Prüfverfahren: Begehung.
+    - Grenzwert: ja oder nein
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr
+    - Abnahme: Roman (ist von Anfang an oben)
+    - Teilergebnis: 2.2.3 (früher N12)
+  - **Anforderung S05:** Arbeit bleibt erhalten _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Projektdaten sind gesichert; Zugang zu OneDrive und x-portal.eu geschützt.
+    - Prüfverfahren: Wiederherstellung einer Datei testen.
+    - Grenzwert: ja oder nein
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr
+    - Abnahme: Roman
+    - Teilergebnis: 2.5.7 (früher N14)
+  - **Anforderung S06:** Einkommen _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Wer oben ist, kann über x-portal.eu bezahlte Arbeit bekommen.
+    - Prüfverfahren: Erstes bezahltes Projekt einer Person, die oben wohnt; bis 31.12.2026 erstes bezahltes Projekt über x-portal.eu überhaupt (Ereignis Umsatz).
+    - Grenzwert: Gibt es bis 31.12.2026 kein bezahltes Projekt, gilt nur die Stufe „1 Person“
+    - Planwert: Monatsumsatz über x-portal.eu mindestens Pauls 8.000 € netto (brutto rechnet ein Steuerberater) plus laufende Kosten oben aus N02 (bekannt: Starlink laut Suchergebnissen um 2.950 UAH im Monat, auf starlink.com für die Adresse prüfen, siehe N11, rund 59 € bei 50 UAH/EUR (E20)); Paul und Roman bis 21.11.2026 (Terminvorschlag)
+    - Nachweis: vor Nutzung: 31.12.2026 und monatlich
+    - Abnahme: Roman
+    - Teilergebnis: 2.6.1 (früher N26)
+  - **Anforderung S07:** Haftung und Versicherung _[nicht geprüft]_
+    - von Anfang an · heute in M02 als M02-43 (laut Index)
+    - Anforderung: Klar ist, wer haftet, wenn sich jemand oben verletzt, eine CO-Vergiftung oder ein Brand passiert, und welche Versicherung das deckt.
+    - Prüfverfahren: Prüfauftrag an eine Fachperson Recht und Versicherung in der Ukraine.
+    - Grenzwert: Ergebnis mit Kosten der Versicherung
+    - Nachweis: vor Nutzung: bevor der erste Freelancer oder Käufer oben wohnt
+    - Abnahme: Paul
+    - Teilergebnis: 2.2.6 (früher N05), 2.4.7 (früher N22)
+- **Ast:** Zugehörigkeit
+  - **Anforderung Z01:** Gemeinsam essen und reden _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Ein gemeinsamer Bereich zum Essen und Reden. Liegt er im Gemeinschaftscontainer mit Arbeitsplätzen, Küche und Sanitär (E40), muss der Grundriss zeigen: Küche und Calls stören die konzentrierte Arbeit nicht (D02).
+    - Prüfverfahren: Grundriss des Gemeinschaftscontainers prüfen; Schallpegel am Arbeitsplatz messen, während gekocht und telefoniert wird.
+    - Grenzwert: ja oder nein
+    - Nachweis: vor Nutzung: Grundriss vor der Bestellung; Messung vor dem Einzug
+    - Abnahme: Roman (ist von Anfang an oben)
+    - Teilergebnis: 2.4.4 (früher N10), 2.2.3 (früher N12)
+  - **Anforderung Z02:** Kontakt zu Familie und Freunden _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Private Videoanrufe abends ohne Störung der anderen.
+    - Prüfverfahren: Abendtest mit gleichzeitiger Nutzung.
+    - Grenzwert: mit D01
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr
+    - Abnahme: Roman
+    - Teilergebnis: 2.3.2 (früher N11)
+  - **Anforderung Z03:** Teil des Ortes sein _[später]_
+    - später
+    - Anforderung: Kontakt zu Nachbarn und Anbietern vor Ort.
+    - Prüfverfahren: Liste N27 vor Ort bestätigt.
+    - Grenzwert: —
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr
+    - Abnahme: Paul mit Nazar
+    - Teilergebnis: 2.4.6 (früher N27), 2.4.6 (früher N28)
+- **Ast:** Anerkennung
+  - **Anforderung A01:** Arbeit wird gesehen und bezahlt _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Profil und Projekte auf x-portal.eu; verlässliche Verbindung bei Kundenterminen.
+    - Prüfverfahren: Kundentermin ohne Abbruch (D01).
+    - Grenzwert: —
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr
+    - Abnahme: Roman
+    - Teilergebnis: 2.6.1 (früher N26), 2.3.2 (früher N11)
+  - **Anforderung A02:** Klare Absprachen _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Wer oben was übernimmt: Holz, Wasser, Putzen, Einkauf, Notfall.
+    - Prüfverfahren: Absprache schriftlich; nach vier Wochen überprüfen.
+    - Grenzwert: —
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr
+    - Abnahme: Roman
+    - Teilergebnis: 2.4.5 (früher N29)
+  - **Anforderung A03:** Kundentermin trotz Ausfall _[nicht geprüft]_
+    - von Anfang an · heute in M02 als M02-39 (laut Index)
+    - Anforderung: Fällt oben Strom oder Internet aus und ist die Auffahrt passierbar: Ausweicharbeitsplatz unten mit bekannter Fahrzeit. Sind Verbindung und Auffahrt gleichzeitig weg, läuft die Arbeit oben weiter (E46, E54): Starlink, Batterie und Generator mit Vorrat reichen, bis Auffahrt oder Netz zurück sind.
+    - Prüfverfahren: Beide Fälle einmal durchspielen. Wie lange die Auffahrt im Winter gesperrt sein kann und wie groß Batterie und Vorrat dafür sein müssen, legen Nazar und die Fachperson fest (E22).
+    - Grenzwert: Vorlaufzeit festlegen
+    - Nachweis: vor Nutzung: Ablauf schriftlich vor dem ersten Kundencall von oben
+    - Abnahme: Roman
+    - Teilergebnis: 2.4.6 (früher N27), 2.6.1 (früher N26)
+- **Ast:** Selbstverwirklichung
+  - **Anforderung V01:** Natur und Aussicht _[später]_
+    - später
+    - Anforderung: Fenster mit Blick in die Landschaft am Arbeits- oder Gemeinschaftsplatz.
+    - Prüfverfahren: Begehung.
+    - Grenzwert: —
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr
+    - Abnahme: Paul
+    - Teilergebnis: 2.2.3 (früher N12)
+  - **Anforderung V02:** Eigene Vorhaben _[später]_
+    - später
+    - Anforderung: Raum und Zeit für eigene Projekte und Versuche am Ort.
+    - Prüfverfahren: Nach dem ersten Winter fragen.
+    - Grenzwert: —
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr
+    - Abnahme: Paul
+    - Teilergebnis: 3.3 (früher N23)
+- **Ast:** Beispiel: konzentriert digital arbeiten
+  - **Anforderung D01:** Gleichzeitige Nutzung _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Zwei Personen können gleichzeitig in Videocalls sein, während die dritte arbeitet, auch bei Schnee. Hauptanschluss ist ein eigener Internetanschluss, Reserve ist Starlink; Mobilfunk gibt es oben nicht (E49). Die Reserve muss den Upload ebenfalls schaffen.
+    - Prüfverfahren: 30 Minuten zwei Calls gleichzeitig, Upload je Minute und Abbrüche messen, einmal über den Hauptanschluss und einmal nur über Starlink.
+    - Grenzwert: Zoom nennt für 1080p 3,8 Mbit/s hoch und 3,0 runter je Teilnehmer; für zwei Calls also mindestens etwa 8 Mbit/s Upload plus Reserve ( Zoom: Bandbreite berechnen )
+    - Planwert: Annahme: mindestens 8 Mbit/s Upload in 95 % der Minuten, kein Abbruch; Paul und Roman bis 21.11.2026 (Terminvorschlag)
+    - Nachweis: vor Nutzung: Messung über beide Anschlüsse; im ersten Winter: Starlink bei Schnee
+    - Abnahme: Roman (ist von Anfang an oben)
+    - Teilergebnis: 2.3.2 (früher N11)
+  - **Anforderung D02:** Akustik _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Calls finden nicht am Platz der Person statt, die konzentriert arbeitet. Konzentriertes Arbeiten geht im eigenen Wohncontainer (E40); der Gemeinschaftsplatz braucht dafür eine Trennung oder eine Telefonecke.
+    - Prüfverfahren: Schallpegel am Platz messen, während nebenan telefoniert wird.
+    - Grenzwert: höchstens 55 dB(A) für Tätigkeiten mit hoher Konzentration ( ASR A3.7 Lärm, Abschnitt 5 )
+    - Planwert: Planwert ist eine Annahme; der Wert wird mit einer Fachperson festgelegt (E22).
+    - Nachweis: vor Nutzung: Grundriss; Messung vor dem Einzug
+    - Abnahme: Roman (ist von Anfang an oben)
+    - Teilergebnis: 2.2.3 (früher N12)
+  - **Anforderung D03:** Licht _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Tageslicht am Platz, blendfrei zum Bildschirm, im Winter ausreichend Kunstlicht.
+    - Prüfverfahren: Luxmeter auf der Arbeitsfläche, mittags und um 17 Uhr im Dezember.
+    - Grenzwert: mindestens 500 lx auf der Arbeitsfläche ( ASR A3.4 Beleuchtung )
+    - Nachweis: vor Nutzung: Rechnung oder Abnahme vor dem Einzug; im ersten Winter: Mittags und 17 Uhr im Dezember 2027
+    - Abnahme: Roman (ist von Anfang an oben)
+    - Teilergebnis: 2.2.3 (früher N12), 2.3.2 (früher N06)
+  - **Anforderung D04:** Strom am Platz _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Laptop, Bildschirm und Internet laufen auch bei kurzem Netzausfall.
+    - Prüfverfahren: Netz trennen während eines Calls.
+    - Grenzwert: wie S03
+    - Planwert: wie S03
+    - Nachweis: vor Nutzung: Lastliste mit Pumpe und Batterierechnung; im ersten Winter: Netzausfall-Test
+    - Abnahme: Nazar (über Paul, Preis unbekannt, E27)
+    - Teilergebnis: 2.3.2 (früher N06)
+  - **Anforderung D05:** Wärme und Luft am Platz _[nicht geprüft]_
+    - von Anfang an
+    - Anforderung: Siehe H03 und H08.
+    - Prüfverfahren: Mit H03 und H08 messen.
+    - Grenzwert: siehe H03, H08
+    - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost
+    - Abnahme: Nazar oder eine von ihm genannte Fachperson, schriftlich (E53); Roman prüft im Alltag (E24)
+    - Teilergebnis: 2.3.2 (früher N07), 2.2.3 (früher N12)
+- **Ast:** In M02 dazugekommen, im Index nur als Nummer
+  - Der Text dieser Zeilen steht in plan/daten/m02.json. Hier steht, was der Index über sie sagt.
+  - **Anforderung:** Jour fixe am Morgen im Kommunalgebäude _[nicht geprüft]_
+    - M02-44 · aus E81 (Vorschlag KI, E80)
+  - **Anforderung:** Laufen, Wandern und Yoga _[nicht geprüft]_
+    - M02-45 · aus E81
+  - **Anforderung:** Sauna und Wellness _[nicht geprüft]_
+    - M02-46 · aus E81; wo sie hinkommt, fragt D35
+  - **Anforderung:** Feuerstelle: Brandschutz und ein Platz mit wenig Wind _[nicht geprüft]_
+    - M02-21, M02-22 · offen über D34
+  - **Anforderung:** Gastronomie: Gäste, Personal, Hygiene, eigene Nachweise _[später]_
+    - M02-25 bis M02-27 · offen über D34
+  - **Anforderung:** Gemeinsamer Weg, private Abzweige _[nicht geprüft]_
+    - M02-14 · Zielbild Bereich 7, 2.2.4
+  - **Anforderung:** Gemüsegarten am Kommunalgebäude, freiwillig mitarbeiten _[nicht geprüft]_
+    - M02-20, M02-23 · E74, Alltag oben
+  - **Anforderung:** Technik: Strom, Solar, Wasser _[nicht geprüft]_
+    - M02-28 · Zielbild Bereich 6, 2.3.1, 2.3.7
+- **Ast:** Szenariotests: drei Tage, gegen die jede Variante geprüft wird
+  - Aus der Matrix vom 03.11.2026. Jeder Schritt nennt die Anforderungen, die er prüft. Die Prüfsituationen T00 bis T06 im Nutzungstest (2.4.9) setzen sie um; Ausfalltests nur mit einem von einer Fachperson freigegebenen Ablauf (E22).
+  - **Ereignis:** Sommer-Arbeitstag _[nicht geprüft]_
+    - Juli, trocken, 15–16 Stunden Tageslicht
+    - **Ausgang (07:00):** Aufstehen, Toilette, Waschen, Kaffee _[nicht geprüft]_
+      - prüft H06, H05, H07
+    - **Ausgang (08:00):** B und C arbeiten konzentriert; A holt die Lieferung unten an der Auffahrt _[nicht geprüft]_
+      - prüft D01, D05, S02
+    - **Ausgang (14:00):** B und C gleichzeitig in Videocalls _[nicht geprüft]_
+      - prüft D01, D02
+    - **Ausgang (18:00):** A macht Holz für den Winter; Abendessen; Kontakt mit Familie _[nicht geprüft]_
+      - prüft Z02, H04
+    - **Ausgang (22:00):** Schlafen bei offenem Fenster ohne Insekten und Lärm _[nicht geprüft]_
+      - prüft H01, H08
+  - **Ereignis:** Winter-Arbeitstag _[nicht geprüft]_
+    - Dezember, −15 °C, Schnee, etwa 8–9 Stunden Tageslicht
+    - **Ausgang (06:30):** Der Ofen ist über Nacht ausgegangen: Wie warm ist es beim Aufstehen? _[nicht geprüft]_
+      - prüft H02
+    - **Ausgang (07:00):** Leitung und Tank sind nicht eingefroren _[nicht geprüft]_
+      - prüft H06, H04
+    - **Ausgang (08:00):** Arbeit bei Kunstlicht; Fenster zu, die Luft wird schlecht _[nicht geprüft]_
+      - prüft D03, H08
+    - **Ausgang (11:00):** Schnee liegt auf der Starlink-Antenne _[nicht geprüft]_
+      - prüft D01
+    - **Ausgang (15:00):** Es wird dunkel; Solar liefert kaum Strom _[nicht geprüft]_
+      - prüft D04, S03
+    - **Ausgang (22:00):** Ofen brennt herunter; Rauch- und CO-Melder aktiv _[nicht geprüft]_
+      - prüft S01, H02
+  - **Ereignis:** Störungstag _[nicht geprüft]_
+    - Februar: Strom 6 Stunden weg, Auffahrt 3 Tage zugeschneit
+    - **Ausgang (09:00):** Netzstrom fällt aus: Was läuft weiter, und wie lange? _[nicht geprüft]_
+      - prüft S03, D04
+    - **Ausgang (09:05):** Laufende Kundencalls über die Reserve halten oder absagen _[nicht geprüft]_
+      - prüft D01, A01
+    - **Ausgang (12:00):** Pumpe steht: Wasser aus Tank und Notvorrat _[nicht geprüft]_
+      - prüft H04
+    - **Ausgang (ganztägig):** Keine Lieferung, kein Arzt erreichbar: Vorräte, Erste Hilfe, wer entscheidet _[nicht geprüft]_
+      - prüft S02, H07
+    - **Ausgang (Tag 3):** Jemand verletzt sich: Wie kommt Hilfe hoch? _[nicht geprüft]_
+      - prüft S02
+  - **Schritt:** Nutzungstest „konzentriert digital arbeiten“ _[nicht geprüft]_
+    - Zwei Personen je eine Stunde gleichzeitig im Videocall, die dritte arbeitet konzentriert. Gemessen werden Upload und Abbrüche (D01), Schall am ruhigen Platz (D02), Licht (D03), Überbrückung bei Netzausfall (D04), Temperatur und CO₂ (D05). Einmal als Rechnung in der Planung, einmal als Messung im ersten Winter.
+
+## 3 · Versorgung je Ressource: Grundbetrieb, Störung, Ausbau (M06)
+
+Je Ressource drei Zustände: normaler Betrieb, Störung und Ausbau auf das Team plus die ersten 5 Käufer (E79). Daraus folgt, was an Technik geplant werden muss.
+
+- **Schritt:** Energie _[offen]_
+  - Dient: Z1
+  - **Ausgang (Grundbetrieb):** Netz mit Batterie oder Generator, dazu Solar (E35). _[Regel steht]_
+    - Muss-Lasten etwa 380 W ohne Pumpe, über 10–12 Stunden 3,8–4,56 kWh vor Verlusten (S03, Annahme).
+  - **Ausgang (Störung):** Netz 6 Stunden weg: Licht, Laptops, Starlink, Router, Pumpe und Kühlschrank laufen weiter. _[nicht geprüft]_
+    - Batterie im Warmen, Generator draußen mit Kraftstoff für 3 Tage (S03, Annahme). Die Batteriegröße ist nicht nachgewiesen.
+  - **Ausgang (Ausbau):** Lasten für das Team plus die ersten 5 Käufer, dazu das Laden der E-Bikes. _[wartet]_
+    - Neu rechnen nach der Geologie (O29); E-Bikes in 2.3.6 (E73).
+  - **Ausgang (Autarkie):** Stufe 0 Netz plus Reserve, Stufe 1 zum Beispiel Solar plus Speicher. _[offen]_
+    - Vorschlag aus der Methodenbewertung (M06). Die nächste Stufe kommt erst nach bestandenem Test.
+  - **Ausgang (fehlt):** Netzkapazität und Anschlussrecht. _[offen]_
+    - Anschluss beim Nachbarn möglich, laut Eigentümer (A4); Nazar klärt (A3).
+- **Schritt:** Wärme _[offen]_
+  - Dient: Z1
+  - **Ausgang (Grundbetrieb):** Lösung offen (2.3.2). _[offen]_
+    - Heizlast je Modul bei −20 °C rechnen (H02). Annahme: mindestens 12 °C im Schlafbereich und 16 °C im Arbeitsbereich nach 8 Stunden ohne Feuer; am Arbeitsplatz mindestens 20 °C (H03).
+  - **Ausgang (Störung):** Der Ofen ist über Nacht aus. _[nicht geprüft]_
+    - Winter-Arbeitstag 06:30; Rauch- und CO-Melder, Generator nur draußen (S01).
+  - **Ausgang (Ausbau):** Je weiteres Haus eine eigene Heizlast. _[wartet]_
+    - Person A soll nachts nicht mehrere Öfen versorgen (Matrix, Folgen für den Plan).
+  - **Ausgang (Autarkie):** Holz aus der Umgebung. _[offen]_
+    - Was es vor Ort gibt, mit Preis und Winterzugang (E15, 2.4.6).
+- **Schritt:** Wasser _[offen]_
+  - Dient: Z1
+  - **Ausgang (Grundbetrieb):** Quellen auf oder bei dem Gelände, 50 l je Person und Tag. _[Regel steht]_
+    - Für 3 Personen 150 l am Tag (E26, H05).
+  - **Ausgang (Störung):** Pumpe steht oder Auffahrt 10 Tage gesperrt. _[nicht geprüft]_
+    - Trinkwasser-Notvorrat 60 l für 3 Personen (H04); für 10 Tage Sperre 1.500 l (H05, Annahme).
+  - **Ausgang (Ausbau):** 120 l je Person und Tag. _[wartet]_
+    - Für 3 Personen 360 l am Tag und 3.600 l für 10 Tage (H05, nach E26). Tank, Boiler und Leitung werden für den Ausbau vorbereitet, gebaut wird zuerst die Anfangsstufe (H05).
+  - **Ausgang (fehlt):** Schüttung im Februar, Laborwerte, Abwasser. _[offen]_
+    - O27; genehmigungsfähiges Abwasserkonzept (O28).
+- **Schritt:** Internet _[offen]_
+  - Dient: Z1
+  - **Ausgang (Grundbetrieb):** Eigener Anschluss (E49). _[Regel steht]_
+    - Zwei Videocalls gleichzeitig: mindestens etwa 8 Mbit/s Upload in 95 % der Minuten (D01, Annahme).
+  - **Ausgang (Störung):** Starlink als Reserve, auch bei Schnee; Mobilfunk gibt es oben nicht (E49). _[nicht geprüft]_
+    - Ist zusätzlich die Auffahrt frei: Ausweicharbeitsplatz unten (A03, M02-39).
+  - **Ausgang (Ausbau):** Bandbreite für das Team plus die ersten 5 Käufer. _[wartet]_
+    - Neu rechnen (O29).
+  - **Ausgang (fehlt):** Anbieter oben und gemessene Bandbreite. _[offen]_
+    - A4.
+- **Schritt:** Essen _[offen]_
+  - Dient: Z1
+  - **Ausgang (Grundbetrieb):** Kochen für drei Personen mit Kühlung, gemeinsam oder privat. _[offen]_
+    - H07, E81; Küche im Kommunalgebäude (E74, 2.4.4); Kühlschrank im Mittel 40 W in der Lastliste (S03).
+  - **Ausgang (Herkunft):** Gemüsegarten, Höfe in der Umgebung, Lieferung über die Zufahrt. _[offen]_
+    - Garten am Kommunalgebäude (E74); Milch und Käse vor Ort prüfen (E15, 2.4.6); Person A holt Lieferungen unten an der Auffahrt (Sommer-Arbeitstag).
+  - **Ausgang (Störung):** Auffahrt gesperrt: keine Lieferung. _[nicht geprüft]_
+    - Vorrat für 10 Tage nach BBK (H07, M02-08); Notfallplan 2.4.7.
+  - **Ausgang (Ausbau):** Essen für das Team plus die ersten 5 Käufer. _[wartet]_
+    - Wer zahlt, fragt D36.
+  - **Ausgang (fehlt):** Was der Garten wann liefert; Anbieter mit Preis, Entfernung und Winterzugang; Lieferweg im Winter. _[offen]_
+    - 2.4.6, 2.2.4, 2.4.7.
+- **Schritt:** Daten und digitale Arbeit _[offen]_
+  - Dient: Z1
+  - **Ausgang (Grundbetrieb):** Projektdaten gesichert, Zugang zu OneDrive und x-portal.eu geschützt. _[offen]_
+    - S05; die KI arbeitet DSGVO-konform auf OneDrive (E12, 2.5.7).
+  - **Ausgang (Störung):** Eine Datei wiederherstellen; kein Serverausfall. _[nicht geprüft]_
+    - S05, E46.
+  - **Ausgang (Ausbau):** Server oben für personenbezogene Daten mit Deutschland verbunden. _[wartet]_
+    - Ob das zulässig ist, prüfen die Anwälte (E85, A5).
+- **Ast:** Ausbaupfad: von drei Personen bis zum nächsten Node
+  - Jede Stufe beginnt erst, wenn die vorige ihren Test bestanden hat (M06).
+  - **Schritt:** Drei Personen: das Team oben _[wartet]_
+    - 2–3 Leute wohnen und arbeiten ganzjährig oben (E01, E23); Grundbetrieb aller Ressourcen.
+    - Dient: Z1
+  - **Ereignis:** Test: Nutzungstest und erster Winter _[nicht geprüft]_
+    - T00 bis T06 (2.4.9) und die Messung bei Frost (2.3.5).
+  - **Schritt:** Team plus die ersten 5 Käufer _[wartet]_
+    - Strom, Wasser und Wärme sind im ersten Winter schon dafür ausgelegt, sobald die Geologie so viele Häuser zulässt (E79).
+    - Dient: Z1, Z2
+  - **Schritt:** Das Grundstück voll _[wartet]_
+    - So viele Plots, wie die Geologie erlaubt; bei großem Andrang auf der Warteliste mehr (E51).
+    - Dient: Z2
+  - **Ende:** Der nächste Node mit demselben Schema
+    - Schema, Planung, Nutzbarkeit und Sinn sind wiederholbar; Geologie und Gelände sind an jedem Ort neu (E11, 2.6.6).
+    - Dient: Z4
+  - **Ausgang (Rückfall):** Nur eine Person oben. _[offen]_
+    - Vorschlag aus der Matrix (S06, 03.11.2026), nicht entschieden: Gibt es bis 31.12.2026 kein bezahltes Projekt, gilt nur die Stufe „1 Person“. E77 nennt als Termin für den ersten Auftrag Januar 2027.
+
+## 4 · Make-or-Buy: Varianten mit Kosten, Sensitivität und Test (M05)
+
+Verglichen wird die betriebsfähige Drei-Personen-Lösung mit Ausbaupfad. Zuerst die Mindestbedingungen aus M02, dann Varianten mit gleichem Leistungsumfang über denselben Zeitraum mit Euro-Vollkosten und Betriebskosten, dann Nutzwert und kritische Annahmen. Sensitivität: ab welcher Änderung bei Transport, Gründung, Energiepreis oder Termin eine andere Variante besser ist. Preise aus dem Internet, bei 50 UAH/EUR (E20), ohne Montage, Transport und Anschluss, sofern nicht anders genannt. Keine Variante ist bisher vollständig gerechnet.
+
+- **Entscheidung:** Betrachtungszeitraum für alle Vergleiche _[offen]_
+  - Vollkosten sind nur vergleichbar, wenn jede Variante über denselben Zeitraum gerechnet wird (M05). Festgelegt ist er nicht.
+  - Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt).
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+  - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+  - Möglichkeit A: Bis zum Ende von Stufe 1, Winter 2027/28
+  - Möglichkeit B: Über die Nutzungsdauer der Häuser — Die Häuser bleiben stehen (E59).
+- **Entscheidung:** Haus für die Drei-Personen-Lösung (2.2.3) _[offen]_
+  - Bauweise entschieden: Häuser in Teilen, oben montiert (E75). Mindestbedingungen aus M02: H01, H02, H06, H08, S04, D02, D03. Kippt bei: Transport (bis 2,6 m Breite ohne Genehmigung, über 3,5 m mit Begleitfahrzeug, A3), Gründung (Geologie Fall A oder B), Termin (Lieferung bis März) und Energiepreis (Heizlast). Test: Winter-Arbeitstag und Störungstag.
+  - Dient: Z1, Z2
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+  - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+  - Möglichkeit A: Bausatz in Teilen [entschieden]
+    - Kosten: fehlt; Anfrage an Servus, Supersip, dann Unitbud (O31)
+    - Transport: kleines Fahrzeug; Teilegewicht nennt kein Anbieter (A3)
+    - Eigenleistung: Montage oben (2.4.8)
+    - Termin: Unitbud etwa zwei Monate bis fertig (A3)
+  - Möglichkeit B: Fertiger Wohncontainer, zum Beispiel BlokModul BK1
+    - Kosten: ab 444.000 UAH, rund 8.900 € je Container ohne Heizung (E39, A2); Listenpreis nicht bestätigt (O31)
+    - Transport: verlangt 3,6 m Wegbreite und 4,5 m Durchfahrtshöhe; die letzten 200 m haben über 15 % Steigung (A3)
+    - Stand: durch E75 präzisiert: in Teilen statt im Ganzen
+  - Möglichkeit C: 40-Fuß-Containergerippe
+    - Kosten: fehlt
+    - Stand: als Option untersucht (2.2.3)
+  - Möglichkeit D: Feste Häuser
+    - Stand: kommt in Frage, wenn der Grund nur mit aufwendigem Fundament trägt (Fall B, O01)
+  - Möglichkeit E: Das erste Haus selbst bauen
+    - Kosten: Romans Schätzung: höchstens 10.000–15.000 € ohne Wasser und Strom
+    - Quelle: Kommentar zu D11 auf der Entscheidungsseite, 03.11.2026
+    - Stand: Idee, nicht entschieden
+- **Entscheidung:** Strom: Größen und Kosten (2.3.2) _[offen]_
+  - Entschieden ist das Prinzip: Netz mit Batterie oder Generator, dazu Solar (E35). Mindestbedingungen: S03, D04. Kippt bei: Netzkapazität, Energiepreis, Lasten im Ausbau (O29). Test: Störungstag.
+  - Dient: Z1
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+  - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+  - Möglichkeit A: Netzanschluss
+    - Kosten: 2.927 UAH je kW, für 10–15 kW 29.270–43.905 UAH, rund 590–880 €, ohne Leitung zum Haus (A4)
+    - Kippt bei: Netzkapazität und Anschlussrecht offen
+  - Möglichkeit B: Solar-Inselanlage 4,8 kWp mit 4,8-kWh-Batterie
+    - Kosten: 189.900 UAH, rund 3.800 € ohne Montage (A4)
+    - Kippt bei: reicht im Winter nicht zum Heizen; die Batterie reicht nach S03 nicht sicher
+  - Möglichkeit C: Generator als Reserve
+    - Kosten: fehlt
+    - Betrieb: Kraftstoff für 3 Tage, steht draußen (S03, Annahme)
+- **Entscheidung:** Wärme: Ofen je Haus oder zentral (2.3.2) _[offen]_
+  - Mindestbedingungen: H02, H03, S01, H08. Annahme: grob 1,5–3 kW Heizlast je gut gedämmtem Modul bei −20 °C (H02). Test: Winter-Arbeitstag.
+  - Dient: Z1
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+  - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+  - Möglichkeit A: Holzofen mit Kochplatte je Haus
+    - Kosten: 6.000–13.000 UAH, rund 120–260 € je Ofen, ohne Schornstein und Montage (A4)
+    - Kippt bei: Öfen haben meist 6–10 kW; zu groß gedrosselt schwelen sie und bilden CO (H02)
+    - Eigenleistung: Holz machen und nachlegen, Person A
+  - Möglichkeit B: Zentrale Wärmequelle
+    - Kosten: fehlt
+    - Grund: Person A soll nachts nicht mehrere Öfen versorgen
+  - Möglichkeit C: Ofen plus zweite Wärmequelle
+    - Stand: ob nötig, entscheidet der Morgenwert aus H02
+    - Kosten: fehlt
+- **Entscheidung:** Wasser: wie groß wird der Speicher (2.3.2) _[offen]_
+  - Mindestbedingungen: H04, H05. Kippt bei: Quellschüttung im Februar und Laborwerten (O27). Ausbaupfad: zuerst die Anfangsstufe, Tank, Boiler und Leitung für den Ausbau vorbereitet (H05).
+  - Dient: Z1
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+  - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+  - Möglichkeit A: Tank 1.000 l
+    - Kosten: 7.000–13.000 UAH, rund 140–260 €, ohne Quellfassung, Leitung und Filter (A4)
+    - Reicht: knapp 7 Tage in der Anfangsstufe, knapp 3 Tage im Ausbau (H05)
+    - Kippt bei: 1.000 l wiegen 1 t; die Bodenlast prüft eine Fachperson
+  - Möglichkeit B: Speicher für 10 Tage Sperre
+    - Menge: 1.500 l in der Anfangsstufe, 3.600 l im Ausbau (H05, Annahme)
+    - Kosten: fehlt
+- **Entscheidung:** Toilette: Übergang oder dauerhaft (2.3.2) _[offen]_
+  - Mindestbedingung: H06.
+  - Dient: Z1
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+  - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+  - Möglichkeit A: Campingtoilette als Übergang
+    - Kosten: 1.600–3.700 UAH, rund 30–75 € (A4)
+  - Möglichkeit B: Trenntoilette
+    - Kosten: in der Ukraine noch kein Preis (A4)
+  - Möglichkeit C: Toilette mit Abwasser
+    - Stand: ein genehmigungsfähiges Abwasserkonzept fehlt (O28)
+- **Entscheidung:** Internet: Anschluss und Reserve _[entschieden]_
+  - Entschieden (E49). Mindestbedingungen: D01, Z02, A01. Test: D01 über beide Anschlüsse, Starlink bei Schnee.
+  - Dient: Z1, Z3
+  - Möglichkeit A: Eigener Anschluss [entschieden]
+    - Kosten: fehlt; Anbieter oben und Bandbreite fehlen (A4)
+  - Möglichkeit B: Starlink Mini als Reserve [entschieden]
+    - Kosten: 20.820–25.900 UAH, rund 420–520 €, dazu etwa 2.950 UAH, rund 59 € im Monat (A4)
+- **Entscheidung:** Essen: selbst anbauen, vor Ort kaufen oder liefern lassen _[offen]_
+  - Mindestbedingung: H07, Kochen für drei Personen, Kühlung, Vorrat für 10 Tage. Wer zahlt, fragt D36. Test: Störungstag.
+  - Dient: Z1
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+  - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+  - Möglichkeit A: Gemüsegarten am Kommunalgebäude
+    - Quelle: E74
+    - Eigenleistung: freiwillig mitarbeiten (M02-23)
+    - fehlt: was der Garten wann liefert
+  - Möglichkeit B: Vor Ort kaufen
+    - Quelle: Milch, Käse und Holz prüfen (E15, 2.4.6)
+    - fehlt: Anbieter, Preis, Entfernung, Zugang im Winter
+  - Möglichkeit C: Lieferung über die Zufahrt
+    - Ablauf: Person A holt sie unten an der Auffahrt
+    - Kippt bei: Auffahrt im Winter gesperrt (2.4.7)
+  - Möglichkeit D: Vorrat
+    - Menge: 10 Tage nach BBK (H07, M02-08)
+- **Entscheidung:** Selbst, mit Hilfe oder extern: je Leistung (2.4.8) _[offen]_
+  - Planung, Transport, Fundament, Aufstellen, Anschlüsse, Innenausbau. Je Leistung Fähigkeit, Gerät, Stunden, Fachkosten, Vertretung und wer verantwortet. Eigenleistung bekommt Zeit-, Qualitäts- und Kapazitätsansätze (M05). Paul und Roman sind nicht vom Bau; technische Werte legt eine Fachperson fest (E22). Es fehlen die Wochenstunden von Paul (O13) und Roman.
+  - Dient: Z1, Z2
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+  - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+  - Möglichkeit A: Selbst
+  - Möglichkeit B: Mit Hilfe
+  - Möglichkeit C: Extern
+
+## 5 · Parallel, ohne auf die Geologie zu warten
+
+- **Schritt O05:** Anwälte in Deutschland und der Ukraine finden und die Prüfaufträge stellen _[offen]_
+  - Paul und Roman · vor G0
+  - Prüfaufträge in A5: Token mit Pacht als Anlageprodukt, Werbung, Warteliste, Datenverbindung zwischen den Servern oben und in Deutschland, UG als Pauls Tochter, Hausbesitz und Pacht für Ausländer, Steuern, Einnahmen in USDM über Masumi.
+  - Dient: Z2
+  - **Entscheidung O22:** Mieter als Investition darstellen (W07)? _[wartet]_
+    - Anwalt, dann Paul und Roman · nach O05
+    - Bis zur Antwort des Anwalts nur im Pitch.
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: Anwälte (O05, A5)
+    - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+    - Beschlussblatt, Budgetgrenze: –
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: nach O05
+  - **Schritt:** Verhältnis zu Pauls Unternehmen (2.5.2) _[wartet]_
+    - Anwalt Deutschland · nach O05
+    - Wie „Pauls Tochterunternehmen ist Romans Unternehmen“ rechtlich geht (E61).
+- **Schritt O12:** Vorbereitungsbudget: wie viel Geld ist vor dem ersten Verkauf da? _[offen]_
+  - Paul entscheidet (E71) · vor G0
+  - Vor dem ersten Verkauf kosten Nazar, Anwälte und die Verkaufstechnik Geld; Eigenleistung zählt nicht als Geld (2.1.6). Die 3.500 € aus dem Ausführungsplan sind ein Diskussionsvorschlag, kein Budget (3.2).
+  - Dient: Z2
+- **Schritt:** Texte von Warteliste und Website prüfen lassen (2.5.4) _[offen]_
+  - Roman · Termin festlegen
+  - Der Jurist (Max H.) oder ein Anwalt sieht die Texte, auch die Aussage „Daten in der EU“ gegen die Server oben (E85). Veröffentlicht wird erst nach seinem Blick (3.2).
+  - Dient: Z2
+- **Schritt O31:** Angebote für Häuser in Teilen einholen _[offen]_
+  - KI bereitet vor, Roman schickt nach Freigabe
+  - Zuerst Servus (Iwano-Frankiwsk) und Supersip (Chmelnyzkyj), dann Unitbud. Teilegewicht, Montageaufwand und Winterwerte nennt kein Anbieter öffentlich.
+  - Dient: Z1, Z2
+  - **Entscheidung:** Welches Haus (2.2.3)? _[wartet]_
+    - Roman, Paul · nach O31
+    - Angebot mit Preis, Lieferform, schwerstem Teil und Montageaufwand; Kriterium leichter Transport (E72, E75). Ein 40-Fuß-Containergerippe bleibt als Option untersucht.
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: nach O31
+- **Schritt O04:** Erster bezahlter Auftrag mit Testkarte _[offen]_
+  - Roman und Paul · bis Januar 2027 (E77)
+  - Der erste Auftrag braucht keinen Berg; er ist der schnellste Weg aus dem Huhn-Ei-Problem (2.6). Testkarte nach M09: Problem, Annahme, Zielgruppe, Test, Erfolgsschwelle, Zeit- und Euro-Rahmen.
+  - Dient: Z3, X2
+  - **Entscheidung:** Preismodell für Agenten (2.6.2) _[offen]_
+    - KI rechnet die Kosten, Paul und Roman entscheiden
+    - Projekte werden verkauft, ihr Preis ist offen (E83).
+    - Dient: Z3
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: KI rechnet, Paul prüft (2.1.3)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Abo
+    - Möglichkeit B: Einmalzahlung mit Betreuung und Instandhaltung
+    - Möglichkeit C: Nach Nutzung — Passt zum Verkauf je Aufruf über Masumi (E56).
+- **Entscheidung O11:** Sitz der UG (W09) _[offen]_
+  - Paul und Roman · vor 2.1.5
+  - Heute tritt Romans Einzelunternehmen auf, mit Sitz in Kaufbeuren; die UG wird gegründet (E61). Start-up BW verlangt Baden-Württemberg (O11).
+  - Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt).
+  - Dient: X1
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Anwälte (O05, A5)
+  - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+  - Beschlussblatt, Budgetgrenze: –
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: vor 2.1.5
+  - Möglichkeit A: Sitz in Baden-Württemberg — Pre-Seed aus Start-up BW bleibt möglich (2.1.5, 2.5.8).
+  - Möglichkeit B: Sitz in Kaufbeuren — Wie das Einzelunternehmen; Start-up BW setzt Baden-Württemberg voraus.
+
+## 6 · Offen auf der Entscheidungsseite: D34 bis D41
+
+Für diese acht gibt es dort noch keine Stimme (Stand 04.11.2026). Wählt dort; der Baum zeigt die Möglichkeiten und was davon abhängt.
+
+- **Ast:** Zielbild und Alltag
+  - **Entscheidung D34:** Feuerstelle sowie Restaurant und Bar aus dem Zielbild: wann? _[offen]_
+    - Stufe 1 ist nur Team plus 5 Käufer (E69, E79). Gastronomie braucht Gäste, Personal, Hygiene und eigene Nachweise (M02-25 bis M02-27); die Feuerstelle braucht nur Brandschutz und einen Platz mit wenig Wind (M02-21, M02-22).
+    - Dient: Z1
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: –
+    - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+    - Beschlussblatt, Budgetgrenze: –
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Beides später — Stufe 1 ohne Feuerstelle und Gastronomie; beides bekommt nach Stufe 1 einen eigenen Plan.
+    - Möglichkeit B: Feuerstelle jetzt, Gastronomie später — Feuerstelle mit Grill am Kommunalgebäude in Stufe 1, mit Prüfauftrag Brandschutz. Restaurant und Bar bekommen nach Stufe 1 einen eigenen Plan.
+    - Möglichkeit C: Beides in Stufe 1 — Dann braucht der Plan Gästezahl, Personal, Hygiene, Wasser und Kosten dafür, vor G0.
+  - **Entscheidung D35:** Sauna: eigene oder im Ort? _[offen]_
+    - Zum Alltag oben gehören Sauna und Wellness (E81). Eine eigene Sauna braucht Holz oder Strom, Wasser und Brandschutz und geht in die Kosten je Plot (2.1.2).
+    - Dient: Z1
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: –
+    - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+    - Beschlussblatt, Budgetgrenze: –
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Eigene Sauna in Stufe 1 — Am Kommunalgebäude, geplant mit Kosten, Strom- oder Holzbedarf und Brandschutz, vor G0.
+    - Möglichkeit B: Erst im Ort, eigene später — Am Anfang eine Sauna in der Umgebung (2.4.6); die eigene kommt in einer späteren Stufe.
+    - Möglichkeit C: Keine Sauna — Gesundheit oben heißt Laufen, Wandern und Yoga (M02-45).
+- **Ast:** Geld und Leistungen oben (2.1.8, O32)
+  - **Entscheidung D36:** Essen oben: wie wird es bezahlt? _[offen]_
+    - Gegessen wird gemeinsam oder privat (E81). Offen ist, ob Essen inklusive ist, bezahlt wird oder gegen Mitarbeit geht.
+    - Dient: Z1
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Inklusive in einer Monatspauschale — Gemeinsames Essen ist in einer monatlichen Pauschale enthalten; privat kocht jede und jeder auf eigene Kosten.
+    - Möglichkeit B: Selbst bezahlt — Jede Mahlzeit oder jeder Einkauf wird bezahlt, gemeinsam oder privat.
+    - Möglichkeit C: Gegen Mitarbeit — Wer in Küche oder Garten mitarbeitet, isst gemeinsam ohne Zahlung; die Stunden werden erfasst (2.4.9).
+  - **Entscheidung D37:** Wie wird das Team oben bezahlt? _[offen]_
+    - Das Team baut Agenten und liefert die Projekte (E70). Das geht in 2.1.8 und in das Vertrags- und Rollenmodell (2.5.5).
+    - Dient: Z1, Z3
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: KI rechnet, Paul prüft (2.1.3)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Honorar je Projekt — Die UG zahlt je Projekt ein Honorar; Wohnen und Essen zahlen die Leute selbst.
+    - Möglichkeit B: Anteil am Umsatz — Jede Person bekommt einen festen Anteil am Umsatz der Projekte und Agenten, an denen sie arbeitet.
+    - Möglichkeit C: Wohnen und Essen frei, dazu Anteil — Wohnen und Essen oben sind frei; dazu kommt ein kleinerer Anteil am Projektumsatz.
+  - **Entscheidung D38:** Wie zahlen Käufer für Leistungen oben? _[offen]_
+    - Käufer zahlen ihr Haus (E50) und pachten den Grund (E52). Offen ist, wie sie Strom, Wasser, Internet, Sauna und Coworking bezahlen.
+    - Dient: Z2
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: KI rechnet, Paul prüft (2.1.3)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Monatliche Pauschale — Eine feste Nebenkostenpauschale im Monat für alle Leistungen oben.
+    - Möglichkeit B: Nach Verbrauch — Strom und Wasser nach Zähler, Sauna und Coworking je Nutzung.
+    - Möglichkeit C: In Kaufpreis oder Pacht — Die Leistungen stecken im Kaufpreis oder in der Pacht; es gibt keine eigene Abrechnung.
+- **Ast:** Papierrechnung (E84)
+  - **Entscheidung D39:** Wofür stehen die rund 12 Mio. €? _[offen]_
+    - E84 rechnet auf dem Papier rund 12 Mio. €; E65 nennt 12,5 Mio. € als Hochrechnung der Kosten; nach E57 braucht der Ort keinen Investor.
+    - Dient: X1
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: Anwälte (O05, A5)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Erlös auf dem Papier — Die 12 Mio. € sind der mögliche Erlös aus Plots auf 2 ha. Sie zeigen, dass die Kosten von 12,5 Mio. € in der Größenordnung gedeckt wären; E57 bleibt.
+    - Möglichkeit B: Bewertung für die Firma — Die Rechnung begründet im Pitch den Wert, auf den die Firma Pre-Seed und Kapital aufnimmt. Der Ort trägt sich weiter aus Käufergeld.
+    - Möglichkeit C: Invest in den Ort — Für den Ausbau über Stufe 1 hinaus darf ein Investor in den Ort kommen; dann gilt E57 nur für Stufe 1.
+  - **Entscheidung D40:** Was kaufen Käufer für 30.000 €? _[offen]_
+    - E78 nennt etwa 30.000 € je Käufer, E84 30.000 € je Plot. Verkauft wird das Haus, den Grund pachten die Käufer (E52, E59); E50 spricht von Plots als Token.
+    - Dient: Z2
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: Anwälte (O05, A5)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Das Haus — 30.000 € sind der Preis des Hauses in Teilen; der Grund wird extra gepachtet.
+    - Möglichkeit B: Haus und Plot als Token — 30.000 € umfassen das Haus und den Token auf den Plot; Pacht kommt dazu, wenn der Grund nicht verkauft wird.
+    - Möglichkeit C: Alles für den Einzug — 30.000 € decken Haus, Anschluss und Anteil am Kommunalgebäude; Pacht und Leistungen laufen monatlich (2.1.8).
+  - **Entscheidung D41:** Was sind die 45 m² je Haus? _[offen]_
+    - E84 rechnet mit 45 m² je Haus. Der Container aus E39 hat 6 × 2,5 m, also 15 m²; 2.2.3 fragt Preise für 15–30 m² an.
+    - Dient: Z2
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Haus mit Terrasse und Abstand — 45 m² ist die Fläche, die ein Haus samt Terrasse, Bike-Unterstand und Abstand braucht.
+    - Möglichkeit B: Ein größeres Haus — Die Häuser in Teilen werden größer als der Container, etwa 45 m² Wohnfläche; die Herstelleranfrage (O31) wird angepasst.
+    - Möglichkeit C: Nur ein Rechenwert — 45 m² ist ein grober Wert für die Papierrechnung; Größe und Fläche legt erst die Geologie mit dem Lageplan fest (O01).
+
+## 7 · Offen im Plan, noch ohne Karte auf der Entscheidungsseite
+
+Aus Kapitel 4 (Art E), den Teilergebnissen, die nur ihr entscheidet, und den neuen Planungspunkten vom 05.11.2026.
+
+- **Entscheidung O16:** Drei ältere Entscheidungen passen nicht ganz zu jüngeren _[offen]_
+  - Paul und Roman
+  - Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt).
+  - **Entscheidung:** E02 gegen E55: gebaut wird im Sommer, oder die Container kommen ab März? _[offen]_
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: –
+    - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+    - Beschlussblatt, Budgetgrenze: –
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Die jüngere gilt
+    - Möglichkeit B: Die ältere gilt
+  - **Entscheidung:** E41 gegen E23: stufenweise mit weniger Leuten, oder 2–3 Personen von Anfang an? _[offen]_
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: –
+    - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+    - Beschlussblatt, Budgetgrenze: –
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Die jüngere gilt
+    - Möglichkeit B: Die ältere gilt
+  - **Entscheidung:** E10 gegen E51: die Grundstücksdaten reichen, oder die Plots werden ausgemessen? _[offen]_
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Die jüngere gilt
+    - Möglichkeit B: Die ältere gilt
+- **Ereignis O17:** Krise: der Krieg verschärft sich, die Auffahrt ist gesperrt oder etwas fällt länger aus _[offen]_
+  - Paul und Roman · vor G1
+  - Dient: Z1
+  - **Ausgang (sofort):** Notfallplan zuerst. _[Regel steht]_
+    - Schutzmaßnahmen folgen sofort dem Notfallplan (2.4.7); er geht jeder anderen Regel vor (A6). Im Notfall ist man in unter 2 Stunden unten (E26).
+  - **Entscheidung:** Ab wann wird abgebrochen? _[offen]_
+    - Noch ohne Entwürfe.
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: –
+    - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+    - Beschlussblatt, Budgetgrenze: –
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+- **Entscheidung O18:** Methodenpilot nach Methodenbewertung 06: macht ihr ihn, und in welchem Umfang? _[offen]_
+  - Paul und Roman
+  - Vier Wochen mit dem Pilotfall Geologie-Eingang. Vor Beginn ein Aufwandrahmen in Stunden und Euro; gemessen werden Durchlaufzeit, Nachweise, Rückfragen und Nacharbeit.
+  - Möglichkeiten: Vorschlag KI aus dem offenen Punkt, noch keine Entscheidung (E80 gilt erst, wenn ihr eine wählt).
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: –
+  - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+  - Beschlussblatt, Budgetgrenze: –
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+  - Möglichkeit A: Ja, vier Wochen mit dem Pilotfall Geologie-Eingang
+  - Möglichkeit B: Nein, nicht in Stufe 1
+- **Entscheidung O25:** E-Bikes: wie viele, wo geladen wird, wer zahlt (2.3.6) _[offen]_
+  - Paul entscheidet (E71), KI bereitet vor · vor 2.3.1
+  - Damit niemand Benzin holen muss (E73). Die Last geht in 2.3.1, die Kosten in 2.1.2.
+  - Dient: Z1
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+  - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: vor 2.3.1
+- **Entscheidung:** Wasser, Heizung, Abwasser, Toilette und Küche: welche Lösung (2.3.2)? _[wartet]_
+  - Paul mit Nazar, Roman für Toilette und Küche · nach O01 · Vorschlag KI bis 15.01.2027
+  - Entschieden sind Strom aus dem Netz mit Batterie oder Generator und Solar (E35) und ein eigener Internetanschluss mit Starlink als Reserve (E49).
+  - Dient: Z1
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+  - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: spätestens 15.01.2027
+- **Ast:** Rollen und Betrieb oben
+  - **Entscheidung:** Team oben: wer, wie viele, welcher Platz, wer zahlt (2.4.1) _[offen]_
+    - Paul und Roman · Vorschlag KI bis 15.12.2026
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: spätestens 15.12.2026
+  - **Entscheidung:** Betrieb oben: wer Holz, Wasser, Schnee und Wartung übernimmt (2.4.5) _[offen]_
+    - Paul und Roman · nach 2.4.1
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: nach 2.4.1
+  - **Entscheidung:** Wer macht was selbst: Planung, Transport, Fundament, Aufstellen, Anschlüsse, Innenausbau (2.4.8) _[offen]_
+    - Paul und Roman, KI bereitet vor
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+  - **Entscheidung O13:** Pauls Vollzeit: ab wann, und bis dahin wie viele Stunden je Woche (2.1.4)? _[offen]_
+    - Paul
+    - Ist Paul Vollzeit dabei, sind seine 8.000 € netto im Monat unabdingbar; sie stehen nicht im Mittelpunkt des Plans (E67).
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: KI rechnet, Paul prüft (2.1.3)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+- **Ast:** Aufteilung: X-PORTAL, DT Agentur, Grundstücke
+  - X-PORTAL ist die Dachfirma: Sie bebaut und verwaltet die Grundstücke, verwaltet die Freelancer, ordnet sie Projekten zu und baut eigene Projekte wie KI-Agenten, Blockchain und Finance Engineering. Die DT Agentur übernimmt die Projekte aus Deutschland (Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog).
+  - **Entscheidung:** Was gehört zu X-PORTAL, was zur DT Agentur: Arbeit, Verträge, Geld, Rechte (2.5.3)? _[offen]_
+    - Roman und Paul · Vorschlag KI bis 20.11.2026
+    - Dient: X1, X2
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: KI rechnet, Paul prüft (2.1.3)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: spätestens 20.11.2026
+  - **Entscheidung:** Wer stellt welche Rechnung: Hauskauf, Pacht, Miete, Projekte, Agenten? _[offen]_
+    - Paul und Roman · vor G0
+    - Davon hängen Verträge (2.5.5), Steuern (A5) und der Geldfluss (2.1.3) ab.
+    - Dient: X1, X2, X3
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: Fachperson (E22), über Nazar (E27)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: vor G0
+  - **Entscheidung:** Grundstücke: wer ist Eigentümer, wer baut, wer verpachtet an die Käufer, wer stellt den Betrieb? _[offen]_
+    - Paul mit den Anwälten · vor G0
+    - Bekannt: ein SPV je Grundstück, später tokenisiert (E17); das eigene und höchstens ein weiteres Grundstück (E18); Node001 steht auf Pauls Namen. Offen: wie Romans Unternehmen zu Pauls steht (2.5.2) und wo die UG sitzt (O11).
+    - Dient: X3
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: –
+    - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+    - Beschlussblatt, Budgetgrenze: –
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: vor G0
+- **Ast:** Kapitalentscheidungen
+  - **Entscheidung:** Häuser über die Blockchain verkaufen: etwa 30.000 € je Käufer, bezugsfähig im Frühjahr 2027? _[offen]_
+    - Paul und Roman · vor dem Verkauf im Januar 2027 (G0)
+    - Entschieden ist: Kaufen und mieten über die Blockchain, das Tiny House tokenisiert, den Grund pachten die Käufer (E52, E59); Einzug ab Frühjahr 2027 (E55). Damit das trägt, muss vorher feststehen:
+    - Recht Deutschland: Ist der Token mit Pacht ein Anlageprodukt mit Prospekt- oder Whitepaper-Pflicht, und was darf die Werbung versprechen (A5)?
+    - Recht Ukraine: Dürfen Ausländer ein Haus auf fremdem Grund besitzen und den Grund pachten; ist der Container ein Gebäude (A5)?
+    - Zahlung an den Lieferanten: Nimmt der Hersteller Zahlung in USD-Stablecoin über die Blockchain, oder muss in UAH oder EUR getauscht werden, und braucht der Umtausch eine Erlaubnis (A5)?
+    - Was die 30.000 € kaufen: offen über D40: nur das Haus, Haus und Plot als Token, oder alles für den Einzug
+    - Geld bereit: was als Beleg gilt und was bei weniger als 5 Käufern passiert (O23)
+    - Technik: ein Testkauf läuft durch: Token, Pachtvertrag, Zahlung (2.5.6)
+    - Bezugsfähig: Lieferzeit bis März (O31) und schriftliche Abnahme vor dem Einzug (E53)
+    - Dient: Z2
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: –
+    - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+    - Beschlussblatt, Budgetgrenze: –
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: vor dem Verkauf im Januar 2027 (G0)
+  - **Entscheidung:** Pre-Seed für die Firma: wer investiert, was braucht die Runde, wofür ist das Geld? _[offen]_
+    - Paul · nach dem Nachweis aus Z2
+    - Erlaubt ist eine Runde nur für die Firma, nicht für den Ort (E57). Offen ist alles Weitere: wer investiert (VC, Start-up BW, andere), welche Belege die Runde braucht (O21), welcher Sitz dafür nötig ist (O11) und wofür das Geld verwendet wird. Der Nachweis aus 5 Käufern und 100 auf der Warteliste ist Romans Ausgangspunkt (E78).
+    - Dient: X1
+    - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+    - Beschlussblatt, Fachliche Prüfung: KI rechnet, Paul prüft (2.1.3)
+    - Beschlussblatt, Freigabe: Paul und Roman; Bestellung und Betrag: Paul (E71)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: nach dem Nachweis aus Z2
+- **Entscheidung:** Gleitzeit: wie wird die Kernzeit 9–14 Uhr verlegt, und wer ist für Betrieb und Notfall erreichbar? _[offen]_
+  - Planungspunkt neu (Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog) · Paul und Roman
+  - Kunden in anderen Zeitzonen verschieben Arbeit auf den Abend. Offen ist, wie die Verlegung angemeldet wird und wer in dieser Zeit für Betrieb und Notfall da ist (2.4.5, 2.4.7).
+  - Dient: Z1, Z3
+  - Beschlussblatt, Vorbereitung: KI bereitet vor (E13)
+  - Beschlussblatt, Fachliche Prüfung: –
+  - Beschlussblatt, Freigabe: Paul und Roman gemeinsam (3.2)
+  - Beschlussblatt, Budgetgrenze: –
+  - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
+  - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+
+## 8 · Entschieden: 84 im Log, nach Thema
+
+Je Thema ein Satz, mit den Entscheidungen dahinter. Die vollständige Liste steht unten unter „Entscheidungen E01–E85“.
+
+- **Entscheidung:** Ort _[entschieden]_
+  - Node001: Bereschnyzja, Ortsteil Hrun, bei Werchowyna. Der Name ist überall Node001, der Oberbegriff Nodes. Als Ort nennt die Website, wenn überhaupt, nur „Ukraine“, dazu europaweite Standorte. (E33, E63, E66)
+- **Entscheidung:** Ziel _[entschieden]_
+  - 2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld. Roman ist von Anfang an dabei. (E01, E23, E24)
+- **Entscheidung:** Vorrang _[entschieden]_
+  - Das Grundstück voll bekommen, auf Autarkie hinarbeiten, alles läuft immer. Der Betrieb trägt sich selbst. (E46, E54)
+- **Entscheidung:** Geld _[entschieden]_
+  - Reihenfolge: Pauls Lebensunterhalt, Kosten auf dem Berg, Weiterentwicklung, Kapital über die Chain. (E05)
+- **Entscheidung:** Paul _[entschieden]_
+  - Ist Paul Vollzeit dabei, sind seine 8.000 € netto im Monat unabdingbar. Sie stehen nicht im Mittelpunkt des Plans. (E03, E32, E67)
+- **Entscheidung:** Kapital _[entschieden]_
+  - Der Ort braucht keinen Investor: Käufergeld ist Umsatz und kommt zuerst. Die Firma darf Pre-Seed aufnehmen. Kapital über die Chain erst, wenn Umsatz da ist. (E04, E30, E57)
+- **Entscheidung:** Kosten _[entschieden]_
+  - Die 12,5 Mio. € sind eure Hochrechnung der Kosten in Werchowyna, keine Finanzierung. (E65)
+- **Entscheidung:** Umsatz _[entschieden]_
+  - Projekte und Freelancer-Aufträge aus Deutschland; oben werden daraus Agenten, verkauft über Masumi. Projekte werden verkauft, ihr Preis ist offen; für Agenten ist das Modell offen: Abo, Einmalzahlung mit Betreuung oder nach Nutzung. Erster bezahlter Auftrag bis Januar 2027. (E31, E56, E77, E83)
+- **Entscheidung:** Verkauf _[entschieden]_
+  - Warteliste; ab Januar 2027 kaufen als Token, Grund pachten; mieten mit Miete nach dem Einzug. (E47, E51, E52)
+- **Entscheidung:** Preis _[entschieden]_
+  - Etwa 30.000 € je Plot als Ausgangspunkt der Rechnung. Bestellt wird, wenn 5 Käufer ihr Geld belegt haben. (E50, E78)
+- **Entscheidung:** Nachfrage _[entschieden]_
+  - Die Warteliste zeigt die Nachfrage; bei großem Andrang gibt es mehr Plots. Umfragen ohne Angebot gibt es nicht. (E09, E51, E58)
+- **Entscheidung:** Bauweise _[entschieden]_
+  - Die Häuser kommen in Teilen und werden oben montiert; sie sind die Tiny Houses der Käufer und bleiben, den Grund pachten sie. (E39, E52, E59, E75)
+- **Entscheidung:** Zeit _[entschieden]_
+  - Die Häuser kommen frühestens im März 2027 hoch, sobald frostfrei, in Teilen (E75); Werbung „Einzug ab Frühjahr 2027“. (E21, E55)
+- **Entscheidung:** Versorgung _[entschieden]_
+  - Netzstrom mit Batterie oder Generator und Solar; eigener Internetanschluss, Starlink als Reserve; 50 l Wasser je Person und Tag. (E26, E35, E49)
+- **Entscheidung:** Abnahme _[entschieden]_
+  - Vor dem Einzug schriftlich abgenommen durch Nazar oder eine Fachperson. (E22, E27, E53)
+- **Entscheidung:** Pläne _[entschieden]_
+  - Generalplan Variante 1 ist die Grundlage. Nazar ist beauftragt, seine Ergebnisse sind offen. (E37, E43, E64)
+- **Entscheidung:** Firma _[entschieden]_
+  - Heute Romans Einzelunternehmen; UG in Gründung, Sitz offen (W09). (E17, E61)
+- **Entscheidung:** Grundstücke _[entschieden]_
+  - Das eigene und höchstens ein weiteres; die übrigen von Dritten. (E18)
+- **Entscheidung:** Rollen _[entschieden]_
+  - Paul ist CEO, hält den Kontakt zu Nazar und entscheidet über Bestellungen und den Betrag; Roman führt Produkt und Projekt und ist oben. Die KI macht, was sie kann; ein Mensch prüft. (E06, E13, E19, E62, E71)
+- **Entscheidung:** Arbeit oben _[entschieden]_
+  - Das Team baut Agenten und liefert alle Projekte, auch Cybersecurity und Blockchain; das eigene Produkt sind nur Agenten. Käufer und Mieter bilden eine Community. (E63, E70)
+- **Entscheidung:** Grundmodell _[entschieden]_
+  - Leichter Transport, kommunal, gemeinschaftlich, autark; Privatsphäre im eigenen Haus, Community vorausgesetzt. E-Bikes statt Benzin, Kommunalgebäude mit Gemüsegarten. (E72, E73, E74)
+- **Entscheidung:** Alltag _[entschieden]_
+  - Arbeit, Gesundheit und Freizeit gehören zusammen: Jour fixe am Morgen, gemeinsam oder privat essen, Sauna, Wandern, Laufen, Yoga; abgelegen und doch im Team. (E81)
+- **Entscheidung:** Ablage _[entschieden]_
+  - OneDrive in Microsoft 365, DSGVO-konform. (E12)
