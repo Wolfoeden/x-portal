@@ -33,7 +33,7 @@ export const en: Dictionary = {
     },
     places: {
       title: 'Places · XPORTAL',
-      description: 'Live, work, come together: Hub 01 in western Ukraine, in the Carpathians on the Hungarian border. Workation, rent and later buy. Register your interest now.',
+      description: 'Live, work, come together: Hub 01 in western Ukraine, in the Carpathians on the Hungarian border. Workation, rent or buy. Register your interest now.',
     },
     contact: {
       title: 'Contact · XPORTAL',
@@ -464,7 +464,7 @@ export const en: Dictionary = {
       region: 'Western Ukraine · Carpathians, on the Hungarian border',
       eyebrow: 'Hub 01 · Western Ukraine',
       title: 'Live and work in the Carpathians.',
-      pill: 'Waitlist · workation, rent, later buy',
+      pill: 'Waitlist · workation, rent or buy',
       emailLabel: 'Email address',
       emailPlaceholder: 'Your email address',
       submit: 'Register interest',

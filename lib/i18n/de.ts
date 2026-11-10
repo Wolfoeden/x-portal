@@ -36,7 +36,7 @@ export const de = {
     },
     places: {
       title: 'Orte · XPORTAL',
-      description: 'Wohnen, arbeiten, zusammenkommen: Hub 01 in der Westukraine, in den Karpaten an der Grenze zu Ungarn. Workation, Miete und später Kauf. Jetzt Interesse vormerken.',
+      description: 'Wohnen, arbeiten, zusammenkommen: Hub 01 in der Westukraine, in den Karpaten an der Grenze zu Ungarn. Workation, Miete oder Kauf. Jetzt Interesse vormerken.',
     },
     contact: {
       title: 'Kontakt · XPORTAL',
@@ -470,7 +470,7 @@ export const de = {
       region: 'Westukraine · Karpaten, an der Grenze zu Ungarn',
       eyebrow: 'Hub 01 · Westukraine',
       title: 'Wohnen und arbeiten in den Karpaten.',
-      pill: 'Warteliste · Workation, Miete, später Kauf',
+      pill: 'Warteliste · Workation, Miete oder Kauf',
       emailLabel: 'E-Mail-Adresse',
       emailPlaceholder: 'Deine E-Mail-Adresse',
       submit: 'Interesse vormerken',

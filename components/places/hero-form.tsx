@@ -60,7 +60,7 @@ export function OfferAction({ use, label, className }: { use: 'workation' | 'mie
   )
 }
 
-/** Weißer Knopf im Hero („Warteliste · Workation, Miete, später Kauf“): führt direkt zum Formular. */
+/** Weißer Knopf im Hero („Warteliste · Workation, Miete oder Kauf“): führt direkt zum Formular. */
 export function HeroPill({ label }: { label: string }) {
   const { ids } = useLocale()
   const { goToForm } = useWaitlist()
