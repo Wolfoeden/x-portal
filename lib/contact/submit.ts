@@ -41,13 +41,16 @@ export async function submitContact(input: ContactInput, visitor: Visitor, db: S
   }
   if (allowed.data !== true) return { ok: false, reason: 'limit' }
 
+  // Fragen zu den Orten haben in der Tabelle kein eigenes Thema: Sie laufen als „general“ mit einem Kennzeichen vorn in der Nachricht,
+  // damit sie in ops.posteingang ohne neue Migration erkennbar sind.
+  const service = input.topic === 'general' || input.topic === 'places' ? null : input.topic
   const { error } = await db.from('contact_requests').insert({
-    topic: input.topic === 'general' ? 'general' : 'services',
-    service: input.topic === 'general' ? null : input.topic,
+    topic: service ? 'services' : 'general',
+    service,
     name: input.name,
     email: input.email,
     company: input.company || null,
-    message: input.message,
+    message: input.topic === 'places' ? `[Orte und Hub 01] ${input.message}`.slice(0, 4_000) : input.message,
     locale: input.locale,
   })
   if (error) {

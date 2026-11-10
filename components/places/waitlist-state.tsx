@@ -45,7 +45,9 @@ export function WaitlistProvider({ children }: { children: ReactNode }) {
       goToForm: () => {
         const section = document.getElementById(ids.waitlist)
         if (!section) return
-        section.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' })
+        // Direkt zur Formularkarte: Auf dem Handy steht davor viel Text, der Abschnittsanfang zeigt das Formular nicht.
+        const card = section.querySelector<HTMLElement>('[data-waitlist-card]') ?? section
+        card.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' })
         window.history.replaceState(null, '', `#${ids.waitlist}`)
         window.setTimeout(() => section.querySelector<HTMLInputElement>('input[name="vorname"]')?.focus({ preventScroll: true }), 500)
       },

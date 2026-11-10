@@ -7,6 +7,18 @@ import { fill } from '@/lib/i18n/format'
 import { IDS, type Locale } from '@/lib/i18n/routes'
 
 // Fotos der übrigen Rollen liefert der Nutzer nach. Mit LinkedIn-Adresse verlinkt das Foto dorthin.
+
+/** „Pavel J.“ → „PJ“ */
+function initials(name: string) {
+  return name
+    .split(/\s+/)
+    .map((part) => part.replace(/[^\p{L}]/gu, '').charAt(0))
+    .filter(Boolean)
+    .slice(0, 2)
+    .join('')
+    .toUpperCase()
+}
+
 export function ChapterTeam({ locale, number = '07' }: { locale: Locale; number?: string }) {
   const copy = getDictionary(locale).team
   return (
@@ -41,8 +53,9 @@ export function ChapterTeam({ locale, number = '07' }: { locale: Locale; number?
                   {person.photo ? (
                     <Image src={person.photo} alt={person.name} fill sizes="(min-width: 1024px) 240px, 50vw" className="object-cover grayscale" />
                   ) : (
-                    <div className="grid size-full place-items-center">
-                      <span className="text-[13px] text-faint">{copy.photoPending}</span>
+                    // Bis das Foto da ist: Initialen in Markengrün statt eines leeren Kastens.
+                    <div aria-hidden className="grid size-full place-items-center bg-brand-soft">
+                      <span className="text-[clamp(2.5rem,6vw,4rem)] font-medium tracking-[-0.04em] text-brand-ink">{initials(person.name)}</span>
                     </div>
                   )}
                 </div>

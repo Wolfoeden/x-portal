@@ -9,7 +9,7 @@ import { ChapterEveryday, ChapterOffers, ChapterPlace, ChapterPlacesFaq, PlaceFa
 import { WaitlistCard } from '@/components/places/waitlist-card'
 import { WaitlistProvider } from '@/components/places/waitlist-state'
 import { getDictionary } from '@/lib/i18n/dictionary'
-import { IDS, pagePath, type Locale } from '@/lib/i18n/routes'
+import { IDS, pageHref, type Locale } from '@/lib/i18n/routes'
 
 function ChapterWaitlist({ locale }: { locale: Locale }) {
   const copy = getDictionary(locale).places.waitlist
@@ -38,14 +38,14 @@ function ChapterWaitlist({ locale }: { locale: Locale }) {
               <span className="text-[16px]">{copy.quote}</span>
               <span className="text-[14px] text-[#bfd8c8]">
                 {copy.quoteName} ·{' '}
-                <Link href={pagePath('contact', locale)} className="text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">
+                <Link href={pageHref('contact', locale, 'topicPlaces')} className="text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">
                   {copy.quoteAction}
                 </Link>
               </span>
             </figcaption>
           </figure>
         </div>
-        <div className="overflow-hidden rounded-[32px] bg-white text-ink shadow-[0_1px_2px_rgb(0_0_0/0.06),0_40px_80px_-32px_rgb(0_0_0/0.55)]">
+        <div data-waitlist-card className="scroll-mt-20 overflow-hidden rounded-[32px] bg-white text-ink shadow-[0_1px_2px_rgb(0_0_0/0.06),0_40px_80px_-32px_rgb(0_0_0/0.55)]">
           <WaitlistCard />
         </div>
       </Container>

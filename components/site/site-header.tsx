@@ -157,7 +157,7 @@ export function SiteHeader() {
     >
       <Container className="flex h-16 items-center gap-6">
         <Link href={pagePath('home', locale)} className="shrink-0 rounded-md text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand" aria-label={text.homeLabel}>
-          <Wordmark className="h-7 w-auto" />
+          <Wordmark className="h-7 w-auto max-[359px]:h-6" />
         </Link>
 
         <nav aria-label={text.navLabel} className="ml-4 hidden items-center text-[15px] text-ink xl:flex">
@@ -198,7 +198,9 @@ export function SiteHeader() {
             {text.account}
           </Link>
           <ButtonLink href={pageHref('places', locale, 'waitlist')} className="auth-out ml-1 h-10 px-[18px] max-sm:h-9 max-sm:px-4 max-sm:text-[14px]">
-            {text.waitlist}
+            {/* Auf schmalen Handys der kurze Text, sonst wird die Kopfzeile breiter als der Bildschirm. */}
+            <span className="sm:hidden">{text.waitlistShort}</span>
+            <span className="max-sm:hidden">{text.waitlist}</span>
           </ButtonLink>
           <ButtonLink href={APP_START_PATH} prefetch={false} className="auth-in ml-1 h-10 px-[18px] max-sm:h-9 max-sm:px-4 max-sm:text-[14px]">
             {text.start}
@@ -209,7 +211,7 @@ export function SiteHeader() {
             aria-expanded={mobileOpen}
             aria-controls={mobileId}
             onClick={() => setMobileOpen((value) => !value)}
-            className="-mr-2 grid size-10 place-items-center rounded-full text-ink xl:hidden"
+            className="-mr-2 grid size-10 shrink-0 place-items-center rounded-full text-ink xl:hidden"
           >
             {mobileOpen ? <X aria-hidden size={22} strokeWidth={1.75} /> : <Menu aria-hidden size={22} strokeWidth={1.75} />}
           </button>

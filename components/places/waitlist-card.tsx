@@ -1,9 +1,10 @@
 'use client'
 
-import { useState, type ComponentType } from 'react'
+import { useRef, useState, type ComponentType } from 'react'
 import { ArrowRight, Check, Clock, House, Laptop, Mail, Tag, User, type LucideProps } from 'lucide-react'
 import { useLocale } from '@/components/i18n/locale-provider'
 import { useWaitlist, type WaitlistStart, type WaitlistUse } from '@/components/places/waitlist-state'
+import { fill } from '@/lib/i18n/format'
 import { pageHref } from '@/lib/i18n/routes'
 
 const ICONS: Record<WaitlistUse, ComponentType<LucideProps>> = { workation: Laptop, mieten: House, kaufen: Tag }
@@ -19,9 +20,13 @@ function Step({ number, children }: { number: number; children: string }) {
   )
 }
 
+const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+
+type Status = 'idle' | 'sending' | 'failed' | 'limit'
+
 /**
- * Karte der Warteliste. Vorschau: Die Eingaben werden noch nicht gespeichert und es geht keine Mail raus.
- * Später: POST an /api/waitlist, Speicherung in Supabase und Double-Opt-in per Mail (siehe Plan auf dem Canvas).
+ * Karte der Warteliste. Sendet an /api/waitlist; gespeichert wird wie beim Kontaktformular in contact_requests
+ * (sichtbar in ops.posteingang), dazu eine Bestätigung per Mail. Fehler stehen am Feld, der Fokus springt zum ersten.
  */
 export function WaitlistCard() {
   const { locale, dict } = useLocale()
@@ -29,8 +34,41 @@ export function WaitlistCard() {
   const { email, setEmail, use, setUse, start, setStart } = useWaitlist()
   const [firstName, setFirstName] = useState('')
   const [consent, setConsent] = useState(false)
-  const [error, setError] = useState(false)
+  const [website, setWebsite] = useState('')
+  const [tried, setTried] = useState(false)
+  const [status, setStatus] = useState<Status>('idle')
   const [done, setDone] = useState(false)
+  const emailRef = useRef<HTMLInputElement>(null)
+  const consentRef = useRef<HTMLInputElement>(null)
+
+  const emailError = !email.trim() ? copy.emailMissing : EMAIL.test(email.trim()) ? null : copy.emailInvalid
+  const consentError = consent ? null : copy.consentMissing
+  const showEmailError = tried && emailError
+  const showConsentError = tried && consentError
+
+  const submit = async () => {
+    setTried(true)
+    if (emailError) return emailRef.current?.focus()
+    if (consentError) return consentRef.current?.focus()
+    if (status === 'sending') return
+    setStatus('sending')
+    try {
+      const offer = new URLSearchParams(window.location.search).get(locale === 'de' ? 'angebot' : 'offer') ?? undefined
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ use, start, firstName: firstName.trim() || undefined, email: email.trim(), consent: true, locale, offer, website: website || undefined }),
+      })
+      if (response.ok) {
+        setStatus('idle')
+        setDone(true)
+        return
+      }
+      setStatus(response.status === 429 ? 'limit' : 'failed')
+    } catch {
+      setStatus('failed')
+    }
+  }
 
   const useTitle = copy.uses.find((item) => item.id === use)?.title ?? ''
   const startLabel = copy.starts.find((item) => item.id === start)?.label ?? ''
@@ -42,8 +80,7 @@ export function WaitlistCard() {
           <Mail aria-hidden size={26} strokeWidth={1.75} />
         </span>
         <h3 className="text-[32px] font-medium leading-[1.05] tracking-[-0.03em] text-ink">{copy.doneTitle}</h3>
-        <p className="max-w-[440px] text-muted">{copy.doneText}</p>
-        <p className="rounded-xl bg-amber-soft px-3.5 py-2.5 text-[13.5px] text-amber-ink">{copy.donePreview}</p>
+        <p className="max-w-[440px] text-muted">{fill(copy.doneText, { email: email.trim() })}</p>
         <dl className="grid w-full grid-cols-[max-content_1fr] gap-x-6 gap-y-2 rounded-2xl bg-surface p-5 text-[14.5px]">
           <dt className="text-faint">{copy.doneUse}</dt>
           <dd className="font-medium text-ink">{useTitle}</dd>
@@ -58,7 +95,10 @@ export function WaitlistCard() {
             </li>
           ))}
         </ol>
-        <button type="button" onClick={() => setDone(false)} className="text-[15px] font-medium text-brand underline decoration-brand/30 underline-offset-4 hover:decoration-brand">
+        <button type="button" onClick={() => {
+            setDone(false)
+            setTried(false)
+          }} className="text-[15px] font-medium text-brand underline decoration-brand/30 underline-offset-4 hover:decoration-brand">
           {copy.again}
         </button>
       </div>
@@ -71,9 +111,7 @@ export function WaitlistCard() {
       noValidate
       onSubmit={(event) => {
         event.preventDefault()
-        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()) && consent
-        setError(!valid)
-        if (valid) setDone(true)
+        void submit()
       }}
       className="flex flex-col"
     >
@@ -148,14 +186,42 @@ export function WaitlistCard() {
               <span className="sr-only">{copy.firstName}</span>
               <input name="vorname" autoComplete="given-name" value={firstName} onChange={(event) => setFirstName(event.target.value)} placeholder={copy.firstName} className="h-full min-w-0 flex-1 bg-transparent text-[16px] text-ink outline-none placeholder:text-faint" />
             </label>
-            <label className="flex h-[52px] items-center gap-2.5 rounded-[14px] border border-line-strong bg-white px-4 focus-within:border-brand focus-within:ring-[3px] focus-within:ring-brand/15">
-              <Mail aria-hidden size={18} strokeWidth={1.75} className="text-faint" />
-              <span className="sr-only">{copy.email}</span>
-              <input type="email" name="email" autoComplete="email" required value={email} onChange={(event) => setEmail(event.target.value)} placeholder={copy.email} aria-invalid={error && !email ? true : undefined} className="h-full min-w-0 flex-1 bg-transparent text-[16px] text-ink outline-none placeholder:text-faint" />
-            </label>
+            <div className="flex flex-col gap-1.5">
+              <label className={`flex h-[52px] items-center gap-2.5 rounded-[14px] border bg-white px-4 focus-within:ring-[3px] ${showEmailError ? 'border-[#a3361f] focus-within:ring-[#a3361f]/15' : 'border-line-strong focus-within:border-brand focus-within:ring-brand/15'}`}>
+                <Mail aria-hidden size={18} strokeWidth={1.75} className={showEmailError ? 'text-[#a3361f]' : 'text-faint'} />
+                <span className="sr-only">{copy.email}</span>
+                <input
+                  ref={emailRef}
+                  type="email"
+                  name="email"
+                  autoComplete="email"
+                  required
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  placeholder={copy.email}
+                  aria-invalid={showEmailError ? true : undefined}
+                  aria-describedby={showEmailError ? 'warteliste-email-fehler' : undefined}
+                  className="h-full min-w-0 flex-1 bg-transparent text-[16px] text-ink outline-none placeholder:text-faint"
+                />
+              </label>
+              {showEmailError ? (
+                <p id="warteliste-email-fehler" className="text-[13px] font-medium text-[#a3361f]">
+                  {emailError}
+                </p>
+              ) : null}
+            </div>
           </div>
-          <label className="mt-3 flex cursor-pointer items-start gap-3 rounded-[14px] bg-surface px-4 py-3.5 text-[13.5px] leading-normal text-muted">
-            <input type="checkbox" name="einwilligung" checked={consent} onChange={(event) => setConsent(event.target.checked)} className="mt-px size-5 shrink-0 accent-brand" />
+          <label className={`mt-3 flex cursor-pointer items-start gap-3 rounded-[14px] px-4 py-3.5 text-[13.5px] leading-normal text-muted ${showConsentError ? 'bg-[#fbe9e4] ring-1 ring-[#a3361f]/40' : 'bg-surface'}`}>
+            <input
+              ref={consentRef}
+              type="checkbox"
+              name="einwilligung"
+              checked={consent}
+              onChange={(event) => setConsent(event.target.checked)}
+              aria-invalid={showConsentError ? true : undefined}
+              aria-describedby={showConsentError ? 'warteliste-einwilligung-fehler' : undefined}
+              className="mt-px size-5 shrink-0 accent-brand"
+            />
             <span>
               {copy.consent}{' '}
               <a href={pageHref('home', locale, 'privacy')} className="text-brand underline underline-offset-2">
@@ -163,11 +229,13 @@ export function WaitlistCard() {
               </a>
             </span>
           </label>
-          {error ? (
-            <p role="alert" className="mt-2.5 text-[13.5px] font-medium text-[#a3361f]">
-              {copy.missing}
+          {showConsentError ? (
+            <p id="warteliste-einwilligung-fehler" className="mt-1.5 text-[13px] font-medium text-[#a3361f]">
+              {consentError}
             </p>
           ) : null}
+          {/* Honigtopf: für Menschen unsichtbar, Bots füllen es aus. */}
+          <input type="text" name="website" value={website} onChange={(event) => setWebsite(event.target.value)} tabIndex={-1} autoComplete="off" aria-hidden className="absolute -left-[9999px] h-px w-px opacity-0" />
         </fieldset>
       </div>
 
@@ -177,8 +245,13 @@ export function WaitlistCard() {
           <span className="rounded-full bg-brand-soft px-2.5 py-1 font-medium text-brand-ink">{useTitle}</span>
           <span className="rounded-full border border-line bg-white px-2.5 py-1 text-body">{startLabel}</span>
         </p>
-        <button type="submit" className="group inline-flex h-14 items-center justify-center gap-2.5 rounded-full bg-brand text-[16.5px] font-medium text-white shadow-[0_10px_24px_-12px_rgb(23_100_59/0.8)] transition-colors hover:bg-brand-hover">
-          {copy.submit}
+        {status === 'failed' || status === 'limit' ? (
+          <p role="alert" className="rounded-xl bg-[#fbe9e4] px-3.5 py-2.5 text-[13.5px] font-medium text-[#a3361f]">
+            {status === 'limit' ? copy.limit : copy.failed}
+          </p>
+        ) : null}
+        <button type="submit" disabled={status === 'sending'} className="group inline-flex h-14 items-center justify-center gap-2.5 rounded-full bg-brand text-[16.5px] font-medium text-white shadow-[0_10px_24px_-12px_rgb(23_100_59/0.8)] transition-colors hover:bg-brand-hover disabled:opacity-70">
+          {status === 'sending' ? copy.sending : copy.submit}
           <ArrowRight aria-hidden size={18} strokeWidth={2} className="transition-transform group-hover:translate-x-1" />
         </button>
         <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 text-[12.5px] text-faint">

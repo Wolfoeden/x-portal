@@ -53,6 +53,7 @@ export const IDS = {
     topicAutomation: 'ki-automatisierung',
     topicTraining: 'ki-schulung',
     topicIsms: 'isms',
+    topicPlaces: 'orte',
   },
   en: {
     project: 'project',
@@ -91,6 +92,7 @@ export const IDS = {
     topicAutomation: 'ai-automation',
     topicTraining: 'ai-training',
     topicIsms: 'isms',
+    topicPlaces: 'places',
   },
 } satisfies Record<Locale, Record<string, string>>
 export type Ids = (typeof IDS)['de']
@@ -102,7 +104,7 @@ export function pagePath(page: PageKey, locale: Locale) {
 
 /** Kontaktthemen stehen in der Adresse, damit auch ein Klick im Menü auf der Kontaktseite das Thema wechselt. */
 export const TOPIC_PARAM = { de: 'thema', en: 'topic' } as const
-export const TOPIC_ANCHORS = ['topicAutomation', 'topicTraining', 'topicIsms'] as const satisfies readonly IdKey[]
+export const TOPIC_ANCHORS = ['topicAutomation', 'topicTraining', 'topicIsms', 'topicPlaces'] as const satisfies readonly IdKey[]
 
 /** Pfad mit Anker, z. B. pageHref('home', 'en', 'deck') → /en#deck. Themen der Kontaktseite → /kontakt?thema=isms. */
 export function pageHref(page: PageKey, locale: Locale, anchor?: IdKey) {

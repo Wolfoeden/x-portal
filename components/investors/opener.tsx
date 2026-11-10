@@ -96,10 +96,11 @@ export function InvestorOpener({ locale }: { locale: Locale }) {
     </p>
   )
   const title = (
-    <h1 id="investoren-title" className="flex flex-col items-center gap-[clamp(1rem,1.8vw,1.625rem)] font-normal">
-      <Wordmark title="XPORTAL" className="h-auto w-[min(480px,78vw)] text-[#8fd9ab] drop-shadow-[0_0_32px_rgb(143_217_171/0.35)] xl:w-[33.3vw] xl:max-w-[480px]" />
+    // Sichtbar zweimal (Bühne ab xl, darunter gestapelt), für Screenreader und Suchmaschinen nur einmal als h1 oben im Abschnitt.
+    <div aria-hidden className="flex flex-col items-center gap-[clamp(1rem,1.8vw,1.625rem)] font-normal">
+      <Wordmark className="h-auto w-[min(480px,78vw)] text-[#8fd9ab] drop-shadow-[0_0_32px_rgb(143_217_171/0.35)] xl:w-[33.3vw] xl:max-w-[480px]" />
       <span className="max-w-[620px] text-[clamp(1.125rem,1.55vw,1.375rem)] leading-normal tracking-[-0.01em] text-[#e3efe7]">{copy.textAfterLogo}</span>
-    </h1>
+    </div>
   )
   const actions = (
     <div className="flex flex-wrap justify-center gap-3">
@@ -145,6 +146,9 @@ export function InvestorOpener({ locale }: { locale: Locale }) {
 
   return (
     <section className="relative overflow-hidden bg-brand-deep text-white" aria-labelledby="investoren-title">
+      <h1 id="investoren-title" className="sr-only">
+        {copy.text}
+      </h1>
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_55%_at_50%_38%,#1b5c39_0%,transparent_70%)]" />
 
       {/* Ab xl: eine Bühne, in der Logo, Linien und Karte genau übereinanderliegen. */}
