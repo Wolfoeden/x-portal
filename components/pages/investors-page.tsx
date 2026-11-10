@@ -5,6 +5,7 @@ import { ChapterLoop } from '@/components/investors/chapter-loop'
 import { ChapterWhyNow } from '@/components/investors/chapter-why-now'
 import { ChapterRevenue } from '@/components/investors/chapter-revenue'
 import { ChapterHub } from '@/components/investors/chapter-hub'
+import { ChapterPlots } from '@/components/investors/chapter-plots'
 import { ChapterRoadmap } from '@/components/investors/chapter-roadmap'
 import { ChapterTeam } from '@/components/story/chapter-team'
 import { DeckForm } from '@/components/investors/deck-form'
@@ -20,8 +21,9 @@ export function InvestorsPage({ locale }: { locale: Locale }) {
         <ChapterWhyNow locale={locale} />
         <ChapterRevenue locale={locale} />
         <ChapterHub locale={locale} />
+        <ChapterPlots locale={locale} />
         <ChapterRoadmap />
-        <ChapterTeam locale={locale} number="07" />
+        <ChapterTeam locale={locale} number="08" />
         <DeckForm />
       </main>
       <SiteFooter locale={locale} />

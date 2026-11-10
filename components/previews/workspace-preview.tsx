@@ -3,9 +3,9 @@ import { DiscordLogo, SlackLogo } from '@/components/brand/channel-logos'
 import { AppRail, Avatar, Pill, Stepper, type AvatarTone } from './app-parts'
 
 const team: { name: string; role: string; initials: string; tone: AvatarTone; place: string; hours: string; access: string; onSite: boolean; amount: string }[] = [
-  { name: 'Mara', role: 'Projektleitung', initials: 'MA', tone: 'green', place: 'Hub Ukraine', hours: '120 h', access: 'Personendaten', onSite: true, amount: '4.800' },
-  { name: 'Leon', role: 'Data Engineer', initials: 'LE', tone: 'amber', place: 'Hub Ukraine', hours: '80 h', access: 'Personendaten', onSite: true, amount: '2.800' },
-  { name: 'Eva', role: 'Qualitätssicherung', initials: 'EV', tone: 'slate', place: 'Hub Ukraine', hours: '60 h', access: 'Personendaten', onSite: true, amount: '1.800' },
+  { name: 'Mara', role: 'Projektleitung', initials: 'MA', tone: 'green', place: 'Node Ukraine', hours: '120 h', access: 'Personendaten', onSite: true, amount: '4.800' },
+  { name: 'Leon', role: 'Data Engineer', initials: 'LE', tone: 'amber', place: 'Node Ukraine', hours: '80 h', access: 'Personendaten', onSite: true, amount: '2.800' },
+  { name: 'Eva', role: 'Qualitätssicherung', initials: 'EV', tone: 'slate', place: 'Node Ukraine', hours: '60 h', access: 'Personendaten', onSite: true, amount: '1.800' },
   { name: 'Noah', role: 'Design', initials: 'NO', tone: 'stone', place: 'Remote', hours: '60 h', access: 'Synthetische Daten', onSite: false, amount: '2.100' },
 ]
 
@@ -37,7 +37,7 @@ export function WorkspacePreview() {
               <Users size={17} strokeWidth={1.75} />
             </span>
             <div className="min-w-0 flex-1">
-              <p className="text-[14px] font-medium">KI-Teamvorschlag: 3 Personen vor Ort im Hub, 1 remote</p>
+              <p className="text-[14px] font-medium">KI-Teamvorschlag: 3 Personen vor Ort im Node, 1 remote</p>
               <p className="mt-1 leading-relaxed text-body/80">
                 Das Projekt verarbeitet Kundendaten. Sie bleiben im gesicherten Bereich beim Team vor Ort. Das Design arbeitet remote mit synthetischen Testdaten.
               </p>

@@ -1,6 +1,6 @@
 import { IDS, TOPIC_PARAM, pageHref, type IdKey, type Locale } from '@/lib/i18n/routes'
 
-// Themen der Kontaktseite. Die drei Leistungen kommen aus dem Menü, „places“ sind Fragen zu den Orten (Hub 01), „general“ ist alles andere.
+// Themen der Kontaktseite. Die drei Leistungen kommen aus dem Menü, „places“ sind Fragen zu den Orten (Node001), „general“ ist alles andere.
 
 export const CONTACT_TOPICS = ['automation', 'training', 'isms', 'places', 'general'] as const
 export type ContactTopic = (typeof CONTACT_TOPICS)[number]

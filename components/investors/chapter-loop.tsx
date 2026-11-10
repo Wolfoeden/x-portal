@@ -15,7 +15,7 @@ const at = (degrees: number, radius = R) => {
   return [C + radius * Math.cos(rad), C + radius * Math.sin(rad)] as const
 }
 
-// Im Uhrzeigersinn: Talente bilden Teams für Projekte, Projekte füllen die Hubs, Hubs ziehen Talente an.
+// Im Uhrzeigersinn: Talente bilden Teams für Projekte, Projekte füllen die Nodes, Nodes ziehen Talente an.
 const nodeShapes: { angle: number; icon: LucideIcon }[] = [
   { angle: -90, icon: Users },
   { angle: 30, icon: FolderKanban },

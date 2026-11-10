@@ -10,14 +10,14 @@ import { HUB_01 } from '@/lib/map/hubs'
 
 /**
  * Einstieg der Investorenseite: Das grüne XPORTAL-Logo steht in der Mitte, alle Orte Europas laufen dorthin zusammen.
- * Darunter die Höhenkarte; Hub 01 in den Karpaten hat eine eigene grüne Linie zum Logo und zeigt beim Überfahren oder Antippen ein Vorschaubild.
+ * Darunter die Höhenkarte; Node001 in den Karpaten hat eine eigene grüne Linie zum Logo und zeigt beim Überfahren oder Antippen ein Vorschaubild.
  * Gezeichnet in einer festen Bühne von 1440 × 980; ab xl wird sie als Ganzes skaliert, darunter stehen Text und Karte untereinander.
  */
 
 const STAGE = { width: 1440, height: 980 }
 const LOGO = { x: 720, y: 330 } // Mitte des Logos in der Bühne
 const SCALE = 1.1 // Karteneinheiten → Bühne
-// Die Karte so legen, dass Mitteleuropa um das Logo liegt und Hub 01 rechts neben dem Text frei steht.
+// Die Karte so legen, dass Mitteleuropa um das Logo liegt und Node001 rechts neben dem Text frei steht.
 const [ANCHOR_X, ANCHOR_Y] = projectLonLat(12, 52)
 const MAP_X = LOGO.x - ANCHOR_X * SCALE + 100
 const MAP_Y = LOGO.y - ANCHOR_Y * SCALE + 40
@@ -167,7 +167,7 @@ export function InvestorOpener({ locale }: { locale: Locale }) {
         <div className="absolute inset-x-[116px] bottom-10">{figures}</div>
       </div>
 
-      {/* Darunter: Text oben, Karte mit Hub 01 darunter, Zahlen am Ende. */}
+      {/* Darunter: Text oben, Karte mit Node001 darunter, Zahlen am Ende. */}
       <div className="relative flex flex-col items-center gap-8 px-5 pb-12 pt-12 text-center md:px-8 xl:hidden">
         {dataPill}
         <div className="flex flex-col items-center gap-4">

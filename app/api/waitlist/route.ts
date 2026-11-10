@@ -2,7 +2,7 @@ import { WaitlistBody, submitWaitlist, type WaitlistInput } from '@/lib/waitlist
 import { isSameOrigin, readJson, visitorKey } from '@/lib/server/request'
 import { supabaseAdmin } from '@/lib/server/supabase-admin'
 
-// Warteliste Hub 01. Antwort: { ok: true } oder der Grund, warum nicht.
+// Warteliste Node001. Antwort: { ok: true } (der Bestätigungslink ist unterwegs) oder der Grund, warum nicht.
 
 const noStore = { 'cache-control': 'no-store' }
 
@@ -18,7 +18,7 @@ export async function POST(request: Request) {
   // Bots bekommen dieselbe Antwort wie Menschen, gespeichert wird nichts.
   if (body.website) return Response.json({ ok: true }, { headers: noStore })
 
-  const result = await submitWaitlist(body, visitorKey(request), supabaseAdmin())
+  const result = await submitWaitlist(body, visitorKey(request), new URL(request.url).origin, supabaseAdmin())
   const status = result.ok ? 200 : result.reason === 'limit' ? 429 : 503
   return Response.json(result, { status, headers: noStore })
 }

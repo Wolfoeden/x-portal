@@ -53,7 +53,7 @@ describe('submitContact', () => {
   it('speichert Fragen zu den Orten als Allgemein, erkennbar am Kennzeichen vorn', async () => {
     const { db, rows } = fakeDb()
     await submitContact({ ...input, topic: 'places', message: 'Gibt es dort Kinderbetreuung?' }, visitor, db, noMail)
-    expect(rows[0]).toMatchObject({ topic: 'general', service: null, message: '[Orte und Hub 01] Gibt es dort Kinderbetreuung?' })
+    expect(rows[0]).toMatchObject({ topic: 'general', service: null, message: '[Orte und Node001] Gibt es dort Kinderbetreuung?' })
   })
 
   it('hält das Tageslimit ein und speichert dann nichts', async () => {

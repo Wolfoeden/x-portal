@@ -1,11 +1,12 @@
 'use client'
 
-import { useRef, useState, type ComponentType } from 'react'
+import { useEffect, useRef, useState, type ComponentType } from 'react'
 import { ArrowRight, Check, Clock, House, Laptop, Mail, Tag, User, type LucideProps } from 'lucide-react'
 import { useLocale } from '@/components/i18n/locale-provider'
 import { useWaitlist, type WaitlistStart, type WaitlistUse } from '@/components/places/waitlist-state'
 import { fill } from '@/lib/i18n/format'
 import { pageHref } from '@/lib/i18n/routes'
+import { WAITLIST_RESULT_PARAM, type WaitlistResultValue } from '@/lib/waitlist/result'
 
 const ICONS: Record<WaitlistUse, ComponentType<LucideProps>> = { workation: Laptop, mieten: House, kaufen: Tag }
 
@@ -25,8 +26,9 @@ const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 type Status = 'idle' | 'sending' | 'failed' | 'limit'
 
 /**
- * Karte der Warteliste. Sendet an /api/waitlist; gespeichert wird wie beim Kontaktformular in contact_requests
- * (sichtbar in ops.posteingang), dazu eine Bestätigung per Mail. Fehler stehen am Feld, der Fokus springt zum ersten.
+ * Karte der Warteliste. Sendet an /api/waitlist; gespeichert wird unbestätigt in waitlist_entries, dazu geht ein Link per Mail.
+ * Erst der Klick darauf bestätigt den Eintrag; der Link führt mit ?waitlist=ok oder ?waitlist=expired hierher zurück.
+ * Fehler stehen am Feld, der Fokus springt zum ersten.
  */
 export function WaitlistCard() {
   const { locale, dict } = useLocale()
@@ -38,8 +40,15 @@ export function WaitlistCard() {
   const [tried, setTried] = useState(false)
   const [status, setStatus] = useState<Status>('idle')
   const [done, setDone] = useState(false)
+  const [returned, setReturned] = useState<WaitlistResultValue | null>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const consentRef = useRef<HTMLInputElement>(null)
+
+  // Rückkehr vom Bestätigungslink aus der Mail.
+  useEffect(() => {
+    const value = new URLSearchParams(window.location.search).get(WAITLIST_RESULT_PARAM)
+    if (value === 'ok' || value === 'expired') setReturned(value)
+  }, [])
 
   const emailError = !email.trim() ? copy.emailMissing : EMAIL.test(email.trim()) ? null : copy.emailInvalid
   const consentError = consent ? null : copy.consentMissing
@@ -61,6 +70,7 @@ export function WaitlistCard() {
       })
       if (response.ok) {
         setStatus('idle')
+        setReturned(null)
         setDone(true)
         return
       }
@@ -72,6 +82,18 @@ export function WaitlistCard() {
 
   const useTitle = copy.uses.find((item) => item.id === use)?.title ?? ''
   const startLabel = copy.starts.find((item) => item.id === start)?.label ?? ''
+
+  if (returned === 'ok' && !done) {
+    return (
+      <div className="flex flex-col items-start gap-5 p-8 md:p-10" role="status">
+        <span className="grid size-14 place-items-center rounded-full bg-brand text-white">
+          <Check aria-hidden size={26} strokeWidth={2.25} />
+        </span>
+        <h3 className="text-[32px] font-medium leading-[1.05] tracking-[-0.03em] text-ink">{copy.confirmedTitle}</h3>
+        <p className="max-w-[440px] text-muted">{copy.confirmedText}</p>
+      </div>
+    )
+  }
 
   if (done) {
     return (
@@ -127,6 +149,11 @@ export function WaitlistCard() {
       </div>
 
       <div className="flex flex-col gap-7 px-5 py-6 md:px-8 md:py-7">
+        {returned === 'expired' ? (
+          <p role="status" className="rounded-xl bg-[#fbe9e4] px-3.5 py-2.5 text-[13.5px] text-[#a3361f]">
+            <span className="font-medium">{copy.expiredTitle}</span> {copy.expiredText}
+          </p>
+        ) : null}
         <fieldset className="min-w-0">
           <Step number={1}>{copy.useQuestion}</Step>
           <div className="flex flex-col gap-2">

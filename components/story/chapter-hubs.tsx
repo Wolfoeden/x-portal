@@ -17,7 +17,7 @@ import { pagePath } from '@/lib/i18n/routes'
 // Kartenausschnitt mit etwas Luft oben für die hohen Blöcke in Skandinavien.
 const VIEW = { y: -50, height: MAP.height + 50 }
 
-/** relief: Höhenblöcke der Karte (components/map/relief-map.tsx), auf dem Server gezeichnet. hub: Hub 01 oben auf seinem Block. */
+/** relief: Höhenblöcke der Karte (components/map/relief-map.tsx), auf dem Server gezeichnet. hub: Node001 oben auf seinem Block. */
 type MapProps = { relief: ReactNode; hub: { x: number; top: number } }
 
 // Geometrie der Bildmarke (Einheiten der viewBox 123 × 100).

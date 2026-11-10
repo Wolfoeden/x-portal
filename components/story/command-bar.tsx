@@ -6,7 +6,7 @@ import { useStory } from '@/components/story/story-context'
 import { useLocale } from '@/components/i18n/locale-provider'
 import { useAutoHeight } from '@/lib/use-auto-height'
 
-// Schwebt unten, sobald der Aufmacher aus dem Bild ist, und tritt bei den Hubs, den Türen und im Footer zurück.
+// Schwebt unten, sobald der Aufmacher aus dem Bild ist, und tritt bei den Nodes, den Türen und im Footer zurück.
 export function CommandBar() {
   const { askFor } = useStory()
   const { dict, ids } = useLocale()

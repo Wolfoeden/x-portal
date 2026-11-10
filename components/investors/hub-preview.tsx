@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 
-/** Hub 01 auf der Karte: Punkt mit Schild. Überfahren oder Antippen zeigt das Bild vom Grundstück, ein Klick darauf führt zu den Orten. */
+/** Node001 auf der Karte: Punkt mit Schild. Überfahren oder Antippen zeigt das Bild vom Grundstück, ein Klick darauf führt zu den Orten. */
 export function HubPreview(props: { href: string; name: string; status: string; show: string; title: string; text: string; action: string; label: string; imageAlt: string }) {
   const [open, setOpen] = useState(false)
   return (

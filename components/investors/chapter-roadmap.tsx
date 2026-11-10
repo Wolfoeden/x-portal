@@ -7,7 +7,7 @@ import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { useLocale } from '@/components/i18n/locale-provider'
 
-// Nach der Roadmap „Von Talenten zu zehn Hubs“ von XPORTAL; Texte im Wörterbuch.
+// Nach der Roadmap „Von Talenten zu zehn Nodes“ von XPORTAL; Texte im Wörterbuch.
 export function ChapterRoadmap() {
   const reduceMotion = useReducedMotion()
   const { dict, ids } = useLocale()
@@ -24,7 +24,7 @@ export function ChapterRoadmap() {
     <section id={ids.roadmap} className="scroll-mt-16 py-28 md:py-40" aria-labelledby="roadmap-title">
       <Container className="flex flex-col gap-14">
         <div className="flex max-w-[760px] flex-col gap-5">
-          <ChapterLabel number="06">{copy.label}</ChapterLabel>
+          <ChapterLabel number="07">{copy.label}</ChapterLabel>
           <h2 id="roadmap-title" className={`${chapterTitle} text-ink`}>
             {copy.title}
           </h2>
@@ -39,7 +39,7 @@ export function ChapterRoadmap() {
             style={{ scaleY: reduceMotion ? 1 : progress }}
           />
           <motion.div aria-hidden className="absolute left-0 top-[11px] hidden h-0.5 w-full origin-left bg-brand md:block" style={{ scaleX: reduceMotion ? 1 : progress }} />
-          <ol ref={trackRef} className="relative grid grid-cols-[minmax(0,1fr)] gap-10 md:grid-cols-4 md:gap-6">
+          <ol ref={trackRef} className="relative grid grid-cols-[minmax(0,1fr)] gap-10 md:grid-cols-6 md:gap-5">
             {milestones.map((milestone, index) => {
               const on = index < shown
               return (
@@ -53,7 +53,7 @@ export function ChapterRoadmap() {
                   </span>
                   <span className={`flex flex-col gap-2 transition-opacity duration-500 ${on ? 'opacity-100' : 'opacity-40'}`}>
                     <span className="text-[14px] font-medium text-brand-ink">{milestone.when}</span>
-                    <span className="text-[22px] font-medium leading-tight tracking-[-0.015em] text-ink">{milestone.title}</span>
+                    <span className="text-[22px] font-medium leading-tight tracking-[-0.015em] text-ink md:text-[18px] lg:text-[20px]">{milestone.title}</span>
                     <span className={`w-fit rounded-full px-2.5 py-1 text-[12.5px] font-medium ${milestone.live ? 'bg-brand-soft text-brand-ink' : 'bg-surface text-muted'}`}>
                       {milestone.status}
                     </span>

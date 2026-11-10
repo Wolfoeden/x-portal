@@ -16,7 +16,7 @@ const topOf = (y: number) => `${((y - VIEW.y) / VIEW.height) * 100}%`
 
 /**
  * Hero der Seite Orte wie das Vorschaubild beim Teilen: Drohnenbild über die ganze Breite, links abgedunkelt,
- * darauf „Hub 01 · Westukraine“, die Überschrift und der Weg zur Warteliste. Darunter läuft das E-Mail-Feld mit, dann die Höhenkarte.
+ * darauf „Node001 · Westukraine“, die Überschrift und der Weg zur Warteliste. Darunter läuft das E-Mail-Feld mit, dann die Höhenkarte.
  */
 export function PlacesHero({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale).places

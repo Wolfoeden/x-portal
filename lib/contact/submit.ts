@@ -50,7 +50,7 @@ export async function submitContact(input: ContactInput, visitor: Visitor, db: S
     name: input.name,
     email: input.email,
     company: input.company || null,
-    message: input.topic === 'places' ? `[Orte und Hub 01] ${input.message}`.slice(0, 4_000) : input.message,
+    message: input.topic === 'places' ? `[Orte und Node001] ${input.message}`.slice(0, 4_000) : input.message,
     locale: input.locale,
   })
   if (error) {
