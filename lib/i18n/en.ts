@@ -744,7 +744,6 @@ export const en: Dictionary = {
       { name: 'Roman Dering', role: 'Product and project', photo: '/team/roman-dering.webp', linkedin: 'https://www.linkedin.com/in/roman-dering/' },
       { name: 'Pavel J.', role: 'Lead Developer' },
       { name: 'Nazar D.', role: 'Architect · Nodes' },
-      { name: 'Max H.', role: 'Legal counsel' },
     ],
   },
 

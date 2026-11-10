@@ -753,7 +753,6 @@ export const de = {
       { name: 'Roman Dering', role: 'Produkt und Projekt', photo: '/team/roman-dering.webp', linkedin: 'https://www.linkedin.com/in/roman-dering/' },
       { name: 'Pavel J.', role: 'Lead Developer' },
       { name: 'Nazar D.', role: 'Architekt · Nodes' },
-      { name: 'Max H.', role: 'Jurist' },
     ]),
   },
 
