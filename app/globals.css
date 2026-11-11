@@ -243,7 +243,7 @@ html:not([data-auth='in']) .auth-in {
 @keyframes relief-rise {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(4px);
   }
   to {
     opacity: 1;
@@ -312,43 +312,6 @@ html:not([data-auth='in']) .auth-in {
 }
 
 
-/* Höhere Blöcke der Europakarte bewegen sich leicht: die Wand wächst, die Oberseite hebt sich mit. */
-@keyframes relief-grow {
-  0%,
-  100% {
-    transform: scaleY(1);
-  }
-  50% {
-    transform: scaleY(var(--grow));
-  }
-}
-
-@keyframes relief-lift {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(var(--lift));
-  }
-}
-
-.relief-side {
-  transform-box: fill-box;
-  transform-origin: 50% 100%;
-  animation: relief-grow var(--period) ease-in-out var(--delay) infinite;
-}
-
-.relief-top {
-  animation: relief-lift var(--period) ease-in-out var(--delay) infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .relief-side,
-  .relief-top {
-    animation: none;
-  }
-}
 
 /* Einstieg Investoren (components/investors/opener.tsx): Linien laufen zum Logo, Orte ploppen auf. */
 @keyframes opener-flow {
