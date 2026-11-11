@@ -2,21 +2,21 @@ import { EUROPE_RELIEF } from '@/lib/map/europe-relief'
 import { projectLonLat } from '@/lib/map/europe'
 
 /**
- * Punktkarte Europas als feine Waben: sechseckige Prismen in schräger Aufsicht, so hoch wie das Gelände.
- * Deckfläche hell, linke Wand mittel, rechte Wand dunkel; jede zweite Reihe ist um eine halbe Wabe versetzt.
+ * Punktkarte Europas als Wabenrelief in Draufsicht: eine geschlossene Fläche feiner Sechsecke, beleuchtet wie eine Reliefkarte.
+ * Farbe nach Höhe (Tiefland dunkelgrün, Hochgebirge hell), Licht von Nordwest: Lichthänge hell, Schattenhänge dunkel.
  * density teilt jeden Datenpunkt in density × density Waben; ihre Höhe wird aus den Nachbarpunkten gemittelt,
  * an der Küste fallen Waben weg, die zum Meer zeigen. So wird das Raster feiner, ohne neue Höhendaten.
  * Die Waben stehen still; nur beim ersten Zeigen werden die Reihen von Norden nach Süden eingeblendet (animate).
- * Um den gezeigten Punkt (focus) leuchten sie grün. Reine SVG-Gruppe ohne Client-Code; sie gehört in ein <svg> mit EUROPE_VIEWBOX.
+ * Nur die Wabe unter dem gezeigten Ort (focus) ist grün. Reine SVG-Gruppe ohne Client-Code; sie gehört in ein <svg> mit EUROPE_VIEWBOX.
  */
 
-type Cell = { x: number; y: number; h: number; e: number }
+type Cell = { x: number; y: number; h: number; e: number; light: number }
 
 const STEP = 19.44 // Punktabstand der Höhendaten
-const R = 7.6 // Radius einer Wabe bei density 1; der Rest bis zum Abstand bleibt als feine Fuge
-const SQUASH = 0.55 // Neigung: so flach erscheint die Deckfläche
-const BASE = 1.2 // Sockel: auch flaches Land steht als dünne Wabe auf der Karte
-const MAX_HEIGHT = 30 // Höhe für 2.800 m und mehr, in Karteneinheiten
+const FILL = 0.575 // Radius einer Wabe im Verhältnis zum Abstand: die Waben schließen bis auf eine haarfeine Fuge
+const SQUASH = 1 // Draufsicht: die Fläche schließt, die Berge zeigt das Licht
+const BASE = 0 // Sockel: auch flaches Land steht als dünne Wabe auf der Karte
+const MAX_HEIGHT = 0 // Höhe für 2.800 m und mehr, in Karteneinheiten
 const FLAT = 150 // bis zu dieser Höhe bleibt nur der Sockel
 const LEVELS = [0, 250, 600, 1000, 1500, 2200] // Höhenstufen in Metern
 const DENSITY = 2 // Standard: vier Waben je Datenpunkt
@@ -26,6 +26,27 @@ const SOURCE = EUROPE_RELIEF.split(';').map((row) => {
   return { x, y, e }
 })
 const GRID = new Map(SOURCE.map((point) => [`${Math.round(point.x / STEP)},${Math.round(point.y / STEP)}`, point.e]))
+const at = (col: number, row: number, fallback: number) => GRID.get(`${col},${row}`) ?? fallback
+
+// Schummerung wie auf einer Reliefkarte: Licht von Nordwest, 45° hoch. Gelände überhöht, damit Hänge sichtbar werden.
+const EXAGGERATE = 0.05 // je Meter Höhenunterschied auf einen Punktabstand
+const LIGHT = (() => {
+  const v = [-1, -1, 1.4]
+  const n = Math.hypot(...v)
+  return v.map((c) => c / n)
+})()
+const FLAT_LIGHT = LIGHT[2]
+/** Helligkeit eines Datenpunkts, 0 (Schattenhang) bis 1 (Lichthang), 0,5 auf ebenem Land. */
+function lightAt(col: number, row: number, e: number) {
+  const dzdx = ((at(col + 1, row, e) - at(col - 1, row, e)) / 2) * EXAGGERATE / STEP * 19.44
+  const dzdy = ((at(col, row + 1, e) - at(col, row - 1, e)) / 2) * EXAGGERATE / STEP * 19.44
+  const n = Math.hypot(dzdx, dzdy, 1)
+  const dot = (-dzdx * LIGHT[0] - dzdy * LIGHT[1] + LIGHT[2]) / n
+  // Im Flachland kaum Schatten, sonst rauscht die Fläche; ab etwa 700 m volle Schummerung.
+  const weight = Math.min(1, Math.max(0, (e - 120) / 600))
+  return Math.max(0, Math.min(1, 0.5 + (dot - FLAT_LIGHT) * 2.4 * weight))
+}
+
 const heightOf = (e: number) => BASE + MAX_HEIGHT * Math.max(0, Math.min(e, 2800) - FLAT) / (2800 - FLAT)
 
 const cache = new Map<number, Cell[]>()
@@ -39,6 +60,7 @@ function cellsFor(density: number): Cell[] {
   for (const point of SOURCE) {
     const col = Math.round(point.x / STEP)
     const row = Math.round(point.y / STEP)
+    const light = lightAt(col, row, point.e)
     for (let a = 0; a < density; a++) {
       for (let b = 0; b < density; b++) {
         // Lage der Wabe im Datenpunkt, von −0,5 bis 0,5
@@ -54,7 +76,7 @@ function cellsFor(density: number): Cell[] {
         const y = point.y + v * STEP
         const subRow = Math.round(y / sub)
         const x = point.x + u * STEP + (subRow % 2 ? sub / 2 : 0)
-        cells.push({ x, y, e, h: heightOf(e) })
+        cells.push({ x, y, e, h: heightOf(e), light })
       }
     }
   }
@@ -80,28 +102,23 @@ export function reliefPoint(lon: number, lat: number, size = 1, density = DENSIT
   return { x: best.x, y: best.y, top: best.y - best.h * size, elevation: best.e }
 }
 
+// Farben je Ton: Tiefland, Hochgebirge (fast weiß), Seitenwand. Die Deckfläche mischt Höhe und Licht.
 const TONES = {
-  dark: {
-    top: ['#bfd8c8', '#bfd8c8', '#cfe3d6', '#dcebe1', '#eaf4ed', '#ffffff'],
-    topOpacity: [0.22, 0.3, 0.4, 0.52, 0.64, 0.76],
-    front: '#336f4d',
-    right: '#24583b',
-    sideOpacity: [0.45, 0.5, 0.55, 0.6, 0.65, 0.7],
-    focusTop: '#8fd9ab',
-    focusFront: '#4f9a6e',
-    focusRight: '#2f6a49',
-  },
-  light: {
-    top: ['#c9d0cb', '#b4c3b9', '#9fb6a7', '#7f9e8a', '#5f8570', '#3f6b52'],
-    topOpacity: [0.7, 0.8, 0.85, 0.9, 0.95, 1],
-    front: '#7c857f',
-    right: '#5f6762',
-    sideOpacity: [0.3, 0.35, 0.4, 0.45, 0.5, 0.55],
-    focusTop: '#17643b',
-    focusFront: '#1d7a49',
-    focusRight: '#0f4d2c',
-  },
+  dark: { low: [29, 82, 54], high: [200, 233, 213], wall: [14, 52, 33], focus: '#8fd9ab' },
+  light: { low: [214, 223, 217], high: [63, 107, 82], wall: [150, 160, 154], focus: '#17643b' },
 } as const
+
+const LIGHT_LEVELS = 7
+type RGB = readonly [number, number, number]
+const hex = (c: readonly number[]) => `#${c.map((v) => Math.round(Math.max(0, Math.min(255, v))).toString(16).padStart(2, '0')).join('')}`
+const mix = (a: RGB, b: RGB, t: number) => a.map((v, i) => v + (b[i] - v) * t)
+/** Farbe der Deckfläche: Höhenton aus Stufe, aufgehellt oder abgedunkelt nach Lichtstufe. */
+function topColor(tone: keyof typeof TONES, stage: number, shade: number) {
+  const t = TONES[tone]
+  const base = mix(t.low, t.high, Math.pow(stage / (LEVELS.length - 1), 0.9))
+  const f = 0.7 + (shade / (LIGHT_LEVELS - 1)) * 0.6 // 0,7 im Schatten bis 1,3 im Licht
+  return hex(base.map((v) => v * f))
+}
 
 type Group = { key: string; fill: string; opacity: number; d: string }
 
@@ -117,15 +134,16 @@ const corners = (radius: number) =>
     return [radius * Math.cos(angle), radius * SQUASH * Math.sin(angle)] as const
   })
 
-function buildRows(focus: [number, number] | undefined, radius: number, tone: keyof typeof TONES, size: number, density: number) {
-  const CORNERS = corners((R * size) / density)
+function buildRows(focus: [number, number] | undefined, _radius: number, tone: keyof typeof TONES, size: number, density: number) {
+  const CORNERS = corners((STEP / density) * FILL * size)
   // Jede Wabe hat dieselbe Form: einmal als relative Schritte, dann je Wabe nur der Anfangspunkt.
   const d = (a: number, b: number) => step(CORNERS[b][0] - CORNERS[a][0], CORNERS[b][1] - CORNERS[a][1])
   const TOP = `l${d(0, 1)}l${d(1, 2)}l${d(2, 3)}l${d(3, 4)}l${d(4, 5)}z`
   const LEFT = [`l${d(1, 2)}v`, `l${d(2, 1)}z`]
   const RIGHT = [`l${d(0, 1)}v`, `l${d(1, 0)}z`]
   const colors = TONES[tone]
-  const [fx, fy] = focus ? projectLonLat(focus[0], focus[1]) : [Infinity, Infinity]
+  // Nur die eine Wabe unter dem gezeigten Ort wird grün, kein Kreis drumherum.
+  const target = focus ? reliefPoint(focus[0], focus[1], 1, density) : null
   const rows = new Map<number, Cell[]>()
   for (const cell of cellsFor(density)) {
     const key = Math.round(cell.y * 10)
@@ -140,21 +158,23 @@ function buildRows(focus: [number, number] | undefined, radius: number, tone: ke
       const tops = new Map<string, Group>()
       for (const cell of cells) {
         const stage = level(cell.e)
-        const near = Math.hypot(cell.x - fx, cell.y - fy) < radius
-        const id = `${near ? 'f' : 'n'}${stage}`
+        const shade = Math.round(cell.light * (LIGHT_LEVELS - 1))
+        const isTarget = target !== null && cell.x === target.x && cell.y === target.y
+        const id = isTarget ? 'f' : `${stage}-${shade}`
         const h = cell.h * size
         const top = cell.y - h
         const at = (i: number) => `${f(cell.x + CORNERS[i][0])} ${f(top + CORNERS[i][1])}`
         // Flache Waben ohne sichtbare Wand: nur die Deckfläche, das hält die Seite leicht.
         if (h >= 1.5) {
-        const left = lefts.get(id) ?? { key: `l${id}`, fill: near ? colors.focusFront : colors.front, opacity: colors.sideOpacity[stage], d: '' }
-        left.d += `M${at(1)}${LEFT[0]}${f(h)}${LEFT[1]}`
-        lefts.set(id, left)
-        const right = rights.get(id) ?? { key: `r${id}`, fill: near ? colors.focusRight : colors.right, opacity: colors.sideOpacity[stage], d: '' }
-        right.d += `M${at(0)}${RIGHT[0]}${f(h)}${RIGHT[1]}`
-        rights.set(id, right)
+          const wall = hex(mix(colors.wall, TONES[tone].low, 0.25 + 0.1 * stage))
+          const left = lefts.get(id) ?? { key: `l${id}`, fill: wall, opacity: 0.9, d: '' }
+          left.d += `M${at(1)}${LEFT[0]}${f(h)}${LEFT[1]}`
+          lefts.set(id, left)
+          const right = rights.get(id) ?? { key: `r${id}`, fill: hex(colors.wall), opacity: 0.95, d: '' }
+          right.d += `M${at(0)}${RIGHT[0]}${f(h)}${RIGHT[1]}`
+          rights.set(id, right)
         }
-        const face = tops.get(id) ?? { key: `t${id}`, fill: near ? colors.focusTop : colors.top[stage], opacity: near ? Math.min(1, colors.topOpacity[stage] + 0.35) : colors.topOpacity[stage], d: '' }
+        const face = tops.get(id) ?? { key: `t${id}`, fill: isTarget ? colors.focus : topColor(tone, stage, shade), opacity: 1, d: '' }
         face.d += `M${at(0)}${TOP}`
         tops.set(id, face)
       }

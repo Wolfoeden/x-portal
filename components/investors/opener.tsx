@@ -21,7 +21,7 @@ const LOGO = { x: 720, y: 330 } // Mitte des Logos in der Bühne
 const SCALE = 1.5 // Karteneinheiten → Bühne
 const MAP_X = 0
 const MAP_Y = -425
-const MAP_SIZE = 0.85 // etwas flachere Waben, weil die Karte hier groß steht
+const MAP_SIZE = 1 // Waben in voller Größe, damit die Fläche schließt
 const toStage = (x: number, y: number): [number, number] => [MAP_X + x * SCALE, MAP_Y + y * SCALE]
 // Schmale Bildschirme: eigener Ausschnitt ohne hohen Norden, wie bisher.
 const [ANCHOR_X, ANCHOR_Y] = projectLonLat(12, 52)
