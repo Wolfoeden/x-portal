@@ -2,7 +2,7 @@
 
 import { MotionConfig, motion } from 'motion/react'
 import { useReducedMotion } from '@/lib/use-reduced-motion'
-import { Building2, FolderKanban, Users, type LucideIcon } from 'lucide-react'
+import { Bot, FolderKanban, Users, type LucideIcon } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { LogoMark } from '@/components/brand/logo'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
@@ -15,11 +15,12 @@ const at = (degrees: number, radius = R) => {
   return [C + radius * Math.cos(rad), C + radius * Math.sin(rad)] as const
 }
 
-// Im Uhrzeigersinn: Talente bilden Teams für Projekte, Projekte füllen die Nodes, Nodes ziehen Talente an.
+// Im Uhrzeigersinn: Teams liefern Kundenprojekte, aus wiederkehrenden Aufgaben werden KI-Agenten, ihre Erlöse fließen in Team und Plattform.
+// Die Nodes stehen nicht im Kreis: Sie sind die geplante Umgebung dafür (Absatz unter der Liste).
 const nodeShapes: { angle: number; icon: LucideIcon }[] = [
   { angle: -90, icon: Users },
   { angle: 30, icon: FolderKanban },
-  { angle: 150, icon: Building2 },
+  { angle: 150, icon: Bot },
 ]
 
 export function ChapterLoop() {
@@ -51,6 +52,10 @@ export function ChapterLoop() {
                 </li>
               ))}
             </ol>
+            <div className="mt-2 rounded-[20px] bg-surface p-5">
+              <p className="text-[15px] font-medium text-ink">{copy.placesTitle}</p>
+              <p className="mt-1.5 text-[15px] leading-relaxed text-muted">{copy.places}</p>
+            </div>
           </div>
 
           <div aria-hidden className="relative mx-auto aspect-square w-full max-w-[520px]">

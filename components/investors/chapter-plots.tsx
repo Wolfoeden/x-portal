@@ -16,7 +16,7 @@ export function ChapterPlots({ locale }: { locale: Locale }) {
     <section id={ids.plots} className="scroll-mt-16 py-28 md:py-40" aria-labelledby="plots-title">
       <Container className="flex flex-col gap-14">
         <div className="flex max-w-[760px] flex-col gap-5">
-          <ChapterLabel number="06">{copy.label}</ChapterLabel>
+          <ChapterLabel number="07">{copy.label}</ChapterLabel>
           <h2 id="plots-title" className={`${chapterTitle} text-ink`}>
             {copy.title}
           </h2>

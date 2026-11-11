@@ -22,7 +22,7 @@ export function ChapterHub({ locale }: { locale: Locale }) {
     <section id={IDS[locale].hub01} className="scroll-mt-16 bg-brand-deep py-28 text-white md:py-40" aria-labelledby="hub-title">
       <Container className="grid grid-cols-[minmax(0,1fr)] gap-14 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
         <div className="flex flex-col gap-5">
-          <ChapterLabel number="05" tone="light">
+          <ChapterLabel number="06" tone="light">
             {copy.label}
           </ChapterLabel>
           <h2 id="hub-title" className={`${chapterTitle} text-white`}>
