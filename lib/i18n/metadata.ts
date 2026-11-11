@@ -7,6 +7,8 @@ import { SITE_INDEXABLE, SITE_URL } from '@/lib/site'
 export function pageMetadata(page: PageKey, locale: Locale): Metadata {
   const meta = getDictionary(locale).meta[page]
   const paths = PAGES[page]
+  // Vorschaubild beim Teilen (WhatsApp, LinkedIn, Telegram …): für Orte das Drohnenbild, sonst das Logo. Erzeugt als feste Bilder in public/og.
+  const image = { url: `/og/${page === 'places' ? 'orte' : 'xportal'}-${locale}.jpg`, width: 1200, height: 630, alt: meta.title }
   return {
     title: meta.title,
     description: meta.description,
@@ -21,7 +23,9 @@ export function pageMetadata(page: PageKey, locale: Locale): Metadata {
       locale: locale === 'de' ? 'de_DE' : 'en_GB',
       siteName: 'XPORTAL',
       type: 'website',
+      images: [image],
     },
+    twitter: { card: 'summary_large_image', title: meta.title, description: meta.description, images: [image.url] },
   }
 }
 
