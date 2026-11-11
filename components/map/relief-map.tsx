@@ -2,29 +2,32 @@ import { EUROPE_RELIEF } from '@/lib/map/europe-relief'
 import { projectLonLat } from '@/lib/map/europe'
 
 /**
- * Punktkarte Europas als Gelände aus Quadern: Jeder Punkt steht als Block in schräger Aufsicht, so hoch wie das Gelände.
- * Deckfläche hell, Vorderwand mittel, rechte Seitenwand dunkel; so lesen sich Alpen, Karpaten und Skandinavien als Relief.
- * Die Blöcke stehen still; nur beim ersten Zeigen werden die Reihen von Norden nach Süden eingeblendet (animate).
- * Um den gezeigten Punkt (focus) leuchten die Blöcke grün. Reine SVG-Gruppe ohne Client-Code; sie gehört in ein <svg> mit EUROPE_VIEWBOX.
+ * Punktkarte Europas als Waben: Jeder Punkt steht als sechseckiges Prisma in schräger Aufsicht, so hoch wie das Gelände.
+ * Deckfläche hell, linke Wand mittel, rechte Wand dunkel; jede zweite Reihe ist um einen halben Abstand versetzt, so schließen die Waben an.
+ * Die Waben stehen still; nur beim ersten Zeigen werden die Reihen von Norden nach Süden eingeblendet (animate).
+ * Um den gezeigten Punkt (focus) leuchten sie grün. Reine SVG-Gruppe ohne Client-Code; sie gehört in ein <svg> mit EUROPE_VIEWBOX.
  */
 
 type Cell = { x: number; y: number; h: number; e: number }
 
-const SIZE = 13 // Kantenlänge der Grundfläche; der Punktabstand ist 19,4
-const DEPTH = 8 // Tiefe der schrägen Aufsicht nach rechts oben
-const BASE = 2.5 // Sockel: auch flaches Land steht als dünne Platte auf der Karte
-const MAX_HEIGHT = 52 // Blockhöhe für 2.800 m und mehr, in Karteneinheiten
-const FLAT = 150 // bis zu dieser Höhe bleibt der Block flach
+const STEP = 19.4 // Punktabstand der Karte
+const R = 10 // Radius einer Wabe
+const SQUASH = 0.55 // Neigung: so flach erscheint die Deckfläche
+const BASE = 2 // Sockel: auch flaches Land steht als dünne Wabe auf der Karte
+const MAX_HEIGHT = 55 // Höhe für 2.800 m und mehr, in Karteneinheiten
+const FLAT = 150 // bis zu dieser Höhe bleibt nur der Sockel
 const LEVELS = [0, 250, 600, 1000, 1500, 2200] // Höhenstufen in Metern
 
 const CELLS: Cell[] = EUROPE_RELIEF.split(';').map((row) => {
   const [x, y, e] = row.split(',').map(Number)
-  return { x, y, e, h: BASE + MAX_HEIGHT * Math.pow(Math.max(0, Math.min(e, 2800) - FLAT) / (2800 - FLAT), 0.9) }
+  // Jede zweite Reihe um einen halben Abstand nach rechts, damit die Waben ineinandergreifen.
+  const shift = Math.round(y / STEP) % 2 ? STEP / 2 : 0
+  return { x: x + shift, y, e, h: BASE + MAX_HEIGHT * Math.pow(Math.max(0, Math.min(e, 2800) - FLAT) / (2800 - FLAT), 0.9) }
 })
 
 const level = (e: number) => LEVELS.reduce((found, limit, index) => (e >= limit ? index : found), 0)
 
-/** Nächster Kartenpunkt zu einem Ort, mit der Mitte seiner Deckfläche. Für Markierungen, die oben auf dem Block sitzen. */
+/** Nächster Kartenpunkt zu einem Ort, mit der Mitte seiner Deckfläche. Für Markierungen, die oben auf der Wabe sitzen. */
 export function reliefPoint(lon: number, lat: number) {
   const [px, py] = projectLonLat(lon, lat)
   let best = CELLS[0]
@@ -36,15 +39,15 @@ export function reliefPoint(lon: number, lat: number) {
       best = cell
     }
   }
-  return { x: best.x + DEPTH / 2, y: best.y, top: best.y + SIZE / 2 - best.h - DEPTH / 2, elevation: best.e }
+  return { x: best.x, y: best.y, top: best.y - best.h, elevation: best.e }
 }
 
 const TONES = {
   dark: {
     top: ['#bfd8c8', '#bfd8c8', '#cfe3d6', '#dcebe1', '#eaf4ed', '#ffffff'],
-    topOpacity: [0.2, 0.3, 0.46, 0.64, 0.82, 0.96],
-    front: '#3d7a57',
-    right: '#1f5137',
+    topOpacity: [0.32, 0.42, 0.55, 0.7, 0.85, 0.97],
+    front: '#336f4d',
+    right: '#24583b',
     sideOpacity: [0.85, 0.88, 0.9, 0.93, 0.96, 1],
     focusTop: '#8fd9ab',
     focusFront: '#4f9a6e',
@@ -65,6 +68,11 @@ const TONES = {
 type Group = { key: string; fill: string; opacity: number; d: string }
 
 const f = (n: number) => n.toFixed(1)
+// Ecken der Deckfläche relativ zur Mitte: 0 rechts unten, 1 unten, 2 links unten, 3 links oben, 4 oben, 5 rechts oben.
+const CORNERS = Array.from({ length: 6 }, (_, i) => {
+  const angle = Math.PI / 6 + (i * Math.PI) / 3
+  return [R * Math.cos(angle), R * SQUASH * Math.sin(angle)] as const
+})
 
 function buildRows(focus: [number, number] | undefined, radius: number, tone: keyof typeof TONES) {
   const colors = TONES[tone]
@@ -74,33 +82,30 @@ function buildRows(focus: [number, number] | undefined, radius: number, tone: ke
     const key = Math.round(cell.y)
     rows.set(key, [...(rows.get(key) ?? []), cell])
   }
-  // Von Norden nach Süden, je Reihe von Osten nach Westen: Was weiter vorn steht, verdeckt Fuß und Seitenwand dahinter.
+  // Von Norden nach Süden: Waben weiter vorn verdecken den Fuß der Waben dahinter.
   return [...rows.entries()]
     .sort(([a], [b]) => a - b)
     .map(([key, cells]) => {
-      const fronts = new Map<string, Group>()
+      const lefts = new Map<string, Group>()
       const rights = new Map<string, Group>()
       const tops = new Map<string, Group>()
-      for (const cell of [...cells].sort((a, b) => b.x - a.x)) {
+      for (const cell of cells) {
         const stage = level(cell.e)
         const near = Math.hypot(cell.x - fx, cell.y - fy) < radius
         const id = `${near ? 'f' : 'n'}${stage}`
-        const x = cell.x - SIZE / 2
-        const ground = cell.y + SIZE / 2 // Unterkante der Vorderwand
-        const top = ground - cell.h // Oberkante der Vorderwand
-        if (cell.h >= 0.8) {
-          const front = fronts.get(id) ?? { key: `v${id}`, fill: near ? colors.focusFront : colors.front, opacity: colors.sideOpacity[stage], d: '' }
-          front.d += `M${f(x)} ${f(top)}h${SIZE}v${f(cell.h)}h-${SIZE}z`
-          fronts.set(id, front)
-          const right = rights.get(id) ?? { key: `r${id}`, fill: near ? colors.focusRight : colors.right, opacity: colors.sideOpacity[stage], d: '' }
-          right.d += `M${f(x + SIZE)} ${f(ground)}v${f(-cell.h)}l${DEPTH} ${-DEPTH}v${f(cell.h)}z`
-          rights.set(id, right)
-        }
+        const top = cell.y - cell.h
+        const at = (i: number, dy = 0) => `${f(cell.x + CORNERS[i][0])} ${f(top + CORNERS[i][1] + dy)}`
+        const left = lefts.get(id) ?? { key: `l${id}`, fill: near ? colors.focusFront : colors.front, opacity: colors.sideOpacity[stage], d: '' }
+        left.d += `M${at(1)}L${at(2)}L${at(2, cell.h)}L${at(1, cell.h)}z`
+        lefts.set(id, left)
+        const right = rights.get(id) ?? { key: `r${id}`, fill: near ? colors.focusRight : colors.right, opacity: colors.sideOpacity[stage], d: '' }
+        right.d += `M${at(0)}L${at(1)}L${at(1, cell.h)}L${at(0, cell.h)}z`
+        rights.set(id, right)
         const face = tops.get(id) ?? { key: `t${id}`, fill: near ? colors.focusTop : colors.top[stage], opacity: near ? Math.min(1, colors.topOpacity[stage] + 0.35) : colors.topOpacity[stage], d: '' }
-        face.d += `M${f(x)} ${f(top)}h${SIZE}l${DEPTH} ${-DEPTH}h-${SIZE}z`
+        face.d += `M${at(0)}L${at(1)}L${at(2)}L${at(3)}L${at(4)}L${at(5)}z`
         tops.set(id, face)
       }
-      return { key, groups: [...rights.values(), ...fronts.values(), ...tops.values()] }
+      return { key, groups: [...lefts.values(), ...rights.values(), ...tops.values()] }
     })
 }
 
