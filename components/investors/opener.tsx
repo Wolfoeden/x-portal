@@ -21,7 +21,7 @@ const LOGO = { x: 720, y: 330 } // Mitte des Logos in der Bühne
 const SCALE = 1.5 // Karteneinheiten → Bühne
 const MAP_X = 0
 const MAP_Y = -425
-const MAP_SIZE = 0.7 // feinere Waben, weil die Karte hier groß steht
+const MAP_SIZE = 0.85 // etwas flachere Waben, weil die Karte hier groß steht
 const toStage = (x: number, y: number): [number, number] => [MAP_X + x * SCALE, MAP_Y + y * SCALE]
 // Schmale Bildschirme: eigener Ausschnitt ohne hohen Norden, wie bisher.
 const [ANCHOR_X, ANCHOR_Y] = projectLonLat(12, 52)
@@ -90,8 +90,8 @@ export function InvestorOpener({ locale }: { locale: Locale }) {
   const ids = IDS[locale]
   const point = reliefPoint(HUB_01[0], HUB_01[1], MAP_SIZE)
   const hub = toStage(point.x, point.top)
-  // Schmale Bildschirme zeigen die Waben in voller Größe, der Punkt sitzt auf deren Deckfläche.
-  const pointSmall = reliefPoint(HUB_01[0], HUB_01[1])
+  // Schmale Bildschirme: gröbere Waben in voller Größe (spart Daten), der Punkt sitzt auf deren Deckfläche.
+  const pointSmall = reliefPoint(HUB_01[0], HUB_01[1], 1, 1)
   const hubSmall = toSmall(pointSmall.x, pointSmall.top)
 
   const words = (
@@ -195,7 +195,7 @@ export function InvestorOpener({ locale }: { locale: Locale }) {
         <div className="relative w-full max-w-[640px]">
           <svg viewBox={`${SMALL.x.toFixed(1)} ${SMALL.y.toFixed(1)} ${SMALL.width} ${SMALL.height}`} className="h-auto w-full overflow-visible" aria-hidden>
             <g transform={`translate(${S_MAP_X.toFixed(1)} ${S_MAP_Y.toFixed(1)}) scale(${S_SCALE})`} opacity="0.85">
-              <ReliefLayer focus={HUB_01} tone="dark" animate={false} />
+              <ReliefLayer focus={HUB_01} tone="dark" animate={false} density={1} />
             </g>
           </svg>
           <div className="absolute z-10" style={{ left: pct(hubSmall[0] - SMALL.x, SMALL.width), top: pct(hubSmall[1] - SMALL.y, SMALL.height) }}>
