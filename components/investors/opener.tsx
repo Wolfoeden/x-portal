@@ -11,19 +11,24 @@ import { HUB_01 } from '@/lib/map/hubs'
 /**
  * Einstieg der Investorenseite: Das grüne XPORTAL-Logo steht in der Mitte, alle Orte Europas laufen dorthin zusammen.
  * Darunter die Höhenkarte; Node001 in den Karpaten hat eine eigene grüne Linie zum Logo und zeigt beim Überfahren oder Antippen ein Vorschaubild.
- * Gezeichnet in einer festen Bühne von 1440 × 980; ab xl wird sie als Ganzes skaliert, darunter stehen Text und Karte untereinander.
+ * Gezeichnet in einer Bühne von 1440 × 980. Ab xl ist der Hero genau bildschirmhoch und die Bühne bedeckt ihn ganz (wie object-fit: cover);
+ * die Karte reicht über alle Ränder der Bühne hinaus. Darunter stehen Text und Karte untereinander.
  */
 
 const STAGE = { width: 1440, height: 980 }
 const LOGO = { x: 720, y: 330 } // Mitte des Logos in der Bühne
-const SCALE = 1.1 // Karteneinheiten → Bühne
-// Die Karte so legen, dass Mitteleuropa um das Logo liegt und Node001 rechts neben dem Text frei steht.
-const [ANCHOR_X, ANCHOR_Y] = projectLonLat(12, 52)
-const MAP_X = LOGO.x - ANCHOR_X * SCALE + 100
-const MAP_Y = LOGO.y - ANCHOR_Y * SCALE + 40
-// Ausschnitt der Karte für schmale Bildschirme (ohne hohen Norden), in Bühnen-Einheiten.
-const SMALL = { x: MAP_X, y: MAP_Y + 220 * SCALE, width: 1000 * SCALE, height: 900 * SCALE }
+// Ab xl: Karte groß genug, dass ihre Daten (lon −11…42, lat 35…71) über alle Bühnenränder reichen; Node001 steht rechts unter den Knöpfen.
+const SCALE = 1.5 // Karteneinheiten → Bühne
+const MAP_X = 0
+const MAP_Y = -425
 const toStage = (x: number, y: number): [number, number] => [MAP_X + x * SCALE, MAP_Y + y * SCALE]
+// Schmale Bildschirme: eigener Ausschnitt ohne hohen Norden, wie bisher.
+const [ANCHOR_X, ANCHOR_Y] = projectLonLat(12, 52)
+const S_SCALE = 1.1
+const S_MAP_X = LOGO.x - ANCHOR_X * S_SCALE + 100
+const S_MAP_Y = LOGO.y - ANCHOR_Y * S_SCALE + 40
+const SMALL = { x: S_MAP_X, y: S_MAP_Y + 220 * S_SCALE, width: 1000 * S_SCALE, height: 900 * S_SCALE }
+const toSmall = (x: number, y: number): [number, number] => [S_MAP_X + x * S_SCALE, S_MAP_Y + y * S_SCALE]
 
 // Beispielhafte Orte, an denen KI-Freelancer arbeiten. Keine Kundenliste, nur das Bild eines europäischen Netzes.
 const CITIES: [number, number][] = [
@@ -84,6 +89,7 @@ export function InvestorOpener({ locale }: { locale: Locale }) {
   const ids = IDS[locale]
   const point = reliefPoint(HUB_01[0], HUB_01[1])
   const hub = toStage(point.x, point.top)
+  const hubSmall = toSmall(point.x, point.top)
 
   const words = (
     <p className="text-[clamp(1.5rem,2.1vw,1.875rem)] font-medium leading-none tracking-[-0.03em]">
@@ -145,16 +151,18 @@ export function InvestorOpener({ locale }: { locale: Locale }) {
   )
 
   return (
-    <section className="relative overflow-hidden bg-brand-deep text-white" aria-labelledby="investoren-title">
+    <section className="relative overflow-hidden bg-brand-deep text-white xl:h-[calc(100svh-4rem)] xl:min-h-[680px]" aria-labelledby="investoren-title">
       <h1 id="investoren-title" className="sr-only">
         {copy.text}
       </h1>
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_55%_at_50%_38%,#1b5c39_0%,transparent_70%)]" />
 
-      {/* Ab xl: eine Bühne, in der Logo, Linien und Karte genau übereinanderliegen. */}
-      <div className="relative mx-auto hidden w-full max-w-[1440px] xl:block" style={{ aspectRatio: `${STAGE.width} / ${STAGE.height}` }}>
+      {/* Ab xl: eine Bühne, in der Logo, Linien und Karte genau übereinanderliegen. Sie bedeckt den Hero ganz (wie cover) und steht in seiner Mitte. */}
+      <div
+        className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 xl:block"
+        style={{ width: `max(100%, calc(max(100svh - 4rem, 680px) * ${(STAGE.width / STAGE.height).toFixed(4)}))`, aspectRatio: `${STAGE.width} / ${STAGE.height}` }}
+      >
         <Stage hub={hub} mapLabel={copy.mapLabel} />
-        <div className="absolute left-8 top-8">{dataPill}</div>
         <div className="absolute inset-x-0 flex flex-col items-center px-8 text-center" style={{ top: pct(150, STAGE.height) }}>
           <p className="mb-3.5 text-[14px] text-[#bfd8c8]">{copy.label}</p>
           {words}
@@ -164,7 +172,12 @@ export function InvestorOpener({ locale }: { locale: Locale }) {
         <div className="absolute z-10" style={{ left: pct(hub[0], STAGE.width), top: pct(hub[1], STAGE.height) }}>
           {preview}
         </div>
-        <div className="absolute inset-x-[116px] bottom-10">{figures}</div>
+      </div>
+      <div className="absolute left-8 top-8 hidden xl:block">{dataPill}</div>
+      {/* Unten ausblenden, damit die Kennzahlen vor der Karte lesbar bleiben. */}
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-56 bg-gradient-to-t from-brand-deep via-brand-deep/80 to-transparent xl:block" />
+      <div className="absolute inset-x-0 bottom-8 hidden xl:block">
+        <div className="mx-auto max-w-[1208px] px-8">{figures}</div>
       </div>
 
       {/* Darunter: Text oben, Karte mit Node001 darunter, Zahlen am Ende. */}
@@ -178,11 +191,11 @@ export function InvestorOpener({ locale }: { locale: Locale }) {
         {actions}
         <div className="relative w-full max-w-[640px]">
           <svg viewBox={`${SMALL.x.toFixed(1)} ${SMALL.y.toFixed(1)} ${SMALL.width} ${SMALL.height}`} className="h-auto w-full overflow-visible" aria-hidden>
-            <g transform={`translate(${MAP_X.toFixed(1)} ${MAP_Y.toFixed(1)}) scale(${SCALE})`} opacity="0.85">
+            <g transform={`translate(${S_MAP_X.toFixed(1)} ${S_MAP_Y.toFixed(1)}) scale(${S_SCALE})`} opacity="0.85">
               <ReliefLayer focus={HUB_01} tone="dark" animate={false} />
             </g>
           </svg>
-          <div className="absolute z-10" style={{ left: pct(hub[0] - SMALL.x, SMALL.width), top: pct(hub[1] - SMALL.y, SMALL.height) }}>
+          <div className="absolute z-10" style={{ left: pct(hubSmall[0] - SMALL.x, SMALL.width), top: pct(hubSmall[1] - SMALL.y, SMALL.height) }}>
             {preview}
           </div>
         </div>

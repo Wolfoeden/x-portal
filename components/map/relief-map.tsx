@@ -114,7 +114,7 @@ export function ReliefLayer({ focus, radius = 110, tone = 'dark', animate = true
   return (
     <g aria-hidden>
       {rows.map((row, index) => (
-        <g key={row.key} className={animate ? 'relief-row' : undefined} style={animate ? { animationDelay: `${index * 18}ms` } : undefined}>
+        <g key={row.key} className={animate ? 'relief-row' : undefined} style={animate ? { animationDelay: `${index * 22}ms` } : undefined}>
           {row.groups.map((group) => (
             <path key={group.key} d={group.d} fill={group.fill} opacity={group.opacity} />
           ))}
