@@ -21,6 +21,7 @@ const LOGO = { x: 720, y: 330 } // Mitte des Logos in der Bühne
 const SCALE = 1.5 // Karteneinheiten → Bühne
 const MAP_X = 0
 const MAP_Y = -425
+const MAP_SIZE = 0.7 // feinere Waben, weil die Karte hier groß steht
 const toStage = (x: number, y: number): [number, number] => [MAP_X + x * SCALE, MAP_Y + y * SCALE]
 // Schmale Bildschirme: eigener Ausschnitt ohne hohen Norden, wie bisher.
 const [ANCHOR_X, ANCHOR_Y] = projectLonLat(12, 52)
@@ -70,7 +71,7 @@ function Stage({ hub, mapLabel }: { hub: [number, number]; mapLabel: string }) {
         </radialGradient>
       </defs>
       <g transform={`translate(${MAP_X.toFixed(1)} ${MAP_Y.toFixed(1)}) scale(${SCALE})`} opacity="0.75">
-        <ReliefLayer focus={HUB_01} tone="dark" />
+        <ReliefLayer focus={HUB_01} tone="dark" size={MAP_SIZE} />
       </g>
       {POINTS.map(([x, y], index) => (
         <path key={index} d={arc(x, y, LOGO.x, LOGO.y)} className="opener-flow" style={{ animationDelay: `${(index * -0.37).toFixed(2)}s` }} />
@@ -87,9 +88,11 @@ function Stage({ hub, mapLabel }: { hub: [number, number]; mapLabel: string }) {
 export function InvestorOpener({ locale }: { locale: Locale }) {
   const copy = getDictionary(locale).investors.opener
   const ids = IDS[locale]
-  const point = reliefPoint(HUB_01[0], HUB_01[1])
+  const point = reliefPoint(HUB_01[0], HUB_01[1], MAP_SIZE)
   const hub = toStage(point.x, point.top)
-  const hubSmall = toSmall(point.x, point.top)
+  // Schmale Bildschirme zeigen die Waben in voller Größe, der Punkt sitzt auf deren Deckfläche.
+  const pointSmall = reliefPoint(HUB_01[0], HUB_01[1])
+  const hubSmall = toSmall(pointSmall.x, pointSmall.top)
 
   const words = (
     <p className="text-[clamp(1.5rem,2.1vw,1.875rem)] font-medium leading-none tracking-[-0.03em]">
