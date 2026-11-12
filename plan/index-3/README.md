@@ -1,6 +1,8 @@
 # X-PORTAL Index 3.0
 
-Plan für Node001 Stufe 1 (Bereschnyzja, Ortsteil Hrun, bei Werchowyna) als offener Entscheidungsbaum. Stand 05.11.2026.
+Plan für Node001 Stufe 1 (Bereschnyzja, Ortsteil Hrun, bei Werchowyna) als offener Entscheidungsbaum. Stand 12.11.2026.
+
+**Bezugsrahmen ist die Reference Architecture v0.4-WB1** (`quellen/reference-architecture-v0.4.md`). Frühere Inhalte, auch das Entscheidungslog E01–E85, sind Evidenz und Historie; bei Widerspruch gilt die Baseline. Die 18 bekannten Widersprüche stehen im Abschnitt „Abgleich“ (Seite, Markdown und JSON-Feld `abgleich`). Die Arbeitsregeln für KI stehen in Abschnitt 15 der Baseline.
 Online als Artefakt: https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F (privat, nur für Freigegebene).
 
 ## Dateien
@@ -12,6 +14,8 @@ Online als Artefakt: https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F (privat, 
 | `index-3.html` | Die lesbare Seite (Index 2.0 plus Entscheidungsbaum), im Browser öffnen. Enthält die Bilder eingebettet. |
 | `werkzeug/baum.py` | Generator: erzeugt Seite, Markdown und JSON. |
 | `quellen/index-2.0.html` | Eingabe des Generators: Index 2.0, erzeugt aus `plan/PLAN.md` mit `plan/werkzeuge/index_seite.py` (im Plan-Repo, nicht hier). |
+| `quellen/reference-architecture-v0.4.md` | Eingabe und Bezugsrahmen: Reference Architecture v0.4, Working Baseline vom 12.11.2026. |
+| `../whitepaper/x-portal-whitepaper.html` | Investoren-Whitepaper im Diskussionsstand, aus Baseline und Investor Deck 11.2026. Vor Versand den internen Kasten am Ende abarbeiten. |
 | `quellen/m02-29.json` | Eingabe: Anforderungsmatrix nach Maslow und Sinnen, 29 Zeilen, Stand 03.11.2026 (Artefakt „Node001 Anforderungen Mensch“). |
 
 ## Aufbau des Baums

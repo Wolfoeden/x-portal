@@ -1,6 +1,171 @@
 {
  "titel": "X-PORTAL Index 3.0",
- "stand": "2026-11-05",
+ "stand": "2026-11-12",
+ "bezugsrahmen": "Reference Architecture v0.4-WB1 (quellen/reference-architecture-v0.4.md)",
+ "abgleich": [
+  {
+   "nr": "W01",
+   "thema": "Vision und Mission",
+   "bisher": "Vision der Leitlinie P01; Mission „Innovationshubs“ (E28)",
+   "baseline": "Neue Vision (Abschnitt 2), keine Mission, Kerndefinition (Abschnitt 18)",
+   "gilt": "Vision v0.4 steht in der Grundlage des Baums. Ob eine Mission bleibt, ist offen.",
+   "status": "OPEN",
+   "im_index": "angepasst"
+  },
+  {
+   "nr": "W02",
+   "thema": "Was „X-PORTAL“ heißt",
+   "bisher": "„Dachfirma“ (Vorgabe 05.11.), „Firma“",
+   "baseline": "X-PORTAL ist das sozio-technische Gesamtsystem; die Firma heißt X-PORTAL Organisation bzw. Company; Systemgrenze zum Node-Betrieb offen (OD-001)",
+   "gilt": "Zielblatt X1 heißt „X-PORTAL Organisation (Company)“. Wo die DT Agentur steht, nennen Baseline und Deck nicht.",
+   "status": "DECISION REQUIRED",
+   "im_index": "angepasst"
+  },
+  {
+   "nr": "W03",
+   "thema": "Kapital für Node001",
+   "bisher": "„Kein Investor“ (E04); der Ort trägt sich aus Käufergeld, Pre-Seed nur für die Firma (E57)",
+   "baseline": "Zwei getrennte Investment Cases; Node001 als eigener Project-/Asset-Case mit Kapital für Infrastruktur und ersten Bauabschnitt",
+   "gilt": "Grenzentabelle und Planungspunkt zeigen beide Cases. E57 muss im Log geändert werden.",
+   "status": "DECISION REQUIRED",
+   "im_index": "CHANGE REQUEST"
+  },
+  {
+   "nr": "W04",
+   "thema": "Produkt- und Preismodell",
+   "bisher": "Hausverkauf als Token über die Blockchain, Grund pachten, etwa 30.000 € je Plot, Verkauf ab Januar 2027 (E50, E52, E78)",
+   "baseline": "„Miete bzw. geeignetes Eigentums-/Nutzungsmodell“, Produktmix und Preis werden validiert; kein öffentliches Angebot von Kryptowerten",
+   "gilt": "Im Baum als ASSUMPTION geführt; Preis, Token und Januar sind keine Aussagen für Investoren.",
+   "status": "ASSUMPTION",
+   "im_index": "CHANGE REQUEST"
+  },
+  {
+   "nr": "W05",
+   "thema": "Zahlen zum Invest",
+   "bisher": "Papierrechnung rund 12 Mio. € „rechtfertigt das Invest“ (E84); Kostenhochrechnung 12,5 Mio. € (E65)",
+   "baseline": "Parametrischer Business Case offen (OD-008); Scheingenauigkeit vermeiden (KI-Regel 10); Kostenband „zu validieren“",
+   "gilt": "Beide Zahlen bleiben intern und gehören in keine Investorenunterlage.",
+   "status": "ASSUMPTION",
+   "im_index": "markiert"
+  },
+  {
+   "nr": "W06",
+   "thema": "Termine",
+   "bisher": "Verkauf Januar 2027, Container ab März, „Einzug ab Frühjahr 2027“ (E51, E55)",
+   "baseline": "„Baubeginn 2027 · Ziel“, nur nach Gates; Meilensteine sind Ziele, keine Zusagen",
+   "gilt": "Grenzentabelle führt alle Termine als Ziele.",
+   "status": "ASSUMPTION",
+   "im_index": "angepasst"
+  },
+  {
+   "nr": "W07",
+   "thema": "Genehmigung und Finanzierung",
+   "bisher": "„Genehmigung und Planung liegen vor, 12,5 Mio. € privat finanziert“ (E60, durch E65 schon berichtigt)",
+   "baseline": "Finanzierung des ersten Bauabschnitts und Freigaben: „zu validieren“; „Grundstück gesichert“",
+   "gilt": "Es gilt das Deck. Belege zum Grundstück fehlen weiter (O14): DOCUMENTED, nicht VERIFIED.",
+   "status": "DOCUMENTED",
+   "im_index": "markiert"
+  },
+  {
+   "nr": "W08",
+   "thema": "Rollen der Menschen",
+   "bisher": "Team (drei Personen) und Käufer oder Mieter (E63)",
+   "baseline": "Acht Rollen in der Infografik: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren; Human Roles v1.0 in Arbeit (OD-003)",
+   "gilt": "Der Plan bleibt bei Team und Käufern, bis OD-003 entschieden ist.",
+   "status": "IN WORK",
+   "im_index": "markiert"
+  },
+  {
+   "nr": "W09",
+   "thema": "Digital Twin",
+   "bisher": "„Digitaler Zwilling der Organisation“, „Unternehmenszwilling“ (2.6.6, M07)",
+   "baseline": "System Model ist nicht Digital Twin; voller Twin später und nur bei Nutzen",
+   "gilt": "Text in 2.6.6 angepasst; M07 bleibt als Methodenname der Historie.",
+   "status": "OPEN",
+   "im_index": "angepasst"
+  },
+  {
+   "nr": "W10",
+   "thema": "Zahl der Nodes",
+   "bisher": "„Node001, der erste von zehn Nodes“ (E63)",
+   "baseline": "Node002 als Replikationstest; keine Zahl; Multi-Node-Plattform nicht im MVS",
+   "gilt": "Die Zahl zehn steht in keiner aktuellen Aussage mehr.",
+   "status": "ASSUMPTION",
+   "im_index": "CHANGE REQUEST"
+  },
+  {
+   "nr": "W11",
+   "thema": "Genome",
+   "bisher": "„Schema für den nächsten Node“ (Z4, E11)",
+   "baseline": "X-PORTAL Genome: Invarianten, Module, Parameter, Entscheidungsregeln, Evidenz; belastbar erst mit Evidenz aus Node001 und Node002",
+   "gilt": "Z4 heißt jetzt Genome.",
+   "status": "IN WORK",
+   "im_index": "angepasst"
+  },
+  {
+   "nr": "W12",
+   "thema": "Autarkie",
+   "bisher": "„autark“ (E46, E54, E72)",
+   "baseline": "„weitgehend versorgungsautark, operativ autonom“; Zielwerte je kritischer Funktion offen (OD-002)",
+   "gilt": "Grundmodell angepasst.",
+   "status": "OPEN",
+   "im_index": "angepasst"
+  },
+  {
+   "nr": "W13",
+   "thema": "Statusbegriffe",
+   "bisher": "offen, wartet, nicht geprüft, entschieden, Regel steht",
+   "baseline": "VERIFIED, DOCUMENTED, IN WORK, ASSUMPTION, OPEN, DECISION REQUIRED",
+   "gilt": "Zuordnung steht in der Legende des Baums. „Entschieden“ heißt DOCUMENTED, nicht VERIFIED.",
+   "status": "DOCUMENTED",
+   "im_index": "angepasst"
+  },
+  {
+   "nr": "W14",
+   "thema": "Team und Rollen",
+   "bisher": "Paul ist CEO zu 100 %, Roman Produkt und Projekt (E62); Nazar ist beauftragte Fachperson (E64)",
+   "baseline": "Deck nennt als operatives Team Roman Dering, Pavel J., Nazar D. („Architekt · Nodes“); Founder-, Ownership- und Governance-Darstellung vor Versand offen",
+   "gilt": "Wer Gründer und Gesellschafter ist und ob Nazar Teammitglied oder Auftragnehmer ist, muss vor dem Versand feststehen.",
+   "status": "DECISION REQUIRED",
+   "im_index": "offen"
+  },
+  {
+   "nr": "W15",
+   "thema": "Ortsangabe",
+   "bisher": "Website nennt, wenn überhaupt, nur „Ukraine“ (E66)",
+   "baseline": "Deck: „Karpatenregion, Westukraine“; Baseline: „Node001 Beregniza“",
+   "gilt": "Für Investoren gilt die Angabe des Decks; E66 betrifft die öffentliche Website.",
+   "status": "DOCUMENTED",
+   "im_index": "markiert"
+  },
+  {
+   "nr": "W16",
+   "thema": "Erlöse",
+   "bisher": "Agenten je Aufruf über Masumi (E56); Einstieg ab 490 € (E76, abgelöst durch E83)",
+   "baseline": "Vier Erlösstufen: Kundenprojekte (heute), KI-Lösungen (in Entwicklung), Nutzung und Services Node001, System-Skalierung (später)",
+   "gilt": "Preismodell bleibt offen (E83); Masumi ist eine Option, keine Aussage im Deck.",
+   "status": "OPEN",
+   "im_index": "markiert"
+  },
+  {
+   "nr": "W17",
+   "thema": "Versionsstand der Infografik",
+   "bisher": "–",
+   "baseline": "Infografik „Integrierte Managementarchitektur · SGMM II“ nennt Reference Architecture v0.2; Baseline und Deck nennen v0.4",
+   "gilt": "Widerspruch innerhalb der neuen Unterlagen: Infografik auf v0.4 heben, bevor sie rausgeht.",
+   "status": "DECISION REQUIRED",
+   "im_index": "offen"
+  },
+  {
+   "nr": "W18",
+   "thema": "Kürzel H1 bis H8",
+   "bisher": "H01 bis H09 sind Anforderungen der Stufe Grundbedürfnisse (M02)",
+   "baseline": "H1 bis H8 sind die PoC-Hypothesen",
+   "gilt": "Verwechslungsgefahr. Im Index heißen Hypothesen immer H1 bis H8 ohne Null, Anforderungen H01 bis H09.",
+   "status": "DOCUMENTED",
+   "im_index": "markiert"
+  }
+ ],
  "artefakt": "https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F",
  "zielblatt": [
   {
@@ -14,7 +179,7 @@
    "wer_review": "Roman oben; Paul mit Nazar für den Bau · Review G2, G3, G4",
    "grenze": "Zeit: Einzug erst ohne Frost (E21). Kapital: der Ort trägt sich aus Käufergeld (E57)",
    "globalziel": "1 und 3",
-   "quelle": "E01, E23, E24"
+   "quelle": "E01, E23, E24; prüft H1, H2, H3"
   },
   {
    "nr": "Z2",
@@ -27,7 +192,7 @@
    "wer_review": "Roman (Verkauf), Paul (Grundstück) · Review G0, G1",
    "grenze": "Kapital: bestellt wird erst mit dem Geld der 5 Käufer (E78); weniger als 5 entscheidet O23",
    "globalziel": "1 und 2",
-   "quelle": "E46, E51"
+   "quelle": "E46, E51; prüft H4"
   },
   {
    "nr": "Z3",
@@ -40,27 +205,27 @@
    "wer_review": "Roman und Paul · Review monatlich (3.3)",
    "grenze": "Vorschlag S06, nicht entschieden: ohne bezahltes Projekt bis 31.12.2026 nur Stufe „1 Person“",
    "globalziel": "1",
-   "quelle": "E07, E08, E31, E77"
+   "quelle": "E07, E08, E31, E77; prüft H4, H6"
   },
   {
    "nr": "Z4",
    "ebene": "Node001",
-   "ziel": "Schema für den nächsten Node",
-   "messgroesse": "Schema, Planung, Nutzbarkeit und Sinn getrennt von den Werten dieses Grundstücks; ein geänderter Standortparameter macht betroffene Anforderungen, Varianten und Beschlüsse auffindbar (2.6.6)",
+   "ziel": "Genome: wiederverwendbares Systemwissen für den nächsten Node",
+   "messgroesse": "Systemlogik und validierte Standards getrennt von den Werten dieses Grundstücks; ein geänderter Standortparameter macht betroffene Anforderungen, Varianten und Beschlüsse auffindbar (2.6.6)",
    "zielwert": "Probe vor G1; zweite Standortkonfiguration nach Stufe 1",
    "klaerungsauftrag": false,
-   "termin": "nach Stufe 1, Probe vor G1",
+   "termin": "nach Stufe 1, Probe vor G1; belastbar erst mit Node002",
    "wer_review": "Paul · Review nach Stufe 1",
    "grenze": "–",
    "globalziel": "2",
-   "quelle": "E11"
+   "quelle": "E11; prüft H7, H8"
   },
   {
    "nr": "X1",
    "ebene": "Aufteilung: X-PORTAL, DT Agentur, Grundstücke",
-   "ziel": "X-PORTAL: Dachfirma",
+   "ziel": "X-PORTAL Organisation (Company)",
    "messgroesse": "festlegen, je Aufgabe",
-   "zielwert": "Was genau zur Dachfirma gehört (2.5.3). Aufgaben laut Vorgabe: Grundstücke bebauen und verwalten; Freelancer verwalten und Projekten zuordnen; eigene Projekte bauen, etwa KI-Agenten, Blockchain und Finance Engineering",
+   "zielwert": "Systemgrenze Organisation ↔ Node-Betrieb (OD-001, DECISION REQUIRED) und was genau zur Organisation gehört (2.5.3). Aufgaben laut Vorgabe: Grundstücke bebauen und verwalten; Freelancer verwalten und Projekten zuordnen; eigene Projekte bauen, etwa KI-Agenten, Blockchain und Finance Engineering",
    "klaerungsauftrag": true,
    "termin": "Aufteilung vor G0, eigene Ziele nach Stufe 1 (E69)",
    "wer_review": "Paul (Gesellschaft, Geld, Nodes) und Roman (Produkt, Projekt) (E62)",
@@ -4052,8 +4217,174 @@
    "kind": "group",
    "id": "b-plan",
    "title": "7 · Offen im Plan, noch ohne Karte auf der Entscheidungsseite",
-   "text": "Aus Kapitel 4 (Art E), den Teilergebnissen, die nur ihr entscheidet, und den neuen Planungspunkten vom 05.11.2026.",
+   "text": "Die offenen Architekturentscheidungen der Baseline, dazu Kapitel 4 (Art E), die Teilergebnisse, die nur ihr entscheidet, und die Planungspunkte vom 05.11.2026.",
    "kids": [
+    {
+     "kind": "group",
+     "id": "g-od",
+     "title": "Offene Architekturentscheidungen der Reference Architecture v0.4 (OD-001 bis OD-008)",
+     "text": "Aus Abschnitt 16 der Baseline, mit dem Gate, vor dem sie fallen müssen, und den Stellen im Plan, die dazu schon etwas sagen.",
+     "kids": [
+      {
+       "kind": "decision",
+       "title": "OD-001 · Systemgrenze X-PORTAL Organisation ↔ Node-Betrieb",
+       "state": "open",
+       "meta": "DECISION REQUIRED · vor Node001 Governance Design",
+       "text": "Im Plan: Aufteilung X-PORTAL, DT Agentur, Grundstücke (X1 bis X3, 2.5.3, 2.5.5).",
+       "dom": "b-OD-001",
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "vor Node001 Governance Design"
+       }
+      },
+      {
+       "kind": "decision",
+       "title": "OD-002 · Kritische Funktionen und Ziel-Autarkie-/Autonomiewerte für Node001",
+       "state": "open",
+       "meta": "OPEN · vor Basis of Design",
+       "text": "Im Plan: Versorgung je Ressource mit Grundbetrieb, Störung, Ausbau (Ast 3); Werte sind Annahmen, keine geprüft (E22).",
+       "dom": "b-OD-002",
+       "see": [
+        [
+         "#b-ressourcen",
+         "Ast 3 Versorgung"
+        ]
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "vor Basis of Design"
+       }
+      },
+      {
+       "kind": "decision",
+       "title": "OD-003 · Human Roles v1.0 und priorisierte Needs",
+       "state": "open",
+       "meta": "IN WORK · vor Service Architecture Freeze",
+       "text": "Im Plan: drei Teammitglieder und Käufer (Ast 2). Die Infografik nennt acht Rollen: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren. Die Zuordnung fehlt (Abgleich W08).",
+       "dom": "b-OD-003",
+       "see": [
+        [
+         "#b-anforderungen",
+         "Ast 2 Alltag"
+        ]
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "vor Service Architecture Freeze"
+       }
+      },
+      {
+       "kind": "decision",
+       "title": "OD-004 · System Model / Datenmodell v0.1",
+       "state": "open",
+       "meta": "OPEN · vor Digital-Twin-Implementierung",
+       "text": "Im Plan bisher „digitaler Zwilling der Organisation“ (2.6.6, M07); nach der Baseline ist das ein System Model, kein Digital Twin.",
+       "dom": "b-OD-004",
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "vor Digital-Twin-Implementierung"
+       }
+      },
+      {
+       "kind": "decision",
+       "title": "OD-005 · Node001 PoC-KPIs und Go/Revise/Stop-Grenzen",
+       "state": "open",
+       "meta": "OPEN · vor Investitionsfreigabe",
+       "text": "Jede Hypothese H1 bis H8 braucht Messgröße, Datengrundlage, Zielwert, Prüfzeitpunkt und Go/Revise/Stop-Kriterium. Im Plan: Zielblatt Z1 bis Z4 und Gates G0 bis G4; Zielwerte fehlen großenteils.",
+       "dom": "b-OD-005",
+       "see": [
+        [
+         "#b-zielblatt",
+         "Zielblatt"
+        ]
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "vor Investitionsfreigabe"
+       }
+      },
+      {
+       "kind": "decision",
+       "title": "OD-006 · Genome Invariants v0.1",
+       "state": "open",
+       "meta": "IN WORK · vor Node001 Architecture Freeze",
+       "text": "Im Plan: Z4 und 2.6.6; wiederholbar sind Schema, Planung, Nutzbarkeit und Sinn (E11).",
+       "dom": "b-OD-006",
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "vor Node001 Architecture Freeze"
+       }
+      },
+      {
+       "kind": "decision",
+       "title": "OD-007 · Safety/Security/Privacy/Legal Baseline Node001",
+       "state": "open",
+       "meta": "OPEN · vor Technologie- und Betriebsfreigabe",
+       "text": "Im Plan: Prüfaufträge an die Anwälte (A5), Abnahmen (E53), Zugang und Server (Technik im Haus), Datenverbindung Ukraine–Deutschland (E85).",
+       "dom": "b-OD-007",
+       "see": [
+        [
+         "#b-technik",
+         "Technik im Haus"
+        ]
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "vor Technologie- und Betriebsfreigabe"
+       }
+      },
+      {
+       "kind": "decision",
+       "title": "OD-008 · Parametrischer Business Case und Architektur-Sensitivitäten",
+       "state": "open",
+       "meta": "OPEN · parallel zur Node001 System Architecture",
+       "text": "Im Plan: Make-or-Buy (Ast 4), Kosten je Plot (2.1.2), Geldfluss (2.1.3). Die Papierrechnung über 12 Mio. € (E84) ist kein Business Case (Abgleich W05).",
+       "dom": "b-OD-008",
+       "see": [
+        [
+         "#b-makebuy",
+         "Ast 4 Make-or-Buy"
+        ]
+       ],
+       "beschlussblatt": {
+        "Vorbereitung": "KI bereitet vor (E13)",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
+        "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
+        "Wiedervorlage": "Montagsrunde (3.3)"
+       }
+      }
+     ]
+    },
     {
      "kind": "decision",
      "id": "O16",
@@ -4381,7 +4712,7 @@
        "title": "Häuser über die Blockchain verkaufen: etwa 30.000 € je Käufer, bezugsfähig im Frühjahr 2027?",
        "state": "open",
        "meta": "Paul und Roman · vor dem Verkauf im Januar 2027 (G0)",
-       "text": "Entschieden ist: Kaufen und mieten über die Blockchain, das Tiny House tokenisiert, den Grund pachten die Käufer (E52, E59); Einzug ab Frühjahr 2027 (E55). Damit das trägt, muss vorher feststehen:",
+       "text": "Im Entscheidungslog steht: Kaufen und mieten über die Blockchain, das Tiny House tokenisiert, den Grund pachten die Käufer (E52, E59); Einzug ab Frühjahr 2027 (E55). Nach dem Deck vom 11.2026 ist das Produkt- und Preismodell eine ASSUMPTION, die validiert wird („Miete bzw. geeignetes Eigentums-/Nutzungsmodell“); Investorenunterlagen enthalten kein öffentliches Angebot von Wertpapieren, Vermögensanlagen oder Kryptowerten. Damit es trägt, muss vorher feststehen:",
        "ziel": [
         "Z2"
        ],
@@ -4427,20 +4758,21 @@
       {
        "kind": "decision",
        "id": "preseed",
-       "title": "Pre-Seed für die Firma: wer investiert, was braucht die Runde, wofür ist das Geld?",
+       "title": "Zwei Investment Cases: X-PORTAL Company und Node001. Welche Struktur, welcher Kapitalbedarf, welcher Investor Ask?",
        "state": "open",
-       "meta": "Paul · nach dem Nachweis aus Z2",
-       "text": "Erlaubt ist eine Runde nur für die Firma, nicht für den Ort (E57). Offen ist alles Weitere: wer investiert (VC, Start-up BW, andere), welche Belege die Runde braucht (O21), welcher Sitz dafür nötig ist (O11) und wofür das Geld verwendet wird. Der Nachweis aus 5 Käufern und 100 auf der Warteliste ist Romans Ausgangspunkt (E78).",
+       "meta": "Paul · vor externem Versand des Decks",
+       "text": "Deck 11.2026: Company (Plattform, Lieferteam, wiederverwendbare KI-Lösungen, Architektur) mit Pre-Seed oder Equity-ähnlicher Finanzierung; Node001 als eigenständiger Project-/Asset-Case, Struktur nach Kosten-, Rechts- und Nachfrageprüfung. Beide wirtschaftlich und rechtlich getrennt. Vor Versand fehlen: Founder-, Ownership- und Governance-Darstellung, Produkt- und Revenue Model Node001, parametrischer Business Case mit Kapitalbedarf, Investmentstruktur, Investor Ask mit Meilensteinen. Im Log steht bisher: eine Runde nur für die Firma, nicht für den Ort (E57). Offen ist alles Weitere: wer investiert (VC, Start-up BW, andere), welche Belege die Runde braucht (O21), welcher Sitz dafür nötig ist (O11) und wofür das Geld verwendet wird. Der Nachweis aus 5 Käufern und 100 auf der Warteliste ist Romans Ausgangspunkt (E78).",
        "ziel": [
-        "X1"
+        "X1",
+        "X3"
        ],
        "beschlussblatt": {
         "Vorbereitung": "KI bereitet vor (E13)",
-        "Fachliche Prüfung": "KI rechnet, Paul prüft (2.1.3)",
-        "Freigabe": "Paul und Roman; Bestellung und Betrag: Paul (E71)",
-        "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
+        "Fachliche Prüfung": "–",
+        "Freigabe": "Paul und Roman gemeinsam (3.2)",
+        "Budgetgrenze": "–",
         "Gültigkeit": "für Stufe 1, bis ihr sie ändert",
-        "Wiedervorlage": "nach dem Nachweis aus Z2"
+        "Wiedervorlage": "vor externem Versand des Decks"
        }
       }
      ]

@@ -428,13 +428,14 @@ def zielblatt_html():
                  f'<td>{linkify(zeit)}</td><td>{linkify(wer)}</td><td>{linkify(review)}</td><td>{linkify(grenze)}</td><td>{linkify(auf)}</td></tr>')
     zb = f'<div class="tablewrap"><table class="dt-ztab"><thead>{head}</thead><tbody>{rows}</tbody></table></div>'
     grenzen = [
-        ('Zeit', 'Verkauf ab Januar 2027 (E51)', 'G0 nicht frei: Termine neu (O24)', 'Terminkette rückwärts (O24)'),
+        ('Zeit', 'Alle Termine sind Ziele, keine Zusagen; Baubeginn 2027 nur nach technischen, wirtschaftlichen und finanziellen Gates (Deck)', '–', 'Investment-Readiness-Gate'),
+        ('Zeit', 'Verkauf ab Januar 2027 (E51): ASSUMPTION, Produkt- und Preismodell wird validiert', 'G0 nicht frei: Termine neu (O24)', 'Terminkette rückwärts (O24)'),
         ('Zeit', 'Aufstellen frühestens März 2027, nur ohne Frost (E21, E55)', 'Boden gefroren: warten (E55)', 'Lieferzeit der Hersteller (O31)'),
         ('Zeit', 'Winterfest vor dem ersten Frost 2027 (E38, G3)', 'nicht winterfest: kein Winter oben', 'Abbruchregel bei Krise (O17)'),
         ('Kapital', 'Der Ort braucht keinen Investor; Käufergeld kommt zuerst (E57)', 'weniger als 5 Käufer zum Bestelltermin: O23', 'Obergrenze in Euro aus dem Geldfluss (2.1.3)'),
         ('Kapital', 'Paul entscheidet Bestellung und Betrag (E71); bestellt wird nur mit Geld auf dem Konto (3.2)', '–', 'Vorbereitungsbudget (O12); 3.500 € sind nur ein Diskussionsvorschlag (3.2)'),
         ('Kapital', 'Verkauf der Häuser über die Blockchain, etwa 30.000 € je Käufer, bezugsfähig im Frühjahr 2027 (E52, E55, E78)', 'Recht oder Zahlung passen nicht: kein Verkauf im Januar (G0)', 'Prüfaufträge A5; ob der Lieferant über die Blockchain bezahlt werden kann (siehe Kapitalentscheidung)'),
-        ('Kapital', 'Pre-Seed ist erlaubt, aber nur für die Firma, nicht für den Ort (E57)', '–', 'wer investiert, was die Runde braucht, wofür das Geld ist: offen (Planungspunkt Pre-Seed)'),
+        ('Kapital', 'Company: Pre-Seed oder Equity-ähnlich für Plattform, Lieferteam, KI-Lösungen und Architektur (Deck)', '–', 'Struktur, Meilensteine, Investor Ask: festzulegen (Planungspunkt Pre-Seed)'),
         ('Umsatz', 'Erster bezahlter Auftrag bis Januar 2027 (E77)', 'Vorschlag S06: sonst nur Stufe „1 Person“', 'entscheiden, ob die Regel gilt'),
     ]
     gr = ''.join(f'<tr><td class="mono">{a}</td><td>{linkify(b)}</td><td>{linkify(c)}</td><td>{linkify(d)}</td></tr>' for a, b, c, d in grenzen)
@@ -481,7 +482,7 @@ imPlan.append(N('group', 'g-aufteilung', 'Aufteilung: X-PORTAL, DT Agentur, Grun
 ]))
 imPlan.append(N('group', 'g-kapital', 'Kapitalentscheidungen', kids=[
     N('decision', 'krypto', 'Häuser über die Blockchain verkaufen: etwa 30.000 € je Käufer, bezugsfähig im Frühjahr 2027?', 'open', meta='Paul und Roman · vor dem Verkauf im Januar 2027 (G0)', ziel=['Z2'],
-      text='Entschieden ist: Kaufen und mieten über die Blockchain, das Tiny House tokenisiert, den Grund pachten die Käufer (E52, E59); Einzug ab Frühjahr 2027 (E55). Damit das trägt, muss vorher feststehen:',
+      text='Im Entscheidungslog steht: Kaufen und mieten über die Blockchain, das Tiny House tokenisiert, den Grund pachten die Käufer (E52, E59); Einzug ab Frühjahr 2027 (E55). Nach dem Deck vom 11.2026 ist das Produkt- und Preismodell eine ASSUMPTION, die validiert wird („Miete bzw. geeignetes Eigentums-/Nutzungsmodell“); Investorenunterlagen enthalten kein öffentliches Angebot von Wertpapieren, Vermögensanlagen oder Kryptowerten. Damit es trägt, muss vorher feststehen:',
       facts=[('Recht Deutschland', 'Ist der Token mit Pacht ein Anlageprodukt mit Prospekt- oder Whitepaper-Pflicht, und was darf die Werbung versprechen (A5)?'),
              ('Recht Ukraine', 'Dürfen Ausländer ein Haus auf fremdem Grund besitzen und den Grund pachten; ist der Container ein Gebäude (A5)?'),
              ('Zahlung an den Lieferanten', 'Nimmt der Hersteller Zahlung in USD-Stablecoin über die Blockchain, oder muss in UAH oder EUR getauscht werden, und braucht der Umtausch eine Erlaubnis (A5)?'),
@@ -489,8 +490,18 @@ imPlan.append(N('group', 'g-kapital', 'Kapitalentscheidungen', kids=[
              ('Geld bereit', 'was als Beleg gilt und was bei weniger als 5 Käufern passiert (O23)'),
              ('Technik', 'ein Testkauf läuft durch: Token, Pachtvertrag, Zahlung (2.5.6)'),
              ('Bezugsfähig', 'Lieferzeit bis März (O31) und schriftliche Abnahme vor dem Einzug (E53)')]),
-    N('decision', 'preseed', 'Pre-Seed für die Firma: wer investiert, was braucht die Runde, wofür ist das Geld?', 'open', meta='Paul · nach dem Nachweis aus Z2', ziel=['X1'],
-      text='Erlaubt ist eine Runde nur für die Firma, nicht für den Ort (E57). Offen ist alles Weitere: wer investiert (VC, Start-up BW, andere), welche Belege die Runde braucht (O21), welcher Sitz dafür nötig ist (O11) und wofür das Geld verwendet wird. Der Nachweis aus 5 Käufern und 100 auf der Warteliste ist Romans Ausgangspunkt (E78).'),
+    N('decision', 'preseed', 'Zwei Investment Cases: X-PORTAL Company und Node001. Welche Struktur, welcher Kapitalbedarf, welcher Investor Ask?', 'open', meta='Paul · vor externem Versand des Decks', ziel=['X1', 'X3'],
+      text='Deck 11.2026: Company (Plattform, Lieferteam, wiederverwendbare KI-Lösungen, Architektur) mit Pre-Seed oder Equity-ähnlicher Finanzierung; Node001 als eigenständiger Project-/Asset-Case, Struktur nach Kosten-, Rechts- und Nachfrageprüfung. Beide wirtschaftlich und rechtlich getrennt. Vor Versand fehlen: Founder-, Ownership- und Governance-Darstellung, Produkt- und Revenue Model Node001, parametrischer Business Case mit Kapitalbedarf, Investmentstruktur, Investor Ask mit Meilensteinen. Im Log steht bisher: eine Runde nur für die Firma, nicht für den Ort (E57). Offen ist alles Weitere: wer investiert (VC, Start-up BW, andere), welche Belege die Runde braucht (O21), welcher Sitz dafür nötig ist (O11) und wofür das Geld verwendet wird. Der Nachweis aus 5 Käufern und 100 auf der Warteliste ist Romans Ausgangspunkt (E78).'),
+]))
+imPlan.insert(0, N('group', 'g-od', 'Offene Architekturentscheidungen der Reference Architecture v0.4 (OD-001 bis OD-008)', text='Aus Abschnitt 16 der Baseline, mit dem Gate, vor dem sie fallen müssen, und den Stellen im Plan, die dazu schon etwas sagen.', kids=[
+    N('decision', None, 'OD-001 · Systemgrenze X-PORTAL Organisation ↔ Node-Betrieb', 'open', meta='DECISION REQUIRED · vor Node001 Governance Design', text='Im Plan: Aufteilung X-PORTAL, DT Agentur, Grundstücke (X1 bis X3, 2.5.3, 2.5.5).', dom='b-OD-001'),
+    N('decision', None, 'OD-002 · Kritische Funktionen und Ziel-Autarkie-/Autonomiewerte für Node001', 'open', meta='OPEN · vor Basis of Design', text='Im Plan: Versorgung je Ressource mit Grundbetrieb, Störung, Ausbau (Ast 3); Werte sind Annahmen, keine geprüft (E22).', see=[('#b-ressourcen', 'Ast 3 Versorgung')], dom='b-OD-002'),
+    N('decision', None, 'OD-003 · Human Roles v1.0 und priorisierte Needs', 'open', meta='IN WORK · vor Service Architecture Freeze', text='Im Plan: drei Teammitglieder und Käufer (Ast 2). Die Infografik nennt acht Rollen: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren. Die Zuordnung fehlt (Abgleich W08).', see=[('#b-anforderungen', 'Ast 2 Alltag')], dom='b-OD-003'),
+    N('decision', None, 'OD-004 · System Model / Datenmodell v0.1', 'open', meta='OPEN · vor Digital-Twin-Implementierung', text='Im Plan bisher „digitaler Zwilling der Organisation“ (2.6.6, M07); nach der Baseline ist das ein System Model, kein Digital Twin.', dom='b-OD-004'),
+    N('decision', None, 'OD-005 · Node001 PoC-KPIs und Go/Revise/Stop-Grenzen', 'open', meta='OPEN · vor Investitionsfreigabe', text='Jede Hypothese H1 bis H8 braucht Messgröße, Datengrundlage, Zielwert, Prüfzeitpunkt und Go/Revise/Stop-Kriterium. Im Plan: Zielblatt Z1 bis Z4 und Gates G0 bis G4; Zielwerte fehlen großenteils.', see=[('#b-zielblatt', 'Zielblatt')], dom='b-OD-005'),
+    N('decision', None, 'OD-006 · Genome Invariants v0.1', 'open', meta='IN WORK · vor Node001 Architecture Freeze', text='Im Plan: Z4 und 2.6.6; wiederholbar sind Schema, Planung, Nutzbarkeit und Sinn (E11).', dom='b-OD-006'),
+    N('decision', None, 'OD-007 · Safety/Security/Privacy/Legal Baseline Node001', 'open', meta='OPEN · vor Technologie- und Betriebsfreigabe', text='Im Plan: Prüfaufträge an die Anwälte (A5), Abnahmen (E53), Zugang und Server (Technik im Haus), Datenverbindung Ukraine–Deutschland (E85).', see=[('#b-technik', 'Technik im Haus')], dom='b-OD-007'),
+    N('decision', None, 'OD-008 · Parametrischer Business Case und Architektur-Sensitivitäten', 'open', meta='OPEN · parallel zur Node001 System Architecture', text='Im Plan: Make-or-Buy (Ast 4), Kosten je Plot (2.1.2), Geldfluss (2.1.3). Die Papierrechnung über 12 Mio. € (E84) ist kein Business Case (Abgleich W05).', see=[('#b-makebuy', 'Ast 4 Make-or-Buy')], dom='b-OD-008'),
 ]))
 imPlan.append(N('decision', 'gleitzeit', 'Gleitzeit: wie wird die Kernzeit 9–14 Uhr verlegt, und wer ist für Betrieb und Notfall erreichbar?', 'open',
     meta='Planungspunkt neu (' + VORGABE + ') · Paul und Roman',
@@ -499,14 +510,14 @@ imPlan.append(N('decision', 'gleitzeit', 'Gleitzeit: wie wird die Kernzeit 9–1
 # ---------- Grundlage: Endprodukt und Ziele ----------
 ZB = [
     ('Z1', 'Node001', '2–3 Leute wohnen und arbeiten ganzjährig oben', 'Personen, die den ersten Winter oben gewohnt und gearbeitet haben', '2–3 Personen; ausgelegt für Team plus 5 Käufer (E79)', False,
-     'Einzug ab Frühjahr 2027 (E55), ganzjährig nach dem ersten Winter 2027/28', 'Roman oben; Paul mit Nazar für den Bau · Review G2, G3, G4', 'Zeit: Einzug erst ohne Frost (E21). Kapital: der Ort trägt sich aus Käufergeld (E57)', '1 und 3', 'E01, E23, E24'),
+     'Einzug ab Frühjahr 2027 (E55), ganzjährig nach dem ersten Winter 2027/28', 'Roman oben; Paul mit Nazar für den Bau · Review G2, G3, G4', 'Zeit: Einzug erst ohne Frost (E21). Kapital: der Ort trägt sich aus Käufergeld (E57)', '1 und 3', 'E01, E23, E24; prüft H1, H2, H3'),
     ('Z2', 'Node001', 'Das Grundstück voll bekommen', 'Verkaufte oder vermietete Plots von der Zahl, die die Geologie erlaubt', 'Zahl der Plots nach O01, Paul mit Nazar. Schwelle zum Bestellen: 5 Käufer mit belegtem Geld, 100 auf der Warteliste (E78)', True,
-     'Verkauf ab Januar 2027 (E52)', 'Roman (Verkauf), Paul (Grundstück) · Review G0, G1', 'Kapital: bestellt wird erst mit dem Geld der 5 Käufer (E78); weniger als 5 entscheidet O23', '1 und 2', 'E46, E51'),
+     'Verkauf ab Januar 2027 (E52)', 'Roman (Verkauf), Paul (Grundstück) · Review G0, G1', 'Kapital: bestellt wird erst mit dem Geld der 5 Käufer (E78); weniger als 5 entscheidet O23', '1 und 2', 'E46, E51; prüft H4'),
     ('Z3', 'Node001', 'Erster bezahlter Umsatz', 'Bezahlte Rechnungen je Monat in €, getrennt von Interesse und Marge', 'Monatswert festlegen. Planwert der Matrix (S06, 03.11.2026): mindestens Pauls 8.000 € netto plus laufende Kosten oben', True,
-     'bis zum Verkaufsstart im Januar 2027 (E77), dann monatlich', 'Roman und Paul · Review monatlich (3.3)', 'Vorschlag S06, nicht entschieden: ohne bezahltes Projekt bis 31.12.2026 nur Stufe „1 Person“', '1', 'E07, E08, E31, E77'),
-    ('Z4', 'Node001', 'Schema für den nächsten Node', 'Schema, Planung, Nutzbarkeit und Sinn getrennt von den Werten dieses Grundstücks; ein geänderter Standortparameter macht betroffene Anforderungen, Varianten und Beschlüsse auffindbar (2.6.6)', 'Probe vor G1; zweite Standortkonfiguration nach Stufe 1', False,
-     'nach Stufe 1, Probe vor G1', 'Paul · Review nach Stufe 1', '–', '2', 'E11'),
-    ('X1', 'Aufteilung: X-PORTAL, DT Agentur, Grundstücke', 'X-PORTAL: Dachfirma', 'festlegen, je Aufgabe', 'Was genau zur Dachfirma gehört (2.5.3). Aufgaben laut Vorgabe: Grundstücke bebauen und verwalten; Freelancer verwalten und Projekten zuordnen; eigene Projekte bauen, etwa KI-Agenten, Blockchain und Finance Engineering', True,
+     'bis zum Verkaufsstart im Januar 2027 (E77), dann monatlich', 'Roman und Paul · Review monatlich (3.3)', 'Vorschlag S06, nicht entschieden: ohne bezahltes Projekt bis 31.12.2026 nur Stufe „1 Person“', '1', 'E07, E08, E31, E77; prüft H4, H6'),
+    ('Z4', 'Node001', 'Genome: wiederverwendbares Systemwissen für den nächsten Node', 'Systemlogik und validierte Standards getrennt von den Werten dieses Grundstücks; ein geänderter Standortparameter macht betroffene Anforderungen, Varianten und Beschlüsse auffindbar (2.6.6)', 'Probe vor G1; zweite Standortkonfiguration nach Stufe 1', False,
+     'nach Stufe 1, Probe vor G1; belastbar erst mit Node002', 'Paul · Review nach Stufe 1', '–', '2', 'E11; prüft H7, H8'),
+    ('X1', 'Aufteilung: X-PORTAL, DT Agentur, Grundstücke', 'X-PORTAL Organisation (Company)', 'festlegen, je Aufgabe', 'Systemgrenze Organisation ↔ Node-Betrieb (OD-001, DECISION REQUIRED) und was genau zur Organisation gehört (2.5.3). Aufgaben laut Vorgabe: Grundstücke bebauen und verwalten; Freelancer verwalten und Projekten zuordnen; eigene Projekte bauen, etwa KI-Agenten, Blockchain und Finance Engineering', True,
      'Aufteilung vor G0, eigene Ziele nach Stufe 1 (E69)', 'Paul (Gesellschaft, Geld, Nodes) und Roman (Produkt, Projekt) (E62)', 'heute tritt Romans Einzelunternehmen auf, die UG wird gegründet; Sitz offen (E61, O11)', '1 und 2', 'Vorgabe 05.11.2026; E17, E62, E63, E70'),
     ('X2', 'Aufteilung: X-PORTAL, DT Agentur, Grundstücke', 'DT Agentur: übernimmt die Projekte aus Deutschland', 'Bezahlter Umsatz, Interesse und Marge getrennt (M09)', 'Welche Projekte, welche Verträge und welches Geld bei der DT Agentur liegen und was an X-PORTAL geht (2.5.3). Heute kein Umsatz, keine dauerhaften Nutzer (E08)', True,
      'erster Auftrag bis Januar 2027 (E77)', 'Roman und Paul', '–', '1', 'Vorgabe 05.11.2026; E07, E08, E31'),
@@ -514,11 +525,12 @@ ZB = [
      'vor dem Verkauf im Januar 2027 (G0)', 'Paul (Grundstücke, E62); Anwälte (O05)', 'Kapital: der Ort trägt sich aus Käufergeld (E57)', '1 und 2', 'E17, E18, E52, E57, E62'),
 ]
 
-GRUNDLAGE = """<h4 class="dt-h4">Wofür X-PORTAL steht (Leitlinie P01)</h4>
-<p><b>Vision:</b> ein weltweit vernetztes Ökosystem menschenzentrierter Lebens- und Arbeitsorte. Jeder Standort passt sich an die Menschen und den Ort an und entwickelt sich durch Technik, lernende Organisation und zunehmend eigene Versorgung weiter.</p>
-<p><b>Mission:</b> „Wir schaffen und vernetzen menschenzentrierte Innovationshubs, in denen Menschen leben, arbeiten und gemeinsam neue Lösungen entwickeln. Dafür verbinden wir moderne Technologien, geeignete Arbeits- und Lebensbedingungen und einen verantwortungsvollen Umgang mit Ressourcen.“ (E28)</p>
-<p><b>Globalziele, in dieser Rangfolge (E29):</b> 1. wirtschaftliche Tragfähigkeit und Resilienz; 2. internationale Skalierung; 3. gesellschaftlicher Nutzen: sichere, menschenzentrierte Orte. Dazu gehört die Wirkung auf die Region, beurteilt an echten Erfahrungen.</p>
-<p><b>Entscheidungsgrundsatz:</b> Was angefangen wird, richtet sich nach seinem Beitrag zu diesen drei Zielen. Menschenwürde, Sicherheit und gesetzliche Anforderungen sind verbindliche Grenzen (Leitlinie P01).</p>
+GRUNDLAGE = """<h4 class="dt-h4">Wofür X-PORTAL steht (Reference Architecture v0.4)</h4>
+<p><b>Vision:</b> „X-PORTAL entwickelt menschenzentrierte, weitgehend versorgungsautarke, operativ autonome, resiliente und wirtschaftlich tragfähige Lebens-, Arbeits- und Aufenthaltsumgebungen, in denen Mensch, physische Welt, Services, Organisation und Technologie als integriertes, lernendes Gesamtsystem zusammenwirken.“</p>
+<p><b>Kerndefinition:</b> X-PORTAL definiert keinen Baukasten fertiger Lösungen, sondern einen kontrollierten Mechanismus, mit dem standortspezifische Lösungen entwickelt, betrieben, gemessen, verbessert und, soweit Evidenz es rechtfertigt, reproduziert werden. Node001 Beregniza ist die erste reale Umgebung, in der dieser Mechanismus validiert wird.</p>
+<p><b>Globalziele aus dem Entscheidungslog, in dieser Rangfolge (E29):</b> 1. wirtschaftliche Tragfähigkeit und Resilienz; 2. internationale Skalierung; 3. gesellschaftlicher Nutzen. Die Baseline führt sie als Prinzipien und als Hypothesen H1 bis H8.</p>
+<p><b>Entscheidungsgrundsatz:</b> Systementscheidungen werden an ihrer Wirkung auf Menschen bewertet (XP-SYS-001) und an CAPEX, OPEX und Lebenszyklus (XP-SYS-004). Menschenwürde, Sicherheit und gesetzliche Anforderungen sind verbindliche Grenzen.</p>
+<p class="note">Die frühere Vision und die Mission aus E28 sind Historie; die Baseline v0.4 nennt keine Mission. Ob eine Mission bleibt, ist OPEN (Abgleich W01).</p>
 <h4 class="dt-h4">Endprodukt Stufe 1</h4>
 <p class="dt-endp">2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld (E01, E23, E24). Der Betrieb trägt sich selbst, X-PORTAL stellt die Basis (E54).</p>
 <h4 class="dt-h4">Grundmodell eines Node (E72–E74)</h4>
@@ -526,7 +538,7 @@ GRUNDLAGE = """<h4 class="dt-h4">Wofür X-PORTAL steht (Leitlinie P01)</h4>
 <li><b>Leichter Transport:</b> Die Häuser sollen mit wenig Gerät hochkommen; darum kommen sie in Teilen und werden oben montiert (E75; 2.2.3). Ob ein kleines Fahrzeug die Teile hochbringt, prüft 2.2.4.</li>
 <li><b>Kommunal und gemeinschaftlich:</b> Ein Kommunalgebäude ist der gemeinsame Ort zum Arbeiten, mit Küche und Sanitär (E40, E74; 2.4.4).</li>
 <li><b>Privatsphäre:</b> Jede Person hat ihren eigenen Container (E40), der ihr Tiny House ist (E59). Community und Gesellschaft sind vorausgesetzt.</li>
-<li><b>Autark:</b> Strom, Wasser und Wärme wachsen Schritt für Schritt (2.3). Mobilität läuft mit elektrischen Bikes statt Benzin, das Netz oben wird dafür ausgebaut (2.3.6). Der Gemüsegarten am Kommunalgebäude steht für die weitere Autarkie (E74).</li>
+<li><b>Weitgehend versorgungsautark:</b> Strom, Wasser und Wärme wachsen Schritt für Schritt (2.3); Zielwerte je kritischer Funktion sind OPEN (OD-002). Mobilität läuft mit elektrischen Bikes statt Benzin, das Netz oben wird dafür ausgebaut (2.3.6). Der Gemüsegarten am Kommunalgebäude steht für die weitere Autarkie (E74).</li>
 </ul>"""
 
 def zielblatt_html():
@@ -541,13 +553,14 @@ def zielblatt_html():
                  f'<td>{linkify(zeit)}</td><td>{linkify(wer)}</td><td>{linkify(grenze)}</td><td>{linkify(auf)}</td><td>{linkify(quelle)}</td></tr>')
     zb = f'<div class="tablewrap"><table class="dt-ztab"><thead>{head}</thead><tbody>{rows}</tbody></table></div>'
     grenzen = [
-        ('Zeit', 'Verkauf ab Januar 2027 (E51)', 'G0 nicht frei: Termine neu (O24)', 'Terminkette rückwärts (O24)'),
+        ('Zeit', 'Alle Termine sind Ziele, keine Zusagen; Baubeginn 2027 nur nach technischen, wirtschaftlichen und finanziellen Gates (Deck)', '–', 'Investment-Readiness-Gate'),
+        ('Zeit', 'Verkauf ab Januar 2027 (E51): ASSUMPTION, Produkt- und Preismodell wird validiert', 'G0 nicht frei: Termine neu (O24)', 'Terminkette rückwärts (O24)'),
         ('Zeit', 'Aufstellen frühestens März 2027, nur ohne Frost (E21, E55)', 'Boden gefroren: warten (E55)', 'Lieferzeit der Hersteller (O31)'),
         ('Zeit', 'Einzug ab Frühjahr 2027, winterfest vor dem ersten Frost 2027 (E38, E55, G3)', 'nicht winterfest: kein Winter oben', 'Abbruchregel bei Krise (O17)'),
-        ('Kapital', 'Der Ort trägt sich aus dem Käufergeld; er braucht keinen Investor (E57)', 'weniger als 5 Käufer zum Bestelltermin: O23', 'Obergrenze in Euro aus dem Geldfluss (2.1.3)'),
+        ('Kapital', 'Zwei getrennte Investment Cases: X-PORTAL Company und Node001 (Deck 11.2026). Node001 muss aus realer Nutzung tragfähig werden; spätere IP- oder Genome-Erlöse sind kein Teil des Base Case', 'weniger als 5 Käufer zum Bestelltermin: O23', 'DECISION REQUIRED: E57 („der Ort braucht keinen Investor“) widerspricht (Abgleich W03); Kostenband und Kapitalbedarf (OD-008)'),
         ('Kapital', 'Paul entscheidet Bestellung und Betrag (E71); bestellt wird nur mit Geld auf dem Konto (3.2)', '–', 'Vorbereitungsbudget (O12); 3.500 € sind nur ein Diskussionsvorschlag (3.2)'),
         ('Kapital', 'Verkauf der Häuser über die Blockchain, etwa 30.000 € je Käufer, bezugsfähig im Frühjahr 2027 (E52, E55, E78)', 'Recht oder Zahlung passen nicht: kein Verkauf im Januar (G0)', 'Prüfaufträge A5; ob der Lieferant über die Blockchain bezahlt werden kann (siehe Kapitalentscheidung)'),
-        ('Kapital', 'Pre-Seed ist erlaubt, aber nur für die Firma, nicht für den Ort (E57)', '–', 'wer investiert, was die Runde braucht, wofür das Geld ist: offen (Planungspunkt Pre-Seed)'),
+        ('Kapital', 'Company: Pre-Seed oder Equity-ähnlich für Plattform, Lieferteam, KI-Lösungen und Architektur (Deck)', '–', 'Struktur, Meilensteine, Investor Ask: festzulegen (Planungspunkt Pre-Seed)'),
         ('Umsatz', 'Erster bezahlter Auftrag bis Januar 2027 (E77)', 'Vorschlag S06: sonst nur Stufe „1 Person“', 'entscheiden, ob die Regel gilt'),
     ]
     gr = ''.join(f'<tr><td class="mono">{a}</td><td>{linkify(b)}</td><td>{linkify(c)}</td><td>{linkify(d)}</td></tr>' for a, b, c, d in grenzen)
@@ -618,7 +631,7 @@ tree = [
     N('group', 'b-seite', '6 · Offen auf der Entscheidungsseite: D34 bis D41', kids=seite, page=True,
       text='Für diese acht gibt es dort noch keine Stimme (Stand 04.11.2026). Wählt dort; der Baum zeigt die Möglichkeiten und was davon abhängt.'),
     N('group', 'b-plan', '7 · Offen im Plan, noch ohne Karte auf der Entscheidungsseite', kids=imPlan,
-      text='Aus Kapitel 4 (Art E), den Teilergebnissen, die nur ihr entscheidet, und den neuen Planungspunkten vom 05.11.2026.'),
+      text='Die offenen Architekturentscheidungen der Baseline, dazu Kapitel 4 (Art E), die Teilergebnisse, die nur ihr entscheidet, und die Planungspunkte vom 05.11.2026.'),
     N('group', 'b-entschieden', f'8 · Entschieden: 84 im Log, nach Thema', kids=entschieden, opened=False,
       text='Je Thema ein Satz, mit den Entscheidungen dahinter. Die vollständige Liste steht unten unter „Entscheidungen E01–E85“.'),
 ]
@@ -803,6 +816,95 @@ blockers = [('O01', 'Geologie', 'Paul · wartet auf Nazar'), ('O31', 'Angebote H
             ('O03', 'Kosten je Plot', 'KI · nach O01 und O31'), ('O04', 'Erster bezahlter Auftrag', 'Roman und Paul · bis Januar 2027'),
             ('O05', 'Anwälte und Prüfaufträge', 'Paul und Roman · vor G0')]
 
+def md_html(md):
+    """Kleiner Markdown-Umsetzer für die Baseline: Überschriften, Listen, Tabellen, Zitate."""
+    def inline(t):
+        t = html.escape(t, quote=False)
+        t = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', t)
+        return t
+    out, i, lines = [], 0, md.split('\n')
+    sec_open = False
+    while i < len(lines):
+        l = lines[i].rstrip()
+        if l.startswith('## '):
+            if sec_open: out.append('</div></details>')
+            num = l[3:].split('.')[0].strip()
+            keep_open = num in ('2', '3', '14', '18')
+            out.append(f'<details class="kap dt-ra" id="ra-{num}"{" open" if keep_open else ""}><summary><span class="dt-ra-h">{inline(l[3:])}</span></summary><div>')
+            sec_open = True
+        elif l.startswith('### '):
+            out.append(f'<h4 class="dt-h4">{inline(l[4:])}</h4>')
+        elif l.startswith('|'):
+            rows = []
+            while i < len(lines) and lines[i].startswith('|'):
+                rows.append([c.strip() for c in lines[i].strip().strip('|').split('|')]); i += 1
+            i -= 1
+            head, body_rows = rows[0], rows[2:]
+            def cell(c):
+                if re.fullmatch(r'XP-SYS-\d+|OD-\d+|H\d', c): return f'<td class="mono" id="ra-{c}">{c}</td>'
+                return f'<td>{inline(c)}</td>'
+            out.append('<div class="tablewrap"><table><thead><tr>' + ''.join(f'<th>{inline(h)}</th>' for h in head) + '</tr></thead><tbody>'
+                       + ''.join('<tr>' + ''.join(cell(c) for c in r) + '</tr>' for r in body_rows) + '</tbody></table></div>')
+        elif l.startswith('> '):
+            out.append(f'<blockquote class="dt-quote">{inline(l[2:])}</blockquote>')
+        elif re.match(r'(- |\d+\. )', l):
+            tag = 'ul' if l.startswith('- ') else 'ol'
+            items = []
+            while i < len(lines) and re.match(r'(- |\d+\. )', lines[i]):
+                items.append(inline(re.sub(r'^(- |\d+\. )', '', lines[i].rstrip()))); i += 1
+            i -= 1
+            out.append(f'<{tag}>' + ''.join(f'<li>{x}</li>' for x in items) + f'</{tag}>')
+        elif l and not l.startswith('#') and not l.startswith('---') and not re.match(r'\*\*(Version|Date|Status):', l):
+            out.append(f'<p>{inline(l)}</p>')
+        i += 1
+    if sec_open: out.append('</div></details>')
+    return '\n'.join(out)
+
+RA_MD = (Path(__file__).resolve().parent.parent / 'quellen' / 'reference-architecture-v0.4.md').read_text()
+RA_MD = RA_MD.split('---', 2)[2] if RA_MD.startswith('---') else RA_MD
+
+# Abgleich: Nr, Thema, bisher im Index, Baseline v0.4 / Deck 11.2026, was jetzt gilt, Status, erledigt?
+ABGLEICH = [
+    ('W01', 'Vision und Mission', 'Vision der Leitlinie P01; Mission „Innovationshubs“ (E28)', 'Neue Vision (Abschnitt 2), keine Mission, Kerndefinition (Abschnitt 18)', 'Vision v0.4 steht in der Grundlage des Baums. Ob eine Mission bleibt, ist offen.', 'OPEN', 'angepasst'),
+    ('W02', 'Was „X-PORTAL“ heißt', '„Dachfirma“ (Vorgabe 05.11.), „Firma“', 'X-PORTAL ist das sozio-technische Gesamtsystem; die Firma heißt X-PORTAL Organisation bzw. Company; Systemgrenze zum Node-Betrieb offen (OD-001)', 'Zielblatt X1 heißt „X-PORTAL Organisation (Company)“. Wo die DT Agentur steht, nennen Baseline und Deck nicht.', 'DECISION REQUIRED', 'angepasst'),
+    ('W03', 'Kapital für Node001', '„Kein Investor“ (E04); der Ort trägt sich aus Käufergeld, Pre-Seed nur für die Firma (E57)', 'Zwei getrennte Investment Cases; Node001 als eigener Project-/Asset-Case mit Kapital für Infrastruktur und ersten Bauabschnitt', 'Grenzentabelle und Planungspunkt zeigen beide Cases. E57 muss im Log geändert werden.', 'DECISION REQUIRED', 'CHANGE REQUEST'),
+    ('W04', 'Produkt- und Preismodell', 'Hausverkauf als Token über die Blockchain, Grund pachten, etwa 30.000 € je Plot, Verkauf ab Januar 2027 (E50, E52, E78)', '„Miete bzw. geeignetes Eigentums-/Nutzungsmodell“, Produktmix und Preis werden validiert; kein öffentliches Angebot von Kryptowerten', 'Im Baum als ASSUMPTION geführt; Preis, Token und Januar sind keine Aussagen für Investoren.', 'ASSUMPTION', 'CHANGE REQUEST'),
+    ('W05', 'Zahlen zum Invest', 'Papierrechnung rund 12 Mio. € „rechtfertigt das Invest“ (E84); Kostenhochrechnung 12,5 Mio. € (E65)', 'Parametrischer Business Case offen (OD-008); Scheingenauigkeit vermeiden (KI-Regel 10); Kostenband „zu validieren“', 'Beide Zahlen bleiben intern und gehören in keine Investorenunterlage.', 'ASSUMPTION', 'markiert'),
+    ('W06', 'Termine', 'Verkauf Januar 2027, Container ab März, „Einzug ab Frühjahr 2027“ (E51, E55)', '„Baubeginn 2027 · Ziel“, nur nach Gates; Meilensteine sind Ziele, keine Zusagen', 'Grenzentabelle führt alle Termine als Ziele.', 'ASSUMPTION', 'angepasst'),
+    ('W07', 'Genehmigung und Finanzierung', '„Genehmigung und Planung liegen vor, 12,5 Mio. € privat finanziert“ (E60, durch E65 schon berichtigt)', 'Finanzierung des ersten Bauabschnitts und Freigaben: „zu validieren“; „Grundstück gesichert“', 'Es gilt das Deck. Belege zum Grundstück fehlen weiter (O14): DOCUMENTED, nicht VERIFIED.', 'DOCUMENTED', 'markiert'),
+    ('W08', 'Rollen der Menschen', 'Team (drei Personen) und Käufer oder Mieter (E63)', 'Acht Rollen in der Infografik: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren; Human Roles v1.0 in Arbeit (OD-003)', 'Der Plan bleibt bei Team und Käufern, bis OD-003 entschieden ist.', 'IN WORK', 'markiert'),
+    ('W09', 'Digital Twin', '„Digitaler Zwilling der Organisation“, „Unternehmenszwilling“ (2.6.6, M07)', 'System Model ist nicht Digital Twin; voller Twin später und nur bei Nutzen', 'Text in 2.6.6 angepasst; M07 bleibt als Methodenname der Historie.', 'OPEN', 'angepasst'),
+    ('W10', 'Zahl der Nodes', '„Node001, der erste von zehn Nodes“ (E63)', 'Node002 als Replikationstest; keine Zahl; Multi-Node-Plattform nicht im MVS', 'Die Zahl zehn steht in keiner aktuellen Aussage mehr.', 'ASSUMPTION', 'CHANGE REQUEST'),
+    ('W11', 'Genome', '„Schema für den nächsten Node“ (Z4, E11)', 'X-PORTAL Genome: Invarianten, Module, Parameter, Entscheidungsregeln, Evidenz; belastbar erst mit Evidenz aus Node001 und Node002', 'Z4 heißt jetzt Genome.', 'IN WORK', 'angepasst'),
+    ('W12', 'Autarkie', '„autark“ (E46, E54, E72)', '„weitgehend versorgungsautark, operativ autonom“; Zielwerte je kritischer Funktion offen (OD-002)', 'Grundmodell angepasst.', 'OPEN', 'angepasst'),
+    ('W13', 'Statusbegriffe', 'offen, wartet, nicht geprüft, entschieden, Regel steht', 'VERIFIED, DOCUMENTED, IN WORK, ASSUMPTION, OPEN, DECISION REQUIRED', 'Zuordnung steht in der Legende des Baums. „Entschieden“ heißt DOCUMENTED, nicht VERIFIED.', 'DOCUMENTED', 'angepasst'),
+    ('W14', 'Team und Rollen', 'Paul ist CEO zu 100 %, Roman Produkt und Projekt (E62); Nazar ist beauftragte Fachperson (E64)', 'Deck nennt als operatives Team Roman Dering, Pavel J., Nazar D. („Architekt · Nodes“); Founder-, Ownership- und Governance-Darstellung vor Versand offen', 'Wer Gründer und Gesellschafter ist und ob Nazar Teammitglied oder Auftragnehmer ist, muss vor dem Versand feststehen.', 'DECISION REQUIRED', 'offen'),
+    ('W15', 'Ortsangabe', 'Website nennt, wenn überhaupt, nur „Ukraine“ (E66)', 'Deck: „Karpatenregion, Westukraine“; Baseline: „Node001 Beregniza“', 'Für Investoren gilt die Angabe des Decks; E66 betrifft die öffentliche Website.', 'DOCUMENTED', 'markiert'),
+    ('W16', 'Erlöse', 'Agenten je Aufruf über Masumi (E56); Einstieg ab 490 € (E76, abgelöst durch E83)', 'Vier Erlösstufen: Kundenprojekte (heute), KI-Lösungen (in Entwicklung), Nutzung und Services Node001, System-Skalierung (später)', 'Preismodell bleibt offen (E83); Masumi ist eine Option, keine Aussage im Deck.', 'OPEN', 'markiert'),
+    ('W17', 'Versionsstand der Infografik', '–', 'Infografik „Integrierte Managementarchitektur · SGMM II“ nennt Reference Architecture v0.2; Baseline und Deck nennen v0.4', 'Widerspruch innerhalb der neuen Unterlagen: Infografik auf v0.4 heben, bevor sie rausgeht.', 'DECISION REQUIRED', 'offen'),
+    ('W18', 'Kürzel H1 bis H8', 'H01 bis H09 sind Anforderungen der Stufe Grundbedürfnisse (M02)', 'H1 bis H8 sind die PoC-Hypothesen', 'Verwechslungsgefahr. Im Index heißen Hypothesen immer H1 bis H8 ohne Null, Anforderungen H01 bis H09.', 'DOCUMENTED', 'markiert'),
+]
+PILL = {'OPEN': 'st-open', 'DECISION REQUIRED': 'st-open', 'ASSUMPTION': 'st-untested', 'IN WORK': 'st-run', 'DOCUMENTED': 'st-done', 'VERIFIED': 'st-done'}
+def abgleich_html():
+    rows = ''.join(f'<tr id="ab-{n}"><td class="mono">{n}</td><td><b>{html.escape(t)}</b></td><td>{linkify(a)}</td><td>{linkify(b)}</td><td>{linkify(c)}</td>'
+                   f'<td><span class="dt-bpill {PILL[st]}">{st}</span></td><td>{html.escape(done)}</td></tr>' for n, t, a, b, c, st, done in ABGLEICH)
+    return ('<div class="tablewrap"><table class="dt-ztab"><thead><tr><th>Nr</th><th>Thema</th><th>Bisher im Index</th><th>Baseline v0.4 und Deck 11.2026</th><th>Was jetzt gilt</th><th>Status</th><th>Im Index</th></tr></thead><tbody>'
+            + rows + '</tbody></table></div>')
+
+HYP = [('H1', 'Human Value', 'Z1; Anforderungen nach Maslow und Sinnen (Ast 2), Nutzungstest 2.4.9'), ('H2', 'Autarkie & Resilienz', 'Z1; Versorgung je Ressource (Ast 3), Störungstag'),
+       ('H3', 'Operational Viability', 'Z1; Betrieb oben 2.4.5, Abnahmen (E53)'), ('H4', 'Economic Viability', 'Z2, Z3; Kosten je Plot 2.1.2, Geldfluss 2.1.3, OD-008'),
+       ('H5', 'Digital Value', 'OD-004; Technik im Haus'), ('H6', 'AI Value', 'Z3; eigene Agenten (E56), Preismodell 2.6.2'),
+       ('H7', 'Learning Capability', 'Routine 3.3, Entscheidungslog'), ('H8', 'Replicability', 'Z4 Genome, 2.6.6; Beweis erst mit Node002')]
+ra_section = ('<section id="ra"><h2>Reference Architecture v0.4: der Bezugsrahmen</h2>'
+    '<p class="lede2">Seit dem 12.11.2026 ist die Reference Architecture v0.4-WB1 die gemeinsame Arbeitsreferenz für Menschen und KI. Alles Frühere in diesem Index, auch das Entscheidungslog E01 bis E85, ist Evidenz und Historie und gilt nur, soweit es der Baseline nicht widerspricht (KI-Regel 1). Widersprüche stehen im Abgleich und sind nicht stillschweigend geglättet (KI-Regel 8).</p>'
+    '<h3 id="ra-abgleich">Abgleich: Widersprüche zwischen Index und Baseline</h3>'
+    f'<p>{len(ABGLEICH)} Punkte. „angepasst“: der Index sagt jetzt, was die Baseline sagt. „CHANGE REQUEST“: die Entscheidung im Log muss von Paul und Roman geändert werden. „markiert“: der alte Stand bleibt als Historie stehen und ist gekennzeichnet. „offen“: Widerspruch in den neuen Unterlagen selbst.</p>'
+    + abgleich_html()
+    + '<h3 id="ra-hyp">PoC-Hypothesen H1 bis H8 und wo der Plan sie prüft</h3><div class="tablewrap"><table><thead><tr><th>ID</th><th>Hypothese</th><th>Im Plan</th><th>Messgröße, Zielwert, Go/Revise/Stop</th></tr></thead><tbody>'
+    + ''.join(f'<tr><td class="mono">{a}</td><td><b>{b}</b></td><td>{linkify(c)}</td><td><span class="dt-bpill st-open">OPEN</span> OD-005</td></tr>' for a, b, c in HYP)
+    + '</tbody></table></div>'
+    + '<h3 id="ra-text">Die Baseline im Wortlaut</h3>' + md_html(RA_MD) + '</section>\n')
+
 section = f'''<section id="baum"><h2>Offener Entscheidungsbaum</h2>
 <p class="lede2">Der ganze Plan Stufe 1 als Baum. Die Grundlage ist das Endprodukt mit seinen Zielen. Darunter stehen die Äste in der Reihenfolge, in der jetzt gearbeitet wird: 1 der Weg ab der Geologie, 2 der Alltag oben mit seinen prüfbaren Anforderungen, 3 die Versorgung je Ressource mit Ausbaupfad, 4 die Make-or-Buy-Vergleiche. Offene Äste bleiben aufgeklappt und zeigen jede Möglichkeit mit ihrer Folge; Entschiedenes ist eingeklappt. Gewählt wird weiter auf der <a href="{ENTSCHEIDUNGSSEITE}" target="_blank" rel="noreferrer">Entscheidungsseite</a>.</p>
 <ul class="dt-bkey" aria-label="Zeichen im Baum">
@@ -814,6 +916,7 @@ section = f'''<section id="baum"><h2>Offener Entscheidungsbaum</h2>
 <li><span class="dt-bg k-end" aria-hidden="true"></span>Ende von Stufe 1</li>
 <li><span class="dt-bol" aria-hidden="true">A</span>Möglichkeit</li>
 </ul>
+<p class="note">Status nach der Baseline: offen = OPEN oder DECISION REQUIRED · wartet = IN WORK · nicht geprüft = ASSUMPTION · entschieden und „Regel steht“ = DOCUMENTED. VERIFIED ist bisher nichts: keine Anforderung ist fachlich geprüft.</p>
 <div class="dt-bstats">
 <div class="dt-bstat"><b>{len(ZB)}</b><span>Ziele im Zielblatt</span><small>{sum(1 for z in ZB if z[5])} davon mit Klärungsauftrag</small></div>
 <div class="dt-bstat"><b>{len(M02)}</b><span>Anforderungen</span><small>keine geprüft; die M02 im Repo hat 46</small></div>
@@ -919,6 +1022,10 @@ tr.dt-zgrp th { background:var(--bg); color:var(--ink); font-size:11.5px }
 .dt-ber button { font:inherit; font-size:12.5px; cursor:pointer; border:1px solid var(--line); background:var(--surface); color:var(--ink); padding:4px 10px; border-radius:999px }
 .dt-ber button[aria-pressed="true"] { background:var(--ink); color:var(--bg); border-color:var(--ink) } .dt-ber button:focus-visible { outline:2px solid var(--ink); outline-offset:2px }
 .dt-off { display:none !important }
+blockquote.dt-quote { margin:8px 0 12px; padding:10px 14px; border-left:4px solid var(--ink); background:var(--surface); color:var(--ink); font-size:16px; max-width:80ch }
+details.dt-ra { border-top:1px solid var(--line); padding:8px 0 } details.dt-ra > summary { margin:0 } .dt-ra-h { font-size:16px; color:var(--ink) }
+details.dt-ra > div { padding-top:8px } details.dt-ra li { margin:4px 0 }
+#ra h3 { margin-top:28px }
 .dt-endp { font-size:16px; color:var(--ink); font-weight:600; max-width:70ch }
 ul.dt-gm { margin:0 0 8px; padding-left:20px; max-width:90ch } ul.dt-gm li { margin:3px 0 }
 details.dt-bb { margin:6px 0 2px; border-top:1px dashed var(--line); padding-top:4px }
@@ -974,7 +1081,8 @@ js = '''<script>
 </script>
 '''
 
-toc = ('<li><a href="#baum" data-k="baum">Offener Entscheidungsbaum</a><ol>'
+toc = ('<li><a href="#ra" data-k="ra">Reference Architecture v0.4</a><ol><li><a href="#ra-abgleich" data-k="ra-abgleich">Abgleich: Widersprüche</a></li><li><a href="#ra-hyp" data-k="ra-hyp">Hypothesen H1–H8</a></li><li><a href="#ra-text" data-k="ra-text">Baseline im Wortlaut</a></li></ol></li>'
+       '<li><a href="#baum" data-k="baum">Offener Entscheidungsbaum</a><ol>'
        '<li><a href="#b-zielblatt" data-k="b-zielblatt">Grundlage: Endprodukt und Ziele</a></li>'
        '<li><a href="#b-hauptweg" data-k="b-hauptweg">1 Der Weg ab jetzt</a></li>'
        '<li><a href="#b-anforderungen" data-k="b-anforderungen">2 Alltag und Anforderungen</a></li>'
@@ -997,9 +1105,9 @@ def sub_once(s, old, new, count=1):
     return s.replace(old, new)
 
 body = sub_once(body, '<title>X-PORTAL Index 2.0</title>', '<title>X-PORTAL Index 3.0</title>')
-body = sub_once(body, 'X-PORTAL Index 2.0 · Node001 · Stand 04.11.2026', 'X-PORTAL Index 3.0 · Node001 · Stand 04.11.2026')
+body = sub_once(body, 'X-PORTAL Index 2.0 · Node001 · Stand 04.11.2026', 'X-PORTAL Index 3.0 · Node001 · Stand 12.11.2026 · Bezugsrahmen Reference Architecture v0.4-WB1')
 old_lede = '<p class="lede">Oben sechs Bilder nach PRINCE2, darunter der Plan zum Arbeiten, unten zum Nachschlagen.'
-body = sub_once(body, old_lede, '<p class="lede">Ganz oben der offene Entscheidungsbaum, dann sechs Bilder nach PRINCE2, darunter der Plan zum Arbeiten, unten zum Nachschlagen.')
+body = sub_once(body, old_lede, '<p class="lede">Ganz oben die Reference Architecture v0.4 mit dem Abgleich, dann der offene Entscheidungsbaum, dann sechs Bilder nach PRINCE2, darunter der Plan zum Arbeiten, unten zum Nachschlagen.')
 body = sub_once(body, '<ol class="side"><li><a href="#ueberblick" data-k="ueberblick">', '<ol class="side">' + toc + '<li><a href="#ueberblick" data-k="ueberblick">', count=2)
 body = sub_once(body, '<div class="wrap" id="top">', css + '<div class="wrap" id="top">')
 REQ_NAME = {r['id']: r['bedarf'] for r in M02}
@@ -1021,7 +1129,7 @@ zbmap = ('<div class="dt-zbmap" id="u-zielbild-m02"><h4>Was jeder Bereich den Me
          + ''.join(f'<li><span class="zb-n">{n}</span><div><b>{html.escape(t)}</b><span class="dt-chips">{"".join(rchip(c) for c in cs)}</span></div></li>' for n, t, cs in ZBMAP)
          + '</ol><p style="margin:10px 0 4px">Nicht im Bild, aber gefordert:</p><span class="dt-chips">' + ''.join(rchip(c) for c in NICHT_IM_BILD) + '</span></div>')
 body = sub_once(body, 'Die Sauna ist nicht im Bild; wo sie hinkommt, fragt D35.</p></div></div>', 'Die Sauna ist nicht im Bild; wo sie hinkommt, fragt D35.</p></div></div>' + zbmap)
-body = sub_once(body, '<main>\n', '<main>\n' + section) if '<main>\n' in body else sub_once(body, '<main>', '<main>' + section)
+body = sub_once(body, '<main>\n', '<main>\n' + ra_section + section) if '<main>\n' in body else sub_once(body, '<main>', '<main>' + ra_section + section)
 body = sub_once(body, '<footer>Erzeugt aus plan/PLAN.md, plan/daten/ und plan/entscheidungen.md mit plan/werkzeuge/index_seite.py.</footer>',
                 '<footer>Erzeugt aus plan/PLAN.md, plan/daten/ und plan/entscheidungen.md mit plan/werkzeuge/index_seite.py. Der offene Entscheidungsbaum ist für Index 3.0 dazugekommen und noch nicht im Generator.</footer>')
 
@@ -1150,6 +1258,9 @@ for a, b in [('im Entwurf unten links', 'im Entwurf ' + HH), ('zuerst unten link
 # Falschaussage zu 2.5.8 gestrichen (Hinweis vom 05.11.2026)
 body = sub_once(body, '<td>Förderung: Start-up BW. Die Vorhabenbeschreibung KI-Transfer-KMU ist eingereicht und weicht von euren Entscheidungen ab</td>', '<td>Förderung: Start-up BW</td>')
 body = sub_once(body, '<a class="ref" href="#E57">E57</a>; <code>plan/recherchen/2026-11-03-vorhaben-abweichungen.md</code></td></tr>', '<a class="ref" href="#E57">E57</a></td></tr>')
+HIST = '<p class="note" style="border-left:3px solid var(--wait);padding-left:10px"><b>Historie.</b> Stand 04.11.2026, vor der Reference Architecture v0.4. Bei Widerspruch gilt die Baseline; die bekannten Widersprüche stehen im <a href="#ra-abgleich">Abgleich</a>.</p>'
+body = sub_once(body, '<section id="k1-endprodukt-und-ziele"><h2>1 Endprodukt und Ziele</h2>', '<section id="k1-endprodukt-und-ziele"><h2>1 Endprodukt und Ziele</h2>' + HIST)
+body = sub_once(body, 'Als Konzept beschrieben ist ein digitaler Zwilling der Organisation', 'Als Konzept beschrieben ist ein System Model der Organisation (bisher „digitaler Zwilling“ genannt; nach der Reference Architecture v0.4 kein Digital Twin)')
 body = body.rstrip() + '\n' + js
 
 OUT.write_text(body)
@@ -1169,11 +1280,11 @@ if len(sys.argv) > 3:
             d['beschlussblatt'] = {html.unescape(a): html.unescape(re.sub(r'<[^>]+>', '', b)) for a, b in bb}
         return d
     zkeys = ('nr', 'ebene', 'ziel', 'messgroesse', 'zielwert', 'klaerungsauftrag', 'termin', 'wer_review', 'grenze', 'globalziel', 'quelle')
-    data = {'titel': 'X-PORTAL Index 3.0', 'stand': '2026-11-05', 'artefakt': 'https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F',
+    data = {'titel': 'X-PORTAL Index 3.0', 'stand': '2026-11-12', 'bezugsrahmen': 'Reference Architecture v0.4-WB1 (quellen/reference-architecture-v0.4.md)', 'abgleich': [dict(zip(('nr', 'thema', 'bisher', 'baseline', 'gilt', 'status', 'im_index'), r)) for r in ABGLEICH], 'artefakt': 'https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F',
             'zielblatt': [dict(zip(zkeys, z)) for z in ZB], 'anforderungen_m02': M02, 'baum': [clean(n) for n in tree]}
     (outdir / 'entscheidungsbaum.json').write_text(json.dumps(data, ensure_ascii=False, indent=1))
     WORD = {'decision': 'Entscheidung', 'chance': 'Ereignis', 'gate': 'Gate', 'step': 'Schritt', 'end': 'Ende', 'outcome': 'Ausgang', 'req': 'Anforderung', 'group': 'Ast'}
-    md = ['# X-PORTAL Index 3.0: Entscheidungsbaum', '', 'Stand 05.11.2026. Erzeugt aus `werkzeug/baum.py`; die lesbare Seite ist `index-3.html`. Quellen in Klammern (E = Entscheidung, O = offener Punkt, 2.x.y = Teilergebnis, H01 … = Anforderung).', '',
+    md = ['# X-PORTAL Index 3.0: Entscheidungsbaum', '', 'Bezugsrahmen ist die Reference Architecture v0.4-WB1 (`quellen/reference-architecture-v0.4.md`); bei Widerspruch gilt sie.', '', '## Abgleich: Widersprüche zwischen Index und Baseline', '', '| Nr | Thema | Bisher im Index | Baseline v0.4 und Deck | Was jetzt gilt | Status | Im Index |', '|---|---|---|---|---|---|---|'] + ['| ' + ' | '.join(r) + ' |' for r in ABGLEICH] + ['', 'Stand 12.11.2026. Erzeugt aus `werkzeug/baum.py`; die lesbare Seite ist `index-3.html`. Quellen in Klammern (E = Entscheidung, O = offener Punkt, 2.x.y = Teilergebnis, H01 … = Anforderung).', '',
           '## Zielblatt', '', '| Nr | Ziel | Messgröße | Zielwert oder Klärungsauftrag | Termin | Wer · Review | Grenze | Globalziel | Quelle |', '|---|---|---|---|---|---|---|---|---|']
     for z in ZB:
         md.append('| ' + ' | '.join([z[0], z[2], z[3], ('Klärungsauftrag: ' if z[5] else '') + z[4], z[6], z[7], z[8], z[9], z[10]]).replace('\n', ' ') + ' |')
