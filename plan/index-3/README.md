@@ -15,6 +15,8 @@ Online als Artefakt: https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F (privat, 
 | `werkzeug/baum.py` | Generator: erzeugt Seite, Markdown und JSON. |
 | `quellen/index-2.0.html` | Eingabe des Generators: Index 2.0, erzeugt aus `plan/PLAN.md` mit `plan/werkzeuge/index_seite.py` (im Plan-Repo, nicht hier). |
 | `quellen/reference-architecture-v0.4.md` | Eingabe und Bezugsrahmen: Reference Architecture v0.4, Working Baseline vom 12.11.2026. |
+| `../sgmm/` | St. Galler Modell, Bauphasen, Change Requests, Funktionsketten bis zum Werkzeug. |
+| `../praesentation/` | Überarbeitetes Investor Deck (PPTX). |
 | `../whitepaper/x-portal-whitepaper.html` | Investoren-Whitepaper im Diskussionsstand, aus Baseline und Investor Deck 11.2026. Vor Versand den internen Kasten am Ende abarbeiten. |
 | `quellen/m02-29.json` | Eingabe: Anforderungsmatrix nach Maslow und Sinnen, 29 Zeilen, Stand 03.11.2026 (Artefakt „Node001 Anforderungen Mensch“). |
 
