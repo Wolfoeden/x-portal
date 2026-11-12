@@ -537,7 +537,7 @@ GRUNDLAGE = """<h4 class="dt-h4">Wofür X-PORTAL steht (Reference Architecture v
 <ul class="dt-gm">
 <li><b>Leichter Transport:</b> Die Häuser sollen mit wenig Gerät hochkommen; darum kommen sie in Teilen und werden oben montiert (E75; 2.2.3). Ob ein kleines Fahrzeug die Teile hochbringt, prüft 2.2.4.</li>
 <li><b>Kommunal und gemeinschaftlich:</b> Ein Kommunalgebäude ist der gemeinsame Ort zum Arbeiten, mit Küche und Sanitär (E40, E74; 2.4.4).</li>
-<li><b>Privatsphäre:</b> Jede Person hat ihren eigenen Container (E40), der ihr Tiny House ist (E59). Community und Gesellschaft sind vorausgesetzt.</li>
+<li><b>Privatsphäre:</b> Jede Person hat ihr eigenes Zuhause. Container sind nur der Anfang: In Phase 0 wohnen Team und Bauarbeiter je Person in einem eigenen Container (E40) auf der Fläche des späteren Herrenhauses (E44, E45). Ab Phase 1 wohnen Käufer und Team in richtigen Holzhäusern wie auf dem Titelbild (Vorgabe 12.11.2026; CHANGE REQUEST zu E59, Abgleich W19; <a href="https://claude.ai/artifact/EYuUZwYARAk6bVpmPDyq9G#bauphasen">Bauphasen</a>). Community und Gesellschaft sind vorausgesetzt.</li>
 <li><b>Weitgehend versorgungsautark:</b> Strom, Wasser und Wärme wachsen Schritt für Schritt (2.3); Zielwerte je kritischer Funktion sind OPEN (OD-002). Mobilität läuft mit elektrischen Bikes statt Benzin, das Netz oben wird dafür ausgebaut (2.3.6). Der Gemüsegarten am Kommunalgebäude steht für die weitere Autarkie (E74).</li>
 </ul>"""
 
@@ -883,6 +883,8 @@ ABGLEICH = [
     ('W16', 'Erlöse', 'Agenten je Aufruf über Masumi (E56); Einstieg ab 490 € (E76, abgelöst durch E83)', 'Vier Erlösstufen: Kundenprojekte (heute), KI-Lösungen (in Entwicklung), Nutzung und Services Node001, System-Skalierung (später)', 'Preismodell bleibt offen (E83); Masumi ist eine Option, keine Aussage im Deck.', 'OPEN', 'markiert'),
     ('W17', 'Versionsstand der Infografik', '–', 'Infografik „Integrierte Managementarchitektur · SGMM II“ nennt Reference Architecture v0.2; Baseline und Deck nennen v0.4', 'Widerspruch innerhalb der neuen Unterlagen: Infografik auf v0.4 heben, bevor sie rausgeht.', 'DECISION REQUIRED', 'offen'),
     ('W18', 'Kürzel H1 bis H8', 'H01 bis H09 sind Anforderungen der Stufe Grundbedürfnisse (M02)', 'H1 bis H8 sind die PoC-Hypothesen', 'Verwechslungsgefahr. Im Index heißen Hypothesen immer H1 bis H8 ohne Null, Anforderungen H01 bis H09.', 'DOCUMENTED', 'markiert'),
+    ('W19', 'Container oder Häuser', 'Die Container sind die Tiny Houses der Käufer und bleiben stehen; E44 (Übergang) gilt nicht mehr (E59, D21 B)', 'Vorgabe 12.11.2026 und Titelbild von Whitepaper und Deck: Container nur als Übergang für Team und Bauarbeiter auf der Herrenhaus-Fläche, danach richtige Holzhäuser für Käufer und Team', 'Endprodukt angepasst. E59, E39 und E40 brauchen Änderungen im Log (CR-01 bis CR-03 auf der SGMM-Seite); E75 bleibt für Holzhäuser in Teilen, prüfen (CR-04).', 'DECISION REQUIRED', 'CHANGE REQUEST'),
+    ('W20', 'Preis je Haus', 'Etwa 30.000 € je Käufer, bezugsfertig im Frühjahr (E78, E84 mit 45 m² je Haus)', 'Richtwert Rohbau 22.000–40.000 UAH je m², für 45 m² rund 19.800–36.000 € ohne Innenausbau, Transport und Anschlüsse (ASSUMPTION, SGMM-Seite F12)', 'Preis und Hausgröße gehören in den parametrischen Business Case (OD-008); bis dahin keine Preisaussage nach außen (CR-05).', 'DECISION REQUIRED', 'CHANGE REQUEST'),
 ]
 PILL = {'OPEN': 'st-open', 'DECISION REQUIRED': 'st-open', 'ASSUMPTION': 'st-untested', 'IN WORK': 'st-run', 'DOCUMENTED': 'st-done', 'VERIFIED': 'st-done'}
 def abgleich_html():
@@ -897,6 +899,7 @@ HYP = [('H1', 'Human Value', 'Z1; Anforderungen nach Maslow und Sinnen (Ast 2), 
        ('H7', 'Learning Capability', 'Routine 3.3, Entscheidungslog'), ('H8', 'Replicability', 'Z4 Genome, 2.6.6; Beweis erst mit Node002')]
 ra_section = ('<section id="ra"><h2>Reference Architecture v0.4: der Bezugsrahmen</h2>'
     '<p class="lede2">Seit dem 12.11.2026 ist die Reference Architecture v0.4-WB1 die gemeinsame Arbeitsreferenz für Menschen und KI. Alles Frühere in diesem Index, auch das Entscheidungslog E01 bis E85, ist Evidenz und Historie und gilt nur, soweit es der Baseline nicht widerspricht (KI-Regel 1). Widersprüche stehen im Abgleich und sind nicht stillschweigend geglättet (KI-Regel 8).</p>'
+    '<p>Die Managementarchitektur nach dem St. Galler Modell, die Bauphasen (Container zuerst, dann Holzhäuser) und die Funktionsketten bis zum Werkzeug mit Internetpreisen stehen auf der <a href="https://claude.ai/artifact/EYuUZwYARAk6bVpmPDyq9G">SGMM-Seite</a> (Repo: <code>plan/sgmm/</code>). Für Werkzeug, Preis und Zeitaufwand zu Ast 3 (Versorgung) und Ast 4 (Make-or-Buy) gilt die SGMM-Seite.</p>'
     '<h3 id="ra-abgleich">Abgleich: Widersprüche zwischen Index und Baseline</h3>'
     f'<p>{len(ABGLEICH)} Punkte. „angepasst“: der Index sagt jetzt, was die Baseline sagt. „CHANGE REQUEST“: die Entscheidung im Log muss von Paul und Roman geändert werden. „markiert“: der alte Stand bleibt als Historie stehen und ist gekennzeichnet. „offen“: Widerspruch in den neuen Unterlagen selbst.</p>'
     + abgleich_html()
@@ -906,7 +909,7 @@ ra_section = ('<section id="ra"><h2>Reference Architecture v0.4: der Bezugsrahme
     + '<h3 id="ra-text">Die Baseline im Wortlaut</h3>' + md_html(RA_MD) + '</section>\n')
 
 section = f'''<section id="baum"><h2>Offener Entscheidungsbaum</h2>
-<p class="lede2">Der ganze Plan Stufe 1 als Baum. Die Grundlage ist das Endprodukt mit seinen Zielen. Darunter stehen die Äste in der Reihenfolge, in der jetzt gearbeitet wird: 1 der Weg ab der Geologie, 2 der Alltag oben mit seinen prüfbaren Anforderungen, 3 die Versorgung je Ressource mit Ausbaupfad, 4 die Make-or-Buy-Vergleiche. Offene Äste bleiben aufgeklappt und zeigen jede Möglichkeit mit ihrer Folge; Entschiedenes ist eingeklappt. Gewählt wird weiter auf der <a href="{ENTSCHEIDUNGSSEITE}" target="_blank" rel="noreferrer">Entscheidungsseite</a>.</p>
+<p class="lede2">Der ganze Plan Stufe 1 als Baum. Die Grundlage ist das Endprodukt mit seinen Zielen. Darunter stehen die Äste in der Reihenfolge, in der jetzt gearbeitet wird: 1 der Weg ab der Geologie, 2 der Alltag oben mit seinen prüfbaren Anforderungen, 3 die Versorgung je Ressource mit Ausbaupfad, 4 die Make-or-Buy-Vergleiche. Werkzeug, Preis und Zeitaufwand je Funktion stehen auf der <a href="https://claude.ai/artifact/EYuUZwYARAk6bVpmPDyq9G#ketten">SGMM-Seite</a>. Offene Äste bleiben aufgeklappt und zeigen jede Möglichkeit mit ihrer Folge; Entschiedenes ist eingeklappt. Gewählt wird weiter auf der <a href="{ENTSCHEIDUNGSSEITE}" target="_blank" rel="noreferrer">Entscheidungsseite</a>.</p>
 <ul class="dt-bkey" aria-label="Zeichen im Baum">
 <li><span class="dt-bg k-decision" aria-hidden="true"></span>Entscheidung, nur ihr</li>
 <li><span class="dt-bg k-chance" aria-hidden="true"></span>Ereignis, ihr wartet auf das Ergebnis</li>

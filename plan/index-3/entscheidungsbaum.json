@@ -164,6 +164,24 @@
    "gilt": "Verwechslungsgefahr. Im Index heißen Hypothesen immer H1 bis H8 ohne Null, Anforderungen H01 bis H09.",
    "status": "DOCUMENTED",
    "im_index": "markiert"
+  },
+  {
+   "nr": "W19",
+   "thema": "Container oder Häuser",
+   "bisher": "Die Container sind die Tiny Houses der Käufer und bleiben stehen; E44 (Übergang) gilt nicht mehr (E59, D21 B)",
+   "baseline": "Vorgabe 12.11.2026 und Titelbild von Whitepaper und Deck: Container nur als Übergang für Team und Bauarbeiter auf der Herrenhaus-Fläche, danach richtige Holzhäuser für Käufer und Team",
+   "gilt": "Endprodukt angepasst. E59, E39 und E40 brauchen Änderungen im Log (CR-01 bis CR-03 auf der SGMM-Seite); E75 bleibt für Holzhäuser in Teilen, prüfen (CR-04).",
+   "status": "DECISION REQUIRED",
+   "im_index": "CHANGE REQUEST"
+  },
+  {
+   "nr": "W20",
+   "thema": "Preis je Haus",
+   "bisher": "Etwa 30.000 € je Käufer, bezugsfertig im Frühjahr (E78, E84 mit 45 m² je Haus)",
+   "baseline": "Richtwert Rohbau 22.000–40.000 UAH je m², für 45 m² rund 19.800–36.000 € ohne Innenausbau, Transport und Anschlüsse (ASSUMPTION, SGMM-Seite F12)",
+   "gilt": "Preis und Hausgröße gehören in den parametrischen Business Case (OD-008); bis dahin keine Preisaussage nach außen (CR-05).",
+   "status": "DECISION REQUIRED",
+   "im_index": "CHANGE REQUEST"
   }
  ],
  "artefakt": "https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F",

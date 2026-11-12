@@ -24,6 +24,8 @@ Bezugsrahmen ist die Reference Architecture v0.4-WB1 (`quellen/reference-archite
 | W16 | Erlöse | Agenten je Aufruf über Masumi (E56); Einstieg ab 490 € (E76, abgelöst durch E83) | Vier Erlösstufen: Kundenprojekte (heute), KI-Lösungen (in Entwicklung), Nutzung und Services Node001, System-Skalierung (später) | Preismodell bleibt offen (E83); Masumi ist eine Option, keine Aussage im Deck. | OPEN | markiert |
 | W17 | Versionsstand der Infografik | – | Infografik „Integrierte Managementarchitektur · SGMM II“ nennt Reference Architecture v0.2; Baseline und Deck nennen v0.4 | Widerspruch innerhalb der neuen Unterlagen: Infografik auf v0.4 heben, bevor sie rausgeht. | DECISION REQUIRED | offen |
 | W18 | Kürzel H1 bis H8 | H01 bis H09 sind Anforderungen der Stufe Grundbedürfnisse (M02) | H1 bis H8 sind die PoC-Hypothesen | Verwechslungsgefahr. Im Index heißen Hypothesen immer H1 bis H8 ohne Null, Anforderungen H01 bis H09. | DOCUMENTED | markiert |
+| W19 | Container oder Häuser | Die Container sind die Tiny Houses der Käufer und bleiben stehen; E44 (Übergang) gilt nicht mehr (E59, D21 B) | Vorgabe 12.11.2026 und Titelbild von Whitepaper und Deck: Container nur als Übergang für Team und Bauarbeiter auf der Herrenhaus-Fläche, danach richtige Holzhäuser für Käufer und Team | Endprodukt angepasst. E59, E39 und E40 brauchen Änderungen im Log (CR-01 bis CR-03 auf der SGMM-Seite); E75 bleibt für Holzhäuser in Teilen, prüfen (CR-04). | DECISION REQUIRED | CHANGE REQUEST |
+| W20 | Preis je Haus | Etwa 30.000 € je Käufer, bezugsfertig im Frühjahr (E78, E84 mit 45 m² je Haus) | Richtwert Rohbau 22.000–40.000 UAH je m², für 45 m² rund 19.800–36.000 € ohne Innenausbau, Transport und Anschlüsse (ASSUMPTION, SGMM-Seite F12) | Preis und Hausgröße gehören in den parametrischen Business Case (OD-008); bis dahin keine Preisaussage nach außen (CR-05). | DECISION REQUIRED | CHANGE REQUEST |
 
 Stand 12.11.2026. Erzeugt aus `werkzeug/baum.py`; die lesbare Seite ist `index-3.html`. Quellen in Klammern (E = Entscheidung, O = offener Punkt, 2.x.y = Teilergebnis, H01 … = Anforderung).
 
@@ -54,7 +56,7 @@ Grundmodell eines Node (E72–E74)
 
 Leichter Transport: Die Häuser sollen mit wenig Gerät hochkommen; darum kommen sie in Teilen und werden oben montiert (E75; 2.2.3). Ob ein kleines Fahrzeug die Teile hochbringt, prüft 2.2.4.
 Kommunal und gemeinschaftlich: Ein Kommunalgebäude ist der gemeinsame Ort zum Arbeiten, mit Küche und Sanitär (E40, E74; 2.4.4).
-Privatsphäre: Jede Person hat ihren eigenen Container (E40), der ihr Tiny House ist (E59). Community und Gesellschaft sind vorausgesetzt.
+Privatsphäre: Jede Person hat ihr eigenes Zuhause. Container sind nur der Anfang: In Phase 0 wohnen Team und Bauarbeiter je Person in einem eigenen Container (E40) auf der Fläche des späteren Herrenhauses (E44, E45). Ab Phase 1 wohnen Käufer und Team in richtigen Holzhäusern wie auf dem Titelbild (Vorgabe 12.11.2026; CHANGE REQUEST zu E59, Abgleich W19; Bauphasen). Community und Gesellschaft sind vorausgesetzt.
 Weitgehend versorgungsautark: Strom, Wasser und Wärme wachsen Schritt für Schritt (2.3); Zielwerte je kritischer Funktion sind OPEN (OD-002). Mobilität läuft mit elektrischen Bikes statt Benzin, das Netz oben wird dafür ausgebaut (2.3.6). Der Gemüsegarten am Kommunalgebäude steht für die weitere Autarkie (E74).
 
 
