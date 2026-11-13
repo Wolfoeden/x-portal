@@ -14,7 +14,7 @@ Die Speicherlogik der alten Seite bleibt unverändert: jede Karte speichert in d
 import html, json, re, sys
 from pathlib import Path
 
-STAND = '13.11.2026'
+STAND = '13.11.2026'  # Antworten vom 13.11. liegen in antworten-2026-11-13/
 INDEX = 'https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F'
 SGMM = 'https://claude.ai/artifact/EYuUZwYARAk6bVpmPDyq9G'
 WP = 'https://claude.ai/artifact/8Tsy5boPuHAm5wkfqMnPeD'
@@ -33,19 +33,19 @@ ABSCHNITTE = [
      o('C', 'Vision v0.4 plus neue Mission', 'Die KI entwirft eine Mission, die zur Vision v0.4 passt; ihr entscheidet sie danach.')],
     ['E28', 'E29']),
   K('D43', 'Wer bereitet vor, wer prüft, wer gibt frei?',
-    'Bisher: Die KI macht, was sie kann, ein Mensch prüft; technische Werte legt eine Fachperson fest; Vorschläge der KI gelten bis zum Widerspruch; Paul entscheidet über Bestellungen und Betrag. Die Baseline verlangt nachvollziehbare Entscheidungsrechte (OD-001, XP-SYS-005).',
-    [o('A', 'Wie bisher, aber ohne stilles Gelten', 'KI bereitet vor, Fachperson prüft Technik, Paul und Roman geben frei, Paul entscheidet über Bestellung und Betrag. Ein Vorschlag der KI gilt erst, wenn er auf dieser Seite gewählt ist.', ki=True),
-     o('B', 'Wie bisher', 'Alles wie vor dem 13.11., auch: Vorschläge der KI gelten, bis Paul oder Roman widersprechen.'),
-     o('C', 'Mit Budgetgrenzen', 'Wie A; zusätzlich darf Roman bis zu einer festen Summe allein bestellen. Die Summe legt Paul fest.')],
+    'Bisher: Die KI macht, was sie kann, ein Mensch prüft; technische Werte legt eine Fachexperte fest; Vorschläge der KI gelten bis zum Widerspruch; die Geschäftsführung entscheidet über Bestellungen und Betrag. Die Baseline verlangt nachvollziehbare Entscheidungsrechte (OD-001, XP-SYS-005).',
+    [o('A', 'Wie bisher, aber ohne stilles Gelten', 'KI bereitet vor, Fachexperte prüft Technik, Geschäftsführung und Projektleitung geben frei, die Geschäftsführung entscheidet über Bestellung und Betrag. Ein Vorschlag der KI gilt erst, wenn er auf dieser Seite gewählt ist.', ki=True),
+     o('B', 'Wie bisher', 'Alles wie vor dem 13.11., auch: Vorschläge der KI gelten, bis Geschäftsführung oder Projektleitung widersprechen.'),
+     o('C', 'Mit Budgetgrenzen', 'Wie A; zusätzlich darf die Projektleitung bis zu einer festen Summe allein bestellen. Die Summe legt die Geschäftsführung fest.')],
     ['E13', 'E16', 'E22', 'E71', 'E80']),
   K('D44', 'Organisation: wer ist was?',
-    'Vorgabe vom 05.11.: X-PORTAL als Dach, die DT Agentur übernimmt Projekte aus Deutschland, Grundstücke als eigener Bereich (X1–X3). Die Baseline nennt die Firma „X-PORTAL Organisation“; die Grenze zum Node-Betrieb ist offen (OD-001). Bisher: UG, später GmbH, ein SPV je Grundstück; heute tritt Romans Einzelunternehmen auf.',
+    'Vorgabe vom 05.11.: X-PORTAL als Dach, die DT Agentur übernimmt Projekte aus Deutschland, Grundstücke als eigener Bereich (X1–X3). Die Baseline nennt die Firma „X-PORTAL Organisation“; die Grenze zum Node-Betrieb ist offen (OD-001). Bisher: UG, später GmbH, ein SPV je Grundstück; heute tritt ein Einzelunternehmen auf.',
     [o('A', 'Drei Einheiten', 'X-PORTAL Organisation (Dach, Plattform, Architektur), DT Agentur (Projekte aus Deutschland), Node001 als eigene Grundstücks- und Betriebsgesellschaft. Rechtsform je Einheit prüft ein Steuerberater.', ki=True),
      o('B', 'Eine Firma, Node001 als SPV', 'Eine UG für alles außer dem Grundstück; Node001 bekommt ein eigenes SPV.'),
      o('C', 'Erst eine Firma', 'Alles läuft vorerst über eine Gesellschaft; getrennt wird erst, wenn Investoren einsteigen.')],
     ['E07', 'E08', 'E17', 'E18', 'E19', 'E61']),
   K('D45', 'Ziel der Stufe 1: wer wohnt und arbeitet oben?',
-    'Bisher: 2–3 Leute ganzjährig oben, Roman von Anfang an; im ersten Winter Team plus 5 Käufer; Remote-Freelancer aus Deutschland als Zielgruppe. Die Infografik nennt acht Rollen, Human Roles v1.0 sind in Arbeit (OD-003, W08).',
+    'Bisher: 2–3 Leute ganzjährig oben, die Projektleitung von Anfang an; im ersten Winter Team plus 5 Käufer; Remote-Freelancer aus Deutschland als Zielgruppe. Die Infografik nennt acht Rollen, Human Roles v1.0 sind in Arbeit (OD-003, W08).',
     [o('A', 'Erst das Team', 'Stufe 1 heißt: 2–3 Leute vom Team wohnen und arbeiten ganzjährig oben und verdienen dort Geld. Käufer ziehen ab Phase 1 in ihre Häuser.', ki=True),
      o('B', 'Team plus erste Käufer', 'Team und die ersten Käufer wohnen schon im ersten Winter oben; Versorgung für beide.'),
      o('C', 'Team plus Mieter', 'Zuerst Team und einige Mieter (Remote-Freelancer, Buchung etwa ein Jahr); Verkauf an Käufer später.')],
@@ -88,11 +88,11 @@ ABSCHNITTE = [
      o('B', 'Projekte und Agenten', 'Nur Kundenprojekte und eigene KI-Agenten; Robotik und Drohnen bleiben draußen.'),
      o('C', 'Erst Projekte', 'Bis zum ersten Bauabschnitt nur Kundenprojekte; eigene Produkte danach.')],
     ['E56', 'E63', 'E70', 'E76', 'E77', 'E83']),
-  K('D52', 'Pauls Einkommen und die Reihenfolge des Geldes',
-    'Bisher: Paul braucht 8.000 € netto im Monat für Vollzeit, das kommt vor den Kosten auf dem Berg; aber es soll nicht im Mittelpunkt stehen. Im Zielblatt steht „Paul Vollzeit“ nicht mehr (Vorgabe Roman).',
-    [o('A', 'Als Kostenzeile', '8.000 € netto stehen als Kostenzeile der Firma im Business Case, ab dem Monat, in dem Paul Vollzeit dabei ist. Keine eigene Reihenfolge.', ki=True),
-     o('B', 'Wie bisher zuerst', 'Pauls Einkommen kommt vor allen anderen Kosten.'),
-     o('C', 'Erst später', 'Pauls Einkommen kommt erst, wenn die Firma Umsatz hat; bis dahin keine Zeile im Plan.')],
+  K('D52', 'Einkommen der Geschäftsführung und die Reihenfolge des Geldes',
+    'Bisher: Die Geschäftsführung braucht 8.000 € netto im Monat für Vollzeit, das kommt vor den Kosten auf dem Berg; aber es soll nicht im Mittelpunkt stehen. Im Zielblatt steht dieser Punkt nicht mehr (Vorgabe Projektleitung).',
+    [o('A', 'Als Kostenzeile', '8.000 € netto stehen als Kostenzeile der Firma im Business Case, ab dem Monat, in dem die Geschäftsführung Vollzeit dabei ist. Keine eigene Reihenfolge.', ki=True),
+     o('B', 'Wie bisher zuerst', 'Das Einkommen der Geschäftsführung kommt vor allen anderen Kosten.'),
+     o('C', 'Erst später', 'Das Einkommen der Geschäftsführung kommt erst, wenn die Firma Umsatz hat; bis dahin keine Zeile im Plan.')],
     ['E03', 'E32', 'E67']),
   K('D53', 'Zahlen für Investoren: 12 Mio. und 12,5 Mio. €',
     'Bisher: rund 12 Mio. € Erlös auf dem Papier „rechtfertigen das Invest“; 12,5 Mio. € sind eine Hochrechnung der Kosten; der Pitch sagte „privat finanziert“, das wurde berichtigt. Grundstück 2 ha. Baseline: Scheingenauigkeit vermeiden, Business Case offen (W05, W07). Die frühere Karte D39 ist hier enthalten.',
@@ -103,9 +103,9 @@ ABSCHNITTE = [
  ]),
  ('operativ', 'Operativ: wer macht was, womit, wann (in Arbeitsreihenfolge)', [
   K('D54', 'Geologie und Lageplan: wer, bis wann?',
-    'Der Geologiebericht (3 Schürfe, 12 Bohrpunkte) fehlt; davon hängen Plots, Fundament und alle Kosten ab (O01). Bisher: Nazar ist beauftragt und macht die Abnahmen; den Kontakt hält Paul; Generalplan Variante 1 ist Grundlage, Grundstücksdaten reichen.',
-    [o('A', 'Nazar mit Frist', 'Nazar liefert den Bericht mit fester Frist; Paul hält den Kontakt. Danach Lageplan auf Variante 1 und Plots ausmessen.', ki=True),
-     o('B', 'Zweite Fachperson', 'Wie A, dazu prüft eine zweite Fachperson den Bericht.'),
+    'Der Geologiebericht (3 Schürfe, 12 Bohrpunkte) fehlt; davon hängen Plots, Fundament und alle Kosten ab (O01). Bisher: der Architekt ist beauftragt und macht die Abnahmen; den Kontakt hält die Geschäftsführung; Generalplan Variante 1 ist Grundlage, Grundstücksdaten reichen.',
+    [o('A', 'Architekt mit Frist', 'Der Architekt liefert den Bericht mit fester Frist; die Geschäftsführung hält den Kontakt. Danach Lageplan auf Variante 1 und Plots ausmessen.', ki=True),
+     o('B', 'Zweite Fachexperte', 'Wie A, dazu prüft eine zweite Fachexperte den Bericht.'),
      o('C', 'Neu ausschreiben', 'Geologie und Abnahmen werden neu vergeben.')],
     ['E06', 'E10', 'E27', 'E33', 'E37', 'E43', 'E64']),
   K('D55', 'Bauphasen: Container nur für den Anfang?',
@@ -124,7 +124,7 @@ ABSCHNITTE = [
     'Die Zufahrt ist heute unbefestigt; Befestigung und Entwässerung sind geplant (2.2.4). Die Einfahrt liegt vermutlich oben links in Variante 1. Im Winter räumt nach SGMM F07 am besten ein Bauer mit Traktor.',
     [o('A', 'Befestigen vor Phase 1', 'Zufahrt wird vor den Häusern befestigt; Spediteur bestätigt schriftlich, was hochkommt; Räumvertrag für den Winter.', ki=True),
      o('B', 'Erst kleines Fahrzeug', 'Keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch.'),
-     o('C', 'Nazar entscheidet', 'Nazar legt nach der Geologie fest, was nötig ist.')],
+     o('C', 'Fachexperte entscheidet', 'Der Fachexperte legt nach der Geologie fest, was nötig ist.')],
     ['E36']),
   K('D58', 'Bauzeit und Termine',
     'Bisher: gebaut im Sommer, gewohnt auch im Winter; Baubeginn erst ohne Frost; Container ab März, Werbung „Einzug ab Frühjahr 2027“. Deck: Baubeginn 2027 ist Ziel, nur nach Gates (W06).',
@@ -152,7 +152,7 @@ ABSCHNITTE = [
     ['E26']),
   K('D62', 'Toilette und Abwasser',
     'Phase 0 Campingtoilette (1.600–3.700 UAH); dauerhaft Kleinkläranlage oder Komposttoilette, mit Genehmigung (SGMM F04).',
-    [o('A', 'Camping jetzt, Anlage ab Phase 1', 'Campingtoilette in Phase 0; die dauerhafte Lösung plant eine Fachperson mit Genehmigung für Phase 1.', ki=True),
+    [o('A', 'Camping jetzt, Anlage ab Phase 1', 'Campingtoilette in Phase 0; die dauerhafte Lösung plant eine Fachexperte mit Genehmigung für Phase 1.', ki=True),
      o('B', 'Komposttoilette dauerhaft', 'Komposttoiletten in allen Häusern, keine Kläranlage.'),
      o('C', 'Kläranlage sofort', 'Die dauerhafte Anlage kommt schon in Phase 0.')],
     []),
@@ -181,10 +181,10 @@ ABSCHNITTE = [
      o('C', 'Schritt für Schritt', 'Zuerst Toilette, Küche, Strom, Wasser, Internet, Schlafplatz; Zielwerte nach dem ersten Winter.')],
     ['E14', 'E46', 'E53', 'E54']),
   K('D67', 'Team, Rollen und Alltag oben',
-    'Bisher: Paul CEO zu 100 %, Roman Produkt und Projekt und oben; Nazar beauftragt. Deck: Roman Dering, Pavel J., Nazar D. (W14). Vorgabe vom 05.11.: Gleitzeit 9–14 Uhr, Jour fixe und Sport Pflicht, Wellness frei, Käufer frei.',
+    'Bisher: Geschäftsführung (CEO) zu 100 %, Projektleitung für Produkt und Projekt und oben; Architekt beauftragt. Das Deck nennt drei Personen als operatives Team (W14). Vorgabe vom 05.11.: Gleitzeit 9–14 Uhr, Jour fixe und Sport Pflicht, Wellness frei, Käufer frei.',
     [o('A', 'Rollen klären, Spielregeln wie Vorgabe', 'Founder, Ownership und Rollen werden vor dem Investorenkontakt festgelegt; oben gelten die Spielregeln vom 05.11.', ki=True),
-     o('B', 'Wie im Pitch', 'Rollen wie bisher: Paul CEO, Roman Produkt und Projekt.'),
-     o('C', 'Mit Nazar im Team', 'Nazar wird Teammitglied (Architekt Nodes), nicht Auftragnehmer.')],
+     o('B', 'Wie im Pitch', 'Rollen wie bisher: Geschäftsführung (CEO), Projektleitung für Produkt und Projekt.'),
+     o('C', 'Mit Architekt im Team', 'Der Architekt wird Teammitglied (Architekt Nodes), nicht Auftragnehmer.')],
     ['E62', 'E81']),
   K('D68', 'Arbeitsweise: Ablage, Kosten, Nachfrage',
     'Bisher: Ablage in OneDrive; Kosten mit Internetpreisen, Kurs etwa 50 UAH/EUR; keine Nachfrage messen ohne Produkt; ein Plan in einer Datei; Maslow und Sinne als Gliederung; wiederholbar sind Schema und Planung. Baseline: System Model, Traceability, Genome.',
@@ -222,9 +222,46 @@ ABSCHNITTE = [
  ]),
 ]
 
-PHASEN = [('Phase 0', 'Container als Übergang', 'Wohncontainer für Team und Bauarbeiter auf der Fläche des späteren Herrenhauses (unten links im Generalplan). Baustelleneinrichtung, kein Produkt für Käufer.'),
-          ('Phase 1', 'Holzhäuser und Kommunalgebäude', 'Holzhäuser wie auf dem Titelbild von Whitepaper und Deck, in Teilen hochgebracht und oben montiert. Zuerst das Kommunalgebäude, dann Häuser für Siedler, Mieter und Team.'),
-          ('Phase 2', 'Ausbau', 'Weitere Häuser nach Nachfrage; Container gehen zurück; die Herrenhaus-Fläche wird zuletzt bebaut.')]
+ANS = 'https://claude.ai/artifact/__ANS__'
+# Was aus Wahl und Kommentar vom 13.11.2026 folgt. Wo der Kommentar die Wahl ändert, gilt der Kommentar.
+FOLGT = {
+ 'D42': 'Mission und Globalziele bleiben der Ausgangspunkt. Aufgabe: mit Vision v0.4 und Zielblatt in eine durchgehende Logik bringen.',
+ 'D43': 'Rollenbasiert: Texte nennen Rollen statt Namen; „Fachexperte“ statt „Fachperson“. Ein KI-Vorschlag gilt erst mit Wahl auf dieser Seite.',
+ 'D44': 'X-PORTAL hält als Holding Lizenzen und Markenrechte. Die DT Agentur übernimmt Projekte in Deutschland, Österreich und der Schweiz. Node001 hält eine ukrainische Gesellschaft. Offen: wo Services am Node abgewickelt werden (voraussichtlich lokale Gesellschaft); Rechtsprüfung.',
+ 'D45': 'Team plus Mieter. Es gibt keinen Immobilienverkauf im klassischen Sinn.',
+ 'D46': 'Das Käufermodell ist abgewählt. Node001 wird mit Eigenkapital und VC oder Investments finanziert, verbunden mit wiederkehrenden Erlösen.',
+ 'D47': 'Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding.',
+ 'D48': 'Nur Miete am Anfang; kein klassischer Verkauf. Tokenisierung und Beteiligung auf mehreren Ebenen erst nach Klärung.',
+ 'D49': 'Statt eines Preises je Haus wird der Selbstkostenpreis je Objekt ermittelt.',
+ 'D50': 'Zuerst Mieter gewinnen, schon vor dem Bau: Interessenten jetzt sammeln.',
+ 'D51': 'Vier Erlösstufen; Skalierung und Standardisierung werden von Anfang an mitgedacht, Node001 ist der Proof of Concept.',
+ 'D52': 'Noch unklar.',
+ 'D53': 'Die KI rechnet beide Zahlen mit Quellen neu; danach Entscheidung.',
+ 'D54': 'Der Geologiebericht liegt als KI-Zusammenfassung vor (XPB-N001-GEO-SUM-001, nicht geprüft). Fachprüfung und Freigabe fehlen.',
+ 'D55': 'Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohn- und Arbeitsobjekte und Kommunalgebäude. Phase 2: Ausbau.',
+ 'D56': 'Material offen (Holz, Beton, Glas, Metall). Eine Bau-KI plant und bewertet nach den lokalen Gegebenheiten.',
+ 'D57': 'Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung. Gesamtplanung der Zufahrt in Phase 1 mit 3D-Modellen.',
+ 'D58': 'Baubeginn 2027 als Ziel, nur nach Gates; kein Einzugstermin in der Werbung.',
+ 'D59': 'Netzanschluss beantragen, Generator als Reserve; Solar mit Speicher ab Phase 1.',
+ 'D60': 'Mix: Ofen mit Plan zum Überwintern; eigene Bäume fällen (nass, müssen trocknen) und Holz kaufen; Holzlager in jedem Fall.',
+ 'D61': 'Grundwasser nutzen und zu Trinkwasser aufbereiten; Anfangsstufe bauen, Ausbau vorbereiten.',
+ 'D62': 'Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser fest eingebaut ab Phase 0.',
+ 'D63': 'Bandbreite, Router und Anbieter vergleichen; steht in der Anschaffungsliste.',
+ 'D64': 'Kommunalgebäude ist der erste Bau in Phase 1.',
+ 'D65': 'Gemeinsames Fahrzeug; keine E-Bikes in Phase 0.',
+ 'D66': 'Zielwerte je kritischer Funktion; Tabelle der Abnahme-Entscheidungen, die Projektleitung prüft und gibt frei.',
+ 'D67': 'Rollen wie im Pitch. Der Architekt berät zu Architektur und Bau und ist kein Teammitglied.',
+ 'D68': 'Repo als Quelle und Regeln der Baseline; vieles ist noch zu klären.',
+ 'D34': 'Feuerstelle in Phase 1, Gastronomie später. Die Bergkapelle wird als Gruppenprojekt der Bewohner geplant und so kommuniziert.',
+ 'D35': 'Eigene Sauna in Phase 1.',
+ 'D36': 'Essen gegen Mitarbeit. Gemeinschaftsarbeit (Schnee, Pflanzen, Kapelle, Kehrwoche) wird gefördert und mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano.',
+ 'D37': 'Wohnen und Essen frei plus Anteil; der Anteil liegt am jeweiligen Node, nicht an der Holding. Die Unternehmensstruktur muss das abbilden.',
+ 'D38': 'Monatliche Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen. Weiter zu besprechen.',
+}
+UEBERHOLT = {'D45', 'D46', 'D48', 'D49', 'D50'}
+PHASEN = [('Phase 0', 'Objekt als Übergang', 'Ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Die Bauart ist offen.'),
+          ('Phase 1', 'Objekte und Kommunalgebäude', 'Wohn- und Arbeitsobjekte und das Kommunalgebäude. Material und Bauart plant eine Bau-KI nach den lokalen Gegebenheiten. Zuerst das Kommunalgebäude.'),
+          ('Phase 2', 'Ausbau', 'Weitere Objekte nach Nachfrage; die Herrenhaus-Fläche wird zuletzt bebaut.')]
 
 e = html.escape
 
@@ -232,6 +269,12 @@ def card_html(k, log, alt):
     i = k['id']
     opts = ''.join(f'<li class="opt" data-opt="{x["v"]}"><div><b>{x["v"]} · {e(x["titel"])}</b>{" <span class=ki>Vorschlag KI</span>" if x["ki"] else ""}<p>{e(x["text"])}</p></div>\n'
                    f'<button type="button" class="pick" data-d="{i}" data-v="{x["v"]}">Gefällt mir</button></li>' for x in k['opts'])
+    a = NEU.get(i, {}); stand = ''
+    if i in FOLGT:
+        lab = {'unklar': 'weiß ich noch nicht', 'keine': 'keine davon', '': 'ohne Wahl'}.get(a.get('wahl') or '', a.get('wahl'))
+        stand = (f'<div class="st13"><p><b>Stand 13.11.2026:</b> {e(lab)}. {e(FOLGT[i])}</p>'
+                 + (f'<blockquote>{e(a["kommentar"])}</blockquote>' if a.get('kommentar') else '')
+                 + ('<p class="note">Der Kommentar überholt die Möglichkeiten unten; sie stehen nur noch zur Nachvollziehbarkeit da.</p>' if i in UEBERHOLT else '') + '</div>')
     fr = ''
     if k['frueher']:
         rows = ''.join(f'<li><span class="no">{eid}</span>{e(log[eid])}</li>' for eid in k['frueher'])
@@ -241,6 +284,7 @@ def card_html(k, log, alt):
     return f'''<article class="dec" id="{i}" data-id="{i}">
 <header><span class="no">{i}</span><h3>{e(k["frage"])}</h3><span class="state" data-state="{i}">offen</span></header>
 <p class="why">{e(k["warum"])}</p>
+{stand}
 <ol class="opts">{opts}</ol>
 <div class="row">
 <button type="button" class="alt" data-d="{i}" data-v="unklar">Weiß ich noch nicht</button>
@@ -253,12 +297,16 @@ def card_html(k, log, alt):
 </article>'''
 
 EXTRA_CSS = '''<style>
+.st13 { background:var(--go-bg); border-left:3px solid var(--go); padding:10px 12px; display:flex; flex-direction:column; gap:6px; color:var(--ink) } .st13 blockquote { margin:0; font-size:13.5px; color:var(--body); white-space:pre-line }
+.ph-note { background:var(--bg); border:1px dashed var(--line); padding:10px 12px; font-size:14px }
+table.ueb { border-collapse:collapse; width:100%; font-size:14px } table.ueb td, table.ueb th { text-align:left; vertical-align:top; padding:6px 8px; border-top:1px solid var(--line) } .tw2 { overflow-x:auto }
 .ki { font-size:11px; font-weight:600; padding:1px 7px; border-radius:999px; background:var(--wait-bg); color:var(--wait); margin-left:6px; white-space:nowrap }
 details.fr { padding:8px 12px; background:var(--bg) } details.fr summary { font-weight:500; font-size:13px; color:var(--muted) }
 details.fr .done { margin-top:6px } .reset { background:var(--wait-bg); border:1px solid var(--wait); padding:12px 16px; color:var(--ink) }
 .phasen { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)) } .phasen div { background:var(--bg); border:1px solid var(--line); padding:10px 12px } .phasen p { font-size:14px }
 </style>'''
 
+NEU = {}
 def build(src, log, alt):
     plans = re.findall(r'<div class="plans">.*?</div>', src, re.S)
     assert len(plans) == 2, len(plans)
@@ -273,12 +321,16 @@ def build(src, log, alt):
                 assert eid in log, eid; where.setdefault(eid, []).append(k['id'])
     assert len(ids) == len(set(ids)), 'doppelte Karten-IDs'
     missing = [x for x in log if x not in where]; assert not missing, f'nicht zugeordnet: {missing}'
+    v1 = re.search(r'<figure><img alt="Generalplan Variante 1.*?</figure>', plans[0], re.S).group(0)
+    lage = '<div class="plans">' + v1.replace('Generalplan Variante 1: Grundlage für Stufe 1', 'Generalplan Variante 1') + '</div><p class="ph-note">Das Bild „Generalplan Variante 2“ war falsch und ist entfernt. Das Grundstück stimmt; ein neues Bild folgt.</p>'
     alt_plans = plans[1].replace('<figcaption>Ausschnitt: Fläche unten links</figcaption>', '<figcaption>Entwurf vom 04.11.2026 (Historie): Container unten links</figcaption>').replace('<figcaption>Gesamter Plan mit Legende</figcaption>', '<figcaption>Entwurf vom 04.11.2026 (Historie): gesamter Plan</figcaption>')
     hist = ''.join(f'<li><span>{eid}</span>{e(t)} <span>→ {", ".join(where[eid])}</span></li>' for eid, t in log.items())
     body = [f'''<div class="wrap">
 <p class="no">Node001 Beregniza · Stand {STAND}</p>
-<h1>Alles neu entscheiden, eine Karte nach der anderen</h1>
-<p class="reset"><b>Seit {STAND} sind alle früheren Entscheidungen (E01–E85) zurückgenommen.</b> Sie stehen unten als Historie, und jede Karte zeigt, was früher dazu entschieden war. Die alten Antworten vom 03. und 04.11. sind archiviert. Neu gilt nur, was hier gewählt ist.</p>
+<h1>Entscheidungen Node001</h1>
+<p class="reset"><b>Am 13.11.2026 sind alle 32 Karten neu beantwortet.</b> Es gelten Wahl und Kommentar zusammen; wo der Kommentar die Wahl ändert, gilt der Kommentar. Jede Karte zeigt oben, was daraus folgt. Die früheren Entscheidungen E01–E85 sind zurückgenommen und stehen unten als Historie.</p>
+<p><b>Nächster Schritt:</b> <a href="{ANS}" target="_blank" rel="noreferrer">Anschaffungsliste: 120 Objekte und Gegenstände zum Recherchieren →</a></p>
+<details><summary>Überblick: was seit 13.11. gilt ({len(FOLGT)})</summary><div class="tw2"><table class="ueb"><tbody>{"".join(f"<tr><td class=no>{k}</td><td>{e(v)}</td></tr>" for k, v in sorted(FOLGT.items()))}</tbody></table></div></details>
 <p>Zu jeder Entscheidung: <b>Gefällt mir</b> bei einer Möglichkeit, <b>Weiß ich noch nicht</b>, oder <b>Keine davon</b>, dann machen die Agenten neue Entwürfe. „Vorschlag KI“ ist nur ein Vorschlag und gilt erst, wenn ihr ihn wählt.</p>
 <p class="status" id="status">Lädt …</p>
 <p><a href="{INDEX}" target="_blank" rel="noreferrer">Plan im Detail: Index 3.0 →</a> · <a href="{SGMM}" target="_blank" rel="noreferrer">SGMM und Funktionsketten →</a> · <a href="{WP}" target="_blank" rel="noreferrer">Whitepaper →</a></p>
@@ -287,11 +339,12 @@ def build(src, log, alt):
 <section class="start">
 <p><b>Vision (Reference Architecture v0.4):</b> X-PORTAL entwickelt menschenzentrierte, weitgehend versorgungsautarke, operativ autonome, resiliente und wirtschaftlich tragfähige Lebens-, Arbeits- und Aufenthaltsumgebungen, in denen Mensch, physische Welt, Services, Organisation und Technologie als integriertes, lernendes Gesamtsystem zusammenwirken.</p>
 <p><b>Mission und Globalziele:</b> offen, siehe D42.</p>
-<p><b>Grundstück:</b> Bereschnyzja (Beregniza), Ortsteil Hrun, bei Werchowyna, Kataster 2620885502:02:001:0013, auf Pauls Namen, etwa 1.010–1.075 m hoch. Der Generalplan liegt in zwei Varianten vor.</p>
-{plans[0]}
+<p><b>Grundstück:</b> Bereschnyzja (Beregniza), Ortsteil Hrun, bei Werchowyna, Kataster 2620885502:02:001:0013, etwa 1.016–1.077 m hoch (Geologiebericht), Nordosthang des Bila Kobyla.</p>
+<p><b>Geologie:</b> KI-Zusammenfassung XPB-N001-GEO-SUM-001 vom 13.11.2026, nicht geprüft und nicht freigegeben. Hang mit Rutsch- und Fließprozessen, Grundwasseraustritte an drei Bohrpunkten; empfohlen sind Streifen- und Stützfundament und ein hangseitiger Entwässerungsgraben. Maßgeblich bleibt der ukrainische Originalbericht (Repo: <code>plan/entscheidungen/quellen/</code>).</p>
+{lage}
 </section>
 
-<h2>Bauphasen (Vorschlag, entschieden wird in D55)</h2>
+<h2>Bauphasen (nach D55 mit Kommentar)</h2>
 <section class="start"><div class="phasen">{"".join(f"<div><p class=no>{a}</p><b>{e(b)}</b><p>{e(c)}</p></div>" for a, b, c in PHASEN)}</div>
 <details><summary>Entwurf vom 04.11.2026 (Historie)</summary>{alt_plans}</details></section>
 ''']
@@ -326,6 +379,9 @@ if __name__ == '__main__':
     alt = {}
     for f in sorted((base / 'archiv/wahl-2026-11-04/wahl').glob('D*.json')):
         d = json.loads(f.read_text()); alt[f.stem] = d.get('data', d)
+    for f in sorted((base / 'antworten-2026-11-13/wahl').glob('D*.json')):
+        d = json.loads(f.read_text()); NEU[f.stem] = d.get('data', d)
+    assert set(NEU) == set(FOLGT), set(NEU) ^ set(FOLGT)
     page, where = build(src, log, alt)
     (base / 'entscheidungsseite.html').write_text(page)
     (base / 'entscheidungen.md').write_text(md(log, where))

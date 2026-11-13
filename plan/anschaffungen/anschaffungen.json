@@ -1,0 +1,1998 @@
+{
+ "stand": "13.11.2026",
+ "positionen": [
+  {
+   "nr": "A001",
+   "bereich": "Grundstück und Gründung",
+   "gegenstand": "Fachprüfung des Geologieberichts",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Die KI-Zusammenfassung ist nicht geprüft; vor jeder Planung braucht es Abgleich mit dem Original und Freigabe.",
+   "recherche": "Geotechniker oder Prüfingenieur in der Region; Umfang, Dauer, Honorar",
+   "menge": "einmal",
+   "entscheidungen": [
+    "D54",
+    "D55",
+    "D56"
+   ],
+   "entscheidet": "Geschäftsführung nach Vorschlag Fachexperte Geotechnik",
+   "nimmt_ab": "Fachexperte Geotechnik",
+   "hinweis": ""
+  },
+  {
+   "nr": "A002",
+   "bereich": "Grundstück und Gründung",
+   "gegenstand": "Zusatzerkundung für Zufahrt, Stützkonstruktion und Hauptgebäude",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Der Bericht verlangt weitere Untersuchungen, wenn bis zur Schicht IGE-4 gegründet wird oder sich Gebäude ändern.",
+   "recherche": "Bohrfirma, Zahl und Tiefe der Bohrungen",
+   "menge": "Zahl der Gebäude und Stützbauwerke",
+   "entscheidungen": [
+    "D54",
+    "D55",
+    "D56"
+   ],
+   "entscheidet": "Geschäftsführung nach Vorschlag Fachexperte Geotechnik",
+   "nimmt_ab": "Fachexperte Geotechnik",
+   "hinweis": ""
+  },
+  {
+   "nr": "A003",
+   "bereich": "Grundstück und Gründung",
+   "gegenstand": "Vermessung und Absteckung",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Lage von Objekt Phase 0, Leitungen und Wegen festlegen.",
+   "recherche": "Vermesser vor Ort; digitales Geländemodell für die 3D-Planung",
+   "menge": "einmal, später je Bauabschnitt",
+   "entscheidungen": [
+    "D54",
+    "D55",
+    "D56"
+   ],
+   "entscheidet": "Geschäftsführung nach Vorschlag Fachexperte Geotechnik",
+   "nimmt_ab": "Fachexperte Geotechnik",
+   "hinweis": ""
+  },
+  {
+   "nr": "A004",
+   "bereich": "Grundstück und Gründung",
+   "gegenstand": "Hangseitiger Entwässerungsgraben mit Rinnen oder Sammelbehälter",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Oberflächenwasser geordnet ableiten (Empfehlung Gutachter).",
+   "recherche": "Bauweise, Länge, Material, Firma mit Kleinbagger",
+   "menge": "Länge des Hangs oberhalb der Baufläche",
+   "entscheidungen": [
+    "D54",
+    "D55",
+    "D56"
+   ],
+   "entscheidet": "Geschäftsführung nach Vorschlag Fachexperte Geotechnik",
+   "nimmt_ab": "Fachexperte Geotechnik",
+   "hinweis": ""
+  },
+  {
+   "nr": "A005",
+   "bereich": "Grundstück und Gründung",
+   "gegenstand": "Fundament für Objekt Phase 0",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Leichte eingeschossige Gebäude können laut Bericht auf IGE-3 gründen; hangseitig als Stütze bemessen.",
+   "recherche": "Punkt-, Streifen- oder Schraubfundament; was ein Fachexperte für den Standort zulässt",
+   "menge": "Größe und Gewicht des Objekts",
+   "entscheidungen": [
+    "D54",
+    "D55",
+    "D56"
+   ],
+   "entscheidet": "Geschäftsführung nach Vorschlag Fachexperte Geotechnik",
+   "nimmt_ab": "Fachexperte Geotechnik",
+   "hinweis": ""
+  },
+  {
+   "nr": "A006",
+   "bereich": "Grundstück und Gründung",
+   "gegenstand": "Stützkonstruktion am Hang",
+   "phase": "0–1",
+   "art": "Dienstleistung",
+   "wofuer": "Hangseitiger Fundamentbereich als Stützkonstruktion (Empfehlung Gutachter).",
+   "recherche": "Gabionen, Betonwinkel oder Holz; Statik; Firma",
+   "menge": "Geländeschnitt an der Baufläche",
+   "entscheidungen": [
+    "D54",
+    "D55",
+    "D56"
+   ],
+   "entscheidet": "Geschäftsführung nach Vorschlag Fachexperte Geotechnik",
+   "nimmt_ab": "Fachexperte Geotechnik",
+   "hinweis": ""
+  },
+  {
+   "nr": "A007",
+   "bereich": "Grundstück und Gründung",
+   "gegenstand": "Baumfällung und Rodung der Baufläche",
+   "phase": "0",
+   "art": "kaufen mit Einbau",
+   "wofuer": "Bäume auf dem Grundstück müssen gefällt werden (Kommentar D60); das Holz wird Brennholz.",
+   "recherche": "Fällgenehmigung in der Ukraine; Fällfirma oder selbst; Abtransport der Stämme",
+   "menge": "Zahl der Bäume auf Baufläche und Trasse",
+   "entscheidungen": [
+    "D54",
+    "D55",
+    "D56"
+   ],
+   "entscheidet": "Geschäftsführung nach Vorschlag Fachexperte Geotechnik",
+   "nimmt_ab": "Fachexperte Geotechnik",
+   "hinweis": ""
+  },
+  {
+   "nr": "A008",
+   "bereich": "Grundstück und Gründung",
+   "gegenstand": "Kleinbagger mit Fahrer",
+   "phase": "0",
+   "art": "mieten",
+   "wofuer": "Gräben für Entwässerung, Wasser, Abwasser und Strom.",
+   "recherche": "Miete je Tag mit Fahrer; ob er die Zufahrt schafft",
+   "menge": "Meter Graben",
+   "entscheidungen": [
+    "D54",
+    "D55",
+    "D56"
+   ],
+   "entscheidet": "Geschäftsführung nach Vorschlag Fachexperte Geotechnik",
+   "nimmt_ab": "Fachexperte Geotechnik",
+   "hinweis": ""
+  },
+  {
+   "nr": "A009",
+   "bereich": "Objekt Phase 0",
+   "gegenstand": "Wohn- und Arbeitsobjekt für Team und Bauarbeiter",
+   "phase": "0",
+   "art": "kaufen oder mieten",
+   "wofuer": "Schlafen, arbeiten, Sanitär; ganzjährig bewohnbar bei −20 °C.",
+   "recherche": "Bauarten vergleichen: Wohncontainer, Modul, Holzrahmen; Dämmung, Maße, schwerstes Teil, Lieferzeit, Rückkauf oder Miete",
+   "menge": "Zahl der Personen (Team plus Bauarbeiter)",
+   "entscheidungen": [
+    "D55",
+    "D56",
+    "D45"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": "Früher gefunden: gedämmter Wohncontainer ab 444.000 UAH (Listenpreis, nicht bestätigt)"
+  },
+  {
+   "nr": "A010",
+   "bereich": "Objekt Phase 0",
+   "gegenstand": "Planung der Objekte mit Bau-KI und 3D-Modell",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Kommentar D56 und D57: Bau-KI plant und bewertet; 3D-Modelle für die Gesamtplanung in Phase 1.",
+   "recherche": "Welche Software oder welcher Dienst; welche Eingangsdaten (Geländemodell, Geologie)",
+   "menge": "einmal",
+   "entscheidungen": [
+    "D55",
+    "D56",
+    "D45"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A011",
+   "bereich": "Objekt Phase 0",
+   "gegenstand": "Betten und Matratzen",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Schlafplatz je Person.",
+   "recherche": "Maße passend zum Objekt",
+   "menge": "je Person",
+   "entscheidungen": [
+    "D55",
+    "D56",
+    "D45"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A012",
+   "bereich": "Objekt Phase 0",
+   "gegenstand": "Schreibtische und Arbeitsstühle",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Bezahlte digitale Arbeit oben.",
+   "recherche": "Ergonomie, zerlegbar für den Transport",
+   "menge": "je Arbeitsplatz",
+   "entscheidungen": [
+    "D55",
+    "D56",
+    "D45"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A013",
+   "bereich": "Objekt Phase 0",
+   "gegenstand": "Bildschirme",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Arbeitsplatz.",
+   "recherche": "Stromverbrauch, Größe",
+   "menge": "je Arbeitsplatz",
+   "entscheidungen": [
+    "D55",
+    "D56",
+    "D45"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A014",
+   "bereich": "Objekt Phase 0",
+   "gegenstand": "Schränke und Regale",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Kleidung, Vorrat, Werkzeug.",
+   "recherche": "zerlegbar",
+   "menge": "je Person und Raum",
+   "entscheidungen": [
+    "D55",
+    "D56",
+    "D45"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A015",
+   "bereich": "Objekt Phase 0",
+   "gegenstand": "LED-Beleuchtung innen und außen",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Licht im Objekt und auf den Wegen zu Holzlager und Technik.",
+   "recherche": "Außenleuchten frostfest; Bewegungsmelder",
+   "menge": "Räume und Wegemeter",
+   "entscheidungen": [
+    "D55",
+    "D56",
+    "D45"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A016",
+   "bereich": "Objekt Phase 0",
+   "gegenstand": "Bettwäsche, Decken, Schlafsäcke für den Winter",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Reserve, falls die Heizung ausfällt.",
+   "recherche": "Komfortbereich bis −20 °C",
+   "menge": "je Person",
+   "entscheidungen": [
+    "D55",
+    "D56",
+    "D45"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A017",
+   "bereich": "Objekt Phase 0",
+   "gegenstand": "Waschmaschine",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Wäsche oben waschen.",
+   "recherche": "Wasser- und Stromverbrauch; Frostschutz",
+   "menge": "1",
+   "entscheidungen": [
+    "D55",
+    "D56",
+    "D45"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A018",
+   "bereich": "Strom",
+   "gegenstand": "Netzanschluss",
+   "phase": "0",
+   "art": "Antrag",
+   "wofuer": "Hauptversorgung.",
+   "recherche": "Zuständiger Netzbetreiber; Leistung in kW; Frist; Entfernung zur nächsten Leitung",
+   "menge": "Lastliste Phase 0 und Ausbau",
+   "entscheidungen": [
+    "D59"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Elektro",
+   "hinweis": "Früher gefunden: etwa 2.927 UAH je kW, ohne Leitung"
+  },
+  {
+   "nr": "A019",
+   "bereich": "Strom",
+   "gegenstand": "Leitung vom Netz zum Grundstück (Erdkabel oder Freileitung)",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Verbindung vom Anschlusspunkt bis zum Objekt.",
+   "recherche": "Wer baut; Kabelquerschnitt für den Ausbau",
+   "menge": "Meter bis zum Anschlusspunkt",
+   "entscheidungen": [
+    "D59"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Elektro",
+   "hinweis": ""
+  },
+  {
+   "nr": "A020",
+   "bereich": "Strom",
+   "gegenstand": "Zählerschrank und Hauptverteilung",
+   "phase": "0",
+   "art": "kaufen mit Einbau",
+   "wofuer": "Skalierbare Verteilung für spätere Häuser.",
+   "recherche": "Reserveplätze für Phase 1; Überspannungsschutz",
+   "menge": "1",
+   "entscheidungen": [
+    "D59"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Elektro",
+   "hinweis": ""
+  },
+  {
+   "nr": "A021",
+   "bereich": "Strom",
+   "gegenstand": "Unterverteilung, Sicherungen, FI-Schutzschalter",
+   "phase": "0",
+   "art": "kaufen mit Einbau",
+   "wofuer": "Sicherheit im Objekt.",
+   "recherche": "Normen vor Ort",
+   "menge": "je Objekt",
+   "entscheidungen": [
+    "D59"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Elektro",
+   "hinweis": ""
+  },
+  {
+   "nr": "A022",
+   "bereich": "Strom",
+   "gegenstand": "Erdung und Blitzschutz",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Schutz von Personen und Technik am Hang.",
+   "recherche": "Erder bei felsigem Untergrund",
+   "menge": "je Objekt",
+   "entscheidungen": [
+    "D59"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Elektro",
+   "hinweis": ""
+  },
+  {
+   "nr": "A023",
+   "bereich": "Strom",
+   "gegenstand": "Generator",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Reserve bei Netzausfall.",
+   "recherche": "Leistung nach Lastliste; Inverter ja oder nein; Winterstart; Lautstärke",
+   "menge": "1",
+   "entscheidungen": [
+    "D59"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Elektro",
+   "hinweis": "Früher gefunden: 3 kW für 18.749–32.599 UAH"
+  },
+  {
+   "nr": "A024",
+   "bereich": "Strom",
+   "gegenstand": "Umschalter Netz/Generator",
+   "phase": "0",
+   "art": "kaufen mit Einbau",
+   "wofuer": "Sicher umschalten, ohne ins Netz zurückzuspeisen.",
+   "recherche": "manuell oder automatisch",
+   "menge": "1",
+   "entscheidungen": [
+    "D59"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Elektro",
+   "hinweis": ""
+  },
+  {
+   "nr": "A025",
+   "bereich": "Strom",
+   "gegenstand": "Kraftstoffkanister und Lagerort",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Kraftstoff für mehrere Tage.",
+   "recherche": "zulässige Lagermenge; Abstand zum Objekt",
+   "menge": "Tage Reserve × Verbrauch",
+   "entscheidungen": [
+    "D59"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Elektro",
+   "hinweis": ""
+  },
+  {
+   "nr": "A026",
+   "bereich": "Strom",
+   "gegenstand": "Außenkabel und Steckdosen im Außenbereich",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Baustrom und Technik draußen.",
+   "recherche": "Schutzart, Kältefestigkeit",
+   "menge": "Meter",
+   "entscheidungen": [
+    "D59"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Elektro",
+   "hinweis": ""
+  },
+  {
+   "nr": "A027",
+   "bereich": "Strom",
+   "gegenstand": "USV für Internet und Server",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Überbrückt die Umschaltzeit.",
+   "recherche": "Laufzeit bei der Last von Router, Starlink, Server",
+   "menge": "1",
+   "entscheidungen": [
+    "D59"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Elektro",
+   "hinweis": ""
+  },
+  {
+   "nr": "A028",
+   "bereich": "Strom",
+   "gegenstand": "Solaranlage mit Speicher",
+   "phase": "1",
+   "art": "kaufen mit Einbau",
+   "wofuer": "Ab Phase 1 (D59).",
+   "recherche": "Ertrag im Winter am Nordosthang; Größe; Montageort",
+   "menge": "Lastliste Phase 1",
+   "entscheidungen": [
+    "D59"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Elektro",
+   "hinweis": "Früher gefunden: 4,8 kWp mit 4,8 kWh für 189.900 UAH"
+  },
+  {
+   "nr": "A029",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Heizlastberechnung für das Objekt",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Ohne Heizlast keine Ofengröße.",
+   "recherche": "Wer rechnet; Auslegung −20 °C",
+   "menge": "einmal je Objekt",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A030",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Holzofen mit Kochplatte",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Wärme und Reserve zum Kochen.",
+   "recherche": "Leistung passend zur Heizlast; raumluftunabhängig; Speichermasse",
+   "menge": "je beheizter Einheit",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": "Früher gefunden: 6.000–13.000 UAH"
+  },
+  {
+   "nr": "A031",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Schornstein, Rauchrohr, Dachdurchführung",
+   "phase": "0",
+   "art": "kaufen mit Einbau",
+   "wofuer": "Sicherer Abzug.",
+   "recherche": "System passend zur Bauart; Abnahme",
+   "menge": "je Ofen",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A032",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Hitzeschutz für Boden und Wand",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Brandschutz am Ofen.",
+   "recherche": "Abstände laut Hersteller",
+   "menge": "je Ofen",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A033",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Zweite Wärmequelle",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Frostschutz, wenn niemand nachlegt.",
+   "recherche": "elektrisch, Gas oder Diesel; Verbrauch",
+   "menge": "je Einheit",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A034",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Brennholz trocken für den ersten Winter",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Das eigene Holz ist nass und im ersten Winter nicht brennbar.",
+   "recherche": "Lieferant vor Ort; Holzart; Preis je m³ mit Lieferung nach oben",
+   "menge": "m³ je Ofen und Winter (Annahme 3–6)",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": "Früher gefunden: 3.700–4.500 UAH je m³ in Kyjiw"
+  },
+  {
+   "nr": "A035",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Holzlager überdacht und belüftet",
+   "phase": "0",
+   "art": "kaufen oder selbst machen",
+   "wofuer": "Trocknen und Lagern, gekauft wie selbst gemacht (D60).",
+   "recherche": "Größe für zwei Winter; Bauweise; Standort mit Wind",
+   "menge": "m³ Holz",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A036",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Motorsäge",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Eigene Bäume aufarbeiten.",
+   "recherche": "Benzin oder Akku; Schwertlänge; Service vor Ort",
+   "menge": "1–2",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": "Früher gefunden: 6.519–7.310 UAH"
+  },
+  {
+   "nr": "A037",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Schutzausrüstung für die Motorsäge",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Schnittschutzhose, Helm mit Visier und Gehörschutz, Handschuhe, Stiefel.",
+   "recherche": "Schutzklasse",
+   "menge": "je Person an der Säge",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A038",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Motorsägenkurs",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Sicherheit und Haftung.",
+   "recherche": "Anbieter; Anerkennung",
+   "menge": "je Person an der Säge",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A039",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Kettenöl, Kraftstoffgemisch, Ersatzketten, Feile",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Betrieb der Säge.",
+   "recherche": "Verbrauch",
+   "menge": "laufend",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A040",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Spaltaxt und Spalthammer",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Holz spalten.",
+   "recherche": "Gewicht, Stiellänge",
+   "menge": "2",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": "Früher gefunden: 3.599–4.398 UAH"
+  },
+  {
+   "nr": "A041",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Spaltkeile",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Dicke Stücke.",
+   "recherche": "Material",
+   "menge": "2–3",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A042",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Holzspalter",
+   "phase": "0–1",
+   "art": "kaufen oder mieten",
+   "wofuer": "Bei großen Mengen Eigenholz.",
+   "recherche": "elektrisch oder Benzin; Spaltkraft; mieten möglich",
+   "menge": "1",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A043",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Sägebock und Hackklotz",
+   "phase": "0",
+   "art": "kaufen oder selbst machen",
+   "wofuer": "Sicher sägen und spalten.",
+   "recherche": "",
+   "menge": "1",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A044",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Bügelsäge",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Kleine Schnitte ohne Motorsäge.",
+   "recherche": "",
+   "menge": "1",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A045",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Holzfeuchtemesser",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Nur trockenes Holz verbrennen (unter 20 %).",
+   "recherche": "",
+   "menge": "1",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A046",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Schubkarre oder Holzschlitten",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Holz vom Lager zum Objekt, auch bei Schnee.",
+   "recherche": "",
+   "menge": "1–2",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A047",
+   "bereich": "Wärme und Holz",
+   "gegenstand": "Ascheeimer aus Metall mit Deckel",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Asche sicher entsorgen.",
+   "recherche": "",
+   "menge": "je Ofen",
+   "entscheidungen": [
+    "D60"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Heizung und Schornstein",
+   "hinweis": ""
+  },
+  {
+   "nr": "A048",
+   "bereich": "Wasser",
+   "gegenstand": "Wasseranalyse im Labor",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Bestimmt, welche Aufbereitung nötig ist.",
+   "recherche": "Akkreditiertes Labor; Parameter (Keime, Eisen, Mangan, Härte, Nitrat)",
+   "menge": "je Entnahmestelle, wiederholt",
+   "entscheidungen": [
+    "D61"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Wasser, Labor",
+   "hinweis": ""
+  },
+  {
+   "nr": "A049",
+   "bereich": "Wasser",
+   "gegenstand": "Brunnen oder Quellfassung",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Wasser gewinnen; im Plan ist ein Bohrbrunnen eingezeichnet.",
+   "recherche": "Bohrfirma; Tiefe; Genehmigung; Schüttung im Winter",
+   "menge": "1",
+   "entscheidungen": [
+    "D61"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Wasser, Labor",
+   "hinweis": ""
+  },
+  {
+   "nr": "A050",
+   "bereich": "Wasser",
+   "gegenstand": "Pumpe",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Wasser fördern.",
+   "recherche": "Förderhöhe und Menge; Trockenlaufschutz",
+   "menge": "1 plus Reserve",
+   "entscheidungen": [
+    "D61"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Wasser, Labor",
+   "hinweis": ""
+  },
+  {
+   "nr": "A051",
+   "bereich": "Wasser",
+   "gegenstand": "Druckbehälter und Druckschalter",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Gleichmäßiger Druck für Dusche und Spülung.",
+   "recherche": "Größe",
+   "menge": "1",
+   "entscheidungen": [
+    "D61"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Wasser, Labor",
+   "hinweis": ""
+  },
+  {
+   "nr": "A052",
+   "bereich": "Wasser",
+   "gegenstand": "Wassertank",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Vorrat für Sperre und Ausfall.",
+   "recherche": "Größe für 10 Tage; frostfreier Standort; Bodenlast",
+   "menge": "Personen × Liter × Tage",
+   "entscheidungen": [
+    "D61"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Wasser, Labor",
+   "hinweis": "Früher gefunden: 1.000 l für 7.000–13.000 UAH"
+  },
+  {
+   "nr": "A053",
+   "bereich": "Wasser",
+   "gegenstand": "Trinkwasseraufbereitung",
+   "phase": "0",
+   "art": "kaufen mit Einbau",
+   "wofuer": "Aus Grundwasser Trinkwasser machen (D61).",
+   "recherche": "Stufen nach Laborwerten: Sedimentfilter, Aktivkohle, Enteisenung, UV oder Umkehrosmose; Wartung",
+   "menge": "1 Anlage, skalierbar",
+   "entscheidungen": [
+    "D61"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Wasser, Labor",
+   "hinweis": ""
+  },
+  {
+   "nr": "A054",
+   "bereich": "Wasser",
+   "gegenstand": "Ersatzfilter und UV-Lampe",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Betrieb der Aufbereitung.",
+   "recherche": "Wechselintervall",
+   "menge": "laufend",
+   "entscheidungen": [
+    "D61"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Wasser, Labor",
+   "hinweis": ""
+  },
+  {
+   "nr": "A055",
+   "bereich": "Wasser",
+   "gegenstand": "Wasserleitung frostfrei verlegt",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Vom Brunnen zum Objekt, ohne Heizkabel.",
+   "recherche": "Frosttiefe am Standort; Rohrmaterial; Dimension für den Ausbau",
+   "menge": "Meter",
+   "entscheidungen": [
+    "D61"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Wasser, Labor",
+   "hinweis": ""
+  },
+  {
+   "nr": "A056",
+   "bereich": "Wasser",
+   "gegenstand": "Trinkwasserkanister als Notvorrat",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Reserve, wenn Pumpe oder Aufbereitung ausfällt.",
+   "recherche": "",
+   "menge": "Personen × Tage",
+   "entscheidungen": [
+    "D61"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Wasser, Labor",
+   "hinweis": ""
+  },
+  {
+   "nr": "A057",
+   "bereich": "Sanitär und Abwasser",
+   "gegenstand": "Abwasserplanung und Genehmigung",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Der Gutachter verlangt Schutz von Oberflächen- und Grundwasser vor Abwasser.",
+   "recherche": "Zuständige Behörde; was am Hang mit Grundwasseraustritten zulässig ist",
+   "menge": "einmal",
+   "entscheidungen": [
+    "D62"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Sanitär, Behörde",
+   "hinweis": ""
+  },
+  {
+   "nr": "A058",
+   "bereich": "Sanitär und Abwasser",
+   "gegenstand": "Kleinkläranlage oder Mehrkammergrube mit Versickerung",
+   "phase": "0",
+   "art": "kaufen mit Einbau",
+   "wofuer": "Abwasser aus Toilette, Dusche, Küche; im Plan sind lokale Klärbauwerke eingezeichnet.",
+   "recherche": "Typ; Größe für den Ausbau; Betrieb im Winter; Entleerung über die Zufahrt",
+   "menge": "Personen jetzt und später",
+   "entscheidungen": [
+    "D62"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Sanitär, Behörde",
+   "hinweis": ""
+  },
+  {
+   "nr": "A059",
+   "bereich": "Sanitär und Abwasser",
+   "gegenstand": "Abwasserleitungen frostfrei mit Gefälle",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Vom Objekt zur Anlage.",
+   "recherche": "Rohr für Papier geeignet (Durchmesser, Gefälle)",
+   "menge": "Meter",
+   "entscheidungen": [
+    "D62"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Sanitär, Behörde",
+   "hinweis": ""
+  },
+  {
+   "nr": "A060",
+   "bereich": "Sanitär und Abwasser",
+   "gegenstand": "Spültoilette mit Spülkasten",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Klopapier spülbar (D62).",
+   "recherche": "Wasserspar-Spülung",
+   "menge": "je Sanitäreinheit",
+   "entscheidungen": [
+    "D62"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Sanitär, Behörde",
+   "hinweis": ""
+  },
+  {
+   "nr": "A061",
+   "bereich": "Sanitär und Abwasser",
+   "gegenstand": "Dusche mit Armatur",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Warm duschen im Objekt.",
+   "recherche": "Sparbrause",
+   "menge": "je Sanitäreinheit",
+   "entscheidungen": [
+    "D62"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Sanitär, Behörde",
+   "hinweis": ""
+  },
+  {
+   "nr": "A062",
+   "bereich": "Sanitär und Abwasser",
+   "gegenstand": "Waschbecken mit Armatur",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Hände und Zähne.",
+   "recherche": "",
+   "menge": "je Sanitäreinheit",
+   "entscheidungen": [
+    "D62"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Sanitär, Behörde",
+   "hinweis": ""
+  },
+  {
+   "nr": "A063",
+   "bereich": "Sanitär und Abwasser",
+   "gegenstand": "Warmwasserbereiter",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Warmwasser ab Phase 0.",
+   "recherche": "Elektroboiler, Holz oder Kombi; Größe; Stromlast",
+   "menge": "Personen",
+   "entscheidungen": [
+    "D62"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Sanitär, Behörde",
+   "hinweis": "Früher gefunden: 80 l für 4.399–5.387 UAH"
+  },
+  {
+   "nr": "A064",
+   "bereich": "Sanitär und Abwasser",
+   "gegenstand": "Lüftung im Sanitärraum",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Feuchte und Schimmel vermeiden.",
+   "recherche": "",
+   "menge": "je Sanitärraum",
+   "entscheidungen": [
+    "D62"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Sanitär, Behörde",
+   "hinweis": ""
+  },
+  {
+   "nr": "A065",
+   "bereich": "Sanitär und Abwasser",
+   "gegenstand": "Entleerung der Anlage (Saugwagen)",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Schlamm abfahren.",
+   "recherche": "Ob ein Saugwagen die Zufahrt schafft",
+   "menge": "nach Anlagentyp",
+   "entscheidungen": [
+    "D62"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Sanitär, Behörde",
+   "hinweis": ""
+  },
+  {
+   "nr": "A066",
+   "bereich": "Internet und IT",
+   "gegenstand": "Internetanschluss (Glasfaser oder Richtfunk)",
+   "phase": "0",
+   "art": "Antrag",
+   "wofuer": "Hauptleitung für zwei Videocalls gleichzeitig plus Arbeit.",
+   "recherche": "Anbieter in Werchowyna; Bandbreite Up und Down; Vertragslaufzeit; Bau der Leitung",
+   "menge": "1",
+   "entscheidungen": [
+    "D63",
+    "D47"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle IT",
+   "hinweis": ""
+  },
+  {
+   "nr": "A067",
+   "bereich": "Internet und IT",
+   "gegenstand": "Starlink mit Abo",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Reserve; kein Mobilfunk oben.",
+   "recherche": "Tarif für die Adresse; Schneeheizung der Antenne",
+   "menge": "1",
+   "entscheidungen": [
+    "D63",
+    "D47"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle IT",
+   "hinweis": "Früher gefunden: Mini 20.820–25.900 UAH, etwa 2.950 UAH im Monat"
+  },
+  {
+   "nr": "A068",
+   "bereich": "Internet und IT",
+   "gegenstand": "Antennenmast und Halterung",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Freie Sicht, schneefrei.",
+   "recherche": "",
+   "menge": "1",
+   "entscheidungen": [
+    "D63",
+    "D47"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle IT",
+   "hinweis": ""
+  },
+  {
+   "nr": "A069",
+   "bereich": "Internet und IT",
+   "gegenstand": "Router mit zwei Zugängen und automatischer Umschaltung",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Wechsel zwischen Haupt- und Reserveleitung.",
+   "recherche": "Dual-WAN, VPN",
+   "menge": "1",
+   "entscheidungen": [
+    "D63",
+    "D47"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle IT",
+   "hinweis": ""
+  },
+  {
+   "nr": "A070",
+   "bereich": "Internet und IT",
+   "gegenstand": "WLAN-Zugangspunkte",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Abdeckung in Objekt und später im Gelände.",
+   "recherche": "Außengeräte frostfest",
+   "menge": "Fläche",
+   "entscheidungen": [
+    "D63",
+    "D47"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle IT",
+   "hinweis": ""
+  },
+  {
+   "nr": "A071",
+   "bereich": "Internet und IT",
+   "gegenstand": "Netzwerkkabel, Switch, Leerrohre",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Skalierbares Netz für Phase 1.",
+   "recherche": "Leerrohre gleich mit in die Gräben",
+   "menge": "Meter",
+   "entscheidungen": [
+    "D63",
+    "D47"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle IT",
+   "hinweis": ""
+  },
+  {
+   "nr": "A072",
+   "bereich": "Internet und IT",
+   "gegenstand": "Server oder NAS mit Festplatten",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Daten lokal; Verbindung mit Servern in Deutschland (D47: nur bei VC-Funding).",
+   "recherche": "Datenschutz für personenbezogene Daten",
+   "menge": "1",
+   "entscheidungen": [
+    "D63",
+    "D47"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle IT",
+   "hinweis": "Früher gefunden: NAS etwa 404–415 € ohne Platten"
+  },
+  {
+   "nr": "A073",
+   "bereich": "Internet und IT",
+   "gegenstand": "Datensicherung außer Haus",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Schutz vor Verlust.",
+   "recherche": "Standort der Daten",
+   "menge": "1",
+   "entscheidungen": [
+    "D63",
+    "D47"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle IT",
+   "hinweis": ""
+  },
+  {
+   "nr": "A074",
+   "bereich": "Küche und Essen",
+   "gegenstand": "Kühlschrank mit Gefrierfach",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Lebensmittel.",
+   "recherche": "Verbrauch",
+   "menge": "1",
+   "entscheidungen": [
+    "D36"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A075",
+   "bereich": "Küche und Essen",
+   "gegenstand": "Kochfeld oder Herd",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Kochen, zusätzlich zur Ofenplatte.",
+   "recherche": "Strom oder Gas; Last",
+   "menge": "1",
+   "entscheidungen": [
+    "D36"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A076",
+   "bereich": "Küche und Essen",
+   "gegenstand": "Spüle mit Armatur",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Küche.",
+   "recherche": "",
+   "menge": "1",
+   "entscheidungen": [
+    "D36"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A077",
+   "bereich": "Küche und Essen",
+   "gegenstand": "Töpfe, Pfannen, Geschirr, Besteck",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Grundausstattung.",
+   "recherche": "",
+   "menge": "Personen",
+   "entscheidungen": [
+    "D36"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A078",
+   "bereich": "Küche und Essen",
+   "gegenstand": "Vorratsregal und dichte Behälter",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Vorrat für eine Sperre der Zufahrt, sicher vor Mäusen.",
+   "recherche": "",
+   "menge": "Personen × Tage",
+   "entscheidungen": [
+    "D36"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A079",
+   "bereich": "Küche und Essen",
+   "gegenstand": "Esstisch und Stühle",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Gemeinsam essen.",
+   "recherche": "",
+   "menge": "Personen",
+   "entscheidungen": [
+    "D36"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A080",
+   "bereich": "Küche und Essen",
+   "gegenstand": "Wasserkocher und Kaffeemaschine",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Alltag.",
+   "recherche": "",
+   "menge": "1",
+   "entscheidungen": [
+    "D36"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A081",
+   "bereich": "Zufahrt, Schnee und Transport",
+   "gegenstand": "Transport nach oben mit kleinem Fahrzeug",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Material und Objekt hochbringen.",
+   "recherche": "Wer vor Ort Traktor oder Allrad-Transporter mit Anhänger hat; Nutzlast; Preis je Fahrt",
+   "menge": "Tonnen und Fahrten",
+   "entscheidungen": [
+    "D57"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A082",
+   "bereich": "Zufahrt, Schnee und Transport",
+   "gegenstand": "Räumvertrag für die Zufahrt im Winter",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Zufahrt passierbar halten.",
+   "recherche": "Bauer mit Traktor; Preis je Einsatz; Reaktionszeit",
+   "menge": "Schneetage",
+   "entscheidungen": [
+    "D57"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A083",
+   "bereich": "Zufahrt, Schnee und Transport",
+   "gegenstand": "Schneeschaufeln und Schneeschieber",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Wege am Objekt.",
+   "recherche": "",
+   "menge": "je Person",
+   "entscheidungen": [
+    "D57"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": "Früher gefunden: 270–427 UAH"
+  },
+  {
+   "nr": "A084",
+   "bereich": "Zufahrt, Schnee und Transport",
+   "gegenstand": "Schneefräse",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Falls Handräumen nicht reicht.",
+   "recherche": "Räumbreite; Lagerung",
+   "menge": "0–1",
+   "entscheidungen": [
+    "D57"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A085",
+   "bereich": "Zufahrt, Schnee und Transport",
+   "gegenstand": "Streugut mit Lagerkiste",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Glätte auf Wegen und Treppen.",
+   "recherche": "Splitt oder Sand lokal",
+   "menge": "Wegemeter",
+   "entscheidungen": [
+    "D57"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A086",
+   "bereich": "Zufahrt, Schnee und Transport",
+   "gegenstand": "Eispickel und Dachschneeschieber",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Eis und Dachlast.",
+   "recherche": "",
+   "menge": "1",
+   "entscheidungen": [
+    "D57"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A087",
+   "bereich": "Zufahrt, Schnee und Transport",
+   "gegenstand": "Wegebeleuchtung und Handlauf",
+   "phase": "0",
+   "art": "kaufen oder selbst machen",
+   "wofuer": "Sichere Wege zu Holzlager und Technik im Dunkeln.",
+   "recherche": "",
+   "menge": "Wegemeter",
+   "entscheidungen": [
+    "D57"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A088",
+   "bereich": "Zufahrt, Schnee und Transport",
+   "gegenstand": "Befestigung und Entwässerung der Zufahrt",
+   "phase": "1",
+   "art": "Dienstleistung",
+   "wofuer": "Gesamtplanung in Phase 1 (D57).",
+   "recherche": "Aufbau nach Geologie; Kosten je Meter",
+   "menge": "Meter Zufahrt",
+   "entscheidungen": [
+    "D57"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A089",
+   "bereich": "Mobilität",
+   "gegenstand": "Gemeinsames geländegängiges Fahrzeug",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Einkauf, Notfall, kleine Lasten.",
+   "recherche": "Allrad-Pkw, Pick-up, Quad oder Traktor; gebraucht; Zulassung und Versicherung in der Ukraine",
+   "menge": "1",
+   "entscheidungen": [
+    "D65"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A090",
+   "bereich": "Mobilität",
+   "gegenstand": "Winterreifen und Schneeketten",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Zufahrt im Winter.",
+   "recherche": "",
+   "menge": "1 Satz",
+   "entscheidungen": [
+    "D65"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A091",
+   "bereich": "Mobilität",
+   "gegenstand": "Anhänger",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Holz und Material.",
+   "recherche": "Nutzlast",
+   "menge": "0–1",
+   "entscheidungen": [
+    "D65"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A092",
+   "bereich": "Mobilität",
+   "gegenstand": "Abschleppseil, Starthilfe, Wagenheber",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Selbsthilfe.",
+   "recherche": "",
+   "menge": "1 Satz",
+   "entscheidungen": [
+    "D65"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A093",
+   "bereich": "Werkzeug und Wartung",
+   "gegenstand": "Werkzeugkoffer",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Schrauben, Zangen, Schlüssel, Säge, Hammer.",
+   "recherche": "",
+   "menge": "1",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A094",
+   "bereich": "Werkzeug und Wartung",
+   "gegenstand": "Akkuschrauber und Bohrhammer",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Montage.",
+   "recherche": "ein Akkusystem für alles",
+   "menge": "1",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A095",
+   "bereich": "Werkzeug und Wartung",
+   "gegenstand": "Leiter",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Dach, Antenne, Schornstein.",
+   "recherche": "Länge",
+   "menge": "1",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A096",
+   "bereich": "Werkzeug und Wartung",
+   "gegenstand": "Stirnlampen und Taschenlampen",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Arbeiten im Dunkeln und bei Stromausfall.",
+   "recherche": "",
+   "menge": "je Person",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A097",
+   "bereich": "Werkzeug und Wartung",
+   "gegenstand": "Spaten, Schaufel, Hacke, Rechen",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Gräben, Garten, Wege.",
+   "recherche": "",
+   "menge": "1 Satz",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A098",
+   "bereich": "Werkzeug und Wartung",
+   "gegenstand": "Ersatzteile: Sicherungen, Dichtungen, Schläuche, Pumpe",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Schnelle Reparatur ohne Fahrt ins Tal.",
+   "recherche": "aus den Herstellerlisten der gekauften Geräte",
+   "menge": "1 Satz",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A099",
+   "bereich": "Werkzeug und Wartung",
+   "gegenstand": "Messgeräte: Multimeter, Spannungsprüfer, Thermometer",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Fehler finden.",
+   "recherche": "",
+   "menge": "1 Satz",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Rolle Betrieb",
+   "nimmt_ab": "Rolle Betrieb",
+   "hinweis": ""
+  },
+  {
+   "nr": "A100",
+   "bereich": "Sicherheit und Notfall",
+   "gegenstand": "Rauchmelder",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Brand früh erkennen.",
+   "recherche": "",
+   "menge": "je Raum",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Brandschutz",
+   "hinweis": ""
+  },
+  {
+   "nr": "A101",
+   "bereich": "Sicherheit und Notfall",
+   "gegenstand": "CO-Melder",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Pflicht bei Ofen und Generator.",
+   "recherche": "",
+   "menge": "je Raum mit Ofen",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Brandschutz",
+   "hinweis": "Früher gefunden: 580–4.249 UAH"
+  },
+  {
+   "nr": "A102",
+   "bereich": "Sicherheit und Notfall",
+   "gegenstand": "Feuerlöscher",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Erster Löschangriff.",
+   "recherche": "Typ und Größe; Prüffrist",
+   "menge": "je Objekt und Technikraum",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Brandschutz",
+   "hinweis": ""
+  },
+  {
+   "nr": "A103",
+   "bereich": "Sicherheit und Notfall",
+   "gegenstand": "Löschdecke",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Küche.",
+   "recherche": "",
+   "menge": "1",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Brandschutz",
+   "hinweis": ""
+  },
+  {
+   "nr": "A104",
+   "bereich": "Sicherheit und Notfall",
+   "gegenstand": "Erste-Hilfe-Ausrüstung",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Verletzungen, auch Schnittwunden von der Säge.",
+   "recherche": "Inhalt für abgelegene Orte",
+   "menge": "je Objekt und Fahrzeug",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Brandschutz",
+   "hinweis": ""
+  },
+  {
+   "nr": "A105",
+   "bereich": "Sicherheit und Notfall",
+   "gegenstand": "Erste-Hilfe-Kurs",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Rettung dauert oben länger.",
+   "recherche": "Kurs für abgelegene Orte",
+   "menge": "je Person",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Brandschutz",
+   "hinweis": ""
+  },
+  {
+   "nr": "A106",
+   "bereich": "Sicherheit und Notfall",
+   "gegenstand": "Notfallkommunikation",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Hilfe rufen ohne Mobilfunk und bei Internetausfall.",
+   "recherche": "Satelliten-Notrufgerät oder Funk",
+   "menge": "1",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Brandschutz",
+   "hinweis": ""
+  },
+  {
+   "nr": "A107",
+   "bereich": "Sicherheit und Notfall",
+   "gegenstand": "Versicherungen",
+   "phase": "0",
+   "art": "Dienstleistung",
+   "wofuer": "Haftung, Unfall, Objekt.",
+   "recherche": "Was in der Ukraine für Ausländer und Baustellen möglich ist",
+   "menge": "einmal",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Brandschutz",
+   "hinweis": ""
+  },
+  {
+   "nr": "A108",
+   "bereich": "Sicherheit und Notfall",
+   "gegenstand": "Notvorrat: Lebensmittel, Wasser, Kerzen, Batterien",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Sperre der Zufahrt.",
+   "recherche": "",
+   "menge": "Personen × Tage",
+   "entscheidungen": [
+    "D66"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Brandschutz",
+   "hinweis": ""
+  },
+  {
+   "nr": "A109",
+   "bereich": "Gemeinschaft in Phase 1",
+   "gegenstand": "Kommunalgebäude",
+   "phase": "1",
+   "art": "Dienstleistung",
+   "wofuer": "Arbeitsplätze, Küche, Sanitär; erster Bau in Phase 1.",
+   "recherche": "Bauart nach Bau-KI; Größe; Kostenrahmen",
+   "menge": "1",
+   "entscheidungen": [
+    "D64",
+    "D34",
+    "D35",
+    "D36"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A110",
+   "bereich": "Gemeinschaft in Phase 1",
+   "gegenstand": "Ausstattung Kommunalküche",
+   "phase": "1",
+   "art": "kaufen",
+   "wofuer": "Gemeinsam kochen.",
+   "recherche": "",
+   "menge": "Personen Phase 1",
+   "entscheidungen": [
+    "D64",
+    "D34",
+    "D35",
+    "D36"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A111",
+   "bereich": "Gemeinschaft in Phase 1",
+   "gegenstand": "Feuerstelle mit Grill",
+   "phase": "1",
+   "art": "kaufen oder selbst machen",
+   "wofuer": "Treffpunkt.",
+   "recherche": "Brandschutz, windarmer Platz",
+   "menge": "1",
+   "entscheidungen": [
+    "D64",
+    "D34",
+    "D35",
+    "D36"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A112",
+   "bereich": "Gemeinschaft in Phase 1",
+   "gegenstand": "Sauna",
+   "phase": "1",
+   "art": "kaufen oder selbst machen",
+   "wofuer": "Gesundheit und Gemeinschaft.",
+   "recherche": "Holz- oder Elektroofen; Bausatz oder Eigenbau; Brandschutz; Wasser",
+   "menge": "1",
+   "entscheidungen": [
+    "D64",
+    "D34",
+    "D35",
+    "D36"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A113",
+   "bereich": "Gemeinschaft in Phase 1",
+   "gegenstand": "Gemüsegarten: Hochbeete, Erde, Gerätehaus, Kompost",
+   "phase": "1",
+   "art": "kaufen oder selbst machen",
+   "wofuer": "Autarkie und Gemeinschaftsarbeit.",
+   "recherche": "Was auf 1.000 m Höhe wächst",
+   "menge": "Fläche",
+   "entscheidungen": [
+    "D64",
+    "D34",
+    "D35",
+    "D36"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A114",
+   "bereich": "Gemeinschaft in Phase 1",
+   "gegenstand": "Gewächshaus",
+   "phase": "1",
+   "art": "kaufen",
+   "wofuer": "Längere Saison.",
+   "recherche": "Schneelast",
+   "menge": "0–1",
+   "entscheidungen": [
+    "D64",
+    "D34",
+    "D35",
+    "D36"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A115",
+   "bereich": "Gemeinschaft in Phase 1",
+   "gegenstand": "Bergkapelle (Gruppenprojekt)",
+   "phase": "1",
+   "art": "selbst machen",
+   "wofuer": "Kommentar D34; im Plan ist eine Kapelle eingezeichnet.",
+   "recherche": "Entwurf, Material, Genehmigung; Ansprechperson ist die Projektownerin",
+   "menge": "1",
+   "entscheidungen": [
+    "D64",
+    "D34",
+    "D35",
+    "D36"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Fachexperte Bau",
+   "hinweis": ""
+  },
+  {
+   "nr": "A116",
+   "bereich": "Erfassung und Zugang",
+   "gegenstand": "Zugangssystem für Türen (Chip oder Karte)",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Zugang und Nachweis, wer wo war.",
+   "recherche": "Schloss mit offener Schnittstelle; Betrieb bei Stromausfall; mechanischer Schlüssel",
+   "menge": "je Tür",
+   "entscheidungen": [
+    "D36",
+    "D38",
+    "D37"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle IT",
+   "hinweis": ""
+  },
+  {
+   "nr": "A117",
+   "bereich": "Erfassung und Zugang",
+   "gegenstand": "Lesegeräte an Arbeitsorten (Garten, Holzlager, Kapelle)",
+   "phase": "1",
+   "art": "kaufen",
+   "wofuer": "Gemeinschaftsarbeit mit einem Tippen erfassen.",
+   "recherche": "wetterfest; offline-fähig",
+   "menge": "je Ort",
+   "entscheidungen": [
+    "D36",
+    "D38",
+    "D37"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle IT",
+   "hinweis": ""
+  },
+  {
+   "nr": "A118",
+   "bereich": "Erfassung und Zugang",
+   "gegenstand": "Chips oder Karten je Person",
+   "phase": "0",
+   "art": "kaufen",
+   "wofuer": "Identität.",
+   "recherche": "NFC-Standard passend zur Cardano-Lösung",
+   "menge": "je Person",
+   "entscheidungen": [
+    "D36",
+    "D38",
+    "D37"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle IT",
+   "hinweis": ""
+  },
+  {
+   "nr": "A119",
+   "bereich": "Erfassung und Zugang",
+   "gegenstand": "Software für Aufgaben und Abrechnung",
+   "phase": "0",
+   "art": "kaufen oder selbst machen",
+   "wofuer": "Stunden erfassen, mit der Pauschale verrechnen.",
+   "recherche": "Kaufen oder selbst bauen; Anbindung an Cardano",
+   "menge": "1",
+   "entscheidungen": [
+    "D36",
+    "D38",
+    "D37"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle IT",
+   "hinweis": ""
+  },
+  {
+   "nr": "A120",
+   "bereich": "Erfassung und Zugang",
+   "gegenstand": "Zähler für Strom und Wasser je Einheit",
+   "phase": "1",
+   "art": "kaufen",
+   "wofuer": "Verbrauch je Einheit messen, als Grundlage für Selbstkosten (D49).",
+   "recherche": "fernauslesbar",
+   "menge": "je Einheit",
+   "entscheidungen": [
+    "D36",
+    "D38",
+    "D37"
+   ],
+   "entscheidet": "Geschäftsführung",
+   "nimmt_ab": "Rolle IT",
+   "hinweis": ""
+  }
+ ]
+}

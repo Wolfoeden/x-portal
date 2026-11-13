@@ -14,16 +14,16 @@ Die Reference Architecture v0.4 bringt eine neue Vision und eine Kerndefinition,
 Früher: E28, E29
 
 ### D43 Wer bereitet vor, wer prüft, wer gibt frei?
-Bisher: Die KI macht, was sie kann, ein Mensch prüft; technische Werte legt eine Fachperson fest; Vorschläge der KI gelten bis zum Widerspruch; Paul entscheidet über Bestellungen und Betrag. Die Baseline verlangt nachvollziehbare Entscheidungsrechte (OD-001, XP-SYS-005).
+Bisher: Die KI macht, was sie kann, ein Mensch prüft; technische Werte legt eine Fachexperte fest; Vorschläge der KI gelten bis zum Widerspruch; die Geschäftsführung entscheidet über Bestellungen und Betrag. Die Baseline verlangt nachvollziehbare Entscheidungsrechte (OD-001, XP-SYS-005).
 
-- A · Wie bisher, aber ohne stilles Gelten (Vorschlag KI): KI bereitet vor, Fachperson prüft Technik, Paul und Roman geben frei, Paul entscheidet über Bestellung und Betrag. Ein Vorschlag der KI gilt erst, wenn er auf dieser Seite gewählt ist.
-- B · Wie bisher: Alles wie vor dem 13.11., auch: Vorschläge der KI gelten, bis Paul oder Roman widersprechen.
-- C · Mit Budgetgrenzen: Wie A; zusätzlich darf Roman bis zu einer festen Summe allein bestellen. Die Summe legt Paul fest.
+- A · Wie bisher, aber ohne stilles Gelten (Vorschlag KI): KI bereitet vor, Fachexperte prüft Technik, Geschäftsführung und Projektleitung geben frei, die Geschäftsführung entscheidet über Bestellung und Betrag. Ein Vorschlag der KI gilt erst, wenn er auf dieser Seite gewählt ist.
+- B · Wie bisher: Alles wie vor dem 13.11., auch: Vorschläge der KI gelten, bis Geschäftsführung oder Projektleitung widersprechen.
+- C · Mit Budgetgrenzen: Wie A; zusätzlich darf die Projektleitung bis zu einer festen Summe allein bestellen. Die Summe legt die Geschäftsführung fest.
 
 Früher: E13, E16, E22, E71, E80
 
 ### D44 Organisation: wer ist was?
-Vorgabe vom 05.11.: X-PORTAL als Dach, die DT Agentur übernimmt Projekte aus Deutschland, Grundstücke als eigener Bereich (X1–X3). Die Baseline nennt die Firma „X-PORTAL Organisation“; die Grenze zum Node-Betrieb ist offen (OD-001). Bisher: UG, später GmbH, ein SPV je Grundstück; heute tritt Romans Einzelunternehmen auf.
+Vorgabe vom 05.11.: X-PORTAL als Dach, die DT Agentur übernimmt Projekte aus Deutschland, Grundstücke als eigener Bereich (X1–X3). Die Baseline nennt die Firma „X-PORTAL Organisation“; die Grenze zum Node-Betrieb ist offen (OD-001). Bisher: UG, später GmbH, ein SPV je Grundstück; heute tritt ein Einzelunternehmen auf.
 
 - A · Drei Einheiten (Vorschlag KI): X-PORTAL Organisation (Dach, Plattform, Architektur), DT Agentur (Projekte aus Deutschland), Node001 als eigene Grundstücks- und Betriebsgesellschaft. Rechtsform je Einheit prüft ein Steuerberater.
 - B · Eine Firma, Node001 als SPV: Eine UG für alles außer dem Grundstück; Node001 bekommt ein eigenes SPV.
@@ -32,7 +32,7 @@ Vorgabe vom 05.11.: X-PORTAL als Dach, die DT Agentur übernimmt Projekte aus De
 Früher: E07, E08, E17, E18, E19, E61
 
 ### D45 Ziel der Stufe 1: wer wohnt und arbeitet oben?
-Bisher: 2–3 Leute ganzjährig oben, Roman von Anfang an; im ersten Winter Team plus 5 Käufer; Remote-Freelancer aus Deutschland als Zielgruppe. Die Infografik nennt acht Rollen, Human Roles v1.0 sind in Arbeit (OD-003, W08).
+Bisher: 2–3 Leute ganzjährig oben, die Projektleitung von Anfang an; im ersten Winter Team plus 5 Käufer; Remote-Freelancer aus Deutschland als Zielgruppe. Die Infografik nennt acht Rollen, Human Roles v1.0 sind in Arbeit (OD-003, W08).
 
 - A · Erst das Team (Vorschlag KI): Stufe 1 heißt: 2–3 Leute vom Team wohnen und arbeiten ganzjährig oben und verdienen dort Geld. Käufer ziehen ab Phase 1 in ihre Häuser.
 - B · Team plus erste Käufer: Team und die ersten Käufer wohnen schon im ersten Winter oben; Versorgung für beide.
@@ -96,12 +96,12 @@ Bisher: oben werden KI-Agenten gebaut und je Aufruf verkauft (Masumi); das Team 
 
 Früher: E56, E63, E70, E76, E77, E83
 
-### D52 Pauls Einkommen und die Reihenfolge des Geldes
-Bisher: Paul braucht 8.000 € netto im Monat für Vollzeit, das kommt vor den Kosten auf dem Berg; aber es soll nicht im Mittelpunkt stehen. Im Zielblatt steht „Paul Vollzeit“ nicht mehr (Vorgabe Roman).
+### D52 Einkommen der Geschäftsführung und die Reihenfolge des Geldes
+Bisher: Die Geschäftsführung braucht 8.000 € netto im Monat für Vollzeit, das kommt vor den Kosten auf dem Berg; aber es soll nicht im Mittelpunkt stehen. Im Zielblatt steht dieser Punkt nicht mehr (Vorgabe Projektleitung).
 
-- A · Als Kostenzeile (Vorschlag KI): 8.000 € netto stehen als Kostenzeile der Firma im Business Case, ab dem Monat, in dem Paul Vollzeit dabei ist. Keine eigene Reihenfolge.
-- B · Wie bisher zuerst: Pauls Einkommen kommt vor allen anderen Kosten.
-- C · Erst später: Pauls Einkommen kommt erst, wenn die Firma Umsatz hat; bis dahin keine Zeile im Plan.
+- A · Als Kostenzeile (Vorschlag KI): 8.000 € netto stehen als Kostenzeile der Firma im Business Case, ab dem Monat, in dem die Geschäftsführung Vollzeit dabei ist. Keine eigene Reihenfolge.
+- B · Wie bisher zuerst: Das Einkommen der Geschäftsführung kommt vor allen anderen Kosten.
+- C · Erst später: Das Einkommen der Geschäftsführung kommt erst, wenn die Firma Umsatz hat; bis dahin keine Zeile im Plan.
 
 Früher: E03, E32, E67
 
@@ -117,10 +117,10 @@ Früher: E60, E65, E82
 ## Operativ: wer macht was, womit, wann (in Arbeitsreihenfolge)
 
 ### D54 Geologie und Lageplan: wer, bis wann?
-Der Geologiebericht (3 Schürfe, 12 Bohrpunkte) fehlt; davon hängen Plots, Fundament und alle Kosten ab (O01). Bisher: Nazar ist beauftragt und macht die Abnahmen; den Kontakt hält Paul; Generalplan Variante 1 ist Grundlage, Grundstücksdaten reichen.
+Der Geologiebericht (3 Schürfe, 12 Bohrpunkte) fehlt; davon hängen Plots, Fundament und alle Kosten ab (O01). Bisher: der Architekt ist beauftragt und macht die Abnahmen; den Kontakt hält die Geschäftsführung; Generalplan Variante 1 ist Grundlage, Grundstücksdaten reichen.
 
-- A · Nazar mit Frist (Vorschlag KI): Nazar liefert den Bericht mit fester Frist; Paul hält den Kontakt. Danach Lageplan auf Variante 1 und Plots ausmessen.
-- B · Zweite Fachperson: Wie A, dazu prüft eine zweite Fachperson den Bericht.
+- A · Architekt mit Frist (Vorschlag KI): Der Architekt liefert den Bericht mit fester Frist; die Geschäftsführung hält den Kontakt. Danach Lageplan auf Variante 1 und Plots ausmessen.
+- B · Zweite Fachexperte: Wie A, dazu prüft eine zweite Fachexperte den Bericht.
 - C · Neu ausschreiben: Geologie und Abnahmen werden neu vergeben.
 
 Früher: E06, E10, E27, E33, E37, E43, E64
@@ -148,7 +148,7 @@ Die Zufahrt ist heute unbefestigt; Befestigung und Entwässerung sind geplant (2
 
 - A · Befestigen vor Phase 1 (Vorschlag KI): Zufahrt wird vor den Häusern befestigt; Spediteur bestätigt schriftlich, was hochkommt; Räumvertrag für den Winter.
 - B · Erst kleines Fahrzeug: Keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch.
-- C · Nazar entscheidet: Nazar legt nach der Geologie fest, was nötig ist.
+- C · Fachexperte entscheidet: Der Fachexperte legt nach der Geologie fest, was nötig ist.
 
 Früher: E36
 
@@ -189,7 +189,7 @@ Früher: E26
 ### D62 Toilette und Abwasser
 Phase 0 Campingtoilette (1.600–3.700 UAH); dauerhaft Kleinkläranlage oder Komposttoilette, mit Genehmigung (SGMM F04).
 
-- A · Camping jetzt, Anlage ab Phase 1 (Vorschlag KI): Campingtoilette in Phase 0; die dauerhafte Lösung plant eine Fachperson mit Genehmigung für Phase 1.
+- A · Camping jetzt, Anlage ab Phase 1 (Vorschlag KI): Campingtoilette in Phase 0; die dauerhafte Lösung plant eine Fachexperte mit Genehmigung für Phase 1.
 - B · Komposttoilette dauerhaft: Komposttoiletten in allen Häusern, keine Kläranlage.
 - C · Kläranlage sofort: Die dauerhafte Anlage kommt schon in Phase 0.
 
@@ -230,11 +230,11 @@ Bisher: Vorrang „alles läuft immer“ (kein Serverausfall, kein Problem mit S
 Früher: E14, E46, E53, E54
 
 ### D67 Team, Rollen und Alltag oben
-Bisher: Paul CEO zu 100 %, Roman Produkt und Projekt und oben; Nazar beauftragt. Deck: Roman Dering, Pavel J., Nazar D. (W14). Vorgabe vom 05.11.: Gleitzeit 9–14 Uhr, Jour fixe und Sport Pflicht, Wellness frei, Käufer frei.
+Bisher: Geschäftsführung (CEO) zu 100 %, Projektleitung für Produkt und Projekt und oben; Architekt beauftragt. Das Deck nennt drei Personen als operatives Team (W14). Vorgabe vom 05.11.: Gleitzeit 9–14 Uhr, Jour fixe und Sport Pflicht, Wellness frei, Käufer frei.
 
 - A · Rollen klären, Spielregeln wie Vorgabe (Vorschlag KI): Founder, Ownership und Rollen werden vor dem Investorenkontakt festgelegt; oben gelten die Spielregeln vom 05.11.
-- B · Wie im Pitch: Rollen wie bisher: Paul CEO, Roman Produkt und Projekt.
-- C · Mit Nazar im Team: Nazar wird Teammitglied (Architekt Nodes), nicht Auftragnehmer.
+- B · Wie im Pitch: Rollen wie bisher: Geschäftsführung (CEO), Projektleitung für Produkt und Projekt.
+- C · Mit Architekt im Team: Der Architekt wird Teammitglied (Architekt Nodes), nicht Auftragnehmer.
 
 Früher: E62, E81
 
