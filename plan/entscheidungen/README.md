@@ -16,4 +16,4 @@ Eine Entscheidung gilt erst, wenn sie auf der Seite gewählt ist. „Vorschlag K
 
 Antworten lesen (Agenten): Datenbank des Artefakts, Sammlung `wahl`, ein Dokument je Karte mit `wahl` (A/B/C, `unklar`, `keine`), `kommentar`, `von`, `am`.
 
-Offen: Das Entscheidungslog `plan/entscheidungen.md` im Plan-Repo muss ebenfalls als „zurückgenommen“ markiert werden; neue Einträge folgen aus den Antworten auf der Seite.
+Offen: Das Entscheidungslog `plan/entscheidungen.md` im Plan-Repo (Wolfoeden/x-portal-dashboard) ist noch nicht markiert. Diese Sitzung durfte das Repo nicht anhängen. Der fertige Text zum Einfügen steht in `log-zuruecknahme.md`.
