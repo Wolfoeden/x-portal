@@ -12,7 +12,7 @@ Preise: Internetpreise in UAH, Suche November 2026, 50 UAH/EUR (E20), ohne Monta
 import html, json, re, sys
 from pathlib import Path
 
-STAND = '12.11.2026'
+STAND = '13.11.2026'
 KURS = 50
 INDEX = 'https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F'
 WP = 'https://claude.ai/artifact/8Tsy5boPuHAm5wkfqMnPeD'
@@ -27,15 +27,15 @@ UMWELT = [
     ('Technologie', 'Netz mit Batterie oder Generator, dazu Solar (E35); eigener Internetanschluss, Starlink als Reserve, kein Mobilfunk oben (E49). KI heute; Robotik, Drohnen und mechanische Systeme perspektivisch, nicht im MVS.', 'DOCUMENTED'),
 ]
 ROLLEN = [  # Rolle, Stand im Plan, Stufe-1-Bezug, Status, Relevanz
-    ('Mitarbeitende (Team oben)', 'Drei Personen mit Tagesabläufen; Gleitzeit 9–14 Uhr, Jour fixe und Sport Pflicht (Vorgabe 05.11.2026).', 'Wohnen in Phase 0 im Container, ab Phase 1 im Haus', 'DOCUMENTED', 'REQUIRED'),
-    ('Siedler (Käufer)', 'Kaufen das Haus, pachten den Grund (E52); frei in Arbeit und Tagesablauf.', 'Ab Phase 1 im richtigen Holzhaus, nicht im Container (CR-01)', 'DECISION REQUIRED', 'REQUIRED'),
-    ('Remote-Siedler (Mieter)', 'Miete nach dem Einzug, kein Geld vorab (E47).', 'Ab Phase 1', 'DOCUMENTED', 'PREPARE'),
+    ('Mitarbeitende (Team oben)', 'Zwei bis drei Personen mit Tagesabläufen; Gleitzeit 9–14 Uhr, Jour fixe und Sport Pflicht (Vorgabe 05.11.2026).', 'Wohnen und arbeiten ab Phase 0 im Objekt', 'DOCUMENTED', 'REQUIRED'),
+    ('Mieter', 'Wohnen und arbeiten zur Miete; kein Immobilienverkauf im klassischen Sinn (D45, D48). Monatliche Pauschale, erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen (D38).', 'Interessenten ab jetzt sammeln (D50); Einzug ab Phase 1', 'DOCUMENTED', 'REQUIRED'),
+    ('Mitwirkende mit Beteiligung', 'Wer mitwirkt, kann am jeweiligen Node beteiligt werden, nicht an der Holding (D37). Tokenisierung erst nach Klärung (D48).', 'Struktur vor Phase 1 klären', 'DECISION REQUIRED', 'PREPARE'),
     ('Digitale Nomaden', 'Nicht im Plan der Stufe 1.', 'Später, nach Auslastungsdaten', 'OPEN', 'DEFER'),
     ('Gäste', 'Nicht im Plan der Stufe 1; Sauna und Feuerstelle als Möglichkeiten im Index.', 'Später', 'OPEN', 'DEFER'),
-    ('Bauarbeiter', 'Bleiben längere Zeit oben (E44).', 'Phase 0 und 1, Container auf der Herrenhaus-Fläche', 'DOCUMENTED', 'REQUIRED'),
-    ('Betreiber', 'X-PORTAL Organisation oder eigener Node-Betrieb; Systemgrenze offen (OD-001).', 'Ab Phase 0', 'DECISION REQUIRED', 'REQUIRED'),
-    ('Partner und Lieferanten', 'Hausbauer, Containerlieferant, Bauer (Holz, Räumen), Elektriker, Spediteur (2.2.3, 2.2.4, 2.4.6).', 'Ab Phase 0', 'IN WORK', 'REQUIRED'),
-    ('Investoren', 'Zwei getrennte Investment Cases: Company und Node001 (Deck, W03).', 'Vor Phase 1', 'IN WORK', 'REQUIRED'),
+    ('Bauarbeiter', 'Bleiben längere Zeit oben.', 'Phase 0 und 1, im Objekt unterhalb der Herrenhaus-Fläche (D55)', 'DOCUMENTED', 'REQUIRED'),
+    ('Betreiber', 'Node001 wird von einer ukrainischen Gesellschaft gehalten; wo Services abgewickelt werden, ist rechtlich zu klären (D44, OD-001).', 'Vor Phase 0', 'DECISION REQUIRED', 'REQUIRED'),
+    ('Partner und Lieferanten', 'Anbieter für Objekt, Brunnen, Kläranlage, Fundament; Bauer (Holz, Räumen), Elektriker, Spediteur; Architekt in beratender Funktion (D67).', 'Ab Vor-Phase: drei Angebote je großem Posten', 'IN WORK', 'REQUIRED'),
+    ('Investoren', 'Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Objekte mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47).', 'Nach dem Paket „Vor dem Investment“', 'IN WORK', 'REQUIRED'),
     ('Staat und Behörden', 'Genehmigungen, Anschlussrecht Strom, Abwasser (Reference Architecture 6.2).', 'Vor Phase 0', 'OPEN', 'REQUIRED'),
 ]
 
@@ -52,16 +52,16 @@ MATRIX = {
                                        'Änderungen an Kernbegriffen nur als CHANGE REQUEST (XP-SYS-014)'], 'XP-SYS-005, 014', 'DECISION REQUIRED'),
         ('Kultur', ['Prinzipien aus Abschnitt 5: Menschenzentrierung, Resilienz, Wartbarkeit, Messbarkeit, Lernfähigkeit',
                     'Spielregeln oben: Gleitzeit 9–14, Jour fixe und Sport Pflicht, Wellness frei, Arbeit wie Holz machen gemeinsam',
-                    'Käufer sind frei, nicht Teil des Teams'], 'XP-SYS-001', 'DOCUMENTED'),
+                    'Mieter sind frei in Arbeit und Tagesablauf; Gemeinschaftsarbeit wird gefördert und angerechnet (D36)'], 'XP-SYS-001', 'DOCUMENTED'),
     ],
     'Strategisch': [
         ('Programme', ['Vier Erlösstufen: Kundenprojekte, Technologielösungen, Nutzung und Services, System-Skalierung',
                        'Zwei Investment Cases: Company und Node001',
                        'Roadmap: Marktnachweis → Site Truth → Product & Economics → Financing & Permissions → Build & Operate → Learn & Replicate',
-                       'Bauphasen: Container nur als Übergang, danach richtige Holzhäuser (Abschnitt Bauphasen)'], 'XP-SYS-004', 'IN WORK'),
+                       'Bauphasen: ein Objekt als Übergang, danach Objekte und Kommunalgebäude (D55)', 'Mietmodell mit Selbstkosten als Basis; kein klassischer Immobilienverkauf (D48, D49)'], 'XP-SYS-004', 'IN WORK'),
         ('Organisation und Standards', ['Reference Architecture v0.4 als Arbeitsbaseline',
                                         'X-PORTAL Genome v0.1: Invarianten, Module, Parameter, Regeln, Evidenz (OD-006)',
-                                        'Team: Roman Dering, Pavel J., Nazar D.; Geschäftsführung in der Darstellung offen (W14)'], 'XP-SYS-006, 014', 'IN WORK'),
+                                        'Team: Produkt und Projekt, Lead Developer; Architektur und Bau als externe Beratung (D67); Geschäftsführung in der Darstellung offen (W14)'], 'XP-SYS-006, 014', 'IN WORK'),
         ('Lernkultur', ['Evidenz statt Behauptung: jede Annahme im Assumption Register',
                         'Widersprüche werden markiert, nicht geglättet (Abgleich W01–W20)',
                         'Node002 ist der Beweismaßstab für Reproduzierbarkeit (H8)'], 'XP-SYS-010', 'DOCUMENTED'),
@@ -82,22 +82,16 @@ SPALTEN = ['Aktivitäten', 'Strukturen', 'Verhalten']
 
 # ---------------------------------------------------------------- Bauphasen
 PHASEN = [
-    ('Phase 0', 'Container als Übergang', 'Wohncontainer für Team und Bauarbeiter auf der Fläche des späteren Herrenhauses (E44, E45). Je Person ein eigener Container (E40). Netzstrom mit Generator als Reserve, Tank, Campingtoilette, Starlink. Die Container sind Baustelleneinrichtung, kein Produkt.', 'Team (3) und Bauarbeiter (Zahl OPEN)', 'BlokModul BK1 ab 444.000 UAH, rund 8.880 € je Container ohne Heizung (E39); Listenpreis nicht bestätigt (O31). Kauf mit Rückverkauf oder Miete ist offen.', 'DECISION REQUIRED'),
-    ('Phase 1', 'Richtige Häuser und Kommunalgebäude', 'Holzhäuser wie auf dem Titelbild, in Teilen hochgebracht und oben montiert (E75). Zuerst Kommunalgebäude mit Küche, Sanitär und Arbeitsplätzen (E74), dann Häuser für Käufer und Team. Versorgung wächst mit: Solar und Speicher, Wasser im Ausbau, dauerhafte Abwasserlösung.', 'Käufer, Mieter, Team zieht aus dem Container ins Haus', 'Richtwert Rohbau 22.000–40.000 UAH je m², also 0,99–1,8 Mio. UAH oder rund 19.800–36.000 € für 45 m² (eigene Rechnung aus ukrsmeta.ua, 100 m² für 2,2–4 Mio. UAH); ohne Innenausbau, Transport und Anschlüsse. ASSUMPTION.', 'ASSUMPTION'),
-    ('Phase 2', 'Ausbau bis das Grundstück voll ist', 'Weitere Häuser nach Nachfrage (E51). Container gehen zurück oder werden verkauft. Die Herrenhaus-Fläche wird als letztes fest bebaut (E45).', 'Alle Rollen', 'OPEN, folgt aus dem parametrischen Business Case (OD-008)', 'OPEN'),
+    ('Phase 0', 'Objekt als Übergang', 'Ein Wohn- und Arbeitsobjekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet (D55). Spültoilette, Dusche, Warmwasser und Abwasser fest eingebaut (D62). Netzanschluss mit Generator als Reserve (D59).', 'Team (2–3) und Bauarbeiter (Zahl OPEN)', 'Teilsumme im Kostenregister für ein Modul mit 18 m² und zwei Personen; 69 von 137 Positionen ohne Betrag. Siehe „Vor dem Investment“.', 'ASSUMPTION'),
+    ('Phase 1', 'Objekte und Kommunalgebäude', 'Zuerst das Kommunalgebäude (D64), dann Wohn- und Arbeitsobjekte für Mieter und Team. Material offen (Holz, Beton, Glas, Metall); eine Bau-KI plant nach den lokalen Gegebenheiten (D56). Solar mit Speicher, Feuerstelle, Sauna, Bergkapelle als Gruppenprojekt (D59, D34, D35).', 'Mieter, Team', 'Nicht gerechnet. Selbstkosten je Objekt aus dem Business Case (D49, OD-008).', 'OPEN'),
+    ('Phase 2', 'Ausbau', 'Weitere Objekte nach Nachfrage. Die Herrenhaus-Fläche wird zuletzt bebaut.', 'Alle Rollen', 'OPEN', 'OPEN'),
 ]
-CR = [  # CHANGE REQUESTS an das Entscheidungslog
-    ('CR-01', 'E59 ersetzen (Karte D21 B)', '„Die Container sind die Tiny Houses der Käufer und bleiben stehen; für sie gilt E44 (Übergang) nicht mehr.“',
-     'Container sind Übergang für Team und Bauarbeiter auf der Herrenhaus-Fläche. Käufer bekommen richtige Holzhäuser. E44 gilt wieder. E52 (Grund pachten) bleibt.',
-     'Vorgabe Roman, 12.11.2026; Titelbild Whitepaper und Deck', 'DECISION REQUIRED'),
-    ('CR-02', 'E39 einschränken', 'Neue gedämmte Wohncontainer, zum Beispiel BlokModul BK1, als Haus.',
-     'Gilt nur noch für Phase 0. Zahl der Container = Team plus Bauarbeiter. Kauf mit Rückverkauf oder Miete wird verglichen.', 'Folgt aus CR-01', 'DECISION REQUIRED'),
-    ('CR-03', 'E40 präzisieren', 'Für jede Person ein eigener Container mit allem drin.',
-     'In Phase 0 ein Container je Person; ab Phase 1 ein eigenes Haus. Der Satz im Endprodukt „Container, der ihr Tiny House ist“ entfällt.', 'Folgt aus CR-01', 'DECISION REQUIRED'),
-    ('CR-04', 'E75 prüfen', 'Die Tiny Houses kommen in Teilen auf kleinem Fahrzeug hoch und werden oben montiert.',
-     'Bleibt für Holzhäuser (Rahmen oder Paneele). Zu prüfen: größtes Teil bei 45 m² (E84) und Zufahrt im Winter (2.2.4).', 'Herstelleranfrage O31', 'OPEN'),
-    ('CR-05', 'Preis je Haus neu rechnen', 'Etwa 30.000 € je Käufer, bezugsfertig im Frühjahr (E78).',
-     'Ein Holzhaus mit 45 m² liegt im Rohbau schon bei 19.800–36.000 € (Phase 1). 30.000 € decken Haus, Anschluss und Anteil am Kommunalgebäude nur bei kleinem Haus oder Eigenleistung. Preis und Größe gehören in den Business Case (OD-008).', 'W20', 'DECISION REQUIRED'),
+CR = [  # früher Change Requests; seit 13.11.2026 auf der Entscheidungsseite entschieden
+    ('D55', 'Container oder Objekte', 'Container sind die Tiny Houses der Käufer und bleiben (E59).', 'Ein Objekt als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche; danach Objekte und Kommunalgebäude.', 'Antwort mit Kommentar, 13.11.2026', 'DOCUMENTED'),
+    ('D56', 'Bauart', 'Tiny Houses in Teilen, oben montiert (E75).', 'Material offen (Holz, Beton, Glas, Metall); Bau-KI plant und bewertet nach lokalen Gegebenheiten.', 'Kommentar, 13.11.2026', 'OPEN'),
+    ('D49', 'Preis', 'Etwa 30.000 € je Käufer (E78).', 'Selbstkostenpreis je Objekt statt Verkaufspreis; kein Immobilienverkauf im klassischen Sinn.', 'Kommentar, 13.11.2026', 'DOCUMENTED'),
+    ('D46', 'Kapital Node001', 'Kein Investor; der Ort trägt sich aus Käufergeld (E57).', 'Käufermodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen.', 'Kommentar, 13.11.2026', 'DOCUMENTED'),
+    ('D69', 'Vor dem Investment', '–', 'Welches Paket aus Eigenmitteln und Eigenleistung (Kern, Optimum, Erweitert).', 'Karte offen', 'DECISION REQUIRED'),
 ]
 
 # ---------------------------------------------------------------- Funktionsketten
@@ -107,28 +101,28 @@ def P(name, menge, lo, hi, quelle, status='DOCUMENTED'):
 
 KETTEN = [
  dict(id='F01', name='Wärme', ebene='Physische Welt', anf='S01, H02, H03, H08', sys='XP-SYS-002, 003, 009, 012', rel='REQUIRED', status='DECISION REQUIRED',
-  ziel='Morgens im Haus warm, ohne CO-Gefahr, auch bei −20 °C und 10 Tagen Sperre.',
-  kette=[('Funktion', 'Wärme je Haus und im Kommunalgebäude'), ('Lösung', 'Holzofen mit Kochplatte je Haus (Möglichkeit A); zentral (B) offen'),
-         ('Betriebsmittel', 'Brennholz trocken, 3–6 m³ je Haus und Winter (ASSUMPTION, aus Heizlast H02 rechnen)'),
-         ('Beschaffung', 'Ofenfertig gespalten kaufen beim Bauern oder Holzhändler vor Ort (Buy)'),
+  ziel='Morgens in der Einheit warm, ohne CO-Gefahr, auch bei −20 °C und 10 Tagen Sperre.',
+  kette=[('Funktion', 'Wärme je Einheit und im Kommunalgebäude'), ('Lösung', 'Holzofen mit Kochplatte je Einheit (Möglichkeit A); zentral (B) offen'),
+         ('Betriebsmittel', 'Brennholz trocken, 3–6 m³ je Einheit und Winter (ASSUMPTION, aus Heizlast H02 rechnen)'),
+         ('Beschaffung', 'Mix (D60): Bäume am Grundstück fällen und aufarbeiten; sie sind nass und trocknen etwa ein Jahr. Für den ersten Winter trockenes Holz zukaufen.'),
          ('Werkzeug', 'Spaltaxt, Bügelsäge, Spaltkeil, Hackklotz, Handschuhe, Schutzbrille; Motorsäge nur mit Schulung und Schnittschutz'),
-         ('Lager', 'Überdachter Holzunterstand am Haus, Tagesvorrat im Warmen'),
-         ('Wer', 'Nachlegen jeder im eigenen Haus; Holz holen und spalten Team im Wechsel (2.4.5)'),
-         ('Wartung', 'Schornstein reinigen (Intervall: Fachperson), Axt schleifen, Sägeblatt tauschen'),
+         ('Lager', 'Überdachtes, belüftetes Holzlager für zwei Winter, in jedem Fall (D60); Tagesvorrat im Warmen'),
+         ('Wer', 'Nachlegen jeder in der eigenen Einheit; Holz holen und spalten Team im Wechsel (2.4.5)'),
+         ('Wartung', 'Schornstein reinigen (Intervall: Fachexperte), Axt schleifen, Sägeblatt tauschen'),
          ('Ausfall', 'CO- und Rauchmelder je Raum mit Ofen, Feuerlöscher; zweite Wärmequelle nach Morgenwert H02 (Möglichkeit C)')],
-  wahl=('Axt oder Säge?', 'Phase 0: Holz ofenfertig kaufen; Spaltaxt und Bügelsäge reichen für Nachschnitt und Anmachholz. Eine Motorsäge erst, wenn Rundholz selbst gemacht wird, dann mit Schulung, Schnittschutzhose, Helm und geklärter Haftung (S07). Vorschlag KI, nicht entschieden.'),
-  pos=[P('Holzofen mit Kochplatte', 'je Haus', 6000, 13000, 'Index A4'),
+  wahl=('Axt oder Säge?', 'Entschieden am 13.11. (D60): beides. Eigenes Holz braucht Motorsäge mit Schutzausrüstung und Kurs; Spaltaxt, Keile und Bügelsäge für das Spalten und Nachschneiden. Haftung und Versicherung der Eigenleistung sind offen (S07).'),
+  pos=[P('Holzofen mit Kochplatte', 'je Einheit', 6000, 13000, 'Index A4'),
        P('Brennholz Eiche/Hainbuche, gespalten', 'je m³', 3700, 4500, 'tsn.ua, Preise Kyjiw; Iwano-Frankiwsk nicht gefunden'),
-       P('Brennholz je Haus und Winter', '3–6 m³', 11100, 27000, 'Rechnung aus den Zeilen darüber', 'ASSUMPTION'),
+       P('Brennholz je Einheit und Winter', '3–6 m³', 11100, 27000, 'Rechnung aus den Zeilen darüber', 'ASSUMPTION'),
        P('Spaltaxt Fiskars X21 (L), Set', '1 je Node', 3599, 4398, 'bigl.ua, vnedorognik.ua'),
        P('Motorsäge Stihl MS 180 (Option)', '1 je Node', 6519, 7310, 'zaxid.net; gebraucht ab 3.990 UAH bei prom.ua'),
        P('Bügelsäge, Spaltkeil, Schnittschutzhose, Helm', 'Satz', None, None, 'nicht gefunden', 'OPEN'),
        P('CO-Melder', 'je Raum mit Ofen', 580, 4249, 'Tuya Rauch+CO 580; Ajax FireProtect 2 3.899–4.249')],
-  stunden='Nachlegen und Asche 15–30 Minuten am Tag je Haus; Holz holen und spalten 1–2 Stunden je Woche für das Team (ASSUMPTION).'),
+  stunden='Nachlegen und Asche 15–30 Minuten am Tag je Einheit; Holz holen und spalten 1–2 Stunden je Woche für das Team (ASSUMPTION).'),
 
  dict(id='F02', name='Strom', ebene='Physische Welt', anf='S03, D04', sys='XP-SYS-002, 003, 004', rel='REQUIRED', status='DECISION REQUIRED',
   ziel='Muss-Lasten laufen bei Netzausfall weiter: Licht, Laptops, Starlink, Router, Pumpe, Kühlschrank.',
-  kette=[('Funktion', 'Strom für Arbeit, Wasser, Kühlung, Licht, E-Bikes'), ('Lösung', 'Netz mit Batterie oder Generator, dazu Solar (E35)'),
+  kette=[('Funktion', 'Strom für Arbeit, Wasser, Kühlung, Licht'), ('Lösung', 'Netz mit Batterie oder Generator, dazu Solar (E35)'),
          ('Betriebsmittel', 'Netzstrom; Benzin für 3 Tage (S03, ASSUMPTION)'),
          ('Beschaffung', 'Netzanschluss beim Versorger beantragen; Elektriker vor Ort (Buy)'),
          ('Werkzeug', 'Generator 3 kW, Kanister, Außenkabel, Spannungsprüfer'),
@@ -144,31 +138,32 @@ KETTEN = [
 
  dict(id='F03', name='Wasser', ebene='Physische Welt', anf='H04, H05', sys='XP-SYS-002, 003, 009', rel='REQUIRED', status='OPEN',
   ziel='Trinkwasser und warmes Wasser, auch bei 10 Tagen Sperre; Leitung frostfrei ohne Heizkabel.',
-  kette=[('Funktion', 'Trink-, Koch- und Duschwasser'), ('Lösung', 'Quellfassung → Pumpe → Tank → Filter → Boiler'),
+  kette=[('Funktion', 'Trink-, Koch- und Duschwasser'), ('Lösung', 'Grundwasser (Brunnen) → Pumpe → Tank → Aufbereitung zu Trinkwasser → Boiler (D61)'),
          ('Betriebsmittel', '150 l am Tag in der Anfangsstufe, 360 l im Ausbau, für 3 Personen (H05, ASSUMPTION)'),
-         ('Beschaffung', 'Quellfassung und Leitung durch Fachfirma; Laborprobe (O27)'),
+         ('Beschaffung', 'Laboranalyse zuerst; sie bestimmt die Aufbereitung. Brunnen und Leitung durch Fachfirma.'),
          ('Werkzeug', 'Pumpe passend zur Förderhöhe, Tank, Filter, Boiler, Rohrzange, Ersatzdichtungen'),
-         ('Lager', 'Tank im Warmen oder frostfrei; 1.000 l wiegen 1 t, Bodenlast prüft eine Fachperson'),
+         ('Lager', 'Tank im Warmen oder frostfrei; 1.000 l wiegen 1 t, Bodenlast prüft eine Fachexperte'),
          ('Wer', 'Fachfirma baut; Team prüft Füllstand täglich im Winter'),
-         ('Wartung', 'Filter tauschen, Boiler entkalken, Laborprobe jährlich (Intervall: Fachperson)'),
+         ('Wartung', 'Filter tauschen, Boiler entkalken, Laborprobe jährlich (Intervall: Fachexperte)'),
          ('Ausfall', 'Tankvorrat: 1.000 l reichen knapp 7 Tage am Anfang, knapp 3 Tage im Ausbau (H05); Trinkwasser in Kanistern')],
   pos=[P('Tauchpumpe Klarwasser Aquatica 773175, 550 W, 9,5 m', '1', 2115, 2644, 'ek.ua; passt nur bei geringer Förderhöhe'),
        P('Quell- oder Brunnenpumpe nach Förderhöhe', '1', None, None, 'Förderhöhe unbekannt', 'OPEN'),
        P('Tank 1.000 l', '1–2', 7000, 13000, 'Index A4'),
        P('Filter, gegebenenfalls UV', 'Satz', None, None, 'hängt an Laborwerten (O27)', 'OPEN'),
-       P('Boiler 80 l', 'je Haus oder zentral', 4399, 5387, 'Electrolux Quantum Pro 4.399 (nicht lieferbar); Nova Tec 4.702–5.387; bt.rozetka.com.ua')],
+       P('Boiler 80 l', 'je Einheit oder zentral', 4399, 5387, 'Electrolux Quantum Pro 4.399 (nicht lieferbar); Nova Tec 4.702–5.387; bt.rozetka.com.ua')],
   stunden='Kontrolle 5 Minuten am Tag; Filterwechsel und Entkalken wenige Stunden im Jahr (ASSUMPTION).'),
 
- dict(id='F04', name='Abwasser und Toilette', ebene='Physische Welt', anf='H06', sys='XP-SYS-009, 011, 012', rel='REQUIRED', status='OPEN',
-  ziel='Toilette ohne Geruch, im Winter im Warmen erreichbar, frostsicher; Abwasser rechtlich zulässig.',
-  kette=[('Funktion', 'Toilette, Grauwasser aus Dusche und Küche'), ('Lösung', 'Phase 0 Campingtoilette; ab Phase 1 Kleinkläranlage oder Komposttoilette'),
-         ('Betriebsmittel', 'Sanitärflüssigkeit oder Streu; Entleerungsstelle'),
-         ('Beschaffung', 'Phase 0 kaufen; dauerhafte Lösung plant eine Fachperson mit Genehmigung'),
-         ('Werkzeug', 'Handschuhe, Spaten, Behälter'), ('Wer', 'Jede Person für ihren Container; Entleerung im Wechsel'),
-         ('Wartung', 'Leeren nach Füllstand; Anlage nach Herstellerangabe'), ('Ausfall', 'Zweite Campingtoilette als Reserve')],
-  pos=[P('Campingtoilette (Phase 0)', 'je Container', 1600, 3700, 'Index A4'),
-       P('Kleinkläranlage oder Komposttoilette (Phase 1)', 'je Haus oder zentral', None, None, 'Fachperson und Genehmigung', 'OPEN')],
-  stunden='Leeren etwa alle paar Tage je Container (ASSUMPTION).'),
+ dict(id='F04', name='Abwasser und Sanitär', ebene='Physische Welt', anf='H06, D62', sys='XP-SYS-009, 011, 012', rel='REQUIRED', status='OPEN',
+  ziel='Spültoilette (Klopapier spülbar), Dusche und Warmwasser ab Phase 0, fest eingebaut; Abwasser rechtlich zulässig.',
+  kette=[('Funktion', 'Toilette, Dusche, Warmwasser, Abwasser'), ('Lösung', 'Kleinkläranlage oder Mehrkammergrube ab Phase 0, mit der Infrastruktur geplant (D62)'),
+         ('Betriebsmittel', 'Wasser aus F03, Strom aus F02'),
+         ('Beschaffung', 'Abwasserplanung und Genehmigung durch Fachexperten; Anlage mit Einbau'),
+         ('Werkzeug', 'Anlage, frostfreie Leitungen mit Gefälle, Spültoilette, Dusche, Boiler'), ('Wer', 'Fachfirma baut; Team kontrolliert'),
+         ('Wartung', 'Schlamm abfahren ein- bis zweimal im Jahr; ob ein Saugwagen die Zufahrt schafft, ist offen'), ('Ausfall', 'Notlösung für Sperre der Anlage: OPEN')],
+  pos=[P('Kleinkläranlage für 5 Personen, nur Gerät', '1', 38000, 38000, 'Kostenregister 13.11.', 'ASSUMPTION'),
+       P('Einbau der Anlage', '1', 8000, 15000, 'Kostenregister 13.11.', 'ASSUMPTION'),
+       P('Abwasserplanung', '1', 5000, 10000, 'Kostenregister 13.11.', 'ASSUMPTION')],
+  stunden='Kontrolle wenige Minuten je Woche (ASSUMPTION).'),
 
  dict(id='F05', name='Internet', ebene='Technologie', anf='Arbeitsplatz oben, E49', sys='XP-SYS-002, 003, 007', rel='REQUIRED', status='OPEN',
   ziel='Zwei gleichzeitige Videocalls, während die dritte Person arbeitet, auch bei Schnee.',
@@ -183,12 +178,12 @@ KETTEN = [
 
  dict(id='F06', name='Essen und Küche', ebene='Services', anf='H07, E74, E81', sys='XP-SYS-001, 002', rel='REQUIRED', status='OPEN',
   ziel='Drei Mahlzeiten am Tag; Vorrat für eine Sperre; Küche im Kommunalgebäude.',
-  kette=[('Funktion', 'Kochen, Kühlen, Vorrat'), ('Lösung', 'Phase 0 Kochplatte am Ofen und Kühlschrank im Container; ab Phase 1 Küche im Kommunalgebäude (E74)'),
+  kette=[('Funktion', 'Kochen, Kühlen, Vorrat'), ('Lösung', 'Phase 0 Kochplatte am Ofen und Kühlschrank im Objekt; ab Phase 1 Küche im Kommunalgebäude (E74)'),
          ('Betriebsmittel', 'Lebensmittel, Vorrat für 10 Tage (ASSUMPTION, wie Wasser); Milch und Käse vor Ort (2.4.6)'),
          ('Beschaffung', 'Einkauf unten; Person A holt Lieferungen an der Auffahrt'),
          ('Werkzeug', 'Kühlschrank (im Mittel 40 W, S03), Töpfe, Vorratsregal'), ('Wer', 'Gemeinsam, nach Plan; Garten freiwillig (E74)'),
          ('Ausfall', 'Kochen auf dem Holzofen; Vorrat')],
-  pos=[P('Kühlschrank', 'je Container', None, None, 'nicht gesucht', 'OPEN'), P('Kochfeld für das Kommunalgebäude (Phase 1)', '1', None, None, 'nicht gesucht', 'OPEN')],
+  pos=[P('Kühlschrank', 'je Objekt', None, None, 'nicht gesucht', 'OPEN'), P('Kochfeld für das Kommunalgebäude (Phase 1)', '1', None, None, 'nicht gesucht', 'OPEN')],
   stunden='Einkauf unten 2–3 Stunden je Woche (ASSUMPTION).'),
 
  dict(id='F07', name='Zufahrt und Schnee', ebene='Physische Welt', anf='2.2.4, Wege sicher begehbar', sys='XP-SYS-003, 009, 012', rel='REQUIRED', status='OPEN',
@@ -203,12 +198,12 @@ KETTEN = [
        P('Schneefräse Benzin (Option)', '1', None, None, 'nicht gefunden', 'OPEN')],
   stunden='Wege räumen 30–60 Minuten je Schneefall (ASSUMPTION).'),
 
- dict(id='F08', name='Mobilität', ebene='Physische Welt', anf='E72, E73, 2.3.6', sys='XP-SYS-002, 004', rel='PREPARE', status='ASSUMPTION',
-  ziel='Ins Dorf ohne Benzin; Lasten über die Auffahrt.',
-  kette=[('Funktion', 'Personen und kleine Lasten bewegen'), ('Lösung', 'E-Bikes statt Benzin (E72); Lasten mit kleinem Fahrzeug (2.2.4)'),
-         ('Betriebsmittel', 'Strom aus F02'), ('Werkzeug', 'E-Bikes, Ladeplatz, Schloss, Flickzeug'),
-         ('Wer', 'Jede Person; Wartung im Wechsel'), ('Ausfall', 'Im Winter sind E-Bikes auf Schnee fraglich (ASSUMPTION); Fahrdienst oder Bauer')],
-  pos=[P('E-Bike Formula eAlpina 2026', 'je Person', 27028, 28663, 'ek.ua'), P('E-Bike Formula eF-1', 'je Person', 31204, 32989, 'ek.ua')],
+ dict(id='F08', name='Mobilität', ebene='Physische Welt', anf='D65', sys='XP-SYS-002, 004', rel='REQUIRED', status='ASSUMPTION',
+  ziel='Einkauf, Notfall und kleine Lasten über die Auffahrt, auch im Winter.',
+  kette=[('Funktion', 'Personen und kleine Lasten bewegen'), ('Lösung', 'Ein gemeinsames geländegängiges Fahrzeug; keine E-Bikes in Phase 0 (D65)'),
+         ('Betriebsmittel', 'Kraftstoff'), ('Werkzeug', 'Fahrzeug, Winterreifen, Schneeketten, Abschleppseil'),
+         ('Wer', 'Team; Wartung im Wechsel'), ('Ausfall', 'Bauer mit Traktor')],
+  pos=[P('Geländegängiges Fahrzeug, gebraucht', '1', 170507, 170507, 'Kostenregister 13.11.', 'ASSUMPTION'), P('Winterreifen', '4', 10968, 10968, 'Kostenregister 13.11., ohne Ketten', 'ASSUMPTION')],
   stunden='Pflege wenige Stunden im Jahr (ASSUMPTION).'),
 
  dict(id='F09', name='Wartung und Reparatur', ebene='Organisation', anf='2.4.5, 2.4.6', sys='XP-SYS-008, 012', rel='REQUIRED', status='OPEN',
@@ -223,36 +218,36 @@ KETTEN = [
  dict(id='F10', name='Notfall und Sicherheit', ebene='Querschnitt', anf='S01, S07, 2.4.7', sys='XP-SYS-003, 009', rel='REQUIRED', status='OPEN',
   ziel='Brand, CO, Verletzung und Abschneiden werden erkannt und beherrscht.',
   kette=[('Funktion', 'Personen schützen'), ('Lösung', 'Melder, Löscher, Erste Hilfe, Notfallplan, Kommunikation'),
-         ('Beschaffung', 'Kaufen; Erste-Hilfe-Kurs für alle'), ('Werkzeug', 'Rauch- und CO-Melder, Feuerlöscher je Haus, Erste-Hilfe-Set, Stirnlampen'),
+         ('Beschaffung', 'Kaufen; Erste-Hilfe-Kurs für alle'), ('Werkzeug', 'Rauch- und CO-Melder, Feuerlöscher je Einheit, Erste-Hilfe-Set, Stirnlampen'),
          ('Wer', 'Alle; Notfallplan verantwortet Roman (ASSUMPTION)'), ('Wartung', 'Melder monatlich testen, Löscher nach Prüffrist'),
          ('Ausfall', 'Rettungszeit nach unten und Hubschrauberplatz: OPEN')],
-  pos=[P('Rauch- und CO-Melder', 'je Raum mit Ofen', 580, 4249, 'siehe F01'), P('Feuerlöscher', 'je Haus', None, None, 'nicht gefunden', 'OPEN'),
-       P('Erste-Hilfe-Set', 'je Haus', None, None, 'nicht gefunden', 'OPEN')],
+  pos=[P('Rauch- und CO-Melder', 'je Raum mit Ofen', 580, 4249, 'siehe F01'), P('Feuerlöscher', 'je Einheit', None, None, 'nicht gefunden', 'OPEN'),
+       P('Erste-Hilfe-Set', 'je Einheit', None, None, 'nicht gefunden', 'OPEN')],
   stunden='Melder testen 10 Minuten im Monat; Kurs einmalig (ASSUMPTION).'),
 
  dict(id='F11', name='Zugang, Server und Daten', ebene='Technologie', anf='Technik-Schritt, OD-004', sys='XP-SYS-007, 008, 009, 013', rel='PREPARE', status='OPEN',
   ziel='Türen per Chip; Daten lokal gesichert; kein Serverausfall (E46).',
-  kette=[('Funktion', 'Zugang und Daten'), ('Lösung', 'Chip-Türöffnung je Haus; kleiner Server (NAS) mit Sicherung außer Haus'),
+  kette=[('Funktion', 'Zugang und Daten'), ('Lösung', 'Chip-Türöffnung je Einheit; kleiner Server (NAS) mit Sicherung außer Haus'),
          ('Betriebsmittel', 'Strom aus F02 über kleine USV'), ('Werkzeug', 'RFID-Schloss, NAS, USV'),
          ('Wer', 'Pavel richtet ein (ASSUMPTION)'), ('Wartung', 'Updates, Sicherung prüfen'), ('Ausfall', 'Mechanischer Schlüssel als Reserve')],
   pos=[P('NAS Synology DS224+', '1', 20200, 20750, 'EU-Shops rund 404–415 €, ohne Platten'), P('RFID-Schloss', 'je Tür', None, None, 'nicht gefunden', 'OPEN')],
   stunden='Pflege 1 Stunde im Monat (ASSUMPTION).'),
 
- dict(id='F12', name='Wohnen (Haus)', ebene='Physische Welt', anf='E40, E59, E75, E84', sys='XP-SYS-001, 004, 006', rel='REQUIRED', status='DECISION REQUIRED',
-  ziel='Privatsphäre im eigenen Haus; Phase 0 Container, ab Phase 1 richtige Holzhäuser.',
-  kette=[('Funktion', 'Wohnen und Rückzug'), ('Lösung', 'Phase 0: Wohncontainer; Phase 1: Holzhaus in Teilen, oben montiert (E75)'),
-         ('Beschaffung', 'Container: kaufen mit Rückverkauf oder mieten. Holzhaus: Bausatz vom Hersteller, Montage durch Bauarbeiter oben'),
-         ('Werkzeug', 'Kran oder kleines Fahrzeug nach 2.2.4; Fundament nach Geologie (O01)'),
-         ('Wer', 'Nazar plant und nimmt ab (E38); Bauarbeiter montieren'), ('Ausfall', 'Container bleiben bis zum Umzug als Reserve')],
-  pos=[P('Wohncontainer BlokModul BK1, 15 m², ohne Heizung (Phase 0)', 'je Person', 444000, 444000, 'E39, Listenpreis nicht bestätigt (O31)'),
-       P('Holzhaus 45 m², Rohbau (Phase 1)', 'je Haus', 990000, 1800000, 'eigene Rechnung aus ukrsmeta.ua (100 m² für 2,2–4 Mio. UAH)', 'ASSUMPTION')],
-  stunden='Montage je Haus: OPEN, Herstellerangabe.'),
+ dict(id='F12', name='Wohnen und Arbeiten (Objekt)', ebene='Physische Welt', anf='D55, D56', sys='XP-SYS-001, 004, 006', rel='REQUIRED', status='OPEN',
+  ziel='Phase 0: ein Objekt für Team und Bauarbeiter; ab Phase 1 Wohn- und Arbeitsobjekte zur Miete.',
+  kette=[('Funktion', 'Wohnen, Arbeiten, Rückzug'), ('Lösung', 'Bauart offen: Holz, Beton, Glas, Metall; Bau-KI plant nach lokalen Gegebenheiten (D56)'),
+         ('Beschaffung', 'Drei schriftliche Angebote; kaufen oder mieten'),
+         ('Werkzeug', 'Kleines Fahrzeug für den Transport in Phase 0 (D57); Fundament nach geprüfter Geologie'),
+         ('Wer', 'Fachexperte Bau plant und nimmt ab; Architekt berät'), ('Ausfall', 'OPEN')],
+  pos=[P('Modul 18 m² mit Transport und Montage laut Anbieter', '1', 674900, 674900, 'Kostenregister 13.11.', 'ASSUMPTION')],
+  stunden='Montage: OPEN, Herstellerangabe.'),
 ]
 
 LERNEN = ['Anforderung', 'Annahme / Designentscheidung', 'Implementierung', 'Betrieb', 'Datenerfassung', 'Analyse', 'Bewertung', 'Entscheidung', 'Anpassung', 'neuer Standard']
 NEU_W = [
-    ('W19', 'Container oder Häuser', 'Container sind die Tiny Houses der Käufer und bleiben (E59, D21 B)', 'Container nur Übergang für Team und Bauarbeiter, dann richtige Holzhäuser (Vorgabe 12.11.2026; Titelbild)', 'CR-01 bis CR-03', 'DECISION REQUIRED'),
-    ('W20', 'Preis je Haus', 'Etwa 30.000 € je Käufer, bezugsfertig (E78)', 'Holzhaus 45 m² im Rohbau 19.800–36.000 € (Richtwert, ASSUMPTION)', 'CR-05, Business Case OD-008', 'DECISION REQUIRED'),
+    ('W19', 'Container oder Objekte', 'Container sind die Tiny Houses der Käufer und bleiben (E59)', 'Ein Objekt als Übergang, danach Objekte und Kommunalgebäude', 'Entschieden in D55 am 13.11.2026', 'DOCUMENTED'),
+    ('W20', 'Preis', 'Etwa 30.000 € je Käufer (E78)', 'Selbstkostenpreis je Objekt; kein klassischer Verkauf', 'Entschieden in D49 am 13.11.2026; Zahlen aus OD-008', 'DOCUMENTED'),
+    ('W21', 'Mission', 'Baseline v0.4 nennt keine Mission', 'Mission und Globalziele bleiben Ausgangspunkt (Kommentar D42)', 'Harmonisierung offen', 'DECISION REQUIRED'),
 ]
 
 # ---------------------------------------------------------------- Ausgabe
@@ -327,15 +322,15 @@ def build_html():
 <header><p class="eyebrow">X-PORTAL · Managementarchitektur nach SGMM II · Stand {STAND}</p>
 <h1>Von der Vision bis zur Axt</h1>
 <p class="lead">X-PORTAL und Node001 nach dem St. Galler Management-Modell: normativ, strategisch, operativ. Jede kritische Funktion ist bis auf Betriebsmittel, Werkzeug, Preis, Person und Ausfall heruntergebrochen.</p>
-<p class="note">Bezugsrahmen ist die Reference Architecture v0.4-WB1. Werte ohne Quelle sind ASSUMPTION oder OPEN. Preise sind Internetpreise in UAH (Suche November 2026), umgerechnet mit 50 UAH/EUR (E20), ohne Montage und Transport. Vorschläge der KI sind keine Entscheidungen; entschieden wird auf der <a href="{ENTSCH}">Entscheidungsseite</a>. Plan im Detail: <a href="{INDEX}">Index 3.0</a> · Investoren: <a href="{WP}">Whitepaper</a>.</p>
+<p class="note">Bezugsrahmen ist die Reference Architecture v0.4-WB1. Werte ohne Quelle sind ASSUMPTION oder OPEN. Preise sind Internetpreise in UAH (Suche 12.11.2026 und Kostenregister 13.11.2026), umgerechnet mit 50 UAH/EUR, ohne Montage und Transport, sofern nicht anders genannt. Vorschläge der KI sind keine Entscheidungen; entschieden wird auf der <a href="{ENTSCH}">Entscheidungsseite</a>. Plan im Detail: <a href="{INDEX}">Index 3.0</a> · <a href="https://claude.ai/artifact/Xt8ocuZNXnnwsZNfAfPsoY">Anschaffungsliste</a> · <a href="https://claude.ai/artifact/2zHiqw7dU8oHFnsZWBsh1P">Vor dem Investment</a> · Investoren: <a href="{WP}">Whitepaper</a>.</p>
 <div class="meta">Status: {" ".join(st(s) for s in STATUS)} · Relevanz für Node001: {rel("REQUIRED")} {rel("PREPARE")} {rel("DEFER")}</div>
-<nav class="toc"><a href="#umwelt">Umwelt</a><a href="#matrix">SGMM-Matrix</a><a href="#bauphasen">Bauphasen</a><a href="#change">Neu entscheiden</a><a href="#ketten">Funktionsketten</a><a href="#lernen">Lernkreislauf</a><a href="#abgleich">Neue Widersprüche</a></nav></header>''')
+<nav class="toc"><a href="#umwelt">Umwelt</a><a href="#matrix">SGMM-Matrix</a><a href="#bauphasen">Bauphasen</a><a href="#change">Entschieden 13.11.</a><a href="#ketten">Funktionsketten</a><a href="#lernen">Lernkreislauf</a><a href="#abgleich">Neue Widersprüche</a></nav></header>''')
     # Umwelt
     o.append('<section id="umwelt"><p class="num">01 · Umwelt und Anspruchsgruppen</p><h2>Wer und was auf Node001 einwirkt</h2><div class="grid">')
     for n, t, s in UMWELT: o.append(f'<div class="card"><h3>{e(n)}</h3><p>{e(t)}</p><div class="meta">{st(s)}</div></div>')
     o.append('</div><div class="tw"><table><thead><tr><th>Anspruchsgruppe</th><th>Stand im Plan</th><th>Stufe 1</th><th>Status</th><th>Node001</th></tr></thead><tbody>')
     for r, a, b, s, rr in ROLLEN: o.append(f'<tr><td><b>{e(r)}</b></td><td>{e(a)}</td><td>{e(b)}</td><td>{st(s)}</td><td>{rel(rr)}</td></tr>')
-    o.append('</tbody></table></div><p class="note">Die Rollen der Infografik werden gegen OD-003 (Human Roles v1.0, IN WORK) abgeglichen; der Plan arbeitet bis dahin mit Team und Käufern (W08). Bauarbeiter sowie Staat und Behörden sind ergänzt.</p></section>')
+    o.append('</tbody></table></div><p class="note">Die Rollen der Infografik werden gegen OD-003 (Human Roles v1.0, IN WORK) abgeglichen; der Plan arbeitet bis dahin mit Team und Mietern (W08). Bauarbeiter sowie Staat und Behörden sind ergänzt.</p></section>')
     # Matrix
     o.append('<section id="matrix"><p class="num">02 · Managementmatrix nach Bleicher</p><h2>Drei Ebenen, je Aktivitäten, Strukturen und Verhalten</h2><div class="matrix"><div></div>')
     o.append(''.join(f'<div class="hd">{c}</div>' for c in SPALTEN))
@@ -345,12 +340,12 @@ def build_html():
             o.append(f'<div class="card"><h3 data-col="{col}">{e(t)}</h3><ul>{"".join(f"<li>{e(x)}</li>" for x in pts)}</ul><div class="meta">{st(s)} {e(sysid)}</div></div>')
     o.append('</div></section>')
     # Bauphasen
-    o.append('<section id="bauphasen"><p class="num">03 · Bauphasen</p><h2>Container nur für den Anfang, danach richtige Häuser</h2><p>Die Container sind Baustelleneinrichtung für Team und Bauarbeiter. Was Käufer bekommen, sind Holzhäuser wie auf dem Titelbild. Termine sind Ziele; jede Phase braucht die Freigabe über die Gates G0–G4 im Index.</p><div class="ph">')
+    o.append('<section id="bauphasen"><p class="num">03 · Bauphasen</p><h2>Ein Objekt für den Anfang, danach Objekte und Kommunalgebäude</h2><p>Stand der Entscheidung D55 vom 13.11.2026. Termine sind Ziele; jede Phase braucht die Freigabe über die Gates.</p><div class="ph">')
     for p, t, was, wer, kosten, s in PHASEN:
         o.append(f'<div class="card"><p class="eyebrow">{p}</p><h3>{e(t)}</h3><dl><dt>Was</dt><dd>{e(was)}</dd><dt>Für wen</dt><dd>{e(wer)}</dd><dt>Kosten</dt><dd>{e(kosten)}</dd></dl><div class="meta">{st(s)}</div></div>')
     o.append('</div></section>')
     # CR
-    o.append('<section id="change"><p class="num">04 · Neu zu entscheiden</p><h2>Was auf der Entscheidungsseite neu entschieden wird</h2><p>Seit 13.11.2026 sind alle früheren Entscheidungen E01–E85 zurückgenommen. Die Punkte unten entscheiden Paul und Roman auf der <a href="https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP">Entscheidungsseite</a>: Container und Bauphasen in D55, Hausart in D56, Preis und Größe je Haus in D49.</p><div class="tw"><table><thead><tr><th>ID</th><th>Betrifft</th><th>Früher im Log</th><th>Vorschlag</th><th>Anlass</th><th>Status</th></tr></thead><tbody>')
+    o.append('<section id="change"><p class="num">04 · Entschieden am 13.11.2026</p><h2>Was sich gegenüber dem alten Log geändert hat</h2><p>Die früheren Entscheidungen E01–E85 sind zurückgenommen. Auf der <a href="https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP">Entscheidungsseite</a> gelten Wahl und Kommentar zusammen.</p><div class="tw"><table><thead><tr><th>Karte</th><th>Betrifft</th><th>Früher im Log</th><th>Jetzt</th><th>Beleg</th><th>Status</th></tr></thead><tbody>')
     for i, t, alt, neu, q, s in CR: o.append(f'<tr><td class="id">{i}</td><td><b>{e(t)}</b></td><td>{e(alt)}</td><td>{e(neu)}</td><td>{e(q)}</td><td>{st(s)}</td></tr>')
     o.append('</tbody></table></div></section>')
     # Ketten
@@ -366,7 +361,7 @@ def build_html():
         o.append(f'</tbody></table></div><p class="note">Zeitaufwand: {e(k["stunden"])}</p></div></details>')
     o.append('</section>')
     # Lernen
-    o.append('<section id="lernen"><p class="num">06 · Lernkreislauf</p><h2>Wie aus Betrieb ein Standard wird</h2><div class="loop">' + '<i>→</i>'.join(f'<span>{x}</span>' for x in LERNEN) + '</div><p>Für Node001 heißt das konkret: Jede Annahme in den Funktionsketten (zum Beispiel 3–6 m³ Holz je Haus und Winter) wird im ersten Winter gemessen. Der Messwert ersetzt die Annahme und geht als Parameter ins Genome (XP-SYS-010, CO-05).</p></section>')
+    o.append('<section id="lernen"><p class="num">06 · Lernkreislauf</p><h2>Wie aus Betrieb ein Standard wird</h2><div class="loop">' + '<i>→</i>'.join(f'<span>{x}</span>' for x in LERNEN) + '</div><p>Für Node001 heißt das konkret: Jede Annahme in den Funktionsketten (zum Beispiel 3–6 m³ Holz je Einheit und Winter) wird im ersten Winter gemessen. Der Messwert ersetzt die Annahme und geht als Parameter ins Genome (XP-SYS-010, CO-05).</p></section>')
     # Abgleich
     o.append('<section id="abgleich"><p class="num">07 · Abgleich</p><h2>Neue Widersprüche zu W01–W18</h2><div class="tw"><table><thead><tr><th>ID</th><th>Thema</th><th>Bisher</th><th>Jetzt</th><th>Lösung</th><th>Status</th></tr></thead><tbody>')
     for w in NEU_W: o.append(f'<tr><td class="id">{w[0]}</td><td><b>{e(w[1])}</b></td><td>{e(w[2])}</td><td>{e(w[3])}</td><td>{e(w[4])}</td><td>{st(w[5])}</td></tr>')
@@ -385,7 +380,7 @@ def build_md():
             L += [f'- {x}' for x in pts] + ['']
     L += ['## 03 Bauphasen', '']
     for p, t, was, wer, kosten, s in PHASEN: L += [f'### {p}: {t} [{s}]', f'- Was: {was}', f'- Für wen: {wer}', f'- Kosten: {kosten}', '']
-    L += ['## 04 Neu zu entscheiden (Entscheidungsseite D49, D55, D56)', '', '| ID | Betrifft | Heute | Vorschlag | Anlass | Status |', '|---|---|---|---|---|---|']
+    L += ['## 04 Entschieden am 13.11.2026', '', '| ID | Betrifft | Heute | Vorschlag | Anlass | Status |', '|---|---|---|---|---|---|']
     L += [f'| {i} | {t} | {alt} | {neu} | {q} | {s} |' for i, t, alt, neu, q, s in CR]
     L += ['', '## 05 Funktionsketten', '']
     for k in KETTEN:

@@ -1,6 +1,6 @@
 import base64
 from pathlib import Path
-img = lambda n: 'data:image/jpeg;base64,' + base64.b64encode(Path('../up/' + n).read_bytes()).decode()
+img = lambda n: 'data:image/jpeg;base64,' + base64.b64encode((Path(__file__).resolve().parent.parent / 'bilder' / n).read_bytes()).decode()
 def cards(items, cls='c3'):
     return f'<div class="grid {cls}">' + ''.join(f'<div class="card"><p class="tag">{t}</p><h3>{h}</h3><p>{p}</p></div>' for t, h, p in items) + '</div>'
 def lst(items): return '<ul>' + ''.join(f'<li>{x}</li>' for x in items) + '</ul>'
@@ -16,7 +16,7 @@ ROAD = [('Marktnachweis','Bezahlte Projekte, Zahlungsbereitschaft, wiederkehrend
         ('Product & Economics','Produktmix, Services, CAPEX/OPEX, Erlös- und Sensitivitätsmodell'),('Financing & Permissions','Struktur, Finanzierung, rechtliche und behördliche Freigaben'),
         ('Build & Operate','Den ersten sinnvollen Bauabschnitt umsetzen, betreiben und messen'),('Learn & Replicate','Evidenz in Standards und Genome überführen; Node002 als Replikationstest')]
 USE = [('Site & Engineering','Geologie, Wasser, Zugang, Basis of Design, Kostenband'),('Product & Market','Nutzerrollen, Produktmix, Zahlungsbereitschaft, Serviceumfang'),
-       ('Economic Model','CAPEX/OPEX, Erlöse, Cost-to-Serve, Sensitivitäten'),('Legal & Structure','Genehmigungen, Verkaufs- und Nutzungsmodell, Investmentstruktur'),
+       ('Economic Model','CAPEX/OPEX, Erlöse, Cost-to-Serve, Sensitivitäten'),('Legal & Structure','Genehmigungen, Miet- und Nutzungsmodell, Investmentstruktur'),
        ('Minimum Viable Node','Erster sinnvoller Bauabschnitt und kritische Infrastruktur'),('Digital & Operations','Assetregister, Datenmodell, Monitoring, Service- und Lernprozesse')]
 html = f'''<title>X-PORTAL Whitepaper</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -67,7 +67,7 @@ footer {{ font-size:13px; color:var(--muted); border-top:1px solid var(--line); 
 a {{ color:var(--forest) }}
 </style>
 <div class="wrap">
-<header class="cover"><img alt="Konzeptvisualisierung eines Node in den Karpaten: Holzhäuser am Hang, Solardächer, gemeinsamer Weg" src="{img('image-1-1.jpg')}">
+<header class="cover"><img alt="Konzeptvisualisierung eines Node in den Karpaten: Gebäude am Hang, Solardächer, gemeinsamer Weg" src="{img('image-1-1.jpg')}">
 <div><p class="eyebrow">Whitepaper · Diskussionsstand November 2026 · vertraulich</p>
 <h1>Digitale Arbeit. Reale Orte. Lernendes System.</h1>
 <p>X-PORTAL verbindet bezahlte digitale Arbeit mit realen Lebens- und Arbeitsorten. Node001 in den Karpaten wird der erste reale Proof of Concept des Gesamtsystems.</p>
@@ -96,29 +96,30 @@ a {{ color:var(--forest) }}
 <section id="erloese"><p class="num">04 · Das Geschäftsmodell</p><h2>Vier Erlösstufen mit unterschiedlichem Reifegrad</h2>
 {cards([('01 · Heute','Kundenprojekte','Bezahlte Leistungen für Unternehmen. Sie liefern Umsatz, Marktfeedback und reale Anwendungsfälle.'),
         ('02 · In Entwicklung','Technologielösungen','Wiederkehrende Aufgaben sollen als wiederverwendbare oder betriebene Lösungen Erlöse bringen: zuerst KI, perspektivisch auch Robotik, Drohnen und mechanische Systeme.'),
-        ('03 · Node001','Nutzung und Services','Wohnen und Aufenthalt, Miete oder ein geeignetes Nutzungsmodell sowie Leistungen vor Ort. Der Produktmix wird validiert.'),
-        ('04 · Später','System-Skalierung','Betrieb, Technologie, Standards oder Partnerschaftsmodelle, erst nach nachgewiesener Reproduzierbarkeit.')], 'c4')}
+        ('03 · Node001','Miete und Services am Node','Wohnen und Arbeiten zur Miete sowie Leistungen vor Ort. Kein Immobilienverkauf im klassischen Sinn. Der Produktmix wird validiert.'),
+        ('04 · Später','System-Skalierung','Standardisierung wird von Anfang an mitgedacht. Erlöse aus Betrieb, Technologie, Standards oder Partnerschaften erst nach nachgewiesener Reproduzierbarkeit.')], 'c4')}
 <h3>Das Geschäftsmodell auf einen Blick</h3>
-{cards([('Wertangebot','Für Nutzer','Ein Ort, an dem bezahlte digitale Arbeit, Wohnen und Gemeinschaft zusammenpassen: eigenes Haus, Arbeitsplatz mit verlässlichem Internet, Versorgung, die auch im Winter läuft.'),
+{cards([('Wertangebot','Für Nutzer','Ein Ort, an dem bezahlte digitale Arbeit, Wohnen und Gemeinschaft zusammenpassen: eigene Wohneinheit, Arbeitsplatz mit verlässlichem Internet, Versorgung, die auch im Winter läuft.'),
         ('Wertangebot','Für Unternehmen','Projekte und Technologielösungen aus einem Team, das reale Probleme vor Ort selbst löst und messbar macht.'),
-        ('Kunden','Wer zahlt','Unternehmen (Projekte, Lösungen); Siedler und Mieter am Node (Nutzung, Services). Digitale Nomaden und Gäste folgen erst nach Auslastungsdaten.'),
+        ('Kunden','Wer zahlt','Unternehmen (Projekte, Lösungen); Mieter am Node (Wohnen, Arbeiten, Services). Digitale Nomaden und Gäste folgen erst nach Auslastungsdaten.'),
         ('Schlüsselressourcen','Was wir haben müssen','Plattform und Lieferteam, Grundstück, Reference Architecture, Betriebswissen aus Node001.'),
-        ('Kostenstruktur','Was es kostet','Company: Team und Plattform. Node001: Infrastruktur, Häuser, Kommunalgebäude, Betrieb. Getrennt gerechnet.'),
+        ('Kostenstruktur','Was es kostet','Company: Team und Plattform. Node001: Infrastruktur, Objekte, Kommunalgebäude, Betrieb. Getrennt gerechnet.'),
+        ('Preislogik','Selbstkosten als Basis','Miete und Pauschalen werden aus gemessenen Kosten abgeleitet. Wer in Projekten oder für die Gemeinschaft mitarbeitet, bekommt diese Leistung angerechnet.'),
         ('Prüfstein','Was es beweisen muss','Node001 trägt sich aus Nutzung. Cost-to-Serve je Bewohner und Monat wird gemessen, nicht angenommen.')])}
 <p class="rule">Kernregel: Node001 muss aus realer Nutzung wirtschaftlich tragfähig werden. Künftige IP- und Genome-Erlöse sind Upside, kein Rettungsanker im Base Case.</p></section>
 
 <section id="node001"><p class="num">05 · Node001</p><h2>Der erste reale Proof of Concept</h2>
 <p>Karpatenregion, Westukraine. Der Standort soll kein reines Bauprojekt sein, sondern das gesamte X-PORTAL-System unter realen Bedingungen testen. Geprüft werden acht Hypothesen. Jede erhält vor der Freigabe Messgröße, Datengrundlage, Zielwert, Prüfzeitpunkt und ein Go/Revise/Stop-Kriterium.</p>
-<figure><img alt="Konzeptvisualisierung Node001: Wohnhäuser, Gemeinschaftsgebäude mit Terrasse, Gemüsegarten und Wege am Hang" src="{img('image-6-1.jpg')}"><figcaption>Konzeptvisualisierung · keine finale Planung</figcaption></figure>
+<figure><img alt="Konzeptvisualisierung Node001: Wohngebäude, Gemeinschaftsgebäude mit Terrasse, Gemüsegarten und Wege am Hang" src="{img('image-6-1.jpg')}"><figcaption>Konzeptvisualisierung · keine finale Planung</figcaption></figure>
 <div class="tw"><table><thead><tr><th>ID</th><th>Hypothese</th><th>Prüffrage</th></tr></thead><tbody>{''.join(f'<tr><td>{a}</td><td><b>{b}</b></td><td>{c}</td></tr>' for a,b,c in H)}</tbody></table></div>
 <p>Zum kleinsten validierbaren System gehören Rollen und Bedürfnisse der Menschen, Gebäude und Infrastruktur, Energie, Wasser, Kommunikation und Zugang, Kernservices mit Kosten und Kennzahlen, ein Asset- und Systemregister mit Monitoring sowie ein Entscheidungs- und Evidenzspeicher. Nicht dazu gehören ein vollständiger Digital Twin, autonome KI-Steuerung kritischer Prozesse, breite Robotik und eine Multi-Node-Plattform.</p></section>
 
-<section id="bauphasen"><p class="num">06 · Bauphasen</p><h2>Container für den Anfang, danach richtige Häuser</h2>
-<p>Was die Visualisierungen zeigen, ist das Ziel: Holzhäuser am Hang und ein Kommunalgebäude mit Garten. Der Weg dorthin hat drei Phasen. Jede beginnt erst nach den technischen, wirtschaftlichen und finanziellen Gates.</p>
-<ol class="steps"><li><span class="n">0</span><div><b>Container als Übergang</b><span>Wohncontainer für Team und Bauarbeiter auf der Fläche, die zuletzt bebaut wird. Sie sind Baustelleneinrichtung, kein Produkt für Käufer.</span></div></li>
-<li><span class="n">1</span><div><b>Richtige Häuser und Kommunalgebäude</b><span>Holzhäuser, in Teilen hochgebracht und vor Ort montiert. Zuerst das Kommunalgebäude mit Küche, Sanitär und Arbeitsplätzen, dann Häuser für Siedler, Mieter und Team.</span></div></li>
-<li><span class="n">2</span><div><b>Ausbau nach Nachfrage</b><span>Weitere Häuser, bis das Grundstück voll ist. Die Container gehen zurück; die Übergangsfläche wird als letzte fest bebaut.</span></div></li></ol>
-<p>Hausgröße, Preis je Haus und Kostenband je Phase kommen aus dem parametrischen Business Case. Erste Richtwerte aus dem ukrainischen Markt liegen vor und werden mit Herstellerangeboten belegt.</p></section>
+<section id="bauphasen"><p class="num">06 · Bauphasen</p><h2>Ein Übergangsobjekt zuerst, danach Objekte und Kommunalgebäude</h2>
+<p>Die Visualisierungen zeigen ein Zielbild, keine Planung. Der Weg dorthin hat drei Phasen. Jede beginnt erst nach den technischen, wirtschaftlichen und finanziellen Gates.</p>
+<ol class="steps"><li><span class="n">0</span><div><b>Objekt als Übergang</b><span>Ein Wohn- und Arbeitsobjekt für Team und Bauarbeiter, mit Infrastruktur für Wasser, Strom und Internet, die mitwachsen kann. Sanitär und Warmwasser sind von Anfang an fest eingebaut.</span></div></li>
+<li><span class="n">1</span><div><b>Objekte und Kommunalgebäude</b><span>Zuerst das Kommunalgebäude mit Küche, Sanitär und Arbeitsplätzen, dann Wohn- und Arbeitsobjekte für Mieter und Team.</span></div></li>
+<li><span class="n">2</span><div><b>Ausbau nach Nachfrage</b><span>Weitere Objekte, bis das Grundstück genutzt ist. Die Fläche für das Hauptgebäude wird als letzte bebaut.</span></div></li></ol>
+<p>Material und Bauart sind standortabhängig und werden mit KI-gestützter Bauplanung und 3D-Modellen aus Geologie, Gelände und Zufahrt abgeleitet. Größe und Selbstkosten je Objekt kommen aus dem parametrischen Business Case und werden mit Angeboten belegt.</p></section>
 
 <section id="management"><p class="num">07 · Führung und Ausführung</p><h2>Gesteuert nach dem St. Galler Management-Modell</h2>
 <p>X-PORTAL wird auf drei Ebenen geführt. Jede Ebene beschreibt Aktivitäten, Strukturen und Verhalten, und jede Aussage trägt einen Status von VERIFIED bis DECISION REQUIRED.</p>
@@ -126,14 +127,14 @@ a {{ color:var(--forest) }}
 <tr><td>Normativ</td><td><b>Warum und nach welchen Regeln?</b></td><td>Vision, Prinzipien, Governance mit klaren Entscheidungsrechten; Änderungen an Kernaussagen nur als Change Request.</td></tr>
 <tr><td>Strategisch</td><td><b>Womit und in welcher Reihenfolge?</b></td><td>Vier Erlösstufen, zwei Investment Cases, Roadmap als Risikoabbau, Bauphasen, Genome und Standards.</td></tr>
 <tr><td>Operativ</td><td><b>Wer macht was, womit, wann?</b></td><td>Node001 als Projekt mit Gates; Prozesse für Entwickeln, Betreiben, Störung und Lernen; jede kritische Funktion bis auf das Werkzeug geplant.</td></tr></tbody></table></div>
-<p>Ein Beispiel für die operative Tiefe: <b>Wärme</b> → Holzofen je Haus → Brennholz mit Menge je Winter → ofenfertig kaufen oder selbst machen → Spaltaxt und Säge, Schutzausrüstung → wer nachlegt und wer Holz holt → Schornsteinreinigung → Reserve, CO-Melder und Feuerlöscher. Für jedes Glied gibt es Preis, Quelle und Status. So sind zwölf kritische Funktionen geplant, von Strom und Wasser über Internet und Schnee bis zu Zugang und Daten.</p>
+<p>Ein Beispiel für die operative Tiefe: <b>Wärme</b> → Ofen je Einheit → Brennholz mit Menge je Winter → eigenes Holz schlagen und ein Jahr trocknen, für den ersten Winter trockenes Holz zukaufen → Holzlager → Säge, Spaltaxt, Schutzausrüstung und Kurs → wer nachlegt und wer Holz holt → Schornsteinreinigung → zweite Wärmequelle, CO-Melder und Feuerlöscher. Für jedes Glied gibt es Quelle, Verantwortung und Status. So sind zwölf kritische Funktionen und 120 Anschaffungen geplant, von Strom und Wasser über Internet und Schnee bis zu Zugang und Daten.</p>
 <p class="rule">Was wir nicht wissen, steht als Annahme da und wird im ersten Winter gemessen. Der Messwert ersetzt die Annahme und wird Teil des Standards für den nächsten Node.</p></section>
 
 <section id="stand"><p class="num">08 · Stand heute</p><h2>Reale Substanz, zentrale Nachweise fehlen noch</h2>
 <div class="status">
-<div class="card s-have"><h3>Vorhanden <span class="pill">belegt</span></h3>{lst(['Plattform x-portal.eu mit KI-Matching und Freelancer-Profilen','Warteliste für Node001','Grundstück für Node001 gesichert','Reference Architecture v0.4 als Arbeitsbaseline'])}</div>
-<div class="card s-work"><h3>In Arbeit <span class="pill">läuft</span></h3>{lst(['Geologie und Lageplan für Node001','Rechtliche Prüfung von Website und Verkaufs- bzw. Nutzungsmodell','Erste eigene KI-Agenten','Node001 System Architecture und parametrischer Business Case'])}</div>
-<div class="card s-open"><h3>Zu validieren <span class="pill">offen</span></h3>{lst(['Baukosten, Preis- und Produktmodell','Finanzierung des ersten Bauabschnitts','Nachfrage, Auslastung und Cost-to-Serve','Daten- und Betriebsarchitektur zwischen Standorten und Organisation'])}</div>
+<div class="card s-have"><h3>Vorhanden <span class="pill">belegt</span></h3>{lst(['Plattform x-portal.eu mit KI-Matching und Freelancer-Profilen','Warteliste für Node001','Grundstück für Node001 gesichert','Geologischer Untersuchungsbericht für Node001','Reference Architecture v0.4 als Arbeitsbaseline'])}</div>
+<div class="card s-work"><h3>In Arbeit <span class="pill">läuft</span></h3>{lst(['Fachprüfung des Geologieberichts und Lageplan','Rechtliche Prüfung von Website, Miet- und Nutzungsmodell','Erste eigene KI-Agenten','Node001 System Architecture und parametrischer Business Case'])}</div>
+<div class="card s-open"><h3>Zu validieren <span class="pill">offen</span></h3>{lst(['Baukosten, Selbstkosten je Objekt und Produktmodell','Rechtliche Struktur der Gesellschaft für Node001','Finanzierung des ersten Bauabschnitts','Nachfrage, Auslastung und Cost-to-Serve','Daten- und Betriebsarchitektur zwischen Standorten und Organisation'])}</div>
 </div><p>Stand November 2026. Künftige Meilensteine sind Ziele, keine Zusagen.</p></section>
 
 <section id="roadmap"><p class="num">09 · Der Weg</p><h2>Erst belegen, dann ausbauen</h2>
@@ -146,20 +147,33 @@ a {{ color:var(--forest) }}
 <div class="cols"><div class="card"><p class="tag">Wiederverwendbar</p>{lst(['Architekturprinzipien','Requirements- und Traceability-Logik','Schnittstellen und Datenmodell','Entscheidungsregeln','Lern- und Change-Mechanismus','Validierte Standards'])}</div>
 <div class="card"><p class="tag">Standortabhängig</p>{lst(['Grundstück, Topografie, Geologie','Klima, Wasser und Ressourcen','Recht und Genehmigungen','Markt und Zielgruppen','Produkt- und Service-Mix','Gebäudeform und lokale Ausprägung'])}</div></div></section>
 
-<section id="kapital"><p class="num">11 · Kapital</p><h2>Zwei Investment Cases, eine gemeinsame Story</h2>
+<section id="vorher"><p class="num">11 · Vor dem Investment</p><h2>Eigenmittel und Eigenleistung zuerst</h2>
+<p>Bevor Kapital für Infrastruktur und Objekte aufgenommen wird, klärt X-PORTAL aus eigenen Mitteln und eigener Arbeit die Fragen, die ein Investor sonst als Risiko einpreisen müsste.</p>
+{cards([('Boden','Geprüfte Gründung','Fachprüfung des geologischen Berichts, Zusatzerkundung und Vermessung mit Geländemodell.'),
+        ('Wasser','Menge und Qualität','Laboranalyse des Grundwassers und Auslegung der Aufbereitung.'),
+        ('Strom und Netz','Anschluss belegt','Antrag beim Netzbetreiber und Angebot für die Internetanbindung.'),
+        ('Recht und Struktur','Investierbare Gesellschaft','Rechtliche Prüfung von Gesellschaft, Miet- und Nutzungsmodell.'),
+        ('Kosten','Angebote statt Richtwerte','Bauplanung und schriftliche Angebote für die großen Posten; daraus entsteht das Kostenband.'),
+        ('Nachfrage','Interessenten und Umsatz','Mietinteressenten für Node001 und bezahlte Kundenprojekte der Company.')])}
+<p>Dazu kommt sichtbare Vorarbeit am Grundstück: Baufläche vorbereiten, eigenes Holz schlagen und einlagern, Messreihen über den Winter. Jede Stunde wird dokumentiert.</p>
+<p class="rule">Kapital wird erst gebraucht, wenn diese Nachweise vorliegen. Es fließt dann in Infrastruktur, Objekte und Betriebsfähigkeit, nicht in offene Grundsatzfragen.</p></section>
+
+<section id="kapital"><p class="num">12 · Kapital</p><h2>Zwei Investment Cases, eine gemeinsame Story</h2>
 <p>Company und Node001 haben unterschiedliche Risiken, Cashflows und Zeithorizonte. Sie werden wirtschaftlich und rechtlich getrennt bewertet.</p>
-<div class="cols"><div class="card"><p class="tag">Digitales und organisatorisches System</p><h3>X-PORTAL Company</h3><p>Kapital für Plattform, Lieferteam, wiederverwendbare KI-Lösungen sowie System- und Architekturentwicklung.</p><p><b>Ertragslogik:</b> Kundenprojekte, dann wiederverwendbare Lösungen, später möglicherweise systembezogene Erlöse.</p><p><b>Finanzierung:</b> Pre-Seed oder Equity-ähnlich. Struktur und Meilensteine sind noch festzulegen.</p></div>
-<div class="card"><p class="tag">Physischer PoC</p><h3>Node001</h3><p>Kapital für den ersten physischen Standort: Infrastruktur, den ersten sinnvollen Bauabschnitt und die Betriebsfähigkeit.</p><p><b>Ertragslogik:</b> Nutzung, Miete oder ein geeignetes Eigentums- bzw. Nutzungsmodell und Services vor Ort.</p><p><b>Finanzierung:</b> eigenständiger Project- bzw. Asset-Case. Die Struktur folgt nach Kosten-, Rechts- und Nachfrageprüfung.</p></div></div>
+<div class="cols"><div class="card"><p class="tag">Digitales und organisatorisches System</p><h3>X-PORTAL Company</h3><p>Kapital für Plattform, Lieferteam, wiederverwendbare KI-Lösungen sowie System- und Architekturentwicklung.</p><p><b>Ertragslogik:</b> Kundenprojekte, dann wiederverwendbare Lösungen, später möglicherweise systembezogene Erlöse.</p><p><b>Finanzierung:</b> Equity-ähnlich. Struktur und Meilensteine sind noch festzulegen.</p></div>
+<div class="card"><p class="tag">Physischer PoC</p><h3>Node001</h3><p>Kapital für den ersten physischen Standort: Infrastruktur, den ersten sinnvollen Bauabschnitt und die Betriebsfähigkeit.</p><p><b>Ertragslogik:</b> wiederkehrende Erlöse aus Miete und Services vor Ort.</p><p><b>Finanzierung:</b> Eigenkapital bis zur fertigen Bauplanung, danach Investoren für Infrastruktur und Objekte. Eigenständiger Project- bzw. Asset-Case.</p></div></div>
+<div class="card"><p class="tag">Struktur · in rechtlicher Klärung</p><h3>Drei Ebenen</h3><p>X-PORTAL hält als Dach Architektur, Lizenzen und Markenrechte. Eine Agentur liefert Kundenprojekte im deutschsprachigen Raum. Node001 liegt in einer eigenen Gesellschaft am Standort. Wer an einem Node mitwirkt, soll an diesem Node beteiligt werden können, nicht am Dach.</p></div>
 <h3>Was Kapital jetzt freischalten soll</h3><p>Nicht maximal bauen, sondern die Unsicherheiten beseitigen, die den nächsten belastbaren Investmententscheid verhindern.</p>
 <ol class="steps">{''.join(f'<li><span class="n">{i:02d}</span><div><b>{a}</b><span>{b}</span></div></li>' for i,(a,b) in enumerate(USE,1))}</ol>
 <p class="rule">Investment-Readiness-Gate: belastbares Kostenband, validiertes Revenue Model, rechtliche Struktur, messbare Meilensteine, klarer Kapitalbedarf.</p></section>
 
-<section id="team"><p class="num">12 · Team und nächster Schritt</p><h2>Aus der Story einen investierbaren Case machen</h2>
-{cards([('Produkt und Projekt','Roman Dering',''),('Lead Developer','Pavel J.',''),('Architekt · Nodes','Nazar D.','')])}
+<section id="team"><p class="num">13 · Team und nächster Schritt</p><h2>Aus der Story einen investierbaren Case machen</h2>
+{cards([('Produkt und Projekt','Roman Dering',''),('Lead Developer','Pavel J.','')], 'c2')}
+<p><b>Beratung Architektur und Bau:</b> ein Architekt aus der Region begleitet Planung, Geologie und Baukontext in beratender Funktion.</p>
 <p>Die Architektur steht als Arbeitsbaseline. Als Nächstes werden Node001 und die Finanzierung quantitativ und rechtlich belastbar gemacht. Dieses Papier soll ein Gespräch eröffnen; technische, rechtliche und standortspezifische Details liefern später die Due-Diligence-Unterlagen.</p>
-<div class="intern"><h3>Intern: vor externem Versand finalisieren, dann diesen Kasten entfernen</h3>{lst(['Vollständige Founder-, Ownership- und Governance-Darstellung (im Team oben fehlt die Geschäftsführung)','Node001 Produkt- und Revenue Model','Parametrischer Business Case und Kapitalbedarf','Investmentstruktur Company und Node001','Investor Ask und belastbare Meilensteine','Infografik „Integrierte Managementarchitektur“ von v0.2 auf v0.4 heben','Alle Entscheidungen sind seit 13.11. zurückgenommen: D42–D68 auf der <a href="https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP">Entscheidungsseite</a> neu treffen, vor allem Kapital (D46, D47), Container nur Übergang (D55), Preis und Größe je Haus (D49), Investorenzahlen (D53)','Jurist prüft den Text vor dem Versand'])}</div></section>
+<div class="intern"><h3>Intern: vor externem Versand finalisieren, dann diesen Kasten entfernen</h3>{lst(['Vollständige Founder-, Ownership- und Governance-Darstellung (im Team oben fehlt die Geschäftsführung)','Karten D69–D72 auf der <a href="https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP">Entscheidungsseite</a> entscheiden: Paket vor dem Investment, Bewertung der Eigenleistung, Zeitpunkt der Ansprache','Fachprüfung des Geologieberichts (heute nur KI-Zusammenfassung, nicht geprüft)','Rechtsprüfung der Struktur: Dach, Agentur, Gesellschaft für Node001; Beteiligung am Node','Mission und Globalziele mit der Vision v0.4 in eine Logik bringen','Parametrischer Business Case, Selbstkosten je Objekt, Kapitalbedarf und Investor Ask (Beträge stehen bewusst nicht im Papier)','Infografik „Integrierte Managementarchitektur“ von v0.2 auf v0.4 heben','Jurist prüft den Text vor dem Versand'])}</div></section>
 
 <footer>Kein öffentliches Angebot von Wertpapieren, Vermögensanlagen oder Kryptowerten; keine Anlageberatung. Vertraulicher Diskussionsstand, November 2026. Künftige Meilensteine sind Ziele, keine Zusagen. Grundlage: X-PORTAL Reference Architecture v0.4 (Working Baseline, 12.11.2026) und Investor Deck, Working Draft, November 2026.</footer>
 </div>'''
 html = html.replace('<p></p>', '')
-Path('x-portal-whitepaper.html').write_text(html); print(len(html))
+(Path(__file__).resolve().parent.parent / 'x-portal-whitepaper.body.html').write_text(html); print(len(html))

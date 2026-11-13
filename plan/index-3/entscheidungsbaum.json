@@ -26,18 +26,18 @@
    "thema": "Kapital für Node001",
    "bisher": "„Kein Investor“ (E04); der Ort trägt sich aus Käufergeld, Pre-Seed nur für die Firma (E57)",
    "baseline": "Zwei getrennte Investment Cases; Node001 als eigener Project-/Asset-Case mit Kapital für Infrastruktur und ersten Bauabschnitt",
-   "gilt": "Grenzentabelle und Planungspunkt zeigen beide Cases. E57 muss im Log geändert werden.",
-   "status": "DECISION REQUIRED",
-   "im_index": "CHANGE REQUEST"
+   "gilt": "Entschieden in D46 am 13.11.2026: Käufermodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen.",
+   "status": "DOCUMENTED",
+   "im_index": "entschieden 13.11."
   },
   {
    "nr": "W04",
    "thema": "Produkt- und Preismodell",
    "bisher": "Hausverkauf als Token über die Blockchain, Grund pachten, etwa 30.000 € je Plot, Verkauf ab Januar 2027 (E50, E52, E78)",
    "baseline": "„Miete bzw. geeignetes Eigentums-/Nutzungsmodell“, Produktmix und Preis werden validiert; kein öffentliches Angebot von Kryptowerten",
-   "gilt": "Im Baum als ASSUMPTION geführt; Preis, Token und Januar sind keine Aussagen für Investoren.",
-   "status": "ASSUMPTION",
-   "im_index": "CHANGE REQUEST"
+   "gilt": "Entschieden in D45, D48, D49, D50 am 13.11.2026: kein klassischer Immobilienverkauf, zuerst Mieter, Selbstkostenpreis, Tokenisierung erst nach Klärung.",
+   "status": "DOCUMENTED",
+   "im_index": "entschieden 13.11."
   },
   {
    "nr": "W05",
@@ -167,21 +167,39 @@
   },
   {
    "nr": "W19",
-   "thema": "Container oder Häuser",
-   "bisher": "Die Container sind die Tiny Houses der Käufer und bleiben stehen; E44 (Übergang) gilt nicht mehr (E59, D21 B)",
-   "baseline": "Vorgabe 12.11.2026 und Titelbild von Whitepaper und Deck: Container nur als Übergang für Team und Bauarbeiter auf der Herrenhaus-Fläche, danach richtige Holzhäuser für Käufer und Team",
-   "gilt": "Endprodukt angepasst. E59, E39 und E40 brauchen Änderungen im Log (CR-01 bis CR-03 auf der SGMM-Seite); E75 bleibt für Holzhäuser in Teilen, prüfen (CR-04).",
-   "status": "DECISION REQUIRED",
-   "im_index": "CHANGE REQUEST"
+   "thema": "Container oder Objekte",
+   "bisher": "Die Container sind die Tiny Houses der Käufer und bleiben stehen (E59, D21 B)",
+   "baseline": "Kommentar zu D55: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur; danach Wohn- und Arbeitsobjekte und Kommunalgebäude",
+   "gilt": "Entschieden in D55 am 13.11.2026. Material und Bauart plant eine Bau-KI (D56).",
+   "status": "DOCUMENTED",
+   "im_index": "entschieden 13.11."
   },
   {
    "nr": "W20",
-   "thema": "Preis je Haus",
-   "bisher": "Etwa 30.000 € je Käufer, bezugsfertig im Frühjahr (E78, E84 mit 45 m² je Haus)",
-   "baseline": "Richtwert Rohbau 22.000–40.000 UAH je m², für 45 m² rund 19.800–36.000 € ohne Innenausbau, Transport und Anschlüsse (ASSUMPTION, SGMM-Seite F12)",
-   "gilt": "Preis und Hausgröße gehören in den parametrischen Business Case (OD-008); bis dahin keine Preisaussage nach außen (CR-05).",
+   "thema": "Preis",
+   "bisher": "Etwa 30.000 € je Käufer (E78, E84)",
+   "baseline": "Kommentar zu D49: Selbstkostenpreis statt Verkaufspreis",
+   "gilt": "Entschieden in D49 am 13.11.2026; Zahlen aus dem Business Case (OD-008).",
+   "status": "DOCUMENTED",
+   "im_index": "entschieden 13.11."
+  },
+  {
+   "nr": "W21",
+   "thema": "Mission",
+   "bisher": "Die Baseline v0.4 nennt keine Mission (W01)",
+   "baseline": "Kommentar zu D42: Mission und Globalziele sind der Ausgangspunkt; der Bruch in der Logik muss harmonisiert werden",
+   "gilt": "Aufgabe: Mission, Globalziele, Vision v0.4 und Zielblatt in eine Logik bringen.",
    "status": "DECISION REQUIRED",
-   "im_index": "CHANGE REQUEST"
+   "im_index": "offen"
+  },
+  {
+   "nr": "W22",
+   "thema": "Kostenstand",
+   "bisher": "Papierrechnung 12 Mio. € (E84), 12,5 Mio. € (E65)",
+   "baseline": "Kostenregister vom 13.11.2026: Teilsumme für eine kleine Phase 0, 69 von 137 Positionen ohne Betrag",
+   "gilt": "Für Investoren keine Beträge, bis Angebote vorliegen (D53: neu rechnen).",
+   "status": "ASSUMPTION",
+   "im_index": "markiert"
   }
  ],
  "artefakt": "https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F",
@@ -202,15 +220,15 @@
   {
    "nr": "Z2",
    "ebene": "Node001",
-   "ziel": "Das Grundstück voll bekommen",
-   "messgroesse": "Verkaufte oder vermietete Plots von der Zahl, die die Geologie erlaubt",
-   "zielwert": "Zahl der Plots nach O01, Paul mit Nazar. Schwelle zum Bestellen: 5 Käufer mit belegtem Geld, 100 auf der Warteliste (E78)",
+   "ziel": "Das Grundstück mit Mietern füllen",
+   "messgroesse": "Vermietete Einheiten von der Zahl, die Geologie und Planung erlauben; Mietinteressenten vor dem Bau",
+   "zielwert": "Zahl der Einheiten nach geprüfter Geologie und Bau-KI-Planung (D54, D56). Interessenten jetzt sammeln (D50). Kein Immobilienverkauf im klassischen Sinn (D45, D48)",
    "klaerungsauftrag": true,
-   "termin": "Verkauf ab Januar 2027 (E52)",
-   "wer_review": "Roman (Verkauf), Paul (Grundstück) · Review G0, G1",
-   "grenze": "Kapital: bestellt wird erst mit dem Geld der 5 Käufer (E78); weniger als 5 entscheidet O23",
+   "termin": "Interessenten ab sofort; Einzug ab Phase 1, Termine sind Ziele (D58)",
+   "wer_review": "Projektleitung (Interessenten), Geschäftsführung (Grundstück) · Review G0, G1",
+   "grenze": "Kapital: Eigenkapital bis zur fertigen Bauplanung, danach Investoren für Infrastruktur und Objekte (D46, D47)",
    "globalziel": "1 und 2",
-   "quelle": "E46, E51; prüft H4"
+   "quelle": "D45, D46, D48, D50; prüft H4"
   },
   {
    "nr": "Z3",
@@ -240,42 +258,42 @@
   },
   {
    "nr": "X1",
-   "ebene": "Aufteilung: X-PORTAL, DT Agentur, Grundstücke",
-   "ziel": "X-PORTAL Organisation (Company)",
+   "ebene": "Aufteilung: Holding, Agentur, Node-Gesellschaft",
+   "ziel": "X-PORTAL als Holding: Unternehmensarchitektur, Lizenzen, Markenrechte",
    "messgroesse": "festlegen, je Aufgabe",
-   "zielwert": "Systemgrenze Organisation ↔ Node-Betrieb (OD-001, DECISION REQUIRED) und was genau zur Organisation gehört (2.5.3). Aufgaben laut Vorgabe: Grundstücke bebauen und verwalten; Freelancer verwalten und Projekten zuordnen; eigene Projekte bauen, etwa KI-Agenten, Blockchain und Finance Engineering",
+   "zielwert": "Rechtsprüfung der Struktur (D44); wo Services auf den Nodes abgewickelt werden, voraussichtlich in einer lokalen Gesellschaft als Teil der Holding (OD-001)",
    "klaerungsauftrag": true,
-   "termin": "Aufteilung vor G0, eigene Ziele nach Stufe 1 (E69)",
-   "wer_review": "Paul (Gesellschaft, Geld, Nodes) und Roman (Produkt, Projekt) (E62)",
-   "grenze": "heute tritt Romans Einzelunternehmen auf, die UG wird gegründet; Sitz offen (E61, O11)",
+   "termin": "vor dem Investorengespräch (D71)",
+   "wer_review": "Geschäftsführung und Projektleitung",
+   "grenze": "Rechtsprüfung ist Teil des Pakets „Vor dem Investment“",
    "globalziel": "1 und 2",
-   "quelle": "Vorgabe 05.11.2026; E17, E62, E63, E70"
+   "quelle": "D44 mit Kommentar, 13.11.2026"
   },
   {
    "nr": "X2",
-   "ebene": "Aufteilung: X-PORTAL, DT Agentur, Grundstücke",
-   "ziel": "DT Agentur: übernimmt die Projekte aus Deutschland",
+   "ebene": "Aufteilung: Holding, Agentur, Node-Gesellschaft",
+   "ziel": "Agentur: übernimmt Projekte aus Deutschland, Österreich und der Schweiz",
    "messgroesse": "Bezahlter Umsatz, Interesse und Marge getrennt (M09)",
-   "zielwert": "Welche Projekte, welche Verträge und welches Geld bei der DT Agentur liegen und was an X-PORTAL geht (2.5.3). Heute kein Umsatz, keine dauerhaften Nutzer (E08)",
+   "zielwert": "Welche Projekte, Verträge und welches Geld bei der Agentur liegen und was an die Holding geht. Heute kein Umsatz (früher E08)",
    "klaerungsauftrag": true,
-   "termin": "erster Auftrag bis Januar 2027 (E77)",
-   "wer_review": "Roman und Paul",
+   "termin": "erster bezahlter Auftrag vor dem Investorengespräch",
+   "wer_review": "Projektleitung und Geschäftsführung",
    "grenze": "–",
    "globalziel": "1",
-   "quelle": "Vorgabe 05.11.2026; E07, E08, E31"
+   "quelle": "D44, D51"
   },
   {
    "nr": "X3",
-   "ebene": "Aufteilung: X-PORTAL, DT Agentur, Grundstücke",
-   "ziel": "Grundstücke: wem sie gehören, wer baut und verpachtet",
+   "ebene": "Aufteilung: Holding, Agentur, Node-Gesellschaft",
+   "ziel": "Node001: gehalten von einer ukrainischen Gesellschaft; Mitwirkende können am Node beteiligt werden",
    "messgroesse": "festlegen",
-   "zielwert": "Wer Eigentümer ist, wer baut, wer an die Käufer verpachtet und wer den Betrieb stellt (2.5.5); wie Pauls Unternehmen dazu steht (2.5.2). Bekannt: das eigene und höchstens ein weiteres Grundstück, die übrigen von Dritten (E18); ein SPV je Grundstück, später tokenisiert (E17); Node001 steht auf Pauls Namen",
+   "zielwert": "Rechtsform, Verhältnis zur Holding und Beteiligung am jeweiligen Node statt an der Holding (D37, D44); Tokenisierung erst nach Klärung (D48)",
    "klaerungsauftrag": true,
-   "termin": "vor dem Verkauf im Januar 2027 (G0)",
-   "wer_review": "Paul (Grundstücke, E62); Anwälte (O05)",
-   "grenze": "Kapital: der Ort trägt sich aus Käufergeld (E57)",
+   "termin": "vor Phase 0",
+   "wer_review": "Geschäftsführung; Anwälte",
+   "grenze": "Kapital: Eigenkapital plus Investoren (D46)",
    "globalziel": "1 und 2",
-   "quelle": "E17, E18, E52, E57, E62"
+   "quelle": "D37, D44, D48"
   }
  ],
  "anforderungen_m02": [
@@ -724,7 +742,7 @@
   {
    "kind": "group",
    "id": "b-hauptweg",
-   "title": "1 · Der Weg ab jetzt: Geologie, Haus, Zufahrt, Lieferant, Technik, dann bis zum ersten Winter",
+   "title": "1 · Der Weg ab jetzt: Geologie, Objekt, Zufahrt, Lieferant, Technik (Stand vor 13.11.; Verkauf und Preis je Plot sind überholt)",
    "text": "In dieser Reihenfolge wird jetzt gearbeitet. Zuerst die Geologie: Sie zeigt, welche Hausart geht. Dann, ob das Haus die Zufahrt hochkommt, wer es liefert und baut, und wer Zugang, Server und Netzwerk stellt. Danach Kosten, Preis, Verkauf und die Gates bis zum ersten Winter.",
    "kids": [
     {
@@ -3131,7 +3149,7 @@
   {
    "kind": "group",
    "id": "b-makebuy",
-   "title": "4 · Make-or-Buy: Varianten mit Kosten, Sensitivität und Test (M05)",
+   "title": "4 · Make-or-Buy (Stand vor 13.11.; aktuelle Posten stehen in der Anschaffungsliste)",
    "text": "Verglichen wird die betriebsfähige Drei-Personen-Lösung mit Ausbaupfad. Zuerst die Mindestbedingungen aus M02, dann Varianten mit gleichem Leistungsumfang über denselben Zeitraum mit Euro-Vollkosten und Betriebskosten, dann Nutzwert und kritische Annahmen. Sensitivität: ab welcher Änderung bei Transport, Gründung, Energiepreis oder Termin eine andere Variante besser ist. Preise aus dem Internet, bei 50 UAH/EUR (E20), ohne Montage, Transport und Anschluss, sofern nicht anders genannt. Keine Variante ist bisher vollständig gerechnet.",
    "kids": [
     {
@@ -3851,7 +3869,7 @@
   {
    "kind": "group",
    "id": "b-seite",
-   "title": "6 · Offen auf der Entscheidungsseite: D34 bis D41",
+   "title": "6 · Entscheidungsseite: Karten D34 bis D41 im Stand vom 04.11. (beantwortet am 13.11.; neu offen sind D69 bis D72)",
    "text": "Für diese acht gibt es dort noch keine Stimme (Stand 04.11.2026). Wählt dort; der Baum zeigt die Möglichkeiten und was davon abhängt.",
    "kids": [
     {

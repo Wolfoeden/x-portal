@@ -1,5 +1,5 @@
 {
- "stand": "12.11.2026",
+ "stand": "13.11.2026",
  "kurs_uah_eur": 50,
  "statusmodell": [
   "VERIFIED",
@@ -34,23 +34,23 @@
  "anspruchsgruppen": [
   {
    "rolle": "Mitarbeitende (Team oben)",
-   "stand": "Drei Personen mit Tagesabläufen; Gleitzeit 9–14 Uhr, Jour fixe und Sport Pflicht (Vorgabe 05.11.2026).",
-   "stufe1": "Wohnen in Phase 0 im Container, ab Phase 1 im Haus",
+   "stand": "Zwei bis drei Personen mit Tagesabläufen; Gleitzeit 9–14 Uhr, Jour fixe und Sport Pflicht (Vorgabe 05.11.2026).",
+   "stufe1": "Wohnen und arbeiten ab Phase 0 im Objekt",
    "status": "DOCUMENTED",
    "node001": "REQUIRED"
   },
   {
-   "rolle": "Siedler (Käufer)",
-   "stand": "Kaufen das Haus, pachten den Grund (E52); frei in Arbeit und Tagesablauf.",
-   "stufe1": "Ab Phase 1 im richtigen Holzhaus, nicht im Container (CR-01)",
+   "rolle": "Mieter",
+   "stand": "Wohnen und arbeiten zur Miete; kein Immobilienverkauf im klassischen Sinn (D45, D48). Monatliche Pauschale, erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen (D38).",
+   "stufe1": "Interessenten ab jetzt sammeln (D50); Einzug ab Phase 1",
+   "status": "DOCUMENTED",
+   "node001": "REQUIRED"
+  },
+  {
+   "rolle": "Mitwirkende mit Beteiligung",
+   "stand": "Wer mitwirkt, kann am jeweiligen Node beteiligt werden, nicht an der Holding (D37). Tokenisierung erst nach Klärung (D48).",
+   "stufe1": "Struktur vor Phase 1 klären",
    "status": "DECISION REQUIRED",
-   "node001": "REQUIRED"
-  },
-  {
-   "rolle": "Remote-Siedler (Mieter)",
-   "stand": "Miete nach dem Einzug, kein Geld vorab (E47).",
-   "stufe1": "Ab Phase 1",
-   "status": "DOCUMENTED",
    "node001": "PREPARE"
   },
   {
@@ -69,29 +69,29 @@
   },
   {
    "rolle": "Bauarbeiter",
-   "stand": "Bleiben längere Zeit oben (E44).",
-   "stufe1": "Phase 0 und 1, Container auf der Herrenhaus-Fläche",
+   "stand": "Bleiben längere Zeit oben.",
+   "stufe1": "Phase 0 und 1, im Objekt unterhalb der Herrenhaus-Fläche (D55)",
    "status": "DOCUMENTED",
    "node001": "REQUIRED"
   },
   {
    "rolle": "Betreiber",
-   "stand": "X-PORTAL Organisation oder eigener Node-Betrieb; Systemgrenze offen (OD-001).",
-   "stufe1": "Ab Phase 0",
+   "stand": "Node001 wird von einer ukrainischen Gesellschaft gehalten; wo Services abgewickelt werden, ist rechtlich zu klären (D44, OD-001).",
+   "stufe1": "Vor Phase 0",
    "status": "DECISION REQUIRED",
    "node001": "REQUIRED"
   },
   {
    "rolle": "Partner und Lieferanten",
-   "stand": "Hausbauer, Containerlieferant, Bauer (Holz, Räumen), Elektriker, Spediteur (2.2.3, 2.2.4, 2.4.6).",
-   "stufe1": "Ab Phase 0",
+   "stand": "Anbieter für Objekt, Brunnen, Kläranlage, Fundament; Bauer (Holz, Räumen), Elektriker, Spediteur; Architekt in beratender Funktion (D67).",
+   "stufe1": "Ab Vor-Phase: drei Angebote je großem Posten",
    "status": "IN WORK",
    "node001": "REQUIRED"
   },
   {
    "rolle": "Investoren",
-   "stand": "Zwei getrennte Investment Cases: Company und Node001 (Deck, W03).",
-   "stufe1": "Vor Phase 1",
+   "stand": "Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Objekte mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47).",
+   "stufe1": "Nach dem Paket „Vor dem Investment“",
    "status": "IN WORK",
    "node001": "REQUIRED"
   },
@@ -131,7 +131,7 @@
     "punkte": [
      "Prinzipien aus Abschnitt 5: Menschenzentrierung, Resilienz, Wartbarkeit, Messbarkeit, Lernfähigkeit",
      "Spielregeln oben: Gleitzeit 9–14, Jour fixe und Sport Pflicht, Wellness frei, Arbeit wie Holz machen gemeinsam",
-     "Käufer sind frei, nicht Teil des Teams"
+     "Mieter sind frei in Arbeit und Tagesablauf; Gemeinschaftsarbeit wird gefördert und angerechnet (D36)"
     ],
     "xp_sys": "XP-SYS-001",
     "status": "DOCUMENTED"
@@ -144,7 +144,8 @@
      "Vier Erlösstufen: Kundenprojekte, Technologielösungen, Nutzung und Services, System-Skalierung",
      "Zwei Investment Cases: Company und Node001",
      "Roadmap: Marktnachweis → Site Truth → Product & Economics → Financing & Permissions → Build & Operate → Learn & Replicate",
-     "Bauphasen: Container nur als Übergang, danach richtige Holzhäuser (Abschnitt Bauphasen)"
+     "Bauphasen: ein Objekt als Übergang, danach Objekte und Kommunalgebäude (D55)",
+     "Mietmodell mit Selbstkosten als Basis; kein klassischer Immobilienverkauf (D48, D49)"
     ],
     "xp_sys": "XP-SYS-004",
     "status": "IN WORK"
@@ -154,7 +155,7 @@
     "punkte": [
      "Reference Architecture v0.4 als Arbeitsbaseline",
      "X-PORTAL Genome v0.1: Invarianten, Module, Parameter, Regeln, Evidenz (OD-006)",
-     "Team: Roman Dering, Pavel J., Nazar D.; Geschäftsführung in der Darstellung offen (W14)"
+     "Team: Produkt und Projekt, Lead Developer; Architektur und Bau als externe Beratung (D67); Geschäftsführung in der Darstellung offen (W14)"
     ],
     "xp_sys": "XP-SYS-006, 014",
     "status": "IN WORK"
@@ -206,68 +207,68 @@
  "bauphasen": [
   {
    "phase": "Phase 0",
-   "titel": "Container als Übergang",
-   "was": "Wohncontainer für Team und Bauarbeiter auf der Fläche des späteren Herrenhauses (E44, E45). Je Person ein eigener Container (E40). Netzstrom mit Generator als Reserve, Tank, Campingtoilette, Starlink. Die Container sind Baustelleneinrichtung, kein Produkt.",
-   "fuer": "Team (3) und Bauarbeiter (Zahl OPEN)",
-   "kosten": "BlokModul BK1 ab 444.000 UAH, rund 8.880 € je Container ohne Heizung (E39); Listenpreis nicht bestätigt (O31). Kauf mit Rückverkauf oder Miete ist offen.",
-   "status": "DECISION REQUIRED"
-  },
-  {
-   "phase": "Phase 1",
-   "titel": "Richtige Häuser und Kommunalgebäude",
-   "was": "Holzhäuser wie auf dem Titelbild, in Teilen hochgebracht und oben montiert (E75). Zuerst Kommunalgebäude mit Küche, Sanitär und Arbeitsplätzen (E74), dann Häuser für Käufer und Team. Versorgung wächst mit: Solar und Speicher, Wasser im Ausbau, dauerhafte Abwasserlösung.",
-   "fuer": "Käufer, Mieter, Team zieht aus dem Container ins Haus",
-   "kosten": "Richtwert Rohbau 22.000–40.000 UAH je m², also 0,99–1,8 Mio. UAH oder rund 19.800–36.000 € für 45 m² (eigene Rechnung aus ukrsmeta.ua, 100 m² für 2,2–4 Mio. UAH); ohne Innenausbau, Transport und Anschlüsse. ASSUMPTION.",
+   "titel": "Objekt als Übergang",
+   "was": "Ein Wohn- und Arbeitsobjekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet (D55). Spültoilette, Dusche, Warmwasser und Abwasser fest eingebaut (D62). Netzanschluss mit Generator als Reserve (D59).",
+   "fuer": "Team (2–3) und Bauarbeiter (Zahl OPEN)",
+   "kosten": "Teilsumme im Kostenregister für ein Modul mit 18 m² und zwei Personen; 69 von 137 Positionen ohne Betrag. Siehe „Vor dem Investment“.",
    "status": "ASSUMPTION"
   },
   {
+   "phase": "Phase 1",
+   "titel": "Objekte und Kommunalgebäude",
+   "was": "Zuerst das Kommunalgebäude (D64), dann Wohn- und Arbeitsobjekte für Mieter und Team. Material offen (Holz, Beton, Glas, Metall); eine Bau-KI plant nach den lokalen Gegebenheiten (D56). Solar mit Speicher, Feuerstelle, Sauna, Bergkapelle als Gruppenprojekt (D59, D34, D35).",
+   "fuer": "Mieter, Team",
+   "kosten": "Nicht gerechnet. Selbstkosten je Objekt aus dem Business Case (D49, OD-008).",
+   "status": "OPEN"
+  },
+  {
    "phase": "Phase 2",
-   "titel": "Ausbau bis das Grundstück voll ist",
-   "was": "Weitere Häuser nach Nachfrage (E51). Container gehen zurück oder werden verkauft. Die Herrenhaus-Fläche wird als letztes fest bebaut (E45).",
+   "titel": "Ausbau",
+   "was": "Weitere Objekte nach Nachfrage. Die Herrenhaus-Fläche wird zuletzt bebaut.",
    "fuer": "Alle Rollen",
-   "kosten": "OPEN, folgt aus dem parametrischen Business Case (OD-008)",
+   "kosten": "OPEN",
    "status": "OPEN"
   }
  ],
  "change_requests": [
   {
-   "id": "CR-01",
-   "betrifft": "E59 ersetzen (Karte D21 B)",
-   "heute": "„Die Container sind die Tiny Houses der Käufer und bleiben stehen; für sie gilt E44 (Übergang) nicht mehr.“",
-   "vorschlag": "Container sind Übergang für Team und Bauarbeiter auf der Herrenhaus-Fläche. Käufer bekommen richtige Holzhäuser. E44 gilt wieder. E52 (Grund pachten) bleibt.",
-   "anlass": "Vorgabe Roman, 12.11.2026; Titelbild Whitepaper und Deck",
-   "status": "DECISION REQUIRED"
+   "id": "D55",
+   "betrifft": "Container oder Objekte",
+   "heute": "Container sind die Tiny Houses der Käufer und bleiben (E59).",
+   "vorschlag": "Ein Objekt als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche; danach Objekte und Kommunalgebäude.",
+   "anlass": "Antwort mit Kommentar, 13.11.2026",
+   "status": "DOCUMENTED"
   },
   {
-   "id": "CR-02",
-   "betrifft": "E39 einschränken",
-   "heute": "Neue gedämmte Wohncontainer, zum Beispiel BlokModul BK1, als Haus.",
-   "vorschlag": "Gilt nur noch für Phase 0. Zahl der Container = Team plus Bauarbeiter. Kauf mit Rückverkauf oder Miete wird verglichen.",
-   "anlass": "Folgt aus CR-01",
-   "status": "DECISION REQUIRED"
-  },
-  {
-   "id": "CR-03",
-   "betrifft": "E40 präzisieren",
-   "heute": "Für jede Person ein eigener Container mit allem drin.",
-   "vorschlag": "In Phase 0 ein Container je Person; ab Phase 1 ein eigenes Haus. Der Satz im Endprodukt „Container, der ihr Tiny House ist“ entfällt.",
-   "anlass": "Folgt aus CR-01",
-   "status": "DECISION REQUIRED"
-  },
-  {
-   "id": "CR-04",
-   "betrifft": "E75 prüfen",
-   "heute": "Die Tiny Houses kommen in Teilen auf kleinem Fahrzeug hoch und werden oben montiert.",
-   "vorschlag": "Bleibt für Holzhäuser (Rahmen oder Paneele). Zu prüfen: größtes Teil bei 45 m² (E84) und Zufahrt im Winter (2.2.4).",
-   "anlass": "Herstelleranfrage O31",
+   "id": "D56",
+   "betrifft": "Bauart",
+   "heute": "Tiny Houses in Teilen, oben montiert (E75).",
+   "vorschlag": "Material offen (Holz, Beton, Glas, Metall); Bau-KI plant und bewertet nach lokalen Gegebenheiten.",
+   "anlass": "Kommentar, 13.11.2026",
    "status": "OPEN"
   },
   {
-   "id": "CR-05",
-   "betrifft": "Preis je Haus neu rechnen",
-   "heute": "Etwa 30.000 € je Käufer, bezugsfertig im Frühjahr (E78).",
-   "vorschlag": "Ein Holzhaus mit 45 m² liegt im Rohbau schon bei 19.800–36.000 € (Phase 1). 30.000 € decken Haus, Anschluss und Anteil am Kommunalgebäude nur bei kleinem Haus oder Eigenleistung. Preis und Größe gehören in den Business Case (OD-008).",
-   "anlass": "W20",
+   "id": "D49",
+   "betrifft": "Preis",
+   "heute": "Etwa 30.000 € je Käufer (E78).",
+   "vorschlag": "Selbstkostenpreis je Objekt statt Verkaufspreis; kein Immobilienverkauf im klassischen Sinn.",
+   "anlass": "Kommentar, 13.11.2026",
+   "status": "DOCUMENTED"
+  },
+  {
+   "id": "D46",
+   "betrifft": "Kapital Node001",
+   "heute": "Kein Investor; der Ort trägt sich aus Käufergeld (E57).",
+   "vorschlag": "Käufermodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen.",
+   "anlass": "Kommentar, 13.11.2026",
+   "status": "DOCUMENTED"
+  },
+  {
+   "id": "D69",
+   "betrifft": "Vor dem Investment",
+   "heute": "–",
+   "vorschlag": "Welches Paket aus Eigenmitteln und Eigenleistung (Kern, Optimum, Erweitert).",
+   "anlass": "Karte offen",
    "status": "DECISION REQUIRED"
   }
  ],
@@ -280,23 +281,23 @@
    "sys": "XP-SYS-002, 003, 009, 012",
    "rel": "REQUIRED",
    "status": "DECISION REQUIRED",
-   "ziel": "Morgens im Haus warm, ohne CO-Gefahr, auch bei −20 °C und 10 Tagen Sperre.",
+   "ziel": "Morgens in der Einheit warm, ohne CO-Gefahr, auch bei −20 °C und 10 Tagen Sperre.",
    "kette": [
     [
      "Funktion",
-     "Wärme je Haus und im Kommunalgebäude"
+     "Wärme je Einheit und im Kommunalgebäude"
     ],
     [
      "Lösung",
-     "Holzofen mit Kochplatte je Haus (Möglichkeit A); zentral (B) offen"
+     "Holzofen mit Kochplatte je Einheit (Möglichkeit A); zentral (B) offen"
     ],
     [
      "Betriebsmittel",
-     "Brennholz trocken, 3–6 m³ je Haus und Winter (ASSUMPTION, aus Heizlast H02 rechnen)"
+     "Brennholz trocken, 3–6 m³ je Einheit und Winter (ASSUMPTION, aus Heizlast H02 rechnen)"
     ],
     [
      "Beschaffung",
-     "Ofenfertig gespalten kaufen beim Bauern oder Holzhändler vor Ort (Buy)"
+     "Mix (D60): Bäume am Grundstück fällen und aufarbeiten; sie sind nass und trocknen etwa ein Jahr. Für den ersten Winter trockenes Holz zukaufen."
     ],
     [
      "Werkzeug",
@@ -304,15 +305,15 @@
     ],
     [
      "Lager",
-     "Überdachter Holzunterstand am Haus, Tagesvorrat im Warmen"
+     "Überdachtes, belüftetes Holzlager für zwei Winter, in jedem Fall (D60); Tagesvorrat im Warmen"
     ],
     [
      "Wer",
-     "Nachlegen jeder im eigenen Haus; Holz holen und spalten Team im Wechsel (2.4.5)"
+     "Nachlegen jeder in der eigenen Einheit; Holz holen und spalten Team im Wechsel (2.4.5)"
     ],
     [
      "Wartung",
-     "Schornstein reinigen (Intervall: Fachperson), Axt schleifen, Sägeblatt tauschen"
+     "Schornstein reinigen (Intervall: Fachexperte), Axt schleifen, Sägeblatt tauschen"
     ],
     [
      "Ausfall",
@@ -321,12 +322,12 @@
    ],
    "wahl": [
     "Axt oder Säge?",
-    "Phase 0: Holz ofenfertig kaufen; Spaltaxt und Bügelsäge reichen für Nachschnitt und Anmachholz. Eine Motorsäge erst, wenn Rundholz selbst gemacht wird, dann mit Schulung, Schnittschutzhose, Helm und geklärter Haftung (S07). Vorschlag KI, nicht entschieden."
+    "Entschieden am 13.11. (D60): beides. Eigenes Holz braucht Motorsäge mit Schutzausrüstung und Kurs; Spaltaxt, Keile und Bügelsäge für das Spalten und Nachschneiden. Haftung und Versicherung der Eigenleistung sind offen (S07)."
    ],
    "pos": [
     {
      "gegenstand": "Holzofen mit Kochplatte",
-     "menge": "je Haus",
+     "menge": "je Einheit",
      "uah_von": 6000,
      "uah_bis": 13000,
      "quelle": "Index A4",
@@ -341,7 +342,7 @@
      "status": "DOCUMENTED"
     },
     {
-     "gegenstand": "Brennholz je Haus und Winter",
+     "gegenstand": "Brennholz je Einheit und Winter",
      "menge": "3–6 m³",
      "uah_von": 11100,
      "uah_bis": 27000,
@@ -381,7 +382,7 @@
      "status": "DOCUMENTED"
     }
    ],
-   "stunden": "Nachlegen und Asche 15–30 Minuten am Tag je Haus; Holz holen und spalten 1–2 Stunden je Woche für das Team (ASSUMPTION)."
+   "stunden": "Nachlegen und Asche 15–30 Minuten am Tag je Einheit; Holz holen und spalten 1–2 Stunden je Woche für das Team (ASSUMPTION)."
   },
   {
    "id": "F02",
@@ -395,7 +396,7 @@
    "kette": [
     [
      "Funktion",
-     "Strom für Arbeit, Wasser, Kühlung, Licht, E-Bikes"
+     "Strom für Arbeit, Wasser, Kühlung, Licht"
     ],
     [
      "Lösung",
@@ -482,7 +483,7 @@
     ],
     [
      "Lösung",
-     "Quellfassung → Pumpe → Tank → Filter → Boiler"
+     "Grundwasser (Brunnen) → Pumpe → Tank → Aufbereitung zu Trinkwasser → Boiler (D61)"
     ],
     [
      "Betriebsmittel",
@@ -490,7 +491,7 @@
     ],
     [
      "Beschaffung",
-     "Quellfassung und Leitung durch Fachfirma; Laborprobe (O27)"
+     "Laboranalyse zuerst; sie bestimmt die Aufbereitung. Brunnen und Leitung durch Fachfirma."
     ],
     [
      "Werkzeug",
@@ -498,7 +499,7 @@
     ],
     [
      "Lager",
-     "Tank im Warmen oder frostfrei; 1.000 l wiegen 1 t, Bodenlast prüft eine Fachperson"
+     "Tank im Warmen oder frostfrei; 1.000 l wiegen 1 t, Bodenlast prüft eine Fachexperte"
     ],
     [
      "Wer",
@@ -506,7 +507,7 @@
     ],
     [
      "Wartung",
-     "Filter tauschen, Boiler entkalken, Laborprobe jährlich (Intervall: Fachperson)"
+     "Filter tauschen, Boiler entkalken, Laborprobe jährlich (Intervall: Fachexperte)"
     ],
     [
      "Ausfall",
@@ -548,7 +549,7 @@
     },
     {
      "gegenstand": "Boiler 80 l",
-     "menge": "je Haus oder zentral",
+     "menge": "je Einheit oder zentral",
      "uah_von": 4399,
      "uah_bis": 5387,
      "quelle": "Electrolux Quantum Pro 4.399 (nicht lieferbar); Nova Tec 4.702–5.387; bt.rozetka.com.ua",
@@ -559,66 +560,74 @@
   },
   {
    "id": "F04",
-   "name": "Abwasser und Toilette",
+   "name": "Abwasser und Sanitär",
    "ebene": "Physische Welt",
-   "anf": "H06",
+   "anf": "H06, D62",
    "sys": "XP-SYS-009, 011, 012",
    "rel": "REQUIRED",
    "status": "OPEN",
-   "ziel": "Toilette ohne Geruch, im Winter im Warmen erreichbar, frostsicher; Abwasser rechtlich zulässig.",
+   "ziel": "Spültoilette (Klopapier spülbar), Dusche und Warmwasser ab Phase 0, fest eingebaut; Abwasser rechtlich zulässig.",
    "kette": [
     [
      "Funktion",
-     "Toilette, Grauwasser aus Dusche und Küche"
+     "Toilette, Dusche, Warmwasser, Abwasser"
     ],
     [
      "Lösung",
-     "Phase 0 Campingtoilette; ab Phase 1 Kleinkläranlage oder Komposttoilette"
+     "Kleinkläranlage oder Mehrkammergrube ab Phase 0, mit der Infrastruktur geplant (D62)"
     ],
     [
      "Betriebsmittel",
-     "Sanitärflüssigkeit oder Streu; Entleerungsstelle"
+     "Wasser aus F03, Strom aus F02"
     ],
     [
      "Beschaffung",
-     "Phase 0 kaufen; dauerhafte Lösung plant eine Fachperson mit Genehmigung"
+     "Abwasserplanung und Genehmigung durch Fachexperten; Anlage mit Einbau"
     ],
     [
      "Werkzeug",
-     "Handschuhe, Spaten, Behälter"
+     "Anlage, frostfreie Leitungen mit Gefälle, Spültoilette, Dusche, Boiler"
     ],
     [
      "Wer",
-     "Jede Person für ihren Container; Entleerung im Wechsel"
+     "Fachfirma baut; Team kontrolliert"
     ],
     [
      "Wartung",
-     "Leeren nach Füllstand; Anlage nach Herstellerangabe"
+     "Schlamm abfahren ein- bis zweimal im Jahr; ob ein Saugwagen die Zufahrt schafft, ist offen"
     ],
     [
      "Ausfall",
-     "Zweite Campingtoilette als Reserve"
+     "Notlösung für Sperre der Anlage: OPEN"
     ]
    ],
    "pos": [
     {
-     "gegenstand": "Campingtoilette (Phase 0)",
-     "menge": "je Container",
-     "uah_von": 1600,
-     "uah_bis": 3700,
-     "quelle": "Index A4",
-     "status": "DOCUMENTED"
+     "gegenstand": "Kleinkläranlage für 5 Personen, nur Gerät",
+     "menge": "1",
+     "uah_von": 38000,
+     "uah_bis": 38000,
+     "quelle": "Kostenregister 13.11.",
+     "status": "ASSUMPTION"
     },
     {
-     "gegenstand": "Kleinkläranlage oder Komposttoilette (Phase 1)",
-     "menge": "je Haus oder zentral",
-     "uah_von": null,
-     "uah_bis": null,
-     "quelle": "Fachperson und Genehmigung",
-     "status": "OPEN"
+     "gegenstand": "Einbau der Anlage",
+     "menge": "1",
+     "uah_von": 8000,
+     "uah_bis": 15000,
+     "quelle": "Kostenregister 13.11.",
+     "status": "ASSUMPTION"
+    },
+    {
+     "gegenstand": "Abwasserplanung",
+     "menge": "1",
+     "uah_von": 5000,
+     "uah_bis": 10000,
+     "quelle": "Kostenregister 13.11.",
+     "status": "ASSUMPTION"
     }
    ],
-   "stunden": "Leeren etwa alle paar Tage je Container (ASSUMPTION)."
+   "stunden": "Kontrolle wenige Minuten je Woche (ASSUMPTION)."
   },
   {
    "id": "F05",
@@ -711,7 +720,7 @@
     ],
     [
      "Lösung",
-     "Phase 0 Kochplatte am Ofen und Kühlschrank im Container; ab Phase 1 Küche im Kommunalgebäude (E74)"
+     "Phase 0 Kochplatte am Ofen und Kühlschrank im Objekt; ab Phase 1 Küche im Kommunalgebäude (E74)"
     ],
     [
      "Betriebsmittel",
@@ -737,7 +746,7 @@
    "pos": [
     {
      "gegenstand": "Kühlschrank",
-     "menge": "je Container",
+     "menge": "je Objekt",
      "uah_von": null,
      "uah_bis": null,
      "quelle": "nicht gesucht",
@@ -829,11 +838,11 @@
    "id": "F08",
    "name": "Mobilität",
    "ebene": "Physische Welt",
-   "anf": "E72, E73, 2.3.6",
+   "anf": "D65",
    "sys": "XP-SYS-002, 004",
-   "rel": "PREPARE",
+   "rel": "REQUIRED",
    "status": "ASSUMPTION",
-   "ziel": "Ins Dorf ohne Benzin; Lasten über die Auffahrt.",
+   "ziel": "Einkauf, Notfall und kleine Lasten über die Auffahrt, auch im Winter.",
    "kette": [
     [
      "Funktion",
@@ -841,41 +850,41 @@
     ],
     [
      "Lösung",
-     "E-Bikes statt Benzin (E72); Lasten mit kleinem Fahrzeug (2.2.4)"
+     "Ein gemeinsames geländegängiges Fahrzeug; keine E-Bikes in Phase 0 (D65)"
     ],
     [
      "Betriebsmittel",
-     "Strom aus F02"
+     "Kraftstoff"
     ],
     [
      "Werkzeug",
-     "E-Bikes, Ladeplatz, Schloss, Flickzeug"
+     "Fahrzeug, Winterreifen, Schneeketten, Abschleppseil"
     ],
     [
      "Wer",
-     "Jede Person; Wartung im Wechsel"
+     "Team; Wartung im Wechsel"
     ],
     [
      "Ausfall",
-     "Im Winter sind E-Bikes auf Schnee fraglich (ASSUMPTION); Fahrdienst oder Bauer"
+     "Bauer mit Traktor"
     ]
    ],
    "pos": [
     {
-     "gegenstand": "E-Bike Formula eAlpina 2026",
-     "menge": "je Person",
-     "uah_von": 27028,
-     "uah_bis": 28663,
-     "quelle": "ek.ua",
-     "status": "DOCUMENTED"
+     "gegenstand": "Geländegängiges Fahrzeug, gebraucht",
+     "menge": "1",
+     "uah_von": 170507,
+     "uah_bis": 170507,
+     "quelle": "Kostenregister 13.11.",
+     "status": "ASSUMPTION"
     },
     {
-     "gegenstand": "E-Bike Formula eF-1",
-     "menge": "je Person",
-     "uah_von": 31204,
-     "uah_bis": 32989,
-     "quelle": "ek.ua",
-     "status": "DOCUMENTED"
+     "gegenstand": "Winterreifen",
+     "menge": "4",
+     "uah_von": 10968,
+     "uah_bis": 10968,
+     "quelle": "Kostenregister 13.11., ohne Ketten",
+     "status": "ASSUMPTION"
     }
    ],
    "stunden": "Pflege wenige Stunden im Jahr (ASSUMPTION)."
@@ -955,7 +964,7 @@
     ],
     [
      "Werkzeug",
-     "Rauch- und CO-Melder, Feuerlöscher je Haus, Erste-Hilfe-Set, Stirnlampen"
+     "Rauch- und CO-Melder, Feuerlöscher je Einheit, Erste-Hilfe-Set, Stirnlampen"
     ],
     [
      "Wer",
@@ -981,7 +990,7 @@
     },
     {
      "gegenstand": "Feuerlöscher",
-     "menge": "je Haus",
+     "menge": "je Einheit",
      "uah_von": null,
      "uah_bis": null,
      "quelle": "nicht gefunden",
@@ -989,7 +998,7 @@
     },
     {
      "gegenstand": "Erste-Hilfe-Set",
-     "menge": "je Haus",
+     "menge": "je Einheit",
      "uah_von": null,
      "uah_bis": null,
      "quelle": "nicht gefunden",
@@ -1014,7 +1023,7 @@
     ],
     [
      "Lösung",
-     "Chip-Türöffnung je Haus; kleiner Server (NAS) mit Sicherung außer Haus"
+     "Chip-Türöffnung je Einheit; kleiner Server (NAS) mit Sicherung außer Haus"
     ],
     [
      "Betriebsmittel",
@@ -1059,58 +1068,50 @@
   },
   {
    "id": "F12",
-   "name": "Wohnen (Haus)",
+   "name": "Wohnen und Arbeiten (Objekt)",
    "ebene": "Physische Welt",
-   "anf": "E40, E59, E75, E84",
+   "anf": "D55, D56",
    "sys": "XP-SYS-001, 004, 006",
    "rel": "REQUIRED",
-   "status": "DECISION REQUIRED",
-   "ziel": "Privatsphäre im eigenen Haus; Phase 0 Container, ab Phase 1 richtige Holzhäuser.",
+   "status": "OPEN",
+   "ziel": "Phase 0: ein Objekt für Team und Bauarbeiter; ab Phase 1 Wohn- und Arbeitsobjekte zur Miete.",
    "kette": [
     [
      "Funktion",
-     "Wohnen und Rückzug"
+     "Wohnen, Arbeiten, Rückzug"
     ],
     [
      "Lösung",
-     "Phase 0: Wohncontainer; Phase 1: Holzhaus in Teilen, oben montiert (E75)"
+     "Bauart offen: Holz, Beton, Glas, Metall; Bau-KI plant nach lokalen Gegebenheiten (D56)"
     ],
     [
      "Beschaffung",
-     "Container: kaufen mit Rückverkauf oder mieten. Holzhaus: Bausatz vom Hersteller, Montage durch Bauarbeiter oben"
+     "Drei schriftliche Angebote; kaufen oder mieten"
     ],
     [
      "Werkzeug",
-     "Kran oder kleines Fahrzeug nach 2.2.4; Fundament nach Geologie (O01)"
+     "Kleines Fahrzeug für den Transport in Phase 0 (D57); Fundament nach geprüfter Geologie"
     ],
     [
      "Wer",
-     "Nazar plant und nimmt ab (E38); Bauarbeiter montieren"
+     "Fachexperte Bau plant und nimmt ab; Architekt berät"
     ],
     [
      "Ausfall",
-     "Container bleiben bis zum Umzug als Reserve"
+     "OPEN"
     ]
    ],
    "pos": [
     {
-     "gegenstand": "Wohncontainer BlokModul BK1, 15 m², ohne Heizung (Phase 0)",
-     "menge": "je Person",
-     "uah_von": 444000,
-     "uah_bis": 444000,
-     "quelle": "E39, Listenpreis nicht bestätigt (O31)",
-     "status": "DOCUMENTED"
-    },
-    {
-     "gegenstand": "Holzhaus 45 m², Rohbau (Phase 1)",
-     "menge": "je Haus",
-     "uah_von": 990000,
-     "uah_bis": 1800000,
-     "quelle": "eigene Rechnung aus ukrsmeta.ua (100 m² für 2,2–4 Mio. UAH)",
+     "gegenstand": "Modul 18 m² mit Transport und Montage laut Anbieter",
+     "menge": "1",
+     "uah_von": 674900,
+     "uah_bis": 674900,
+     "quelle": "Kostenregister 13.11.",
      "status": "ASSUMPTION"
     }
    ],
-   "stunden": "Montage je Haus: OPEN, Herstellerangabe."
+   "stunden": "Montage: OPEN, Herstellerangabe."
   }
  ],
  "lernkreislauf": [
@@ -1128,18 +1129,26 @@
  "abgleich_neu": [
   {
    "id": "W19",
-   "thema": "Container oder Häuser",
-   "bisher": "Container sind die Tiny Houses der Käufer und bleiben (E59, D21 B)",
-   "jetzt": "Container nur Übergang für Team und Bauarbeiter, dann richtige Holzhäuser (Vorgabe 12.11.2026; Titelbild)",
-   "loesung": "CR-01 bis CR-03",
-   "status": "DECISION REQUIRED"
+   "thema": "Container oder Objekte",
+   "bisher": "Container sind die Tiny Houses der Käufer und bleiben (E59)",
+   "jetzt": "Ein Objekt als Übergang, danach Objekte und Kommunalgebäude",
+   "loesung": "Entschieden in D55 am 13.11.2026",
+   "status": "DOCUMENTED"
   },
   {
    "id": "W20",
-   "thema": "Preis je Haus",
-   "bisher": "Etwa 30.000 € je Käufer, bezugsfertig (E78)",
-   "jetzt": "Holzhaus 45 m² im Rohbau 19.800–36.000 € (Richtwert, ASSUMPTION)",
-   "loesung": "CR-05, Business Case OD-008",
+   "thema": "Preis",
+   "bisher": "Etwa 30.000 € je Käufer (E78)",
+   "jetzt": "Selbstkostenpreis je Objekt; kein klassischer Verkauf",
+   "loesung": "Entschieden in D49 am 13.11.2026; Zahlen aus OD-008",
+   "status": "DOCUMENTED"
+  },
+  {
+   "id": "W21",
+   "thema": "Mission",
+   "bisher": "Baseline v0.4 nennt keine Mission",
+   "jetzt": "Mission und Globalziele bleiben Ausgangspunkt (Kommentar D42)",
+   "loesung": "Harmonisierung offen",
    "status": "DECISION REQUIRED"
   }
  ]

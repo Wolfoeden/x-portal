@@ -2,7 +2,7 @@
 
 Plan für Node001 Stufe 1 (Bereschnyzja, Ortsteil Hrun, bei Werchowyna) als offener Entscheidungsbaum. Stand 12.11.2026.
 
-**Bezugsrahmen ist die Reference Architecture v0.4-WB1** (`quellen/reference-architecture-v0.4.md`). Frühere Inhalte, auch das Entscheidungslog E01–E85, sind Evidenz und Historie; bei Widerspruch gilt die Baseline. Die 20 bekannten Widersprüche stehen im Abschnitt „Abgleich“ (Seite, Markdown und JSON-Feld `abgleich`). Die Arbeitsregeln für KI stehen in Abschnitt 15 der Baseline.
+**Bezugsrahmen ist die Reference Architecture v0.4-WB1** (`quellen/reference-architecture-v0.4.md`). Frühere Inhalte, auch das Entscheidungslog E01–E85, sind Evidenz und Historie; bei Widerspruch gilt die Baseline. Die 22 bekannten Widersprüche stehen im Abschnitt „Abgleich“ (Seite, Markdown und JSON-Feld `abgleich`). Die Arbeitsregeln für KI stehen in Abschnitt 15 der Baseline.
 Online als Artefakt: https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F (privat, nur für Freigegebene).
 
 ## Dateien
