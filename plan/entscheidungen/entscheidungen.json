@@ -2,6 +2,120 @@
  "stand": "13.11.2026",
  "abschnitte": [
   {
+   "key": "vorinvest",
+   "titel": "Vor dem Investment: was aus Eigenkapital und Eigenleistung geht",
+   "karten": [
+    {
+     "id": "D69",
+     "frage": "Welches Paket vor dem Investment?",
+     "warum": "Richtwert etwa 10.000 € Eigenkapital; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten. Die Beträge kommen aus dem Kostenregister vom 13.11. (Teilschätzung, keine Angebote). Nicht enthalten sind Reisen, Architektenhonorar, Gebühren und Gründungskosten. Details auf der Seite „Vor dem Investment“.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Kern",
+       "text": "Nachweise auf Papier (Geologie-Prüfung, Zusatzerkundung, Vermessung, Wasseranalyse, Planung, Rechtsprüfung, Angebote), Werkzeug und Kurse, Holz schlagen und einlagern, Interessenten und Unterlagen. 3.226–6.172 € (mit Reserve bis 7.098 €).",
+       "ki": false
+      },
+      {
+       "v": "B",
+       "titel": "Optimum",
+       "text": "Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. 4.403–8.236 € (mit Reserve bis 9.472 €).",
+       "ki": true
+      },
+      {
+       "v": "C",
+       "titel": "Erweitert",
+       "text": "Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. 5.119–9.825 € (mit Reserve bis 11.299 €).",
+       "ki": false
+      }
+     ],
+     "frueher": [],
+     "bereich": null
+    },
+    {
+     "id": "D70",
+     "frage": "Wie wird Eigenleistung bewertet und belegt?",
+     "warum": "Im Optimum stecken rund 443 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Stundenbuch plus Steuerberater",
+       "text": "Jede Stunde mit Datum, Rolle, Tätigkeit und Foto festhalten; der Steuerberater legt fest, wie sie in die Gesellschaft eingeht.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Nur dokumentieren",
+       "text": "Stunden und Ergebnisse festhalten und Investoren zeigen, ohne sie zu bewerten.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Mit deutschem Stundensatz ansetzen",
+       "text": "Eigenleistung mit einem Marktsatz aus Deutschland bewerten und als Einlage verhandeln.",
+       "ki": false
+      }
+     ],
+     "frueher": [],
+     "bereich": null
+    },
+    {
+     "id": "D71",
+     "frage": "Ab wann sprechen wir Investoren an?",
+     "warum": "Für Investoren zählen geprüfte Nachweise. Das Deck nennt als Gate: belastbares Kostenband, validiertes Revenue Model, rechtliche Struktur, messbare Meilensteine, klarer Kapitalbedarf.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Nach Stufe A",
+       "text": "Sobald Geologie geprüft, Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Sofort mit dem heutigen Stand",
+       "text": "Gespräche jetzt führen, mit offenen Punkten klar benannt.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Erst nach dem ersten Winter",
+       "text": "Warten, bis Messreihen, trockenes Holz und erste Mieter-Interessenten vorliegen.",
+       "ki": false
+      }
+     ],
+     "frueher": [],
+     "bereich": null
+    },
+    {
+     "id": "D72",
+     "frage": "Welche offenen Kosten zuerst mit Angeboten belegen?",
+     "warum": "Im Register haben 69 von 137 Positionen keinen Betrag. Die größten Unbekannten bestimmen den Kapitalbedarf.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Die fünf größten Posten",
+       "text": "Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Alles nach Maslow",
+       "text": "Zuerst Grundbedürfnisse (Wärme, Wasser, Sanitär), dann Sicherheit, dann Arbeit und Verbindung.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Phase 1 gleich mit",
+       "text": "Zusätzlich Richtangebote für Wohn- und Arbeitsobjekte und das Kommunalgebäude.",
+       "ki": false
+      }
+     ],
+     "frueher": [],
+     "bereich": null
+    }
+   ]
+  },
+  {
    "key": "normativ",
    "titel": "Normativ: wofür und nach welchen Regeln",
    "karten": [

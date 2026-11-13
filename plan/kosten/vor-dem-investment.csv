@@ -1,0 +1,33 @@
+﻿Nr;Posten;Stufe;Variante;UAH niedrig;UAH hoch;Stunden;Risiko;Quelle;Hinweis
+A001;Fachprüfung des Geologieberichts;A · Nachweise auf Papier;K;3000;15000;4;Boden: Die KI-Zusammenfassung ist nicht geprüft. Ohne Freigabe ist jede Gründung und jeder Preis angreifbar.;"Register: 3.000 UAH „Beratung ab“; hoch = Annahme KI";
+A002;Zusatzerkundung (3 Bohrungen à 8 m);A · Nachweise auf Papier;K;24000;24000;4;Boden: Gründungshorizont für Objekt und Stützbauwerk.;Register;"Preis für anderen Standort; Hang ungeklärt."
+A003;Vermessung mit Geländemodell;A · Nachweise auf Papier;K;2500;25000;4;Planung: Grundlage für 3D-Modell, Leitungen und Kosten.;"Register: 2.500 UAH für kleine Fläche in Kyjiw; hoch = Annahme KI für 2 ha am Hang";Der Registerwert ist auffällig niedrig.
+A048;Wasseranalyse im Labor;A · Nachweise auf Papier;K;3500;3500;3;Wasser: bestimmt die Aufbereitung (5.625 bis über 45.000 UAH Unterschied).;Register;
+A010;Objekt-Skizze und Bau-KI-Planung;A · Nachweise auf Papier;K;5000;6300;40;Kosten: Basis of Design für Objekt Phase 0 und Phase 1.;Register;Register deckt nur eine Architektur-Skizze.
+A029;Heizlastberechnung;A · Nachweise auf Papier;K;810;810;2;Wärme: Ofengröße und Holzmenge.;Register;
+A057;Abwasserplanung;A · Nachweise auf Papier;K;5000;10000;4;Recht und Umwelt: Zulässigkeit am Hang mit Grundwasseraustritten.;Register;
+X01;Rechtsprüfung: ukrainische Gesellschaft, Miete, Holding;A · Nachweise auf Papier;K;50000;150000;10;Recht: Struktur, in die ein Investor einsteigen kann (D44, D48).;Annahme KI, Angebot nötig;Nicht im Register.
+X02;Drei schriftliche Angebote je großem Posten;A · Nachweise auf Papier;K;0;0;40;Kosten: macht aus Internet-Richtwerten ein belastbares Kostenband (Objekt, Brunnen, Kläranlage, Fundament, Netz).;kostet nur Zeit;
+A018;Netzanschluss beantragen;A · Nachweise auf Papier;O;29270;43905;6;"Strom: lange Frist; mit Bescheid ist Leistung und Preis belegt.";"Früherer Richtwert 2.927 UAH je kW, 10–15 kW; im Register offen";Leitung zum Grundstück kommt dazu (Register A019: 12.600–17.400 UAH für 30 m).
+A036;Motorsäge;B · Eigenanteil am Grundstück;K;9999;9999;0;;Register;
+A037;Schutzausrüstung für die Säge;B · Eigenanteil am Grundstück;K;11616;11616;0;Sicherheit und Haftung bei der Eigenleistung.;Register;"Register: nur Jacke und Hose; Helm, Handschuhe, Stiefel fehlen."
+A038;Motorsägenkurs;B · Eigenanteil am Grundstück;K;5000;5500;16;Sicherheit und Haftung.;Register;
+A040;Spaltaxt;B · Eigenanteil am Grundstück;K;2989;2989;0;;Register;
+A041;Spaltkeile;B · Eigenanteil am Grundstück;K;2356;2356;0;;Register;
+A044;Bügelsäge;B · Eigenanteil am Grundstück;K;294;294;0;;Register;
+A045;Holzfeuchtemesser;B · Eigenanteil am Grundstück;K;3720;3720;0;Wärme: Messreihe zeigt, wann das eigene Holz brennbar ist.;Register;
+A046;Schubkarre;B · Eigenanteil am Grundstück;K;3709;3709;0;;Register;
+A093;Werkzeugset mit Akkuschrauber;B · Eigenanteil am Grundstück;K;2499;2499;0;;Register;
+A096;Stirnlampen;B · Eigenanteil am Grundstück;K;2292;2292;0;;Register;
+A104;Erste-Hilfe-Ausrüstung;B · Eigenanteil am Grundstück;K;1140;1140;0;Sicherheit bei Arbeit mit der Säge.;Register;
+A105;Erste-Hilfe-Kurs;B · Eigenanteil am Grundstück;K;3000;3000;16;;Register;
+A102;Feuerlöscher;B · Eigenanteil am Grundstück;K;969;3162;0;;Register;
+A007;Baufläche und Trasse roden, Holz aufarbeiten;B · Eigenanteil am Grundstück;K;0;4800;80;Zeit: geschlagenes Holz braucht etwa ein Jahr zum Trocknen. Was jetzt liegt, heizt den zweiten Winter.;"Eigenleistung; hoch = Register (Fällfirma für schwierige Bäume)";Fällgenehmigung vorher klären.
+A035;Holzlager bauen;B · Eigenanteil am Grundstück;K;19000;19000;24;Wärme: trockenes Holz für Phase 0.;"Register (fertiger Holzständer); Eigenbau aus eigenem Holz kann günstiger sein";
+X03;Absteckung und Messreihen (Quellschüttung, Wetter, Schnee);B · Eigenanteil am Grundstück;K;0;0;30;Wasser und Klima: Winterwerte, die sonst ein Jahr fehlen.;kostet nur Zeit;
+A004;Hangseitiger Entwässerungsgraben, 20 m;B · Eigenanteil am Grundstück;O;30000;60000;40;"Boden: schützt die Baufläche vor Hangwasser; Empfehlung des Gutachters.";Register;Erst nach Freigabe durch den Fachexperten. Mit Eigenleistung sinkt der Betrag.
+A049;Brunnen bohren, 20–40 m;B · Eigenanteil am Grundstück;E;36000;80000;8;Wasser: beweist Menge und Qualität am Ort. Größtes offenes Risiko nach dem Boden.;Register;"Tiefe unbekannt; Pumpe und Leitung kommen später dazu."
+X04;Mieter-Interessenten sammeln;C · Nachfrage und Umsatz;K;0;0;60;Nachfrage: belegt, dass jemand oben wohnen und zahlen will (D50).;kostet nur Zeit;
+X05;Erster bezahlter Kundenauftrag der Agentur;C · Nachfrage und Umsatz;K;0;0;0;Umsatz: zeigt, dass die Company Geld verdient.;bringt Umsatz;
+X06;Selbstkostenrechnung je Objekt;C · Nachfrage und Umsatz;K;0;0;20;Wirtschaftlichkeit: Miete und Pauschale aus echten Kosten (D49).;kostet nur Zeit;
+X07;Investorenunterlagen mit geprüften Zahlen;C · Nachfrage und Umsatz;K;0;0;40;Vertrauen: Whitepaper und Deck ohne offene Kernfragen.;kostet nur Zeit;

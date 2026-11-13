@@ -2,6 +2,36 @@
 
 Alle früheren Entscheidungen E01–E85 sind zurückgenommen. Neu gilt nur, was auf der Seite gewählt ist.
 
+## Vor dem Investment: was aus Eigenkapital und Eigenleistung geht
+
+### D69 Welches Paket vor dem Investment?
+Richtwert etwa 10.000 € Eigenkapital; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten. Die Beträge kommen aus dem Kostenregister vom 13.11. (Teilschätzung, keine Angebote). Nicht enthalten sind Reisen, Architektenhonorar, Gebühren und Gründungskosten. Details auf der Seite „Vor dem Investment“.
+
+- A · Kern: Nachweise auf Papier (Geologie-Prüfung, Zusatzerkundung, Vermessung, Wasseranalyse, Planung, Rechtsprüfung, Angebote), Werkzeug und Kurse, Holz schlagen und einlagern, Interessenten und Unterlagen. 3.226–6.172 € (mit Reserve bis 7.098 €).
+- B · Optimum (Vorschlag KI): Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. 4.403–8.236 € (mit Reserve bis 9.472 €).
+- C · Erweitert: Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. 5.119–9.825 € (mit Reserve bis 11.299 €).
+
+### D70 Wie wird Eigenleistung bewertet und belegt?
+Im Optimum stecken rund 443 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.
+
+- A · Stundenbuch plus Steuerberater (Vorschlag KI): Jede Stunde mit Datum, Rolle, Tätigkeit und Foto festhalten; der Steuerberater legt fest, wie sie in die Gesellschaft eingeht.
+- B · Nur dokumentieren: Stunden und Ergebnisse festhalten und Investoren zeigen, ohne sie zu bewerten.
+- C · Mit deutschem Stundensatz ansetzen: Eigenleistung mit einem Marktsatz aus Deutschland bewerten und als Einlage verhandeln.
+
+### D71 Ab wann sprechen wir Investoren an?
+Für Investoren zählen geprüfte Nachweise. Das Deck nennt als Gate: belastbares Kostenband, validiertes Revenue Model, rechtliche Struktur, messbare Meilensteine, klarer Kapitalbedarf.
+
+- A · Nach Stufe A (Vorschlag KI): Sobald Geologie geprüft, Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher.
+- B · Sofort mit dem heutigen Stand: Gespräche jetzt führen, mit offenen Punkten klar benannt.
+- C · Erst nach dem ersten Winter: Warten, bis Messreihen, trockenes Holz und erste Mieter-Interessenten vorliegen.
+
+### D72 Welche offenen Kosten zuerst mit Angeboten belegen?
+Im Register haben 69 von 137 Positionen keinen Betrag. Die größten Unbekannten bestimmen den Kapitalbedarf.
+
+- A · Die fünf größten Posten (Vorschlag KI): Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung.
+- B · Alles nach Maslow: Zuerst Grundbedürfnisse (Wärme, Wasser, Sanitär), dann Sicherheit, dann Arbeit und Verbindung.
+- C · Phase 1 gleich mit: Zusätzlich Richtangebote für Wohn- und Arbeitsobjekte und das Kommunalgebäude.
+
 ## Normativ: wofür und nach welchen Regeln
 
 ### D42 Vision und Mission: was gilt?

@@ -25,6 +25,28 @@ def o(letter, title, text, ki=False):
     return dict(v=letter, titel=title, text=text, ki=ki)
 
 ABSCHNITTE = [
+ ('vorinvest', 'Vor dem Investment: was aus Eigenkapital und Eigenleistung geht', [
+  K('D69', 'Welches Paket vor dem Investment?',
+    'Richtwert etwa 10.000 € Eigenkapital; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten. Die Beträge kommen aus dem Kostenregister vom 13.11. (Teilschätzung, keine Angebote). Nicht enthalten sind Reisen, Architektenhonorar, Gebühren und Gründungskosten. Details auf der Seite „Vor dem Investment“.',
+    [o('A', 'Kern', 'Nachweise auf Papier (Geologie-Prüfung, Zusatzerkundung, Vermessung, Wasseranalyse, Planung, Rechtsprüfung, Angebote), Werkzeug und Kurse, Holz schlagen und einlagern, Interessenten und Unterlagen. 3.226–6.172 € (mit Reserve bis 7.098 €).'),
+     o('B', 'Optimum', 'Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. 4.403–8.236 € (mit Reserve bis 9.472 €).', ki=True),
+     o('C', 'Erweitert', 'Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. 5.119–9.825 € (mit Reserve bis 11.299 €).')]),
+  K('D70', 'Wie wird Eigenleistung bewertet und belegt?',
+    'Im Optimum stecken rund 443 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.',
+    [o('A', 'Stundenbuch plus Steuerberater', 'Jede Stunde mit Datum, Rolle, Tätigkeit und Foto festhalten; der Steuerberater legt fest, wie sie in die Gesellschaft eingeht.', ki=True),
+     o('B', 'Nur dokumentieren', 'Stunden und Ergebnisse festhalten und Investoren zeigen, ohne sie zu bewerten.'),
+     o('C', 'Mit deutschem Stundensatz ansetzen', 'Eigenleistung mit einem Marktsatz aus Deutschland bewerten und als Einlage verhandeln.')]),
+  K('D71', 'Ab wann sprechen wir Investoren an?',
+    'Für Investoren zählen geprüfte Nachweise. Das Deck nennt als Gate: belastbares Kostenband, validiertes Revenue Model, rechtliche Struktur, messbare Meilensteine, klarer Kapitalbedarf.',
+    [o('A', 'Nach Stufe A', 'Sobald Geologie geprüft, Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher.', ki=True),
+     o('B', 'Sofort mit dem heutigen Stand', 'Gespräche jetzt führen, mit offenen Punkten klar benannt.'),
+     o('C', 'Erst nach dem ersten Winter', 'Warten, bis Messreihen, trockenes Holz und erste Mieter-Interessenten vorliegen.')]),
+  K('D72', 'Welche offenen Kosten zuerst mit Angeboten belegen?',
+    'Im Register haben 69 von 137 Positionen keinen Betrag. Die größten Unbekannten bestimmen den Kapitalbedarf.',
+    [o('A', 'Die fünf größten Posten', 'Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung.', ki=True),
+     o('B', 'Alles nach Maslow', 'Zuerst Grundbedürfnisse (Wärme, Wasser, Sanitär), dann Sicherheit, dann Arbeit und Verbindung.'),
+     o('C', 'Phase 1 gleich mit', 'Zusätzlich Richtangebote für Wohn- und Arbeitsobjekte und das Kommunalgebäude.')]),
+ ]),
  ('normativ', 'Normativ: wofür und nach welchen Regeln', [
   K('D42', 'Vision und Mission: was gilt?',
     'Die Reference Architecture v0.4 bringt eine neue Vision und eine Kerndefinition, aber keine Mission (Abgleich W01). Die alte Mission „Innovationshubs“ und die drei Globalziele stammen aus der Zeit davor.',
@@ -222,7 +244,8 @@ ABSCHNITTE = [
  ]),
 ]
 
-ANS = 'https://claude.ai/artifact/__ANS__'
+ANS = 'https://claude.ai/artifact/Xt8ocuZNXnnwsZNfAfPsoY'
+VOR = 'https://claude.ai/artifact/2zHiqw7dU8oHFnsZWBsh1P'
 # Was aus Wahl und Kommentar vom 13.11.2026 folgt. Wo der Kommentar die Wahl ändert, gilt der Kommentar.
 FOLGT = {
  'D42': 'Mission und Globalziele bleiben der Ausgangspunkt. Aufgabe: mit Vision v0.4 und Zielblatt in eine durchgehende Logik bringen.',
@@ -329,7 +352,7 @@ def build(src, log, alt):
 <p class="no">Node001 Beregniza · Stand {STAND}</p>
 <h1>Entscheidungen Node001</h1>
 <p class="reset"><b>Am 13.11.2026 sind alle 32 Karten neu beantwortet.</b> Es gelten Wahl und Kommentar zusammen; wo der Kommentar die Wahl ändert, gilt der Kommentar. Jede Karte zeigt oben, was daraus folgt. Die früheren Entscheidungen E01–E85 sind zurückgenommen und stehen unten als Historie.</p>
-<p><b>Nächster Schritt:</b> <a href="{ANS}" target="_blank" rel="noreferrer">Anschaffungsliste: 120 Objekte und Gegenstände zum Recherchieren →</a></p>
+<p><b>Nächster Schritt:</b> vier neue Karten D69–D72 zur Frage, was vor dem Investment aus Eigenkapital und Eigenleistung geht. Optimum laut Kostenregister: 4.403–8.236 € (mit Reserve bis 9.472 €). <a href="{VOR}" target="_blank" rel="noreferrer">Vor dem Investment →</a> · <a href="{ANS}" target="_blank" rel="noreferrer">Anschaffungsliste →</a></p>
 <details><summary>Überblick: was seit 13.11. gilt ({len(FOLGT)})</summary><div class="tw2"><table class="ueb"><tbody>{"".join(f"<tr><td class=no>{k}</td><td>{e(v)}</td></tr>" for k, v in sorted(FOLGT.items()))}</tbody></table></div></details>
 <p>Zu jeder Entscheidung: <b>Gefällt mir</b> bei einer Möglichkeit, <b>Weiß ich noch nicht</b>, oder <b>Keine davon</b>, dann machen die Agenten neue Entwürfe. „Vorschlag KI“ ist nur ein Vorschlag und gilt erst, wenn ihr ihn wählt.</p>
 <p class="status" id="status">Lädt …</p>
@@ -381,7 +404,7 @@ if __name__ == '__main__':
         d = json.loads(f.read_text()); alt[f.stem] = d.get('data', d)
     for f in sorted((base / 'antworten-2026-11-13/wahl').glob('D*.json')):
         d = json.loads(f.read_text()); NEU[f.stem] = d.get('data', d)
-    assert set(NEU) == set(FOLGT), set(NEU) ^ set(FOLGT)
+    assert set(NEU) >= set(FOLGT), set(FOLGT) - set(NEU)
     page, where = build(src, log, alt)
     (base / 'entscheidungsseite.html').write_text(page)
     (base / 'entscheidungen.md').write_text(md(log, where))
