@@ -1,0 +1,702 @@
+{
+ "stand": "13.11.2026",
+ "auf_einen_blick": [
+  {
+   "thema": "Ziel",
+   "aussage": "Zwei bis drei Leute vom Team wohnen und arbeiten ganzjährig oben und verdienen dort Geld; dazu kommen Mieter.",
+   "quelle": "D45"
+  },
+  {
+   "thema": "Modell",
+   "aussage": "Vermietet wird, verkauft wird im klassischen Sinn nichts. Miete und Pauschalen folgen aus den Selbstkosten; Projekt- und Gemeinschaftsleistung wird angerechnet.",
+   "quelle": "D45, D48, D49, D38"
+  },
+  {
+   "thema": "Struktur",
+   "aussage": "X-PORTAL hält als Holding Lizenzen und Marken. Eine Agentur liefert Projekte im DACH-Raum. Node001 hält eine ukrainische Gesellschaft. Die Rechtsprüfung steht aus.",
+   "quelle": "D44"
+  },
+  {
+   "thema": "Kapital",
+   "aussage": "Eigenkapital bis zur fertigen Bauplanung. Infrastruktur und Objekte mit Investoren, verbunden mit wiederkehrenden Erlösen.",
+   "quelle": "D46, D47"
+  },
+  {
+   "thema": "Phase 0",
+   "aussage": "Ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit Wasser, Strom und Internet, die mitwachsen. Sanitär und Warmwasser fest eingebaut.",
+   "quelle": "D55, D62"
+  },
+  {
+   "thema": "Phase 1",
+   "aussage": "Zuerst das Kommunalgebäude, dann Wohn- und Arbeitsobjekte. Material und Bauart plant eine Bau-KI nach den lokalen Gegebenheiten.",
+   "quelle": "D55, D56, D64"
+  },
+  {
+   "thema": "Standort",
+   "aussage": "Nordosthang, 1.016–1.077 m. Der Geologiebericht liegt vor; die deutsche Zusammenfassung ist von einer KI erstellt und fachlich nicht geprüft.",
+   "quelle": "Geologie"
+  },
+  {
+   "thema": "Kosten",
+   "aussage": "Es gibt eine Teilrechnung aus Internet-Richtwerten, keine Angebote. 69 von 137 Positionen haben keinen Betrag; Phase 1 ist nicht gerechnet.",
+   "quelle": "Kostenregister"
+  },
+  {
+   "thema": "Vor dem Investment",
+   "aussage": "Mit rund 10.000 € Eigenmitteln und eigener Arbeit werden Boden, Wasser, Strom, Recht, Kosten und Nachfrage geklärt. Welches Paket, ist offen.",
+   "quelle": "D69"
+  },
+  {
+   "thema": "Arbeitsweise",
+   "aussage": "Rollen statt Namen. Ein Vorschlag der KI gilt erst, wenn er auf der Entscheidungsseite gewählt ist. Technische Werte legt ein Fachexperte fest.",
+   "quelle": "D43"
+  }
+ ],
+ "geologie": {
+  "status": "NICHT GEPRÜFT, KI-Zusammenfassung XPB-N001-GEO-SUM-001",
+  "fakten": {
+   "Lage": "Nordöstlich exponierter Hang des Berges Bila Kobyla; Geländehöhen 1.016–1.077 m.",
+   "Untersuchung": "September bis November 2026: 3 Schürfgruben mit zusammen 7,5 m und 12 Handbohrungen bis je 2 m. Ingenieurgeologische Komplexität Kategorie III.",
+   "Grundwasser": "Austritte an der Oberfläche bei den Bohrpunkten 6, 7 und 11; zusätzliche Wasserbewegung bei Starkregen und Schneeschmelze. Gegen Beton normaler Dichte nicht aggressiv.",
+   "Hang": "Verbreitete Rutsch- und Fließprozesse; bewegte Schichten 0,8–1,2 m mächtig (an anderer Stelle 0,9–1,2 m genannt), Flächen meist 3–4 m², teils bis 15 m².",
+   "Boden": "Nicht kollapsgefährdet; seismische Bodenkategorie II."
+  },
+  "schichten": [
+   [
+    "IGE-1",
+    "Lehmiger Oberboden mit Sandsteinstücken, von Rutschprozessen betroffen",
+    "0,6–1,1 m",
+    "19 MPa",
+    "23°",
+    "27 kPa",
+    "240 kPa"
+   ],
+   [
+    "IGE-2",
+    "Weichplastischer Lehm; an den Punkten 6, 7, 11 mit Grundwasseraustritt",
+    "0,8–1,1 m",
+    "6 MPa",
+    "14°",
+    "13 kPa",
+    "130 kPa"
+   ],
+   [
+    "IGE-3",
+    "Schuttmaterial mit Sandstein, lehmiger Feinanteil bis 30 %; bei 6, 7, 11 wassergesättigt",
+    "1,0–1,4 m",
+    "45 MPa",
+    "33°",
+    "8 kPa",
+    "500 kPa"
+   ],
+   [
+    "IGE-4",
+    "Flysch: geklüftete Sandsteine, Argillite; Schichten etwa 70° geneigt",
+    "nicht durchgehend nachgewiesen",
+    "–",
+    "–",
+    "–",
+    "–"
+   ]
+  ],
+  "empfehlungen": [
+   "Kombinierte Streifen- und Stützfundamentierung; Gründung auf IGE-3 oder IGE-4.",
+   "IGE-3 für leichte eingeschossige Gebäude; IGE-4 für massive, dauerhafte Gebäude.",
+   "Hangseitigen Fundamentbereich als Stützkonstruktion bemessen.",
+   "Hangseitiger Entwässerungsgraben; Wasser über Rinnen ableiten oder in einem Behälter sammeln.",
+   "Oberflächen- und Grundwasser vor Abfällen und Abwasser schützen.",
+   "Zusätzliche Erkundung für Zufahrt, Stützkonstruktionen und Hauptgebäude; ebenso bei geänderten Gebäuden oder Fundamenten.",
+   "Für den Standort sind die Kennwerte von IGE-3 mit 70 % der Tabellenwerte anzusetzen (Anmerkung des Gutachters)."
+  ]
+ },
+ "modell": [
+  {
+   "bereich": "Produkt",
+   "titel": "Miete und Services",
+   "text": "Wohnen und Arbeiten zur Miete, Leistungen vor Ort. Zuerst Mieter gewinnen, schon vor dem Bau. Tokenisierung und Beteiligung auf mehreren Ebenen erst nach rechtlicher Klärung.",
+   "quelle": "D45, D48, D50"
+  },
+  {
+   "bereich": "Preis",
+   "titel": "Selbstkosten",
+   "text": "Miete und monatliche Pauschale werden aus den Selbstkosten je Objekt abgeleitet. Erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen. Essen gegen Mitarbeit.",
+   "quelle": "D49, D38, D36"
+  },
+  {
+   "bereich": "Struktur",
+   "titel": "Holding, Agentur, Node",
+   "text": "X-PORTAL: Unternehmensarchitektur, Lizenzen, Markenrechte. Agentur: Projekte in Deutschland, Österreich, Schweiz. Node001: ukrainische Gesellschaft. Wer mitwirkt, wird am jeweiligen Node beteiligt, nicht an der Holding.",
+   "quelle": "D44, D37"
+  },
+  {
+   "bereich": "Kapital",
+   "titel": "Eigenkapital, dann Investoren",
+   "text": "Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt.",
+   "quelle": "D46, D47"
+  },
+  {
+   "bereich": "Erlöse",
+   "titel": "Vier Stufen",
+   "text": "Kundenprojekte heute; Technologielösungen in Entwicklung (KI, später Robotik, Drohnen, Mechanik); Miete und Services am Node; Skalierung und Standardisierung von Anfang an mitgedacht.",
+   "quelle": "D51"
+  },
+  {
+   "bereich": "Alltag",
+   "titel": "Gemeinschaft mit Anreiz",
+   "text": "Gemeinschaftsarbeit (Schnee, Pflanzen, Kapelle, Kehrwoche) wird gefördert und mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano. Team: Wohnen und Essen frei plus Anteil am Node.",
+   "quelle": "D36, D37"
+  }
+ ],
+ "bedarf": [
+  {
+   "stufe": 1,
+   "name": "Grundbedürfnisse",
+   "bereiche": [
+    "Objekt Phase 0",
+    "Wärme und Holz",
+    "Wasser",
+    "Sanitär und Abwasser",
+    "Küche und Essen"
+   ],
+   "vor_phase": "Geprüfte Wärme- und Wasserplanung, Wasseranalyse, eigenes Holz schlagen und einlagern",
+   "phase0": "Objekt mit Schlafplatz; Ofen und zweite Wärmequelle; Brunnen mit Aufbereitung zu Trinkwasser; Spültoilette, Dusche, Warmwasser, Kläranlage; Küche",
+   "phase1": "Wohnobjekte für Mieter und Team",
+   "positionen": {
+    "Objekt Phase 0": [
+     "A009",
+     "A017",
+     9
+    ],
+    "Wärme und Holz": [
+     "A029",
+     "A047",
+     19
+    ],
+    "Wasser": [
+     "A048",
+     "A056",
+     9
+    ],
+    "Sanitär und Abwasser": [
+     "A057",
+     "A065",
+     9
+    ],
+    "Küche und Essen": [
+     "A074",
+     "A080",
+     7
+    ]
+   }
+  },
+  {
+   "stufe": 2,
+   "name": "Sicherheit",
+   "bereiche": [
+    "Grundstück und Gründung",
+    "Strom",
+    "Werkzeug und Wartung",
+    "Sicherheit und Notfall"
+   ],
+   "vor_phase": "Fachprüfung der Geologie, Zusatzerkundung, Rechtsprüfung der Struktur, Entwässerungsgraben, Schutzausrüstung und Erste Hilfe",
+   "phase0": "Fundament und Stützkonstruktion; Netzanschluss mit Generator; Melder, Löscher, Notfallkommunikation; Versicherung",
+   "phase1": "Solar mit Speicher; Gesamtplanung der Zufahrt",
+   "positionen": {
+    "Grundstück und Gründung": [
+     "A001",
+     "A008",
+     8
+    ],
+    "Strom": [
+     "A018",
+     "A028",
+     11
+    ],
+    "Werkzeug und Wartung": [
+     "A093",
+     "A099",
+     7
+    ],
+    "Sicherheit und Notfall": [
+     "A100",
+     "A108",
+     9
+    ]
+   }
+  },
+  {
+   "stufe": 3,
+   "name": "Arbeit und Verbindung",
+   "bereiche": [
+    "Internet und IT",
+    "Zufahrt, Schnee und Transport",
+    "Mobilität"
+   ],
+   "vor_phase": "Angebot Internet, Antrag Netzanschluss, erster bezahlter Auftrag",
+   "phase0": "Internet mit Reserve; Arbeitsplätze; kleines Fahrzeug für den Transport; gemeinsames Fahrzeug; Räumvertrag",
+   "phase1": "Arbeitsobjekte; Arbeitsplätze im Kommunalgebäude",
+   "positionen": {
+    "Internet und IT": [
+     "A066",
+     "A073",
+     8
+    ],
+    "Zufahrt, Schnee und Transport": [
+     "A081",
+     "A088",
+     8
+    ],
+    "Mobilität": [
+     "A089",
+     "A092",
+     4
+    ]
+   }
+  },
+  {
+   "stufe": 4,
+   "name": "Gemeinschaft",
+   "bereiche": [
+    "Gemeinschaft in Phase 1"
+   ],
+   "vor_phase": "Mietinteressenten sammeln",
+   "phase0": "Gemeinsame Arbeit nach Plan: Holz, Schnee, Küche",
+   "phase1": "Kommunalgebäude zuerst; Garten, Feuerstelle, Sauna; Bergkapelle als Gruppenprojekt",
+   "positionen": {
+    "Gemeinschaft in Phase 1": [
+     "A109",
+     "A115",
+     7
+    ]
+   }
+  },
+  {
+   "stufe": 5,
+   "name": "Entwicklung",
+   "bereiche": [
+    "Erfassung und Zugang"
+   ],
+   "vor_phase": "Stundenbuch der Eigenleistung, Messreihen, Selbstkostenrechnung",
+   "phase0": "Zugang per Chip; Erfassung der Gemeinschaftsarbeit",
+   "phase1": "Zähler je Einheit; Regeln aus dem ersten Winter für den nächsten Node",
+   "positionen": {
+    "Erfassung und Zugang": [
+     "A116",
+     "A120",
+     5
+    ]
+   }
+  }
+ ],
+ "offen": [
+  {
+   "schritt": "Schritt 1 · Boden und Lage",
+   "knoten": [
+    {
+     "id": "GEO",
+     "frage": "Wer prüft den Geologiebericht fachlich und gibt ihn frei?",
+     "moeglichkeiten": [
+      "Geotechniker aus der Region",
+      "Prüfingenieur über den beratenden Architekten",
+      "Zweitgutachten"
+     ],
+     "haengt_ab_von": "Originalbericht liegt vor",
+     "blockiert": "Fundament, Stützkonstruktion, Bauplanung, jedes Angebot",
+     "entscheidet": "Geschäftsführung",
+     "status": "DECISION REQUIRED"
+    },
+    {
+     "id": "BILD",
+     "frage": "Welches Lagebild ersetzt den Generalplan Variante 2?",
+     "moeglichkeiten": [
+      "Neues Bild der Projektleitung (angekündigt)",
+      "Hochgeladener Detailplan, Blatt 3"
+     ],
+     "haengt_ab_von": "–",
+     "blockiert": "Darstellung von Phase 0 im Gelände",
+     "entscheidet": "Projektleitung",
+     "status": "OPEN"
+    }
+   ]
+  },
+  {
+   "schritt": "Schritt 2 · Paket und Struktur",
+   "knoten": [
+    {
+     "id": "D69",
+     "frage": "Welches Paket vor dem Investment: Kern, Optimum oder Erweitert?",
+     "moeglichkeiten": null,
+     "haengt_ab_von": "Eigenmittel; nicht erfasste Posten (Reisen, Honorare, Gebühren)",
+     "blockiert": "Start der Vor-Phase",
+     "entscheidet": "Geschäftsführung",
+     "status": "DECISION REQUIRED"
+    },
+    {
+     "id": "D70",
+     "frage": "Wie wird Eigenleistung bewertet und belegt?",
+     "moeglichkeiten": [
+      "Stundenbuch plus Steuerberater",
+      "Nur dokumentieren",
+      "Mit deutschem Stundensatz ansetzen"
+     ],
+     "haengt_ab_von": "D69",
+     "blockiert": "Eigenanteil in der Verhandlung",
+     "entscheidet": "Geschäftsführung",
+     "status": "DECISION REQUIRED"
+    },
+    {
+     "id": "D44",
+     "frage": "Welche Rechtsform bekommt die Gesellschaft für Node001, und wo werden Services abgewickelt?",
+     "moeglichkeiten": [
+      "Lokale Gesellschaft als Teil der Holding",
+      "Getrennte Betriebsgesellschaft"
+     ],
+     "haengt_ab_von": "Rechtsprüfung",
+     "blockiert": "Mietverträge, Beteiligung am Node, Einstieg von Investoren",
+     "entscheidet": "Geschäftsführung mit Anwälten",
+     "status": "DECISION REQUIRED"
+    },
+    {
+     "id": "D42",
+     "frage": "Wie werden Mission und Globalziele mit der Vision v0.4 in eine Logik gebracht?",
+     "moeglichkeiten": [
+      "Mission und Globalziele als Ausgangspunkt, Vision v0.4 darunter",
+      "Neue Fassung aus einem Guss"
+     ],
+     "haengt_ab_von": "–",
+     "blockiert": "Außendarstellung in Whitepaper und Deck",
+     "entscheidet": "Geschäftsführung und Projektleitung",
+     "status": "DECISION REQUIRED"
+    }
+   ]
+  },
+  {
+   "schritt": "Schritt 3 · Planung und Angebote",
+   "knoten": [
+    {
+     "id": "D56",
+     "frage": "Welche Bauart für Objekt Phase 0 und für Phase 1?",
+     "moeglichkeiten": [
+      "Holz",
+      "Beton",
+      "Glas und Metall",
+      "Mischbauweise"
+     ],
+     "haengt_ab_von": "Geprüfte Geologie, Vermessung, Zufahrt; Bewertung durch die Bau-KI",
+     "blockiert": "Angebote, Selbstkosten, Transport",
+     "entscheidet": "Geschäftsführung nach Vorschlag Fachexperte Bau",
+     "status": "OPEN"
+    },
+    {
+     "id": "D72",
+     "frage": "Welche offenen Kosten werden zuerst mit Angeboten belegt?",
+     "moeglichkeiten": [
+      "Die fünf größten Posten",
+      "Alles nach Maslow",
+      "Phase 1 gleich mit"
+     ],
+     "haengt_ab_von": "D56",
+     "blockiert": "Kostenband, Kapitalbedarf",
+     "entscheidet": "Projektleitung",
+     "status": "DECISION REQUIRED"
+    },
+    {
+     "id": "OD-002",
+     "frage": "Welche Zielwerte gelten je kritischer Funktion (Ausfallzeit, Notbetrieb, Reserve)?",
+     "moeglichkeiten": null,
+     "haengt_ab_von": "Lastliste, Personenzahl",
+     "blockiert": "Größe von Generator, Tank, Speicher; Abnahmetabelle",
+     "entscheidet": "Projektleitung prüft und gibt frei",
+     "status": "OPEN"
+    }
+   ]
+  },
+  {
+   "schritt": "Schritt 4 · Wirtschaftlichkeit und Ansprache",
+   "knoten": [
+    {
+     "id": "D38",
+     "frage": "Wie hoch ist die monatliche Pauschale, und wie werden Leistungen abgezogen?",
+     "moeglichkeiten": null,
+     "haengt_ab_von": "Selbstkosten je Objekt",
+     "blockiert": "Mietangebot an Interessenten",
+     "entscheidet": "Geschäftsführung",
+     "status": "OPEN"
+    },
+    {
+     "id": "D52",
+     "frage": "Wie steht das Einkommen der Geschäftsführung im Plan?",
+     "moeglichkeiten": [
+      "Als Kostenzeile der Company",
+      "Zuerst vor allen Kosten",
+      "Erst mit Umsatz"
+     ],
+     "haengt_ab_von": "–",
+     "blockiert": "Business Case der Company",
+     "entscheidet": "Geschäftsführung",
+     "status": "DECISION REQUIRED"
+    },
+    {
+     "id": "OD-005",
+     "frage": "Welche Messgrößen und Go/Revise/Stop-Grenzen gelten für die acht Hypothesen?",
+     "moeglichkeiten": null,
+     "haengt_ab_von": "Kostenband, Mietmodell",
+     "blockiert": "Investitionsfreigabe",
+     "entscheidet": "Geschäftsführung und Projektleitung",
+     "status": "OPEN"
+    },
+    {
+     "id": "D71",
+     "frage": "Ab wann werden Investoren angesprochen?",
+     "moeglichkeiten": [
+      "Nach Stufe A des Pakets",
+      "Sofort mit dem heutigen Stand",
+      "Erst nach dem ersten Winter"
+     ],
+     "haengt_ab_von": "Geprüfte Geologie, Struktur, Angebote",
+     "blockiert": "Investorengespräch",
+     "entscheidet": "Geschäftsführung",
+     "status": "DECISION REQUIRED"
+    }
+   ]
+  }
+ ],
+ "entschieden": {
+  "D34": {
+   "thema": "Feuerstelle, Gastronomie, Kapelle",
+   "gilt": "Feuerstelle in Phase 1, Gastronomie später. Die Bergkapelle wird als Gruppenprojekt der Bewohner geplant und so kommuniziert.",
+   "wahl": "B",
+   "kommentar": "in der planung/wording für öffentlichkeit berücksichtigen das die mitglieder und bewhoner in den ersten phasen daran beteiligt sind die bergkapelle als gruppenprojekt daran beteiligt zu sein \nprojektowner ist mutter dering"
+  },
+  "D35": {
+   "thema": "Sauna",
+   "gilt": "Eigene Sauna in Phase 1.",
+   "wahl": "A",
+   "kommentar": null
+  },
+  "D36": {
+   "thema": "Essen und Gemeinschaftsarbeit",
+   "gilt": "Essen gegen Mitarbeit. Gemeinschaftsarbeit (Schnee, Pflanzen, Kapelle, Kehrwoche) wird gefördert und mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano.",
+   "wahl": "C",
+   "kommentar": "st gallen manamgent modell -> kommunale arbeit stark fördern mit incentives -> bedarfe erfassen, definieren und umsetzen \nauch aufgaben wie schneeschippen, pflanzenpflege, kapellenaufbau, kehrwoche, etc - muss erfasst werden mit geringem aufwand (voraussichtlich access controll via cardano tech)\nziel vom team: wirtschaftlich denken, gemeinschafltiches leben gestalten im rahmen der xportal vision (daraus leitet sich dann die lernkurve für node00x an)"
+  },
+  "D37": {
+   "thema": "Bezahlung und Beteiligung des Teams",
+   "gilt": "Wohnen und Essen frei plus Anteil; der Anteil liegt am jeweiligen Node, nicht an der Holding. Die Unternehmensstruktur muss das abbilden.",
+   "wahl": "C",
+   "kommentar": "mix mit b vom anteil xportal in fraktionalisiertem eigentum\nbeispiel: architektur -> menschen die mitwirken bekmmen nicht xportal holding anteile sondern am node001(wo sie jeweils sind) das muss auch in der architektur für die unternehmensstruktur berückscihtigt werden"
+  },
+  "D38": {
+   "thema": "Pauschale für Leistungen",
+   "gilt": "Monatliche Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen. Weiter zu besprechen.",
+   "wahl": "A",
+   "kommentar": "abzug der pauschale von oben erbrachten leistungen in projekt und kommunalleistungen wie kapelle und gartenarbeit \n-> arbeit an proejkten wie eben robotik/drohnen oder freelancer leistungen für DACH region unter dt agency (muss weiter diskutiert werden)"
+  },
+  "D42": {
+   "thema": "Vision und Mission",
+   "gilt": "Mission und Globalziele bleiben der Ausgangspunkt. Aufgabe: mit Vision v0.4 und Zielblatt in eine durchgehende Logik bringen.",
+   "wahl": null,
+   "kommentar": "Es gilt die Vision v0.4 mit Kerndefinition. Mission und Globalziele entfallen; die Ziele stehen im Zielblatt (Z1–Z4).\n\nbruch in der logik, muss harmonisiert werden, die mission und globalziele sind ausgangspunkt."
+  },
+  "D43": {
+   "thema": "Entscheidungsrechte",
+   "gilt": "Rollenbasiert: Texte nennen Rollen statt Namen, und es heißt „Fachexperte“. Ein KI-Vorschlag gilt erst mit Wahl auf der Entscheidungsseite.",
+   "wahl": "A",
+   "kommentar": "fachperson -> fachexperte\nrollen anstatt namen nennen um später auch personen auswechseln zu können (rollenbasierte logik)"
+  },
+  "D44": {
+   "thema": "Organisation",
+   "gilt": "X-PORTAL hält als Holding Lizenzen und Markenrechte. Die DT Agentur übernimmt Projekte in Deutschland, Österreich und der Schweiz. Node001 hält eine ukrainische Gesellschaft. Offen: wo Services am Node abgewickelt werden (voraussichtlich lokale Gesellschaft); Rechtsprüfung.",
+   "wahl": null,
+   "kommentar": "A stimmt weitestgehen. unterschied in der unternehmensarchitektur und service\"plattform\" \nnode001 wird von einer ukraineischen unternehmung gehalten. dt agentur übernimmt deutsche/österreichische/schweizer projekte. x-portal ist die unternehmensarchitektur die lizenzen, markenrechte, ähnliches hält.\nzu klären wo services auf den nodes abgewickelt werden -> vorrausstichlich lokale unternehmungsform - als teil von x-portal holding (jurisprudenz ist noch zu klären)"
+  },
+  "D45": {
+   "thema": "Wer oben wohnt",
+   "gilt": "Team plus Mieter. Es gibt keinen Immobilienverkauf im klassischen Sinn.",
+   "wahl": "C",
+   "kommentar": "Verkauf an Käufer später. -> wir verkaufen keine immobilien in der klassischen form"
+  },
+  "D46": {
+   "thema": "Kapital Node001",
+   "gilt": "Node001 wird mit Eigenkapital und VC oder Investments finanziert, verbunden mit wiederkehrenden Erlösen. Ein Verkauf an Einzelne ist abgewählt.",
+   "wahl": null,
+   "kommentar": "wir haben uns gegen das käufermodelll entschieden, es werden eine mischung aus eigenkapital und vc/investments -> verbund mit Recurring Revenue"
+  },
+  "D47": {
+   "thema": "Kapital Company",
+   "gilt": "Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding.",
+   "wahl": null,
+   "kommentar": "eigenkapital bis zur vollendeten bauplanung -> infrastruktur (wasser/wärme etc)/objekte mit investoren \nförderung sollte nicht öffenltihc zugänglich ersichtlich sein - - - nur obligatorische anforderungen vom kapitalgeber\n(Das Matching der BW Bank geht in IT in Deutschland: Rechner, Server, Hardware. Die Server oben werden für personenbezogene Daten mit denen in Deutschland verbunden; nur bei vc funding)"
+  },
+  "D48": {
+   "thema": "Produktmodell",
+   "gilt": "Nur Miete am Anfang; kein klassischer Verkauf. Tokenisierung und Beteiligung auf mehreren Ebenen erst nach Klärung.",
+   "wahl": "B",
+   "kommentar": "verkauf steht ausser frage im klassischen sinne\n- - - tokenisierung -> nach klärung und weiteren informationen - auch x-portal beteiligung in unterscheidlichen ebenen - - -"
+  },
+  "D49": {
+   "thema": "Preislogik",
+   "gilt": "Statt eines Verkaufspreises wird der Selbstkostenpreis je Objekt ermittelt.",
+   "wahl": null,
+   "kommentar": "preisfrage sollte in selbstkostenpreis umgewandelt werden da wir keinen immobilien verkauf im klassischen sinne betreiebn. v0.4 stimmt hier"
+  },
+  "D50": {
+   "thema": "Start der Vermarktung",
+   "gilt": "Zuerst Mieter gewinnen, schon vor dem Bau: Interessenten jetzt sammeln.",
+   "wahl": null,
+   "kommentar": "- vor dem bau - \n Erst Mieter\nZuerst Mieter gewinnen - ziel interessenten jetzt bekommen"
+  },
+  "D51": {
+   "thema": "Erlösstufen",
+   "gilt": "Vier Erlösstufen; Skalierung und Standardisierung werden von Anfang an mitgedacht, Node001 ist der Proof of Concept.",
+   "wahl": null,
+   "kommentar": "Kundenprojekte heute, Technologielösungen in Entwicklung, Nutzung und Services am Node, Skalierung wird von anfang an berücksichtigt - node001 ist poc -> model der skalierung wird übernommen von node001 -> standartisierung von anfang an"
+  },
+  "D52": {
+   "thema": "Einkommen der Geschäftsführung",
+   "gilt": "Noch unklar.",
+   "wahl": "unklar",
+   "kommentar": null
+  },
+  "D53": {
+   "thema": "Zahlen für Investoren",
+   "gilt": "Die KI rechnet beide Zahlen mit Quellen neu; danach Entscheidung.",
+   "wahl": "C",
+   "kommentar": null
+  },
+  "D54": {
+   "thema": "Geologie",
+   "gilt": "Der Geologiebericht liegt als KI-Zusammenfassung vor (XPB-N001-GEO-SUM-001, nicht geprüft). Fachprüfung und Freigabe fehlen.",
+   "wahl": null,
+   "kommentar": "geologie plan erhälsts du im nächsten prompt"
+  },
+  "D55": {
+   "thema": "Bauphasen",
+   "gilt": "Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohn- und Arbeitsobjekte und Kommunalgebäude. Phase 2: Ausbau.",
+   "wahl": null,
+   "kommentar": "A  Objekt nur Übergang Vorschlag KI\nPhase 0 Objekt für Team und Bauarbeiter unterhalb der Herrenhaus Fläche - skalierbare infrastruktur (wasser/strom/internet); Phase 1 Häuser (wohn und arbeitsobjekte) und Kommunalgebäude; Phase 2 Ausbau"
+  },
+  "D56": {
+   "thema": "Bauart",
+   "gilt": "Material offen (Holz, Beton, Glas, Metall). Eine Bau-KI plant und bewertet nach den lokalen Gegebenheiten.",
+   "wahl": "",
+   "kommentar": "holz, beton, glas, metall -> plan für objekte stehen aus - bauki bewertet / plant - in abhängikeit von lokalen gegebenheiten"
+  },
+  "D57": {
+   "thema": "Zufahrt und Transport",
+   "gilt": "Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung. Gesamtplanung der Zufahrt in Phase 1 mit 3D-Modellen.",
+   "wahl": null,
+   "kommentar": "B · voraussichtlich kleines Fahrzeug\nKeine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch. für phase 0 - 3d modelle mit bauki entscheiden über die gesamtplanung in phase1"
+  },
+  "D58": {
+   "thema": "Termine",
+   "gilt": "Baubeginn 2027 als Ziel, nur nach Gates; kein Einzugstermin in der Werbung.",
+   "wahl": "A",
+   "kommentar": null
+  },
+  "D59": {
+   "thema": "Strom",
+   "gilt": "Netzanschluss beantragen, Generator als Reserve; Solar mit Speicher ab Phase 1.",
+   "wahl": null,
+   "kommentar": "Netz plus Generator, Solar ab Phase 1 Vorschlag KI\nPhase 0: Netzanschluss beantragen und Generator als Reserve. Phase 1: Solar mit Speicher dazu."
+  },
+  "D60": {
+   "thema": "Wärme",
+   "gilt": "Mix: Ofen mit Plan zum Überwintern; eigene Bäume fällen (nass, müssen trocknen) und Holz kaufen; Holzlager in jedem Fall.",
+   "wahl": null,
+   "kommentar": "mix - bäume am grundstück vorhandne -> muss gefällt werden und ist nass. selbstholz ist möglich, ofen eine möglichkeit wärme zu erhalten mit plan zu überwintern - berücksichtige auch lagerung von holz - egal ob gekauft oder selbstproduziert"
+  },
+  "D61": {
+   "thema": "Wasser",
+   "gilt": "Grundwasser nutzen und zu Trinkwasser aufbereiten; Anfangsstufe bauen, Ausbau vorbereiten.",
+   "wahl": "A",
+   "kommentar": "grundwasser verfügbar -> als trinkwasser nicht vorhanden - muss aufbereitet werden, in planung berücksichtigen"
+  },
+  "D62": {
+   "thema": "Sanitär und Abwasser",
+   "gilt": "Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser fest eingebaut ab Phase 0.",
+   "wahl": "C",
+   "kommentar": "toilette, abwasser, duschen, warmwasser, all das muss von vorne herein geplant und mit der infrastuktur eingebaut werden. anforderungen wie warmwasser, spülung (auch das man klopapier spülen kann),\nmuss ab phase 0 verfügbar sein"
+  },
+  "D63": {
+   "thema": "Internet",
+   "gilt": "Bandbreite, Router und Anbieter vergleichen; steht in der Anschaffungsliste.",
+   "wahl": null,
+   "kommentar": "bandbreite/router/anbieter müssen geprüft und verlgichen werden, aufnehmen in objekte"
+  },
+  "D64": {
+   "thema": "Kommunalgebäude",
+   "gilt": "Kommunalgebäude ist der erste Bau in Phase 1.",
+   "wahl": "A",
+   "kommentar": null
+  },
+  "D65": {
+   "thema": "Mobilität",
+   "gilt": "Gemeinsames Fahrzeug; keine E-Bikes in Phase 0.",
+   "wahl": "C",
+   "kommentar": "- e bikes ausschließen für phase 0"
+  },
+  "D66": {
+   "thema": "Betrieb und Abnahme",
+   "gilt": "Zielwerte je kritischer Funktion; Tabelle der Abnahme-Entscheidungen, die Projektleitung prüft und gibt frei.",
+   "wahl": "A",
+   "kommentar": "tabelle anlegen mit zu treffenden entscheidung zur abnahme, roman überprüft und gibt frei nach absprache"
+  },
+  "D67": {
+   "thema": "Team und Rollen",
+   "gilt": "Rollen wie im Pitch. Der Architekt berät zu Architektur und Bau und ist kein Teammitglied.",
+   "wahl": "B",
+   "kommentar": "nazar kein teammitliger, beratende funktion -> architektur und baukontexte"
+  },
+  "D68": {
+   "thema": "Arbeitsweise",
+   "gilt": "Repo als Quelle und Regeln der Baseline; vieles ist noch zu klären.",
+   "wahl": "A",
+   "kommentar": "da gibts noch viel zu klären."
+  }
+ },
+ "risiken": [
+  {
+   "thema": "Geologie nicht geprüft",
+   "lage": "Die deutsche Zusammenfassung ist KI-erstellt und nicht freigegeben. Maßgeblich ist der ukrainische Originalbericht. Zwei Angaben zur Mächtigkeit der bewegten Schichten weichen voneinander ab.",
+   "schritt": "Fachprüfung beauftragen (GEO)"
+  },
+  {
+   "thema": "Hang und Wasser",
+   "lage": "Rutschprozesse und Grundwasseraustritte an drei Punkten betreffen Fundament, Abwasser und Zufahrt.",
+   "schritt": "Entwässerung und Stützkonstruktion durch Fachexperten planen"
+  },
+  {
+   "thema": "Kosten unvollständig",
+   "lage": "69 von 137 Positionen ohne Betrag; viele Preise aus dem Raum Kyjiw; Phase 1 nicht gerechnet; Netzanschluss, Gelände, Abgaben und Reserven offen.",
+   "schritt": "Drei Angebote je großem Posten"
+  },
+  {
+   "thema": "Recht",
+   "lage": "Gesellschaft in der Ukraine, Mietmodell, Beteiligung am Node, Abwasser, Fällgenehmigung, Versicherung der Eigenleistung sind ungeklärt.",
+   "schritt": "Rechtsprüfung im Paket vor dem Investment"
+  },
+  {
+   "thema": "Trinkwasser",
+   "lage": "Grundwasser ist vorhanden, aber nicht trinkbar; die Aufbereitung hängt an der Laboranalyse.",
+   "schritt": "Analyse vor der Planung"
+  },
+  {
+   "thema": "Außendarstellung",
+   "lage": "Die Geschäftsführung fehlt in der Teamdarstellung von Whitepaper und Deck; das Lagebild fehlt.",
+   "schritt": "Vor Versand klären"
+  },
+  {
+   "thema": "Altbestand",
+   "lage": "Das Entscheidungslog im Plan-Repo ist noch nicht als zurückgenommen markiert. Der alte Index liegt im Archiv und gilt nicht mehr.",
+   "schritt": "Log im Plan-Repo markieren"
+  }
+ ],
+ "links": {
+  "ent": "https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP",
+  "ans": "https://claude.ai/artifact/Xt8ocuZNXnnwsZNfAfPsoY",
+  "vor": "https://claude.ai/artifact/2zHiqw7dU8oHFnsZWBsh1P",
+  "sgmm": "https://claude.ai/artifact/EYuUZwYARAk6bVpmPDyq9G",
+  "wp": "https://claude.ai/artifact/8Tsy5boPuHAm5wkfqMnPeD"
+ }
+}
