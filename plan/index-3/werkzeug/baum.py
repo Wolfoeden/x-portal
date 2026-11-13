@@ -632,7 +632,7 @@ tree = [
       text='Für diese acht gibt es dort noch keine Stimme (Stand 04.11.2026). Wählt dort; der Baum zeigt die Möglichkeiten und was davon abhängt.'),
     N('group', 'b-plan', '7 · Offen im Plan, noch ohne Karte auf der Entscheidungsseite', kids=imPlan,
       text='Die offenen Architekturentscheidungen der Baseline, dazu Kapitel 4 (Art E), die Teilergebnisse, die nur ihr entscheidet, und die Planungspunkte vom 05.11.2026.'),
-    N('group', 'b-entschieden', f'8 · Entschieden: 84 im Log, nach Thema', kids=entschieden, opened=False,
+    N('group', 'b-entschieden', f'8 · Früher entschieden (seit 13.11. zurückgenommen): 84 im Log, nach Thema', kids=entschieden, opened=False,
       text='Je Thema ein Satz, mit den Entscheidungen dahinter. Die vollständige Liste steht unten unter „Entscheidungen E01–E85“.'),
 ]
 
@@ -698,7 +698,7 @@ def linkify(text):
     out.append(esc[last:])
     return ''.join(out)
 
-STATE = {'open': 'offen', 'wait': 'wartet', 'done': 'entschieden', 'rule': 'Regel steht', 'run': 'in Arbeit', 'later': 'später', 'untested': 'nicht geprüft'}
+STATE = {'open': 'offen', 'wait': 'wartet', 'done': 'früher entschieden', 'rule': 'Regel steht', 'run': 'in Arbeit', 'later': 'später', 'untested': 'nicht geprüft'}
 LIVE = {'open', 'wait', 'run', 'untested'}
 
 def facts_html(facts):
@@ -909,6 +909,7 @@ ra_section = ('<section id="ra"><h2>Reference Architecture v0.4: der Bezugsrahme
     + '<h3 id="ra-text">Die Baseline im Wortlaut</h3>' + md_html(RA_MD) + '</section>\n')
 
 section = f'''<section id="baum"><h2>Offener Entscheidungsbaum</h2>
+<p class="reset-note" style="border:1px solid #8a5a00;background:#f6ecd4;color:#161616;padding:10px 14px;margin:0 0 12px"><b>Seit 13.11.2026 sind alle Entscheidungen E01–E85 zurückgenommen.</b> Sie stehen hier nur noch als Historie („früher entschieden“). Neu entschieden wird auf der <a href="https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP">Entscheidungsseite</a> (Karten D34–D38 und D42–D68).</p>
 <p class="lede2">Der ganze Plan Stufe 1 als Baum. Die Grundlage ist das Endprodukt mit seinen Zielen. Darunter stehen die Äste in der Reihenfolge, in der jetzt gearbeitet wird: 1 der Weg ab der Geologie, 2 der Alltag oben mit seinen prüfbaren Anforderungen, 3 die Versorgung je Ressource mit Ausbaupfad, 4 die Make-or-Buy-Vergleiche. Werkzeug, Preis und Zeitaufwand je Funktion stehen auf der <a href="https://claude.ai/artifact/EYuUZwYARAk6bVpmPDyq9G#ketten">SGMM-Seite</a>. Offene Äste bleiben aufgeklappt und zeigen jede Möglichkeit mit ihrer Folge; Entschiedenes ist eingeklappt. Gewählt wird weiter auf der <a href="{ENTSCHEIDUNGSSEITE}" target="_blank" rel="noreferrer">Entscheidungsseite</a>.</p>
 <ul class="dt-bkey" aria-label="Zeichen im Baum">
 <li><span class="dt-bg k-decision" aria-hidden="true"></span>Entscheidung, nur ihr</li>
@@ -926,7 +927,7 @@ section = f'''<section id="baum"><h2>Offener Entscheidungsbaum</h2>
 <div class="dt-bstat"><b>{len(makebuy) - 1}</b><span>Make-or-Buy-Vergleiche</span><small>keiner mit Vollkosten gerechnet</small></div>
 <div class="dt-bstat"><b>{n_dec_open}</b><span>Entscheidungen offen</span><small>davon 8 auf der Entscheidungsseite</small></div>
 <div class="dt-bstat"><b>{n_wait}</b><span>Entscheidungen warten</span><small>auf Geologie, Angebote oder Anwälte</small></div>
-<div class="dt-bstat"><b>84</b><span>entschieden</span><small>im Log, E01 ff.</small></div>
+<div class="dt-bstat"><b>84</b><span>früher entschieden</span><small>seit 13.11. zurückgenommen</small></div>
 </div>
 <h3 id="b-jetzt">Woran gerade am meisten hängt</h3>
 <ol class="dt-bnow">{''.join(f'<li><a href="#b-{i}"><span class="dt-bid">{i}</span><b>{html.escape(t)}</b><small>{html.escape(w)}</small></a></li>' for i, t, w in blockers)}</ol>

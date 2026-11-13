@@ -1,0 +1,1256 @@
+{
+ "stand": "13.11.2026",
+ "abschnitte": [
+  {
+   "key": "normativ",
+   "titel": "Normativ: wofür und nach welchen Regeln",
+   "karten": [
+    {
+     "id": "D42",
+     "frage": "Vision und Mission: was gilt?",
+     "warum": "Die Reference Architecture v0.4 bringt eine neue Vision und eine Kerndefinition, aber keine Mission (Abgleich W01). Die alte Mission „Innovationshubs“ und die drei Globalziele stammen aus der Zeit davor.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Vision v0.4, keine eigene Mission",
+       "text": "Es gilt die Vision v0.4 mit Kerndefinition. Mission und Globalziele entfallen; die Ziele stehen im Zielblatt (Z1–Z4).",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Vision v0.4 plus Mission",
+       "text": "Die Vision v0.4 gilt; die Mission „Innovationshubs“ bleibt als kurze Fassung für Website und Pitch.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Vision v0.4 plus neue Mission",
+       "text": "Die KI entwirft eine Mission, die zur Vision v0.4 passt; ihr entscheidet sie danach.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E28",
+      "E29"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D43",
+     "frage": "Wer bereitet vor, wer prüft, wer gibt frei?",
+     "warum": "Bisher: Die KI macht, was sie kann, ein Mensch prüft; technische Werte legt eine Fachperson fest; Vorschläge der KI gelten bis zum Widerspruch; Paul entscheidet über Bestellungen und Betrag. Die Baseline verlangt nachvollziehbare Entscheidungsrechte (OD-001, XP-SYS-005).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Wie bisher, aber ohne stilles Gelten",
+       "text": "KI bereitet vor, Fachperson prüft Technik, Paul und Roman geben frei, Paul entscheidet über Bestellung und Betrag. Ein Vorschlag der KI gilt erst, wenn er auf dieser Seite gewählt ist.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Wie bisher",
+       "text": "Alles wie vor dem 13.11., auch: Vorschläge der KI gelten, bis Paul oder Roman widersprechen.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Mit Budgetgrenzen",
+       "text": "Wie A; zusätzlich darf Roman bis zu einer festen Summe allein bestellen. Die Summe legt Paul fest.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E13",
+      "E16",
+      "E22",
+      "E71",
+      "E80"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D44",
+     "frage": "Organisation: wer ist was?",
+     "warum": "Vorgabe vom 05.11.: X-PORTAL als Dach, die DT Agentur übernimmt Projekte aus Deutschland, Grundstücke als eigener Bereich (X1–X3). Die Baseline nennt die Firma „X-PORTAL Organisation“; die Grenze zum Node-Betrieb ist offen (OD-001). Bisher: UG, später GmbH, ein SPV je Grundstück; heute tritt Romans Einzelunternehmen auf.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Drei Einheiten",
+       "text": "X-PORTAL Organisation (Dach, Plattform, Architektur), DT Agentur (Projekte aus Deutschland), Node001 als eigene Grundstücks- und Betriebsgesellschaft. Rechtsform je Einheit prüft ein Steuerberater.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Eine Firma, Node001 als SPV",
+       "text": "Eine UG für alles außer dem Grundstück; Node001 bekommt ein eigenes SPV.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Erst eine Firma",
+       "text": "Alles läuft vorerst über eine Gesellschaft; getrennt wird erst, wenn Investoren einsteigen.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E07",
+      "E08",
+      "E17",
+      "E18",
+      "E19",
+      "E61"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D45",
+     "frage": "Ziel der Stufe 1: wer wohnt und arbeitet oben?",
+     "warum": "Bisher: 2–3 Leute ganzjährig oben, Roman von Anfang an; im ersten Winter Team plus 5 Käufer; Remote-Freelancer aus Deutschland als Zielgruppe. Die Infografik nennt acht Rollen, Human Roles v1.0 sind in Arbeit (OD-003, W08).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Erst das Team",
+       "text": "Stufe 1 heißt: 2–3 Leute vom Team wohnen und arbeiten ganzjährig oben und verdienen dort Geld. Käufer ziehen ab Phase 1 in ihre Häuser.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Team plus erste Käufer",
+       "text": "Team und die ersten Käufer wohnen schon im ersten Winter oben; Versorgung für beide.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Team plus Mieter",
+       "text": "Zuerst Team und einige Mieter (Remote-Freelancer, Buchung etwa ein Jahr); Verkauf an Käufer später.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E01",
+      "E23",
+      "E24",
+      "E42",
+      "E69",
+      "E79"
+     ],
+     "bereich": null
+    }
+   ]
+  },
+  {
+   "key": "strategisch",
+   "titel": "Strategisch: womit und in welcher Reihenfolge",
+   "karten": [
+    {
+     "id": "D46",
+     "frage": "Kapital für Node001: woher?",
+     "warum": "Bisher: kein Investor für den Ort, er trägt sich aus Käufergeld; externes Kapital später über fraktionalisierte Grundstücke on chain. Deck und Baseline: Node001 ist ein eigener Project- oder Asset-Case (W03).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Eigener Project-Case",
+       "text": "Node001 wird als eigener Investment Case geprüft: Kapital für Infrastruktur und ersten Bauabschnitt, getrennt von der Firma. Käufergeld kommt dazu.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Aus Käufergeld",
+       "text": "Wie bisher: Der Ort trägt sich aus dem Geld der Käufer und Eigenleistung; kein Investor im Ort.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Mischung mit Schwelle",
+       "text": "Erst Käufergeld bis zu einer Schwelle; reicht es nicht, kommt ein Investor in den Ort.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E04",
+      "E05",
+      "E30",
+      "E57"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D47",
+     "frage": "Kapital für die Firma: woher?",
+     "warum": "Bisher: Umsatz aus Projekten aus Deutschland; Pre-Seed von VC und Start-up BW erlaubt; Matching der BW Bank für IT. Das Deck nennt Pre-Seed oder Equity-ähnlich, Struktur offen.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Projektumsatz plus Förderung",
+       "text": "Zuerst Umsatz aus Projekten und Förderprogramme; Pre-Seed erst mit Revenue Model und Meilensteinen.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Pre-Seed jetzt",
+       "text": "Eine Pre-Seed-Runde wird jetzt vorbereitet, parallel zu Projekten.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Nur Projektumsatz",
+       "text": "Kein externes Kapital für die Firma; sie wächst aus Projekten.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E31",
+      "E85"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D48",
+     "frage": "Was kaufen oder mieten Siedler?",
+     "warum": "Bisher: Haus kaufen, Grund pachten, angeboten über die Blockchain; Mieten mit Monatsmiete nach dem Einzug. Deck und Baseline: Miete oder geeignetes Eigentums- oder Nutzungsmodell, wird validiert; kein öffentliches Angebot von Kryptowerten (W04). Rechtsprüfung A5 offen.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Haus kaufen, Grund pachten",
+       "text": "Käufer besitzen ihr Haus und pachten den Grund; Miete ist auch möglich. Ob und wie Token dazukommen, entscheidet ihr nach der Rechtsprüfung.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Nur Miete am Anfang",
+       "text": "In Phase 1 wird nur vermietet; Verkauf erst, wenn Recht und Preis geklärt sind.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Token wie bisher",
+       "text": "Haus und Nutzung werden über die Blockchain verkauft und gemietet, wie im alten Modell.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E47",
+      "E50",
+      "E52"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D49",
+     "frage": "Hausgröße und Preis je Haus",
+     "warum": "Bisher: etwa 30.000 € je Käufer, 45 m² je Haus. Ein Holzhaus mit 45 m² kostet im Rohbau grob 19.800–36.000 €, ohne Innenausbau, Transport und Anschlüsse (ASSUMPTION, SGMM F12, W20). Die frühere Frage, was die 30.000 € umfassen (D40) und was 45 m² sind (D41), ist hier enthalten.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Erst rechnen, dann festlegen",
+       "text": "Größe und Preis kommen aus dem parametrischen Business Case (OD-008) mit Herstellerangeboten. Bis dahin keine Preisangabe nach außen.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Kleines Haus für 30.000 €",
+       "text": "Der Preis bleibt bei 30.000 €; das Haus wird so klein, dass es mit Anschluss passt (etwa 20–25 m²).",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "45 m² mit höherem Preis",
+       "text": "Das Haus hat 45 m² Wohnfläche; der Preis folgt aus den Kosten und liegt über 30.000 €.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E78",
+      "E84"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D50",
+     "frage": "Verkaufsstart und Schwelle zum Bestellen",
+     "warum": "Bisher: Verkauf ab Januar 2027, Warteliste als Nachfragebeleg, bestellt wird bei 5 Käufern mit belegtem Geld und 100 auf der Warteliste. Termine sind laut Deck Ziele, keine Zusagen (W06). Auf der Website heißt der Ort bisher nur „Ukraine“.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Warteliste jetzt, Verkauf nach Gate",
+       "text": "Die Warteliste läuft mit Bildern und Ablauf; verkauft wird erst nach Rechtsprüfung, Preis und Gate G2. Die Schwelle zum Bestellen steht im Business Case.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Wie bisher",
+       "text": "Verkauf ab Januar 2027; bestellt wird bei 5 Käufern mit belegtem Geld.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Erst Mieter",
+       "text": "Zuerst Mieter gewinnen; der Verkauf startet, wenn die ersten Häuser stehen.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E51",
+      "E58",
+      "E66"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D51",
+     "frage": "Was verkauft die Firma?",
+     "warum": "Bisher: oben werden KI-Agenten gebaut und je Aufruf verkauft (Masumi); das Team liefert alle Projekte; Einstieg ab 490 €, dann Preismodell offen; erster bezahlter Auftrag bis Januar 2027; Drohnen und Robotik gestrichen. Heute: vier Erlösstufen, Stufe 02 heißt Technologielösungen (KI zuerst, später Robotik, Drohnen, Mechanik).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Vier Erlösstufen",
+       "text": "Kundenprojekte heute, Technologielösungen in Entwicklung, Nutzung und Services am Node, Skalierung später. Preismodell je Stufe offen.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Projekte und Agenten",
+       "text": "Nur Kundenprojekte und eigene KI-Agenten; Robotik und Drohnen bleiben draußen.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Erst Projekte",
+       "text": "Bis zum ersten Bauabschnitt nur Kundenprojekte; eigene Produkte danach.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E56",
+      "E63",
+      "E70",
+      "E76",
+      "E77",
+      "E83"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D52",
+     "frage": "Pauls Einkommen und die Reihenfolge des Geldes",
+     "warum": "Bisher: Paul braucht 8.000 € netto im Monat für Vollzeit, das kommt vor den Kosten auf dem Berg; aber es soll nicht im Mittelpunkt stehen. Im Zielblatt steht „Paul Vollzeit“ nicht mehr (Vorgabe Roman).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Als Kostenzeile",
+       "text": "8.000 € netto stehen als Kostenzeile der Firma im Business Case, ab dem Monat, in dem Paul Vollzeit dabei ist. Keine eigene Reihenfolge.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Wie bisher zuerst",
+       "text": "Pauls Einkommen kommt vor allen anderen Kosten.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Erst später",
+       "text": "Pauls Einkommen kommt erst, wenn die Firma Umsatz hat; bis dahin keine Zeile im Plan.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E03",
+      "E32",
+      "E67"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D53",
+     "frage": "Zahlen für Investoren: 12 Mio. und 12,5 Mio. €",
+     "warum": "Bisher: rund 12 Mio. € Erlös auf dem Papier „rechtfertigen das Invest“; 12,5 Mio. € sind eine Hochrechnung der Kosten; der Pitch sagte „privat finanziert“, das wurde berichtigt. Grundstück 2 ha. Baseline: Scheingenauigkeit vermeiden, Business Case offen (W05, W07). Die frühere Karte D39 ist hier enthalten.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Intern lassen",
+       "text": "Beide Zahlen bleiben intern und kommen in keine Investorenunterlage, bis der Business Case steht.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Als Größenordnung zeigen",
+       "text": "Im Gespräch als grobe Größenordnung nennen, klar als Annahme gekennzeichnet.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Neu rechnen lassen",
+       "text": "Die KI rechnet beide Zahlen mit Quellen neu, dann entscheidet ihr.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E60",
+      "E65",
+      "E82"
+     ],
+     "bereich": null
+    }
+   ]
+  },
+  {
+   "key": "operativ",
+   "titel": "Operativ: wer macht was, womit, wann (in Arbeitsreihenfolge)",
+   "karten": [
+    {
+     "id": "D54",
+     "frage": "Geologie und Lageplan: wer, bis wann?",
+     "warum": "Der Geologiebericht (3 Schürfe, 12 Bohrpunkte) fehlt; davon hängen Plots, Fundament und alle Kosten ab (O01). Bisher: Nazar ist beauftragt und macht die Abnahmen; den Kontakt hält Paul; Generalplan Variante 1 ist Grundlage, Grundstücksdaten reichen.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Nazar mit Frist",
+       "text": "Nazar liefert den Bericht mit fester Frist; Paul hält den Kontakt. Danach Lageplan auf Variante 1 und Plots ausmessen.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Zweite Fachperson",
+       "text": "Wie A, dazu prüft eine zweite Fachperson den Bericht.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Neu ausschreiben",
+       "text": "Geologie und Abnahmen werden neu vergeben.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E06",
+      "E10",
+      "E27",
+      "E33",
+      "E37",
+      "E43",
+      "E64"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D55",
+     "frage": "Bauphasen: Container nur für den Anfang?",
+     "warum": "Vorgabe vom 12.11.: Container nur für den Anfang, danach richtige Häuser wie auf dem Titelbild. Bisher galt: Container sind die Tiny Houses der Käufer und bleiben (W19). Siehe Abschnitt Bauphasen oben.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Container nur Übergang",
+       "text": "Phase 0 Container für Team und Bauarbeiter auf der Herrenhaus-Fläche; Phase 1 Holzhäuser und Kommunalgebäude; Phase 2 Ausbau, die Herrenhaus-Fläche zuletzt.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Container auch für Käufer",
+       "text": "Wie bisher: Käufer bekommen Container als Tiny House.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Ohne Container",
+       "text": "Kein Übergang; Team und Bauarbeiter wohnen bis zum ersten Haus unten im Ort.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E34",
+      "E39",
+      "E40",
+      "E41",
+      "E44",
+      "E45",
+      "E59"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D56",
+     "frage": "Hausart in Phase 1",
+     "warum": "Grundmodell bisher: leichter Transport, kommunal, gemeinschaftlich, autark; Häuser in Teilen (Rahmen oder Paneele), oben montiert. Die Wahl hängt an Geologie (D54) und Zufahrt (D57).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Holzfertighaus in Teilen",
+       "text": "Bausatz vom Hersteller, Teile auf kleinem Fahrzeug hoch, oben montiert. Angebote mit schwerstem Teil und Montagezeit.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Holzrahmenbau vor Ort",
+       "text": "Ein lokaler Zimmerer baut vor Ort aus Holz; Material kommt in kleinen Mengen hoch.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Fertigmodul",
+       "text": "Ganze Module mit Kran; nur wenn die Zufahrt es trägt.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E72",
+      "E75"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D57",
+     "frage": "Zufahrt und Transport",
+     "warum": "Die Zufahrt ist heute unbefestigt; Befestigung und Entwässerung sind geplant (2.2.4). Die Einfahrt liegt vermutlich oben links in Variante 1. Im Winter räumt nach SGMM F07 am besten ein Bauer mit Traktor.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Befestigen vor Phase 1",
+       "text": "Zufahrt wird vor den Häusern befestigt; Spediteur bestätigt schriftlich, was hochkommt; Räumvertrag für den Winter.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Erst kleines Fahrzeug",
+       "text": "Keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Nazar entscheidet",
+       "text": "Nazar legt nach der Geologie fest, was nötig ist.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E36"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D58",
+     "frage": "Bauzeit und Termine",
+     "warum": "Bisher: gebaut im Sommer, gewohnt auch im Winter; Baubeginn erst ohne Frost; Container ab März, Werbung „Einzug ab Frühjahr 2027“. Deck: Baubeginn 2027 ist Ziel, nur nach Gates (W06).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Ziele mit Gates",
+       "text": "Baubeginn 2027 ist Ziel, sobald der Boden frostfrei ist und die Gates erreicht sind. Kein Einzugstermin in der Werbung.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Wie bisher",
+       "text": "Container ab März 2027, Werbung „Einzug ab Frühjahr 2027“.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Später",
+       "text": "Baubeginn erst 2028, mehr Zeit für Planung und Kapital.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E02",
+      "E21",
+      "E38",
+      "E55"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D59",
+     "frage": "Strom",
+     "warum": "Bisher: Netz mit Batterie oder Generator, dazu Solar. Muss-Lasten etwa 380 W (S03). Preise: Netzanschluss etwa 2.927 UAH je kW, Generator 3 kW 18.749–32.599 UAH, Solar 4,8 kWp 189.900 UAH (SGMM F02).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Netz plus Generator, Solar ab Phase 1",
+       "text": "Phase 0: Netzanschluss und Generator als Reserve. Phase 1: Solar mit Speicher dazu.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Gleich mit Solar",
+       "text": "Netz, Generator und Solar von Anfang an.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Ohne Netz",
+       "text": "Inselanlage mit Solar, Speicher und Generator.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E35"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D60",
+     "frage": "Wärme, und: Axt oder Säge?",
+     "warum": "Holzofen je Haus kostet 6.000–13.000 UAH; Brennholz 3.700–4.500 UAH je m³, 3–6 m³ je Haus und Winter (ASSUMPTION). CO-Melder Pflicht (S01). Details: SGMM F01.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Holz kaufen, Axt und Bügelsäge",
+       "text": "Holzofen je Haus; Brennholz ofenfertig kaufen; Spaltaxt und Bügelsäge für Nachschnitt. Motorsäge erst mit Schulung und Schutzausrüstung.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Selbst machen mit Motorsäge",
+       "text": "Rundholz kaufen und selbst sägen und spalten; Motorsäge, Schnittschutz und Schulung von Anfang an.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Zentrale Wärme",
+       "text": "Eine zentrale Wärmequelle für mehrere Häuser statt Öfen.",
+       "ki": false
+      }
+     ],
+     "frueher": [],
+     "bereich": null
+    },
+    {
+     "id": "D61",
+     "frage": "Wasser",
+     "warum": "Quellfassung → Pumpe → Tank → Filter → Boiler. Bisher: 50 l je Person und Tag für den Anfang; Notfall in unter 2 Stunden unten. Schüttung und Laborwerte offen (O27). Details: SGMM F03.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Anfangsstufe, Ausbau vorbereitet",
+       "text": "Tank für 10 Tage Sperre in der Anfangsstufe; Leitung und Boiler für den Ausbau vorbereitet.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Gleich Ausbaustufe",
+       "text": "Speicher und Leitung gleich für 120 l je Person und Tag.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Nach Laborwerten",
+       "text": "Erst Laborprobe und Schüttung im Februar, dann entscheiden.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E26"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D62",
+     "frage": "Toilette und Abwasser",
+     "warum": "Phase 0 Campingtoilette (1.600–3.700 UAH); dauerhaft Kleinkläranlage oder Komposttoilette, mit Genehmigung (SGMM F04).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Camping jetzt, Anlage ab Phase 1",
+       "text": "Campingtoilette in Phase 0; die dauerhafte Lösung plant eine Fachperson mit Genehmigung für Phase 1.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Komposttoilette dauerhaft",
+       "text": "Komposttoiletten in allen Häusern, keine Kläranlage.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Kläranlage sofort",
+       "text": "Die dauerhafte Anlage kommt schon in Phase 0.",
+       "ki": false
+      }
+     ],
+     "frueher": [],
+     "bereich": null
+    },
+    {
+     "id": "D63",
+     "frage": "Internet",
+     "warum": "Bisher: eigener Anschluss, Starlink als Reserve, kein Mobilfunk oben. Starlink Mini 20.820–25.900 UAH plus 2.950 UAH im Monat; Test: zwei Videocalls gleichzeitig (SGMM F05).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Eigener Anschluss plus Starlink",
+       "text": "Wie bisher; Anbieter für den Hauptanschluss wird gesucht, Router mit Umschaltung.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Nur Starlink am Anfang",
+       "text": "Phase 0 nur mit Starlink, Hauptanschluss ab Phase 1.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Zwei Satelliten",
+       "text": "Zwei Starlink-Anschlüsse statt Kabel.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E49"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D64",
+     "frage": "Kommunalgebäude und Garten",
+     "warum": "Bisher: eigenes Kommunalgebäude mit Arbeitsplatz, Küche und Sanitär; Gemüsegarten für Autarkie; vor Ort prüfen, was es gibt (Holz, Milch, Käse, Sauna, Reparatur).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Zuerst in Phase 1",
+       "text": "Das Kommunalgebäude ist der erste Bau in Phase 1, vor den Häusern der Käufer; Garten daneben.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Mit den Häusern",
+       "text": "Kommunalgebäude und Häuser parallel.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "In Phase 0 aus Containern",
+       "text": "Wie im Entwurf vom 04.11.: zwei Container als Gemeinschaftsplatz, festes Gebäude später.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E15",
+      "E74"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D65",
+     "frage": "Mobilität",
+     "warum": "Bisher: E-Bikes statt Benzin, das Netz wird dafür ausgebaut. E-Bike 27.028–32.989 UAH; im Winter auf Schnee fraglich (SGMM F08).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "E-Bikes plus Winterlösung",
+       "text": "E-Bikes im Sommer; im Winter Fahrdienst oder Bauer für die Auffahrt.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Nur E-Bikes",
+       "text": "Wie bisher, nur E-Bikes.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Gemeinsames Fahrzeug",
+       "text": "Ein geländegängiges Fahrzeug für alle, dazu E-Bikes.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E73"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D66",
+     "frage": "Betrieb: alles muss laufen",
+     "warum": "Bisher: Vorrang „alles läuft immer“ (kein Serverausfall, kein Problem mit Strom oder Wasser); Betrieb autark wie ein organisches System; Grundversorgung nach Maslow in fester Reihenfolge; vor dem ersten Übernachten ist alles abgenommen. Baseline: Zielwerte je kritischer Funktion offen (OD-002).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Zielwerte je Funktion",
+       "text": "Für jede kritische Funktion (SGMM F01–F12) Ausfallzeit, Notbetrieb und Reserve festlegen; Abnahme vor dem ersten Übernachten.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Wie bisher",
+       "text": "„Alles läuft immer“ als Grundsatz, ohne Zielwerte.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Schritt für Schritt",
+       "text": "Zuerst Toilette, Küche, Strom, Wasser, Internet, Schlafplatz; Zielwerte nach dem ersten Winter.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E14",
+      "E46",
+      "E53",
+      "E54"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D67",
+     "frage": "Team, Rollen und Alltag oben",
+     "warum": "Bisher: Paul CEO zu 100 %, Roman Produkt und Projekt und oben; Nazar beauftragt. Deck: Roman Dering, Pavel J., Nazar D. (W14). Vorgabe vom 05.11.: Gleitzeit 9–14 Uhr, Jour fixe und Sport Pflicht, Wellness frei, Käufer frei.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Rollen klären, Spielregeln wie Vorgabe",
+       "text": "Founder, Ownership und Rollen werden vor dem Investorenkontakt festgelegt; oben gelten die Spielregeln vom 05.11.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Wie im Pitch",
+       "text": "Rollen wie bisher: Paul CEO, Roman Produkt und Projekt.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Mit Nazar im Team",
+       "text": "Nazar wird Teammitglied (Architekt Nodes), nicht Auftragnehmer.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E62",
+      "E81"
+     ],
+     "bereich": null
+    },
+    {
+     "id": "D68",
+     "frage": "Arbeitsweise: Ablage, Kosten, Nachfrage",
+     "warum": "Bisher: Ablage in OneDrive; Kosten mit Internetpreisen, Kurs etwa 50 UAH/EUR; keine Nachfrage messen ohne Produkt; ein Plan in einer Datei; Maslow und Sinne als Gliederung; wiederholbar sind Schema und Planung. Baseline: System Model, Traceability, Genome.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Repo als Quelle, Regeln der Baseline",
+       "text": "Plan, Entscheidungen und Archiv im Repo; Ablage OneDrive für Dokumente; Kosten mit Internetpreisen und Quelle; Gliederung nach Maslow, Sinnen und SGMM.",
+       "ki": true
+      },
+      {
+       "v": "B",
+       "titel": "Wie bisher",
+       "text": "Alles wie vor dem 13.11.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Alles in OneDrive",
+       "text": "Plan und Entscheidungen auch in OneDrive, Repo nur für Agenten.",
+       "ki": false
+      }
+     ],
+     "frueher": [
+      "E09",
+      "E11",
+      "E12",
+      "E20",
+      "E25",
+      "E68"
+     ],
+     "bereich": null
+    }
+   ]
+  },
+  {
+   "key": "alltag",
+   "titel": "Alltag oben (offen seit 04.11., Texte angepasst)",
+   "karten": [
+    {
+     "id": "D34",
+     "frage": "Restaurant/Bar und Feuerstelle aus dem Zielbild: wann?",
+     "warum": "Das Zielbild zeigt eine Feuerstelle mit Grill und ein Restaurant mit Bar. Gastronomie braucht Gäste, Personal, Hygiene und eigene Nachweise (M02-25 bis M02-27); die Feuerstelle braucht Brandschutz und einen windarmen Platz (M02-21, M02-22).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Beides später",
+       "text": "Stufe 1 ohne Feuerstelle und Gastronomie; beides bekommt einen eigenen Plan.",
+       "ki": false
+      },
+      {
+       "v": "B",
+       "titel": "Feuerstelle jetzt, Gastronomie später",
+       "text": "Feuerstelle mit Grill am Kommunalgebäude in Phase 1, mit Prüfauftrag Brandschutz.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Beides in Stufe 1",
+       "text": "Feuerstelle und kleine Gastronomie; dann braucht der Plan Gästezahl, Personal, Hygiene und Kosten.",
+       "ki": false
+      }
+     ],
+     "frueher": [],
+     "bereich": null
+    },
+    {
+     "id": "D35",
+     "frage": "Sauna: eigene oder im Ort?",
+     "warum": "Sauna gehört zum Alltag oben, wenn ihr das so entscheidet (D67). Eine eigene Sauna braucht Holz oder Strom, Wasser und Brandschutz.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Eigene Sauna in Phase 1",
+       "text": "Am Kommunalgebäude, mit Kosten und Brandschutz.",
+       "ki": false
+      },
+      {
+       "v": "B",
+       "titel": "Erst im Ort, eigene später",
+       "text": "Am Anfang eine Sauna in der Umgebung (2.4.6).",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Keine Sauna",
+       "text": "Gesundheit oben heißt Laufen, Wandern, Sport (M02-45).",
+       "ki": false
+      }
+     ],
+     "frueher": [],
+     "bereich": null
+    },
+    {
+     "id": "D36",
+     "frage": "Essen oben: wie wird es bezahlt?",
+     "warum": "Offen ist, ob Essen inklusive ist, bezahlt wird oder gegen Mitarbeit geht. Das geht in die Leistungsliste (2.1.8) und in die Kosten je Haus.",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Monatspauschale",
+       "text": "Gemeinsames Essen in einer monatlichen Pauschale; privat auf eigene Kosten.",
+       "ki": false
+      },
+      {
+       "v": "B",
+       "titel": "Selbst bezahlt",
+       "text": "Jede Mahlzeit oder jeder Einkauf wird bezahlt.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Gegen Mitarbeit",
+       "text": "Wer in Küche oder Garten mitarbeitet, isst ohne Zahlung; Stunden werden erfasst.",
+       "ki": false
+      }
+     ],
+     "frueher": [],
+     "bereich": null
+    },
+    {
+     "id": "D37",
+     "frage": "Wie wird das Team oben bezahlt?",
+     "warum": "Offen ist, wie die Leute oben Geld bekommen. Das hängt an D44 (Organisation) und D51 (was die Firma verkauft).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Honorar je Projekt",
+       "text": "Honorar je Projekt; Wohnen und Essen zahlen die Leute selbst.",
+       "ki": false
+      },
+      {
+       "v": "B",
+       "titel": "Anteil am Umsatz",
+       "text": "Fester Anteil am Umsatz der Projekte, an denen jemand arbeitet.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Wohnen und Essen frei, dazu Anteil",
+       "text": "Wohnen und Essen oben frei, dazu ein kleinerer Anteil am Umsatz.",
+       "ki": false
+      }
+     ],
+     "frueher": [],
+     "bereich": null
+    },
+    {
+     "id": "D38",
+     "frage": "Wie zahlen Siedler für Leistungen oben?",
+     "warum": "Strom, Wasser, Internet, Sauna und Coworking müssen bezahlt werden. Das hängt am Produktmodell (D48).",
+     "opts": [
+      {
+       "v": "A",
+       "titel": "Monatliche Pauschale",
+       "text": "Feste Nebenkostenpauschale für alle Leistungen.",
+       "ki": false
+      },
+      {
+       "v": "B",
+       "titel": "Nach Verbrauch",
+       "text": "Strom und Wasser nach Zähler, Sauna und Coworking je Nutzung.",
+       "ki": false
+      },
+      {
+       "v": "C",
+       "titel": "Im Preis enthalten",
+       "text": "Leistungen stecken im Kaufpreis, der Pacht oder der Miete.",
+       "ki": false
+      }
+     ],
+     "frueher": [],
+     "bereich": null
+    }
+   ]
+  }
+ ],
+ "historie_zu_karte": {
+  "E28": [
+   "D42"
+  ],
+  "E29": [
+   "D42"
+  ],
+  "E13": [
+   "D43"
+  ],
+  "E16": [
+   "D43"
+  ],
+  "E22": [
+   "D43"
+  ],
+  "E71": [
+   "D43"
+  ],
+  "E80": [
+   "D43"
+  ],
+  "E07": [
+   "D44"
+  ],
+  "E08": [
+   "D44"
+  ],
+  "E17": [
+   "D44"
+  ],
+  "E18": [
+   "D44"
+  ],
+  "E19": [
+   "D44"
+  ],
+  "E61": [
+   "D44"
+  ],
+  "E01": [
+   "D45"
+  ],
+  "E23": [
+   "D45"
+  ],
+  "E24": [
+   "D45"
+  ],
+  "E42": [
+   "D45"
+  ],
+  "E69": [
+   "D45"
+  ],
+  "E79": [
+   "D45"
+  ],
+  "E04": [
+   "D46"
+  ],
+  "E05": [
+   "D46"
+  ],
+  "E30": [
+   "D46"
+  ],
+  "E57": [
+   "D46"
+  ],
+  "E31": [
+   "D47"
+  ],
+  "E85": [
+   "D47"
+  ],
+  "E47": [
+   "D48"
+  ],
+  "E50": [
+   "D48"
+  ],
+  "E52": [
+   "D48"
+  ],
+  "E78": [
+   "D49"
+  ],
+  "E84": [
+   "D49"
+  ],
+  "E51": [
+   "D50"
+  ],
+  "E58": [
+   "D50"
+  ],
+  "E66": [
+   "D50"
+  ],
+  "E56": [
+   "D51"
+  ],
+  "E63": [
+   "D51"
+  ],
+  "E70": [
+   "D51"
+  ],
+  "E76": [
+   "D51"
+  ],
+  "E77": [
+   "D51"
+  ],
+  "E83": [
+   "D51"
+  ],
+  "E03": [
+   "D52"
+  ],
+  "E32": [
+   "D52"
+  ],
+  "E67": [
+   "D52"
+  ],
+  "E60": [
+   "D53"
+  ],
+  "E65": [
+   "D53"
+  ],
+  "E82": [
+   "D53"
+  ],
+  "E06": [
+   "D54"
+  ],
+  "E10": [
+   "D54"
+  ],
+  "E27": [
+   "D54"
+  ],
+  "E33": [
+   "D54"
+  ],
+  "E37": [
+   "D54"
+  ],
+  "E43": [
+   "D54"
+  ],
+  "E64": [
+   "D54"
+  ],
+  "E34": [
+   "D55"
+  ],
+  "E39": [
+   "D55"
+  ],
+  "E40": [
+   "D55"
+  ],
+  "E41": [
+   "D55"
+  ],
+  "E44": [
+   "D55"
+  ],
+  "E45": [
+   "D55"
+  ],
+  "E59": [
+   "D55"
+  ],
+  "E72": [
+   "D56"
+  ],
+  "E75": [
+   "D56"
+  ],
+  "E36": [
+   "D57"
+  ],
+  "E02": [
+   "D58"
+  ],
+  "E21": [
+   "D58"
+  ],
+  "E38": [
+   "D58"
+  ],
+  "E55": [
+   "D58"
+  ],
+  "E35": [
+   "D59"
+  ],
+  "E26": [
+   "D61"
+  ],
+  "E49": [
+   "D63"
+  ],
+  "E15": [
+   "D64"
+  ],
+  "E74": [
+   "D64"
+  ],
+  "E73": [
+   "D65"
+  ],
+  "E14": [
+   "D66"
+  ],
+  "E46": [
+   "D66"
+  ],
+  "E53": [
+   "D66"
+  ],
+  "E54": [
+   "D66"
+  ],
+  "E62": [
+   "D67"
+  ],
+  "E81": [
+   "D67"
+  ],
+  "E09": [
+   "D68"
+  ],
+  "E11": [
+   "D68"
+  ],
+  "E12": [
+   "D68"
+  ],
+  "E20": [
+   "D68"
+  ],
+  "E25": [
+   "D68"
+  ],
+  "E68": [
+   "D68"
+  ]
+ }
+}

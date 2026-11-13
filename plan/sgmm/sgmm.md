@@ -90,7 +90,7 @@ Stand 12.11.2026. Bezugsrahmen Reference Architecture v0.4-WB1. Preise in UAH, 5
 - Für wen: Alle Rollen
 - Kosten: OPEN, folgt aus dem parametrischen Business Case (OD-008)
 
-## 04 Change Requests
+## 04 Neu zu entscheiden (Entscheidungsseite D49, D55, D56)
 
 | ID | Betrifft | Heute | Vorschlag | Anlass | Status |
 |---|---|---|---|---|---|

@@ -329,7 +329,7 @@ def build_html():
 <p class="lead">X-PORTAL und Node001 nach dem St. Galler Management-Modell: normativ, strategisch, operativ. Jede kritische Funktion ist bis auf Betriebsmittel, Werkzeug, Preis, Person und Ausfall heruntergebrochen.</p>
 <p class="note">Bezugsrahmen ist die Reference Architecture v0.4-WB1. Werte ohne Quelle sind ASSUMPTION oder OPEN. Preise sind Internetpreise in UAH (Suche November 2026), umgerechnet mit 50 UAH/EUR (E20), ohne Montage und Transport. Vorschläge der KI sind keine Entscheidungen; entschieden wird auf der <a href="{ENTSCH}">Entscheidungsseite</a>. Plan im Detail: <a href="{INDEX}">Index 3.0</a> · Investoren: <a href="{WP}">Whitepaper</a>.</p>
 <div class="meta">Status: {" ".join(st(s) for s in STATUS)} · Relevanz für Node001: {rel("REQUIRED")} {rel("PREPARE")} {rel("DEFER")}</div>
-<nav class="toc"><a href="#umwelt">Umwelt</a><a href="#matrix">SGMM-Matrix</a><a href="#bauphasen">Bauphasen</a><a href="#change">Change Requests</a><a href="#ketten">Funktionsketten</a><a href="#lernen">Lernkreislauf</a><a href="#abgleich">Neue Widersprüche</a></nav></header>''')
+<nav class="toc"><a href="#umwelt">Umwelt</a><a href="#matrix">SGMM-Matrix</a><a href="#bauphasen">Bauphasen</a><a href="#change">Neu entscheiden</a><a href="#ketten">Funktionsketten</a><a href="#lernen">Lernkreislauf</a><a href="#abgleich">Neue Widersprüche</a></nav></header>''')
     # Umwelt
     o.append('<section id="umwelt"><p class="num">01 · Umwelt und Anspruchsgruppen</p><h2>Wer und was auf Node001 einwirkt</h2><div class="grid">')
     for n, t, s in UMWELT: o.append(f'<div class="card"><h3>{e(n)}</h3><p>{e(t)}</p><div class="meta">{st(s)}</div></div>')
@@ -350,7 +350,7 @@ def build_html():
         o.append(f'<div class="card"><p class="eyebrow">{p}</p><h3>{e(t)}</h3><dl><dt>Was</dt><dd>{e(was)}</dd><dt>Für wen</dt><dd>{e(wer)}</dd><dt>Kosten</dt><dd>{e(kosten)}</dd></dl><div class="meta">{st(s)}</div></div>')
     o.append('</div></section>')
     # CR
-    o.append('<section id="change"><p class="num">04 · Change Requests</p><h2>Was im Entscheidungslog geändert werden muss</h2><p>Nach Abschnitt 15 der Baseline werden Änderungen an Kernaussagen nicht still übernommen. Paul und Roman entscheiden; danach werden die Einträge als E86 ff. ins Log übernommen.</p><div class="tw"><table><thead><tr><th>ID</th><th>Betrifft</th><th>Heute im Log</th><th>Vorschlag</th><th>Anlass</th><th>Status</th></tr></thead><tbody>')
+    o.append('<section id="change"><p class="num">04 · Neu zu entscheiden</p><h2>Was auf der Entscheidungsseite neu entschieden wird</h2><p>Seit 13.11.2026 sind alle früheren Entscheidungen E01–E85 zurückgenommen. Die Punkte unten entscheiden Paul und Roman auf der <a href="https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP">Entscheidungsseite</a>: Container und Bauphasen in D55, Hausart in D56, Preis und Größe je Haus in D49.</p><div class="tw"><table><thead><tr><th>ID</th><th>Betrifft</th><th>Früher im Log</th><th>Vorschlag</th><th>Anlass</th><th>Status</th></tr></thead><tbody>')
     for i, t, alt, neu, q, s in CR: o.append(f'<tr><td class="id">{i}</td><td><b>{e(t)}</b></td><td>{e(alt)}</td><td>{e(neu)}</td><td>{e(q)}</td><td>{st(s)}</td></tr>')
     o.append('</tbody></table></div></section>')
     # Ketten
@@ -385,7 +385,7 @@ def build_md():
             L += [f'- {x}' for x in pts] + ['']
     L += ['## 03 Bauphasen', '']
     for p, t, was, wer, kosten, s in PHASEN: L += [f'### {p}: {t} [{s}]', f'- Was: {was}', f'- Für wen: {wer}', f'- Kosten: {kosten}', '']
-    L += ['## 04 Change Requests', '', '| ID | Betrifft | Heute | Vorschlag | Anlass | Status |', '|---|---|---|---|---|---|']
+    L += ['## 04 Neu zu entscheiden (Entscheidungsseite D49, D55, D56)', '', '| ID | Betrifft | Heute | Vorschlag | Anlass | Status |', '|---|---|---|---|---|---|']
     L += [f'| {i} | {t} | {alt} | {neu} | {q} | {s} |' for i, t, alt, neu, q, s in CR]
     L += ['', '## 05 Funktionsketten', '']
     for k in KETTEN:

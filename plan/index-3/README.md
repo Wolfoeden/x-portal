@@ -28,14 +28,15 @@ Online als Artefakt: https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F (privat, 
   2. Alltag oben: Anforderungen nach Maslow und Sinnen (M02), Spielregeln, Szenariotests
   3. Versorgung je Ressource mit Ausbaupfad (M06)
   4. Make-or-Buy (M05)
-  5. bis 8: Parallel, Entscheidungsseite (D34–D41), Offen im Plan, Entschieden
+  5. bis 8: Parallel, Entscheidungsseite, Offen im Plan, früher Entschieden (Historie)
 
 Knotenarten: Entscheidung, Ereignis, Gate, Schritt, Anforderung, Ende. Zustände: offen, wartet, nicht geprüft, entschieden, Regel steht, später.
 
 ## Regeln für Agenten
 
-- Quellenkürzel: E01–E85 Entscheidungen (Log in `plan/entscheidungen.md` im Plan-Repo), O01–O32 offene Punkte, D34–D41 Karten der Entscheidungsseite, 2.x.y Teilergebnisse, H01–D05 Anforderungen, M01–M11 Methoden.
-- „Vorschlag KI“ ist keine Entscheidung. Vorschläge gelten erst, wenn Paul oder Roman nicht widersprechen (E80); entschieden wird auf der Entscheidungsseite https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP.
+- Quellenkürzel: E01–E85 Entscheidungen (Log in `plan/entscheidungen.md` im Plan-Repo), O01–O32 offene Punkte, D34–D38 und D42–D68 Karten der Entscheidungsseite (seit 13.11.2026; `../entscheidungen/`), 2.x.y Teilergebnisse, H01–D05 Anforderungen, M01–M11 Methoden.
+- **Seit 13.11.2026 sind alle Entscheidungen E01–E85 zurückgenommen** und nur noch Historie; sie werden auf der Entscheidungsseite neu getroffen (Archiv und Generator: `../entscheidungen/`).
+- „Vorschlag KI“ ist keine Entscheidung. Ein Vorschlag gilt erst, wenn er auf der Entscheidungsseite gewählt ist (E80 ist zurückgenommen); entschieden wird auf der Entscheidungsseite https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP.
 - „Vorgabe vom 05.11.2026“ (Gleitzeit 9–14 Uhr, Jour fixe und Sport Pflicht, Käufer frei, Aufteilung X-PORTAL und DT Agentur, Technik-Frage) steht noch nicht im Entscheidungslog; sie gehört dort als E86 ff. hinein.
 - Technische Werte legt eine Fachperson fest (E22); Rechtsfragen sind Prüfaufträge an Anwälte, keine Auskunft.
 - Nichts bestellen, versenden, veröffentlichen oder unterschreiben; ein Mensch gibt frei (E13).

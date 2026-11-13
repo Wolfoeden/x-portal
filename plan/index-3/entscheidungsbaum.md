@@ -723,7 +723,7 @@ Verglichen wird die betriebsfähige Drei-Personen-Lösung mit Ausbaupfad. Zuerst
   - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
   - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
   - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
-  - Möglichkeit A: Bausatz in Teilen [entschieden]
+  - Möglichkeit A: Bausatz in Teilen [früher entschieden]
     - Kosten: fehlt; Anfrage an Servus, Supersip, dann Unitbud (O31)
     - Transport: kleines Fahrzeug; Teilegewicht nennt kein Anbieter (A3)
     - Eigenleistung: Montage oben (2.4.8)
@@ -809,12 +809,12 @@ Verglichen wird die betriebsfähige Drei-Personen-Lösung mit Ausbaupfad. Zuerst
     - Kosten: in der Ukraine noch kein Preis (A4)
   - Möglichkeit C: Toilette mit Abwasser
     - Stand: ein genehmigungsfähiges Abwasserkonzept fehlt (O28)
-- **Entscheidung:** Internet: Anschluss und Reserve _[entschieden]_
+- **Entscheidung:** Internet: Anschluss und Reserve _[früher entschieden]_
   - Entschieden (E49). Mindestbedingungen: D01, Z02, A01. Test: D01 über beide Anschlüsse, Starlink bei Schnee.
   - Dient: Z1, Z3
-  - Möglichkeit A: Eigener Anschluss [entschieden]
+  - Möglichkeit A: Eigener Anschluss [früher entschieden]
     - Kosten: fehlt; Anbieter oben und Bandbreite fehlen (A4)
-  - Möglichkeit B: Starlink Mini als Reserve [entschieden]
+  - Möglichkeit B: Starlink Mini als Reserve [früher entschieden]
     - Kosten: 20.820–25.900 UAH, rund 420–520 €, dazu etwa 2.950 UAH, rund 59 € im Monat (A4)
 - **Entscheidung:** Essen: selbst anbauen, vor Ort kaufen oder liefern lassen _[offen]_
   - Mindestbedingung: H07, Kochen für drei Personen, Kühlung, Vorrat für 10 Tage. Wer zahlt, fragt D36. Test: Störungstag.
@@ -1281,53 +1281,53 @@ Die offenen Architekturentscheidungen der Baseline, dazu Kapitel 4 (Art E), die 
   - Beschlussblatt, Gültigkeit: für Stufe 1, bis ihr sie ändert
   - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
 
-## 8 · Entschieden: 84 im Log, nach Thema
+## 8 · Früher entschieden (seit 13.11. zurückgenommen): 84 im Log, nach Thema
 
 Je Thema ein Satz, mit den Entscheidungen dahinter. Die vollständige Liste steht unten unter „Entscheidungen E01–E85“.
 
-- **Entscheidung:** Ort _[entschieden]_
+- **Entscheidung:** Ort _[früher entschieden]_
   - Node001: Bereschnyzja, Ortsteil Hrun, bei Werchowyna. Der Name ist überall Node001, der Oberbegriff Nodes. Als Ort nennt die Website, wenn überhaupt, nur „Ukraine“, dazu europaweite Standorte. (E33, E63, E66)
-- **Entscheidung:** Ziel _[entschieden]_
+- **Entscheidung:** Ziel _[früher entschieden]_
   - 2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld. Roman ist von Anfang an dabei. (E01, E23, E24)
-- **Entscheidung:** Vorrang _[entschieden]_
+- **Entscheidung:** Vorrang _[früher entschieden]_
   - Das Grundstück voll bekommen, auf Autarkie hinarbeiten, alles läuft immer. Der Betrieb trägt sich selbst. (E46, E54)
-- **Entscheidung:** Geld _[entschieden]_
+- **Entscheidung:** Geld _[früher entschieden]_
   - Reihenfolge: Pauls Lebensunterhalt, Kosten auf dem Berg, Weiterentwicklung, Kapital über die Chain. (E05)
-- **Entscheidung:** Paul _[entschieden]_
+- **Entscheidung:** Paul _[früher entschieden]_
   - Ist Paul Vollzeit dabei, sind seine 8.000 € netto im Monat unabdingbar. Sie stehen nicht im Mittelpunkt des Plans. (E03, E32, E67)
-- **Entscheidung:** Kapital _[entschieden]_
+- **Entscheidung:** Kapital _[früher entschieden]_
   - Der Ort braucht keinen Investor: Käufergeld ist Umsatz und kommt zuerst. Die Firma darf Pre-Seed aufnehmen. Kapital über die Chain erst, wenn Umsatz da ist. (E04, E30, E57)
-- **Entscheidung:** Kosten _[entschieden]_
+- **Entscheidung:** Kosten _[früher entschieden]_
   - Die 12,5 Mio. € sind eure Hochrechnung der Kosten in Werchowyna, keine Finanzierung. (E65)
-- **Entscheidung:** Umsatz _[entschieden]_
+- **Entscheidung:** Umsatz _[früher entschieden]_
   - Projekte und Freelancer-Aufträge aus Deutschland; oben werden daraus Agenten, verkauft über Masumi. Projekte werden verkauft, ihr Preis ist offen; für Agenten ist das Modell offen: Abo, Einmalzahlung mit Betreuung oder nach Nutzung. Erster bezahlter Auftrag bis Januar 2027. (E31, E56, E77, E83)
-- **Entscheidung:** Verkauf _[entschieden]_
+- **Entscheidung:** Verkauf _[früher entschieden]_
   - Warteliste; ab Januar 2027 kaufen als Token, Grund pachten; mieten mit Miete nach dem Einzug. (E47, E51, E52)
-- **Entscheidung:** Preis _[entschieden]_
+- **Entscheidung:** Preis _[früher entschieden]_
   - Etwa 30.000 € je Plot als Ausgangspunkt der Rechnung. Bestellt wird, wenn 5 Käufer ihr Geld belegt haben. (E50, E78)
-- **Entscheidung:** Nachfrage _[entschieden]_
+- **Entscheidung:** Nachfrage _[früher entschieden]_
   - Die Warteliste zeigt die Nachfrage; bei großem Andrang gibt es mehr Plots. Umfragen ohne Angebot gibt es nicht. (E09, E51, E58)
-- **Entscheidung:** Bauweise _[entschieden]_
+- **Entscheidung:** Bauweise _[früher entschieden]_
   - Die Häuser kommen in Teilen und werden oben montiert; sie sind die Tiny Houses der Käufer und bleiben, den Grund pachten sie. (E39, E52, E59, E75)
-- **Entscheidung:** Zeit _[entschieden]_
+- **Entscheidung:** Zeit _[früher entschieden]_
   - Die Häuser kommen frühestens im März 2027 hoch, sobald frostfrei, in Teilen (E75); Werbung „Einzug ab Frühjahr 2027“. (E21, E55)
-- **Entscheidung:** Versorgung _[entschieden]_
+- **Entscheidung:** Versorgung _[früher entschieden]_
   - Netzstrom mit Batterie oder Generator und Solar; eigener Internetanschluss, Starlink als Reserve; 50 l Wasser je Person und Tag. (E26, E35, E49)
-- **Entscheidung:** Abnahme _[entschieden]_
+- **Entscheidung:** Abnahme _[früher entschieden]_
   - Vor dem Einzug schriftlich abgenommen durch Nazar oder eine Fachperson. (E22, E27, E53)
-- **Entscheidung:** Pläne _[entschieden]_
+- **Entscheidung:** Pläne _[früher entschieden]_
   - Generalplan Variante 1 ist die Grundlage. Nazar ist beauftragt, seine Ergebnisse sind offen. (E37, E43, E64)
-- **Entscheidung:** Firma _[entschieden]_
+- **Entscheidung:** Firma _[früher entschieden]_
   - Heute Romans Einzelunternehmen; UG in Gründung, Sitz offen (W09). (E17, E61)
-- **Entscheidung:** Grundstücke _[entschieden]_
+- **Entscheidung:** Grundstücke _[früher entschieden]_
   - Das eigene und höchstens ein weiteres; die übrigen von Dritten. (E18)
-- **Entscheidung:** Rollen _[entschieden]_
+- **Entscheidung:** Rollen _[früher entschieden]_
   - Paul ist CEO, hält den Kontakt zu Nazar und entscheidet über Bestellungen und den Betrag; Roman führt Produkt und Projekt und ist oben. Die KI macht, was sie kann; ein Mensch prüft. (E06, E13, E19, E62, E71)
-- **Entscheidung:** Arbeit oben _[entschieden]_
+- **Entscheidung:** Arbeit oben _[früher entschieden]_
   - Das Team baut Agenten und liefert alle Projekte, auch Cybersecurity und Blockchain; das eigene Produkt sind nur Agenten. Käufer und Mieter bilden eine Community. (E63, E70)
-- **Entscheidung:** Grundmodell _[entschieden]_
+- **Entscheidung:** Grundmodell _[früher entschieden]_
   - Leichter Transport, kommunal, gemeinschaftlich, autark; Privatsphäre im eigenen Haus, Community vorausgesetzt. E-Bikes statt Benzin, Kommunalgebäude mit Gemüsegarten. (E72, E73, E74)
-- **Entscheidung:** Alltag _[entschieden]_
+- **Entscheidung:** Alltag _[früher entschieden]_
   - Arbeit, Gesundheit und Freizeit gehören zusammen: Jour fixe am Morgen, gemeinsam oder privat essen, Sauna, Wandern, Laufen, Yoga; abgelegen und doch im Team. (E81)
-- **Entscheidung:** Ablage _[entschieden]_
+- **Entscheidung:** Ablage _[früher entschieden]_
   - OneDrive in Microsoft 365, DSGVO-konform. (E12)
