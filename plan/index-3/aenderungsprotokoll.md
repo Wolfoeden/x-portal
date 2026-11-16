@@ -54,3 +54,41 @@ Knoten vorher 242, nachher 293 (Ast 6 zeigt jetzt alle 36 Karten statt 8; Ast 8 
 - Abgleich der deutschen Geologie-Zusammenfassung mit dem ukrainischen Original.
 - Die Beträge des Pakets „Vor dem Investment“ enthalten noch Fachprüfung und Vermessung und sind neu zu rechnen.
 - Andere Seiten (Entscheidungsseite, Anschaffungen, Vor dem Investment, SGMM, Whitepaper, Deck) sind in diesem Schritt nicht geändert.
+
+## 16.11.2026 · Stufe 1: Ablaufplan von Schritt 1 bis Projektende
+
+Auftrag vom 16.11.2026: alle Pläne vereinen, von Schritt 1 bis Projektende, mit fertigen Unterlagen je Schritt, angepasst an die Grundbestimmungen (zum Beispiel den Weg nach oben). Eine höhere KI plant, eine kleinere führt aus. Bestellt und verschickt wird von Hand.
+
+- **Grundlage:** neu sind die Tabelle „Grundbestimmungen“ GB1 bis GB11, jede mit Quelle, und die KI-Arbeitsteilung. Mission, Globalziele, Ort mit Detailplan, Geologie und Zielblatt sind unverändert.
+- **Ast 1** ist jetzt der Ablaufplan mit den Abschnitten A bis H:
+  - A · Vor dem Investment
+  - B · Kapital
+  - C · Beschaffung, Import und Transport
+  - D · Bau Phase 0
+  - E · Abnahme und Einzug
+  - F · Erster Winter und Betrieb
+  - G · Phase 1
+  - H · Phase 2 und Projektende
+- **Bisherige Knoten:** alle stehen unverändert an ihrer Stelle: O01 mit Lage, hausart, zufahrt, lieferant, technik, O03, mieter, G0, O23, G1, frost, G2, G3, G4. Der Generator bricht ab, wenn einer fehlt.
+- **28 neue Arbeitspakete (AP-A1 bis AP-H3) in 8 Abschnitten:**
+  - Jedes hat die Felder Wann, Voraussetzung, Blockiert, Grundbestimmungen, Rolle und Ergebnis. Der Generator bricht ab, wenn ein Feld leer ist oder eine Grundbestimmung unbekannt.
+  - Wo ein Vorlauf nicht bekannt ist, steht „offen“; Termine gibt es keine.
+- **Die fünf neuen Punkte als Aufgaben:**
+  - Netzanschluss: AP-A3
+  - Objekte aus Ungarn, Polen und über Alibaba: AP-C1
+  - Importeur und Verzollung: AP-C2
+  - Logistik: AP-C3
+  - Kamera-KI für den Normalzustand: AP-F2
+  - Zugang über Cardano: AP-D5
+  - Dazu die Rechtsprüfung des Tokens: AP-A6, und das Token-Crowdfunding: AP-B2, ausgearbeitet in Stufe 3.
+- **Unterlagen zum Kopieren:**
+  - Anfragen an Labor, Netzbetreiber, Anbieter (Deutsch und Englisch), Zollbroker und Spedition
+  - Prüfauftrag an die Anwälte zum Token
+  - Anschreiben an Investoren
+  - Abnahmetabelle
+  - Ukrainische Fassungen erstellt die ausführende KI; eine Muttersprachlerin prüft sie.
+- **Aufträge für die ausführende KI:** 9 Dateien in `auftraege/` (AP-A1, A2, A3, A4, C1, C2, C3, D5, F2). Sie werden aus `werkzeug/ablauf.py` erzeugt.
+- **Zu bestätigen, nicht belegt:**
+  - zuständiger Netzbetreiber (vermutlich АТ „Прикарпаттяобленерго“) und der frühere Richtwert von etwa 2.927 UAH je kW
+  - Warennummer, Zoll und Einfuhrumsatzsteuer
+- **Knoten im Baum:** vorher 293, nachher 329. M02 ist unverändert (29 Zeilen).

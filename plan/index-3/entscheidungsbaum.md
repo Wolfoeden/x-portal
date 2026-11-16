@@ -75,190 +75,545 @@ Geologie: Der technische Bericht des Ingenieurgeologen liegt vor (Vertrag 34.11/
 Offen: welche Parzelle die Herrenhaus-Fläche ist und wo darunter das Objekt Phase 0 steht (Ast 1, Lage). Wie weit das Bauprogramm des Plans (Hotel, Handel, Tiefgarage) zum Mietmodell und zu den Phasen passt, ist nicht entschieden.
 
 
-## 1 · Der Weg: Geologie und Lage, Bauart, Zufahrt, Lieferant, Technik, dann Selbstkosten, Mieter, Kapital und Gates bis zum ersten Winter
+## 1 · Ablaufplan von Schritt 1 bis Projektende: Arbeitspakete mit fertigen Unterlagen
 
-Geologiebericht und Detailplan liegen vor. Zuerst wird das Objekt Phase 0 im Detailplan verortet; dann Bauart, Zufahrt, wer liefert und baut, und die Technik. Danach Selbstkosten, Mieter, Kapital und die Gates bis zum ersten Winter.
+Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeitspaket nennt Wann, Voraussetzung, was es blockiert, die Grundbestimmungen (GB1 bis GB11 in der Grundlage), die Rolle und das Ergebnis; dazu Unterlagen zum Kopieren und, wo es passt, einen Auftrag für die ausführende KI. Nichts wird automatisch bestellt oder verschickt. Die bisherigen Knoten (Geologie, Lage, Bauart, Zufahrt, Lieferant, Technik, Selbstkosten, Mieter, Gates) stehen unverändert an ihrer Stelle.
 
-- **Ereignis O01:** Geologie: Bericht liegt vor. Was sagt er für Phase 0 und Phase 1? _[entschieden]_
-  - Technischer Bericht 34.11/26, Ingenieurgeologe, Iwano-Frankiwsk 2026 · deutsche Zusammenfassung XPB-N001-GEO-SUM-001 (KI-erstellt, mit dem Original abzugleichen)
-  - Feldarbeiten September bis November 2026: 3 Schürfgruben mit zusammen 7,5 m, 12 Handbohrungen bis je 2 m. Nordöstlich exponierter Hang des Bila Kobyla, Geländehöhen 1.016–1.077 m. Ingenieurgeologische Komplexität Kategorie III.
-  - Schichten: IGE-1 lehmiger Oberboden, 0,6–1,1 m, von Rutschprozessen betroffen; IGE-2 weichplastischer Lehm, 0,8–1,1 m; IGE-3 Schuttmaterial mit Sandstein, 1,0–1,4 m, bei den Punkten 6, 7, 11 wassergesättigt; IGE-4 Flysch, Schichten etwa 70° geneigt.
-  - Kennwerte: IGE-1: E 19 MPa, φ 23°, c 27 kPa, R₀ 240 kPa. IGE-2: 6 MPa, 14°, 13 kPa, 130 kPa. IGE-3: 45 MPa, 33°, 8 kPa, 500 kPa; am Standort mit 70 % anzusetzen.
-  - Grundwasser: Austritte an den Bohrpunkten 6, 7 und 11; mehr Wasser bei Starkregen und Schneeschmelze. Gegen Beton normaler Dichte nicht aggressiv.
-  - Hang: Verbreitete Rutsch- und Fließprozesse; bewegte Schichten 0,8–1,2 m (im erläuternden Text 0,9–1,2 m), Flächen meist 3–4 m², teils bis 15 m².
-  - Empfehlung: Kombinierte Streifen- und Stützfundamentierung auf IGE-3 oder IGE-4; hangseitiger Fundamentbereich als Stützkonstruktion; hangseitiger Entwässerungsgraben; Wasser vor Abfällen und Abwasser schützen.
-  - Zusatzerkundung: Verlangt für Zufahrt, Stützkonstruktionen und Hauptgebäude, wenn bis IGE-4 gegründet wird, und bei geänderten Gebäuden oder Fundamenten.
-  - Dient: Z1, Z2
-  - **Ausgang (Fall A):** Leichte eingeschossige Objekte: Gründung auf IGE-3. _[offen]_
-    - Laut Gutachter geeignet für leichte eingeschossige Gebäude. Gilt für das Objekt Phase 0, wenn es leicht und eingeschossig ist (Zuordnung Vorschlag KI).
-    - **Entscheidung:** Fundament für das Objekt Phase 0: Streifen- und Stützfundament nach Empfehlung, bemessen durch einen Fachexperten _[offen]_
-      - Fachexperte Bau · Freigabe Geschäftsführung
+- **Ast:** A · Vor dem Investment: klären, was ein Investor sonst einpreist
+  - Mit Eigenmitteln und Eigenleistung; Richtwert etwa 10.000 € (D69 offen).
+  - **Ereignis O01:** Geologie: Bericht liegt vor. Was sagt er für Phase 0 und Phase 1? _[entschieden]_
+    - Technischer Bericht 34.11/26, Ingenieurgeologe, Iwano-Frankiwsk 2026 · deutsche Zusammenfassung XPB-N001-GEO-SUM-001 (KI-erstellt, mit dem Original abzugleichen)
+    - Feldarbeiten September bis November 2026: 3 Schürfgruben mit zusammen 7,5 m, 12 Handbohrungen bis je 2 m. Nordöstlich exponierter Hang des Bila Kobyla, Geländehöhen 1.016–1.077 m. Ingenieurgeologische Komplexität Kategorie III.
+    - Schichten: IGE-1 lehmiger Oberboden, 0,6–1,1 m, von Rutschprozessen betroffen; IGE-2 weichplastischer Lehm, 0,8–1,1 m; IGE-3 Schuttmaterial mit Sandstein, 1,0–1,4 m, bei den Punkten 6, 7, 11 wassergesättigt; IGE-4 Flysch, Schichten etwa 70° geneigt.
+    - Kennwerte: IGE-1: E 19 MPa, φ 23°, c 27 kPa, R₀ 240 kPa. IGE-2: 6 MPa, 14°, 13 kPa, 130 kPa. IGE-3: 45 MPa, 33°, 8 kPa, 500 kPa; am Standort mit 70 % anzusetzen.
+    - Grundwasser: Austritte an den Bohrpunkten 6, 7 und 11; mehr Wasser bei Starkregen und Schneeschmelze. Gegen Beton normaler Dichte nicht aggressiv.
+    - Hang: Verbreitete Rutsch- und Fließprozesse; bewegte Schichten 0,8–1,2 m (im erläuternden Text 0,9–1,2 m), Flächen meist 3–4 m², teils bis 15 m².
+    - Empfehlung: Kombinierte Streifen- und Stützfundamentierung auf IGE-3 oder IGE-4; hangseitiger Fundamentbereich als Stützkonstruktion; hangseitiger Entwässerungsgraben; Wasser vor Abfällen und Abwasser schützen.
+    - Zusatzerkundung: Verlangt für Zufahrt, Stützkonstruktionen und Hauptgebäude, wenn bis IGE-4 gegründet wird, und bei geänderten Gebäuden oder Fundamenten.
+    - Dient: Z1, Z2
+    - **Ausgang (Fall A):** Leichte eingeschossige Objekte: Gründung auf IGE-3. _[offen]_
+      - Laut Gutachter geeignet für leichte eingeschossige Gebäude. Gilt für das Objekt Phase 0, wenn es leicht und eingeschossig ist (Zuordnung Vorschlag KI).
+      - **Entscheidung:** Fundament für das Objekt Phase 0: Streifen- und Stützfundament nach Empfehlung, bemessen durch einen Fachexperten _[offen]_
+        - Fachexperte Bau · Freigabe Geschäftsführung
+        - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
+        - Beschlussblatt, Fachliche Prüfung: Fachexperte; Architekt berät (D67)
+        - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung; Bestellung und Betrag: Geschäftsführung (D43)
+        - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+        - Beschlussblatt, Gültigkeit: bis ihr sie ändert
+        - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - **Ausgang (Fall B):** Massive, dauerhafte Gebäude: Gründung auf IGE-4, mit Zusatzerkundung. _[offen]_
+      - Laut Gutachter für massive Gebäude. Betrifft Kommunalgebäude und Objekte in Phase 1 (Zuordnung Vorschlag KI).
+      - **Entscheidung:** Zusatzerkundung für Phase 1 beauftragen, sobald Lage und Bauart der Gebäude feststehen (D56) _[offen]_
+        - Geschäftsführung · vor Phase 1
+        - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
+        - Beschlussblatt, Fachliche Prüfung: –
+        - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
+        - Beschlussblatt, Budgetgrenze: –
+        - Beschlussblatt, Gültigkeit: bis ihr sie ändert
+        - Beschlussblatt, Wiedervorlage: vor Phase 1
+    - **Ausgang (Fall C):** Flächen mit Grundwasseraustritt und Rutschprozessen. _[offen]_
+      - Bohrpunkte 6, 7 und 11. Entwässerungsgraben und Stützkonstruktion nach Empfehlung; die Lage von Phase 0 berücksichtigt diese Punkte.
+    - **Entscheidung:** Wo im Detailplan steht das Objekt Phase 0 (unterhalb der Herrenhaus-Fläche, D55)? _[offen]_
+      - Geschäftsführung mit dem Architekten (Beratung) · vor der Planung von Phase 0
+      - Grundlage ist der Detailplan Blatt 3 (2,0 ha, 24 Parzellen, Höhenlinien, Brunnen, lokale Kläranlage; Bild unter „Der Ort“ in der Grundlage). Zu klären: welche Parzelle die Herrenhaus-Fläche ist, wo darunter das Objekt Phase 0 steht und wie Wasser, Strom, Abwasser und Weg dorthin kommen.
+      - Dient: Z1, Z2
       - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
       - Beschlussblatt, Fachliche Prüfung: Fachexperte; Architekt berät (D67)
       - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung; Bestellung und Betrag: Geschäftsführung (D43)
       - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
       - Beschlussblatt, Gültigkeit: bis ihr sie ändert
-      - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
-  - **Ausgang (Fall B):** Massive, dauerhafte Gebäude: Gründung auf IGE-4, mit Zusatzerkundung. _[offen]_
-    - Laut Gutachter für massive Gebäude. Betrifft Kommunalgebäude und Objekte in Phase 1 (Zuordnung Vorschlag KI).
-    - **Entscheidung:** Zusatzerkundung für Phase 1 beauftragen, sobald Lage und Bauart der Gebäude feststehen (D56) _[offen]_
-      - Geschäftsführung · vor Phase 1
-      - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
-      - Beschlussblatt, Fachliche Prüfung: –
-      - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
-      - Beschlussblatt, Budgetgrenze: –
-      - Beschlussblatt, Gültigkeit: bis ihr sie ändert
-      - Beschlussblatt, Wiedervorlage: vor Phase 1
-  - **Ausgang (Fall C):** Flächen mit Grundwasseraustritt und Rutschprozessen. _[offen]_
-    - Bohrpunkte 6, 7 und 11. Entwässerungsgraben und Stützkonstruktion nach Empfehlung; die Lage von Phase 0 berücksichtigt diese Punkte.
-  - **Entscheidung:** Wo im Detailplan steht das Objekt Phase 0 (unterhalb der Herrenhaus-Fläche, D55)? _[offen]_
-    - Geschäftsführung mit dem Architekten (Beratung) · vor der Planung von Phase 0
-    - Grundlage ist der Detailplan Blatt 3 (2,0 ha, 24 Parzellen, Höhenlinien, Brunnen, lokale Kläranlage; Bild unter „Der Ort“ in der Grundlage). Zu klären: welche Parzelle die Herrenhaus-Fläche ist, wo darunter das Objekt Phase 0 steht und wie Wasser, Strom, Abwasser und Weg dorthin kommen.
+      - Beschlussblatt, Wiedervorlage: vor der Planung von Phase 0
+  - **Schritt:** Geologie: deutsche Zusammenfassung mit dem ukrainischen Original abgleichen _[offen]_
+    - Wann: jetzt
+    - Voraussetzung: Originalbericht 34.11/26 (16 Seiten) und Zusammenfassung XPB-N001-GEO-SUM-001 liegen vor
+    - Blockiert: Fundament, Lage von Phase 0, Angebote
+    - Grundbestimmungen: GB2, GB11
+    - Rolle: führt aus: ausführende KI, dann Projektleitung · prüft: Architekt (Beratung)
+    - Ergebnis: Abweichungsliste; geklärte Stellen, zum Beispiel die Mächtigkeit der bewegten Schichten (0,8–1,2 m gegen 0,9–1,2 m)
+    - Auftrag für die ausführende KI: auftraege/AP-A1.md
+  - **Schritt:** Wasseranalyse im Labor _[offen]_
+    - Wann: jetzt; Vorabprobe aus dem vorhandenen Grundwasser, Endprobe nach der Brunnenbohrung
+    - Voraussetzung: akkreditiertes Labor gefunden
+    - Blockiert: Auslegung der Aufbereitung, Angebot Brunnen und Aufbereitung
+    - Grundbestimmungen: GB6, GB11
+    - Rolle: entscheidet: Geschäftsführung · führt aus: Projektleitung · prüft: Fachexperte Wasser
+    - Ergebnis: Laborbericht mit Bewertung als Trinkwasser und Empfehlung zur Aufbereitung
+    - Anschaffungen: A048, A053, A054
+    - Unterlage: Anfrage an ein Labor (Deutsch; Ukrainisch durch die ausführende KI, von einer Muttersprachlerin geprüft)
+      > Betreff: Anfrage Trinkwasseranalyse, Grundwasser, Bereschnyzja (Werchowyna)
+      > 
+      > Guten Tag,
+      > 
+      > wir möchten Grundwasser auf einem Grundstück in Bereschnyzja, Ortsteil Hrun (Kataster 2620885502:02:001:0013) auf Eignung als Trinkwasser untersuchen lassen. Bitte nennen Sie uns:
+      > 1. Parameterumfang für Trinkwasser nach ukrainischer Norm, einschließlich Mikrobiologie, Eisen, Mangan, Nitrat, Härte, Trübung.
+      > 2. Probenahme: durch Sie oder durch uns; Gefäße, Kühlung, Zeit bis zur Abgabe.
+      > 3. Preis, Dauer bis zum Bericht, Akkreditierung.
+      > 
+      > Mit freundlichen Grüßen
+      > [Projektleitung, X-PORTAL]
+    - Auftrag für die ausführende KI: auftraege/AP-A2.md
+  - **Schritt:** Netzanschluss: wer ist zuständig, was kostet er, wie lange dauert er _[offen]_
+    - Zuständig ist vermutlich der Verteilnetzbetreiber der Oblast Iwano-Frankiwsk (АТ „Прикарпаттяобленерго“); das ist zu bestätigen. Aus einer früheren Recherche: etwa 2.927 UAH je kW ohne Leitung; Quelle beim Netzbetreiber bestätigen.
+    - Wann: jetzt, wegen der Bearbeitungszeit; die Frist selbst ist offen
+    - Voraussetzung: Lastliste Phase 0 und Ausbau vom Fachexperten Elektro; Katasternummer; Eigentumsnachweis
+    - Blockiert: Strom in Phase 0, Größe des Generators, Leitung zum Grundstück
+    - Grundbestimmungen: GB7, GB8, GB11
+    - Rolle: entscheidet: Geschäftsführung · führt aus: Projektleitung · prüft: Fachexperte Elektro
+    - Ergebnis: Bescheid oder schriftliche Auskunft mit Leistung in kW, Kosten, Frist und Anschlusspunkt
+    - Anschaffungen: A018–A021
+    - Unterlage: Anfrage an den Netzbetreiber (Deutsch; Ukrainisch durch die ausführende KI, geprüft)
+      > Betreff: Anfrage Netzanschluss, Grundstück Bereschnyzja, Kataster 2620885502:02:001:0013
+      > 
+      > Guten Tag,
+      > 
+      > für das Grundstück in Bereschnyzja, Ortsteil Hrun (Gemeinde Werchowyna), Kataster 2620885502:02:001:0013, planen wir einen Netzanschluss. Bitte teilen Sie uns mit:
+      > 1. Ob Sie zuständig sind, und wenn nicht, wer.
+      > 2. Nächster Anschlusspunkt und verfügbare Leistung.
+      > 3. Antragsweg (Standardanschluss oder Einzelanschluss), benötigte Unterlagen, Gebühr je kW und Kosten der Leitung bis zur Grundstücksgrenze.
+      > 4. Bearbeitungs- und Bauzeit.
+      > Geplante Leistung: [Wert vom Fachexperten Elektro] kW in der ersten Stufe, Erweiterung auf [Wert] kW vorgesehen.
+      > 
+      > Mit freundlichen Grüßen
+      > [Geschäftsführung, Node-Gesellschaft bzw. Eigentümer]
+    - Auftrag für die ausführende KI: auftraege/AP-A3.md
+  - **Entscheidung:** Bauart der Objekte: Holz, Beton, Glas, Metall? _[offen]_
+    - Geschäftsführung nach Vorschlag Fachexperte Bau · nach Lage (O01)
+    - Antwort vom 13.11. (D56): Der Plan für die Objekte steht aus; eine Bau-KI bewertet und plant in Abhängigkeit von den lokalen Gegebenheiten (Geologie, Gelände, Zufahrt).
+    - Dient: Z1, Z2
+    - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
+    - Beschlussblatt, Fachliche Prüfung: –
+    - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
+    - Beschlussblatt, Budgetgrenze: –
+    - Beschlussblatt, Gültigkeit: bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: nach Lage (O01)
+  - **Schritt:** Bauplanung Phase 0 mit Bau-KI und 3D-Modell (Basis of Design) _[offen]_
+    - Wann: nach Lage (O01) und Geologie-Abgleich (AP-A1)
+    - Voraussetzung: Detailplan, Geologiebericht, Lastliste, Raumliste aus Ast 2
+    - Blockiert: Angebote, Bestellung, Selbstkosten
+    - Grundbestimmungen: GB1, GB2, GB3, GB5, GB6, GB7
+    - Rolle: entscheidet: Geschäftsführung · führt aus: Fachexperte Bau mit Bau-KI · berät: Architekt
+    - Ergebnis: Basis of Design: Objekt, Fundament, Entwässerung, Leitungen (Wasser, Abwasser, Strom, Internet), Weg, Lageplan; Grundlage für alle Anfragen
+    - Anschaffungen: A010
+    - Auftrag für die ausführende KI: auftraege/AP-A4.md
+  - **Schritt:** Angebote für die großen Posten einholen _[offen]_
+    - Wann: nach der Bauplanung (AP-A4)
+    - Voraussetzung: Basis of Design
+    - Blockiert: Kostenband, Selbstkosten, Investorengespräch
+    - Grundbestimmungen: GB1, GB8, GB11
+    - Rolle: führt aus: Projektleitung · entscheidet: Geschäftsführung
+    - Ergebnis: Je Posten drei schriftliche Angebote: Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung
+  - **Schritt O03:** Selbstkosten je Objekt, daraus Miete und monatliche Pauschale _[offen]_
+    - KI rechnet, Geschäftsführung und Projektleitung entscheiden · nach Angeboten (O31)
+    - Statt eines Verkaufspreises wird der Selbstkostenpreis je Objekt ermittelt (D49): Objekt, Transport, Montage, Fundament, Anschlüsse, Anteil an Kommunalgebäude und Infrastruktur, Betrieb. Daraus Miete und Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen (D38). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung, 69 von 137 Positionen ohne Betrag).
+    - Dient: Z2
+    - Braucht: O31, D36, D37, D38
+  - **Schritt:** Mietinteressenten gewinnen, ab sofort und vor dem Bau _[offen]_
+    - Projektleitung · laufend (D50)
+    - Zuerst Mieter gewinnen; Ziel ist, Interessenten jetzt zu bekommen (D50). Verkauft wird im klassischen Sinn nichts (D45, D48). Tokenisierung und Beteiligung auf mehreren Ebenen erst nach rechtlicher Klärung (O05).
+    - Dient: Z2
+  - **Schritt:** Token über Cardano: Rechtsprüfung _[offen]_
+    - Wann: jetzt; vor jeder Ansprache von Kleinanlegern
+    - Voraussetzung: Anwälte in Deutschland und der Ukraine (O05)
+    - Blockiert: Token-Crowdfunding (AP-B2)
+    - Grundbestimmungen: GB9, GB11
+    - Rolle: beauftragt: Geschäftsführung · prüft: Anwälte
+    - Ergebnis: Schriftliche Einordnung des Tokens und Liste der Pflichten vor einem Angebot
+    - Unterlage: Prüfauftrag an die Anwälte
+      > Betreff: Prüfauftrag Token auf Cardano für Node001
+      > 
+      > Wir prüfen, ob Mitwirkende und Unterstützer über einen Token auf Cardano an Node001 beteiligt werden können. Bitte beantworten Sie:
+      > 1. Einordnung nach EU-Recht: Kryptowert nach MiCA (welche Kategorie) oder Finanzinstrument/Wertpapier? Was folgt daraus (Whitepaper, Prospekt, Erlaubnis, Plattform)?
+      > 2. Einordnung nach ukrainischem Recht über virtuelle Vermögenswerte; Besitz und Nutzung durch Ausländer.
+      > 3. Zwei Varianten: (a) Token als Nutzungsrecht oder Vorab-Miete am Node; (b) Token als Beteiligung an der Node-Gesellschaft, nicht an der Holding.
+      > 4. Pflichten zu KYC, Geldwäsche, Verbraucherschutz, Werbung.
+      > 5. Steuern beim Ausgeber und beim Erwerber in Deutschland und der Ukraine.
+      > 6. Was muss vor einem Angebot an die Öffentlichkeit fertig sein?
+      > 
+      > Bis zur Antwort wird nichts angeboten oder beworben.
+  - **Schritt:** Investorenunterlagen auf den Stand bringen _[offen]_
+    - Wann: nach Angeboten (AP-A5) und Selbstkosten (O03)
+    - Voraussetzung: Kostenband, Selbstkosten, Rechtsprüfung
+    - Blockiert: Investorengespräche
+    - Grundbestimmungen: GB8, GB9
+    - Rolle: führt aus: planende KI · prüft: Geschäftsführung, Jurist
+    - Ergebnis: Whitepaper und Deck mit Meilensteinen aus diesem Ablaufplan, Mittelverwendung je Phase, Risiken; Beträge erst nach Angeboten
+- **Ast:** B · Kapital: vermieten können, Investoren, Token
+  - **Gate G0:** Können wir vermieten? _[wartet]_
+    - vor dem Investorengespräch · Geschäftsführung und Projektleitung geben frei oder lassen nacharbeiten
+    - Muss fertig sein: Selbstkosten und Pauschale (O03), Mietvertrag und Struktur rechtlich geprüft (O05), Leistungen oben (2.1.8), Lage und Bauart von Phase 0, Abnahmetabelle (D66).
+    - Dient: Z2
+    - Braucht: O05, O12, D36, D37, D38
+    - Beschlussblatt, Vorbereitung: KI stellt die Nachweise zusammen
+    - Beschlussblatt, Fachliche Prüfung: je Teilergebnis der genannte Fachexperte
+    - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung
+    - Beschlussblatt, Budgetgrenze: Paket vor dem Investment (O12, D69)
+    - Beschlussblatt, Gültigkeit: bis zum Investorengespräch (D71)
+    - Beschlussblatt, Wiedervorlage: nicht frei: nacharbeiten und neu vorlegen
+  - **Schritt:** Investorengespräche _[offen]_
+    - Wann: nach Stufe A, Zeitpunkt nach D71
+    - Voraussetzung: Unterlagen (AP-A7), Struktur (O05)
+    - Blockiert: Bestellung Phase 0
+    - Grundbestimmungen: GB8, GB9
+    - Rolle: führt: Geschäftsführung · bereitet vor: Projektleitung
+    - Ergebnis: Zusage oder Absage mit Bedingungen; Protokoll je Gespräch
+    - Unterlage: Anschreiben an Investoren
+      > Betreff: X-PORTAL Node001 – Gespräch zu einem ersten Bauabschnitt
+      > 
+      > Guten Tag,
+      > 
+      > X-PORTAL verbindet bezahlte digitale Arbeit mit realen Orten. Node001 entsteht in den ukrainischen Karpaten auf einem 2-ha-Grundstück; Geologiebericht und Detailplan liegen vor, die Bauplanung für einen ersten Abschnitt ist [Stand]. Finanziert ist die Planung aus Eigenkapital; für Infrastruktur und Objekte suchen wir Investoren, verbunden mit wiederkehrenden Erlösen aus Miete und Services.
+      > 
+      > Gern stellen wir Ihnen Whitepaper und Präsentation in einem Gespräch vor.
+      > 
+      > Dies ist kein Angebot von Wertpapieren oder Vermögensanlagen.
+      > 
+      > Mit freundlichen Grüßen
+      > [Geschäftsführung]
+  - **Ereignis O23:** Kapital: Steigen Investoren für Infrastruktur und Objekte ein? _[offen]_
+    - Geschäftsführung · nach dem Paket vor dem Investment (D69, D71)
+    - Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Objekte mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47). Ein Verkauf an Einzelne ist abgewählt.
+    - Dient: Z2
+    - **Ausgang (ja):** Bestellen. _[Regel steht]_
+      - Die Geschäftsführung entscheidet über Bestellung und Betrag; bestellt wird nur mit Geld auf dem Konto.
+    - **Ausgang (noch nicht):** Was dann? _[offen]_
+      - **Entscheidung:** Wenn das Investment zum geplanten Bautermin nicht steht _[offen]_
+        - Möglichkeiten: Vorschlag KI, noch keine Entscheidung; sie gilt erst, wenn ihr eine wählt (D43).
+        - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
+        - Beschlussblatt, Fachliche Prüfung: –
+        - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
+        - Beschlussblatt, Budgetgrenze: –
+        - Beschlussblatt, Gültigkeit: bis ihr sie ändert
+        - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+        - Möglichkeit A: Phase 0 verschieben — Gebaut wird, sobald das Kapital steht; die Termine rücken nach hinten (D58: Termine sind Ziele).
+        - Möglichkeit B: Kleiner anfangen — Mit einem kleineren Objekt Phase 0; die Selbstkosten werden neu gerechnet (O03).
+        - Möglichkeit C: Eigenmittel erhöhen — Mehr Eigenkapital oder Eigenleistung, um den Anteil zu halten (D69, D70).
+  - **Schritt:** Token-Crowdfunding über Cardano vorbereiten _[später]_
+    - Wann: erst nach der Rechtsprüfung (AP-A6)
+    - Voraussetzung: schriftliche Einordnung, Struktur der Node-Gesellschaft
+    - Blockiert: –
+    - Grundbestimmungen: GB9, GB10
+    - Rolle: entscheidet: Geschäftsführung · prüft: Anwälte
+    - Ergebnis: Entscheidungsvorlage zu Variante, Pflichten, Plattform und Zeitplan (wird in Stufe 3 ausgearbeitet)
+  - **Gate G1:** Ist genug Geld da, ist bestellt? _[wartet]_
+    - nach G0 und O23
+    - Investment oder Eigenkapital für Phase 0 auf dem Konto; Objekt Phase 0 bestellt; Leitungen für Wasser, Abwasser, Strom und Internet geplant (2.2.7); kritische Fehlerarten bewertet (2.3.7); Prüfsituation T00 vor der Bestellung (2.4.9).
+    - Dient: Z2
+    - Braucht: O17, O23
+    - Beschlussblatt, Vorbereitung: KI rechnet den Geldfluss (2.1.3)
+    - Beschlussblatt, Fachliche Prüfung: Anwälte zu Struktur und Verträgen (O05)
+    - Beschlussblatt, Freigabe: Gate: Geschäftsführung und Projektleitung; Bestellung und Betrag: Geschäftsführung
+    - Beschlussblatt, Budgetgrenze: nur Geld auf dem Konto; Eigenkapital bis zur Bauplanung, danach Investoren (D46, D47)
+    - Beschlussblatt, Gültigkeit: für die Bestellung des Objekts Phase 0
+    - Beschlussblatt, Wiedervorlage: neue Information zu Objekt, Kapital oder Budget: G1 und G2 neu
+- **Ast:** C · Beschaffung, Import und Transport
+  - **Schritt:** Objekt Phase 0: Anbieter aus Ungarn, Polen und über Alibaba vergleichen _[offen]_
+    - Wann: nach der Bauplanung (AP-A4); bestellen spätestens Lieferzeit plus Zoll plus Transport vor dem Montagebeginn (AP-C4)
+    - Voraussetzung: Basis of Design
+    - Blockiert: Bestellung, Logistik, Zoll
+    - Grundbestimmungen: GB1, GB2, GB4, GB5, GB8
+    - Rolle: führt aus: ausführende KI und Projektleitung · entscheidet: Geschäftsführung
+    - Ergebnis: Vergleichstabelle mit mindestens je drei Anbietern; drei Angebote für die engere Wahl
+    - Anschaffungen: A009
+    - Unterlage: Anfrage an Anbieter (Deutsch, für Ungarn und Polen)
+      > Betreff: Angebotsanfrage – gedämmtes Wohn- und Arbeitsmodul, Karpaten (Ukraine), Lieferung in Teilen
+      > 
+      > Sehr geehrte Damen und Herren,
+      > 
+      > wir planen ein Wohn- und Arbeitsmodul für 2–3 Personen in den ukrainischen Karpaten (etwa 1.050 m Höhe, Winter bis −20 °C). Bitte senden Sie uns ein Angebot mit:
+      > 
+      > 1. Modell, Fläche, Raumhöhe, Aufbau und U-Werte von Wand, Dach und Boden; Eignung für −20 °C.
+      > 2. Lieferform: in Teilen oder als ganzes Modul. Maße und Gewicht des schwersten und des größten Teils. Die letzten 200 m der Zufahrt sind unbefestigt mit über 15 % Steigung; Transportbreite bis 2,6 m ohne Genehmigung.
+      > 3. Sanitär: vorbereitet oder eingebaut für Spültoilette, Dusche, Warmwasser, Abwasseranschluss.
+      > 4. Elektroinstallation, Heizung (Holzofen mit Schornstein, elektrische Reserve).
+      > 5. Anforderungen an das Fundament (Punktlasten); unser Gutachten empfiehlt Streifen- und Stützfundament.
+      > 6. Montage: Dauer, Personen, Werkzeug, Hebegerät; ist Montage durch ein kleines Team möglich?
+      > 7. Preis, Lieferbedingung (FCA oder DAP ukrainische Grenze), Lieferzeit, Zahlungsbedingungen, Gewährleistung.
+      > 8. Unterlagen für Export und Import: Rechnung, Packliste, Ursprungszeugnis, Warennummer.
+      > 
+      > Dies ist eine Anfrage, keine Bestellung.
+      > 
+      > Mit freundlichen Grüßen
+      > [Projektleitung, X-PORTAL]
+    - Unterlage: Request for quotation (English, for Alibaba and others)
+      > Subject: Request for quotation – insulated living/working module, Carpathians (Ukraine), delivery in parts
+      > 
+      > Dear Sir or Madam,
+      > 
+      > we are planning a living and working module for 2–3 persons in the Ukrainian Carpathians (approx. 1,050 m above sea level, winters down to −20 °C). Please send us a quotation including:
+      > 
+      > 1. Model, floor area, interior height, wall/roof/floor build-up and U-values; suitability for −20 °C.
+      > 2. Delivery form: in parts or as complete module. Dimensions and weight of the heaviest and the largest part. The last 200 m of the access road are unpaved with more than 15 % gradient; transport width up to 2.6 m without permit.
+      > 3. Sanitary: prepared or installed flush toilet, shower, hot water, drainage connection.
+      > 4. Electrical installation, heating options (wood stove with chimney, electric backup).
+      > 5. Foundation requirements (point loads); our soil report recommends strip and retaining foundations.
+      > 6. Assembly: time, crew, tools, lifting equipment required; can a small team assemble it?
+      > 7. Price, Incoterms (FCA/DAP Ukrainian border), delivery time, payment terms, warranty.
+      > 8. Documents for export/import: invoice, packing list, certificate of origin, HS code.
+      > 
+      > This is a request for information and quotation only, not an order.
+      > 
+      > Kind regards
+      > [Projektleitung, X-PORTAL]
+    - Auftrag für die ausführende KI: auftraege/AP-C1.md
+  - **Entscheidung:** Wer liefert und baut das Objekt Phase 0, mit oder ohne Montage? _[offen]_
+    - Projektleitung holt Angebote ein, die Geschäftsführung entscheidet die Bestellung · nach Bauart
+    - Drei schriftliche Angebote mit Preis, Lieferform, schwerstem Teil, Montageaufwand und Winterwerten (O31). Die Anfrage enthält die Raumliste aus M02, die Anforderungen an Sanitär ab Phase 0 (D62) und die Maße der Zufahrt. Wer was selbst macht, steht in 2.4.8.
     - Dient: Z1, Z2
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
     - Beschlussblatt, Fachliche Prüfung: Fachexperte; Architekt berät (D67)
     - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung; Bestellung und Betrag: Geschäftsführung (D43)
     - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
     - Beschlussblatt, Gültigkeit: bis ihr sie ändert
-    - Beschlussblatt, Wiedervorlage: vor der Planung von Phase 0
-- **Entscheidung:** Bauart der Objekte: Holz, Beton, Glas, Metall? _[offen]_
-  - Geschäftsführung nach Vorschlag Fachexperte Bau · nach Lage (O01)
-  - Antwort vom 13.11. (D56): Der Plan für die Objekte steht aus; eine Bau-KI bewertet und plant in Abhängigkeit von den lokalen Gegebenheiten (Geologie, Gelände, Zufahrt).
-  - Dient: Z1, Z2
-  - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
-  - Beschlussblatt, Fachliche Prüfung: –
-  - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
-  - Beschlussblatt, Budgetgrenze: –
-  - Beschlussblatt, Gültigkeit: bis ihr sie ändert
-  - Beschlussblatt, Wiedervorlage: nach Lage (O01)
-- **Ereignis:** Kommt das Objekt Phase 0 die Zufahrt hoch, im Sommer und im Winter (2.2.4)? _[entschieden]_
-  - Antwort vom 13.11. (D57)
-  - Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch. Die Gesamtplanung der Zufahrt entscheidet sich in Phase 1 mit 3D-Modellen der Bau-KI. Die letzten etwa 200 m haben über 15 % Steigung; bis 2,6 m Breite geht ein Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug.
-  - Dient: Z1
-  - **Ausgang (ja):** Die Lieferform steht fest. _[offen]_
-    - Damit ist klar, welche Anbieter in Frage kommen.
-  - **Ausgang (nein):** Kleinere Teile oder eine andere Lieferform. _[offen]_
-    - Bauart und Anbieter werden neu bewertet (2.2.3).
-- **Entscheidung:** Wer liefert und baut das Objekt Phase 0, mit oder ohne Montage? _[offen]_
-  - Projektleitung holt Angebote ein, die Geschäftsführung entscheidet die Bestellung · nach Bauart
-  - Drei schriftliche Angebote mit Preis, Lieferform, schwerstem Teil, Montageaufwand und Winterwerten (O31). Die Anfrage enthält die Raumliste aus M02, die Anforderungen an Sanitär ab Phase 0 (D62) und die Maße der Zufahrt. Wer was selbst macht, steht in 2.4.8.
-  - Dient: Z1, Z2
-  - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
-  - Beschlussblatt, Fachliche Prüfung: Fachexperte; Architekt berät (D67)
-  - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung; Bestellung und Betrag: Geschäftsführung (D43)
-  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
-  - Beschlussblatt, Gültigkeit: bis ihr sie ändert
-  - Beschlussblatt, Wiedervorlage: nach Bauart
-- **Entscheidung:** Technik im Objekt: Zugang, Server, Netzwerk. Liefert der Anbieter sie mit, oder beschaffen wir sie selbst? _[offen]_
-  - Geschäftsführung und Projektleitung
-  - Zugang per Chip an den Türen, auch zur Erfassung der Gemeinschaftsarbeit, voraussichtlich mit Cardano-Technik (D36). Internet: Bandbreite, Router und Anbieter werden verglichen (D63). Maßstab: alles läuft immer; vor dem ersten Übernachten ist jede Funktion abgenommen, nach einer Tabelle, die die Projektleitung prüft und freigibt (D66). Server oben werden nur bei VC-Funding für personenbezogene Daten mit Deutschland verbunden (D47).
-  - Möglichkeiten: Vorschlag KI, noch keine Entscheidung; sie gilt erst, wenn ihr eine wählt (D43).
-  - Dient: Z1, Z3
-  - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
-  - Beschlussblatt, Fachliche Prüfung: Fachexperte; Architekt berät (D67)
-  - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung; Bestellung und Betrag: Geschäftsführung (D43)
-  - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
-  - Beschlussblatt, Gültigkeit: bis ihr sie ändert
-  - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
-  - Möglichkeit A: Der Anbieter liefert und baut ein — Ein Ansprechpartner; die Anforderungen gehen in die Anfrage O31.
-  - Möglichkeit B: Wir beschaffen selbst — Eigene Auswahl und eigener Einbau; die Stunden gehören in 2.4.8.
-  - Möglichkeit C: Gemischt — Zugang und Leitungen vom Anbieter, Server und IT selbst.
-- **Schritt O03:** Selbstkosten je Objekt, daraus Miete und monatliche Pauschale _[offen]_
-  - KI rechnet, Geschäftsführung und Projektleitung entscheiden · nach Angeboten (O31)
-  - Statt eines Verkaufspreises wird der Selbstkostenpreis je Objekt ermittelt (D49): Objekt, Transport, Montage, Fundament, Anschlüsse, Anteil an Kommunalgebäude und Infrastruktur, Betrieb. Daraus Miete und Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen (D38). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung, 69 von 137 Positionen ohne Betrag).
-  - Dient: Z2
-  - Braucht: O31, D36, D37, D38
-- **Schritt:** Mietinteressenten gewinnen, ab sofort und vor dem Bau _[offen]_
-  - Projektleitung · laufend (D50)
-  - Zuerst Mieter gewinnen; Ziel ist, Interessenten jetzt zu bekommen (D50). Verkauft wird im klassischen Sinn nichts (D45, D48). Tokenisierung und Beteiligung auf mehreren Ebenen erst nach rechtlicher Klärung (O05).
-  - Dient: Z2
-- **Gate G0:** Können wir vermieten? _[wartet]_
-  - vor dem Investorengespräch · Geschäftsführung und Projektleitung geben frei oder lassen nacharbeiten
-  - Muss fertig sein: Selbstkosten und Pauschale (O03), Mietvertrag und Struktur rechtlich geprüft (O05), Leistungen oben (2.1.8), Lage und Bauart von Phase 0, Abnahmetabelle (D66).
-  - Dient: Z2
-  - Braucht: O05, O12, D36, D37, D38
-  - Beschlussblatt, Vorbereitung: KI stellt die Nachweise zusammen
-  - Beschlussblatt, Fachliche Prüfung: je Teilergebnis der genannte Fachexperte
-  - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung
-  - Beschlussblatt, Budgetgrenze: Paket vor dem Investment (O12, D69)
-  - Beschlussblatt, Gültigkeit: bis zum Investorengespräch (D71)
-  - Beschlussblatt, Wiedervorlage: nicht frei: nacharbeiten und neu vorlegen
-- **Ereignis O23:** Kapital: Steigen Investoren für Infrastruktur und Objekte ein? _[offen]_
-  - Geschäftsführung · nach dem Paket vor dem Investment (D69, D71)
-  - Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Objekte mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47). Ein Verkauf an Einzelne ist abgewählt.
-  - Dient: Z2
-  - **Ausgang (ja):** Bestellen. _[Regel steht]_
-    - Die Geschäftsführung entscheidet über Bestellung und Betrag; bestellt wird nur mit Geld auf dem Konto.
-  - **Ausgang (noch nicht):** Was dann? _[offen]_
-    - **Entscheidung:** Wenn das Investment zum geplanten Bautermin nicht steht _[offen]_
-      - Möglichkeiten: Vorschlag KI, noch keine Entscheidung; sie gilt erst, wenn ihr eine wählt (D43).
-      - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
-      - Beschlussblatt, Fachliche Prüfung: –
-      - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
-      - Beschlussblatt, Budgetgrenze: –
-      - Beschlussblatt, Gültigkeit: bis ihr sie ändert
-      - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
-      - Möglichkeit A: Phase 0 verschieben — Gebaut wird, sobald das Kapital steht; die Termine rücken nach hinten (D58: Termine sind Ziele).
-      - Möglichkeit B: Kleiner anfangen — Mit einem kleineren Objekt Phase 0; die Selbstkosten werden neu gerechnet (O03).
-      - Möglichkeit C: Eigenmittel erhöhen — Mehr Eigenkapital oder Eigenleistung, um den Anteil zu halten (D69, D70).
-- **Gate G1:** Ist genug Geld da, ist bestellt? _[wartet]_
-  - nach G0 und O23
-  - Investment oder Eigenkapital für Phase 0 auf dem Konto; Objekt Phase 0 bestellt; Leitungen für Wasser, Abwasser, Strom und Internet geplant (2.2.7); kritische Fehlerarten bewertet (2.3.7); Prüfsituation T00 vor der Bestellung (2.4.9).
-  - Dient: Z2
-  - Braucht: O17, O23
-  - Beschlussblatt, Vorbereitung: KI rechnet den Geldfluss (2.1.3)
-  - Beschlussblatt, Fachliche Prüfung: Anwälte zu Struktur und Verträgen (O05)
-  - Beschlussblatt, Freigabe: Gate: Geschäftsführung und Projektleitung; Bestellung und Betrag: Geschäftsführung
-  - Beschlussblatt, Budgetgrenze: nur Geld auf dem Konto; Eigenkapital bis zur Bauplanung, danach Investoren (D46, D47)
-  - Beschlussblatt, Gültigkeit: für die Bestellung des Objekts Phase 0
-  - Beschlussblatt, Wiedervorlage: neue Information zu Objekt, Kapital oder Budget: G1 und G2 neu
-- **Ereignis:** Ist der Boden frostfrei? _[wartet]_
-  - Baubeginn 2027 ist Ziel, nur nach den Gates (D58)
-  - Dient: Z1
-  - **Ausgang (ja):** Objekt Phase 0 hoch und oben montieren. _[Regel steht]_
-    - Auf kleinem Fahrzeug (D57), auf dem Fundament nach Empfehlung des Gutachters, bemessen durch einen Fachexperten (2.2.8).
-  - **Ausgang (nein):** Warten, bis der Boden frei ist. _[Regel steht]_
-    - Baubeginn erst ohne Frost.
-  - **Ausgang (Wetter, Straße):** Anderes Einsatzfenster nötig. _[Regel steht]_
-    - Einsatzplan aktualisieren, G2 neu vorlegen.
-  - **Ausgang (neue Information):** Objekt, Kapital oder Budget ändern sich. _[Regel steht]_
-    - Auswirkung rechnen, dann G1 und G2 neu; Projektleitung koordiniert, Geschäftsführung prüft.
-- **Gate G2:** Darf eingezogen werden? _[wartet]_
-  - nach Montage und Abnahme
-  - Ein Fachexperte bestätigt Heizung, Wasser mit Aufbereitung zu Trinkwasser, Strom, Sanitär (Spültoilette, Dusche, Warmwasser, Abwasser, D62) und Brandschutz schriftlich. Die Abnahmetabelle prüft die Projektleitung und gibt frei (D66). Muss fertig sein: 2.2.8, 2.3.2, 2.3.3, 2.4.6, 2.4.9 mit T00, T01, T05, T06.
-  - Dient: Z1
-  - Beschlussblatt, Vorbereitung: KI stellt Abnahmen und Prüfsituationen zusammen
-  - Beschlussblatt, Fachliche Prüfung: Fachexperte, schriftlich
-  - Beschlussblatt, Freigabe: Projektleitung prüft die Abnahmetabelle und gibt frei (D66)
-  - Beschlussblatt, Budgetgrenze: im Beschluss genannt
-  - Beschlussblatt, Gültigkeit: für den Abschnitt, im Beschluss genannt
-  - Beschlussblatt, Wiedervorlage: Wetter oder Straße: Einsatzplan neu, G2 neu
-  - **Ausgang (abgenommen):** Einzug. _[Regel steht]_
-    - Termine sind Ziele, keine Zusagen (D58).
-  - **Ausgang (nicht abgenommen):** Nacharbeiten und neu vorlegen. _[Regel steht]_
-    - Abnahmetabelle nach D66.
-- **Gate G3:** Hält es im Winter? _[wartet]_
-  - vor dem ersten Frost
-  - Ofen nach Heizlast mit Plan zum Überwintern; trockenes Holz eingelagert, eigenes Holz trocknet (D60); frostfreie Wasserleitung; Toilette und Batterie im Warmen; Generator draußen (D59). Dazu Betrieb oben (2.4.5) und Absprachen mit Notfallplan (2.4.7).
-  - Dient: Z1
-  - Beschlussblatt, Vorbereitung: KI stellt die Winterliste zusammen
-  - Beschlussblatt, Fachliche Prüfung: Fachexperte Heizung und Schornstein
-  - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung
-  - Beschlussblatt, Budgetgrenze: festlegen
-  - Beschlussblatt, Gültigkeit: erster Winter
-  - Beschlussblatt, Wiedervorlage: vor dem ersten Frost
-- **Gate G4:** Haben die Leute oben Geld verdient? _[wartet]_
-  - erster Winter
-  - Messung bei Frost im ersten Winter (2.3.5); Ziele Z1 bis Z3 gemessen; die nächste Phase wird entschieden.
-  - Dient: Z1, Z3
-  - Beschlussblatt, Vorbereitung: KI misst Z1 bis Z3
-  - Beschlussblatt, Fachliche Prüfung: –
-  - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung
-  - Beschlussblatt, Budgetgrenze: –
-  - Beschlussblatt, Gültigkeit: Phase 0
-  - Beschlussblatt, Wiedervorlage: Entscheidung über Phase 1
-  - **Ende:** 2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld.
-    - Danach Phase 1: Kommunalgebäude zuerst (D64), dann Wohn- und Arbeitsobjekte für Mieter und Team. Skalierung und Standardisierung werden von Anfang an mitgedacht; Node001 ist der Proof of Concept (D51).
+    - Beschlussblatt, Wiedervorlage: nach Bauart
+  - **Schritt:** Import in die Ukraine: Importeur und Verzollung _[offen]_
+    - Zu klären: Einfuhr aus der EU (Ungarn, Polen) mit Ursprungsnachweis gegenüber Einfuhr aus einem Drittland (China über Alibaba). Warennummer für vorgefertigte Gebäude, Zoll, Einfuhrumsatzsteuer; alle Sätze zu bestätigen.
+    - Wann: vor der Bestellung
+    - Voraussetzung: Rechtsform der Node-Gesellschaft (O11); Angebot mit Warennummer und Ursprung
+    - Blockiert: Lieferung
+    - Grundbestimmungen: GB8, GB9, GB11
+    - Rolle: führt aus: Projektleitung mit Zollbroker · prüft: Steuerberater, Anwälte
+    - Ergebnis: Klarheit, wer importiert (Node-Gesellschaft oder Importdienstleister), welche Abgaben anfallen und welche Unterlagen nötig sind; Angebot eines Zollbrokers
+    - Unterlage: Fragen an einen Zollbroker
+      > Betreff: Anfrage Verzollung vorgefertigtes Wohnmodul, Lieferung nach Werchowyna
+      > 
+      > Guten Tag,
+      > 
+      > wir planen die Einfuhr eines vorgefertigten Wohnmoduls (Bausatz in Teilen) nach Bereschnyzja, Gemeinde Werchowyna. Herkunft: [Ungarn / Polen / China]. Bitte nennen Sie uns:
+      > 1. Wer als Importeur auftreten kann (unsere ukrainische Gesellschaft oder Sie als Dienstleister) und was wir dafür brauchen.
+      > 2. Warennummer, Zollsatz, Einfuhrumsatzsteuer und weitere Abgaben; Präferenz bei Ursprung in der EU.
+      > 3. Benötigte Unterlagen (Rechnung, Packliste, Frachtbrief, Ursprungsnachweis, Zertifikate).
+      > 4. Ihr Honorar und die Dauer der Abfertigung; Zollstelle in der Nähe.
+      > 
+      > Mit freundlichen Grüßen
+      > [Projektleitung]
+    - Auftrag für die ausführende KI: auftraege/AP-C2.md
+  - **Schritt:** Logistik bis zum Fuß der Zufahrt, Übergabe an das kleine Fahrzeug _[offen]_
+    - Wann: mit der Bestellung; Termin rückwärts vom Montagebeginn (AP-C4)
+    - Voraussetzung: Maße und Gewichte aus dem Angebot (AP-C1); Umschlagplatz unten
+    - Blockiert: Montage
+    - Grundbestimmungen: GB1, GB4, GB11
+    - Rolle: führt aus: Projektleitung · entscheidet: Geschäftsführung
+    - Ergebnis: Angebot einer Spedition bis zum Fuß der Zufahrt; Plan für Umschlag und letzte Meile mit Fahrzeug, Hebegerät und Personen
+    - Anschaffungen: A081
+    - Unterlage: Anfrage an eine Spedition
+      > Betreff: Transportanfrage Bausatz Wohnmodul nach Bereschnyzja (Werchowyna)
+      > 
+      > Guten Tag,
+      > 
+      > bitte senden Sie uns ein Angebot für den Transport von [Anzahl] Packstücken, größtes Teil [L × B × H], schwerstes Teil [Gewicht], gesamt [Gewicht], von [Abholort] nach Bereschnyzja, Gemeinde Werchowyna, bis zum Fuß der Zufahrt. Die letzten 200 m schaffen nur kleine Fahrzeuge; dort wird umgeladen.
+      > Bitte nennen Sie: Fahrzeug, Preis, Dauer, Zollabwicklung (falls angeboten), Versicherung, Abladen mit Kran oder Stapler.
+      > 
+      > Mit freundlichen Grüßen
+      > [Projektleitung]
+    - Auftrag für die ausführende KI: auftraege/AP-C3.md
+  - **Ereignis:** Kommt das Objekt Phase 0 die Zufahrt hoch, im Sommer und im Winter (2.2.4)? _[entschieden]_
+    - Antwort vom 13.11. (D57)
+    - Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch. Die Gesamtplanung der Zufahrt entscheidet sich in Phase 1 mit 3D-Modellen der Bau-KI. Die letzten etwa 200 m haben über 15 % Steigung; bis 2,6 m Breite geht ein Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug.
+    - Dient: Z1
+    - **Ausgang (ja):** Die Lieferform steht fest. _[offen]_
+      - Damit ist klar, welche Anbieter in Frage kommen.
+    - **Ausgang (nein):** Kleinere Teile oder eine andere Lieferform. _[offen]_
+      - Bauart und Anbieter werden neu bewertet (2.2.3).
+  - **Schritt:** Bestellzeitpunkte rückwärts vom Montagebeginn _[offen]_
+    - Wann: sobald Angebote mit Lieferzeiten vorliegen
+    - Voraussetzung: Lieferzeiten (AP-C1), Zollabwicklung (AP-C2), Transportdauer (AP-C3), Frostgrenze (GB4)
+    - Blockiert: Bestellung
+    - Grundbestimmungen: GB4, GB8
+    - Rolle: rechnet: planende KI · entscheidet: Geschäftsführung
+    - Ergebnis: Tabelle je Posten: spätester Bestelltag = Montagebeginn minus Lieferzeit, Zoll, Transport und Puffer. Bis Angebote vorliegen, sind alle Vorläufe offen.
+    - Anschaffungen: alle Positionen mit Phase 0
+- **Ast:** D · Bau Phase 0
+  - **Schritt:** Bäume fällen, Baufläche und Trasse roden, Holz einlagern _[offen]_
+    - Wann: nach Fällgenehmigung und Lage (O01); Holz braucht etwa ein Jahr zum Trocknen
+    - Voraussetzung: Fällgenehmigung, Motorsägenkurs, Schutzausrüstung
+    - Blockiert: Entwässerung, Fundament; Brennholz für den zweiten Winter
+    - Grundbestimmungen: GB2, GB3, GB9
+    - Rolle: führt aus: Team (Eigenleistung) · entscheidet: Geschäftsführung
+    - Ergebnis: Gerodete Fläche, gestapeltes Holz im Lager, Stundenbuch
+    - Anschaffungen: A007, A035–A047
+  - **Schritt:** Entwässerungsgraben und Stützkonstruktion _[offen]_
+    - Wann: nach Bauplanung (AP-A4)
+    - Voraussetzung: Planung durch Fachexperten
+    - Blockiert: Fundament
+    - Grundbestimmungen: GB2, GB4
+    - Rolle: plant: Fachexperte Bau · führt aus: Firma oder Team · nimmt ab: Fachexperte
+    - Ergebnis: Hangwasser wird abgeleitet; Stützbauwerk nach Statik
+    - Anschaffungen: A004, A006, A008
+  - **Schritt:** Fundament für das Objekt Phase 0 _[offen]_
+    - Wann: nach Entwässerung (AP-D2), ohne Frost (GB4)
+    - Voraussetzung: Bemessung durch Fachexperten; Lasten aus dem Angebot (AP-C1)
+    - Blockiert: Montage
+    - Grundbestimmungen: GB2, GB4
+    - Rolle: plant und nimmt ab: Fachexperte Bau
+    - Ergebnis: Fundament nach Empfehlung des Gutachters
+    - Anschaffungen: A005
+  - **Schritt:** Leitungen: Wasser, Abwasser, Strom, Internet _[offen]_
+    - Wann: mit Fundament; frostfrei verlegt
+    - Voraussetzung: Brunnen (A049), Kläranlage (A058), Netzanschluss (AP-A3)
+    - Blockiert: Einzug
+    - Grundbestimmungen: GB5, GB6, GB7
+    - Rolle: plant: Fachexperten · führt aus: Firmen · nimmt ab: Fachexperten
+    - Ergebnis: Leitungen verlegt, Leerrohre für den Ausbau gleich mitgelegt
+    - Anschaffungen: A049–A073
+  - **Ereignis:** Ist der Boden frostfrei? _[wartet]_
+    - Baubeginn 2027 ist Ziel, nur nach den Gates (D58)
+    - Dient: Z1
+    - **Ausgang (ja):** Objekt Phase 0 hoch und oben montieren. _[Regel steht]_
+      - Auf kleinem Fahrzeug (D57), auf dem Fundament nach Empfehlung des Gutachters, bemessen durch einen Fachexperten (2.2.8).
+    - **Ausgang (nein):** Warten, bis der Boden frei ist. _[Regel steht]_
+      - Baubeginn erst ohne Frost.
+    - **Ausgang (Wetter, Straße):** Anderes Einsatzfenster nötig. _[Regel steht]_
+      - Einsatzplan aktualisieren, G2 neu vorlegen.
+    - **Ausgang (neue Information):** Objekt, Kapital oder Budget ändern sich. _[Regel steht]_
+      - Auswirkung rechnen, dann G1 und G2 neu; Projektleitung koordiniert, Geschäftsführung prüft.
+  - **Entscheidung:** Technik im Objekt: Zugang, Server, Netzwerk. Liefert der Anbieter sie mit, oder beschaffen wir sie selbst? _[offen]_
+    - Geschäftsführung und Projektleitung
+    - Zugang per Chip an den Türen, auch zur Erfassung der Gemeinschaftsarbeit, voraussichtlich mit Cardano-Technik (D36). Internet: Bandbreite, Router und Anbieter werden verglichen (D63). Maßstab: alles läuft immer; vor dem ersten Übernachten ist jede Funktion abgenommen, nach einer Tabelle, die die Projektleitung prüft und freigibt (D66). Server oben werden nur bei VC-Funding für personenbezogene Daten mit Deutschland verbunden (D47).
+    - Möglichkeiten: Vorschlag KI, noch keine Entscheidung; sie gilt erst, wenn ihr eine wählt (D43).
+    - Dient: Z1, Z3
+    - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
+    - Beschlussblatt, Fachliche Prüfung: Fachexperte; Architekt berät (D67)
+    - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung; Bestellung und Betrag: Geschäftsführung (D43)
+    - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
+    - Beschlussblatt, Gültigkeit: bis ihr sie ändert
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
+    - Möglichkeit A: Der Anbieter liefert und baut ein — Ein Ansprechpartner; die Anforderungen gehen in die Anfrage O31.
+    - Möglichkeit B: Wir beschaffen selbst — Eigene Auswahl und eigener Einbau; die Stunden gehören in 2.4.8.
+    - Möglichkeit C: Gemischt — Zugang und Leitungen vom Anbieter, Server und IT selbst.
+  - **Schritt:** Zugang über Cardano _[offen]_
+    - Varianten: (a) Chip oder Karte am Schloss, Cardano nur für die Erfassung und Anrechnung der Gemeinschaftsarbeit; (b) Zugangsrecht als Token in einer Wallet; (c) zuerst ein übliches System, Cardano später angebunden. Muss offline funktionieren.
+    - Wann: Konzept vor der Bestellung der Türen; Einbau mit der Montage
+    - Voraussetzung: Datenschutzkonzept (GB10), Entscheidung zur Variante
+    - Blockiert: Erfassung der Gemeinschaftsarbeit (D36)
+    - Grundbestimmungen: GB10, GB11
+    - Rolle: entscheidet: Geschäftsführung · führt aus: Lead Developer
+    - Ergebnis: Variante gewählt, Schlösser und Lesegeräte bestellt, mechanischer Schlüssel als Reserve
+    - Anschaffungen: A116–A120
+    - Auftrag für die ausführende KI: auftraege/AP-D5.md
+- **Ast:** E · Abnahme und Einzug
+  - **Schritt:** Abnahmetabelle _[offen]_
+    - Wann: vor dem ersten Übernachten
+    - Voraussetzung: Anforderungen Ast 2, Zielwerte je Funktion (OD-002)
+    - Blockiert: G2
+    - Grundbestimmungen: GB5, GB6, GB7, GB10, GB11
+    - Rolle: füllen: Fachexperten · prüft und gibt frei: Projektleitung (D66)
+    - Ergebnis: Jede kritische Funktion abgenommen
+    - Unterlage: Abnahmetabelle
+      > Funktion | Anforderung (Ast 2) | Prüfverfahren | Grenzwert | Ergebnis | Fachexperte | Datum | Freigabe Projektleitung
+      > Wärme | H02, H03, S01 | Morgenwert nach 8 h ohne Feuer | 12 °C Schlafen, 16 °C Arbeiten | | | |
+      > Wasser | H04, H05 | Laborbefund nach Aufbereitung | Trinkwasser nach Norm | | | |
+      > Sanitär | H06 | Spülung, Dusche, Warmwasser, Abfluss | funktioniert bei Frost | | | |
+      > Strom | S03, D04 | Netzausfall 6 h | Muss-Lasten laufen | | | |
+      > Internet | D01 | 2 Videocalls 30 min | Upload ausreichend, keine Abbrüche | | | |
+      > Brandschutz | S01 | Melder, Löscher, Ofenabstände | vollständig | | | |
+      > Zugang | GB10 | Öffnen mit Chip und mit Schlüssel | beides geht | | | |
+  - **Gate G2:** Darf eingezogen werden? _[wartet]_
+    - nach Montage und Abnahme
+    - Ein Fachexperte bestätigt Heizung, Wasser mit Aufbereitung zu Trinkwasser, Strom, Sanitär (Spültoilette, Dusche, Warmwasser, Abwasser, D62) und Brandschutz schriftlich. Die Abnahmetabelle prüft die Projektleitung und gibt frei (D66). Muss fertig sein: 2.2.8, 2.3.2, 2.3.3, 2.4.6, 2.4.9 mit T00, T01, T05, T06.
+    - Dient: Z1
+    - Beschlussblatt, Vorbereitung: KI stellt Abnahmen und Prüfsituationen zusammen
+    - Beschlussblatt, Fachliche Prüfung: Fachexperte, schriftlich
+    - Beschlussblatt, Freigabe: Projektleitung prüft die Abnahmetabelle und gibt frei (D66)
+    - Beschlussblatt, Budgetgrenze: im Beschluss genannt
+    - Beschlussblatt, Gültigkeit: für den Abschnitt, im Beschluss genannt
+    - Beschlussblatt, Wiedervorlage: Wetter oder Straße: Einsatzplan neu, G2 neu
+    - **Ausgang (abgenommen):** Einzug. _[Regel steht]_
+      - Termine sind Ziele, keine Zusagen (D58).
+    - **Ausgang (nicht abgenommen):** Nacharbeiten und neu vorlegen. _[Regel steht]_
+      - Abnahmetabelle nach D66.
+- **Ast:** F · Erster Winter und Betrieb
+  - **Gate G3:** Hält es im Winter? _[wartet]_
+    - vor dem ersten Frost
+    - Ofen nach Heizlast mit Plan zum Überwintern; trockenes Holz eingelagert, eigenes Holz trocknet (D60); frostfreie Wasserleitung; Toilette und Batterie im Warmen; Generator draußen (D59). Dazu Betrieb oben (2.4.5) und Absprachen mit Notfallplan (2.4.7).
+    - Dient: Z1
+    - Beschlussblatt, Vorbereitung: KI stellt die Winterliste zusammen
+    - Beschlussblatt, Fachliche Prüfung: Fachexperte Heizung und Schornstein
+    - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung
+    - Beschlussblatt, Budgetgrenze: festlegen
+    - Beschlussblatt, Gültigkeit: erster Winter
+    - Beschlussblatt, Wiedervorlage: vor dem ersten Frost
+  - **Schritt:** Messreihen: Wärme, Holzfeuchte, Wasser, Strom, Internet _[später]_
+    - Wann: ab Einzug, den ganzen ersten Winter
+    - Voraussetzung: Messgeräte (A045 und weitere)
+    - Blockiert: Bewertung der Hypothesen, Standards für den nächsten Node
+    - Grundbestimmungen: GB11
+    - Rolle: führt aus: Team · wertet aus: planende KI
+    - Ergebnis: Messwerte ersetzen Annahmen im Plan
+  - **Schritt:** KI mit Kamera, die den Normalzustand misst _[später]_
+    - Gedacht für Außen- und Technikbereiche, nicht für Wohnräume: Schnee auf Antenne und Solar, Wasser am Hang, Rauch, Zustand der Zufahrt, Technikraum. Auswertung vor Ort. Prüft die Hypothese H6 (KI-Nutzen gegenüber einer einfachen Lösung).
+    - Wann: Leerrohr und Strom schon in Phase 0 vorsehen; Betrieb erst mit geprüftem Konzept
+    - Voraussetzung: Datenschutzkonzept (GB10), Nutzen nachgewiesen (Baseline Regel 7)
+    - Blockiert: –
+    - Grundbestimmungen: GB7, GB10, GB11
+    - Rolle: entscheidet: Geschäftsführung · führt aus: Lead Developer
+    - Ergebnis: Konzept: was gemessen wird, wo Kameras hängen, wo ausgewertet wird, wer Zugriff hat; dann Pilot
+    - Auftrag für die ausführende KI: auftraege/AP-F2.md
+  - **Gate G4:** Haben die Leute oben Geld verdient? _[wartet]_
+    - erster Winter
+    - Messung bei Frost im ersten Winter (2.3.5); Ziele Z1 bis Z3 gemessen; die nächste Phase wird entschieden.
+    - Dient: Z1, Z3
+    - Beschlussblatt, Vorbereitung: KI misst Z1 bis Z3
+    - Beschlussblatt, Fachliche Prüfung: –
+    - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung
+    - Beschlussblatt, Budgetgrenze: –
+    - Beschlussblatt, Gültigkeit: Phase 0
+    - Beschlussblatt, Wiedervorlage: Entscheidung über Phase 1
+    - **Ende:** 2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld.
+      - Danach Phase 1: Kommunalgebäude zuerst (D64), dann Wohn- und Arbeitsobjekte für Mieter und Team. Skalierung und Standardisierung werden von Anfang an mitgedacht; Node001 ist der Proof of Concept (D51).
+- **Ast:** G · Phase 1: Kommunalgebäude und Objekte
+  - **Schritt:** Zusatzerkundung für Phase 1 _[später]_
+    - Wann: sobald Lage und Bauart der Gebäude feststehen
+    - Voraussetzung: Bauplanung Phase 1
+    - Blockiert: Fundamente Phase 1
+    - Grundbestimmungen: GB2
+    - Rolle: beauftragt: Geschäftsführung · führt aus: Bohrfirma
+    - Ergebnis: Bericht für Zufahrt, Stützbauwerke und massive Gebäude
+    - Anschaffungen: A002
+  - **Schritt:** Kommunalgebäude _[später]_
+    - Wann: erster Bau in Phase 1 (D64)
+    - Voraussetzung: Kapital, Zusatzerkundung
+    - Blockiert: Objekte für Mieter
+    - Grundbestimmungen: GB1, GB2, GB5, GB8
+    - Rolle: entscheidet: Geschäftsführung · plant: Fachexperte Bau
+    - Ergebnis: Arbeitsplätze, Küche, Sanitär; Feuerstelle und Sauna (D34, D35)
+    - Anschaffungen: A109–A115
+  - **Schritt:** Objekte für Mieter und Team _[später]_
+    - Wann: nach dem Kommunalgebäude, nach Nachfrage (D50)
+    - Voraussetzung: Mietinteressenten, Selbstkosten
+    - Blockiert: Phase 2
+    - Grundbestimmungen: GB1, GB2, GB8, GB9
+    - Rolle: entscheidet: Geschäftsführung
+    - Ergebnis: Objekte bezogen, Mietverträge
+  - **Schritt:** Solar mit Speicher _[später]_
+    - Wann: Phase 1 (D59)
+    - Voraussetzung: Lastliste, Messwerte aus dem Winter
+    - Blockiert: –
+    - Grundbestimmungen: GB7
+    - Rolle: entscheidet: Geschäftsführung · plant: Fachexperte Elektro
+    - Ergebnis: Anlage in Betrieb
+    - Anschaffungen: A028
+- **Ast:** H · Phase 2 und Projektende
+  - **Schritt:** Ausbau nach Nachfrage _[später]_
+    - Wann: nach Phase 1
+    - Voraussetzung: Auslastung, Kapital
+    - Blockiert: –
+    - Grundbestimmungen: GB3, GB8
+    - Rolle: entscheidet: Geschäftsführung
+    - Ergebnis: Weitere Objekte; die Herrenhaus-Fläche wird zuletzt bebaut
+  - **Schritt:** Hypothesen H1 bis H8 bewerten _[später]_
+    - Wann: nach dem ersten Winter und nach Phase 1
+    - Voraussetzung: Messgrößen und Grenzen (OD-005)
+    - Blockiert: nächster Node
+    - Grundbestimmungen: GB11
+    - Rolle: wertet aus: planende KI · entscheidet: Geschäftsführung
+    - Ergebnis: Go, Revise oder Stop je Hypothese
+  - **Schritt:** Übergabe an den nächsten Node _[später]_
+    - Wann: nach Bewertung (AP-H2)
+    - Voraussetzung: Standards und Regeln aus Node001
+    - Blockiert: –
+    - Grundbestimmungen: GB11
+    - Rolle: führt aus: planende KI · entscheidet: Geschäftsführung
+    - Ergebnis: Genome-Regeln mit Quelle, Messwert und Vertrauensniveau
 
 ## 2 · Alltag oben: prüfbare Anforderungen nach Maslow und Sinnen (M02)
 

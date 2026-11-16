@@ -111,6 +111,16 @@ hauptweg = [
               text='Danach Phase 1: Kommunalgebäude zuerst (D64), dann Wohn- und Arbeitsobjekte für Mieter und Team. Skalierung und Standardisierung werden von Anfang an mitgedacht; Node001 ist der Proof of Concept (D51).')]),
 ]
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import ablauf as _ab
+_alt = {n['id']: n for n in hauptweg}
+ast1 = _ab.bau(N, X, O, _alt)
+def _ids(nodes):
+    for n in nodes:
+        yield n.get('id'); yield from _ids(n.get('kids', []))
+_fehlt = [i for i in _alt if i not in set(_ids(ast1))]
+assert not _fehlt, f'Ablaufplan: bisherige Knoten fehlen: {_fehlt}'
+
 parallel = [
     N('step', 'O05', 'Anwälte in Deutschland und der Ukraine finden und die Prüfaufträge stellen', 'open', meta='Geschäftsführung und Projektleitung · vor G0',
       text='Prüfaufträge: Struktur mit Holding, Agentur und ukrainischer Gesellschaft für Node001; wo Services auf dem Node abgewickelt werden (D44). Mietmodell und Beteiligung von Mitwirkenden am jeweiligen Node statt an der Holding (D37, D48). Tokenisierung erst nach Klärung (D48). Datenverbindung der Server oben mit Deutschland nur bei VC-Funding (D47). Fällgenehmigung für die Bäume (D60), Abwasser und Kläranlage (D62), Versicherung der Eigenleistung.',
@@ -553,6 +563,14 @@ def zielblatt_html():
             + '<p class="note">Diese Ziele gelten für Node001. Eigene Ziele für Holding, Agentur und Plattform kommen danach dazu (X1 bis X3 sind bis dahin Klärungsaufträge).</p>'
             + f'<h4 class="dt-h4" id="b-grenzen">Grenzen von Stufe 1, die entscheiden</h4><p>Termine sind Ziele (D58). Beim Geld gilt: Eigenkapital bis zur Bauplanung, danach Investoren (D46, D47). Wirksam wird eine Grenze, wenn feststeht, was passiert, sobald sie reißt.</p>{gt}'
             + f'<h4 class="dt-h4" id="b-nutzen">Erwarteter Nutzen: Node001 im X-PORTAL-System</h4>{nt}'
+            + '<h4 class="dt-h4" id="b-gb">Grundbestimmungen: gegen sie wird jedes Arbeitspaket geprüft</h4><p>Jedes Arbeitspaket im Ablaufplan (Ast 1) nennt, welche davon gelten.</p>'
+            + '<div class="tablewrap"><table><thead><tr><th>Nr</th><th>Thema</th><th>Was gilt</th><th>Quelle</th></tr></thead><tbody>'
+            + ''.join(f'<tr id="gb-{a}"><td class="mono">{a}</td><td><b>{html.escape(b)}</b></td><td>{linkify(c)}</td><td>{linkify(d)}</td></tr>' for a, b, c, d in _ab.GB)
+            + '</tbody></table></div>'
+            + '<h4 class="dt-h4" id="b-ki">KI-Arbeitsteilung</h4><p>Eine höhere KI denkt und plant, eine kleinere führt aus. Ergebnisse prüft die planende KI, dann ein Mensch. Die Aufträge stehen in den Arbeitspaketen und als Dateien in <code>plan/index-3/auftraege/</code>.</p>'
+            + '<div class="tablewrap"><table><thead><tr><th>Wer</th><th>Modell</th><th>Aufgabe</th></tr></thead><tbody>'
+            + ''.join(f'<tr><td><b>{a}</b></td><td>{b}</td><td>{html.escape(c)}</td></tr>' for a, b, c in _ab.KI_TEILUNG)
+            + '</tbody></table></div>'
             + '<h4 class="dt-h4" id="b-beschluss">Beschlussvorlagen (M03)</h4><p>Die Gates G0 bis G4 bleiben. Jede offene Entscheidung im Baum hat ein aufklappbares Beschlussblatt mit Vorbereitung, fachlicher Prüfung, Freigabebefugnis, Budgetgrenze, Gültigkeit und Wiedervorlage. Werte ohne Quelle darin sind Vorschlag KI.</p>')
 
 def linkify_html(fragment):
@@ -595,8 +613,8 @@ def beschluss(n):
 
 tree = [
     N('group', 'b-zielblatt', 'Grundlage: Mission, Ziele, Ort', raw='ZIELBLATT', label='root'),
-    N('group', 'b-hauptweg', '1 · Der Weg: Geologie und Lage, Bauart, Zufahrt, Lieferant, Technik, dann Selbstkosten, Mieter, Kapital und Gates bis zum ersten Winter', kids=hauptweg, label='dt-spine',
-      text='Geologiebericht und Detailplan liegen vor. Zuerst wird das Objekt Phase 0 im Detailplan verortet; dann Bauart, Zufahrt, wer liefert und baut, und die Technik. Danach Selbstkosten, Mieter, Kapital und die Gates bis zum ersten Winter.'),
+    N('group', 'b-hauptweg', '1 · Ablaufplan von Schritt 1 bis Projektende: Arbeitspakete mit fertigen Unterlagen', kids=ast1, label='dt-spine',
+      text='Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeitspaket nennt Wann, Voraussetzung, was es blockiert, die Grundbestimmungen (GB1 bis GB11 in der Grundlage), die Rolle und das Ergebnis; dazu Unterlagen zum Kopieren und, wo es passt, einen Auftrag für die ausführende KI. Nichts wird automatisch bestellt oder verschickt. Die bisherigen Knoten (Geologie, Lage, Bauart, Zufahrt, Lieferant, Technik, Selbstkosten, Mieter, Gates) stehen unverändert an ihrer Stelle.'),
     N('group', 'b-anforderungen', '2 · Alltag oben: prüfbare Anforderungen nach Maslow und Sinnen (M02)', kids=anforderungen, label='m02',
       text='Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und Digitales, jede mit Prüfverfahren und Abnahme. Stand: die 29 Zeilen vom 03.11.2026 und die Spielregeln vom 05.11.2026; angepasst sind nur die Zeilen, die eine Entscheidung vom 13.11. betrifft.'),
     N('group', 'b-ressourcen', '3 · Versorgung je Ressource: Grundbetrieb, Störung, Ausbau (M06)', kids=versorgung + [ausbau],
@@ -778,7 +796,7 @@ def render(n, depth=0, top=False):
     glyph = (f'<span class="dt-boc">{html.escape(n["label"])}</span>' if kind == 'outcome'
              else f'<span class="dt-bg k-{kind}" aria-hidden="true"></span>')
     kind_word = {'decision': 'Entscheidung', 'chance': 'Ereignis', 'gate': 'Gate', 'step': 'Schritt', 'end': 'Ende', 'outcome': 'Ausgang', 'req': 'Anforderung'}[kind]
-    idtxt = f'<span class="dt-bid">{html.escape(nid)}</span>' if nid and re.fullmatch(r'[A-Z]\d\d|G\d', nid) else ''
+    idtxt = f'<span class="dt-bid">{html.escape(nid)}</span>' if nid and re.fullmatch(r'[A-Z]\d\d|G\d|AP-[A-H]\d', nid) else ''
     pill = f'<span class="dt-bpill st-{state}">{STATE[state]}</span>' if state else ''
     tagtxt = ''.join(f'<span class="dt-tag">{html.escape(t)}</span>' for t in n.get('tags', []))
     row = (f'{glyph}{idtxt}<span class="dt-bti"><span class="dt-sr">{kind_word}: </span>{linkify(n["title"])}{tagtxt}</span>{pill}')
@@ -788,6 +806,12 @@ def render(n, depth=0, top=False):
     if n.get('text'):
         body += f'<p>{linkify(n["text"])}</p>'
     body += facts_html(n.get('facts'))
+    for v in n.get('vorlagen', []):
+        body += (f'<details class="dt-vl"><summary>Unterlage zum Kopieren: {html.escape(v["titel"])}</summary>'
+                 f'<button type="button" class="dt-copy">Kopieren</button><pre>{html.escape(v["text"])}</pre></details>')
+    if n.get('auftrag'):
+        body += (f'<details class="dt-vl dt-auftrag"><summary>Auftrag für die ausführende KI (auftraege/{html.escape(n["id"])}.md)</summary>'
+                 f'<button type="button" class="dt-copy">Kopieren</button><pre>{html.escape(n["auftrag"])}</pre></details>')
     if n.get('ziel'):
         body += '<p class="dt-blinks"><span>Dient</span>' + ''.join(chip(t) for t in n['ziel']) + '</p>'
     if n.get('needs'):
@@ -1003,6 +1027,11 @@ details[open] > summary.dt-brow::after { transform:rotate(90deg) }
 .dt-bnb { padding:6px 10px 8px 40px; font-size:13.5px; color:var(--body) } .dt-bnb p { margin:0 0 5px; max-width:80ch } .dt-bgrp > details > .dt-bnb { padding-left:12px }
 .dt-bmeta { color:var(--muted); font-size:12.5px }
 .dt-bhint { color:var(--run); font-size:12.5px }
+details.dt-vl { margin:6px 0; border:1px solid var(--line); padding:4px 8px; position:relative }
+details.dt-vl > summary { cursor:pointer; font-size:13px; font-weight:600 }
+details.dt-auftrag > summary { color:var(--run) }
+details.dt-vl pre { white-space:pre-wrap; word-break:break-word; font-size:12.5px; margin:6px 0 2px; max-width:100% }
+.dt-copy { float:right; margin:4px 0 0 8px; font-size:12px; padding:2px 8px; cursor:pointer }
 .dt-blinks { display:flex; flex-wrap:wrap; align-items:center; gap:5px } .dt-blinks > span:first-child { font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-right:2px }
 .dt-bchip { font-family:var(--mono); font-size:11.5px; border:1px solid var(--line); background:var(--surface); color:var(--ink); padding:1px 7px; border-radius:999px; text-decoration:none }
 a.dt-bchip:hover { border-color:var(--ink) }
@@ -1114,7 +1143,7 @@ js = '''<script>
 
 toc = ('<li><a href="#baum" data-k="baum">Offener Entscheidungsbaum</a><ol>'
        '<li><a href="#b-zielblatt" data-k="b-zielblatt">Grundlage: Mission, Ziele, Ort</a></li>'
-       '<li><a href="#b-hauptweg" data-k="b-hauptweg">1 Der Weg ab jetzt</a></li>'
+       '<li><a href="#b-hauptweg" data-k="b-hauptweg">1 Ablaufplan A bis H</a></li>'
        '<li><a href="#b-anforderungen" data-k="b-anforderungen">2 Alltag und Anforderungen</a></li>'
        '<li><a href="#b-ressourcen" data-k="b-ressourcen">3 Versorgung und Ausbaupfad</a></li>'
        '<li><a href="#b-makebuy" data-k="b-makebuy">4 Make-or-Buy</a></li>'
@@ -1135,7 +1164,7 @@ def sub_once(s, old, new, count=1):
     return s.replace(old, new)
 
 body = sub_once(body, '<title>X-PORTAL Index 2.0</title>', '<title>X-PORTAL Index 3.0</title>')
-body = sub_once(body, 'X-PORTAL Index 2.0 · Node001 · Stand 04.11.2026', 'X-PORTAL Index 3.0 · Node001 · Stand 14.11.2026 · Entscheidungen vom 13.11.2026 · Bezugsrahmen Reference Architecture v0.4-WB1')
+body = sub_once(body, 'X-PORTAL Index 2.0 · Node001 · Stand 04.11.2026', 'X-PORTAL Index 3.0 · Node001 · Stand 16.11.2026 · Entscheidungen vom 13.11.2026 · Ablaufplan · Bezugsrahmen Reference Architecture v0.4-WB1')
 old_lede = '<p class="lede">Oben sechs Bilder nach PRINCE2, darunter der Plan zum Arbeiten, unten zum Nachschlagen.'
 body = sub_once(body, old_lede, '<p class="lede">Oben der offene Entscheidungsbaum mit der Grundlage: Mission und Ziele, Endprodukt, Ort mit Detailplan und Geologie, Zielblatt. Darunter der Abgleich mit der Reference Architecture v0.4 und, eingeklappt, der Index 2.0 vom 04.11.2026 als Historie.')
 body = sub_once(body, '<ol class="side"><li><a href="#ueberblick" data-k="ueberblick">', '<ol class="side">' + toc + '<li><a href="#ra" data-k="ra">Reference Architecture v0.4</a><ol><li><a href="#ra-abgleich" data-k="ra-abgleich">Abgleich: Widersprüche</a></li><li><a href="#ra-hyp" data-k="ra-hyp">Hypothesen H1–H8</a></li></ol></li><li><a href="#index-2-historie">Historie: Index 2.0 vom 04.11.</a></li><li><a href="#ueberblick" data-k="ueberblick">', count=2)
@@ -1296,6 +1325,7 @@ body = sub_once(body, '<section id="k1-endprodukt-und-ziele"><h2>1 Endprodukt un
 body = sub_once(body, 'Als Konzept beschrieben ist ein digitaler Zwilling der Organisation', 'Als Konzept beschrieben ist ein System Model der Organisation (bisher „digitaler Zwilling“ genannt; nach der Reference Architecture v0.4 kein Digital Twin)')
 body = body.rstrip() + '\n' + js + '''<script>
 (() => {
+  document.addEventListener('click', e => { const b = e.target.closest('.dt-copy'); if (!b) return; const t = b.parentElement.querySelector('pre').textContent; try { navigator.clipboard.writeText(t).then(() => { b.textContent = 'Kopiert'; setTimeout(() => b.textContent = 'Kopieren', 1500); }); } catch (_) {} });
   document.querySelectorAll('.dt-planbox').forEach(b => b.addEventListener('click', () => b.classList.toggle('gross')));
   const oeffne = () => { const id = decodeURIComponent(location.hash.slice(1)); const el = id && document.getElementById(id); if (!el) return; let p = el.parentElement; while (p) { if (p.tagName === 'DETAILS') p.open = true; p = p.parentElement; } el.scrollIntoView(); };
   window.addEventListener('hashchange', oeffne);
@@ -1304,6 +1334,7 @@ body = body.rstrip() + '\n' + js + '''<script>
 </script>'''
 
 _fehler = pruefe_baum(tree)
+_fehler += _ab.pruefe(tree)
 _g = zielblatt_html()
 _fehler += [f'Grundlage: „{w}“' for w in ALT if w in re.sub(r'<[^>]+>', ' ', _g)]
 for _w in ('Mission:', 'Globalziele, in dieser Rangfolge'):
@@ -1327,7 +1358,7 @@ if len(sys.argv) > 3:
             d['beschlussblatt'] = {html.unescape(a): html.unescape(re.sub(r'<[^>]+>', '', b)) for a, b in bb}
         return d
     zkeys = ('nr', 'ebene', 'ziel', 'messgroesse', 'zielwert', 'klaerungsauftrag', 'termin', 'wer_review', 'grenze', 'globalziel', 'quelle')
-    data = {'titel': 'X-PORTAL Index 3.0', 'stand': '2026-11-12', 'bezugsrahmen': 'Reference Architecture v0.4-WB1 (quellen/reference-architecture-v0.4.md)', 'abgleich': [dict(zip(('nr', 'thema', 'bisher', 'baseline', 'gilt', 'status', 'im_index'), r)) for r in ABGLEICH], 'artefakt': 'https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F',
+    data = {'titel': 'X-PORTAL Index 3.0', 'stand': '2026-11-16', 'grundbestimmungen': [dict(zip(('nr', 'thema', 'gilt', 'quelle'), g)) for g in _ab.GB], 'ki_arbeitsteilung': [dict(zip(('wer', 'modell', 'aufgabe'), k)) for k in _ab.KI_TEILUNG], 'bezugsrahmen': 'Reference Architecture v0.4-WB1 (quellen/reference-architecture-v0.4.md)', 'abgleich': [dict(zip(('nr', 'thema', 'bisher', 'baseline', 'gilt', 'status', 'im_index'), r)) for r in ABGLEICH], 'artefakt': 'https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F',
             'zielblatt': [dict(zip(zkeys, z)) for z in ZB], 'anforderungen_m02': M02, 'baum': [clean(n) for n in tree]}
     (outdir / 'entscheidungsbaum.json').write_text(json.dumps(data, ensure_ascii=False, indent=1))
     WORD = {'decision': 'Entscheidung', 'chance': 'Ereignis', 'gate': 'Gate', 'step': 'Schritt', 'end': 'Ende', 'outcome': 'Ausgang', 'req': 'Anforderung', 'group': 'Ast'}
@@ -1345,6 +1376,9 @@ if len(sys.argv) > 3:
         for k in ('meta', 'text', 'hint'):
             if n.get(k): out.append(f"{ind}  - {n[k]}")
         for a, b in n.get('facts', []): out.append(f"{ind}  - {a}: {b}")
+        for v in n.get('vorlagen', []):
+            out.append(f"{ind}  - Unterlage: {v['titel']}"); out += [f"{ind}    > {z}" for z in v['text'].split('\n')]
+        if n.get('auftrag'): out.append(f"{ind}  - Auftrag für die ausführende KI: auftraege/{n['id']}.md")
         if n.get('ziel'): out.append(f"{ind}  - Dient: {', '.join(n['ziel'])}")
         if n.get('needs'): out.append(f"{ind}  - Braucht: {', '.join(n['needs'])}")
         if n['kind'] in ('decision', 'gate') and n.get('state') in ('open', 'wait') and not n.get('container'):
@@ -1363,4 +1397,18 @@ if len(sys.argv) > 3:
             md += [html.unescape(re.sub(r'<[^>]+>', '', GRUNDLAGE)).strip(), '']
         for k in n.get('kids', []): md += walk(k, 0)
     (outdir / 'entscheidungsbaum.md').write_text('\n'.join(md) + '\n')
+    ad = outdir / 'auftraege'; ad.mkdir(exist_ok=True)
+    for f in ad.glob('AP-*.md'): f.unlink()
+    for n in _ab.alle_ap(tree):
+        if not n.get('auftrag'): continue
+        ap = n['ap']
+        txt = [f"# Auftrag {n['id']}: {n['title']}", '', 'Für die ausführende KI (kleineres Modell). Das Ergebnis prüft die planende KI, dann ein Mensch.', '',
+               '## Rahmen', '', f"- Wann: {ap['wann']}", f"- Voraussetzung: {ap['voraus']}", f"- Ergebnis wird gebraucht für: {ap['blockiert']}",
+               f"- Grundbestimmungen: {', '.join(ap['gb'])}", '']
+        txt += [f"  - {g[0]} {g[1]}: {g[2]}" for g in _ab.GB if g[0] in ap['gb']]
+        txt += ['', '## Auftrag', '', n['auftrag'], '']
+        for v in n.get('vorlagen', []):
+            txt += [f"## Unterlage: {v['titel']}", '', '```text', v['text'], '```', '']
+        txt += ['Quelle: Index 3.0, Ast 1 (werkzeug/ablauf.py). Diese Datei wird erzeugt; Änderungen in ablauf.py vornehmen.']
+        (ad / f"{n['id']}.md").write_text('\n'.join(txt) + '\n')
     print('export ok', outdir)
