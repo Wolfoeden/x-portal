@@ -179,3 +179,16 @@ Entfallen:
 - Der Generator bricht ab, wenn „lage“ wieder offen ist.
 - `pruefe_alle.py` meldet „Lage von Phase 0 im Detailplan“ als offenen Punkt.
 - Ebenso meldet es den Satz „wird mit dem Original abgeglichen“ zur Geologie. Den hatte die Prüfung bisher nicht erfasst; er stand noch in der Grundlage und ist korrigiert.
+
+## 17.11.2026 (später) · Zufahrt: Route und Messpunkte · Wasser in Fachsprache
+
+**Eingänge:** Kommentare auf allen sechs Seiten und Datenbank gelesen. Seit der letzten Runde ist nichts dazugekommen.
+
+| Eingang | Umsetzung | Stelle |
+|---|---|---|
+| Chat 17.11.: Google-Maps-Route von der Auffahrt bis zum Grundstück (https://maps.app.goo.gl/MVxhHzmvbfyLqY89A) und Auswertung der kritischen Stellen MP01 bis MP08 (ChatGPT, aus Karten- und Satellitenansicht) | Route und Auswertung als Quelle eingetragen, ausdrücklich als nicht vor Ort geprüft. Neue Unterlage „Messpunkte MP01 bis MP08“ mit leeren Spalten für die Messwerte. Gemessen wird für das Fahrzeug der Spedition und für das kleine Fahrzeug. Der Umschlagplatz ist jetzt ein Ergebnis. MP08 ist auf den markierten Bereich bezogen. Neuer Auftrag für die ausführende KI: Messung vorbereiten. | Index: AP-A0, GB1, AP-C3 (Anfrage an die Spedition: Umschlagplatz statt „Fuß der Zufahrt“); `auftraege/AP-A0.md` |
+| Chat 17.11.: Wasser „nicht direkt trinkbar, für Koch-/Trinkgebrauch filtern“, in Fachsprache | Begriffe: Rohwasser ohne Trinkwasserqualität, Trinkwasseraufbereitung, Verfahrensstufen nach Laborbefund, Rohwasser- und Kontrollprobe. Zu klären: Point-of-Entry oder Point-of-Use, und ob Dusche und Warmwasser Trinkwasserqualität brauchen (DE: TrinkwV zählt die Körperpflege dazu; ukrainische Norm zu bestätigen). Laboranfrage mit erweitertem Parameterumfang. | Index: GB6, AP-A2, Ast 3 Wasser, Versorgungskarte; Anschaffungen: Wasseranalyse, Trinkwasseraufbereitung; Whitepaper Abschnitt 11 |
+
+**Prüfung:** `pruefe_alle.py` meldet jetzt auch Aussagen wie „direkt trinkbar“ oder „Grundwasser ist Trinkwasser“.
+
+**Behoben:** Normnummern wie „2.2.4-171-10“ wurden fälschlich als Teilergebnis 2.2.4 verlinkt.

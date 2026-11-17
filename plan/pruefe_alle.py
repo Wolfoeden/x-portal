@@ -31,6 +31,7 @@ ALT = {
     r'\bPaul\b|\bRoman\b|\bNazar\b': 'Rollen statt Namen',
     r'Fachperson': 'Fachexperte',
     r'Lage von Phase 0 im Detailplan|Wo im Detailplan steht das Objekt Phase 0': 'Lage steht voraussichtlich fest (Antwort 17.11.2026, markierter Bereich)',
+    r'Grundwasser ist Trinkwasser|direkt trinkbar|ohne Aufbereitung trinkbar': 'Rohwasser ohne Trinkwasserqualität, Trinkwasseraufbereitung nötig (D61, 17.11.2026)',
     r'Warteliste für Node001': 'Whitelist noch nicht vorhanden (Kommentar 12.11.)',
     r'A00[123] (Fachprüfung|Zusatzerkundung|Vermessung)|läuft Fachprüfung|KI-Zusammenfassung, nicht geprüft|nicht geprüft und nicht freigegeben|wird mit dem Original abgeglichen|mit dem Original abzugleichen': 'Fachprüfung, Zusatzerkundung, Vermessung liegen vor (Kommentar 15.11.), kein offener Posten',
 }

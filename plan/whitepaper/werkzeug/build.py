@@ -150,7 +150,7 @@ a {{ color:var(--forest) }}
 <section id="vorher"><p class="num">11 · Vor dem Investment</p><h2>Eigenmittel und Eigenleistung zuerst</h2>
 <p>Bevor Kapital für Infrastruktur und Objekte aufgenommen wird, klärt X-PORTAL aus eigenen Mitteln und eigener Arbeit die Fragen, die ein Investor sonst als Risiko einpreisen müsste.</p>
 {cards([('Transport','Weg nach oben','Die Zufahrt ist einspurig und teils eng; sie wird vermessen. Jedes Objekt muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen.'),
-        ('Wasser','Menge und Qualität','Laboranalyse des Grundwassers und Auslegung der Aufbereitung.'),
+        ('Wasser','Menge und Qualität','Rohwasseranalyse im Labor und Auslegung der Trinkwasseraufbereitung.'),
         ('Strom und Netz','Anschluss belegt','Antrag beim Netzbetreiber und Angebot für die Internetanbindung.'),
         ('Recht und Struktur','Investierbare Gesellschaft','Rechtliche Prüfung von Gesellschaft, Miet- und Nutzungsmodell.'),
         ('Kosten','Angebote statt Richtwerte','Bauplanung und schriftliche Angebote für die großen Posten; daraus entsteht das Kostenband.'),

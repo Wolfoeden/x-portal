@@ -5,8 +5,8 @@
   {
    "nr": "GB1",
    "thema": "Weg nach oben: transportierbar",
-   "gilt": "Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jedes Objekt muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen. Im Winter muss geräumt werden.",
-   "quelle": "Kommentar 17.11.2026; Standortangaben vom 04.11.2026; D57"
+   "gilt": "Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jedes Objekt muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen; die Route und acht kritische Messpunkte MP01 bis MP08 stehen in AP-A0. Im Winter muss geräumt werden.",
+   "quelle": "Kommentar und Route 17.11.2026; Standortangaben vom 04.11.2026; D57"
   },
   {
    "nr": "GB2",
@@ -35,8 +35,8 @@
   {
    "nr": "GB6",
    "thema": "Wasser",
-   "gilt": "Grundwasser, aufbereitet zu Trinkwasser; Anfangsstufe bauen, Ausbau vorbereiten.",
-   "quelle": "D61"
+   "gilt": "Das Grundwasser ist Rohwasser ohne Trinkwasserqualität. Für Trinken und Kochen wird es zu Trinkwasser aufbereitet (Trinkwasseraufbereitung). Umfang und Verfahrensstufen legt der Fachexperte Wasser nach der Laboranalyse fest. Anfangsstufe bauen, Ausbau vorbereiten.",
+   "quelle": "D61; Angabe 17.11.2026"
   },
   {
    "nr": "GB7",
@@ -963,7 +963,7 @@
        "id": "AP-A0",
        "title": "Strecke ablaufen und messen: einspurige, teils enge Straße bis zum Grundstück",
        "state": "open",
-       "text": "Kommentar vom 17.11.2026: Die Objekte müssen über eine einfache, einspurige und teils enge Straße transportierbar sein; deshalb „leicht“. Breite, Engstellen und Ausweichstellen sind bis zur Messung offen.",
+       "text": "Kommentar vom 17.11.2026: Die Objekte müssen über eine einfache, einspurige und teils enge Straße transportierbar sein; deshalb „leicht“. Route von der Auffahrt bis zum Grundstück: https://maps.app.goo.gl/MVxhHzmvbfyLqY89A (Google Maps, 17.11.2026). Eine Auswertung aus Karten- und Satellitenansicht (ChatGPT, 17.11.2026, nicht vor Ort geprüft) nennt acht kritische Messpunkte; am kritischsten sind die Kehren bei MP04 und MP06, das unklare Endstück MP07 und der Abladeplatz MP08. Alle Werte sind bis zur Messung offen.",
        "facts": [
         {
          "feld": "Wann",
@@ -987,7 +987,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Streckenprotokoll bis zur Kehre am markierten Bereich (GB3): schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt"
+         "wert": "Streckenprotokoll mit den Messpunkten MP01 bis MP08 bis zum Abladeplatz am markierten Bereich (GB3); Umschlagplatz festgelegt: schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt"
         }
        ],
        "ap": {
@@ -999,14 +999,19 @@
          "GB11"
         ],
         "rolle": "führt aus: Projektleitung oder Team vor Ort · wertet aus: planende KI",
-        "ergebnis": "Streckenprotokoll bis zur Kehre am markierten Bereich (GB3): schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt"
+        "ergebnis": "Streckenprotokoll mit den Messpunkten MP01 bis MP08 bis zum Abladeplatz am markierten Bereich (GB3); Umschlagplatz festgelegt: schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt"
        },
        "vorlagen": [
         {
-         "titel": "Streckenprotokoll",
+         "titel": "Messpunkte MP01 bis MP08",
+         "text": "Messpunkte für die Strecke (aus der Karten- und Satellitenansicht, ChatGPT, 17.11.2026; nicht vor Ort geprüft)\nRoute: https://maps.app.goo.gl/MVxhHzmvbfyLqY89A (von der Auffahrt bis zum Grundstück; letzter Abzweig laut Karte nach etwa 9,1 km)\n\nPunkt | Stelle und Beobachtung | Vor Ort messen und prüfen | Priorität | Breite m | Kurvenradius m | Steigung % | Hindernisse | Untergrund | Fotos\nMP01 | Abzweig von der größeren Straße am Start in eine Nebenstraße | Einfahrtwinkel, nutzbare Breite, Platz zum Ausschwenken langer Fahrzeuge, Hindernisse beidseitig, Platz für Gegenverkehr | hoch | | | | | |\nMP02 | Kurviger Talabschnitt bei „Dolyna Kokhannya Kotedzhi“ und „Vidpochynkova Sadyba Horyanka“, an Bebauung vorbei | schmalste Stellen, Zäune, Gebäude, Masten, Äste, Ausweichstellen; tragen und sind befahrbar die Randbereiche? | mittel | | | | | |\nMP03 | Abschnitt am Gewässer, unter anderem westlich „royal place“, mehrere Kurven hintereinander | Kurveninnen- und -außenseite, Abstand zu Böschung und Gewässer, nutzbare Breite; Durchlässe und kleine Brücken mit Tragfähigkeit gesondert aufnehmen | hoch | | | | | |\nMP04 | Kehren zwischen „Vedmezhyek“ und „Komora“, enge Richtungsänderung nördlich „Vedmezhyek“ | beide Kurvenäste und die Fläche dazwischen: Innen- und Außenbegrenzung, freie Fläche für Überhang, Hindernisse, Steigung, Untergrund; Schleppkurve eines langen Fahrzeugs | sehr hoch | | | | | |\nMP05 | Kurvenbereich bei „Sadyba Yo Mo Yo“ Richtung „Hutsul’ska Hoydalka“, mehrere Richtungswechsel | jede Kurve einzeln: Breite vor, in und nach der Kurve, Hindernisse, Steigung, Übergänge; muss ein langes Fahrzeug auf Gegenseite oder Rand ausweichen? | hoch | | | | | |\nMP06 | Letzter Abzweig nach links (etwa 9,1 km) und die Kehren danach | Abzweig gesondert, dann jede Kehre mit der Nachbarkurve; Platz zum Rangieren zwischen den Kurven; Fahrzeugneigung beim Durchfahren | sehr hoch | | | | | |\nMP07 | Ende der Kartenroute bis zum Grundstück: Karte zeigt nur eine gestrichelte Verbindung | tatsächlicher Weg vom Ende der Kartenroute bis zum Abladeplatz: Breite, Boden, Steigung, Hindernisse, Rangierfläche (die gestrichelte Linie belegt weder einen Weg noch sein Fehlen) | sehr hoch | | | | | |\nMP08 | Ablade- und Aufstellbereich: blau markierter Bereich an der Kehre der Zufahrt (GB3, Knoten „lage“) | Zufahrt für Transportfahrzeug und gegebenenfalls Kran, Stellfläche, Boden, Neigung, Hindernisse darüber (Leitungen, Äste); Abladeplatz vor Ort festlegen | sehr hoch | | | | | |\n\nGemessen wird für zwei Fahrzeuge: das Fahrzeug der Spedition (wie weit kommt es, wo ist der Umschlagplatz?) und das kleine Fahrzeug für die letzte Strecke (D57).\nErgebnis: Umschlagplatz; bis wohin welches Fahrzeug kommt; größtes Teil (L × B × H) und schwerstes Teil, das bis zum Abladeplatz kommt; Jahreszeit."
+        },
+        {
+         "titel": "Streckenprotokoll zwischen den Messpunkten",
          "text": "Abschnitt | von (GPS) | bis (GPS) | Länge m | schmalste Breite m | Kurvenradius m | Steigung % | Untergrund | Ausweichstelle ja/nein | Wendestelle ja/nein | Brücke, Lastgrenze t | Foto-Nr. | Bemerkung\n1 | | | | | | | | | | | |\n2 | | | | | | | | | | | |\nErgebnis: größtes Teil (L × B × H) und schwerstes Teil, das bis zum Grundstück kommt; Fahrzeug, das es bringt; Jahreszeit."
         }
-       ]
+       ],
+       "auftrag": "Ziel: Die Vor-Ort-Messung der Strecke vorbereiten. Route: https://maps.app.goo.gl/MVxhHzmvbfyLqY89A\nEingang: Route, Messpunkte MP01 bis MP08 (Unterlage in AP-A0), Satellitenbilder und Straßenansichten, soweit vorhanden.\nVorgehen: Je Messpunkt die Koordinaten bestimmen, Bildausschnitte sammeln, sichtbare Engstellen, Brücken, Durchlässe und Ausweichstellen markieren; auf der Karte geschätzte Breiten nur als Schätzung mit Quelle kennzeichnen. Weitere kritische Stellen, die in der Liste fehlen, als MP09 ff. vorschlagen.\nAusgabe: Tabelle Punkt | Koordinaten | Beobachtung | Schätzung (falls vorhanden) mit Quelle | was vor Ort zu messen ist | Priorität.\n\nRegeln: Jede Angabe mit Quelle (Link) und Abrufdatum. Was nicht belegt ist, als OFFEN kennzeichnen, nicht schätzen. Nichts bestellen, nichts versenden, keine Konten anlegen, keine Entscheidung treffen. Ergebnis als Markdown-Tabelle und als JSON-Liste mit denselben Feldern."
       },
       {
        "kind": "step",
@@ -1055,12 +1060,13 @@
       {
        "kind": "step",
        "id": "AP-A2",
-       "title": "Wasseranalyse im Labor",
+       "title": "Wasseranalyse im Labor: Umfang der Trinkwasseraufbereitung festlegen",
        "state": "open",
+       "text": "Stand: Das Grundwasser ist Rohwasser und ohne Aufbereitung nicht als Trinkwasser geeignet (D61; Angabe vom 17.11.2026). Für Trinken und Kochen wird es zu Trinkwasser aufbereitet. Mögliche Verfahrensstufen, Auswahl nach Laborbefund (Vorschlag KI): Partikel- bzw. Sedimentfiltration, Enteisenung und Entmanganung, Aktivkohlefiltration, UV-Desinfektion, gegebenenfalls Umkehrosmose. Zu klären: zentrale Aufbereitung am Hauseingang (Point-of-Entry) oder nur an der Küchenzapfstelle (Point-of-Use); ob Dusche und Warmwasser Trinkwasserqualität brauchen (in Deutschland zählt Wasser für die Körperpflege zum Trinkwasser nach Trinkwasserverordnung; die ukrainische Regel, vermutlich ДСанПіН 2.2.4-171-10, ist zu bestätigen).",
        "facts": [
         {
          "feld": "Wann",
-         "wert": "jetzt; Vorabprobe aus dem vorhandenen Grundwasser, Endprobe nach der Brunnenbohrung"
+         "wert": "jetzt; Vorabprobe aus dem vorhandenen Grundwasser, Rohwasserprobe nach der Brunnenbohrung, Kontrollprobe nach Inbetriebnahme der Aufbereitung"
         },
         {
          "feld": "Voraussetzung",
@@ -1068,7 +1074,7 @@
         },
         {
          "feld": "Blockiert",
-         "wert": "Auslegung der Aufbereitung, Angebot Brunnen und Aufbereitung"
+         "wert": "Auslegung der Trinkwasseraufbereitung, Angebot Brunnen und Aufbereitung"
         },
         {
          "feld": "Grundbestimmungen",
@@ -1080,7 +1086,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Laborbericht mit Bewertung als Trinkwasser und Empfehlung zur Aufbereitung"
+         "wert": "Laborbericht zum Rohwasser mit Abweichungen von den Grenzwerten für Trinkwasser; Empfehlung der Verfahrensstufen durch den Fachexperten Wasser; später Kontrollprobe nach der Aufbereitung"
         },
         {
          "feld": "Anschaffungen",
@@ -1088,20 +1094,20 @@
         }
        ],
        "ap": {
-        "wann": "jetzt; Vorabprobe aus dem vorhandenen Grundwasser, Endprobe nach der Brunnenbohrung",
+        "wann": "jetzt; Vorabprobe aus dem vorhandenen Grundwasser, Rohwasserprobe nach der Brunnenbohrung, Kontrollprobe nach Inbetriebnahme der Aufbereitung",
         "voraus": "akkreditiertes Labor gefunden",
-        "blockiert": "Auslegung der Aufbereitung, Angebot Brunnen und Aufbereitung",
+        "blockiert": "Auslegung der Trinkwasseraufbereitung, Angebot Brunnen und Aufbereitung",
         "gb": [
          "GB6",
          "GB11"
         ],
         "rolle": "entscheidet: Geschäftsführung · führt aus: Projektleitung · prüft: Fachexperte Wasser",
-        "ergebnis": "Laborbericht mit Bewertung als Trinkwasser und Empfehlung zur Aufbereitung"
+        "ergebnis": "Laborbericht zum Rohwasser mit Abweichungen von den Grenzwerten für Trinkwasser; Empfehlung der Verfahrensstufen durch den Fachexperten Wasser; später Kontrollprobe nach der Aufbereitung"
        },
        "vorlagen": [
         {
          "titel": "Anfrage an ein Labor (Deutsch; Ukrainisch durch die ausführende KI, von einer Muttersprachlerin geprüft)",
-         "text": "Betreff: Anfrage Trinkwasseranalyse, Grundwasser, Bereschnyzja (Werchowyna)\n\nGuten Tag,\n\nwir möchten Grundwasser auf einem Grundstück in Bereschnyzja, Ortsteil Hrun (Kataster 2620885502:02:001:0013) auf Eignung als Trinkwasser untersuchen lassen. Bitte nennen Sie uns:\n1. Parameterumfang für Trinkwasser nach ukrainischer Norm, einschließlich Mikrobiologie, Eisen, Mangan, Nitrat, Härte, Trübung.\n2. Probenahme: durch Sie oder durch uns; Gefäße, Kühlung, Zeit bis zur Abgabe.\n3. Preis, Dauer bis zum Bericht, Akkreditierung.\n\nMit freundlichen Grüßen\n[Projektleitung, X-PORTAL]"
+         "text": "Betreff: Anfrage Rohwasseranalyse (Grundwasser) zur Auslegung der Trinkwasseraufbereitung, Bereschnyzja (Werchowyna)\n\nGuten Tag,\n\nwir möchten Rohwasser aus Grundwasser auf einem Grundstück in Bereschnyzja, Ortsteil Hrun (Kataster 2620885502:02:001:0013) untersuchen lassen. Das Wasser ist ohne Aufbereitung nicht als Trinkwasser geeignet; mit dem Befund legen wir die Trinkwasseraufbereitung aus. Bitte nennen Sie uns:\n1. Parameterumfang für Trinkwasser nach ukrainischer Norm, einschließlich Mikrobiologie (E. coli, coliforme Bakterien, Koloniezahl), Eisen, Mangan, Nitrat, Nitrit, Ammonium, Härte, pH-Wert, Trübung, Färbung und Geruch.\n1a. Ob Sie später auch eine Kontrollprobe nach der Aufbereitung untersuchen.\n2. Probenahme: durch Sie oder durch uns; Gefäße, Kühlung, Zeit bis zur Abgabe.\n3. Preis, Dauer bis zum Bericht, Akkreditierung.\n\nMit freundlichen Grüßen\n[Projektleitung, X-PORTAL]"
         }
        ],
        "auftrag": "Ziel: Akkreditierte Labore für Trinkwasseranalysen in der Oblast Iwano-Frankiwsk finden und vergleichen.\nAusgabe: Tabelle mit Labor | Ort | Akkreditierung | Parameterumfang | Preis | Dauer | Probenahme vor Ort möglich | Kontakt | Quelle.\n\nRegeln: Jede Angabe mit Quelle (Link) und Abrufdatum. Was nicht belegt ist, als OFFEN kennzeichnen, nicht schätzen. Nichts bestellen, nichts versenden, keine Konten anlegen, keine Entscheidung treffen. Ergebnis als Markdown-Tabelle und als JSON-Liste mit denselben Feldern."
@@ -1847,7 +1853,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Angebot einer Spedition bis zum Fuß der Zufahrt; Plan für Umschlag und letzte Meile mit Fahrzeug, Hebegerät und Personen"
+         "wert": "Angebot einer Spedition bis zum Umschlagplatz aus dem Streckenprotokoll (AP-A0, MP01 bis MP08); Plan für Umschlag und letzte Strecke mit Fahrzeug, Hebegerät und Personen"
         },
         {
          "feld": "Anschaffungen",
@@ -1864,12 +1870,12 @@
          "GB11"
         ],
         "rolle": "führt aus: Projektleitung · entscheidet: Geschäftsführung",
-        "ergebnis": "Angebot einer Spedition bis zum Fuß der Zufahrt; Plan für Umschlag und letzte Meile mit Fahrzeug, Hebegerät und Personen"
+        "ergebnis": "Angebot einer Spedition bis zum Umschlagplatz aus dem Streckenprotokoll (AP-A0, MP01 bis MP08); Plan für Umschlag und letzte Strecke mit Fahrzeug, Hebegerät und Personen"
        },
        "vorlagen": [
         {
          "titel": "Anfrage an eine Spedition",
-         "text": "Betreff: Transportanfrage Bausatz Wohnmodul nach Bereschnyzja (Werchowyna)\n\nGuten Tag,\n\nbitte senden Sie uns ein Angebot für den Transport von [Anzahl] Packstücken, größtes Teil [L × B × H], schwerstes Teil [Gewicht], gesamt [Gewicht], von [Abholort] nach Bereschnyzja, Gemeinde Werchowyna, bis zum Fuß der Zufahrt. Die letzten 200 m schaffen nur kleine Fahrzeuge; dort wird umgeladen.\nBitte nennen Sie: Fahrzeug, Preis, Dauer, Zollabwicklung (falls angeboten), Versicherung, Abladen mit Kran oder Stapler.\n\nMit freundlichen Grüßen\n[Projektleitung]"
+         "text": "Betreff: Transportanfrage Bausatz Wohnmodul nach Bereschnyzja (Werchowyna)\n\nGuten Tag,\n\nbitte senden Sie uns ein Angebot für den Transport von [Anzahl] Packstücken, größtes Teil [L × B × H], schwerstes Teil [Gewicht], gesamt [Gewicht], von [Abholort] nach Bereschnyzja, Gemeinde Werchowyna, bis zum Umschlagplatz [Ort aus dem Streckenprotokoll]. Die Zufahrt ist einspurig, teils eng und hat enge Kehren; das Streckenprotokoll mit Breiten und Kurvenradien legen wir bei. Ab dem Umschlagplatz übernehmen kleine Fahrzeuge.\nBitte nennen Sie: Fahrzeug, Preis, Dauer, Zollabwicklung (falls angeboten), Versicherung, Abladen mit Kran oder Stapler.\n\nMit freundlichen Grüßen\n[Projektleitung]"
         }
        ],
        "auftrag": "Ziel: Speditionen finden, die von Ungarn, Polen und aus einem Drittland in die Oblast Iwano-Frankiwsk liefern, möglichst mit Zollabwicklung und Abladen per Kran; dazu lokale Anbieter für die letzte Meile (Traktor, Allrad-Transporter, Hebegerät) im Raum Werchowyna.\nAusgabe: Tabelle Anbieter | Strecke | Fahrzeuge | Zoll | Kran | Kontakt | Quelle.\n\nRegeln: Jede Angabe mit Quelle (Link) und Abrufdatum. Was nicht belegt ist, als OFFEN kennzeichnen, nicht schätzen. Nichts bestellen, nichts versenden, keine Konten anlegen, keine Entscheidung treffen. Ergebnis als Markdown-Tabelle und als JSON-Liste mit denselben Feldern."
@@ -6344,7 +6350,7 @@
      "id": "mb-wasser",
      "title": "Wasser: wie groß wird der Speicher (2.3.2)",
      "state": "open",
-     "text": "Entschieden am 13.11. (D61): Grundwasser, aufbereitet zu Trinkwasser; Anfangsstufe bauen, Ausbau vorbereiten. Mindestbedingungen: H04, H05. Kippt bei: Laborwerten und Schüttung im Winter. Ausbaupfad: zuerst die Anfangsstufe, Tank, Boiler und Leitung für den Ausbau vorbereitet (H05).",
+     "text": "Entschieden am 13.11. (D61): Das Grundwasser ist Rohwasser ohne Trinkwasserqualität; für Trinken und Kochen Trinkwasseraufbereitung nach Laborbefund (AP-A2); Anfangsstufe bauen, Ausbau vorbereiten. Mindestbedingungen: H04, H05. Kippt bei: Laborwerten und Schüttung im Winter. Ausbaupfad: zuerst die Anfangsstufe, Tank, Boiler und Leitung für den Ausbau vorbereitet (H05).",
      "opts": [
       {
        "kind": "option",

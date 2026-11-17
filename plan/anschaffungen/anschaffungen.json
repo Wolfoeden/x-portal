@@ -793,8 +793,8 @@
    "gegenstand": "Wasseranalyse im Labor",
    "phase": "0",
    "art": "Dienstleistung",
-   "wofuer": "Bestimmt, welche Aufbereitung nötig ist.",
-   "recherche": "Akkreditiertes Labor; Parameter (Keime, Eisen, Mangan, Härte, Nitrat)",
+   "wofuer": "Rohwasseranalyse: bestimmt Umfang und Verfahrensstufen der Trinkwasseraufbereitung; später Kontrollprobe nach der Aufbereitung.",
+   "recherche": "Akkreditiertes Labor; Parameter (Mikrobiologie, Eisen, Mangan, Nitrat, Ammonium, Härte, pH, Trübung)",
    "menge": "je Entnahmestelle, wiederholt",
    "entscheidungen": [
     "D61"
@@ -873,7 +873,7 @@
    "gegenstand": "Trinkwasseraufbereitung",
    "phase": "0",
    "art": "kaufen mit Einbau",
-   "wofuer": "Aus Grundwasser Trinkwasser machen (D61).",
+   "wofuer": "Aus Rohwasser (Grundwasser) Trinkwasser für Trinken und Kochen machen (D61); zentral (Point-of-Entry) oder an der Küchenzapfstelle (Point-of-Use).",
    "recherche": "Stufen nach Laborwerten: Sedimentfilter, Aktivkohle, Enteisenung, UV oder Umkehrosmose; Wartung",
    "menge": "1 Anlage, skalierbar",
    "entscheidungen": [

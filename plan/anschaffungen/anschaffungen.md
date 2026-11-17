@@ -93,7 +93,7 @@ Entscheidet: Geschäftsführung. Nimmt ab: Fachexperte Wasser, Labor. Aus: D61.
 
 | Nr | Gegenstand | Phase | Art | Recherchieren | Menge hängt ab von |
 |---|---|---|---|---|---|
-| A048 | Wasseranalyse im Labor | 0 | Dienstleistung | Akkreditiertes Labor; Parameter (Keime, Eisen, Mangan, Härte, Nitrat) | je Entnahmestelle, wiederholt |
+| A048 | Wasseranalyse im Labor | 0 | Dienstleistung | Akkreditiertes Labor; Parameter (Mikrobiologie, Eisen, Mangan, Nitrat, Ammonium, Härte, pH, Trübung) | je Entnahmestelle, wiederholt |
 | A049 | Brunnen oder Quellfassung | 0 | Dienstleistung | Bohrfirma; Tiefe; Genehmigung; Schüttung im Winter | 1 |
 | A050 | Pumpe | 0 | kaufen | Förderhöhe und Menge; Trockenlaufschutz | 1 plus Reserve |
 | A051 | Druckbehälter und Druckschalter | 0 | kaufen | Größe | 1 |

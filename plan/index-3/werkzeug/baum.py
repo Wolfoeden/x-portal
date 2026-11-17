@@ -374,7 +374,7 @@ makebuy = [
             V('B', 'Zentrale Wärmequelle', ('Kosten', 'fehlt'), ('Grund', 'Person A soll nachts nicht mehrere Öfen versorgen')),
             V('C', 'Ofen plus zweite Wärmequelle', ('Stand', 'ob nötig, entscheidet der Morgenwert aus H02'), ('Kosten', 'Kostenregister: Heizlüfter 2 kW 530 UAH als Reserve'))]),
     N('decision', 'mb-wasser', 'Wasser: wie groß wird der Speicher (2.3.2)', 'open', ziel=['Z1'],
-      text='Entschieden am 13.11. (D61): Grundwasser, aufbereitet zu Trinkwasser; Anfangsstufe bauen, Ausbau vorbereiten. Mindestbedingungen: H04, H05. Kippt bei: Laborwerten und Schüttung im Winter. Ausbaupfad: zuerst die Anfangsstufe, Tank, Boiler und Leitung für den Ausbau vorbereitet (H05).',
+      text='Entschieden am 13.11. (D61): Das Grundwasser ist Rohwasser ohne Trinkwasserqualität; für Trinken und Kochen Trinkwasseraufbereitung nach Laborbefund (AP-A2); Anfangsstufe bauen, Ausbau vorbereiten. Mindestbedingungen: H04, H05. Kippt bei: Laborwerten und Schüttung im Winter. Ausbaupfad: zuerst die Anfangsstufe, Tank, Boiler und Leitung für den Ausbau vorbereitet (H05).',
       opts=[V('A', 'Tank 1.000 l', ('Kosten', '7.000–13.000 UAH, rund 140–260 €, ohne Quellfassung, Leitung und Filter (A4)'), ('Reicht', 'knapp 7 Tage in der Anfangsstufe, knapp 3 Tage im Ausbau (H05)'), ('Kippt bei', '1.000 l wiegen 1 t; die Bodenlast prüft eine Fachperson')),
             V('B', 'Speicher für 10 Tage Sperre', ('Menge', '1.500 l in der Anfangsstufe, 3.600 l im Ausbau (H05, Annahme)'), ('Kosten', 'fehlt'))]),
     N('decision', 'mb-toilette', 'Toilette, Dusche, Warmwasser, Abwasser: ab Phase 0 fest eingebaut (D62)', 'done', ziel=['Z1'],
@@ -743,7 +743,7 @@ def collect(nodes):
         collect(n.get('kids', []))
 collect(tree)
 
-TOKEN = re.compile(r'(?<![\w.,])(M02-\d\d|E\d\d|D\d\d|O\d\d|G[0-4]|2\.[1-6](?:\.\d{1,2})?|[HSZAV]0\d|A[1-6]|Z[1-4]|X[1-3])(?![\w])(?!\.\d)')
+TOKEN = re.compile(r'(?<![\w.,])(M02-\d\d|E\d\d|D\d\d|O\d\d|G[0-4]|2\.[1-6](?:\.\d{1,2})?|[HSZAV]0\d|A[1-6]|Z[1-4]|X[1-3])(?![\w])(?!\.\d)(?!-\d)')
 
 def href(tok):
     if tok.startswith('M02-'):
@@ -1305,7 +1305,7 @@ RES = [
     ('Wärme', [('Quelle', L('Holzofen (D60); Holz aus eigener Fällung trocknet etwa ein Jahr (AP-D1), bis dahin gekauftes trockenes Holz')), ('Reserve', 'festlegen'),
                ('Bei Ausfall', L('mindestens 12 °C im Schlafbereich nach 8 Stunden ohne Feuer (Annahme, M02-06); Rauch- und CO-Melder (S01)')),
                ('Was fehlt', L('Heizlast je Objekt bei −20 °C (H02)')), ('Planungspunkt', L('2.3.2') + see('#b-mb-waerme', 'Make-or-Buy Wärme'))]),
-    ('Wasser', [('Quelle', L('Grundwasser, aufbereitet zu Trinkwasser (D61); 50 l je Person und Tag (Annahme vom 04.11.2026)')), ('Reserve', L('Tank; Notvorrat Trinkwasser 60 l für 3 Personen (M02-04); 1.500 l für 10 Tage Sperre (H05)')),
+    ('Wasser', [('Quelle', L('Grundwasser als Rohwasser, Trinkwasseraufbereitung für Trinken und Kochen (D61, AP-A2); 50 l je Person und Tag (Annahme vom 04.11.2026)')), ('Reserve', L('Tank; Notvorrat Trinkwasser 60 l für 3 Personen (M02-04); 1.500 l für 10 Tage Sperre (H05)')),
                 ('Bei Ausfall', 'Pumpe steht: Wasser aus Tank und Notvorrat'), ('Was fehlt', L('Laborwerte (AP-A2); Ergiebigkeit im Winter; Garten in der Bilanz (2.3.1)')),
                 ('Planungspunkt', L('2.3.2') + see('#b-mb-wasser', 'Make-or-Buy Wasser'))]),
     ('Toilette und Abwasser', [('Quelle', L('Spültoilette, Dusche, Warmwasser und Abwasser fest ab Phase 0 (D62); lokale Kläranlage laut Detailplan')), ('Reserve', 'festlegen'),
