@@ -456,7 +456,7 @@ def zielblatt_html():
             f'<h4 class="dt-h4" id="b-nutzen">Erwarteter Nutzen: Node001 im X-PORTAL-System</h4>{nt}')
 
 personen = N('step', 'b-personen', 'Für wen: das Team oben, ab Phase 1 Mieter', 'done', dom='b-personen',
-    text='Die Projektleitung ist von Anfang an oben, führt Produkt und Projekt und koordiniert den Betrieb. Zwei weitere Teammitglieder bauen Technologielösungen und liefern Kundenprojekte. Ab Phase 1 kommen Mieter dazu (D45); sie sind frei in Arbeit und Tagesablauf, ihre Gemeinschaftsarbeit wird angerechnet (D36, D38).')
+    text='Die Projektleitung ist von Anfang an oben, führt Produkt und Projekt und koordiniert den Betrieb. Zwei weitere Teammitglieder bauen Technologielösungen und liefern Kundenprojekte. Ab Phase 1 kommen Mieter dazu (D45); sie sind frei in Arbeit und Tagesablauf, ihre Gemeinschaftsarbeit wird angerechnet (D36, D38). Wer oben ist und welche Aufgaben die Rollen haben, steht unter „Rollen am Ort“.', see=[('#b-rollen', 'Rollen am Ort')])
 
 spielregeln = N('step', 'b-spielregeln', 'Spielregeln oben: ein einfaches Leben aus Arbeit und Erholung', 'open', dom='b-spielregeln', ziel=['Z1'],
     meta=VORGABE,
@@ -478,7 +478,31 @@ leben = N('group', 'g-m-leben', 'Einfaches Leben: Arbeit und Erholung (neu)', te
     N('req', None, 'Nichts im Hintergrund muss man selbst lösen: Essen, Strom, Wasser, Internet laufen', 'untested', meta='aus E46 und E54', tags=['Versorgung', 'Service'], ber='Versorgung, Service', dom='b-r-L05'),
 ])
 
-anforderungen = [personen, spielregeln, leben] + stufen + [neuer, szenarien]
+# Rollen am Ort (Vorgabe der Projektleitung vom 17.11.2026): wer kommt, wer bleibt, wer trägt. Aufgaben je Rolle werden ausgearbeitet.
+def _rolle(nid, titel, wer, bleibt, arbeit, aufgaben, stern, quelle):
+    return N('step', nid, titel, 'open', meta='Aufgaben werden ausgearbeitet',
+             facts=[('Wer', wer), ('Kommt und bleibt', bleibt), ('Arbeit', arbeit), ('Aufgaben am Ort', aufgaben),
+                    ('Sternbild', stern + ' (Vorschlag KI)'), ('Quelle', quelle)])
+rollen = N('group', 'b-rollen', 'Rollen am Ort: wer kommt, wer bleibt, wer trägt', 'open',
+    meta='Vorgabe der Projektleitung vom 17.11.2026; Aufgaben werden ausgearbeitet',
+    text='Verschiedene Rollen haben verschiedene Aufgaben. Hier steht das Gerüst: wer die Rolle hat, wie lange sie oben ist, woher die Arbeit kommt und was im Plan schon dazu gehört. '
+         'Die Aufgaben je Rolle arbeiten wir weiter aus. Die Begriffe stammen aus dem verbindlichen Sternbild „X-Portal Node001“ (Limbic Map im Zielbild).', see=[('#u-limbic', 'Sternbild X-Portal Node001')],
+    kids=[
+    _rolle('b-rolle-team', 'Team', 'Projektleitung und zwei weitere Teammitglieder (siehe „Für wen“)', 'ganzjährig oben (Z1)',
+           'Produkt, Projekte und Betrieb', 'Betrieb oben im Wechsel nach Plan (2.4.5); Jour fixe; wird ausgearbeitet', 'Effizienz, Sicherheit', '„Für wen“ (Ast 2), D44, D67'),
+    _rolle('b-rolle-nomaden', 'Digitale Nomaden', 'Menschen, die ortsunabhängig arbeiten', 'Wochen bis dauerhaft',
+           'Sie haben schon Arbeit oder suchen noch Arbeit und bekommen sie über XPORTAL (Profil, Matching); remote, vor Ort oder beides',
+           'Gemeinschaftsarbeit wird angerechnet (D36, D38); Mitarbeit in Projekten; wird ausgearbeitet', 'Freiheit, Effizienz',
+           'Vorgabe 17.11.2026; Whitepaper 04 „Mitarbeiten ohne Ortsbindung“; Website „Für digitale Nomaden“'),
+    _rolle('b-rolle-gaeste', 'Gäste', 'Menschen, die Ruhe, Natur und einen Arbeitsplatz auf Zeit suchen', 'kurzfristig (Workation), sie können auch langfristig bleiben; wer länger bleibt, ist im internen Modell Mieter (D45, D48)',
+           'nicht nötig; Arbeitsplatz steht offen', 'frei, sie können bei allem mitmachen (Spielregeln); wird ausgearbeitet', 'Natur, Gesundheit',
+           'Vorgabe 17.11.2026; Whitelist (D50); Website „Workation oder länger bleiben“'),
+    _rolle('b-rolle-investoren', 'Investoren', 'Kapitalgeber für Node001 und die Company', 'Besuch und Nachweis vor Ort, Wohnen nicht nötig',
+           '–', 'Unterlagen, Meilensteine, Gespräch; werden getrennt von der Whitelist geführt (Antwort vom 17.11.2026); wird ausgearbeitet', 'Sicherheit, Effizienz',
+           'Vorgabe 17.11.2026; Kapital D46, D47; Website „Interesse als Investor melden“'),
+    ])
+
+anforderungen = [personen, rollen, spielregeln, leben] + stufen + [neuer, szenarien]
 
 imPlan.append(N('group', 'g-aufteilung', 'Aufteilung: Holding, Agentur, Node-Gesellschaft', text='X-PORTAL ist die Unternehmensarchitektur und hält Lizenzen und Markenrechte. Die Agentur übernimmt Projekte aus Deutschland, Österreich und der Schweiz. Node001 wird von einer ukrainischen Gesellschaft gehalten (D44).', kids=[
     N('decision', 'aufteilung', 'Was gehört zur Holding, was zur Agentur, was zur Node-Gesellschaft: Arbeit, Verträge, Geld, Rechte (2.5.3)?', 'open', meta='Geschäftsführung und Projektleitung · nach O05', ziel=['X1', 'X2', 'X3']),
@@ -492,7 +516,7 @@ imPlan.append(N('group', 'g-kapital', 'Kapitalentscheidungen', kids=[
 imPlan.insert(0, N('group', 'g-od', 'Offene Architekturentscheidungen der Reference Architecture v0.4 (OD-001 bis OD-008)', text='Aus Abschnitt 16 der Baseline, mit dem Gate, vor dem sie fallen müssen, und den Stellen im Plan, die dazu schon etwas sagen.', kids=[
     N('decision', None, 'OD-001 · Systemgrenze X-PORTAL Organisation ↔ Node-Betrieb', 'open', meta='DECISION REQUIRED · vor Node001 Governance Design', text='Im Plan: Aufteilung X-PORTAL, DT Agentur, Grundstücke (X1 bis X3, 2.5.3, 2.5.5).', dom='b-OD-001'),
     N('decision', None, 'OD-002 · Kritische Funktionen und Ziel-Autarkie-/Autonomiewerte für Node001', 'open', meta='OPEN · vor Basis of Design', text='Im Plan: Versorgung je Ressource mit Grundbetrieb, Störung, Ausbau (Ast 3); Werte sind Annahmen, keine geprüft (E22).', see=[('#b-ressourcen', 'Ast 3 Versorgung')], dom='b-OD-002'),
-    N('decision', None, 'OD-003 · Human Roles v1.0 und priorisierte Needs', 'open', meta='IN WORK · vor Service Architecture Freeze', text='Im Plan: Team und Mieter (Ast 2, D45). Die Infografik nennt acht Rollen: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren. Die Zuordnung fehlt (Abgleich W08).', see=[('#b-anforderungen', 'Ast 2 Alltag')], dom='b-OD-003'),
+    N('decision', None, 'OD-003 · Human Roles v1.0 und priorisierte Needs', 'open', meta='IN WORK · vor Service Architecture Freeze', text='Im Plan: Team und Mieter (Ast 2, D45). Die Infografik nennt acht Rollen: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren. Rollen nach Vorgabe vom 17.11.2026: Team, digitale Nomaden, Gäste, Investoren (Rollen am Ort, Ast 2). Siedler, Remote-Siedler, Mitarbeitende, Betreiber und Partner bleiben offen (Abgleich W08).', see=[('#b-anforderungen', 'Ast 2 Alltag')], dom='b-OD-003'),
     N('decision', None, 'OD-004 · System Model / Datenmodell v0.1', 'open', meta='OPEN · vor Digital-Twin-Implementierung', text='Im Plan bisher „digitaler Zwilling der Organisation“ (2.6.6, M07); nach der Baseline ist das ein System Model, kein Digital Twin.', dom='b-OD-004'),
     N('decision', None, 'OD-005 · Node001 PoC-KPIs und Go/Revise/Stop-Grenzen', 'open', meta='OPEN · vor Investitionsfreigabe', text='Jede Hypothese H1 bis H8 braucht Messgröße, Datengrundlage, Zielwert, Prüfzeitpunkt und Go/Revise/Stop-Kriterium. Im Plan: Zielblatt Z1 bis Z4 und Gates G0 bis G4; Zielwerte fehlen großenteils.', see=[('#b-zielblatt', 'Zielblatt')], dom='b-OD-005'),
     N('decision', None, 'OD-006 · Genome Invariants v0.1', 'open', meta='IN WORK · vor Node001 Architecture Freeze', text='Im Plan: Z4 und 2.6.6; wiederholbar sind Schema, Planung, Nutzbarkeit und Sinn (E11).', dom='b-OD-006'),
@@ -986,7 +1010,7 @@ ABGLEICH = [
     ('W05', 'Zahlen zum Invest', 'Papierrechnung rund 12 Mio. € „rechtfertigt das Invest“ (E84); Kostenhochrechnung 12,5 Mio. € (E65)', 'Parametrischer Business Case offen (OD-008); Scheingenauigkeit vermeiden (KI-Regel 10); Kostenband „zu validieren“', 'Beide Zahlen bleiben intern und gehören in keine Investorenunterlage.', 'ASSUMPTION', 'markiert'),
     ('W06', 'Termine', 'Verkauf Januar 2027, Container ab März, „Einzug ab Frühjahr 2027“ (E51, E55)', '„Baubeginn 2027 · Ziel“, nur nach Gates; Meilensteine sind Ziele, keine Zusagen', 'Grenzentabelle führt alle Termine als Ziele.', 'ASSUMPTION', 'angepasst'),
     ('W07', 'Genehmigung und Finanzierung', '„Genehmigung und Planung liegen vor, 12,5 Mio. € privat finanziert“ (E60, durch E65 schon berichtigt)', 'Finanzierung des ersten Bauabschnitts und Freigaben: „zu validieren“; „Grundstück gesichert“', 'Es gilt das Deck. Grundstück im Besitz, Detailplan und Bebauungsplan liegen vor (Kommentar 12.11.2026); die Kopien fehlen im Plan (AP-A1): DOCUMENTED, nicht VERIFIED.', 'DOCUMENTED', 'markiert'),
-    ('W08', 'Rollen der Menschen', 'Team (drei Personen) und Käufer oder Mieter (E63)', 'Acht Rollen in der Infografik: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren; Human Roles v1.0 in Arbeit (OD-003)', 'Team und Mieter (D45, D50); weitere Rollen erst mit OD-003.', 'IN WORK', 'markiert'),
+    ('W08', 'Rollen der Menschen', 'Team (drei Personen) und Käufer oder Mieter (E63)', 'Acht Rollen in der Infografik: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren; Human Roles v1.0 in Arbeit (OD-003)', 'Team, digitale Nomaden, Gäste, Investoren (Rollen am Ort, Vorgabe 17.11.2026); weitere Rollen erst mit OD-003.', 'IN WORK', 'markiert'),
     ('W09', 'Digital Twin', '„Digitaler Zwilling der Organisation“, „Unternehmenszwilling“ (2.6.6, M07)', 'System Model ist nicht Digital Twin; voller Twin später und nur bei Nutzen', 'Text in 2.6.6 angepasst; M07 bleibt als Methodenname der Historie.', 'OPEN', 'angepasst'),
     ('W10', 'Zahl der Nodes', '„Node001, der erste von zehn Nodes“ (E63)', 'Node002 als Replikationstest; keine Zahl; Multi-Node-Plattform nicht im MVS', 'Die Zahl zehn steht in keiner aktuellen Aussage mehr.', 'ASSUMPTION', 'CHANGE REQUEST'),
     ('W11', 'Genome', '„Schema für den nächsten Node“ (Z4, E11)', 'X-PORTAL Genome: Invarianten, Module, Parameter, Entscheidungsregeln, Evidenz; belastbar erst mit Evidenz aus Node001 und Node002', 'Z4 heißt jetzt Genome.', 'IN WORK', 'angepasst'),

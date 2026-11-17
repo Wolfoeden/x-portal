@@ -28,13 +28,14 @@ POLE = {'stim': 'Stimulanz', 'dom': 'Dominanz', 'bal': 'Balance'}
 FARBE = {'stim': '#e8833a', 'dom': '#d6402e', 'bal': '#3c8c43'}
 
 STERNBILD = {'name': 'X-Portal Node001', 'datum': '17.11.2026', 'von': 'Projektleitung',
-             'order': ['Gesundheit', 'Sicherheit', 'Effizienz', 'Natur']}
+             'order': ['Gesundheit', 'Sicherheit', 'Effizienz', 'Natur', 'Freiheit']}  # Freiheit ergänzt am 17.11.2026, verbindlich
 
 # Brücke zu Maslow und M02 (Vorschlag KI) und wie die Website es sagt (Stand 17.11.2026).
 BRUECKE = {
     'Gesundheit': ('Grundbedürfnisse', 'H05 Waschen und duschen, H07 Essen, H08 Gute Luft; Trinkwasseraufbereitung (D61), Sanitär ab Phase 0 (D62)', '„Gesund essen“: Gemüse aus den Hochbeeten, Trinkwasser aus eigener Aufbereitung'),
     'Sicherheit': ('Sicherheit', 'S04 Privatheit; Versorgung bei Störung (Ast 3): Generator (D59), Wasservorrat 10 Tage (D61), Ofen mit Holzlager (D60), Starlink (D63); Notfallplan', '„Autarke Siedlung“: Kennzahl „Autark“, Szene „Ruhig schlafen“, FAQ zu Stromausfall und Schnee (Vorgabe Projektleitung 17.11.)'),
     'Effizienz': ('Wertschätzung und Leistung', 'D01 Gleichzeitige Nutzung, D03 Licht, D05 Wärme und Luft am Platz; Internet (D63)', '„Moderne Arbeitsplätze“, schnelles Internet, sichere IT-Umgebung nach DSGVO und ISMS (Vorgabe Projektleitung 17.11.)'),
+    'Freiheit': ('Selbstverwirklichung', 'Arbeitsort frei wählbar: remote, vor Ort oder beides (Whitepaper 04 „Mitarbeiten ohne Ortsbindung“); frei in Arbeit und Tagesablauf (Spielregeln, D36, D38); kommen und länger bleiben (Rollen am Ort)', 'FAQ „Kann ich bei XPORTAL auch arbeiten, ohne vor Ort zu sein?“, „remote von überall“, „Workation oder länger bleiben“'),
     'Natur': ('Grundbedürfnisse und Erholung', 'M02-23 Gemüsegarten, M02-14 Gemeinsamer Weg, Lage am Hang (1.016–1.077 m)', '„Morgen am Hang“, „Draußen sein“; Titel „Ein Tag in der Natur“'),
 }
 
@@ -63,7 +64,7 @@ def schwerpunkt():
 
 def svg():
     e = _h.escape
-    o = ['<svg class="lm-map" viewBox="0 0 1123 651" role="img" aria-label="Limbic Map mit dem Sternbild X-Portal Node001: Gesundheit, Sicherheit, Effizienz, Natur">']
+    o = ['<svg class="lm-map" viewBox="0 0 1123 651" role="img" aria-label="Limbic Map mit dem Sternbild ' + e(STERNBILD['name']) + ': ' + e(', '.join(STERNBILD['order'])) + '">']
     o.append('<ellipse cx="563" cy="330" rx="522" ry="303" class="lm-ring"/>')
     o += [f'<line x1="{C[0]}" y1="{C[1]}" x2="{x}" y2="{y}" class="lm-y"/>' for x, y in ENDS.values()]
     o += [f'<ellipse cx="{x}" cy="{y}" rx="{rx}" ry="{ry}" transform="rotate({r} {x} {y})" class="lm-cl"/>' for _, x, y, rx, ry, r in FIELDS]
@@ -99,7 +100,7 @@ CSS = """<style>
 .dt-limbic .lm-tw { overflow-x:auto }
 .dt-limbic table { width:100%; min-width:720px; table-layout:fixed; border-collapse:collapse; font-size:13px; margin:6px 0 }
 .dt-limbic col.c1 { width:4% } .dt-limbic col.c2 { width:13% } .dt-limbic col.c3 { width:13% } .dt-limbic col.c4 { width:14% } .dt-limbic col.c5 { width:30% } .dt-limbic col.c6 { width:26% }
-.dt-limbic th, .dt-limbic td { overflow-wrap:anywhere; text-align:left; vertical-align:top; border-top:1px solid var(--line); padding:6px 8px 6px 0 }
+.dt-limbic th, .dt-limbic td { overflow-wrap:break-word; hyphens:auto; text-align:left; vertical-align:top; border-top:1px solid var(--line); padding:6px 8px 6px 0 }
 .dt-limbic th { font-weight:600; color:var(--muted); white-space:normal; overflow-wrap:normal } .dt-limbic .lm-dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px }
 </style>"""
 
@@ -111,10 +112,11 @@ def html():
         rows.append(f'<tr><td>{i}</td><td><b><span class="lm-dot" style="background:{FARBE[k]}"></span>{e(t)}</b></td><td>{POLE[k]} · {feld(x, y)}</td>'
                     f'<td>{e(m)}</td><td>{e(plan)}</td><td>{e(web)}</td></tr>')
     s = STERNBILD
-    return (CSS + f'<div class="dt-limbic" id="u-limbic"><h4>Limbic Map für Node001: Sternbild „{s["name"]}“</h4>'
+    return (CSS + f'<div class="dt-limbic" id="u-limbic"><h4>Limbic Map für Node001: Sternbild „{s["name"]}“ · verbindlich</h4>'
             f'<p>Auswahl der {s["von"]} vom {s["datum"]} im Artefakt <a href="https://claude.ai/artifact/1eTvbSo16JXhi8rvjU85RF" target="_blank" rel="noreferrer">Limbic Sternbild</a>. '
-            f'Schwerpunkt: {schwerpunkt()}. Die Kommunikation zu Node001 betont Gesundheit, Sicherheit und Natur, dazu Effizienz beim Arbeiten; '
-            'Stimulanz-Begriffe wie Abenteuer, Neugier oder Ausflug treten zurück. Danach richtet sich das Wording der Website (Seite Orte, Node001 auf Startseite und Investorenseite).</p>'
+            f'Schwerpunkt: {schwerpunkt()}. <b>Verbindlich für die Planung (Vorgabe der {s["von"]} vom {s["datum"]}):</b> Kommunikation zu Node001 greift diese {len(s["order"])} Begriffe auf: '
+            f'{", ".join(s["order"])}. Stimulanz-Begriffe wie Abenteuer, Neugier oder Ausflug treten zurück; Freiheit steht für freie Wahl von Arbeitsort und Aufenthaltsdauer. '
+            'Danach richten sich das Wording der Website (Seite Orte, Node001 auf Startseite und Investorenseite) und die <a href="#b-rollen">Rollen am Ort</a>.</p>'
             f'<div class="lm-wrap">{svg()}</div>'
             '<div class="lm-tw"><table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"></colgroup><thead><tr><th>Nr</th><th>Begriff</th><th>Pol · Feld</th><th>Maslow-Bezug (Vorschlag KI)</th><th>Anforderungen und Entscheidungen im Plan</th><th>So sagt es die Website</th></tr></thead><tbody>'
             + ''.join(rows) + '</tbody></table></div>'

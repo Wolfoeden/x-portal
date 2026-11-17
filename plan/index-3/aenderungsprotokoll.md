@@ -577,3 +577,39 @@ Schwerpunkt: 3 × Balance, 1 × Dominanz.
     - beides
   - Folge für das Geschäftsmodell: Das Lieferteam wächst unabhängig von den Wohneinheiten.
   - Quelle: Profil-Baukasten der Website, Feld „Arbeitsort“.
+
+## 17.11.2026 (später) · Rollen am Ort, Sternbild mit „Freiheit“ verbindlich
+
+**Sternbild „X-Portal Node001“, Vorgabe der Projektleitung vom 17.11.2026, verbindlich für die Planung:**
+
+| Nr | Begriff | Pol · Feld |
+|---|---|---|
+| 1 | Gesundheit | Balance · Disziplin & Kontrolle |
+| 2 | Sicherheit | Balance · Disziplin & Kontrolle |
+| 3 | Effizienz | Dominanz · Disziplin & Kontrolle |
+| 4 | Natur | Balance · Fantasie & Genuss |
+| 5 | Freiheit | Dominanz · Abenteuer & Thrill |
+
+Schwerpunkt: 3 × Balance, 2 × Dominanz.
+
+- Die Karte im Zielbild zeigt jetzt fünf Sterne mit der Linie 1 → 5, wie im Tool.
+- Die Tabelle hat eine Zeile für Freiheit:
+  - Maslow (Vorschlag KI): Selbstverwirklichung
+  - Plan: freie Wahl von Arbeitsort und Aufenthaltsdauer
+  - Website: FAQ zur Remote-Arbeit, „Workation oder länger bleiben“
+- Die Website bleibt unverändert, weil sie Freiheit schon trägt.
+
+**Rollen am Ort (Ast 2, nach „Für wen“), Vorgabe der Projektleitung vom 17.11.2026:**
+- Das Gerüst umfasst vier Rollen: Team, digitale Nomaden, Gäste, Investoren.
+- Für jede Rolle gibt es diese Felder:
+  - Wer
+  - Kommt und bleibt
+  - Arbeit
+  - Aufgaben am Ort (werden ausgearbeitet)
+  - Sternbild-Begriffe (Vorschlag KI)
+  - Quelle
+- Die Rollen im Einzelnen:
+  - **Digitale Nomaden** haben schon Arbeit oder bekommen sie über XPORTAL.
+  - **Gäste** kommen kurzfristig und können auch langfristig bleiben. Im internen Modell sind sie dann Mieter (D45, D48).
+  - **Investoren** werden getrennt von der Whitelist geführt.
+- OD-003 und Abgleich W08 verweisen auf die vier Rollen. Siedler, Remote-Siedler, Mitarbeitende, Betreiber und Partner bleiben offen.

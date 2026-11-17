@@ -13,7 +13,7 @@ Bezugsrahmen ist die Reference Architecture v0.4-WB1 (`quellen/reference-archite
 | W05 | Zahlen zum Invest | Papierrechnung rund 12 Mio. € „rechtfertigt das Invest“ (E84); Kostenhochrechnung 12,5 Mio. € (E65) | Parametrischer Business Case offen (OD-008); Scheingenauigkeit vermeiden (KI-Regel 10); Kostenband „zu validieren“ | Beide Zahlen bleiben intern und gehören in keine Investorenunterlage. | ASSUMPTION | markiert |
 | W06 | Termine | Verkauf Januar 2027, Container ab März, „Einzug ab Frühjahr 2027“ (E51, E55) | „Baubeginn 2027 · Ziel“, nur nach Gates; Meilensteine sind Ziele, keine Zusagen | Grenzentabelle führt alle Termine als Ziele. | ASSUMPTION | angepasst |
 | W07 | Genehmigung und Finanzierung | „Genehmigung und Planung liegen vor, 12,5 Mio. € privat finanziert“ (E60, durch E65 schon berichtigt) | Finanzierung des ersten Bauabschnitts und Freigaben: „zu validieren“; „Grundstück gesichert“ | Es gilt das Deck. Grundstück im Besitz, Detailplan und Bebauungsplan liegen vor (Kommentar 12.11.2026); die Kopien fehlen im Plan (AP-A1): DOCUMENTED, nicht VERIFIED. | DOCUMENTED | markiert |
-| W08 | Rollen der Menschen | Team (drei Personen) und Käufer oder Mieter (E63) | Acht Rollen in der Infografik: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren; Human Roles v1.0 in Arbeit (OD-003) | Team und Mieter (D45, D50); weitere Rollen erst mit OD-003. | IN WORK | markiert |
+| W08 | Rollen der Menschen | Team (drei Personen) und Käufer oder Mieter (E63) | Acht Rollen in der Infografik: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren; Human Roles v1.0 in Arbeit (OD-003) | Team, digitale Nomaden, Gäste, Investoren (Rollen am Ort, Vorgabe 17.11.2026); weitere Rollen erst mit OD-003. | IN WORK | markiert |
 | W09 | Digital Twin | „Digitaler Zwilling der Organisation“, „Unternehmenszwilling“ (2.6.6, M07) | System Model ist nicht Digital Twin; voller Twin später und nur bei Nutzen | Text in 2.6.6 angepasst; M07 bleibt als Methodenname der Historie. | OPEN | angepasst |
 | W10 | Zahl der Nodes | „Node001, der erste von zehn Nodes“ (E63) | Node002 als Replikationstest; keine Zahl; Multi-Node-Plattform nicht im MVS | Die Zahl zehn steht in keiner aktuellen Aussage mehr. | ASSUMPTION | CHANGE REQUEST |
 | W11 | Genome | „Schema für den nächsten Node“ (Z4, E11) | X-PORTAL Genome: Invarianten, Module, Parameter, Entscheidungsregeln, Evidenz; belastbar erst mit Evidenz aus Node001 und Node002 | Z4 heißt jetzt Genome. | IN WORK | angepasst |
@@ -1023,7 +1023,42 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
 Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und Digitales, jede mit Prüfverfahren und Abnahme. Stand: die 29 Zeilen vom 03.11.2026 und die Spielregeln vom 05.11.2026; angepasst sind nur die Zeilen, die eine Entscheidung vom 13.11. betrifft.
 
 - **Schritt:** Für wen: das Team oben, ab Phase 1 Mieter _[entschieden]_
-  - Die Projektleitung ist von Anfang an oben, führt Produkt und Projekt und koordiniert den Betrieb. Zwei weitere Teammitglieder bauen Technologielösungen und liefern Kundenprojekte. Ab Phase 1 kommen Mieter dazu (D45); sie sind frei in Arbeit und Tagesablauf, ihre Gemeinschaftsarbeit wird angerechnet (D36, D38).
+  - Die Projektleitung ist von Anfang an oben, führt Produkt und Projekt und koordiniert den Betrieb. Zwei weitere Teammitglieder bauen Technologielösungen und liefern Kundenprojekte. Ab Phase 1 kommen Mieter dazu (D45); sie sind frei in Arbeit und Tagesablauf, ihre Gemeinschaftsarbeit wird angerechnet (D36, D38). Wer oben ist und welche Aufgaben die Rollen haben, steht unter „Rollen am Ort“.
+- **Ast:** Rollen am Ort: wer kommt, wer bleibt, wer trägt _[offen]_
+  - Vorgabe der Projektleitung vom 17.11.2026; Aufgaben werden ausgearbeitet
+  - Verschiedene Rollen haben verschiedene Aufgaben. Hier steht das Gerüst: wer die Rolle hat, wie lange sie oben ist, woher die Arbeit kommt und was im Plan schon dazu gehört. Die Aufgaben je Rolle arbeiten wir weiter aus. Die Begriffe stammen aus dem verbindlichen Sternbild „X-Portal Node001“ (Limbic Map im Zielbild).
+  - **Schritt:** Team _[offen]_
+    - Aufgaben werden ausgearbeitet
+    - Wer: Projektleitung und zwei weitere Teammitglieder (siehe „Für wen“)
+    - Kommt und bleibt: ganzjährig oben (Z1)
+    - Arbeit: Produkt, Projekte und Betrieb
+    - Aufgaben am Ort: Betrieb oben im Wechsel nach Plan (2.4.5); Jour fixe; wird ausgearbeitet
+    - Sternbild: Effizienz, Sicherheit (Vorschlag KI)
+    - Quelle: „Für wen“ (Ast 2), D44, D67
+  - **Schritt:** Digitale Nomaden _[offen]_
+    - Aufgaben werden ausgearbeitet
+    - Wer: Menschen, die ortsunabhängig arbeiten
+    - Kommt und bleibt: Wochen bis dauerhaft
+    - Arbeit: Sie haben schon Arbeit oder suchen noch Arbeit und bekommen sie über XPORTAL (Profil, Matching); remote, vor Ort oder beides
+    - Aufgaben am Ort: Gemeinschaftsarbeit wird angerechnet (D36, D38); Mitarbeit in Projekten; wird ausgearbeitet
+    - Sternbild: Freiheit, Effizienz (Vorschlag KI)
+    - Quelle: Vorgabe 17.11.2026; Whitepaper 04 „Mitarbeiten ohne Ortsbindung“; Website „Für digitale Nomaden“
+  - **Schritt:** Gäste _[offen]_
+    - Aufgaben werden ausgearbeitet
+    - Wer: Menschen, die Ruhe, Natur und einen Arbeitsplatz auf Zeit suchen
+    - Kommt und bleibt: kurzfristig (Workation), sie können auch langfristig bleiben; wer länger bleibt, ist im internen Modell Mieter (D45, D48)
+    - Arbeit: nicht nötig; Arbeitsplatz steht offen
+    - Aufgaben am Ort: frei, sie können bei allem mitmachen (Spielregeln); wird ausgearbeitet
+    - Sternbild: Natur, Gesundheit (Vorschlag KI)
+    - Quelle: Vorgabe 17.11.2026; Whitelist (D50); Website „Workation oder länger bleiben“
+  - **Schritt:** Investoren _[offen]_
+    - Aufgaben werden ausgearbeitet
+    - Wer: Kapitalgeber für Node001 und die Company
+    - Kommt und bleibt: Besuch und Nachweis vor Ort, Wohnen nicht nötig
+    - Arbeit: –
+    - Aufgaben am Ort: Unterlagen, Meilensteine, Gespräch; werden getrennt von der Whitelist geführt (Antwort vom 17.11.2026); wird ausgearbeitet
+    - Sternbild: Sicherheit, Effizienz (Vorschlag KI)
+    - Quelle: Vorgabe 17.11.2026; Kapital D46, D47; Website „Interesse als Investor melden“
 - **Schritt:** Spielregeln oben: ein einfaches Leben aus Arbeit und Erholung _[offen]_
   - Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog
   - Wer oben ist, soll sich nur auf Arbeit und Erholung konzentrieren müssen. Versorgung, Technik und Betrieb laufen im Hintergrund; deshalb sind Grundbedürfnisse und Sicherheit nach Maslow geklärt, bevor jemand oben arbeitet (D66).
@@ -1891,7 +1926,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
     - Beschlussblatt, Wiedervorlage: vor Basis of Design
   - **Entscheidung:** OD-003 · Human Roles v1.0 und priorisierte Needs _[offen]_
     - IN WORK · vor Service Architecture Freeze
-    - Im Plan: Team und Mieter (Ast 2, D45). Die Infografik nennt acht Rollen: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren. Die Zuordnung fehlt (Abgleich W08).
+    - Im Plan: Team und Mieter (Ast 2, D45). Die Infografik nennt acht Rollen: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren. Rollen nach Vorgabe vom 17.11.2026: Team, digitale Nomaden, Gäste, Investoren (Rollen am Ort, Ast 2). Siedler, Remote-Siedler, Mitarbeitende, Betreiber und Partner bleiben offen (Abgleich W08).
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
     - Beschlussblatt, Fachliche Prüfung: –
     - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam

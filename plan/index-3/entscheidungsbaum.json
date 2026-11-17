@@ -156,7 +156,7 @@
    "thema": "Rollen der Menschen",
    "bisher": "Team (drei Personen) und Käufer oder Mieter (E63)",
    "baseline": "Acht Rollen in der Infografik: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren; Human Roles v1.0 in Arbeit (OD-003)",
-   "gilt": "Team und Mieter (D45, D50); weitere Rollen erst mit OD-003.",
+   "gilt": "Team, digitale Nomaden, Gäste, Investoren (Rollen am Ort, Vorgabe 17.11.2026); weitere Rollen erst mit OD-003.",
    "status": "IN WORK",
    "im_index": "markiert"
   },
@@ -4614,8 +4614,162 @@
      "id": "b-personen",
      "title": "Für wen: das Team oben, ab Phase 1 Mieter",
      "state": "done",
-     "text": "Die Projektleitung ist von Anfang an oben, führt Produkt und Projekt und koordiniert den Betrieb. Zwei weitere Teammitglieder bauen Technologielösungen und liefern Kundenprojekte. Ab Phase 1 kommen Mieter dazu (D45); sie sind frei in Arbeit und Tagesablauf, ihre Gemeinschaftsarbeit wird angerechnet (D36, D38).",
-     "dom": "b-personen"
+     "text": "Die Projektleitung ist von Anfang an oben, führt Produkt und Projekt und koordiniert den Betrieb. Zwei weitere Teammitglieder bauen Technologielösungen und liefern Kundenprojekte. Ab Phase 1 kommen Mieter dazu (D45); sie sind frei in Arbeit und Tagesablauf, ihre Gemeinschaftsarbeit wird angerechnet (D36, D38). Wer oben ist und welche Aufgaben die Rollen haben, steht unter „Rollen am Ort“.",
+     "dom": "b-personen",
+     "see": [
+      [
+       "#b-rollen",
+       "Rollen am Ort"
+      ]
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "b-rollen",
+     "title": "Rollen am Ort: wer kommt, wer bleibt, wer trägt",
+     "state": "open",
+     "meta": "Vorgabe der Projektleitung vom 17.11.2026; Aufgaben werden ausgearbeitet",
+     "text": "Verschiedene Rollen haben verschiedene Aufgaben. Hier steht das Gerüst: wer die Rolle hat, wie lange sie oben ist, woher die Arbeit kommt und was im Plan schon dazu gehört. Die Aufgaben je Rolle arbeiten wir weiter aus. Die Begriffe stammen aus dem verbindlichen Sternbild „X-Portal Node001“ (Limbic Map im Zielbild).",
+     "kids": [
+      {
+       "kind": "step",
+       "id": "b-rolle-team",
+       "title": "Team",
+       "state": "open",
+       "meta": "Aufgaben werden ausgearbeitet",
+       "facts": [
+        {
+         "feld": "Wer",
+         "wert": "Projektleitung und zwei weitere Teammitglieder (siehe „Für wen“)"
+        },
+        {
+         "feld": "Kommt und bleibt",
+         "wert": "ganzjährig oben (Z1)"
+        },
+        {
+         "feld": "Arbeit",
+         "wert": "Produkt, Projekte und Betrieb"
+        },
+        {
+         "feld": "Aufgaben am Ort",
+         "wert": "Betrieb oben im Wechsel nach Plan (2.4.5); Jour fixe; wird ausgearbeitet"
+        },
+        {
+         "feld": "Sternbild",
+         "wert": "Effizienz, Sicherheit (Vorschlag KI)"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "„Für wen“ (Ast 2), D44, D67"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "b-rolle-nomaden",
+       "title": "Digitale Nomaden",
+       "state": "open",
+       "meta": "Aufgaben werden ausgearbeitet",
+       "facts": [
+        {
+         "feld": "Wer",
+         "wert": "Menschen, die ortsunabhängig arbeiten"
+        },
+        {
+         "feld": "Kommt und bleibt",
+         "wert": "Wochen bis dauerhaft"
+        },
+        {
+         "feld": "Arbeit",
+         "wert": "Sie haben schon Arbeit oder suchen noch Arbeit und bekommen sie über XPORTAL (Profil, Matching); remote, vor Ort oder beides"
+        },
+        {
+         "feld": "Aufgaben am Ort",
+         "wert": "Gemeinschaftsarbeit wird angerechnet (D36, D38); Mitarbeit in Projekten; wird ausgearbeitet"
+        },
+        {
+         "feld": "Sternbild",
+         "wert": "Freiheit, Effizienz (Vorschlag KI)"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Vorgabe 17.11.2026; Whitepaper 04 „Mitarbeiten ohne Ortsbindung“; Website „Für digitale Nomaden“"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "b-rolle-gaeste",
+       "title": "Gäste",
+       "state": "open",
+       "meta": "Aufgaben werden ausgearbeitet",
+       "facts": [
+        {
+         "feld": "Wer",
+         "wert": "Menschen, die Ruhe, Natur und einen Arbeitsplatz auf Zeit suchen"
+        },
+        {
+         "feld": "Kommt und bleibt",
+         "wert": "kurzfristig (Workation), sie können auch langfristig bleiben; wer länger bleibt, ist im internen Modell Mieter (D45, D48)"
+        },
+        {
+         "feld": "Arbeit",
+         "wert": "nicht nötig; Arbeitsplatz steht offen"
+        },
+        {
+         "feld": "Aufgaben am Ort",
+         "wert": "frei, sie können bei allem mitmachen (Spielregeln); wird ausgearbeitet"
+        },
+        {
+         "feld": "Sternbild",
+         "wert": "Natur, Gesundheit (Vorschlag KI)"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Vorgabe 17.11.2026; Whitelist (D50); Website „Workation oder länger bleiben“"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "b-rolle-investoren",
+       "title": "Investoren",
+       "state": "open",
+       "meta": "Aufgaben werden ausgearbeitet",
+       "facts": [
+        {
+         "feld": "Wer",
+         "wert": "Kapitalgeber für Node001 und die Company"
+        },
+        {
+         "feld": "Kommt und bleibt",
+         "wert": "Besuch und Nachweis vor Ort, Wohnen nicht nötig"
+        },
+        {
+         "feld": "Arbeit",
+         "wert": "–"
+        },
+        {
+         "feld": "Aufgaben am Ort",
+         "wert": "Unterlagen, Meilensteine, Gespräch; werden getrennt von der Whitelist geführt (Antwort vom 17.11.2026); wird ausgearbeitet"
+        },
+        {
+         "feld": "Sternbild",
+         "wert": "Sicherheit, Effizienz (Vorschlag KI)"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Vorgabe 17.11.2026; Kapital D46, D47; Website „Interesse als Investor melden“"
+        }
+       ]
+      }
+     ],
+     "see": [
+      [
+       "#u-limbic",
+       "Sternbild X-Portal Node001"
+      ]
+     ]
     },
     {
      "kind": "step",
@@ -8168,7 +8322,7 @@
        "title": "OD-003 · Human Roles v1.0 und priorisierte Needs",
        "state": "open",
        "meta": "IN WORK · vor Service Architecture Freeze",
-       "text": "Im Plan: Team und Mieter (Ast 2, D45). Die Infografik nennt acht Rollen: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren. Die Zuordnung fehlt (Abgleich W08).",
+       "text": "Im Plan: Team und Mieter (Ast 2, D45). Die Infografik nennt acht Rollen: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren. Rollen nach Vorgabe vom 17.11.2026: Team, digitale Nomaden, Gäste, Investoren (Rollen am Ort, Ast 2). Siedler, Remote-Siedler, Mitarbeitende, Betreiber und Partner bleiben offen (Abgleich W08).",
        "dom": "b-OD-003",
        "see": [
         [
