@@ -291,3 +291,22 @@ Wunsch von Roman: Das Bild unter „Zielbild“ in der Grundlage ist jetzt die K
 - Cardano kostet etwa 2 Cent pro Transaktion.
 
 **Außerdem:** Die Karten zeigen jetzt das Datum der jeweiligen Antwort, statt immer „13.11.“.
+
+## 17.11.2026 (später) · Zielbild: Punkte korrigiert
+
+**Eingang:** Roman meldet, dass die Nummern im Zielbild falsch sitzen.
+
+**Ursache:** Beim Bildtausch habe ich die Positionen geschätzt und nur eine kleine Übersicht angesehen, nicht jeden Punkt am Bild geprüft.
+
+**Neu gesetzt** (über ein Raster in 5-%-Schritten bestimmt, mit Ausschnitt-Screenshot geprüft):
+
+| Nr | Bereich | Stelle im Bild |
+|---|---|---|
+| 1 | Objekt zum Wohnen | Haus vorne rechts |
+| 2 | Kommunalgebäude | großes Gebäude mit Glasfront |
+| 3 | Gemüsegarten | Hochbeete |
+| 4 | Feuerstelle | Terrasse mit Tischen |
+| 6 | Technik | Wassertanks |
+| 7 | Gemeinsamer Weg | Weg vorne |
+
+**Neue Regel im README:** Markierungen auf Bildern werden über ein Raster gesetzt und je Punkt im Ausschnitt geprüft, bevor veröffentlicht wird.

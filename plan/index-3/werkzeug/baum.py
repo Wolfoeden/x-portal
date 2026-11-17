@@ -1450,8 +1450,8 @@ _zb = re.sub(r'<img alt="Zielbild Node001 mit nummerierten Bereichen" src="data:
              lambda m: '<img alt="Konzeptvisualisierung Node001 aus dem Whitepaper mit nummerierten Bereichen" src="' + _WPBILD + '">', _zb)
 _zb = re.sub(r'(<span class="zb-dot"[^>]*>\d</span>)+',
              lambda m: ''.join(f'<span class="zb-dot" style="left:{x}%;top:{y}%" title="{t}">{n}</span>' for n, x, y, t in [
-                 (1, 76, 74, 'Objekt zum Wohnen'), (2, 57, 34, 'Kommunalgebäude: Arbeitsplatz, Küche, Sanitär'), (3, 88, 49, 'Gemüsegarten'),
-                 (4, 46, 46, 'Feuerstelle mit Grill'), (6, 81, 38, 'Technik: Wassertanks, Solar'), (7, 43, 70, 'Gemeinsamer Weg, private Abzweige')]), _zb, count=1)
+                 (1, 72, 70, 'Objekt zum Wohnen'), (2, 58, 37, 'Kommunalgebäude: Arbeitsplatz, Küche, Sanitär'), (3, 90, 48, 'Gemüsegarten'),
+                 (4, 47, 44, 'Feuerstelle mit Grill auf der Terrasse'), (6, 84, 40, 'Technik: Wassertanks und Solar'), (7, 41, 88, 'Gemeinsamer Weg, private Abzweige')]), _zb, count=1)
 _zb = re.sub(r'Zielbild der Projektleitung vom 04\.11\.2026, ein Entwurf\.', 'Konzeptvisualisierung aus dem Whitepaper, keine finale Planung.', _zb)
 _zb = _zb.replace('Die Sauna ist nicht im Bild; wo sie hinkommt, fragt D35.', 'Restaurant und Bar (5) und die Sauna sind nicht im Bild; Gastronomie kommt später (D34), die Sauna in Phase 1 (D35).')
 _zbm = _neu(_zbm).replace('Wohnhaus mit E-Bike-Unterstand', 'Objekt zum Wohnen; E-Bike-Unterstand erst ab Phase 1 (D65)').replace('<p>das Maslow-', '<p>Das Maslow-')

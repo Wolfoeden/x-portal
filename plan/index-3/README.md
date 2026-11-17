@@ -26,6 +26,7 @@ Quellen der Inhalte: `../entscheidungen/antworten-2026-11-13/` (Wahl und Komment
 ## Regeln für Agenten
 - Jede Runde beginnt mit den Eingängen: Kommentare auf allen Seiten (Index, Entscheidungsseite, Vor dem Investment, Anschaffungen, SGMM, Whitepaper) und Antworten in der Datenbank. Jeder Eingang kommt mit Umsetzung und Stelle ins Änderungsprotokoll und wird auf allen betroffenen Seiten umgesetzt, nicht nur auf einer. Danach `python3 plan/pruefe_alle.py`: null Treffer.
 - Zahlen auf den Seiten werden gezählt oder gerechnet, nicht eingetragen.
+- Jede Änderung wird an der geänderten Stelle selbst geprüft, nicht nur über die Prüfskripte: Screenshot des Ausschnitts am Desktop und am Handy. Markierungen auf Bildern werden über ein Raster gesetzt und je Punkt im Ausschnitt kontrolliert.
 - Aufbau bleibt: Grundlage (Mission, Ziele, Ort), Äste 1–8. Änderungen gehen in die Knotendaten in `baum.py`, nicht als Text darüber.
 - Mission und Globalziele sind der Ausgangspunkt (D42). Kein Immobilienverkauf im klassischen Sinn; Mieter, Selbstkosten, Holding-Struktur.
 - Rollen statt Namen; „Fachexperte“; „Objekt“.
