@@ -29,14 +29,14 @@
   {
    "nr": "GB5",
    "thema": "Sanitär",
-   "gilt": "Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser ab Phase 0 fest eingebaut.",
-   "quelle": "D62"
+   "gilt": "Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser ab Phase 0 fest eingebaut; die dauerhafte Kläranlage kommt schon in Phase 0.",
+   "quelle": "D62 (Wahl C und Kommentar)"
   },
   {
    "nr": "GB6",
    "thema": "Wasser",
-   "gilt": "Das Grundwasser ist Rohwasser ohne Trinkwasserqualität. Für Trinken und Kochen wird es zu Trinkwasser aufbereitet (Trinkwasseraufbereitung). Umfang und Verfahrensstufen legt der Fachexperte Wasser nach der Laboranalyse fest. Anfangsstufe bauen, Ausbau vorbereiten.",
-   "quelle": "D61; Angabe 17.11.2026"
+   "gilt": "Das Grundwasser ist Rohwasser ohne Trinkwasserqualität. Für Trinken und Kochen wird es zu Trinkwasser aufbereitet (Trinkwasseraufbereitung). Umfang und Verfahrensstufen legt der Fachexperte Wasser nach der Laboranalyse fest. Anfangsstufe mit Tank für 10 Tage Sperre; Leitung und Boiler für den Ausbau vorbereitet.",
+   "quelle": "D61 (Wahl A und Kommentar); Angabe 17.11.2026"
   },
   {
    "nr": "GB7",
@@ -1333,7 +1333,7 @@
        "id": "AP-A8",
        "title": "Whitelist der künftigen Mieter einrichten",
        "state": "open",
-       "text": "Auf der Whitelist stehen nur künftige Mieter. Investoren werden getrennt geführt (Antwort vom 17.11.2026).",
+       "text": "Auf der Whitelist stehen nur künftige Mieter. Investoren werden getrennt geführt (Antwort vom 17.11.2026). Zielgruppe nach D45: Remote-Freelancer, Buchung etwa ein Jahr.",
        "facts": [
         {
          "feld": "Wann",
@@ -1375,7 +1375,7 @@
        "vorlagen": [
         {
          "titel": "Text für die Anmeldung",
-         "text": "X-PORTAL Node001 · Karpaten, Ukraine\n\nWohnen und arbeiten an einem Ort in den Bergen: eigenes Objekt, Gemeinschaftsräume, Internet für Remote-Arbeit, Projekte im Team.\nWir bauen in Abschnitten. Wer sich einträgt, erfährt als Erstes, wann ein Objekt frei wird, und kann es mieten.\n\nFelder: Name · E-Mail · ab wann · wie lange · allein oder zu zweit · Beruf oder Tätigkeit · Fragen\nHinweis: Der Eintrag ist unverbindlich und kein Vertrag. Wir speichern die Angaben nur für diese Liste und löschen sie auf Wunsch."
+         "text": "X-PORTAL Node001 · Karpaten, Ukraine\n\nWohnen und arbeiten an einem Ort in den Bergen: eigenes Objekt, Gemeinschaftsräume, Internet für Remote-Arbeit, Projekte im Team.\nWir bauen in Abschnitten. Wer sich einträgt, erfährt als Erstes, wann ein Objekt frei wird, und kann es mieten.\n\nFür Remote-Arbeit: Aufenthalt etwa ein Jahr.\n\nFelder: Name · E-Mail · ab wann · wie lange (Richtwert etwa 1 Jahr) · allein oder zu zweit · Beruf oder Tätigkeit (remote) · Fragen\nHinweis: Der Eintrag ist unverbindlich und kein Vertrag. Wir speichern die Angaben nur für diese Liste und löschen sie auf Wunsch."
         }
        ]
       },
@@ -1407,7 +1407,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Schriftliche Einordnung des Tokens und Liste der Pflichten vor einem Angebot"
+         "wert": "Schriftliche Einordnung des Tokens und Liste der Pflichten vor einem Angebot; dazu die Beteiligung Mitwirkender am jeweiligen Node in fraktionalisiertem Eigentum (D37)"
         }
        ],
        "ap": {
@@ -1419,7 +1419,7 @@
          "GB11"
         ],
         "rolle": "beauftragt: Geschäftsführung · prüft: Anwälte",
-        "ergebnis": "Schriftliche Einordnung des Tokens und Liste der Pflichten vor einem Angebot"
+        "ergebnis": "Schriftliche Einordnung des Tokens und Liste der Pflichten vor einem Angebot; dazu die Beteiligung Mitwirkender am jeweiligen Node in fraktionalisiertem Eigentum (D37)"
        },
        "vorlagen": [
         {
@@ -1456,7 +1456,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Whitepaper und Deck mit Meilensteinen aus diesem Ablaufplan, Mittelverwendung je Phase, Risiken; Beträge erst nach Angeboten"
+         "wert": "Whitepaper und Deck mit Meilensteinen aus diesem Ablaufplan, Mittelverwendung je Phase, Risiken; Beträge erst nach Angeboten. Nach außen: Mitglieder und Bewohner bauen in den ersten Phasen mit, die Bergkapelle ist ihr Gruppenprojekt (D34)."
         }
        ],
        "ap": {
@@ -1468,7 +1468,51 @@
          "GB9"
         ],
         "rolle": "führt aus: planende KI · prüft: Geschäftsführung, Jurist",
-        "ergebnis": "Whitepaper und Deck mit Meilensteinen aus diesem Ablaufplan, Mittelverwendung je Phase, Risiken; Beträge erst nach Angeboten"
+        "ergebnis": "Whitepaper und Deck mit Meilensteinen aus diesem Ablaufplan, Mittelverwendung je Phase, Risiken; Beträge erst nach Angeboten. Nach außen: Mitglieder und Bewohner bauen in den ersten Phasen mit, die Bergkapelle ist ihr Gruppenprojekt (D34)."
+       }
+      },
+      {
+       "kind": "step",
+       "id": "AP-A9",
+       "title": "Zahlen neu rechnen: Kostenhochrechnung 12,5 Mio. € und frühere Erlösrechnung 12 Mio. €",
+       "state": "open",
+       "text": "Antwort zu D53 vom 13.11.2026: Wahl C, die KI rechnet beide Zahlen mit Quellen neu, danach entscheidet ihr.",
+       "facts": [
+        {
+         "feld": "Wann",
+         "wert": "nach Angeboten (AP-A5); vor Investorengesprächen"
+        },
+        {
+         "feld": "Voraussetzung",
+         "wert": "Kostenregister vom 13.11.2026, Angebote, Selbstkosten (O03)"
+        },
+        {
+         "feld": "Blockiert",
+         "wert": "Investorenunterlagen (AP-A7), Kapitalbedarf"
+        },
+        {
+         "feld": "Grundbestimmungen",
+         "wert": "GB8, GB11"
+        },
+        {
+         "feld": "Rolle",
+         "wert": "rechnet: planende KI mit Quellen · entscheidet: Geschäftsführung"
+        },
+        {
+         "feld": "Ergebnis",
+         "wert": "Kostenhochrechnung je Phase mit Quelle je Posten; die frühere Erlöszahl beruhte auf Verkauf und wird als Rechnung der Mieterlöse neu aufgesetzt (D45, D46); bis Angebote vorliegen keine Beträge nach außen"
+        }
+       ],
+       "ap": {
+        "wann": "nach Angeboten (AP-A5); vor Investorengesprächen",
+        "voraus": "Kostenregister vom 13.11.2026, Angebote, Selbstkosten (O03)",
+        "blockiert": "Investorenunterlagen (AP-A7), Kapitalbedarf",
+        "gb": [
+         "GB8",
+         "GB11"
+        ],
+        "rolle": "rechnet: planende KI mit Quellen · entscheidet: Geschäftsführung",
+        "ergebnis": "Kostenhochrechnung je Phase mit Quelle je Posten; die frühere Erlöszahl beruhte auf Verkauf und wird als Rechnung der Mieterlöse neu aufgesetzt (D45, D46); bis Angebote vorliegen keine Beträge nach außen"
        }
       }
      ]
@@ -1745,7 +1789,7 @@
          "text": "Subject: Request for quotation – insulated living/working module, Carpathians (Ukraine), delivery in parts\n\nDear Sir or Madam,\n\nwe are planning a living and working module for 2–3 persons in the Ukrainian Carpathians (approx. 1,050 m above sea level, winters down to −20 °C). Please send us a quotation including:\n\n1. Model, floor area, interior height, wall/roof/floor build-up and U-values; suitability for −20 °C.\n2. Delivery form: in parts or as complete module. Dimensions and weight of the heaviest and the largest part. Access is a simple single-lane road, narrow in places; the last 200 m are unpaved with more than 15 % gradient. Every part must be transportable on a small vehicle; transport width up to 2.6 m without permit. Please state the smallest delivery form you offer.\n3. Sanitary: prepared or installed flush toilet, shower, hot water, drainage connection.\n4. Electrical installation, heating options (wood stove with chimney, electric backup).\n5. Foundation requirements (point loads); our soil report recommends strip and retaining foundations.\n6. Assembly: time, crew, tools, lifting equipment required; can a small team assemble it?\n7. Price, Incoterms (FCA/DAP Ukrainian border), delivery time, payment terms, warranty.\n8. Documents for export/import: invoice, packing list, certificate of origin, HS code.\n\nThis is a request for information and quotation only, not an order.\n\nKind regards\n[Projektleitung, X-PORTAL]"
         }
        ],
-       "auftrag": "Ziel: Anbieter gedämmter Wohn- und Arbeitsmodule (auch Container-Bauweise und Bausätze in Teilen) in Ungarn, Polen und über Alibaba finden und nach den Grundbestimmungen vergleichen.\nPrüfkriterien, in dieser Reihenfolge: zuerst Transportierbarkeit, also Maße und Gewicht des größten und schwersten Teils (Zufahrt: einspurige, teils enge Straße, zuletzt über 15 % Steigung, bis 2,6 m Breite ohne Genehmigung; Werte aus AP-A0, sobald gemessen); dann Eignung für −20 °C, Sanitär vorbereitet (Spültoilette, Dusche, Warmwasser), Lieferform, Montageaufwand, Lieferzeit, Preis und Lieferbedingung, Gewährleistung, Bewertungen.\nAusgabe: Tabelle mit Herkunft | Anbieter | Modell | Fläche | Teile und Gewicht | Wintertauglichkeit | Sanitär | Lieferzeit | Preis | Lieferbedingung | passt zu GB1 ja/nein/offen | Quelle.\n\nRegeln: Jede Angabe mit Quelle (Link) und Abrufdatum. Was nicht belegt ist, als OFFEN kennzeichnen, nicht schätzen. Nichts bestellen, nichts versenden, keine Konten anlegen, keine Entscheidung treffen. Ergebnis als Markdown-Tabelle und als JSON-Liste mit denselben Feldern."
+       "auftrag": "Hinweis: Internet und Netzwerk gehören zur Ausstattung der Objekte (D63): Leerrohr, Netzwerkdose, Platz für Router abfragen.\nZiel: Anbieter gedämmter Wohn- und Arbeitsmodule (auch Container-Bauweise und Bausätze in Teilen) in Ungarn, Polen und über Alibaba finden und nach den Grundbestimmungen vergleichen.\nPrüfkriterien, in dieser Reihenfolge: zuerst Transportierbarkeit, also Maße und Gewicht des größten und schwersten Teils (Zufahrt: einspurige, teils enge Straße, zuletzt über 15 % Steigung, bis 2,6 m Breite ohne Genehmigung; Werte aus AP-A0, sobald gemessen); dann Eignung für −20 °C, Sanitär vorbereitet (Spültoilette, Dusche, Warmwasser), Lieferform, Montageaufwand, Lieferzeit, Preis und Lieferbedingung, Gewährleistung, Bewertungen.\nAusgabe: Tabelle mit Herkunft | Anbieter | Modell | Fläche | Teile und Gewicht | Wintertauglichkeit | Sanitär | Lieferzeit | Preis | Lieferbedingung | passt zu GB1 ja/nein/offen | Quelle.\n\nRegeln: Jede Angabe mit Quelle (Link) und Abrufdatum. Was nicht belegt ist, als OFFEN kennzeichnen, nicht schätzen. Nichts bestellen, nichts versenden, keine Konten anlegen, keine Entscheidung treffen. Ergebnis als Markdown-Tabelle und als JSON-Liste mit denselben Feldern."
       },
       {
        "kind": "decision",
@@ -1948,6 +1992,53 @@
         ],
         "rolle": "schlägt vor: planende KI · entscheidet: Geschäftsführung",
         "ergebnis": "Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch"
+       }
+      },
+      {
+       "kind": "step",
+       "id": "AP-C6",
+       "title": "Gemeinsames geländegängiges Fahrzeug beschaffen",
+       "state": "open",
+       "facts": [
+        {
+         "feld": "Wann",
+         "wert": "vor dem Baubeginn; nach dem Streckenprotokoll (AP-A0)"
+        },
+        {
+         "feld": "Voraussetzung",
+         "wert": "Streckenprotokoll, Zulassung und Versicherung in der Ukraine, Geld nach GB8"
+        },
+        {
+         "feld": "Blockiert",
+         "wert": "Einkauf, Notfall, kleine Lasten, letzte Strecke (AP-C3)"
+        },
+        {
+         "feld": "Grundbestimmungen",
+         "wert": "GB1, GB8"
+        },
+        {
+         "feld": "Rolle",
+         "wert": "schlägt vor: Projektleitung · entscheidet: Geschäftsführung"
+        },
+        {
+         "feld": "Ergebnis",
+         "wert": "Ein Fahrzeug für alle (Allrad-Pkw, Pick-up, Quad oder Traktor), gebraucht möglich; keine E-Bikes in Phase 0 (D65)"
+        },
+        {
+         "feld": "Anschaffungen",
+         "wert": "A089"
+        }
+       ],
+       "ap": {
+        "wann": "vor dem Baubeginn; nach dem Streckenprotokoll (AP-A0)",
+        "voraus": "Streckenprotokoll, Zulassung und Versicherung in der Ukraine, Geld nach GB8",
+        "blockiert": "Einkauf, Notfall, kleine Lasten, letzte Strecke (AP-C3)",
+        "gb": [
+         "GB1",
+         "GB8"
+        ],
+        "rolle": "schlägt vor: Projektleitung · entscheidet: Geschäftsführung",
+        "ergebnis": "Ein Fahrzeug für alle (Allrad-Pkw, Pick-up, Quad oder Traktor), gebraucht möglich; keine E-Bikes in Phase 0 (D65)"
        }
       },
       {
@@ -2158,7 +2249,7 @@
         },
         {
          "feld": "Voraussetzung",
-         "wert": "Brunnen (A049), Kläranlage (A058), Netzanschluss (AP-A3)"
+         "wert": "Brunnen (A049), dauerhafte Kläranlage schon in Phase 0 (A058, D62), Tank für 10 Tage (D61), Netzanschluss (AP-A3)"
         },
         {
          "feld": "Blockiert",
@@ -2183,7 +2274,7 @@
        ],
        "ap": {
         "wann": "mit Fundament; frostfrei verlegt",
-        "voraus": "Brunnen (A049), Kläranlage (A058), Netzanschluss (AP-A3)",
+        "voraus": "Brunnen (A049), dauerhafte Kläranlage schon in Phase 0 (A058, D62), Tank für 10 Tage (D61), Netzanschluss (AP-A3)",
         "blockiert": "Einzug",
         "gb": [
          "GB5",
@@ -2351,7 +2442,7 @@
         },
         {
          "feld": "Rolle",
-         "wert": "füllen: Fachexperten · prüft und gibt frei: Projektleitung (D66)"
+         "wert": "füllen: Fachexperten · prüft und gibt nach Absprache frei: Projektleitung (D66)"
         },
         {
          "feld": "Ergebnis",
@@ -2369,7 +2460,7 @@
          "GB10",
          "GB11"
         ],
-        "rolle": "füllen: Fachexperten · prüft und gibt frei: Projektleitung (D66)",
+        "rolle": "füllen: Fachexperten · prüft und gibt nach Absprache frei: Projektleitung (D66)",
         "ergebnis": "Jede kritische Funktion abgenommen"
        },
        "vorlagen": [
@@ -2407,7 +2498,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Unterschriebene Mietverträge, erste Miete auf dem Konto"
+         "wert": "Unterschriebene Mietverträge, Laufzeit etwa ein Jahr (D45), erste Miete auf dem Konto"
         }
        ],
        "ap": {
@@ -2420,7 +2511,7 @@
          "GB9"
         ],
         "rolle": "schließt ab: Geschäftsführung · betreut: Projektleitung",
-        "ergebnis": "Unterschriebene Mietverträge, erste Miete auf dem Konto"
+        "ergebnis": "Unterschriebene Mietverträge, Laufzeit etwa ein Jahr (D45), erste Miete auf dem Konto"
        }
       },
       {
@@ -2523,6 +2614,50 @@
         ],
         "rolle": "erstellt: planende KI · prüft: Geschäftsführung",
         "ergebnis": "Monatsbericht: belegte Objekte, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren"
+       }
+      },
+      {
+       "kind": "step",
+       "id": "AP-F4",
+       "title": "Gemeinschaftsarbeit: Bedarfe erfassen, Aufgaben festlegen, Anreize setzen",
+       "state": "open",
+       "text": "Kommentar zu D36: nach dem St. Galler Managementmodell kommunale Arbeit mit Anreizen stark fördern, Bedarfe erfassen, festlegen und umsetzen. Ziel des Teams: wirtschaftlich denken und gemeinschaftliches Leben im Rahmen der X-PORTAL-Vision gestalten; daraus leitet sich die Lernkurve für die nächsten Nodes ab.",
+       "facts": [
+        {
+         "feld": "Wann",
+         "wert": "ab Einzug; Konzept vor der Bestellung des Zugangssystems (AP-D5)"
+        },
+        {
+         "feld": "Voraussetzung",
+         "wert": "Zugangssystem und Erfassung (AP-D5), Regeln für Pauschale und Abzug (D38)"
+        },
+        {
+         "feld": "Blockiert",
+         "wert": "Abzug von der Pauschale, Lernkurve für die nächsten Nodes (AP-H2, AP-H3)"
+        },
+        {
+         "feld": "Grundbestimmungen",
+         "wert": "GB10, GB11"
+        },
+        {
+         "feld": "Rolle",
+         "wert": "legt fest: Geschäftsführung und Projektleitung · führt: Team"
+        },
+        {
+         "feld": "Ergebnis",
+         "wert": "Liste der Gemeinschaftsaufgaben (Schneeräumen, Pflanzenpflege, Kapellenbau, Kehrwoche und weitere) mit Aufwand, Erfassung mit wenig Aufwand (voraussichtlich Cardano) und Anreizen; Essen gegen Mitarbeit (D36)"
+        }
+       ],
+       "ap": {
+        "wann": "ab Einzug; Konzept vor der Bestellung des Zugangssystems (AP-D5)",
+        "voraus": "Zugangssystem und Erfassung (AP-D5), Regeln für Pauschale und Abzug (D38)",
+        "blockiert": "Abzug von der Pauschale, Lernkurve für die nächsten Nodes (AP-H2, AP-H3)",
+        "gb": [
+         "GB10",
+         "GB11"
+        ],
+        "rolle": "legt fest: Geschäftsführung und Projektleitung · führt: Team",
+        "ergebnis": "Liste der Gemeinschaftsaufgaben (Schneeräumen, Pflanzenpflege, Kapellenbau, Kehrwoche und weitere) mit Aufwand, Erfassung mit wenig Aufwand (voraussichtlich Cardano) und Anreizen; Essen gegen Mitarbeit (D36)"
        }
       },
       {
@@ -2787,6 +2922,55 @@
         "rolle": "entscheidet: Geschäftsführung · plant: Fachexperte Elektro",
         "ergebnis": "Anlage in Betrieb"
        }
+      },
+      {
+       "kind": "step",
+       "id": "AP-G5",
+       "title": "Bergkapelle als Gruppenprojekt der Bewohner",
+       "state": "later",
+       "text": "Kommentar zu D34: In Planung und Texten nach außen gilt, dass Mitglieder und Bewohner in den ersten Phasen an der Bergkapelle als Gruppenprojekt beteiligt sind.",
+       "facts": [
+        {
+         "feld": "Wann",
+         "wert": "Phase 1; Planung ab Einzug"
+        },
+        {
+         "feld": "Voraussetzung",
+         "wert": "Entwurf, Material, Genehmigung; Mitwirkende aus Team und Mietern"
+        },
+        {
+         "feld": "Blockiert",
+         "wert": "–"
+        },
+        {
+         "feld": "Grundbestimmungen",
+         "wert": "GB2, GB9, GB11"
+        },
+        {
+         "feld": "Rolle",
+         "wert": "verantwortet: Projektownerin der Bergkapelle (im Kommentar zu D34 benannt) · baut: Mitglieder und Bewohner"
+        },
+        {
+         "feld": "Ergebnis",
+         "wert": "Kapelle als gemeinsames Projekt gebaut; Stunden als Gemeinschaftsarbeit erfasst (AP-F4)"
+        },
+        {
+         "feld": "Anschaffungen",
+         "wert": "A117"
+        }
+       ],
+       "ap": {
+        "wann": "Phase 1; Planung ab Einzug",
+        "voraus": "Entwurf, Material, Genehmigung; Mitwirkende aus Team und Mietern",
+        "blockiert": "–",
+        "gb": [
+         "GB2",
+         "GB9",
+         "GB11"
+        ],
+        "rolle": "verantwortet: Projektownerin der Bergkapelle (im Kommentar zu D34 benannt) · baut: Mitglieder und Bewohner",
+        "ergebnis": "Kapelle als gemeinsames Projekt gebaut; Stunden als Gemeinschaftsarbeit erfasst (AP-F4)"
+       }
       }
      ]
     },
@@ -2866,7 +3050,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Go, Revise oder Stop je Hypothese"
+         "wert": "Go, Revise oder Stop je Hypothese; Lernkurve aus der Gemeinschaftsarbeit (AP-F4, D36)"
         }
        ],
        "ap": {
@@ -2877,7 +3061,7 @@
          "GB11"
         ],
         "rolle": "wertet aus: planende KI · entscheidet: Geschäftsführung",
-        "ergebnis": "Go, Revise oder Stop je Hypothese"
+        "ergebnis": "Go, Revise oder Stop je Hypothese; Lernkurve aus der Gemeinschaftsarbeit (AP-F4, D36)"
        }
       },
       {
@@ -3095,7 +3279,7 @@
           },
           {
            "feld": "Stand",
-           "wert": "offen; Regeln aus D36 bis D38 umsetzen"
+           "wert": "offen; Regeln aus D36 bis D38 umsetzen: Essen gegen Mitarbeit; Team mit freiem Wohnen und Essen plus Anteil am Node; Pauschale minus Gemeinschafts- und Projektleistungen (Kapelle, Garten, Robotik und Drohnen, DACH-Freelancing über die DT Agentur), weiter zu besprechen"
           },
           {
            "feld": "Quelle",
@@ -3484,8 +3668,8 @@
         {
          "kind": "step",
          "id": "te-2-3-6",
-         "title": "2.3.6 · E-Bikes und Laden: wie viele, wo geladen wird, welche Leistung, wer zahlt",
-         "state": "open",
+         "title": "2.3.6 · E-Bikes und Laden, erst ab Phase 1: wie viele, wo geladen wird, welche Leistung, wer zahlt",
+         "state": "later",
          "facts": [
           {
            "feld": "Fertig, wenn",
@@ -3501,11 +3685,11 @@
           },
           {
            "feld": "Stand",
-           "wert": "offen"
+           "wert": "später; in Phase 0 keine E-Bikes, dafür ein gemeinsames geländegängiges Fahrzeug (AP-C6)"
           },
           {
            "feld": "Quelle",
-           "wert": "–"
+           "wert": "D65"
           }
          ]
         },
@@ -6741,7 +6925,7 @@
      "title": "Rechtsform der Gesellschaft für Node001 und wo die Services abgewickelt werden (D44)",
      "state": "open",
      "meta": "Geschäftsführung mit Anwälten · nach O05",
-     "text": "Node001 wird von einer ukrainischen Gesellschaft gehalten; Services voraussichtlich in einer lokalen Gesellschaft als Teil der Holding. Die Rechtsprechung ist noch zu klären.",
+     "text": "Node001 wird von einer ukrainischen Gesellschaft gehalten; Services voraussichtlich in einer lokalen Gesellschaft als Teil der Holding. Die Struktur muss abbilden, dass Mitwirkende Anteile am jeweiligen Node in fraktionalisiertem Eigentum bekommen, nicht an der Holding (D37). Die Rechtslage ist noch zu klären.",
      "opts": [
       {
        "kind": "option",
@@ -6984,11 +7168,20 @@
        "title": "Organisation: wer ist was?",
        "state": "done",
        "text": "Gilt: X-PORTAL hält als Holding Lizenzen und Markenrechte. Die DT Agentur übernimmt Projekte in Deutschland, Österreich und der Schweiz. Node001 hält eine ukrainische Gesellschaft. Offen: wo Services am Node abgewickelt werden (voraussichtlich lokale Gesellschaft); Rechtsprüfung.",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Drei Einheiten",
+         "text": "X-PORTAL Organisation (Dach, Plattform, Architektur), DT Agentur (Projekte aus Deutschland), Node001 als eigene Grundstücks- und Betriebsgesellschaft. Rechtsform je Einheit prüft ein Steuerberater.",
+         "state": "done"
+        }
+       ],
        "page": true,
        "facts": [
         {
          "feld": "Antwort 13.11.",
-         "wert": "ohne Wahl, Kommentar gilt"
+         "wert": "per Kommentar gewählt: A (mit den Abweichungen aus dem Kommentar)"
         },
         {
          "feld": "Kommentar 13.11.",
@@ -7001,7 +7194,7 @@
        "id": "D45",
        "title": "Ziel der Stufe 1: wer wohnt und arbeitet oben?",
        "state": "done",
-       "text": "Gilt: Team plus Mieter. Es gibt keinen Immobilienverkauf im klassischen Sinn.",
+       "text": "Gilt: Team plus Mieter: zuerst Team und einige Mieter, Remote-Freelancer mit einer Buchung von etwa einem Jahr. Es gibt keinen Immobilienverkauf im klassischen Sinn.",
        "opts": [
         {
          "kind": "option",
@@ -7224,7 +7417,7 @@
        "id": "D54",
        "title": "Geologie und Lageplan: wer, bis wann?",
        "state": "done",
-       "text": "Gilt: Der Geologiebericht liegt als KI-Zusammenfassung vor (XPB-N001-GEO-SUM-001, nicht geprüft). Fachprüfung und Freigabe fehlen.",
+       "text": "Gilt: Der Geologiebericht 34.11/26 liegt vor, mit KI-Zusammenfassung XPB-N001-GEO-SUM-001. Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026). Die Lage von Phase 0 ist seit dem 17.11.2026 voraussichtlich festgelegt.",
        "page": true,
        "facts": [
         {
@@ -7243,11 +7436,20 @@
        "title": "Bauphasen: ein Objekt nur für den Anfang?",
        "state": "done",
        "text": "Gilt: Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohn- und Arbeitsobjekte und Kommunalgebäude. Phase 2: Ausbau.",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Objekt nur Übergang",
+         "text": "Phase 0: ein Objekt als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur; Phase 1 Wohn- und Arbeitsobjekte und Kommunalgebäude; Phase 2 Ausbau, die Herrenhaus-Fläche zuletzt (Wortlaut des Kommentars).",
+         "state": "done"
+        }
+       ],
        "page": true,
        "facts": [
         {
          "feld": "Antwort 13.11.",
-         "wert": "ohne Wahl, Kommentar gilt"
+         "wert": "per Kommentar gewählt: A (angepasst: Objekt statt Container, unterhalb der Herrenhaus-Fläche)"
         },
         {
          "feld": "Kommentar 13.11.",
@@ -7307,11 +7509,20 @@
        "title": "Zufahrt und Transport",
        "state": "done",
        "text": "Gilt: Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung. Gesamtplanung der Zufahrt in Phase 1 mit 3D-Modellen.",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Erst kleines Fahrzeug",
+         "text": "Keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch.",
+         "state": "done"
+        }
+       ],
        "page": true,
        "facts": [
         {
          "feld": "Antwort 13.11.",
-         "wert": "ohne Wahl, Kommentar gilt"
+         "wert": "per Kommentar gewählt: B"
         },
         {
          "feld": "Kommentar 13.11.",
@@ -7348,11 +7559,20 @@
        "title": "Strom",
        "state": "done",
        "text": "Gilt: Netzanschluss beantragen, Generator als Reserve; Solar mit Speicher ab Phase 1.",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "A",
+         "title": "Netz plus Generator, Solar ab Phase 1",
+         "text": "Phase 0: Netzanschluss und Generator als Reserve. Phase 1: Solar mit Speicher dazu.",
+         "state": "done"
+        }
+       ],
        "page": true,
        "facts": [
         {
          "feld": "Antwort 13.11.",
-         "wert": "ohne Wahl, Kommentar gilt"
+         "wert": "per Kommentar gewählt: A"
         },
         {
          "feld": "Kommentar 13.11.",
@@ -7383,7 +7603,7 @@
        "id": "D61",
        "title": "Wasser",
        "state": "done",
-       "text": "Gilt: Grundwasser nutzen und zu Trinkwasser aufbereiten; Anfangsstufe bauen, Ausbau vorbereiten.",
+       "text": "Gilt: Anfangsstufe mit Tank für 10 Tage Sperre; Leitung und Boiler für den Ausbau vorbereitet. Das Grundwasser ist Rohwasser ohne Trinkwasserqualität; es wird für Trinken und Kochen zu Trinkwasser aufbereitet.",
        "opts": [
         {
          "kind": "option",
@@ -7410,7 +7630,7 @@
        "id": "D62",
        "title": "Toilette und Abwasser",
        "state": "done",
-       "text": "Gilt: Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser fest eingebaut ab Phase 0.",
+       "text": "Gilt: Kläranlage sofort: Die dauerhafte Anlage kommt schon in Phase 0. Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser werden von vornherein mit der Infrastruktur geplant und eingebaut.",
        "opts": [
         {
          "kind": "option",
@@ -7437,7 +7657,7 @@
        "id": "D63",
        "title": "Internet",
        "state": "done",
-       "text": "Gilt: Bandbreite, Router und Anbieter vergleichen; steht in der Anschaffungsliste.",
+       "text": "Gilt: Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Objekte und steht in der Anschaffungsliste.",
        "page": true,
        "facts": [
         {
@@ -7478,7 +7698,7 @@
        "id": "D65",
        "title": "Mobilität",
        "state": "done",
-       "text": "Gilt: Gemeinsames Fahrzeug; keine E-Bikes in Phase 0.",
+       "text": "Gilt: Ein gemeinsames geländegängiges Fahrzeug; keine E-Bikes in Phase 0.",
        "opts": [
         {
          "kind": "option",
@@ -7505,7 +7725,7 @@
        "id": "D66",
        "title": "Betrieb: alles muss laufen",
        "state": "done",
-       "text": "Gilt: Zielwerte je kritischer Funktion; Tabelle der Abnahme-Entscheidungen, die Projektleitung prüft und gibt frei.",
+       "text": "Gilt: Zielwerte je kritischer Funktion; Tabelle der Abnahme-Entscheidungen, die die Projektleitung nach Absprache prüft und freigibt.",
        "opts": [
         {
          "kind": "option",
@@ -7593,7 +7813,7 @@
        "id": "D34",
        "title": "Restaurant/Bar und Feuerstelle aus dem Zielbild: wann?",
        "state": "done",
-       "text": "Gilt: Feuerstelle in Phase 1, Gastronomie später. Die Bergkapelle wird als Gruppenprojekt der Bewohner geplant und so kommuniziert.",
+       "text": "Gilt: Feuerstelle in Phase 1, Gastronomie später. Die Bergkapelle ist ein Gruppenprojekt: Mitglieder und Bewohner bauen in den ersten Phasen mit; so wird es auch nach außen beschrieben. Verantwortlich ist eine Projektownerin der Bergkapelle (im Kommentar benannt).",
        "opts": [
         {
          "kind": "option",
@@ -7649,7 +7869,7 @@
        "id": "D36",
        "title": "Essen oben: wie wird es bezahlt?",
        "state": "done",
-       "text": "Gilt: Essen gegen Mitarbeit. Gemeinschaftsarbeit (Schnee, Pflanzen, Kapelle, Kehrwoche) wird gefördert und mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano.",
+       "text": "Gilt: Essen gegen Mitarbeit. Nach dem St. Galler Managementmodell wird Gemeinschaftsarbeit mit Anreizen gefördert: Bedarfe erfassen, festlegen und umsetzen. Aufgaben wie Schneeräumen, Pflanzenpflege, Kapellenbau und Kehrwoche werden mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano. Ziel des Teams: wirtschaftlich denken und gemeinschaftliches Leben im Rahmen der X-PORTAL-Vision gestalten; daraus entsteht die Lernkurve für die nächsten Nodes.",
        "opts": [
         {
          "kind": "option",
@@ -7679,7 +7899,7 @@
        "id": "D37",
        "title": "Wie wird das Team oben bezahlt?",
        "state": "done",
-       "text": "Gilt: Wohnen und Essen frei plus Anteil; der Anteil liegt am jeweiligen Node, nicht an der Holding. Die Unternehmensstruktur muss das abbilden.",
+       "text": "Gilt: Mischung aus C und B: Wohnen und Essen frei, dazu ein Anteil. Mitwirkende bekommen keinen Anteil an der Holding, sondern am jeweiligen Node in fraktionalisiertem Eigentum. Die Unternehmensstruktur muss das abbilden.",
        "opts": [
         {
          "kind": "option",
@@ -7710,7 +7930,7 @@
        "id": "D38",
        "title": "Wie zahlen Siedler für Leistungen oben?",
        "state": "done",
-       "text": "Gilt: Monatliche Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen. Weiter zu besprechen.",
+       "text": "Gilt: Monatliche Pauschale. Davon abgezogen werden oben erbrachte Leistungen: Gemeinschaftsleistungen wie Kapelle und Gartenarbeit sowie Projektarbeit, zum Beispiel Robotik und Drohnen oder Freelancer-Leistungen für den DACH-Raum über die DT Agentur. Weiter zu besprechen.",
        "opts": [
         {
          "kind": "option",
@@ -8188,7 +8408,7 @@
        "kind": "decision",
        "title": "D34 · Feuerstelle, Gastronomie, Kapelle",
        "state": "done",
-       "text": "Feuerstelle in Phase 1, Gastronomie später. Die Bergkapelle wird als Gruppenprojekt der Bewohner geplant und so kommuniziert."
+       "text": "Feuerstelle in Phase 1, Gastronomie später. Die Bergkapelle ist ein Gruppenprojekt: Mitglieder und Bewohner bauen in den ersten Phasen mit; so wird es auch nach außen beschrieben. Verantwortlich ist eine Projektownerin der Bergkapelle (im Kommentar benannt)."
       },
       {
        "kind": "decision",
@@ -8200,19 +8420,19 @@
        "kind": "decision",
        "title": "D36 · Essen und Gemeinschaftsarbeit",
        "state": "done",
-       "text": "Essen gegen Mitarbeit. Gemeinschaftsarbeit (Schnee, Pflanzen, Kapelle, Kehrwoche) wird gefördert und mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano."
+       "text": "Essen gegen Mitarbeit. Nach dem St. Galler Managementmodell wird Gemeinschaftsarbeit mit Anreizen gefördert: Bedarfe erfassen, festlegen und umsetzen. Aufgaben wie Schneeräumen, Pflanzenpflege, Kapellenbau und Kehrwoche werden mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano. Ziel des Teams: wirtschaftlich denken und gemeinschaftliches Leben im Rahmen der X-PORTAL-Vision gestalten; daraus entsteht die Lernkurve für die nächsten Nodes."
       },
       {
        "kind": "decision",
        "title": "D37 · Bezahlung und Beteiligung des Teams",
        "state": "done",
-       "text": "Wohnen und Essen frei plus Anteil; der Anteil liegt am jeweiligen Node, nicht an der Holding. Die Unternehmensstruktur muss das abbilden."
+       "text": "Mischung aus C und B: Wohnen und Essen frei, dazu ein Anteil. Mitwirkende bekommen keinen Anteil an der Holding, sondern am jeweiligen Node in fraktionalisiertem Eigentum. Die Unternehmensstruktur muss das abbilden."
       },
       {
        "kind": "decision",
        "title": "D38 · Pauschale für Leistungen",
        "state": "done",
-       "text": "Monatliche Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen. Weiter zu besprechen."
+       "text": "Monatliche Pauschale. Davon abgezogen werden oben erbrachte Leistungen: Gemeinschaftsleistungen wie Kapelle und Gartenarbeit sowie Projektarbeit, zum Beispiel Robotik und Drohnen oder Freelancer-Leistungen für den DACH-Raum über die DT Agentur. Weiter zu besprechen."
       },
       {
        "kind": "decision",
@@ -8236,7 +8456,7 @@
        "kind": "decision",
        "title": "D45 · Wer oben wohnt",
        "state": "done",
-       "text": "Team plus Mieter. Es gibt keinen Immobilienverkauf im klassischen Sinn."
+       "text": "Team plus Mieter: zuerst Team und einige Mieter, Remote-Freelancer mit einer Buchung von etwa einem Jahr. Es gibt keinen Immobilienverkauf im klassischen Sinn."
       },
       {
        "kind": "decision",
@@ -8284,7 +8504,7 @@
        "kind": "decision",
        "title": "D54 · Geologie",
        "state": "done",
-       "text": "Der Geologiebericht liegt als KI-Zusammenfassung vor (XPB-N001-GEO-SUM-001, nicht geprüft). Fachprüfung und Freigabe fehlen."
+       "text": "Der Geologiebericht 34.11/26 liegt vor, mit KI-Zusammenfassung XPB-N001-GEO-SUM-001. Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026). Die Lage von Phase 0 ist seit dem 17.11.2026 voraussichtlich festgelegt."
       },
       {
        "kind": "decision",
@@ -8320,19 +8540,19 @@
        "kind": "decision",
        "title": "D61 · Wasser",
        "state": "done",
-       "text": "Grundwasser nutzen und zu Trinkwasser aufbereiten; Anfangsstufe bauen, Ausbau vorbereiten."
+       "text": "Anfangsstufe mit Tank für 10 Tage Sperre; Leitung und Boiler für den Ausbau vorbereitet. Das Grundwasser ist Rohwasser ohne Trinkwasserqualität; es wird für Trinken und Kochen zu Trinkwasser aufbereitet."
       },
       {
        "kind": "decision",
        "title": "D62 · Sanitär und Abwasser",
        "state": "done",
-       "text": "Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser fest eingebaut ab Phase 0."
+       "text": "Kläranlage sofort: Die dauerhafte Anlage kommt schon in Phase 0. Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser werden von vornherein mit der Infrastruktur geplant und eingebaut."
       },
       {
        "kind": "decision",
        "title": "D63 · Internet",
        "state": "done",
-       "text": "Bandbreite, Router und Anbieter vergleichen; steht in der Anschaffungsliste."
+       "text": "Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Objekte und steht in der Anschaffungsliste."
       },
       {
        "kind": "decision",
@@ -8344,13 +8564,13 @@
        "kind": "decision",
        "title": "D65 · Mobilität",
        "state": "done",
-       "text": "Gemeinsames Fahrzeug; keine E-Bikes in Phase 0."
+       "text": "Ein gemeinsames geländegängiges Fahrzeug; keine E-Bikes in Phase 0."
       },
       {
        "kind": "decision",
        "title": "D66 · Betrieb und Abnahme",
        "state": "done",
-       "text": "Zielwerte je kritischer Funktion; Tabelle der Abnahme-Entscheidungen, die Projektleitung prüft und gibt frei."
+       "text": "Zielwerte je kritischer Funktion; Tabelle der Abnahme-Entscheidungen, die die Projektleitung nach Absprache prüft und freigibt."
       },
       {
        "kind": "decision",

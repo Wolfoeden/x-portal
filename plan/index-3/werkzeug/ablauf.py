@@ -11,8 +11,8 @@ GB = [
     ('GB2', 'Boden und Hang', 'Rutsch- und Fließprozesse; Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Streifen- und Stützfundament, hangseitige Stützkonstruktion und Entwässerungsgraben. Fachprüfung des Berichts, Zusatzerkundung und Vermessung liegen vor, sind aber noch nicht im Plan abgelegt (AP-A1).', 'Geologiebericht 34.11/26; Kommentar 15.11.2026'),
     ('GB3', 'Lage', 'Phase 0 und die ersten Wohneinheiten stehen im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche (voraussichtlich); Grundlage ist der Detailplan Blatt 3.', 'D55; Antwort 17.11.2026'),
     ('GB4', 'Frost und Termine', 'Gebaut wird nur ohne Frost. Termine sind Ziele und gelten erst nach den Gates.', 'D58'),
-    ('GB5', 'Sanitär', 'Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser ab Phase 0 fest eingebaut.', 'D62'),
-    ('GB6', 'Wasser', 'Das Grundwasser ist Rohwasser ohne Trinkwasserqualität. Für Trinken und Kochen wird es zu Trinkwasser aufbereitet (Trinkwasseraufbereitung). Umfang und Verfahrensstufen legt der Fachexperte Wasser nach der Laboranalyse fest. Anfangsstufe bauen, Ausbau vorbereiten.', 'D61; Angabe 17.11.2026'),
+    ('GB5', 'Sanitär', 'Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser ab Phase 0 fest eingebaut; die dauerhafte Kläranlage kommt schon in Phase 0.', 'D62 (Wahl C und Kommentar)'),
+    ('GB6', 'Wasser', 'Das Grundwasser ist Rohwasser ohne Trinkwasserqualität. Für Trinken und Kochen wird es zu Trinkwasser aufbereitet (Trinkwasseraufbereitung). Umfang und Verfahrensstufen legt der Fachexperte Wasser nach der Laboranalyse fest. Anfangsstufe mit Tank für 10 Tage Sperre; Leitung und Boiler für den Ausbau vorbereitet.', 'D61 (Wahl A und Kommentar); Angabe 17.11.2026'),
     ('GB7', 'Strom', 'Netzanschluss mit Generator als Reserve; Solar mit Speicher ab Phase 1.', 'D59'),
     ('GB8', 'Geld und Freigabe', 'So viel wie möglich mit Eigenkapital. Bis zu welchem Punkt, und ab wann Investoren dazukommen, ist offen: D69 und D71, Seite „Vor dem Investment“. Bestellt wird in Chargen, nur mit Freigabe der Geschäftsführung und Geld auf dem Konto. Kein Verkauf; Erlöse kommen aus Miete.', 'D43, D45 bis D48, D69, D71; Antwort 17.11.2026'),
     ('GB9', 'Recht', 'Rechtsprüfung vor Mietvertrag, Token, Import und Fällung. Kein öffentliches Angebot, bevor die Rechtslage geklärt ist.', 'D48'),
@@ -176,18 +176,20 @@ Ausgabe: Liste der Planungsvorgaben je Gewerk (Objekt, Fundament, Entwässerung,
            'jetzt (D50: Interessenten vor dem Bau)', 'Text und Bilder vom Ort; Datenschutzhinweis (GB10)', 'Chargen (AP-C5, AP-G3), Nachweis für Investoren (AP-F3)',
            ['GB8', 'GB9', 'GB10'], 'führt: Projektleitung · prüft: Jurist (Datenschutz, keine verbindliche Zusage)',
            'Anmeldung auf x-portal.eu; gezählt werden Einträge, gewünschter Einzug und Bereitschaft zur Miete. Die Whitelist ist noch nicht vorhanden (Kommentar vom 12.11.2026 im Whitepaper).',
-           text='Auf der Whitelist stehen nur künftige Mieter. Investoren werden getrennt geführt (Antwort vom 17.11.2026).',
+           text='Auf der Whitelist stehen nur künftige Mieter. Investoren werden getrennt geführt (Antwort vom 17.11.2026). Zielgruppe nach D45: Remote-Freelancer, Buchung etwa ein Jahr.',
            vorlagen=[('Text für die Anmeldung', '''X-PORTAL Node001 · Karpaten, Ukraine
 
 Wohnen und arbeiten an einem Ort in den Bergen: eigenes Objekt, Gemeinschaftsräume, Internet für Remote-Arbeit, Projekte im Team.
 Wir bauen in Abschnitten. Wer sich einträgt, erfährt als Erstes, wann ein Objekt frei wird, und kann es mieten.
 
-Felder: Name · E-Mail · ab wann · wie lange · allein oder zu zweit · Beruf oder Tätigkeit · Fragen
+Für Remote-Arbeit: Aufenthalt etwa ein Jahr.
+
+Felder: Name · E-Mail · ab wann · wie lange (Richtwert etwa 1 Jahr) · allein oder zu zweit · Beruf oder Tätigkeit (remote) · Fragen
 Hinweis: Der Eintrag ist unverbindlich und kein Vertrag. Wir speichern die Angaben nur für diese Liste und löschen sie auf Wunsch.''')]),
         AP(N, 'AP-A6', 'Token über Cardano: Rechtsprüfung', 'open',
            'jetzt; vor jeder Ansprache von Kleinanlegern', 'Anwälte in Deutschland und der Ukraine (O05)', 'Token-Crowdfunding (AP-B2)',
            ['GB9', 'GB11'], 'beauftragt: Geschäftsführung · prüft: Anwälte',
-           'Schriftliche Einordnung des Tokens und Liste der Pflichten vor einem Angebot',
+           'Schriftliche Einordnung des Tokens und Liste der Pflichten vor einem Angebot; dazu die Beteiligung Mitwirkender am jeweiligen Node in fraktionalisiertem Eigentum (D37)',
            vorlagen=[('Prüfauftrag an die Anwälte', '''Betreff: Prüfauftrag Token auf Cardano für Node001
 
 Wir prüfen, ob Mitwirkende und Unterstützer über einen Token auf Cardano an Node001 beteiligt werden können. Bitte beantworten Sie:
@@ -202,7 +204,12 @@ Bis zur Antwort wird nichts angeboten oder beworben.''')]),
         AP(N, 'AP-A7', 'Investorenunterlagen auf den Stand bringen', 'open',
            'nach Angeboten (AP-A5) und Selbstkosten (O03)', 'Kostenband, Selbstkosten, Rechtsprüfung', 'Investorengespräche',
            ['GB8', 'GB9'], 'führt aus: planende KI · prüft: Geschäftsführung, Jurist',
-           'Whitepaper und Deck mit Meilensteinen aus diesem Ablaufplan, Mittelverwendung je Phase, Risiken; Beträge erst nach Angeboten'),
+           'Whitepaper und Deck mit Meilensteinen aus diesem Ablaufplan, Mittelverwendung je Phase, Risiken; Beträge erst nach Angeboten. Nach außen: Mitglieder und Bewohner bauen in den ersten Phasen mit, die Bergkapelle ist ihr Gruppenprojekt (D34).'),
+        AP(N, 'AP-A9', 'Zahlen neu rechnen: Kostenhochrechnung 12,5 Mio. € und frühere Erlösrechnung 12 Mio. €', 'open',
+           'nach Angeboten (AP-A5); vor Investorengesprächen', 'Kostenregister vom 13.11.2026, Angebote, Selbstkosten (O03)', 'Investorenunterlagen (AP-A7), Kapitalbedarf',
+           ['GB8', 'GB11'], 'rechnet: planende KI mit Quellen · entscheidet: Geschäftsführung',
+           'Kostenhochrechnung je Phase mit Quelle je Posten; die frühere Erlöszahl beruhte auf Verkauf und wird als Rechnung der Mieterlöse neu aufgesetzt (D45, D46); bis Angebote vorliegen keine Beträge nach außen',
+           text='Antwort zu D53 vom 13.11.2026: Wahl C, die KI rechnet beide Zahlen mit Quellen neu, danach entscheidet ihr.'),
     ], text='So viel wie möglich mit Eigenmitteln und Eigenleistung; wie viel und bis wann, ist offen (D69, D71, Seite „Vor dem Investment“).')
 
     B = G('ab-b', 'B · Kapital: so viel Eigenkapital wie möglich, Investoren mit Whitelist und Mieterlösen, Token', [
@@ -237,7 +244,8 @@ Mit freundlichen Grüßen
            ['GB1', 'GB2', 'GB4', 'GB5', 'GB8'], 'führt aus: ausführende KI und Projektleitung · entscheidet: Geschäftsführung',
            'Vergleichstabelle mit mindestens je drei Anbietern; drei Angebote für die engere Wahl', anr='A009',
            vorlagen=[('Anfrage an Anbieter (Deutsch, für Ungarn und Polen)', ANFRAGE_OBJEKT('de')), ('Request for quotation (English, for Alibaba and others)', ANFRAGE_OBJEKT('en'))],
-           auftrag='''Ziel: Anbieter gedämmter Wohn- und Arbeitsmodule (auch Container-Bauweise und Bausätze in Teilen) in Ungarn, Polen und über Alibaba finden und nach den Grundbestimmungen vergleichen.
+           auftrag='''Hinweis: Internet und Netzwerk gehören zur Ausstattung der Objekte (D63): Leerrohr, Netzwerkdose, Platz für Router abfragen.
+Ziel: Anbieter gedämmter Wohn- und Arbeitsmodule (auch Container-Bauweise und Bausätze in Teilen) in Ungarn, Polen und über Alibaba finden und nach den Grundbestimmungen vergleichen.
 Prüfkriterien, in dieser Reihenfolge: zuerst Transportierbarkeit, also Maße und Gewicht des größten und schwersten Teils (Zufahrt: einspurige, teils enge Straße, zuletzt über 15 % Steigung, bis 2,6 m Breite ohne Genehmigung; Werte aus AP-A0, sobald gemessen); dann Eignung für −20 °C, Sanitär vorbereitet (Spültoilette, Dusche, Warmwasser), Lieferform, Montageaufwand, Lieferzeit, Preis und Lieferbedingung, Gewährleistung, Bewertungen.
 Ausgabe: Tabelle mit Herkunft | Anbieter | Modell | Fläche | Teile und Gewicht | Wintertauglichkeit | Sanitär | Lieferzeit | Preis | Lieferbedingung | passt zu GB1 ja/nein/offen | Quelle.'''),
         alt['lieferant'],
@@ -281,6 +289,10 @@ Ausgabe: Tabelle Anbieter | Strecke | Fahrzeuge | Zoll | Kran | Kontakt | Quelle
            ['GB1', 'GB4', 'GB8'], 'schlägt vor: planende KI · entscheidet: Geschäftsführung',
            'Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch',
            text='Business Case (Kommentar vom 17.11.2026): jetzt Objekte oder Material einkaufen und hochbringen; während dessen wächst die Whitelist; ist sie groß genug, wird nachbestellt (AP-G3), und Leute von der Whitelist ziehen ein und zahlen Miete. Die Mieterlöse zeigen wir Investoren (AP-F3).'),
+        AP(N, 'AP-C6', 'Gemeinsames geländegängiges Fahrzeug beschaffen', 'open',
+           'vor dem Baubeginn; nach dem Streckenprotokoll (AP-A0)', 'Streckenprotokoll, Zulassung und Versicherung in der Ukraine, Geld nach GB8', 'Einkauf, Notfall, kleine Lasten, letzte Strecke (AP-C3)',
+           ['GB1', 'GB8'], 'schlägt vor: Projektleitung · entscheidet: Geschäftsführung',
+           'Ein Fahrzeug für alle (Allrad-Pkw, Pick-up, Quad oder Traktor), gebraucht möglich; keine E-Bikes in Phase 0 (D65)', anr='A089'),
         AP(N, 'AP-C4', 'Bestellzeitpunkte rückwärts vom Montagebeginn', 'open',
            'sobald Angebote mit Lieferzeiten vorliegen', 'Lieferzeiten (AP-C1), Zollabwicklung (AP-C2), Transportdauer (AP-C3), Frostgrenze (GB4)', 'Bestellung',
            ['GB4', 'GB8'], 'rechnet: planende KI · entscheidet: Geschäftsführung',
@@ -301,7 +313,7 @@ Ausgabe: Tabelle Anbieter | Strecke | Fahrzeuge | Zoll | Kran | Kontakt | Quelle
            'nach Entwässerung (AP-D2), ohne Frost (GB4)', 'Bemessung durch Fachexperten; Lasten aus dem Angebot (AP-C1)', 'Montage',
            ['GB2', 'GB4'], 'plant und nimmt ab: Fachexperte Bau', 'Fundament nach Empfehlung des Gutachters', anr='A005'),
         AP(N, 'AP-D4', 'Leitungen: Wasser, Abwasser, Strom, Internet', 'open',
-           'mit Fundament; frostfrei verlegt', 'Brunnen (A049), Kläranlage (A058), Netzanschluss (AP-A3)', 'Einzug',
+           'mit Fundament; frostfrei verlegt', 'Brunnen (A049), dauerhafte Kläranlage schon in Phase 0 (A058, D62), Tank für 10 Tage (D61), Netzanschluss (AP-A3)', 'Einzug',
            ['GB5', 'GB6', 'GB7'], 'plant: Fachexperten · führt aus: Firmen · nimmt ab: Fachexperten',
            'Leitungen verlegt, Leerrohre für den Ausbau gleich mitgelegt', anr='A049–A073'),
         alt['frost'],
@@ -318,7 +330,7 @@ Ausgabe: Tabelle Lösung | Hardware | offline | Cardano-Anbindung | Datenschutz 
     E = G('ab-e', 'E · Abnahme und Einzug', [
         AP(N, 'AP-E1', 'Abnahmetabelle', 'open',
            'vor dem ersten Übernachten', 'Anforderungen Ast 2, Zielwerte je Funktion (OD-002)', 'G2',
-           ['GB5', 'GB6', 'GB7', 'GB10', 'GB11'], 'füllen: Fachexperten · prüft und gibt frei: Projektleitung (D66)',
+           ['GB5', 'GB6', 'GB7', 'GB10', 'GB11'], 'füllen: Fachexperten · prüft und gibt nach Absprache frei: Projektleitung (D66)',
            'Jede kritische Funktion abgenommen',
            vorlagen=[('Abnahmetabelle', '''Funktion | Anforderung (Ast 2) | Prüfverfahren | Grenzwert | Ergebnis | Fachexperte | Datum | Freigabe Projektleitung
 Wärme | H02, H03, S01 | Morgenwert nach 8 h ohne Feuer | 12 °C Schlafen, 16 °C Arbeiten | | | |
@@ -331,7 +343,7 @@ Zugang | GB10 | Öffnen mit Chip und mit Schlüssel | beides geht | | | |''')]),
         AP(N, 'AP-E2', 'Mietvertrag und Einzug der ersten Mieter von der Whitelist', 'open',
            'nach G2, sobald ein Objekt frei ist', 'Mietvertrag rechtlich geprüft (O05), Miete und Pauschale (O03), Abnahme (AP-E1)', 'Mieterlöse (AP-F3)',
            ['GB5', 'GB8', 'GB9'], 'schließt ab: Geschäftsführung · betreut: Projektleitung',
-           'Unterschriebene Mietverträge, erste Miete auf dem Konto'),
+           'Unterschriebene Mietverträge, Laufzeit etwa ein Jahr (D45), erste Miete auf dem Konto'),
         alt['G2'],
     ])
 
@@ -341,6 +353,11 @@ Zugang | GB10 | Öffnen mit Chip und mit Schlüssel | beides geht | | | |''')]),
            'ab der ersten Miete, monatlich', 'Mietverträge (AP-E2), Whitelist (AP-A8)', 'Investorengespräche (AP-B1), Nachbestellung (AP-G3)',
            ['GB8', 'GB11'], 'erstellt: planende KI · prüft: Geschäftsführung',
            'Monatsbericht: belegte Objekte, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren'),
+        AP(N, 'AP-F4', 'Gemeinschaftsarbeit: Bedarfe erfassen, Aufgaben festlegen, Anreize setzen', 'open',
+           'ab Einzug; Konzept vor der Bestellung des Zugangssystems (AP-D5)', 'Zugangssystem und Erfassung (AP-D5), Regeln für Pauschale und Abzug (D38)', 'Abzug von der Pauschale, Lernkurve für die nächsten Nodes (AP-H2, AP-H3)',
+           ['GB10', 'GB11'], 'legt fest: Geschäftsführung und Projektleitung · führt: Team',
+           'Liste der Gemeinschaftsaufgaben (Schneeräumen, Pflanzenpflege, Kapellenbau, Kehrwoche und weitere) mit Aufwand, Erfassung mit wenig Aufwand (voraussichtlich Cardano) und Anreizen; Essen gegen Mitarbeit (D36)',
+           text='Kommentar zu D36: nach dem St. Galler Managementmodell kommunale Arbeit mit Anreizen stark fördern, Bedarfe erfassen, festlegen und umsetzen. Ziel des Teams: wirtschaftlich denken und gemeinschaftliches Leben im Rahmen der X-PORTAL-Vision gestalten; daraus leitet sich die Lernkurve für die nächsten Nodes ab.'),
         AP(N, 'AP-F1', 'Messreihen: Wärme, Holzfeuchte, Wasser, Strom, Internet', 'later',
            'ab Einzug, den ganzen ersten Winter', 'Messgeräte (A045 und weitere)', 'Bewertung der Hypothesen, Standards für den nächsten Node',
            ['GB11'], 'führt aus: Team · wertet aus: planende KI', 'Messwerte ersetzen Annahmen im Plan'),
@@ -361,13 +378,17 @@ Ausgabe: Tabelle Lösung | Hardware | lokale Auswertung | Leistungsaufnahme | Wi
            ['GB1', 'GB2', 'GB8', 'GB9'], 'entscheidet: Geschäftsführung', 'Charge n+1 bestellt, hochgebracht und vermietet; Bestellung wie AP-C4 und AP-C5'),
         AP(N, 'AP-G4', 'Solar mit Speicher', 'later', 'Phase 1 (D59)', 'Lastliste, Messwerte aus dem Winter', '–',
            ['GB7'], 'entscheidet: Geschäftsführung · plant: Fachexperte Elektro', 'Anlage in Betrieb', anr='A028'),
+        AP(N, 'AP-G5', 'Bergkapelle als Gruppenprojekt der Bewohner', 'later', 'Phase 1; Planung ab Einzug', 'Entwurf, Material, Genehmigung; Mitwirkende aus Team und Mietern', '–',
+           ['GB2', 'GB9', 'GB11'], 'verantwortet: Projektownerin der Bergkapelle (im Kommentar zu D34 benannt) · baut: Mitglieder und Bewohner',
+           'Kapelle als gemeinsames Projekt gebaut; Stunden als Gemeinschaftsarbeit erfasst (AP-F4)', anr='A117',
+           text='Kommentar zu D34: In Planung und Texten nach außen gilt, dass Mitglieder und Bewohner in den ersten Phasen an der Bergkapelle als Gruppenprojekt beteiligt sind.'),
     ])
 
     H = G('ab-h', 'H · Phase 2 und Projektende', [
         AP(N, 'AP-H1', 'Ausbau nach Nachfrage', 'later', 'nach Phase 1', 'Auslastung, Kapital', '–', ['GB3', 'GB8'], 'entscheidet: Geschäftsführung',
            'Weitere Objekte; die Herrenhaus-Fläche wird zuletzt bebaut'),
         AP(N, 'AP-H2', 'Hypothesen H1 bis H8 bewerten', 'later', 'nach dem ersten Winter und nach Phase 1', 'Messgrößen und Grenzen (OD-005)', 'nächster Node',
-           ['GB11'], 'wertet aus: planende KI · entscheidet: Geschäftsführung', 'Go, Revise oder Stop je Hypothese'),
+           ['GB11'], 'wertet aus: planende KI · entscheidet: Geschäftsführung', 'Go, Revise oder Stop je Hypothese; Lernkurve aus der Gemeinschaftsarbeit (AP-F4, D36)'),
         AP(N, 'AP-H3', 'Übergabe an den nächsten Node', 'later', 'nach Bewertung (AP-H2)', 'Standards und Regeln aus Node001', '–', ['GB11'],
            'führt aus: planende KI · entscheidet: Geschäftsführung', 'Genome-Regeln mit Quelle, Messwert und Vertrauensniveau'),
     ])

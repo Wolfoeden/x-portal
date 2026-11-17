@@ -192,3 +192,38 @@ Entfallen:
 **Prüfung:** `pruefe_alle.py` meldet jetzt auch Aussagen wie „direkt trinkbar“ oder „Grundwasser ist Trinkwasser“.
 
 **Behoben:** Normnummern wie „2.2.4-171-10“ wurden fälschlich als Teilergebnis 2.2.4 verlinkt.
+
+## 17.11.2026 (später) · Kommentare der Entscheidungsseite als eigentliche Entscheidungen übernommen
+
+**Eingänge:** Kommentare auf allen Seiten und die Datenbank gelesen; seit dem 13.11. hat sich nichts geändert. Anlass ist Romans Hinweis: In einigen Karten steht die eigentliche Entscheidung im Kommentar.
+
+**Wahl nur im Kommentar:** Die Entscheidungsseite zeigt jetzt „per Kommentar gewählt“ statt „ohne Wahl“. Das steht in `WAHL_PER_KOMMENTAR` in `seite.py`. Der Generator bricht ab, wenn ein Kommentar mit A, B oder C beginnt und keine Zuordnung hat.
+
+| Karte | Kommentar (Kern) | gilt jetzt |
+|---|---|---|
+| D37 | „mix mit b …“ | C gemischt mit B |
+| D44 | „A stimmt weitestgehend …“ | A, mit den Abweichungen aus dem Kommentar |
+| D55 | „A Objekt nur Übergang …“ | A, angepasst: Objekt statt Container |
+| D57 | „B · voraussichtlich kleines Fahrzeug“ | B |
+| D59 | „Netz plus Generator, Solar ab Phase 1“ | A |
+
+**Fehlende Teile ergänzt:**
+
+| Karte | Kommentar oder Wahl | übernommen in |
+|---|---|---|
+| D34 | Bergkapelle als Gruppenprojekt mit einer Projektownerin (im Kommentar mit Namen, im Plan als Rolle); nach außen so beschreiben | Stand-Text D34; neues AP-G5; AP-A7 (Texte nach außen) |
+| D36 | St. Galler Managementmodell: Gemeinschaftsarbeit mit Anreizen fördern, Bedarfe erfassen; Teamziel und Lernkurve für die nächsten Nodes | Stand-Text D36; neues AP-F4; AP-H2; SGMM Kultur |
+| D37 | Anteile am jeweiligen Node in fraktionalisiertem Eigentum, nicht an der Holding | Stand-Text D37; O11; AP-A6; SGMM Verfassung |
+| D38 | Abzug auch für Projektarbeit (Robotik und Drohnen, DACH-Freelancing über die DT Agentur), weiter zu besprechen | Stand-Text D38; 2.1.8 |
+| D45 | Wahl C: Remote-Freelancer, Buchung etwa ein Jahr | Stand-Text D45; AP-A8 (Text und Felder); AP-E2 (Laufzeit) |
+| D53 | Wahl C: beide Zahlen mit Quellen neu rechnen | neues AP-A9 |
+| D54 | Stand-Text war veraltet („nicht geprüft“) | Stand-Text D54: Bericht, Fachprüfung, Zusatzerkundung und Vermessung liegen vor; Lage voraussichtlich festgelegt |
+| D61 | Wahl A: Tank für 10 Tage, Leitung und Boiler für den Ausbau vorbereitet | Stand-Text D61; GB6; AP-D4 |
+| D62 | Wahl C: dauerhafte Kläranlage schon in Phase 0 | Stand-Text D62; GB5; AP-D4 |
+| D63 | „aufnehmen in Objekte“ | Stand-Text D63; Anfrage an die Anbieter in AP-C1 |
+| D65 | Wahl C: gemeinsames geländegängiges Fahrzeug; keine E-Bikes in Phase 0 | Stand-Text D65; neues AP-C6 (A089); 2.3.6 auf „später“; Zielbild-Legende und Energiekarte (E-Bikes erst ab Phase 1); Anschaffungen |
+| D66 | „gibt frei nach Absprache“ | Stand-Text D66; AP-E1 |
+
+**Ebenfalls behoben:** In der Anschaffungsliste stand noch „nicht geprüfte KI-Zusammenfassung“.
+
+**Prüfung:** `pruefe_alle.py` meldet jetzt auch „E-Bike … Phase 0“ ohne „keine“ und „Geologie … nicht geprüft“.

@@ -12,11 +12,12 @@ Für die ausführende KI (kleineres Modell). Das Ergebnis prüft die planende KI
   - GB1 Weg nach oben: transportierbar: Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jedes Objekt muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen; die Route und acht kritische Messpunkte MP01 bis MP08 stehen in AP-A0. Im Winter muss geräumt werden.
   - GB2 Boden und Hang: Rutsch- und Fließprozesse; Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Streifen- und Stützfundament, hangseitige Stützkonstruktion und Entwässerungsgraben. Fachprüfung des Berichts, Zusatzerkundung und Vermessung liegen vor, sind aber noch nicht im Plan abgelegt (AP-A1).
   - GB4 Frost und Termine: Gebaut wird nur ohne Frost. Termine sind Ziele und gelten erst nach den Gates.
-  - GB5 Sanitär: Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser ab Phase 0 fest eingebaut.
+  - GB5 Sanitär: Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser ab Phase 0 fest eingebaut; die dauerhafte Kläranlage kommt schon in Phase 0.
   - GB8 Geld und Freigabe: So viel wie möglich mit Eigenkapital. Bis zu welchem Punkt, und ab wann Investoren dazukommen, ist offen: D69 und D71, Seite „Vor dem Investment“. Bestellt wird in Chargen, nur mit Freigabe der Geschäftsführung und Geld auf dem Konto. Kein Verkauf; Erlöse kommen aus Miete.
 
 ## Auftrag
 
+Hinweis: Internet und Netzwerk gehören zur Ausstattung der Objekte (D63): Leerrohr, Netzwerkdose, Platz für Router abfragen.
 Ziel: Anbieter gedämmter Wohn- und Arbeitsmodule (auch Container-Bauweise und Bausätze in Teilen) in Ungarn, Polen und über Alibaba finden und nach den Grundbestimmungen vergleichen.
 Prüfkriterien, in dieser Reihenfolge: zuerst Transportierbarkeit, also Maße und Gewicht des größten und schwersten Teils (Zufahrt: einspurige, teils enge Straße, zuletzt über 15 % Steigung, bis 2,6 m Breite ohne Genehmigung; Werte aus AP-A0, sobald gemessen); dann Eignung für −20 °C, Sanitär vorbereitet (Spültoilette, Dusche, Warmwasser), Lieferform, Montageaufwand, Lieferzeit, Preis und Lieferbedingung, Gewährleistung, Bewertungen.
 Ausgabe: Tabelle mit Herkunft | Anbieter | Modell | Fläche | Teile und Gewicht | Wintertauglichkeit | Sanitär | Lieferzeit | Preis | Lieferbedingung | passt zu GB1 ja/nein/offen | Quelle.

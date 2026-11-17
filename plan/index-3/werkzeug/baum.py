@@ -162,7 +162,7 @@ parallel = [
                   O('A', 'Abo'), O('B', 'Einmalzahlung mit Betreuung und Instandhaltung'),
                   O('C', 'Nach Nutzung', 'Passt zum Verkauf je Aufruf, zum Beispiel über Masumi.')])]),
     N('decision', 'O11', 'Rechtsform der Gesellschaft für Node001 und wo die Services abgewickelt werden (D44)', 'open', meta='Geschäftsführung mit Anwälten · nach O05',
-      text='Node001 wird von einer ukrainischen Gesellschaft gehalten; Services voraussichtlich in einer lokalen Gesellschaft als Teil der Holding. Die Rechtsprechung ist noch zu klären.', hint=KI,
+      text='Node001 wird von einer ukrainischen Gesellschaft gehalten; Services voraussichtlich in einer lokalen Gesellschaft als Teil der Holding. Die Struktur muss abbilden, dass Mitwirkende Anteile am jeweiligen Node in fraktionalisiertem Eigentum bekommen, nicht an der Holding (D37). Die Rechtslage ist noch zu klären.', hint=KI,
       opts=[O('A', 'Lokale Gesellschaft als Teil der Holding', 'Wie im Kommentar zu D44 vorgesehen.'),
             O('B', 'Getrennte Betriebsgesellschaft', 'Betrieb und Grundstück getrennt.')]),
 ]
@@ -189,16 +189,17 @@ THEMA = {'D34': 'Feuerstelle, Gastronomie, Kapelle', 'D35': 'Sauna', 'D36': 'Ess
          'D55': 'Bauphasen', 'D56': 'Bauart', 'D57': 'Zufahrt und Transport', 'D58': 'Termine', 'D59': 'Strom', 'D60': 'Wärme', 'D61': 'Wasser', 'D62': 'Sanitär und Abwasser',
          'D63': 'Internet', 'D64': 'Kommunalgebäude', 'D65': 'Mobilität', 'D66': 'Betrieb und Abnahme', 'D67': 'Team und Rollen', 'D68': 'Arbeitsweise'}
 
-OPT_TEXT_NEU = {('D45', 'C'): 'Zuerst Team und einige Mieter (Remote-Freelancer, Buchung etwa ein Jahr).', ('D64', 'A'): 'Das Kommunalgebäude ist der erste Bau in Phase 1, vor den übrigen Objekten; Garten daneben.'}
+OPT_TITEL_NEU = {('D55', 'A'): 'Objekt nur Übergang'}
+OPT_TEXT_NEU = {('D55', 'A'): 'Phase 0: ein Objekt als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur; Phase 1 Wohn- und Arbeitsobjekte und Kommunalgebäude; Phase 2 Ausbau, die Herrenhaus-Fläche zuletzt (Wortlaut des Kommentars).', ('D45', 'C'): 'Zuerst Team und einige Mieter (Remote-Freelancer, Buchung etwa ein Jahr).', ('D64', 'A'): 'Das Kommunalgebäude ist der erste Bau in Phase 1, vor den übrigen Objekten; Garten daneben.'}
 TITEL_NEU = {'D50': 'Start der Vermarktung und Schwelle zum Bauen', 'D55': 'Bauphasen: ein Objekt nur für den Anfang?'}
 
 def karte(k):
-    i = k['id']; a = ANT.get(i); w = (a or {}).get('wahl') or ''
+    i = k['id']; a = ANT.get(i); w = SEITE.effektive_wahl(i, a)
     offen = a is None or i in OFFEN_KARTEN or w == 'unklar'
-    opts = [O(o['v'], o['titel'], OPT_TEXT_NEU.get((i, o['v']), o['text']), state=('done' if o['v'] == w else None)) for o in k['opts'] if offen or o['v'] == w]
+    opts = [O(o['v'], OPT_TITEL_NEU.get((i, o['v']), o['titel']), OPT_TEXT_NEU.get((i, o['v']), o['text']), state=('done' if o['v'] == w else None)) for o in k['opts'] if offen or o['v'] == w]
     facts = []
     if a is not None:
-        facts.append(('Antwort 13.11.', LABEL.get(w, w)))
+        facts.append(('Antwort 13.11.', (f'per Kommentar gewählt: {w}' + (f' ({SEITE.WAHL_PER_KOMMENTAR[i][1]})' if SEITE.WAHL_PER_KOMMENTAR[i][1] else '')) if (i in SEITE.WAHL_PER_KOMMENTAR and not (a or {}).get('wahl')) else LABEL.get(w, w)))
         if a.get('kommentar'):
             facts.append(('Kommentar 13.11.', a['kommentar']))
     text = ('Gilt: ' + FOLGT[i]) if (not offen and i in FOLGT) else k['warum']
@@ -1299,7 +1300,7 @@ L = linkify
 def see(h, t):
     return f' <a class="dt-bchip" href="{h}">{html.escape(t)}</a>'
 RES = [
-    ('Energie', [('Quelle', L('Netz mit Generator als Reserve; Solar mit Speicher ab Phase 1 (D59); Laden der E-Bikes (2.3.6)')), ('Reserve', L('Generator draußen (D59), Kraftstoff für 3 Tage (Annahme, S03)')),
+    ('Energie', [('Quelle', L('Netz mit Generator als Reserve; Solar mit Speicher ab Phase 1 (D59); Laden von E-Bikes erst ab Phase 1 (D65, 2.3.6)')), ('Reserve', L('Generator draußen (D59), Kraftstoff für 3 Tage (Annahme, S03)')),
                  ('Bei Ausfall', L('Muss-Lasten etwa 380 W ohne Pumpe laufen weiter; Batteriegröße nicht nachgewiesen (M02-30)')),
                  ('Was fehlt', L('Zuständigkeit, Leistung, Kosten und Frist des Netzanschlusses (AP-A3); Lasten für Team und erste Mieter (2.3.1)')), ('Planungspunkt', L('2.3.2') + see('#b-mb-strom', 'Make-or-Buy Strom'))]),
     ('Wärme', [('Quelle', L('Holzofen (D60); Holz aus eigener Fällung trocknet etwa ein Jahr (AP-D1), bis dahin gekauftes trockenes Holz')), ('Reserve', 'festlegen'),
@@ -1393,7 +1394,7 @@ def _neu(h):
 _zb = _neu(_zb)
 for a, b in [('Zielbild von Roman, 04.11.2026. Lage, Zahl und Maße sind daraus nicht ablesbar; Grundlage für Stufe 1 ist Generalplan V1 (E37).', 'Zielbild der Projektleitung vom 04.11.2026, ein Entwurf. Lage, Zahl und Maße sind daraus nicht ablesbar; Grundlage ist der Detailplan Blatt 3 (D55).'),
              ('Team plus die ersten 5 Käufer (E01, E79). Grundmodell: leichter Transport, kommunal, gemeinschaftlich, autark, mit Privatsphäre (E72).', 'Team in Phase 0, danach Mieter von der Whitelist. Grundmodell: transportierbar über eine einspurige, enge Straße, kommunal, gemeinschaftlich, autark, mit Privatsphäre.'),
-             ('Wohnhaus mit E-Bike-Unterstand', 'Objekt zum Wohnen mit E-Bike-Unterstand'), ('Wohnhaus mit E-Bike-Unterstand', 'Objekt zum Wohnen mit E-Bike-Unterstand'),
+             ('Wohnhaus mit E-Bike-Unterstand', 'Objekt zum Wohnen; E-Bike-Unterstand erst ab Phase 1 (D65)'), ('Wohnhaus mit E-Bike-Unterstand', 'Objekt zum Wohnen; E-Bike-Unterstand erst ab Phase 1 (D65)'),
              ('Die zweite Ansicht steht in Kapitel 6. ', '')]:
     _zb = _zb.replace(a, b)
 _zb = re.sub(r'Zielbild von [^,<]+, 04\.11\.2026\. Lage, Zahl und Maße sind daraus nicht ablesbar; Grundlage für Stufe 1 ist Generalplan V1(?: \(E37\))?\.', 'Zielbild der Projektleitung vom 04.11.2026, ein Entwurf. Lage, Zahl und Maße sind daraus nicht ablesbar; Grundlage ist der Detailplan Blatt 3 (D55).', _zb)
@@ -1402,7 +1403,7 @@ _zb = re.sub(r'<span class="zb-m s1">Stufe 1</span>', '<span class="zb-m s1">Pha
 _zb = re.sub(r'(<b>(?:Kommunalgebäude: Arbeitsplatz, Küche, Sanitär|Gemüsegarten)</b><small>)(.*?)(</small></div><span class="zb-m s1">)Phase 0', r'\1\2, D64\3Phase 1', _zb)
 _zb = _zb.replace('<b>Kommunalgebäude: Arbeitsplatz, Küche, Sanitär</b><small>' + linkify('2.4.4') + ', E74</small></div><span class="zb-m s1">Phase 0</span>', '<b>Kommunalgebäude: Arbeitsplatz, Küche, Sanitär</b><small>' + linkify('2.4.4') + ', D64</small></div><span class="zb-m s1">Phase 1</span>')
 _zb = _zb.replace('<b>Gemüsegarten</b><small>' + linkify('2.4.4') + ', E74</small></div><span class="zb-m s1">Phase 0</span>', '<b>Gemüsegarten</b><small>' + linkify('2.4.4') + '</small></div><span class="zb-m s1">Phase 1</span>')
-_zbm = _neu(_zbm).replace('Wohnhaus mit E-Bike-Unterstand', 'Objekt zum Wohnen mit E-Bike-Unterstand').replace('<p>das Maslow-', '<p>Das Maslow-')
+_zbm = _neu(_zbm).replace('Wohnhaus mit E-Bike-Unterstand', 'Objekt zum Wohnen; E-Bike-Unterstand erst ab Phase 1 (D65)').replace('<p>das Maslow-', '<p>Das Maslow-')
 _all = _neu(_all).replace('<h3 id="u-alltag"><span class="pn">2</span>Alltag oben: für wen wir bauen<small>Qualitätskriterien · M02 Mensch, Sinne, Nutzbarkeit</small></h3>',
                           '<h4 class="dt-h4" id="u-alltag">Alltag oben: für wen wir bauen (Spielregeln und Tagesabläufe)</h4>')
 _all = re.sub(r'Käuferinnen und Käufer wohnen in ihrem eigenen Haus und sind frei; sie können bei allem mitmachen, müssen aber nicht \(E63\)\. Deshalb stehen sie in keinem Tagesablauf\.',

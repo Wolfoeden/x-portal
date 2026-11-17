@@ -9,7 +9,7 @@ Für die ausführende KI (kleineres Modell). Das Ergebnis prüft die planende KI
 - Ergebnis wird gebraucht für: Auslegung der Trinkwasseraufbereitung, Angebot Brunnen und Aufbereitung
 - Grundbestimmungen: GB6, GB11
 
-  - GB6 Wasser: Das Grundwasser ist Rohwasser ohne Trinkwasserqualität. Für Trinken und Kochen wird es zu Trinkwasser aufbereitet (Trinkwasseraufbereitung). Umfang und Verfahrensstufen legt der Fachexperte Wasser nach der Laboranalyse fest. Anfangsstufe bauen, Ausbau vorbereiten.
+  - GB6 Wasser: Das Grundwasser ist Rohwasser ohne Trinkwasserqualität. Für Trinken und Kochen wird es zu Trinkwasser aufbereitet (Trinkwasseraufbereitung). Umfang und Verfahrensstufen legt der Fachexperte Wasser nach der Laboranalyse fest. Anfangsstufe mit Tank für 10 Tage Sperre; Leitung und Boiler für den Ausbau vorbereitet.
   - GB11 Rollen und Freigabe: Rollen statt Namen. Technische Werte legt ein Fachexperte fest. Ein Vorschlag der KI gilt erst, wenn er gewählt ist. Unterlagen werden von Hand verschickt.
 
 ## Auftrag

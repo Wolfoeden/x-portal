@@ -49,10 +49,10 @@ MATRIX = {
         ('Verfassung und Governance', ['X-PORTAL Organisation als Dach; DT Agentur übernimmt Projekte aus Deutschland; Grundstücke (X1–X3)',
                                        'Systemgrenze Organisation ↔ Node-Betrieb: OD-001',
                                        'KI bereitet vor; Geschäftsführung und Projektleitung geben frei, Bestellung und Betrag die Geschäftsführung; ein KI-Vorschlag gilt erst, wenn er gewählt ist (D43)',
-                                       'Änderungen an Kernbegriffen nur als CHANGE REQUEST (XP-SYS-014)'], 'XP-SYS-005, 014', 'DECISION REQUIRED'),
+                                       'Mitwirkende bekommen Anteile am jeweiligen Node in fraktionalisiertem Eigentum, nicht an der Holding (D37)', 'Änderungen an Kernbegriffen nur als CHANGE REQUEST (XP-SYS-014)'], 'XP-SYS-005, 014', 'DECISION REQUIRED'),
         ('Kultur', ['Prinzipien aus Abschnitt 5: Menschenzentrierung, Resilienz, Wartbarkeit, Messbarkeit, Lernfähigkeit',
                     'Spielregeln oben: Gleitzeit 9–14, Jour fixe und Sport Pflicht, Wellness frei, Arbeit wie Holz machen gemeinsam',
-                    'Mieter sind frei in Arbeit und Tagesablauf; Gemeinschaftsarbeit wird gefördert und angerechnet (D36)'], 'XP-SYS-001', 'DOCUMENTED'),
+                    'Mieter sind frei in Arbeit und Tagesablauf; Gemeinschaftsarbeit wird mit Anreizen gefördert, mit wenig Aufwand erfasst und von der Pauschale abgezogen (D36, D38)', 'Teamziel: wirtschaftlich denken und gemeinschaftliches Leben im Rahmen der X-PORTAL-Vision gestalten; daraus die Lernkurve für die nächsten Nodes (D36)'], 'XP-SYS-001', 'DOCUMENTED'),
     ],
     'Strategisch': [
         ('Programme', ['Vier Erlösstufen: Kundenprojekte, Technologielösungen, Nutzung und Services, System-Skalierung',

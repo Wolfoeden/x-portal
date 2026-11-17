@@ -259,7 +259,7 @@ FOLGT = {
  'D42': 'Mission und Globalziele bleiben der Ausgangspunkt. Aufgabe: mit Vision v0.4 und Zielblatt in eine durchgehende Logik bringen.',
  'D43': 'Rollenbasiert: Texte nennen Rollen statt Namen; fachlich prüft ein Fachexperte. Ein KI-Vorschlag gilt erst mit Wahl auf dieser Seite.',
  'D44': 'X-PORTAL hält als Holding Lizenzen und Markenrechte. Die DT Agentur übernimmt Projekte in Deutschland, Österreich und der Schweiz. Node001 hält eine ukrainische Gesellschaft. Offen: wo Services am Node abgewickelt werden (voraussichtlich lokale Gesellschaft); Rechtsprüfung.',
- 'D45': 'Team plus Mieter. Es gibt keinen Immobilienverkauf im klassischen Sinn.',
+ 'D45': 'Team plus Mieter: zuerst Team und einige Mieter, Remote-Freelancer mit einer Buchung von etwa einem Jahr. Es gibt keinen Immobilienverkauf im klassischen Sinn.',
  'D46': 'Das Verkaufsmodell ist abgewählt. Node001 wird mit Eigenkapital und VC oder Investments finanziert, verbunden mit wiederkehrenden Erlösen.',
  'D47': 'Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding.',
  'D48': 'Nur Miete am Anfang; kein klassischer Verkauf. Tokenisierung und Beteiligung auf mehreren Ebenen erst nach Klärung.',
@@ -268,28 +268,36 @@ FOLGT = {
  'D51': 'Vier Erlösstufen; Skalierung und Standardisierung werden von Anfang an mitgedacht, Node001 ist der Proof of Concept.',
  'D52': 'Noch unklar.',
  'D53': 'Die KI rechnet beide Zahlen mit Quellen neu; danach Entscheidung.',
- 'D54': 'Der Geologiebericht liegt als KI-Zusammenfassung vor (XPB-N001-GEO-SUM-001, nicht geprüft). Fachprüfung und Freigabe fehlen.',
+ 'D54': 'Der Geologiebericht 34.11/26 liegt vor, mit KI-Zusammenfassung XPB-N001-GEO-SUM-001. Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026). Die Lage von Phase 0 ist seit dem 17.11.2026 voraussichtlich festgelegt.',
  'D55': 'Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohn- und Arbeitsobjekte und Kommunalgebäude. Phase 2: Ausbau.',
  'D56': 'Material offen (Holz, Beton, Glas, Metall). Eine Bau-KI plant und bewertet nach den lokalen Gegebenheiten.',
  'D57': 'Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung. Gesamtplanung der Zufahrt in Phase 1 mit 3D-Modellen.',
  'D58': 'Baubeginn 2027 als Ziel, nur nach Gates; kein Einzugstermin in der Werbung.',
  'D59': 'Netzanschluss beantragen, Generator als Reserve; Solar mit Speicher ab Phase 1.',
  'D60': 'Mix: Ofen mit Plan zum Überwintern; eigene Bäume fällen (nass, müssen trocknen) und Holz kaufen; Holzlager in jedem Fall.',
- 'D61': 'Grundwasser nutzen und zu Trinkwasser aufbereiten; Anfangsstufe bauen, Ausbau vorbereiten.',
- 'D62': 'Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser fest eingebaut ab Phase 0.',
- 'D63': 'Bandbreite, Router und Anbieter vergleichen; steht in der Anschaffungsliste.',
+ 'D61': 'Anfangsstufe mit Tank für 10 Tage Sperre; Leitung und Boiler für den Ausbau vorbereitet. Das Grundwasser ist Rohwasser ohne Trinkwasserqualität; es wird für Trinken und Kochen zu Trinkwasser aufbereitet.',
+ 'D62': 'Kläranlage sofort: Die dauerhafte Anlage kommt schon in Phase 0. Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser werden von vornherein mit der Infrastruktur geplant und eingebaut.',
+ 'D63': 'Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Objekte und steht in der Anschaffungsliste.',
  'D64': 'Kommunalgebäude ist der erste Bau in Phase 1.',
- 'D65': 'Gemeinsames Fahrzeug; keine E-Bikes in Phase 0.',
- 'D66': 'Zielwerte je kritischer Funktion; Tabelle der Abnahme-Entscheidungen, die Projektleitung prüft und gibt frei.',
+ 'D65': 'Ein gemeinsames geländegängiges Fahrzeug; keine E-Bikes in Phase 0.',
+ 'D66': 'Zielwerte je kritischer Funktion; Tabelle der Abnahme-Entscheidungen, die die Projektleitung nach Absprache prüft und freigibt.',
  'D67': 'Rollen wie im Pitch. Der Architekt berät zu Architektur und Bau und ist kein Teammitglied.',
  'D68': 'Repo als Quelle und Regeln der Baseline; vieles ist noch zu klären.',
- 'D34': 'Feuerstelle in Phase 1, Gastronomie später. Die Bergkapelle wird als Gruppenprojekt der Bewohner geplant und so kommuniziert.',
+ 'D34': 'Feuerstelle in Phase 1, Gastronomie später. Die Bergkapelle ist ein Gruppenprojekt: Mitglieder und Bewohner bauen in den ersten Phasen mit; so wird es auch nach außen beschrieben. Verantwortlich ist eine Projektownerin der Bergkapelle (im Kommentar benannt).',
  'D35': 'Eigene Sauna in Phase 1.',
- 'D36': 'Essen gegen Mitarbeit. Gemeinschaftsarbeit (Schnee, Pflanzen, Kapelle, Kehrwoche) wird gefördert und mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano.',
- 'D37': 'Wohnen und Essen frei plus Anteil; der Anteil liegt am jeweiligen Node, nicht an der Holding. Die Unternehmensstruktur muss das abbilden.',
- 'D38': 'Monatliche Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen. Weiter zu besprechen.',
+ 'D36': 'Essen gegen Mitarbeit. Nach dem St. Galler Managementmodell wird Gemeinschaftsarbeit mit Anreizen gefördert: Bedarfe erfassen, festlegen und umsetzen. Aufgaben wie Schneeräumen, Pflanzenpflege, Kapellenbau und Kehrwoche werden mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano. Ziel des Teams: wirtschaftlich denken und gemeinschaftliches Leben im Rahmen der X-PORTAL-Vision gestalten; daraus entsteht die Lernkurve für die nächsten Nodes.',
+ 'D37': 'Mischung aus C und B: Wohnen und Essen frei, dazu ein Anteil. Mitwirkende bekommen keinen Anteil an der Holding, sondern am jeweiligen Node in fraktionalisiertem Eigentum. Die Unternehmensstruktur muss das abbilden.',
+ 'D38': 'Monatliche Pauschale. Davon abgezogen werden oben erbrachte Leistungen: Gemeinschaftsleistungen wie Kapelle und Gartenarbeit sowie Projektarbeit, zum Beispiel Robotik und Drohnen oder Freelancer-Leistungen für den DACH-Raum über die DT Agentur. Weiter zu besprechen.',
 }
 UEBERHOLT = {'D45', 'D46', 'D48', 'D49', 'D50'}
+# Wahl steht nur im Kommentar (Analyse 17.11.2026): Karte -> (Möglichkeit, Hinweis)
+WAHL_PER_KOMMENTAR = {'D37': ('C', 'gemischt mit B'), 'D44': ('A', 'mit den Abweichungen aus dem Kommentar'), 'D55': ('A', 'angepasst: Objekt statt Container, unterhalb der Herrenhaus-Fläche'),
+                      'D57': ('B', ''), 'D59': ('A', '')}
+def effektive_wahl(i, a):
+    w = (a or {}).get('wahl') or ''
+    if not w and i in WAHL_PER_KOMMENTAR:
+        return WAHL_PER_KOMMENTAR[i][0]
+    return w
 PHASEN = [('Phase 0', 'Objekt als Übergang', 'Ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, voraussichtlich im blau markierten Bereich an der Kehre der Zufahrt (Antwort 17.11.2026, Bild im Index 3.0); dort später auch die ersten Wohneinheiten. Mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Die Bauart ist offen.'),
           ('Phase 1', 'Objekte und Kommunalgebäude', 'Wohn- und Arbeitsobjekte und das Kommunalgebäude. Material und Bauart plant eine Bau-KI nach den lokalen Gegebenheiten. Zuerst das Kommunalgebäude.'),
           ('Phase 2', 'Ausbau', 'Weitere Objekte nach Nachfrage; die Herrenhaus-Fläche wird zuletzt bebaut.')]
@@ -303,6 +311,8 @@ def card_html(k, log, alt):
     a = NEU.get(i, {}); stand = ''
     if i in FOLGT:
         lab = {'unklar': 'weiß ich noch nicht', 'keine': 'keine davon', '': 'ohne Wahl'}.get(a.get('wahl') or '', a.get('wahl'))
+        if not a.get('wahl') and i in WAHL_PER_KOMMENTAR:
+            v, h = WAHL_PER_KOMMENTAR[i]; lab = f'per Kommentar gewählt: {v}' + (f' ({h})' if h else '')
         stand = (f'<div class="st13"><p><b>Stand 13.11.2026:</b> {e(lab)}. {e(FOLGT[i])}</p>'
                  + (f'<blockquote>{e(a["kommentar"])}</blockquote>' if a.get('kommentar') else '')
                  + ('<p class="note">Der Kommentar überholt die Möglichkeiten unten; sie stehen nur noch zur Nachvollziehbarkeit da.</p>' if i in UEBERHOLT else '') + '</div>')
@@ -312,7 +322,8 @@ def card_html(k, log, alt):
         kom = ''.join(f'<li><span class="no">{d} · {e(alt[d].get("wahl") or "–")}</span>„{e(alt[d]["kommentar"])}“</li>' for d in sorted({d for eid in k['frueher'] for d in re.findall(r'\bD\d\d\b', log[eid])}) if d in alt and alt[d].get('kommentar'))
         fr = (f'<details class="fr"><summary>Früher entschieden, jetzt zurückgenommen ({len(k["frueher"])})</summary><ol class="done">{rows}</ol>'
               + (f'<p class="note">Kommentare damals:</p><ol class="done">{kom}</ol>' if kom else '') + '</details>')
-    return f'''<article class="dec" id="{i}" data-id="{i}">
+    pk = f' data-pk="{WAHL_PER_KOMMENTAR[i][0]}"' if i in WAHL_PER_KOMMENTAR else ''
+    return f'''<article class="dec" id="{i}" data-id="{i}"{pk}>
 <header><span class="no">{i}</span><h3>{e(k["frage"])}</h3><span class="state" data-state="{i}">offen</span></header>
 <p class="why">{e(k["warum"])}</p>
 {stand}
@@ -343,6 +354,8 @@ def build(src, log, alt):
     assert len(plans) == 2, len(plans)
     head = src[src.index('<title>'):src.index('<div class="wrap">')]
     script = src[src.index('<script>'):src.rindex('</script>') + len('</script>')] + '\n'
+    script = script.replace("tag.textContent=label(v);tag.className='state '+(v==='unklar'?'unklar':v==='keine'?'keine':v?'go':'');", "tag.textContent=(!v&&card.dataset.pk)?'per Kommentar: '+card.dataset.pk:label(v);tag.className='state '+(v==='unklar'?'unklar':v==='keine'?'keine':(v||card.dataset.pk)?'go':'');")
+    assert 'card.dataset.pk' in script
     ids, where = [], {}
     for _, _, ks in ABSCHNITTE:
         for k in ks:
@@ -414,6 +427,9 @@ if __name__ == '__main__':
     for f in sorted((base / 'antworten-2026-11-13/wahl').glob('D*.json')):
         d = json.loads(f.read_text()); NEU[f.stem] = d.get('data', d)
     assert set(NEU) >= set(FOLGT), set(FOLGT) - set(NEU)
+    # Kommentar nennt eine Möglichkeit, aber die Wahl ist leer: muss in WAHL_PER_KOMMENTAR stehen (Analyse 17.11.2026)
+    _fehlt = [i for i, d in NEU.items() if not d.get('wahl') and re.match(r'\s*([ABC])\b(?!\w)', d.get('kommentar') or '') and i not in WAHL_PER_KOMMENTAR]
+    assert not _fehlt, f'Wahl nur im Kommentar, nicht zugeordnet: {_fehlt}'
     page, where = build(src, log, alt)
     (base / 'entscheidungsseite.html').write_text(page)
     (base / 'entscheidungen.md').write_text(md(log, where))

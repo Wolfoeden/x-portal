@@ -136,7 +136,7 @@ B = [
   ('Wegebeleuchtung und Handlauf', '0', 'KS', 'Sichere Wege zu Holzlager und Technik im Dunkeln.', '', 'Wegemeter', ''),
   ('Befestigung und Entwässerung der Zufahrt', '1', 'D', 'Gesamtplanung in Phase 1 (D57).', 'Aufbau nach Geologie; Kosten je Meter', 'Meter Zufahrt', ''),
  ]),
- ('Mobilität', 'D65: gemeinsames Fahrzeug; Kommentar: E-Bikes für Phase 0 ausschließen.',
+ ('Mobilität', 'D65: ein gemeinsames geländegängiges Fahrzeug; laut Kommentar keine E-Bikes in Phase 0.',
   ['D65'], 'Geschäftsführung', 'Rolle Betrieb', [
   ('Gemeinsames geländegängiges Fahrzeug', '0', 'K', 'Einkauf, Notfall, kleine Lasten.', 'Allrad-Pkw, Pick-up, Quad oder Traktor; gebraucht; Zulassung und Versicherung in der Ukraine', '1', ''),
   ('Winterreifen und Schneeketten', '0', 'K', 'Zufahrt im Winter.', '', '1 Satz', ''),
@@ -284,7 +284,7 @@ def build(R, ans):
 <header><p class="eyebrow">Node001 Beregniza · Anschaffungen · Stand {STAND}</p>
 <h1>Was angeschafft werden muss</h1>
 <p>{len(R)} Objekte und Gegenstände, über deren Anschaffung zu entscheiden ist. Grundlage sind die Antworten vom 13.11. auf der <a href="{ENT}">Entscheidungsseite</a>, mit ihren Kommentaren. Die Liste nennt keine neuen Preise: Recherche bitte je Zeile eintragen (aufklappen).</p>
-<p class="note">Mengen stehen als „wovon die Menge abhängt“, bis Personenzahl und Lastliste feststehen. Positionen aus der Geologie beruhen auf einer nicht geprüften KI-Zusammenfassung des Berichts. „Früher gefunden“ sind Internetpreise aus der Suche vom 12.11., nur als Anhalt. Funktionsketten: <a href="{SGMM}">SGMM-Seite</a>.</p>
+<p class="note">Mengen stehen als „wovon die Menge abhängt“, bis Personenzahl und Lastliste feststehen. Positionen aus der Geologie beruhen auf dem Bericht 34.11/26; Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026). „Früher gefunden“ sind Internetpreise aus der Suche vom 12.11., nur als Anhalt. Funktionsketten: <a href="{SGMM}">SGMM-Seite</a>.</p>
 <p class="note" id="status">Lädt …</p></header>
 <div class="bar" role="group" aria-label="Filter"><button type="button" data-phase-btn="" aria-pressed="true">Alle Phasen</button><button type="button" data-phase-btn="0" aria-pressed="false">Phase 0</button><button type="button" data-phase-btn="1" aria-pressed="false">Phase 1</button><button type="button" id="open" aria-pressed="false">Nur offene</button><input id="such" type="search" placeholder="Suchen, z. B. Pumpe" aria-label="Suchen"><span class="cnt" id="cnt"></span></div>''']
     by = {}

@@ -173,7 +173,7 @@ Entscheidet: Geschäftsführung. Nimmt ab: Fachexperte Bau. Aus: D57.
 
 ## Mobilität
 
-D65: gemeinsames Fahrzeug; Kommentar: E-Bikes für Phase 0 ausschließen.
+D65: ein gemeinsames geländegängiges Fahrzeug; laut Kommentar keine E-Bikes in Phase 0.
 
 Entscheidet: Geschäftsführung. Nimmt ab: Rolle Betrieb. Aus: D65.
 

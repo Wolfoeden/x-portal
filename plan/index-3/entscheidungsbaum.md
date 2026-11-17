@@ -237,7 +237,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Zuerst Mieter gewinnen; Ziel ist, Interessenten jetzt zu bekommen (D50). Es wird nicht verkauft; es gibt nur Mieter mit wiederkehrenden Erlösen, die wir Investoren zeigen (D45, D46, D48; Kommentar vom 17.11.2026). Die Whitelist ist noch nicht eingerichtet (AP-A8). Tokenisierung und Beteiligung erst nach rechtlicher Klärung (O05, AP-A6).
     - Dient: Z2
   - **Schritt:** Whitelist der künftigen Mieter einrichten _[offen]_
-    - Auf der Whitelist stehen nur künftige Mieter. Investoren werden getrennt geführt (Antwort vom 17.11.2026).
+    - Auf der Whitelist stehen nur künftige Mieter. Investoren werden getrennt geführt (Antwort vom 17.11.2026). Zielgruppe nach D45: Remote-Freelancer, Buchung etwa ein Jahr.
     - Wann: jetzt (D50: Interessenten vor dem Bau)
     - Voraussetzung: Text und Bilder vom Ort; Datenschutzhinweis (GB10)
     - Blockiert: Chargen (AP-C5, AP-G3), Nachweis für Investoren (AP-F3)
@@ -250,7 +250,9 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > Wohnen und arbeiten an einem Ort in den Bergen: eigenes Objekt, Gemeinschaftsräume, Internet für Remote-Arbeit, Projekte im Team.
       > Wir bauen in Abschnitten. Wer sich einträgt, erfährt als Erstes, wann ein Objekt frei wird, und kann es mieten.
       > 
-      > Felder: Name · E-Mail · ab wann · wie lange · allein oder zu zweit · Beruf oder Tätigkeit · Fragen
+      > Für Remote-Arbeit: Aufenthalt etwa ein Jahr.
+      > 
+      > Felder: Name · E-Mail · ab wann · wie lange (Richtwert etwa 1 Jahr) · allein oder zu zweit · Beruf oder Tätigkeit (remote) · Fragen
       > Hinweis: Der Eintrag ist unverbindlich und kein Vertrag. Wir speichern die Angaben nur für diese Liste und löschen sie auf Wunsch.
   - **Schritt:** Token über Cardano: Rechtsprüfung _[offen]_
     - Wann: jetzt; vor jeder Ansprache von Kleinanlegern
@@ -258,7 +260,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Blockiert: Token-Crowdfunding (AP-B2)
     - Grundbestimmungen: GB9, GB11
     - Rolle: beauftragt: Geschäftsführung · prüft: Anwälte
-    - Ergebnis: Schriftliche Einordnung des Tokens und Liste der Pflichten vor einem Angebot
+    - Ergebnis: Schriftliche Einordnung des Tokens und Liste der Pflichten vor einem Angebot; dazu die Beteiligung Mitwirkender am jeweiligen Node in fraktionalisiertem Eigentum (D37)
     - Unterlage: Prüfauftrag an die Anwälte
       > Betreff: Prüfauftrag Token auf Cardano für Node001
       > 
@@ -277,7 +279,15 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Blockiert: Investorengespräche
     - Grundbestimmungen: GB8, GB9
     - Rolle: führt aus: planende KI · prüft: Geschäftsführung, Jurist
-    - Ergebnis: Whitepaper und Deck mit Meilensteinen aus diesem Ablaufplan, Mittelverwendung je Phase, Risiken; Beträge erst nach Angeboten
+    - Ergebnis: Whitepaper und Deck mit Meilensteinen aus diesem Ablaufplan, Mittelverwendung je Phase, Risiken; Beträge erst nach Angeboten. Nach außen: Mitglieder und Bewohner bauen in den ersten Phasen mit, die Bergkapelle ist ihr Gruppenprojekt (D34).
+  - **Schritt:** Zahlen neu rechnen: Kostenhochrechnung 12,5 Mio. € und frühere Erlösrechnung 12 Mio. € _[offen]_
+    - Antwort zu D53 vom 13.11.2026: Wahl C, die KI rechnet beide Zahlen mit Quellen neu, danach entscheidet ihr.
+    - Wann: nach Angeboten (AP-A5); vor Investorengesprächen
+    - Voraussetzung: Kostenregister vom 13.11.2026, Angebote, Selbstkosten (O03)
+    - Blockiert: Investorenunterlagen (AP-A7), Kapitalbedarf
+    - Grundbestimmungen: GB8, GB11
+    - Rolle: rechnet: planende KI mit Quellen · entscheidet: Geschäftsführung
+    - Ergebnis: Kostenhochrechnung je Phase mit Quelle je Posten; die frühere Erlöszahl beruhte auf Verkauf und wird als Rechnung der Mieterlöse neu aufgesetzt (D45, D46); bis Angebote vorliegen keine Beträge nach außen
 - **Ast:** B · Kapital: so viel Eigenkapital wie möglich, Investoren mit Whitelist und Mieterlösen, Token
   - **Gate G0:** Können wir vermieten? _[wartet]_
     - vor dem Investorengespräch · Geschäftsführung und Projektleitung geben frei oder lassen nacharbeiten
@@ -463,6 +473,14 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Grundbestimmungen: GB1, GB4, GB8
     - Rolle: schlägt vor: planende KI · entscheidet: Geschäftsführung
     - Ergebnis: Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch
+  - **Schritt:** Gemeinsames geländegängiges Fahrzeug beschaffen _[offen]_
+    - Wann: vor dem Baubeginn; nach dem Streckenprotokoll (AP-A0)
+    - Voraussetzung: Streckenprotokoll, Zulassung und Versicherung in der Ukraine, Geld nach GB8
+    - Blockiert: Einkauf, Notfall, kleine Lasten, letzte Strecke (AP-C3)
+    - Grundbestimmungen: GB1, GB8
+    - Rolle: schlägt vor: Projektleitung · entscheidet: Geschäftsführung
+    - Ergebnis: Ein Fahrzeug für alle (Allrad-Pkw, Pick-up, Quad oder Traktor), gebraucht möglich; keine E-Bikes in Phase 0 (D65)
+    - Anschaffungen: A089
   - **Schritt:** Bestellzeitpunkte rückwärts vom Montagebeginn _[offen]_
     - Wann: sobald Angebote mit Lieferzeiten vorliegen
     - Voraussetzung: Lieferzeiten (AP-C1), Zollabwicklung (AP-C2), Transportdauer (AP-C3), Frostgrenze (GB4)
@@ -498,7 +516,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Anschaffungen: A005
   - **Schritt:** Leitungen: Wasser, Abwasser, Strom, Internet _[offen]_
     - Wann: mit Fundament; frostfrei verlegt
-    - Voraussetzung: Brunnen (A049), Kläranlage (A058), Netzanschluss (AP-A3)
+    - Voraussetzung: Brunnen (A049), dauerhafte Kläranlage schon in Phase 0 (A058, D62), Tank für 10 Tage (D61), Netzanschluss (AP-A3)
     - Blockiert: Einzug
     - Grundbestimmungen: GB5, GB6, GB7
     - Rolle: plant: Fachexperten · führt aus: Firmen · nimmt ab: Fachexperten
@@ -545,7 +563,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Voraussetzung: Anforderungen Ast 2, Zielwerte je Funktion (OD-002)
     - Blockiert: G2
     - Grundbestimmungen: GB5, GB6, GB7, GB10, GB11
-    - Rolle: füllen: Fachexperten · prüft und gibt frei: Projektleitung (D66)
+    - Rolle: füllen: Fachexperten · prüft und gibt nach Absprache frei: Projektleitung (D66)
     - Ergebnis: Jede kritische Funktion abgenommen
     - Unterlage: Abnahmetabelle
       > Funktion | Anforderung (Ast 2) | Prüfverfahren | Grenzwert | Ergebnis | Fachexperte | Datum | Freigabe Projektleitung
@@ -562,7 +580,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Blockiert: Mieterlöse (AP-F3)
     - Grundbestimmungen: GB5, GB8, GB9
     - Rolle: schließt ab: Geschäftsführung · betreut: Projektleitung
-    - Ergebnis: Unterschriebene Mietverträge, erste Miete auf dem Konto
+    - Ergebnis: Unterschriebene Mietverträge, Laufzeit etwa ein Jahr (D45), erste Miete auf dem Konto
   - **Gate G2:** Darf eingezogen werden? _[wartet]_
     - nach Montage und Abnahme
     - Ein Fachexperte bestätigt Heizung, Wasser mit Aufbereitung zu Trinkwasser, Strom, Sanitär (Spültoilette, Dusche, Warmwasser, Abwasser, D62) und Brandschutz schriftlich. Die Abnahmetabelle prüft die Projektleitung und gibt frei (D66). Muss fertig sein: 2.2.8, 2.3.2, 2.3.3, 2.4.6, 2.4.9 mit T00, T01, T05, T06.
@@ -595,6 +613,14 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Grundbestimmungen: GB8, GB11
     - Rolle: erstellt: planende KI · prüft: Geschäftsführung
     - Ergebnis: Monatsbericht: belegte Objekte, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren
+  - **Schritt:** Gemeinschaftsarbeit: Bedarfe erfassen, Aufgaben festlegen, Anreize setzen _[offen]_
+    - Kommentar zu D36: nach dem St. Galler Managementmodell kommunale Arbeit mit Anreizen stark fördern, Bedarfe erfassen, festlegen und umsetzen. Ziel des Teams: wirtschaftlich denken und gemeinschaftliches Leben im Rahmen der X-PORTAL-Vision gestalten; daraus leitet sich die Lernkurve für die nächsten Nodes ab.
+    - Wann: ab Einzug; Konzept vor der Bestellung des Zugangssystems (AP-D5)
+    - Voraussetzung: Zugangssystem und Erfassung (AP-D5), Regeln für Pauschale und Abzug (D38)
+    - Blockiert: Abzug von der Pauschale, Lernkurve für die nächsten Nodes (AP-H2, AP-H3)
+    - Grundbestimmungen: GB10, GB11
+    - Rolle: legt fest: Geschäftsführung und Projektleitung · führt: Team
+    - Ergebnis: Liste der Gemeinschaftsaufgaben (Schneeräumen, Pflanzenpflege, Kapellenbau, Kehrwoche und weitere) mit Aufwand, Erfassung mit wenig Aufwand (voraussichtlich Cardano) und Anreizen; Essen gegen Mitarbeit (D36)
   - **Schritt:** Messreihen: Wärme, Holzfeuchte, Wasser, Strom, Internet _[später]_
     - Wann: ab Einzug, den ganzen ersten Winter
     - Voraussetzung: Messgeräte (A045 und weitere)
@@ -647,6 +673,15 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Rolle: entscheidet: Geschäftsführung · plant: Fachexperte Elektro
     - Ergebnis: Anlage in Betrieb
     - Anschaffungen: A028
+  - **Schritt:** Bergkapelle als Gruppenprojekt der Bewohner _[später]_
+    - Kommentar zu D34: In Planung und Texten nach außen gilt, dass Mitglieder und Bewohner in den ersten Phasen an der Bergkapelle als Gruppenprojekt beteiligt sind.
+    - Wann: Phase 1; Planung ab Einzug
+    - Voraussetzung: Entwurf, Material, Genehmigung; Mitwirkende aus Team und Mietern
+    - Blockiert: –
+    - Grundbestimmungen: GB2, GB9, GB11
+    - Rolle: verantwortet: Projektownerin der Bergkapelle (im Kommentar zu D34 benannt) · baut: Mitglieder und Bewohner
+    - Ergebnis: Kapelle als gemeinsames Projekt gebaut; Stunden als Gemeinschaftsarbeit erfasst (AP-F4)
+    - Anschaffungen: A117
 - **Ast:** H · Phase 2 und Projektende
   - **Schritt:** Ausbau nach Nachfrage _[später]_
     - Wann: nach Phase 1
@@ -661,7 +696,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Blockiert: nächster Node
     - Grundbestimmungen: GB11
     - Rolle: wertet aus: planende KI · entscheidet: Geschäftsführung
-    - Ergebnis: Go, Revise oder Stop je Hypothese
+    - Ergebnis: Go, Revise oder Stop je Hypothese; Lernkurve aus der Gemeinschaftsarbeit (AP-F4, D36)
   - **Schritt:** Übergabe an den nächsten Node _[später]_
     - Wann: nach Bewertung (AP-H2)
     - Voraussetzung: Standards und Regeln aus Node001
@@ -706,7 +741,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       - Fertig, wenn: Leistungsliste mit Preis oder Gegenleistung, von Geschäftsführung und Projektleitung entschieden
       - Rolle: bereitet vor: planende KI · entscheiden: Geschäftsführung und Projektleitung
       - Abhängig: O03, 2.4.5
-      - Stand: offen; Regeln aus D36 bis D38 umsetzen
+      - Stand: offen; Regeln aus D36 bis D38 umsetzen: Essen gegen Mitarbeit; Team mit freiem Wohnen und Essen plus Anteil am Node; Pauschale minus Gemeinschafts- und Projektleistungen (Kapelle, Garten, Robotik und Drohnen, DACH-Freelancing über die DT Agentur), weiter zu besprechen
       - Quelle: D36, D37, D38
   - **Ast:** 2.2 Standort und Bau
     - **Schritt:** 2.2.1 · Geologie _[entschieden]_
@@ -788,12 +823,12 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       - Abhängig: AP-F1
       - Stand: später
       - Quelle: M02
-    - **Schritt:** 2.3.6 · E-Bikes und Laden: wie viele, wo geladen wird, welche Leistung, wer zahlt _[offen]_
+    - **Schritt:** 2.3.6 · E-Bikes und Laden, erst ab Phase 1: wie viele, wo geladen wird, welche Leistung, wer zahlt _[später]_
       - Fertig, wenn: Last in 2.3.1 und Kosten im Register
       - Rolle: bereitet vor: planende KI · entscheidet: Geschäftsführung
       - Abhängig: 2.3.1
-      - Stand: offen
-      - Quelle: –
+      - Stand: später; in Phase 0 keine E-Bikes, dafür ein gemeinsames geländegängiges Fahrzeug (AP-C6)
+      - Quelle: D65
     - **Schritt:** 2.3.7 · Kritische Fehlerarten und zulässige Tests (FMEA) für Wärme, Wasser, Strom für die Arbeit, Brand und CO, Zugang _[offen]_
       - Fertig, wenn: Je Funktion Fehlerart, Wirkung, Erkennung, Maßnahme, Test; vom Fachexperten bewertet
       - Rolle: entwirft: planende KI · bewertet: Fachexperte
@@ -1561,7 +1596,7 @@ Verglichen wird die betriebsfähige Lösung für das Team mit Ausbaupfad. Die am
     - Möglichkeit C: Nach Nutzung — Passt zum Verkauf je Aufruf, zum Beispiel über Masumi.
 - **Entscheidung O11:** Rechtsform der Gesellschaft für Node001 und wo die Services abgewickelt werden (D44) _[offen]_
   - Geschäftsführung mit Anwälten · nach O05
-  - Node001 wird von einer ukrainischen Gesellschaft gehalten; Services voraussichtlich in einer lokalen Gesellschaft als Teil der Holding. Die Rechtsprechung ist noch zu klären.
+  - Node001 wird von einer ukrainischen Gesellschaft gehalten; Services voraussichtlich in einer lokalen Gesellschaft als Teil der Holding. Die Struktur muss abbilden, dass Mitwirkende Anteile am jeweiligen Node in fraktionalisiertem Eigentum bekommen, nicht an der Holding (D37). Die Rechtslage ist noch zu klären.
   - Möglichkeiten: Vorschlag KI, noch keine Entscheidung; sie gilt erst, wenn ihr eine wählt (D43).
   - Dient: X1
   - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
@@ -1637,12 +1672,13 @@ rollen anstatt namen nennen um später auch personen auswechseln zu können (rol
     - Möglichkeit A: Wie bisher, aber ohne stilles Gelten — KI bereitet vor, Fachexperte prüft Technik, Geschäftsführung und Projektleitung geben frei, die Geschäftsführung entscheidet über Bestellung und Betrag. Ein Vorschlag der KI gilt erst, wenn er auf dieser Seite gewählt ist. [entschieden]
   - **Entscheidung D44:** Organisation: wer ist was? _[entschieden]_
     - Gilt: X-PORTAL hält als Holding Lizenzen und Markenrechte. Die DT Agentur übernimmt Projekte in Deutschland, Österreich und der Schweiz. Node001 hält eine ukrainische Gesellschaft. Offen: wo Services am Node abgewickelt werden (voraussichtlich lokale Gesellschaft); Rechtsprüfung.
-    - Antwort 13.11.: ohne Wahl, Kommentar gilt
+    - Antwort 13.11.: per Kommentar gewählt: A (mit den Abweichungen aus dem Kommentar)
     - Kommentar 13.11.: A stimmt weitestgehen. unterschied in der unternehmensarchitektur und service"plattform" 
 node001 wird von einer ukraineischen unternehmung gehalten. dt agentur übernimmt deutsche/österreichische/schweizer projekte. x-portal ist die unternehmensarchitektur die lizenzen, markenrechte, ähnliches hält.
 zu klären wo services auf den nodes abgewickelt werden -> vorrausstichlich lokale unternehmungsform - als teil von x-portal holding (jurisprudenz ist noch zu klären)
+    - Möglichkeit A: Drei Einheiten — X-PORTAL Organisation (Dach, Plattform, Architektur), DT Agentur (Projekte aus Deutschland), Node001 als eigene Grundstücks- und Betriebsgesellschaft. Rechtsform je Einheit prüft ein Steuerberater. [entschieden]
   - **Entscheidung D45:** Ziel der Stufe 1: wer wohnt und arbeitet oben? _[entschieden]_
-    - Gilt: Team plus Mieter. Es gibt keinen Immobilienverkauf im klassischen Sinn.
+    - Gilt: Team plus Mieter: zuerst Team und einige Mieter, Remote-Freelancer mit einer Buchung von etwa einem Jahr. Es gibt keinen Immobilienverkauf im klassischen Sinn.
     - Antwort 13.11.: C
     - Kommentar 13.11.: Verkauf an Käufer später. -> wir verkaufen keine immobilien in der klassischen form
     - Möglichkeit C: Team plus Mieter — Zuerst Team und einige Mieter (Remote-Freelancer, Buchung etwa ein Jahr). [entschieden]
@@ -1695,14 +1731,15 @@ Zuerst Mieter gewinnen - ziel interessenten jetzt bekommen
     - Möglichkeit C: Neu rechnen lassen — Die KI rechnet beide Zahlen mit Quellen neu, dann entscheidet ihr. [entschieden]
 - **Ast:** Operativ: wer macht was, womit, wann (in Arbeitsreihenfolge)
   - **Entscheidung D54:** Geologie und Lageplan: wer, bis wann? _[entschieden]_
-    - Gilt: Der Geologiebericht liegt als KI-Zusammenfassung vor (XPB-N001-GEO-SUM-001, nicht geprüft). Fachprüfung und Freigabe fehlen.
+    - Gilt: Der Geologiebericht 34.11/26 liegt vor, mit KI-Zusammenfassung XPB-N001-GEO-SUM-001. Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026). Die Lage von Phase 0 ist seit dem 17.11.2026 voraussichtlich festgelegt.
     - Antwort 13.11.: ohne Wahl, Kommentar gilt
     - Kommentar 13.11.: geologie plan erhälsts du im nächsten prompt
   - **Entscheidung D55:** Bauphasen: ein Objekt nur für den Anfang? _[entschieden]_
     - Gilt: Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohn- und Arbeitsobjekte und Kommunalgebäude. Phase 2: Ausbau.
-    - Antwort 13.11.: ohne Wahl, Kommentar gilt
+    - Antwort 13.11.: per Kommentar gewählt: A (angepasst: Objekt statt Container, unterhalb der Herrenhaus-Fläche)
     - Kommentar 13.11.: A  Objekt nur Übergang Vorschlag KI
 Phase 0 Objekt für Team und Bauarbeiter unterhalb der Herrenhaus Fläche - skalierbare infrastruktur (wasser/strom/internet); Phase 1 Häuser (wohn und arbeitsobjekte) und Kommunalgebäude; Phase 2 Ausbau
+    - Möglichkeit A: Objekt nur Übergang — Phase 0: ein Objekt als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur; Phase 1 Wohn- und Arbeitsobjekte und Kommunalgebäude; Phase 2 Ausbau, die Herrenhaus-Fläche zuletzt (Wortlaut des Kommentars). [entschieden]
   - **Entscheidung D56:** Hausart in Phase 1 _[offen]_
     - Grundmodell bisher: leichter Transport, kommunal, gemeinschaftlich, autark; Häuser in Teilen (Rahmen oder Paneele), oben montiert. Die Wahl hängt an Geologie (D54) und Zufahrt (D57).
     - Antwort 13.11.: ohne Wahl, Kommentar gilt
@@ -1718,35 +1755,37 @@ Phase 0 Objekt für Team und Bauarbeiter unterhalb der Herrenhaus Fläche - skal
     - Möglichkeit C: Fertigmodul — Ganze Module mit Kran; nur wenn die Zufahrt es trägt.
   - **Entscheidung D57:** Zufahrt und Transport _[entschieden]_
     - Gilt: Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung. Gesamtplanung der Zufahrt in Phase 1 mit 3D-Modellen.
-    - Antwort 13.11.: ohne Wahl, Kommentar gilt
+    - Antwort 13.11.: per Kommentar gewählt: B
     - Kommentar 13.11.: B · voraussichtlich kleines Fahrzeug
 Keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch. für phase 0 - 3d modelle mit bauki entscheiden über die gesamtplanung in phase1
+    - Möglichkeit B: Erst kleines Fahrzeug — Keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch. [entschieden]
   - **Entscheidung D58:** Bauzeit und Termine _[entschieden]_
     - Gilt: Baubeginn 2027 als Ziel, nur nach Gates; kein Einzugstermin in der Werbung.
     - Antwort 13.11.: A
     - Möglichkeit A: Ziele mit Gates — Baubeginn 2027 ist Ziel, sobald der Boden frostfrei ist und die Gates erreicht sind. Kein Einzugstermin in der Werbung. [entschieden]
   - **Entscheidung D59:** Strom _[entschieden]_
     - Gilt: Netzanschluss beantragen, Generator als Reserve; Solar mit Speicher ab Phase 1.
-    - Antwort 13.11.: ohne Wahl, Kommentar gilt
+    - Antwort 13.11.: per Kommentar gewählt: A
     - Kommentar 13.11.: Netz plus Generator, Solar ab Phase 1 Vorschlag KI
 Phase 0: Netzanschluss beantragen und Generator als Reserve. Phase 1: Solar mit Speicher dazu.
+    - Möglichkeit A: Netz plus Generator, Solar ab Phase 1 — Phase 0: Netzanschluss und Generator als Reserve. Phase 1: Solar mit Speicher dazu. [entschieden]
   - **Entscheidung D60:** Wärme, und: Axt oder Säge? _[entschieden]_
     - Gilt: Mix: Ofen mit Plan zum Überwintern; eigene Bäume fällen (nass, müssen trocknen) und Holz kaufen; Holzlager in jedem Fall.
     - Antwort 13.11.: ohne Wahl, Kommentar gilt
     - Kommentar 13.11.: mix - bäume am grundstück vorhandne -> muss gefällt werden und ist nass. selbstholz ist möglich, ofen eine möglichkeit wärme zu erhalten mit plan zu überwintern - berücksichtige auch lagerung von holz - egal ob gekauft oder selbstproduziert
   - **Entscheidung D61:** Wasser _[entschieden]_
-    - Gilt: Grundwasser nutzen und zu Trinkwasser aufbereiten; Anfangsstufe bauen, Ausbau vorbereiten.
+    - Gilt: Anfangsstufe mit Tank für 10 Tage Sperre; Leitung und Boiler für den Ausbau vorbereitet. Das Grundwasser ist Rohwasser ohne Trinkwasserqualität; es wird für Trinken und Kochen zu Trinkwasser aufbereitet.
     - Antwort 13.11.: A
     - Kommentar 13.11.: grundwasser verfügbar -> als trinkwasser nicht vorhanden - muss aufbereitet werden, in planung berücksichtigen
     - Möglichkeit A: Anfangsstufe, Ausbau vorbereitet — Tank für 10 Tage Sperre in der Anfangsstufe; Leitung und Boiler für den Ausbau vorbereitet. [entschieden]
   - **Entscheidung D62:** Toilette und Abwasser _[entschieden]_
-    - Gilt: Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser fest eingebaut ab Phase 0.
+    - Gilt: Kläranlage sofort: Die dauerhafte Anlage kommt schon in Phase 0. Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser werden von vornherein mit der Infrastruktur geplant und eingebaut.
     - Antwort 13.11.: C
     - Kommentar 13.11.: toilette, abwasser, duschen, warmwasser, all das muss von vorne herein geplant und mit der infrastuktur eingebaut werden. anforderungen wie warmwasser, spülung (auch das man klopapier spülen kann),
 muss ab phase 0 verfügbar sein
     - Möglichkeit C: Kläranlage sofort — Die dauerhafte Anlage kommt schon in Phase 0. [entschieden]
   - **Entscheidung D63:** Internet _[entschieden]_
-    - Gilt: Bandbreite, Router und Anbieter vergleichen; steht in der Anschaffungsliste.
+    - Gilt: Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Objekte und steht in der Anschaffungsliste.
     - Antwort 13.11.: ohne Wahl, Kommentar gilt
     - Kommentar 13.11.: bandbreite/router/anbieter müssen geprüft und verlgichen werden, aufnehmen in objekte
   - **Entscheidung D64:** Kommunalgebäude und Garten _[entschieden]_
@@ -1754,12 +1793,12 @@ muss ab phase 0 verfügbar sein
     - Antwort 13.11.: A
     - Möglichkeit A: Zuerst in Phase 1 — Das Kommunalgebäude ist der erste Bau in Phase 1, vor den übrigen Objekten; Garten daneben. [entschieden]
   - **Entscheidung D65:** Mobilität _[entschieden]_
-    - Gilt: Gemeinsames Fahrzeug; keine E-Bikes in Phase 0.
+    - Gilt: Ein gemeinsames geländegängiges Fahrzeug; keine E-Bikes in Phase 0.
     - Antwort 13.11.: C
     - Kommentar 13.11.: - e bikes ausschließen für phase 0
     - Möglichkeit C: Gemeinsames Fahrzeug — Ein geländegängiges Fahrzeug für alle, dazu E-Bikes. [entschieden]
   - **Entscheidung D66:** Betrieb: alles muss laufen _[entschieden]_
-    - Gilt: Zielwerte je kritischer Funktion; Tabelle der Abnahme-Entscheidungen, die Projektleitung prüft und gibt frei.
+    - Gilt: Zielwerte je kritischer Funktion; Tabelle der Abnahme-Entscheidungen, die die Projektleitung nach Absprache prüft und freigibt.
     - Antwort 13.11.: A
     - Kommentar 13.11.: tabelle anlegen mit zu treffenden entscheidung zur abnahme, roman überprüft und gibt frei nach absprache
     - Möglichkeit A: Zielwerte je Funktion — Für jede kritische Funktion (SGMM F01–F12) Ausfallzeit, Notbetrieb und Reserve festlegen; Abnahme vor dem ersten Übernachten. [entschieden]
@@ -1775,7 +1814,7 @@ muss ab phase 0 verfügbar sein
     - Möglichkeit A: Repo als Quelle, Regeln der Baseline — Plan, Entscheidungen und Archiv im Repo; Ablage OneDrive für Dokumente; Kosten mit Internetpreisen und Quelle; Gliederung nach Maslow, Sinnen und SGMM. [entschieden]
 - **Ast:** Alltag oben (offen seit 04.11., Texte angepasst)
   - **Entscheidung D34:** Restaurant/Bar und Feuerstelle aus dem Zielbild: wann? _[entschieden]_
-    - Gilt: Feuerstelle in Phase 1, Gastronomie später. Die Bergkapelle wird als Gruppenprojekt der Bewohner geplant und so kommuniziert.
+    - Gilt: Feuerstelle in Phase 1, Gastronomie später. Die Bergkapelle ist ein Gruppenprojekt: Mitglieder und Bewohner bauen in den ersten Phasen mit; so wird es auch nach außen beschrieben. Verantwortlich ist eine Projektownerin der Bergkapelle (im Kommentar benannt).
     - Antwort 13.11.: B
     - Kommentar 13.11.: in der planung/wording für öffentlichkeit berücksichtigen das die mitglieder und bewhoner in den ersten phasen daran beteiligt sind die bergkapelle als gruppenprojekt daran beteiligt zu sein 
 projektowner ist mutter dering
@@ -1787,7 +1826,7 @@ projektowner ist mutter dering
     - Dient: Z1
     - Möglichkeit A: Eigene Sauna in Phase 1 — Am Kommunalgebäude, mit Kosten und Brandschutz. [entschieden]
   - **Entscheidung D36:** Essen oben: wie wird es bezahlt? _[entschieden]_
-    - Gilt: Essen gegen Mitarbeit. Gemeinschaftsarbeit (Schnee, Pflanzen, Kapelle, Kehrwoche) wird gefördert und mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano.
+    - Gilt: Essen gegen Mitarbeit. Nach dem St. Galler Managementmodell wird Gemeinschaftsarbeit mit Anreizen gefördert: Bedarfe erfassen, festlegen und umsetzen. Aufgaben wie Schneeräumen, Pflanzenpflege, Kapellenbau und Kehrwoche werden mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano. Ziel des Teams: wirtschaftlich denken und gemeinschaftliches Leben im Rahmen der X-PORTAL-Vision gestalten; daraus entsteht die Lernkurve für die nächsten Nodes.
     - Antwort 13.11.: C
     - Kommentar 13.11.: st gallen manamgent modell -> kommunale arbeit stark fördern mit incentives -> bedarfe erfassen, definieren und umsetzen 
 auch aufgaben wie schneeschippen, pflanzenpflege, kapellenaufbau, kehrwoche, etc - muss erfasst werden mit geringem aufwand (voraussichtlich access controll via cardano tech)
@@ -1795,14 +1834,14 @@ ziel vom team: wirtschaftlich denken, gemeinschafltiches leben gestalten im rahm
     - Dient: Z1
     - Möglichkeit C: Gegen Mitarbeit — Wer in Küche oder Garten mitarbeitet, isst ohne Zahlung; Stunden werden erfasst. [entschieden]
   - **Entscheidung D37:** Wie wird das Team oben bezahlt? _[entschieden]_
-    - Gilt: Wohnen und Essen frei plus Anteil; der Anteil liegt am jeweiligen Node, nicht an der Holding. Die Unternehmensstruktur muss das abbilden.
+    - Gilt: Mischung aus C und B: Wohnen und Essen frei, dazu ein Anteil. Mitwirkende bekommen keinen Anteil an der Holding, sondern am jeweiligen Node in fraktionalisiertem Eigentum. Die Unternehmensstruktur muss das abbilden.
     - Antwort 13.11.: C
     - Kommentar 13.11.: mix mit b vom anteil xportal in fraktionalisiertem eigentum
 beispiel: architektur -> menschen die mitwirken bekmmen nicht xportal holding anteile sondern am node001(wo sie jeweils sind) das muss auch in der architektur für die unternehmensstruktur berückscihtigt werden
     - Dient: Z1, Z3
     - Möglichkeit C: Wohnen und Essen frei, dazu Anteil — Wohnen und Essen oben frei, dazu ein kleinerer Anteil am Umsatz. [entschieden]
   - **Entscheidung D38:** Wie zahlen Siedler für Leistungen oben? _[entschieden]_
-    - Gilt: Monatliche Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen. Weiter zu besprechen.
+    - Gilt: Monatliche Pauschale. Davon abgezogen werden oben erbrachte Leistungen: Gemeinschaftsleistungen wie Kapelle und Gartenarbeit sowie Projektarbeit, zum Beispiel Robotik und Drohnen oder Freelancer-Leistungen für den DACH-Raum über die DT Agentur. Weiter zu besprechen.
     - Antwort 13.11.: A
     - Kommentar 13.11.: abzug der pauschale von oben erbrachten leistungen in projekt und kommunalleistungen wie kapelle und gartenarbeit 
 -> arbeit an proejkten wie eben robotik/drohnen oder freelancer leistungen für DACH region unter dt agency (muss weiter diskutiert werden)
@@ -2013,15 +2052,15 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
 
 - **Ast:** Was seit 13.11.2026 gilt
   - **Entscheidung:** D34 · Feuerstelle, Gastronomie, Kapelle _[entschieden]_
-    - Feuerstelle in Phase 1, Gastronomie später. Die Bergkapelle wird als Gruppenprojekt der Bewohner geplant und so kommuniziert.
+    - Feuerstelle in Phase 1, Gastronomie später. Die Bergkapelle ist ein Gruppenprojekt: Mitglieder und Bewohner bauen in den ersten Phasen mit; so wird es auch nach außen beschrieben. Verantwortlich ist eine Projektownerin der Bergkapelle (im Kommentar benannt).
   - **Entscheidung:** D35 · Sauna _[entschieden]_
     - Eigene Sauna in Phase 1.
   - **Entscheidung:** D36 · Essen und Gemeinschaftsarbeit _[entschieden]_
-    - Essen gegen Mitarbeit. Gemeinschaftsarbeit (Schnee, Pflanzen, Kapelle, Kehrwoche) wird gefördert und mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano.
+    - Essen gegen Mitarbeit. Nach dem St. Galler Managementmodell wird Gemeinschaftsarbeit mit Anreizen gefördert: Bedarfe erfassen, festlegen und umsetzen. Aufgaben wie Schneeräumen, Pflanzenpflege, Kapellenbau und Kehrwoche werden mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano. Ziel des Teams: wirtschaftlich denken und gemeinschaftliches Leben im Rahmen der X-PORTAL-Vision gestalten; daraus entsteht die Lernkurve für die nächsten Nodes.
   - **Entscheidung:** D37 · Bezahlung und Beteiligung des Teams _[entschieden]_
-    - Wohnen und Essen frei plus Anteil; der Anteil liegt am jeweiligen Node, nicht an der Holding. Die Unternehmensstruktur muss das abbilden.
+    - Mischung aus C und B: Wohnen und Essen frei, dazu ein Anteil. Mitwirkende bekommen keinen Anteil an der Holding, sondern am jeweiligen Node in fraktionalisiertem Eigentum. Die Unternehmensstruktur muss das abbilden.
   - **Entscheidung:** D38 · Pauschale für Leistungen _[entschieden]_
-    - Monatliche Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen. Weiter zu besprechen.
+    - Monatliche Pauschale. Davon abgezogen werden oben erbrachte Leistungen: Gemeinschaftsleistungen wie Kapelle und Gartenarbeit sowie Projektarbeit, zum Beispiel Robotik und Drohnen oder Freelancer-Leistungen für den DACH-Raum über die DT Agentur. Weiter zu besprechen.
   - **Entscheidung:** D42 · Vision und Mission _[entschieden]_
     - Mission und Globalziele bleiben der Ausgangspunkt. Aufgabe: mit Vision v0.4 und Zielblatt in eine durchgehende Logik bringen.
   - **Entscheidung:** D43 · Entscheidungsrechte _[entschieden]_
@@ -2029,7 +2068,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
   - **Entscheidung:** D44 · Organisation _[entschieden]_
     - X-PORTAL hält als Holding Lizenzen und Markenrechte. Die DT Agentur übernimmt Projekte in Deutschland, Österreich und der Schweiz. Node001 hält eine ukrainische Gesellschaft. Offen: wo Services am Node abgewickelt werden (voraussichtlich lokale Gesellschaft); Rechtsprüfung.
   - **Entscheidung:** D45 · Wer oben wohnt _[entschieden]_
-    - Team plus Mieter. Es gibt keinen Immobilienverkauf im klassischen Sinn.
+    - Team plus Mieter: zuerst Team und einige Mieter, Remote-Freelancer mit einer Buchung von etwa einem Jahr. Es gibt keinen Immobilienverkauf im klassischen Sinn.
   - **Entscheidung:** D46 · Kapital Node001 _[entschieden]_
     - Node001 wird mit Eigenkapital und VC oder Investments finanziert, verbunden mit wiederkehrenden Erlösen. Ein Verkauf an Einzelne ist abgewählt.
   - **Entscheidung:** D47 · Kapital Company _[entschieden]_
@@ -2045,7 +2084,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
   - **Entscheidung:** D53 · Zahlen für Investoren _[entschieden]_
     - Die KI rechnet beide Zahlen mit Quellen neu; danach Entscheidung.
   - **Entscheidung:** D54 · Geologie _[entschieden]_
-    - Der Geologiebericht liegt als KI-Zusammenfassung vor (XPB-N001-GEO-SUM-001, nicht geprüft). Fachprüfung und Freigabe fehlen.
+    - Der Geologiebericht 34.11/26 liegt vor, mit KI-Zusammenfassung XPB-N001-GEO-SUM-001. Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026). Die Lage von Phase 0 ist seit dem 17.11.2026 voraussichtlich festgelegt.
   - **Entscheidung:** D55 · Bauphasen _[entschieden]_
     - Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohn- und Arbeitsobjekte und Kommunalgebäude. Phase 2: Ausbau.
   - **Entscheidung:** D57 · Zufahrt und Transport _[entschieden]_
@@ -2057,17 +2096,17 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
   - **Entscheidung:** D60 · Wärme _[entschieden]_
     - Mix: Ofen mit Plan zum Überwintern; eigene Bäume fällen (nass, müssen trocknen) und Holz kaufen; Holzlager in jedem Fall.
   - **Entscheidung:** D61 · Wasser _[entschieden]_
-    - Grundwasser nutzen und zu Trinkwasser aufbereiten; Anfangsstufe bauen, Ausbau vorbereiten.
+    - Anfangsstufe mit Tank für 10 Tage Sperre; Leitung und Boiler für den Ausbau vorbereitet. Das Grundwasser ist Rohwasser ohne Trinkwasserqualität; es wird für Trinken und Kochen zu Trinkwasser aufbereitet.
   - **Entscheidung:** D62 · Sanitär und Abwasser _[entschieden]_
-    - Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser fest eingebaut ab Phase 0.
+    - Kläranlage sofort: Die dauerhafte Anlage kommt schon in Phase 0. Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser werden von vornherein mit der Infrastruktur geplant und eingebaut.
   - **Entscheidung:** D63 · Internet _[entschieden]_
-    - Bandbreite, Router und Anbieter vergleichen; steht in der Anschaffungsliste.
+    - Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Objekte und steht in der Anschaffungsliste.
   - **Entscheidung:** D64 · Kommunalgebäude _[entschieden]_
     - Kommunalgebäude ist der erste Bau in Phase 1.
   - **Entscheidung:** D65 · Mobilität _[entschieden]_
-    - Gemeinsames Fahrzeug; keine E-Bikes in Phase 0.
+    - Ein gemeinsames geländegängiges Fahrzeug; keine E-Bikes in Phase 0.
   - **Entscheidung:** D66 · Betrieb und Abnahme _[entschieden]_
-    - Zielwerte je kritischer Funktion; Tabelle der Abnahme-Entscheidungen, die Projektleitung prüft und gibt frei.
+    - Zielwerte je kritischer Funktion; Tabelle der Abnahme-Entscheidungen, die die Projektleitung nach Absprache prüft und freigibt.
   - **Entscheidung:** D67 · Team und Rollen _[entschieden]_
     - Rollen wie im Pitch. Der Architekt berät zu Architektur und Bau und ist kein Teammitglied.
   - **Entscheidung:** D68 · Arbeitsweise _[entschieden]_
