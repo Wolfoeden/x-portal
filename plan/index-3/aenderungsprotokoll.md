@@ -262,3 +262,7 @@ Entfallen:
 | Anbieter mit 60 Tagen | 01.03.2027 |
 | Angebot mit 12 m Länge bei gemessenen 6 m | „zu groß: Länge“ |
 | AP-A0 und AP-A1 abgehakt | AP-A4 erscheint unter „Jetzt dran“ |
+
+## 17.11.2026 (später) · Zielbild
+
+Wunsch von Roman: Das Bild unter „Zielbild“ in der Grundlage ist jetzt die Konzeptvisualisierung aus dem Whitepaper (`plan/whitepaper/bilder/image-6-1.jpg`). Die Nummern 1–4, 6 und 7 sind neu auf das Bild gesetzt. Restaurant und Bar (5) und die Sauna sind nicht im Bild; die Bildunterschrift sagt das.
