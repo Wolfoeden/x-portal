@@ -11,11 +11,11 @@ Richtwert Eigenkapital 10.000 €. Alle Beträge sind Annahmen aus dem Kostenreg
 | Nr | Posten | Stufe | Variante | UAH | Stunden | Risiko, das wegfällt | Quelle |
 |---|---|---|---|---|---|---|---|
 | A048 | Wasseranalyse im Labor | A | Kern | 3.500 | 3 | Wasser: bestimmt die Aufbereitung (5.625 bis über 45.000 UAH Unterschied). | Register |
-| A010 | Objekt-Skizze und Bau-KI-Planung | A | Kern | 5.000–6.300 | 40 | Kosten: Basis of Design für Objekt Phase 0 und Phase 1. | Register |
+| A010 | Skizze der Wohneinheiten und Bau-KI-Planung | A | Kern | 5.000–6.300 | 40 | Kosten: Basis of Design für Wohneinheit Phase 0 und Phase 1. | Register |
 | A029 | Heizlastberechnung | A | Kern | 810 | 2 | Wärme: Ofengröße und Holzmenge. | Register |
 | A057 | Abwasserplanung | A | Kern | 5.000–10.000 | 4 | Recht und Umwelt: Zulässigkeit am Hang mit Grundwasseraustritten. | Register |
 | X01 | Rechtsprüfung: ukrainische Gesellschaft, Miete, Holding | A | Kern | 50.000–150.000 | 10 | Recht: Struktur, in die ein Investor einsteigen kann (D44, D48). | Annahme KI, Angebot nötig |
-| X02 | Drei schriftliche Angebote je großem Posten | A | Kern | 0 | 40 | Kosten: macht aus Internet-Richtwerten ein belastbares Kostenband (Objekt, Brunnen, Kläranlage, Fundament, Netz). | kostet nur Zeit |
+| X02 | Drei schriftliche Angebote je großem Posten | A | Kern | 0 | 40 | Kosten: macht aus Internet-Richtwerten ein belastbares Kostenband (Wohneinheit, Brunnen, Kläranlage, Fundament, Netz). | kostet nur Zeit |
 | A018 | Netzanschluss beantragen | A | Optimum | 29.270–43.905 | 6 | Strom: lange Frist; mit Bescheid ist Leistung und Preis belegt. | Früherer Richtwert 2.927 UAH je kW, 10–15 kW; im Register offen |
 | A036 | Motorsäge | B | Kern | 9.999 | 0 |  | Register |
 | A037 | Schutzausrüstung für die Säge | B | Kern | 11.616 | 0 | Sicherheit und Haftung bei der Eigenleistung. | Register |
@@ -37,7 +37,7 @@ Richtwert Eigenkapital 10.000 €. Alle Beträge sind Annahmen aus dem Kostenreg
 | A049 | Brunnen bohren, 20–40 m | B | Erweitert | 36.000–80.000 | 8 | Wasser: beweist Menge und Qualität am Ort. Größtes offenes Risiko nach dem Boden. | Register |
 | X04 | Whitelist der künftigen Mieter einrichten und führen | C | Kern | 0 | 60 | Nachfrage: belegt, dass jemand oben wohnen und Miete zahlen will (D50; Index AP-A8). | kostet nur Zeit |
 | X05 | Erster bezahlter Kundenauftrag der Agentur | C | Kern | 0 | 0 | Umsatz: zeigt, dass die Company Geld verdient. | bringt Umsatz |
-| X06 | Selbstkostenrechnung je Objekt | C | Kern | 0 | 20 | Wirtschaftlichkeit: Miete und Pauschale aus echten Kosten (D49). | kostet nur Zeit |
+| X06 | Selbstkostenrechnung je Wohneinheit | C | Kern | 0 | 20 | Wirtschaftlichkeit: Miete und Pauschale aus echten Kosten (D49). | kostet nur Zeit |
 | X07 | Investorenunterlagen mit geprüften Zahlen | C | Kern | 0 | 40 | Vertrauen: Whitepaper und Deck ohne offene Kernfragen. | kostet nur Zeit |
 
 Nicht enthalten: Reisen und Unterkunft vor Ort während der Vor-Phase; Honorar des Architekten für Beratung; Gebühren für Fällgenehmigung und Anträge; Gründungskosten der ukrainischen Gesellschaft; Versicherung für die Eigenleistung.

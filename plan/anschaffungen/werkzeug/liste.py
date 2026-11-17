@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Anschaffungsliste Node001: Objekte und Gegenstände, über deren Anschaffung zu entscheiden ist.
+"""Anschaffungsliste Node001: Wohneinheiten und Gegenstände, über deren Anschaffung zu entscheiden ist.
 
 Grundlage sind die Antworten vom 13.11.2026 auf der Entscheidungsseite (Wahl UND Kommentar; wo der Kommentar die Wahl
 ändert, gilt der Kommentar) und der Geologiebericht 34.11/26 (Fachprüfung liegt vor, Kommentar 15.11.2026).
@@ -25,42 +25,42 @@ B = [
   ['D54', 'D55', 'D56'], 'Geschäftsführung nach Vorschlag Fachexperte Geotechnik', 'Fachexperte Geotechnik', [
   ('Liegt vor: Fachprüfung des Geologieberichts', '0', 'D', 'Liegt vor (Kommentar vom 15.11.2026); nichts anzuschaffen.', 'Kopie in den Plan legen (Index 3.0, AP-A1)', '–', 'vorhanden'),
   ('Liegt vor: Zusatzerkundung für Zufahrt, Stützkonstruktion und Hauptgebäude', '0', 'D', 'Liegt vor (Kommentar vom 15.11.2026); nichts anzuschaffen.', 'Kopie in den Plan legen und für Phase 1 auswerten (Index 3.0, AP-A1)', '–', 'vorhanden'),
-  ('Liegt vor: Vermessung', '0', 'D', 'Liegt vor (Kommentar vom 15.11.2026); Absteckung von Objekt Phase 0, Leitungen und Wegen folgt mit der Bauplanung.', 'Kopie in den Plan legen (Index 3.0, AP-A1); Absteckung als Eigenleistung', 'je Bauabschnitt', 'vorhanden'),
+  ('Liegt vor: Vermessung', '0', 'D', 'Liegt vor (Kommentar vom 15.11.2026); Absteckung von Wohneinheit Phase 0, Leitungen und Wegen folgt mit der Bauplanung.', 'Kopie in den Plan legen (Index 3.0, AP-A1); Absteckung als Eigenleistung', 'je Bauabschnitt', 'vorhanden'),
   ('Hangseitiger Entwässerungsgraben mit Rinnen oder Sammelbehälter', '0', 'D', 'Oberflächenwasser geordnet ableiten (Empfehlung Gutachter).', 'Bauweise, Länge, Material, Firma mit Kleinbagger', 'Länge des Hangs oberhalb der Baufläche', ''),
-  ('Fundament für Objekt Phase 0', '0', 'D', 'Leichte eingeschossige Gebäude können laut Bericht auf IGE-3 gründen; hangseitig als Stütze bemessen.', 'Punkt-, Streifen- oder Schraubfundament; was ein Fachexperte für den Standort zulässt', 'Größe und Gewicht des Objekts', ''),
+  ('Fundament für Wohneinheit Phase 0', '0', 'D', 'Leichte eingeschossige Gebäude können laut Bericht auf IGE-3 gründen; hangseitig als Stütze bemessen.', 'Punkt-, Streifen- oder Schraubfundament; was ein Fachexperte für den Standort zulässt', 'Größe und Gewicht der Wohneinheit', ''),
   ('Stützkonstruktion am Hang', '0–1', 'D', 'Hangseitiger Fundamentbereich als Stützkonstruktion (Empfehlung Gutachter).', 'Gabionen, Betonwinkel oder Holz; Statik; Firma', 'Geländeschnitt an der Baufläche', ''),
   ('Baumfällung und Rodung der Baufläche', '0', 'KD', 'Bäume auf dem Grundstück müssen gefällt werden (Kommentar D60); das Holz wird Brennholz.', 'Fällgenehmigung in der Ukraine; Fällfirma oder selbst; Abtransport der Stämme', 'Zahl der Bäume auf Baufläche und Trasse', ''),
   ('Kleinbagger mit Fahrer', '0', 'M', 'Gräben für Entwässerung, Wasser, Abwasser und Strom.', 'Miete je Tag mit Fahrer; ob er die Zufahrt schafft', 'Meter Graben', ''),
  ]),
- ('Objekt Phase 0', 'Kommentar D55: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Die Bauart ist offen (D56: Holz, Beton, Glas, Metall; eine Bau-KI bewertet).',
+ ('Wohneinheit Phase 0', 'Kommentar D55: eine Wohneinheit für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Die Bauart ist offen (D56: Holz, Beton, Glas, Metall; eine Bau-KI bewertet).',
   ['D55', 'D56', 'D45'], 'Geschäftsführung', 'Fachexperte Bau', [
-  ('Wohn- und Arbeitsobjekt für Team und Bauarbeiter', '0', 'KM', 'Schlafen, arbeiten, Sanitär; ganzjährig bewohnbar bei −20 °C.', 'Bauarten vergleichen: Wohncontainer, Modul, Holzrahmen; Dämmung, Maße, schwerstes Teil, Lieferzeit, Rückkauf oder Miete', 'Zahl der Personen (Team plus Bauarbeiter)', 'Früher gefunden: gedämmter Wohncontainer ab 444.000 UAH (Listenpreis, nicht bestätigt)'),
-  ('Planung der Objekte mit Bau-KI und 3D-Modell', '0', 'D', 'Kommentar D56 und D57: Bau-KI plant und bewertet; 3D-Modelle für die Gesamtplanung in Phase 1.', 'Welche Software oder welcher Dienst; welche Eingangsdaten (Geländemodell, Geologie)', 'einmal', ''),
-  ('Betten und Matratzen', '0', 'K', 'Schlafplatz je Person.', 'Maße passend zum Objekt', 'je Person', ''),
+  ('Wohneinheit mit Arbeitsplatz für Team und Bauarbeiter', '0', 'KM', 'Schlafen, arbeiten, Sanitär; ganzjährig bewohnbar bei −20 °C.', 'Bauarten vergleichen: Wohncontainer, Modul, Holzrahmen; Dämmung, Maße, schwerstes Teil, Lieferzeit, Rückkauf oder Miete', 'Zahl der Personen (Team plus Bauarbeiter)', 'Früher gefunden: gedämmter Wohncontainer ab 444.000 UAH (Listenpreis, nicht bestätigt)'),
+  ('Planung der Wohneinheiten mit Bau-KI und 3D-Modell', '0', 'D', 'Kommentar D56 und D57: Bau-KI plant und bewertet; 3D-Modelle für die Gesamtplanung in Phase 1.', 'Welche Software oder welcher Dienst; welche Eingangsdaten (Geländemodell, Geologie)', 'einmal', ''),
+  ('Betten und Matratzen', '0', 'K', 'Schlafplatz je Person.', 'Maße passend zur Wohneinheit', 'je Person', ''),
   ('Schreibtische und Arbeitsstühle', '0', 'K', 'Bezahlte digitale Arbeit oben.', 'Ergonomie, zerlegbar für den Transport', 'je Arbeitsplatz', ''),
   ('Bildschirme', '0', 'K', 'Arbeitsplatz.', 'Stromverbrauch, Größe', 'je Arbeitsplatz', ''),
   ('Schränke und Regale', '0', 'K', 'Kleidung, Vorrat, Werkzeug.', 'zerlegbar', 'je Person und Raum', ''),
-  ('LED-Beleuchtung innen und außen', '0', 'K', 'Licht im Objekt und auf den Wegen zu Holzlager und Technik.', 'Außenleuchten frostfest; Bewegungsmelder', 'Räume und Wegemeter', ''),
+  ('LED-Beleuchtung innen und außen', '0', 'K', 'Licht in der Wohneinheit und auf den Wegen zu Holzlager und Technik.', 'Außenleuchten frostfest; Bewegungsmelder', 'Räume und Wegemeter', ''),
   ('Bettwäsche, Decken, Schlafsäcke für den Winter', '0', 'K', 'Reserve, falls die Heizung ausfällt.', 'Komfortbereich bis −20 °C', 'je Person', ''),
   ('Waschmaschine', '0', 'K', 'Wäsche oben waschen.', 'Wasser- und Stromverbrauch; Frostschutz', '1', ''),
  ]),
  ('Strom', 'Kommentar D59: Netzanschluss beantragen, Generator als Reserve; Solar mit Speicher ab Phase 1.',
   ['D59'], 'Geschäftsführung', 'Fachexperte Elektro', [
   ('Netzanschluss', '0', 'A', 'Hauptversorgung.', 'Zuständiger Netzbetreiber; Leistung in kW; Frist; Entfernung zur nächsten Leitung', 'Lastliste Phase 0 und Ausbau', 'Früher gefunden: etwa 2.927 UAH je kW, ohne Leitung'),
-  ('Leitung vom Netz zum Grundstück (Erdkabel oder Freileitung)', '0', 'D', 'Verbindung vom Anschlusspunkt bis zum Objekt.', 'Wer baut; Kabelquerschnitt für den Ausbau', 'Meter bis zum Anschlusspunkt', ''),
+  ('Leitung vom Netz zum Grundstück (Erdkabel oder Freileitung)', '0', 'D', 'Verbindung vom Anschlusspunkt bis zur Wohneinheit.', 'Wer baut; Kabelquerschnitt für den Ausbau', 'Meter bis zum Anschlusspunkt', ''),
   ('Zählerschrank und Hauptverteilung', '0', 'KD', 'Skalierbare Verteilung für spätere Häuser.', 'Reserveplätze für Phase 1; Überspannungsschutz', '1', ''),
-  ('Unterverteilung, Sicherungen, FI-Schutzschalter', '0', 'KD', 'Sicherheit im Objekt.', 'Normen vor Ort', 'je Objekt', ''),
-  ('Erdung und Blitzschutz', '0', 'D', 'Schutz von Personen und Technik am Hang.', 'Erder bei felsigem Untergrund', 'je Objekt', ''),
+  ('Unterverteilung, Sicherungen, FI-Schutzschalter', '0', 'KD', 'Sicherheit in der Wohneinheit.', 'Normen vor Ort', 'je Wohneinheit', ''),
+  ('Erdung und Blitzschutz', '0', 'D', 'Schutz von Personen und Technik am Hang.', 'Erder bei felsigem Untergrund', 'je Wohneinheit', ''),
   ('Generator', '0', 'K', 'Reserve bei Netzausfall.', 'Leistung nach Lastliste; Inverter ja oder nein; Winterstart; Lautstärke', '1', 'Früher gefunden: 3 kW für 18.749–32.599 UAH'),
   ('Umschalter Netz/Generator', '0', 'KD', 'Sicher umschalten, ohne ins Netz zurückzuspeisen.', 'manuell oder automatisch', '1', ''),
-  ('Kraftstoffkanister und Lagerort', '0', 'K', 'Kraftstoff für mehrere Tage.', 'zulässige Lagermenge; Abstand zum Objekt', 'Tage Reserve × Verbrauch', ''),
+  ('Kraftstoffkanister und Lagerort', '0', 'K', 'Kraftstoff für mehrere Tage.', 'zulässige Lagermenge; Abstand zur Wohneinheit', 'Tage Reserve × Verbrauch', ''),
   ('Außenkabel und Steckdosen im Außenbereich', '0', 'K', 'Baustrom und Technik draußen.', 'Schutzart, Kältefestigkeit', 'Meter', ''),
   ('USV für Internet und Server', '0', 'K', 'Überbrückt die Umschaltzeit.', 'Laufzeit bei der Last von Router, Starlink, Server', '1', ''),
   ('Solaranlage mit Speicher', '1', 'KD', 'Ab Phase 1 (D59).', 'Ertrag im Winter am Nordosthang; Größe; Montageort', 'Lastliste Phase 1', 'Früher gefunden: 4,8 kWp mit 4,8 kWh für 189.900 UAH'),
  ]),
  ('Wärme und Holz', 'Kommentar D60: Mix. Ofen als eine Möglichkeit, mit Plan zum Überwintern; Bäume am Grundstück müssen gefällt werden und sind nass; Lagerung von Holz in jedem Fall, ob gekauft oder selbst gemacht.',
   ['D60'], 'Geschäftsführung', 'Fachexperte Heizung und Schornstein', [
-  ('Heizlastberechnung für das Objekt', '0', 'D', 'Ohne Heizlast keine Ofengröße.', 'Wer rechnet; Auslegung −20 °C', 'einmal je Objekt', ''),
+  ('Heizlastberechnung für die Wohneinheit', '0', 'D', 'Ohne Heizlast keine Ofengröße.', 'Wer rechnet; Auslegung −20 °C', 'einmal je Wohneinheit', ''),
   ('Holzofen mit Kochplatte', '0', 'K', 'Wärme und Reserve zum Kochen.', 'Leistung passend zur Heizlast; raumluftunabhängig; Speichermasse', 'je beheizter Einheit', 'Früher gefunden: 6.000–13.000 UAH'),
   ('Schornstein, Rauchrohr, Dachdurchführung', '0', 'KD', 'Sicherer Abzug.', 'System passend zur Bauart; Abnahme', 'je Ofen', ''),
   ('Hitzeschutz für Boden und Wand', '0', 'K', 'Brandschutz am Ofen.', 'Abstände laut Hersteller', 'je Ofen', ''),
@@ -77,7 +77,7 @@ B = [
   ('Sägebock und Hackklotz', '0', 'KS', 'Sicher sägen und spalten.', '', '1', ''),
   ('Bügelsäge', '0', 'K', 'Kleine Schnitte ohne Motorsäge.', '', '1', ''),
   ('Holzfeuchtemesser', '0', 'K', 'Nur trockenes Holz verbrennen (unter 20 %).', '', '1', ''),
-  ('Schubkarre oder Holzschlitten', '0', 'K', 'Holz vom Lager zum Objekt, auch bei Schnee.', '', '1–2', ''),
+  ('Schubkarre oder Holzschlitten', '0', 'K', 'Holz vom Lager zur Wohneinheit, auch bei Schnee.', '', '1–2', ''),
   ('Ascheeimer aus Metall mit Deckel', '0', 'K', 'Asche sicher entsorgen.', '', 'je Ofen', ''),
  ]),
  ('Wasser', 'Kommentar D61: Grundwasser ist verfügbar, aber kein Trinkwasser; es muss aufbereitet werden. Anfangsstufe bauen, Ausbau vorbereiten.',
@@ -89,16 +89,16 @@ B = [
   ('Wassertank', '0', 'K', 'Vorrat für Sperre und Ausfall.', 'Größe für 10 Tage; frostfreier Standort; Bodenlast', 'Personen × Liter × Tage', 'Früher gefunden: 1.000 l für 7.000–13.000 UAH'),
   ('Trinkwasseraufbereitung', '0', 'KD', 'Aus Rohwasser (Grundwasser) Trinkwasser für Trinken und Kochen machen (D61); zentral (Point-of-Entry) oder an der Küchenzapfstelle (Point-of-Use).', 'Stufen nach Laborwerten: Sedimentfilter, Aktivkohle, Enteisenung, UV oder Umkehrosmose; Wartung', '1 Anlage, skalierbar', ''),
   ('Ersatzfilter und UV-Lampe', '0', 'K', 'Betrieb der Aufbereitung.', 'Wechselintervall', 'laufend', ''),
-  ('Wasserleitung frostfrei verlegt', '0', 'D', 'Vom Brunnen zum Objekt, ohne Heizkabel.', 'Frosttiefe am Standort; Rohrmaterial; Dimension für den Ausbau', 'Meter', ''),
+  ('Wasserleitung frostfrei verlegt', '0', 'D', 'Vom Brunnen zur Wohneinheit, ohne Heizkabel.', 'Frosttiefe am Standort; Rohrmaterial; Dimension für den Ausbau', 'Meter', ''),
   ('Trinkwasserkanister als Notvorrat', '0', 'K', 'Reserve, wenn Pumpe oder Aufbereitung ausfällt.', '', 'Personen × Tage', ''),
  ]),
  ('Sanitär und Abwasser', 'Kommentar D62: Toilette, Abwasser, Duschen, Warmwasser von vornherein planen und mit der Infrastruktur einbauen; Spülung, bei der man Klopapier spülen kann; ab Phase 0 verfügbar.',
   ['D62'], 'Geschäftsführung', 'Fachexperte Sanitär, Behörde', [
   ('Abwasserplanung und Genehmigung', '0', 'D', 'Der Gutachter verlangt Schutz von Oberflächen- und Grundwasser vor Abwasser.', 'Zuständige Behörde; was am Hang mit Grundwasseraustritten zulässig ist', 'einmal', ''),
   ('Kleinkläranlage oder Mehrkammergrube mit Versickerung', '0', 'KD', 'Abwasser aus Toilette, Dusche, Küche; im Plan sind lokale Klärbauwerke eingezeichnet.', 'Typ; Größe für den Ausbau; Betrieb im Winter; Entleerung über die Zufahrt', 'Personen jetzt und später', ''),
-  ('Abwasserleitungen frostfrei mit Gefälle', '0', 'D', 'Vom Objekt zur Anlage.', 'Rohr für Papier geeignet (Durchmesser, Gefälle)', 'Meter', ''),
+  ('Abwasserleitungen frostfrei mit Gefälle', '0', 'D', 'Von der Wohneinheit zur Anlage.', 'Rohr für Papier geeignet (Durchmesser, Gefälle)', 'Meter', ''),
   ('Spültoilette mit Spülkasten', '0', 'K', 'Klopapier spülbar (D62).', 'Wasserspar-Spülung', 'je Sanitäreinheit', ''),
-  ('Dusche mit Armatur', '0', 'K', 'Warm duschen im Objekt.', 'Sparbrause', 'je Sanitäreinheit', ''),
+  ('Dusche mit Armatur', '0', 'K', 'Warm duschen in der Wohneinheit.', 'Sparbrause', 'je Sanitäreinheit', ''),
   ('Waschbecken mit Armatur', '0', 'K', 'Hände und Zähne.', '', 'je Sanitäreinheit', ''),
   ('Warmwasserbereiter', '0', 'K', 'Warmwasser ab Phase 0.', 'Elektroboiler, Holz oder Kombi; Größe; Stromlast', 'Personen', 'Früher gefunden: 80 l für 4.399–5.387 UAH'),
   ('Lüftung im Sanitärraum', '0', 'K', 'Feuchte und Schimmel vermeiden.', '', 'je Sanitärraum', ''),
@@ -110,7 +110,7 @@ B = [
   ('Starlink mit Abo', '0', 'K', 'Reserve; kein Mobilfunk oben.', 'Tarif für die Adresse; Schneeheizung der Antenne', '1', 'Früher gefunden: Mini 20.820–25.900 UAH, etwa 2.950 UAH im Monat'),
   ('Antennenmast und Halterung', '0', 'K', 'Freie Sicht, schneefrei.', '', '1', ''),
   ('Router mit zwei Zugängen und automatischer Umschaltung', '0', 'K', 'Wechsel zwischen Haupt- und Reserveleitung.', 'Dual-WAN, VPN', '1', ''),
-  ('WLAN-Zugangspunkte', '0', 'K', 'Abdeckung in Objekt und später im Gelände.', 'Außengeräte frostfest', 'Fläche', ''),
+  ('WLAN-Zugangspunkte', '0', 'K', 'Abdeckung in Wohneinheit und später im Gelände.', 'Außengeräte frostfest', 'Fläche', ''),
   ('Netzwerkkabel, Switch, Leerrohre', '0', 'K', 'Skalierbares Netz für Phase 1.', 'Leerrohre gleich mit in die Gräben', 'Meter', ''),
   ('Server oder NAS mit Festplatten', '0', 'K', 'Daten lokal; Verbindung mit Servern in Deutschland (D47: nur bei VC-Funding).', 'Datenschutz für personenbezogene Daten', '1', 'Früher gefunden: NAS etwa 404–415 € ohne Platten'),
   ('Datensicherung außer Haus', '0', 'D', 'Schutz vor Verlust.', 'Standort der Daten', '1', ''),
@@ -127,9 +127,9 @@ B = [
  ]),
  ('Zufahrt, Schnee und Transport', 'Kommentar D57: in Phase 0 voraussichtlich kleines Fahrzeug, keine Befestigung am Anfang; die Gesamtplanung folgt in Phase 1.',
   ['D57'], 'Geschäftsführung', 'Fachexperte Bau', [
-  ('Transport nach oben mit kleinem Fahrzeug', '0', 'D', 'Material und Objekt hochbringen.', 'Wer vor Ort Traktor oder Allrad-Transporter mit Anhänger hat; Nutzlast; Preis je Fahrt', 'Tonnen und Fahrten', ''),
+  ('Transport nach oben mit kleinem Fahrzeug', '0', 'D', 'Material und Wohneinheit hochbringen.', 'Wer vor Ort Traktor oder Allrad-Transporter mit Anhänger hat; Nutzlast; Preis je Fahrt', 'Tonnen und Fahrten', ''),
   ('Räumvertrag für die Zufahrt im Winter', '0', 'D', 'Zufahrt passierbar halten.', 'Bauer mit Traktor; Preis je Einsatz; Reaktionszeit', 'Schneetage', ''),
-  ('Schneeschaufeln und Schneeschieber', '0', 'K', 'Wege am Objekt.', '', 'je Person', 'Früher gefunden: 270–427 UAH'),
+  ('Schneeschaufeln und Schneeschieber', '0', 'K', 'Wege am Wohneinheit.', '', 'je Person', 'Früher gefunden: 270–427 UAH'),
   ('Schneefräse', '0', 'K', 'Falls Handräumen nicht reicht.', 'Räumbreite; Lagerung', '0–1', ''),
   ('Streugut mit Lagerkiste', '0', 'K', 'Glätte auf Wegen und Treppen.', 'Splitt oder Sand lokal', 'Wegemeter', ''),
   ('Eispickel und Dachschneeschieber', '0', 'K', 'Eis und Dachlast.', '', '1', ''),
@@ -157,12 +157,12 @@ B = [
   ['D66'], 'Geschäftsführung', 'Fachexperte Brandschutz', [
   ('Rauchmelder', '0', 'K', 'Brand früh erkennen.', '', 'je Raum', ''),
   ('CO-Melder', '0', 'K', 'Pflicht bei Ofen und Generator.', '', 'je Raum mit Ofen', 'Früher gefunden: 580–4.249 UAH'),
-  ('Feuerlöscher', '0', 'K', 'Erster Löschangriff.', 'Typ und Größe; Prüffrist', 'je Objekt und Technikraum', ''),
+  ('Feuerlöscher', '0', 'K', 'Erster Löschangriff.', 'Typ und Größe; Prüffrist', 'je Wohneinheit und Technikraum', ''),
   ('Löschdecke', '0', 'K', 'Küche.', '', '1', ''),
-  ('Erste-Hilfe-Ausrüstung', '0', 'K', 'Verletzungen, auch Schnittwunden von der Säge.', 'Inhalt für abgelegene Orte', 'je Objekt und Fahrzeug', ''),
+  ('Erste-Hilfe-Ausrüstung', '0', 'K', 'Verletzungen, auch Schnittwunden von der Säge.', 'Inhalt für abgelegene Orte', 'je Wohneinheit und Fahrzeug', ''),
   ('Erste-Hilfe-Kurs', '0', 'D', 'Rettung dauert oben länger.', 'Kurs für abgelegene Orte', 'je Person', ''),
   ('Notfallkommunikation', '0', 'K', 'Hilfe rufen ohne Mobilfunk und bei Internetausfall.', 'Satelliten-Notrufgerät oder Funk', '1', ''),
-  ('Versicherungen', '0', 'D', 'Haftung, Unfall, Objekt.', 'Was in der Ukraine für Ausländer und Baustellen möglich ist', 'einmal', ''),
+  ('Versicherungen', '0', 'D', 'Haftung, Unfall, Wohneinheit.', 'Was in der Ukraine für Ausländer und Baustellen möglich ist', 'einmal', ''),
   ('Notvorrat: Lebensmittel, Wasser, Kerzen, Batterien', '0', 'K', 'Sperre der Zufahrt.', '', 'Personen × Tage', ''),
  ]),
  ('Gemeinschaft in Phase 1', 'D64: Kommunalgebäude zuerst. D34: Feuerstelle in Phase 1; Kommentar: Bewohner sind am Bau der Bergkapelle als Gruppenprojekt beteiligt, Projektowner ist Mutter Dering. D35: eigene Sauna in Phase 1.',
@@ -283,7 +283,7 @@ def build(R, ans):
 <div class="w">
 <header><p class="eyebrow">Node001 Beregniza · Anschaffungen · Stand {STAND}</p>
 <h1>Was angeschafft werden muss</h1>
-<p>{len(R)} Objekte und Gegenstände, über deren Anschaffung zu entscheiden ist. Grundlage sind die Antworten vom 13.11. auf der <a href="{ENT}">Entscheidungsseite</a>, mit ihren Kommentaren. Die Liste nennt keine neuen Preise: Recherche bitte je Zeile eintragen (aufklappen).</p>
+<p>{len(R)} Wohneinheiten und Gegenstände, über deren Anschaffung zu entscheiden ist. Grundlage sind die Antworten vom 13.11. auf der <a href="{ENT}">Entscheidungsseite</a>, mit ihren Kommentaren. Die Liste nennt keine neuen Preise: Recherche bitte je Zeile eintragen (aufklappen).</p>
 <p class="note">Mengen stehen als „wovon die Menge abhängt“, bis Personenzahl und Lastliste feststehen. Positionen aus der Geologie beruhen auf dem Bericht 34.11/26; Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026). „Früher gefunden“ sind Internetpreise aus der Suche vom 12.11., nur als Anhalt. Funktionsketten: <a href="{SGMM}">SGMM-Seite</a>.</p>
 <p class="note" id="status">Lädt …</p></header>
 <div class="bar" role="group" aria-label="Filter"><button type="button" data-phase-btn="" aria-pressed="true">Alle Phasen</button><button type="button" data-phase-btn="0" aria-pressed="false">Phase 0</button><button type="button" data-phase-btn="1" aria-pressed="false">Phase 1</button><button type="button" id="open" aria-pressed="false">Nur offene</button><input id="such" type="search" placeholder="Suchen, z. B. Pumpe" aria-label="Suchen"><span class="cnt" id="cnt"></span></div>''']

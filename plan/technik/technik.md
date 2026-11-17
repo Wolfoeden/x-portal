@@ -13,6 +13,9 @@ Feste Kosten je Monat ohne Microsoft 365: 248.33 €. Microsoft 365 Business Pre
 | IT07 | Büro | Microsoft 365 Business Premium | E-Mail, Teams, OneDrive, Office, Sicherheit und Geräteverwaltung |  | Nutzer und Monat | Listenpreis etwa 20–22 € netto je Nutzer und Monat im Jahresabo (Händlerlisten 08/2026; Microsoft-Seite am 17.11.2026 nicht erreichbar); Betrag aus der Rechnung übernehmen | Rechnung; Mandant mit Nutzern |
 | IT08 | Web | Domain | x-portal.eu | 40,0 € | Jahr | Angabe der Projektleitung vom 17.11.2026 | Registrierung |
 | IT09 | Plattform | Plattform x-portal.eu | KI-Matching und Freelancer-Profile; läuft auf IT03 und IT04 |  | Monat | eigene Entwicklung; Kosten stecken in IT03 und IT04 | Live-URL, Nutzerzahlen, Repository |
+| IT10 | Internet | Internetanschluss Ukraine | Hauptanschluss am Node001 über einen lokalen Internetanbieter (D63) |  | Monat | Kommentar der Projektleitung im Index vom 17.11.2026 | Vertrag, gemessene Bandbreite |
+| IT11 | Internet | Starlink | Redundanter Zugang am Node001 für Ausfälle des Hauptanschlusses (D63) |  | Monat | Kommentar der Projektleitung im Index vom 17.11.2026 | Gerät, Vertrag, Test bei Schnee |
+| IT12 | Internet | Internetanschluss Deutschland | Anschluss in Deutschland über den Anbieter Teledata |  | Monat | Kommentar der Projektleitung im Index vom 17.11.2026 | Vertrag |
 
 ## Erlösquellen
 

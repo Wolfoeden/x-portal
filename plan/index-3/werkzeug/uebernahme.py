@@ -10,20 +10,20 @@ TE = {
  '2.1': ('Geschäftsmodell und Geld', [
   ('2.1.3', 'Geldfluss Phase 0 und Chargen: welches Geld wann kommt (Eigenkapital, Investoren, Miete) und wann es gebraucht wird', 'Monatstabelle, jede Zeile mit Quelle', 'rechnet: planende KI · prüft: Geschäftsführung', 'O03, AP-C4, AP-C5', 'offen; Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung)', 'D46, D47, D69, D71', 'open'),
   ('2.1.4', 'Kapazität der Geschäftsführung: ab wann Vollzeit, und wie sie finanziert ist', 'Angabe der Geschäftsführung mit Monat und Finanzierung', 'Geschäftsführung', '2.6.1', 'offen; der frühere Betrag stammt aus dem zurückgenommenen Log und ist neu zu bestätigen', 'früher E03, E67', 'open'),
-  ('2.1.5', 'Kapital für die Firma', 'entschieden', 'Geschäftsführung', 'O11', 'Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur die Pflichtangaben gegenüber Kapitalgebern', 'D47, Kommentar 13.11.2026', 'done'),
+  ('2.1.5', 'Kapital für die Firma', 'entschieden', 'Geschäftsführung', 'O11', 'Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Wohneinheiten mit Investoren. Förderung wird nicht öffentlich gezeigt, nur die Pflichtangaben gegenüber Kapitalgebern', 'D47, Kommentar 13.11.2026', 'done'),
   ('2.1.6', 'Paket vor dem Investment: was vor dem Investorengespräch bezahlt werden muss und woher das Geld kommt', 'Betrag je Posten und Monat, von der Geschäftsführung bestätigt', 'stellt auf: planende KI · entscheidet: Geschäftsführung', 'AP-A5, O05', 'offen; ohne Geologie-Fachprüfung, Zusatzerkundung und Vermessung, die vorliegen (Kommentar 15.11.2026)', 'D69, D71; Seite „Vor dem Investment“', 'open'),
   ('2.1.7', 'Matching der BW Bank für IT in Deutschland: Rechner, Server, Hardware', 'Betrag und Bedingungen schriftlich; Liste der IT mit Kosten; Antwort der Anwälte zur Datenverbindung', 'Geschäftsführung · IT-Liste: planende KI', 'O05', 'offen; Server oben nur bei VC-Funding mit Deutschland verbunden', 'D47', 'open'),
   ('2.1.8', 'Geld und Leistungen oben: wie das Team bezahlt wird und wie Mieter für Leistungen zahlen (Essen, Strom, Wasser, Internet, Sauna, Coworking, Betrieb)', 'Leistungsliste mit Preis oder Gegenleistung, von Geschäftsführung und Projektleitung entschieden', 'bereitet vor: planende KI · entscheiden: Geschäftsführung und Projektleitung', 'O03, 2.4.5', 'offen; Regeln aus D36 bis D38 umsetzen: Essen gegen Mitarbeit; Team mit freiem Wohnen und Essen plus Anteil am Node; Pauschale minus Gemeinschafts- und Projektleistungen (Kapelle, Garten, Robotik und Drohnen, DACH-Freelancing über die DT Agentur), weiter zu besprechen', 'D36, D37, D38', 'open'),
  ]),
  '2.2': ('Standort und Bau', [
   ('2.2.1', 'Geologie', 'Bericht und Fachprüfung liegen vor', 'Geschäftsführung', '–', 'Bericht 34.11/26 liegt vor (Grundlage, O01); Fachprüfung, Zusatzerkundung und Vermessung liegen vor, noch nicht im Plan abgelegt (AP-A1)', 'Kommentar 15.11.2026', 'done'),
-  ('2.2.2', 'Lageplan Phase 0 und Ausbau: Lage der Objekte, Zufahrt, Leitungen, Entwässerung, freie Flächen', 'Lageplan auf Grundlage des Detailplans, vom Fachexperten geprüft', 'Architekt (Beratung) mit Fachexperte Bau', 'lage, AP-A4', 'Bereich für Phase 0 und erste Wohneinheiten voraussichtlich festgelegt (17.11.2026); Lageplan im Einzelnen offen', 'D55, D56; Antwort 17.11.2026', 'open'),
-  ('2.2.3', 'Objekt Phase 0 gewählt: in Teilen geliefert, über die einspurige, enge Straße transportierbar', 'Angebot mit Preis, Lieferform, größtem und schwerstem Teil, Montageaufwand', 'Projektleitung · entscheidet: Geschäftsführung', 'hausart, AP-A0, AP-C1', 'offen', 'D56, GB1; Kommentar 17.11.2026', 'open'),
+  ('2.2.2', 'Lageplan Phase 0 und Ausbau: Lage der Wohneinheiten, Zufahrt, Leitungen, Entwässerung, freie Flächen', 'Lageplan auf Grundlage des Detailplans, vom Fachexperten geprüft', 'Architekt (Beratung) mit Fachexperte Bau', 'lage, AP-A4', 'Bereich für Phase 0 und erste Wohneinheiten voraussichtlich festgelegt (17.11.2026); Lageplan im Einzelnen offen', 'D55, D56; Antwort 17.11.2026', 'open'),
+  ('2.2.3', 'Wohneinheit Phase 0 gewählt: in Teilen geliefert, über die einspurige, enge Straße transportierbar', 'Angebot mit Preis, Lieferform, größtem und schwerstem Teil, Montageaufwand', 'Projektleitung · entscheidet: Geschäftsführung', 'hausart, AP-A0, AP-C1', 'offen', 'D56, GB1; Kommentar 17.11.2026', 'open'),
   ('2.2.4', 'Zufahrt und Transport, im Sommer und im Winter', 'Streckenprotokoll; Spediteur bestätigt schriftlich, dass die Teile auf kleinem Fahrzeug hochkommen; Winterräumung geregelt', 'Projektleitung', 'AP-A0, AP-C3', 'Phase 0 entschieden: kleines Fahrzeug, keine Befestigung am Anfang (D57); Strecke noch nicht gemessen', 'D57; Kommentar 17.11.2026', 'open'),
   ('2.2.5', 'Belege zum Grundstück', 'Kopien von Eigentumsnachweis, Detailplan und Bebauungsplan im Plan; Klärung, ob die Katasternummer für alle Teile gilt', 'liefert: Geschäftsführung · legt ab: Projektleitung', 'AP-A1', 'Grundstück im Besitz, Detailplan und Bebauungsplan liegen vor (Kommentar 12.11.2026); Kopien fehlen im Plan', 'Kommentar 12.11.2026 im Whitepaper', 'open'),
   ('2.2.6', 'Genehmigung: was aufgestellt und bewohnt werden darf', 'Schriftliche Auskunft', 'Architekt (Beratung), Anwälte Ukraine', 'lage, O05', 'offen', '–', 'open'),
   ('2.2.7', 'Leitungen geplant: Wasser, Abwasser, Strom, Internet', 'Leitungsplan', 'Fachexperten', 'AP-A4', 'offen', 'D59 bis D63', 'open'),
-  ('2.2.8', 'Fundament und Aufstellen', 'Objekte stehen auf dem Fundament, abgenommen', 'Fachexperte Bau', 'AP-D3, G1', 'wartet', 'Geologiebericht 34.11/26', 'wait'),
+  ('2.2.8', 'Fundament und Aufstellen', 'Wohneinheiten stehen auf dem Fundament, abgenommen', 'Fachexperte Bau', 'AP-D3, G1', 'wartet', 'Geologiebericht 34.11/26', 'wait'),
  ]),
  '2.3': ('Versorgung', [
   ('2.3.1', 'Ressourcenbilanz für Team und erste Mieter: Energie (auch E-Bikes), Wärme, Wasser, Kommunikation; je Ressource Last, Quelle, Reserve und Ausfallfolge', 'Tabelle mit Ausbaustufen, Werte vom Fachexperten bestätigt', 'planende KI aus M02 · bestätigt: Fachexperte', 'AP-C5 (Größe der Charge 1)', 'teilweise; die M02-Mengen gelten für 3 Personen und werden für Team plus erste Mieter neu gerechnet', 'M02', 'open'),
@@ -37,7 +37,7 @@ TE = {
  '2.4': ('Menschen', [
   ('2.4.1', 'Team oben: Rollen, Plätze, Finanzierung; je Person, womit sie Geld verdient, Geräte, Strom und Internet', 'Liste je Rolle', 'Geschäftsführung und Projektleitung', '–', 'offen', '–', 'open'),
   ('2.4.2', 'Whitelist der künftigen Mieter', 'Whitelist läuft, Einträge gezählt', 'Projektleitung', 'AP-A8, 2.5.4', 'noch nicht eingerichtet (Kommentar 12.11.2026: „ist nicht vorhanden, kommt erst“)', 'D50; Antwort 17.11.2026', 'open'),
-  ('2.4.3', 'Werbematerial für Mietinteressenten: Video und Bilder, die Objekte realitätsnah auf dem Grundstück', 'Video und Bilder fertig; der Jurist hat die Texte gesehen', 'Projektleitung mit KI', '2.5.4', 'in Arbeit', '–', 'run'),
+  ('2.4.3', 'Werbematerial für Mietinteressenten: Video und Bilder, die Wohneinheiten realitätsnah auf dem Grundstück', 'Video und Bilder fertig; der Jurist hat die Texte gesehen', 'Projektleitung mit KI', '2.5.4', 'in Arbeit', '–', 'run'),
   ('2.4.4', 'Kommunalgebäude: Arbeitsplatz, Küche, Sanitär, Gemüsegarten', 'Planung mit Kosten', 'Geschäftsführung mit Architekt (Beratung)', 'AP-G2', 'erster Bau in Phase 1', 'D64', 'later'),
   ('2.4.5', 'Betrieb oben: wer Holz, Wasser, Schnee und Wartung übernimmt', 'Liste mit Aufgaben und Rollen', 'Geschäftsführung und Projektleitung', '2.4.1', 'offen', '–', 'open'),
   ('2.4.6', 'Was es vor Ort gibt: Holz, Lebensmittel, Reparatur, Kraftstoff, Handwerker, Transport', 'Liste mit Anbieter, Preis, Entfernung, im Winter erreichbar', 'ausführende KI · prüft: Projektleitung', '–', 'offen', '–', 'open'),
@@ -64,7 +64,7 @@ TE = {
 
 ENTFALLEN = [
  ('2.1.1 Angebot je Gruppe: Kaufpreis, Pacht, Miete', 'kein Verkauf (D45, D48); ersetzt durch Selbstkosten, Miete und Pauschale (O03, D49)'),
- ('2.1.2 Kosten je Plot', 'ersetzt durch Selbstkosten je Objekt (O03, D49) und Make-or-Buy (Ast 4)'),
+ ('2.1.2 Kosten je Plot', 'ersetzt durch Selbstkosten je Wohneinheit (O03, D49) und Make-or-Buy (Ast 4)'),
  ('2.5.6 Technik für den Verkauf: Token, Pachtvertrag, Zahlung', 'kein Verkauf (D45, D48); Token über Cardano nach Rechtsprüfung (AP-A6, AP-B2)'),
  ('2.6.3 Das Team oben liefert alle Projekte; eigenes Produkt nur Agenten', 'Entscheidung aus dem zurückgenommenen Log (E70); bei Bedarf neu entscheiden'),
  ('2.6.5 Kapital über die Chain: fraktionalisiertes Land', 'ersetzt durch Token über Cardano nach Rechtsprüfung (AP-A6, AP-B2; D37, D48)'),
@@ -116,8 +116,8 @@ Deutschland
 4. Was darf Werbung für einen Ort in der Ukraine versprechen (Reisewarnung, Lage)?
 
 Ukraine
-5. Dürfen Ausländer Objekte auf dem Grundstück nutzen oder mieten; was gilt für die Node-Gesellschaft als Vermieter?
-6. Gilt ein vorgefertigtes Objekt dort als Gebäude oder als bewegliche Sache; was braucht es zum Aufstellen und Bewohnen (2.2.6)?
+5. Dürfen Ausländer Wohneinheiten auf dem Grundstück nutzen oder mieten; was gilt für die Node-Gesellschaft als Vermieter?
+6. Gilt eine vorgefertigte Wohneinheit dort als Gebäude oder als bewegliche Sache; was braucht es zum Aufstellen und Bewohnen (2.2.6)?
 7. Mietvertrag: Form, Sprache, Steuern, Meldepflichten.
 8. Wo werden Miete und Pauschale versteuert, in der Ukraine oder in Deutschland?
 9. Einnahmen in USDM über Masumi: Wie werden sie verbucht und versteuert; braucht der Umtausch in Euro eine Erlaubnis?

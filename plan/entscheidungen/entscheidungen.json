@@ -94,7 +94,7 @@
       {
        "v": "A",
        "titel": "Die fünf größten Posten",
-       "text": "Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung.",
+       "text": "Wohneinheit Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung.",
        "ki": true
       },
       {
@@ -106,7 +106,7 @@
       {
        "v": "C",
        "titel": "Phase 1 gleich mit",
-       "text": "Zusätzlich Richtangebote für Wohn- und Arbeitsobjekte und das Kommunalgebäude.",
+       "text": "Zusätzlich Richtangebote für Wohneinheiten mit Arbeitsplatz und das Kommunalgebäude.",
        "ki": false
       }
      ],

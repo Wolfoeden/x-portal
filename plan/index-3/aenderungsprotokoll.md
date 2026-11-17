@@ -310,3 +310,26 @@ Wunsch von Roman: Das Bild unter „Zielbild“ in der Grundlage ist jetzt die K
 | 7 | Gemeinsamer Weg | Weg vorne |
 
 **Neue Regel im README:** Markierungen auf Bildern werden über ein Raster gesetzt und je Punkt im Ausschnitt geprüft, bevor veröffentlicht wird.
+
+## 17.11.2026 (später) · Wohneinheiten, Mission, Preis, Internet
+
+**Eingänge:**
+- Drei Kommentare auf der SGMM-Seite von 08:54 (Mission, Begriff, Preis). Ich hatte sie in der letzten Runde übersehen.
+- Ein neuer Kommentar im Index zum Internet.
+- Die Datenbank ist unverändert.
+
+| Eingang | Was gilt jetzt | Wo geändert |
+|---|---|---|
+| „wir nennen es WOHNEINHEITEN“ | Überall heißt es Wohneinheit, nicht Objekt, Container oder Tiny House. Die Artikel sind angepasst, „Arbeitsobjekte“ heißen jetzt „Wohneinheiten mit Arbeitsplatz“. | Alle Generatoren (230 Stellen). Das Kostenregister-Excel bleibt unverändert und wird beim Einlesen umbenannt. Neues Deck v6 mit 7 Ersetzungen. |
+| „keine Verkäufe von Häusern, Containern, Tiny Houses … wir vermieten sie“ | Es wird nichts verkauft. Die Wohneinheiten werden vermietet, die Miete baut auf den Selbstkosten je Wohneinheit auf (D45, D48, D49). | Index Abgleich W20, SGMM W20 und D49 |
+| „die Mission ist im Index 3.0 angegeben“ | Mission und Globalziele stehen in der Grundlage des Index und gelten für alle Seiten. Abgleich W21 ist erledigt, W01 angepasst. D42 gilt per Kommentar als B (Vision v0.4 plus Mission). | Index Grundlage und Abgleich, SGMM W21 und Normativ-Zeile mit Wortlaut der Mission, Entscheidungsseite D42 |
+| Internet: Starlink redundant, normaler Anbieter in der Ukraine, Teledata in Deutschland | Hauptanschluss über einen lokalen Anbieter, Starlink als Reserve für Ausfälle, in Deutschland Teledata. Die Kosten sind offen. | Index Resilienz und Versorgung Internet, Make-or-Buy Internet, Ast 9 neu IT10 bis IT12; Entscheidungsseite D63; SGMM Technologie und F05; Whitepaper ein Satz |
+
+**Nebenbei korrigiert:**
+- Die SGMM-Seite nannte beim Strom noch „Netz mit Batterie oder Generator (E35)“. Jetzt steht dort D59.
+- Die Internetkarte im Index nannte als Reserve „zweiter Anschluss nach dem Vergleich“. Das widersprach D63.
+
+**Prüfung:**
+- `pruefe_alle.py` sucht jetzt zusätzlich nach Objekt, offener Mission und „zweiter Anschluss“.
+- Ergebnis: keine Stelle mit altem Stand auf den sechs Seiten.
+- Screenshots: Internet im Index, SGMM W19–W21, D42.

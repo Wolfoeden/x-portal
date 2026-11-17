@@ -27,7 +27,7 @@
   },
   {
    "sphaere": "Technologie",
-   "text": "Netz mit Batterie oder Generator, dazu Solar (E35); eigener Internetanschluss, Starlink als Reserve, kein Mobilfunk oben (E49). KI heute; Robotik, Drohnen und mechanische Systeme perspektivisch, nicht im MVS.",
+   "text": "Netzanschluss mit Generator als Reserve, Solar ab Phase 1 (D59); Internet über einen lokalen Anbieter, Starlink als redundante Reserve für Ausfälle, kein Mobilfunk oben (D63, E49); in Deutschland Teledata (Kommentar vom 17.11.2026). KI heute; Robotik, Drohnen und mechanische Systeme perspektivisch, nicht im MVS.",
    "status": "DOCUMENTED"
   }
  ],
@@ -35,7 +35,7 @@
   {
    "rolle": "Mitarbeitende (Team oben)",
    "stand": "Zwei bis drei Personen mit Tagesabläufen; Gleitzeit 9–14 Uhr, Jour fixe und Sport Pflicht (Vorgabe 05.11.2026).",
-   "stufe1": "Wohnen und arbeiten ab Phase 0 im Objekt",
+   "stufe1": "Wohnen und arbeiten ab Phase 0 in der Wohneinheit",
    "status": "DOCUMENTED",
    "node001": "REQUIRED"
   },
@@ -70,7 +70,7 @@
   {
    "rolle": "Bauarbeiter",
    "stand": "Bleiben längere Zeit oben.",
-   "stufe1": "Phase 0 und 1, im Objekt unterhalb der Herrenhaus-Fläche (D55)",
+   "stufe1": "Phase 0 und 1, in der Wohneinheit unterhalb der Herrenhaus-Fläche (D55)",
    "status": "DOCUMENTED",
    "node001": "REQUIRED"
   },
@@ -83,14 +83,14 @@
   },
   {
    "rolle": "Partner und Lieferanten",
-   "stand": "Anbieter für Objekt, Brunnen, Kläranlage, Fundament; Bauer (Holz, Räumen), Elektriker, Spediteur; Architekt in beratender Funktion (D67).",
+   "stand": "Anbieter für Wohneinheit, Brunnen, Kläranlage, Fundament; Bauer (Holz, Räumen), Elektriker, Spediteur; Architekt in beratender Funktion (D67).",
    "stufe1": "Ab Vor-Phase: drei Angebote je großem Posten",
    "status": "IN WORK",
    "node001": "REQUIRED"
   },
   {
    "rolle": "Investoren",
-   "stand": "Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Objekte mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47).",
+   "stand": "Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Wohneinheiten mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47).",
    "stufe1": "Nach dem Paket „Vor dem Investment“",
    "status": "IN WORK",
    "node001": "REQUIRED"
@@ -110,7 +110,7 @@
     "punkte": [
      "Vision v0.4 (Baseline Abschnitt 2) und Kerndefinition (Abschnitt 18)",
      "Disziplin: Node001 trägt sich aus realer Nutzung; Genome- und IP-Erlöse sind Upside",
-     "Mission und Globalziele nach D42, Grundlage im Index 3.0 (W01, W21)"
+     "Mission (D42, Index 3.0): „Wir schaffen und vernetzen menschenzentrierte Innovationshubs, in denen Menschen leben, arbeiten und gemeinsam neue Lösungen entwickeln.“ Globalziele in dieser Rangfolge: wirtschaftliche Tragfähigkeit und Resilienz, internationale Skalierung, gesellschaftlicher Nutzen (W01, W21)"
     ],
     "xp_sys": "XP-SYS-001, 004",
     "status": "DOCUMENTED"
@@ -146,7 +146,7 @@
      "Vier Erlösstufen: Kundenprojekte, Technologielösungen, Nutzung und Services, System-Skalierung",
      "Zwei Investment Cases: Company und Node001",
      "Roadmap: Marktnachweis → Site Truth → Product & Economics → Financing & Permissions → Build & Operate → Learn & Replicate",
-     "Bauphasen: ein Objekt als Übergang, danach Objekte und Kommunalgebäude (D55)",
+     "Bauphasen: eine Wohneinheit als Übergang, danach Wohneinheiten und Kommunalgebäude (D55)",
      "Mietmodell mit Selbstkosten als Basis; kein klassischer Immobilienverkauf (D48, D49)"
     ],
     "xp_sys": "XP-SYS-004",
@@ -209,24 +209,24 @@
  "bauphasen": [
   {
    "phase": "Phase 0",
-   "titel": "Objekt als Übergang",
-   "was": "Ein Wohn- und Arbeitsobjekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet (D55). Spültoilette, Dusche, Warmwasser und Abwasser fest eingebaut (D62). Netzanschluss mit Generator als Reserve (D59).",
+   "titel": "Wohneinheit als Übergang",
+   "was": "Eine Wohneinheit mit Arbeitsplatz für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet (D55). Spültoilette, Dusche, Warmwasser und Abwasser fest eingebaut (D62). Netzanschluss mit Generator als Reserve (D59).",
    "fuer": "Team (2–3) und Bauarbeiter (Zahl OPEN)",
    "kosten": "Teilsumme im Kostenregister für ein Modul mit 18 m² und zwei Personen; 69 von 137 Positionen ohne Betrag. Siehe „Vor dem Investment“.",
    "status": "ASSUMPTION"
   },
   {
    "phase": "Phase 1",
-   "titel": "Objekte und Kommunalgebäude",
-   "was": "Zuerst das Kommunalgebäude (D64), dann Wohn- und Arbeitsobjekte für Mieter und Team. Material offen (Holz, Beton, Glas, Metall); eine Bau-KI plant nach den lokalen Gegebenheiten (D56). Solar mit Speicher, Feuerstelle, Sauna, Bergkapelle als Gruppenprojekt (D59, D34, D35).",
+   "titel": "Wohneinheiten und Kommunalgebäude",
+   "was": "Zuerst das Kommunalgebäude (D64), dann Wohneinheiten mit Arbeitsplatz für Mieter und Team. Material offen (Holz, Beton, Glas, Metall); eine Bau-KI plant nach den lokalen Gegebenheiten (D56). Solar mit Speicher, Feuerstelle, Sauna, Bergkapelle als Gruppenprojekt (D59, D34, D35).",
    "fuer": "Mieter, Team",
-   "kosten": "Nicht gerechnet. Selbstkosten je Objekt aus dem Business Case (D49, OD-008).",
+   "kosten": "Nicht gerechnet. Selbstkosten je Wohneinheit aus dem Business Case (D49, OD-008).",
    "status": "OPEN"
   },
   {
    "phase": "Phase 2",
    "titel": "Ausbau",
-   "was": "Weitere Objekte nach Nachfrage. Die Herrenhaus-Fläche wird zuletzt bebaut.",
+   "was": "Weitere Wohneinheiten nach Nachfrage. Die Herrenhaus-Fläche wird zuletzt bebaut.",
    "fuer": "Alle Rollen",
    "kosten": "OPEN",
    "status": "OPEN"
@@ -235,10 +235,10 @@
  "change_requests": [
   {
    "id": "D55",
-   "betrifft": "Container oder Objekte",
+   "betrifft": "Begriff: Wohneinheiten",
    "heute": "Container sind die Tiny Houses der Käufer und bleiben (E59).",
-   "vorschlag": "Ein Objekt als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche; danach Objekte und Kommunalgebäude.",
-   "anlass": "Antwort mit Kommentar, 13.11.2026",
+   "vorschlag": "Eine Wohneinheit als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche; danach Wohneinheiten und Kommunalgebäude. Der Begriff ist Wohneinheit.",
+   "anlass": "Antwort mit Kommentar, 13.11.2026; Begriff: Kommentar vom 17.11.2026",
    "status": "DOCUMENTED"
   },
   {
@@ -253,8 +253,8 @@
    "id": "D49",
    "betrifft": "Preis",
    "heute": "Etwa 30.000 € je Käufer (E78).",
-   "vorschlag": "Selbstkostenpreis je Objekt statt Verkaufspreis; kein Immobilienverkauf im klassischen Sinn.",
-   "anlass": "Kommentar, 13.11.2026",
+   "vorschlag": "Es wird nichts verkauft, weder Häuser noch Container. Die Wohneinheiten werden vermietet; die Miete baut auf den Selbstkosten je Wohneinheit auf.",
+   "anlass": "Kommentar, 13.11.2026; Kommentar vom 17.11.2026",
    "status": "DOCUMENTED"
   },
   {
@@ -402,7 +402,7 @@
     ],
     [
      "Lösung",
-     "Netz mit Batterie oder Generator, dazu Solar (E35)"
+     "Netzanschluss mit Generator als Reserve, Solar ab Phase 1 (D59); Batterie nur als Überbrückung (S03)"
     ],
     [
      "Betriebsmittel",
@@ -647,11 +647,11 @@
     ],
     [
      "Lösung",
-     "Eigener Internetanschluss, Starlink als Reserve; kein Mobilfunk oben (E49)"
+     "Eigener Anschluss über einen lokalen Internetanbieter, Starlink als redundante Reserve für Ausfälle; kein Mobilfunk oben (D63, E49, Kommentar vom 17.11.2026)"
     ],
     [
      "Beschaffung",
-     "Anbieter für den Hauptanschluss: OPEN; Starlink für die Adresse auf starlink.com prüfen"
+     "Lokaler Anbieter für den Hauptanschluss, welcher: OPEN; Starlink für die Adresse auf starlink.com prüfen"
     ],
     [
      "Werkzeug",
@@ -722,7 +722,7 @@
     ],
     [
      "Lösung",
-     "Phase 0 Kochplatte am Ofen und Kühlschrank im Objekt; ab Phase 1 Küche im Kommunalgebäude (E74)"
+     "Phase 0 Kochplatte am Ofen und Kühlschrank in der Wohneinheit; ab Phase 1 Küche im Kommunalgebäude (E74)"
     ],
     [
      "Betriebsmittel",
@@ -748,7 +748,7 @@
    "pos": [
     {
      "gegenstand": "Kühlschrank",
-     "menge": "je Objekt",
+     "menge": "je Wohneinheit",
      "uah_von": null,
      "uah_bis": null,
      "quelle": "nicht gesucht",
@@ -1070,13 +1070,13 @@
   },
   {
    "id": "F12",
-   "name": "Wohnen und Arbeiten (Objekt)",
+   "name": "Wohnen und Arbeiten (Wohneinheit)",
    "ebene": "Physische Welt",
    "anf": "D55, D56",
    "sys": "XP-SYS-001, 004, 006",
    "rel": "REQUIRED",
    "status": "OPEN",
-   "ziel": "Phase 0: ein Objekt für Team und Bauarbeiter; ab Phase 1 Wohn- und Arbeitsobjekte zur Miete.",
+   "ziel": "Phase 0: eine Wohneinheit für Team und Bauarbeiter; ab Phase 1 Wohneinheiten mit Arbeitsplatz zur Miete.",
    "kette": [
     [
      "Funktion",
@@ -1131,27 +1131,27 @@
  "abgleich_neu": [
   {
    "id": "W19",
-   "thema": "Container oder Objekte",
+   "thema": "Begriff: Wohneinheiten",
    "bisher": "Container sind die Tiny Houses der Käufer und bleiben (E59)",
-   "jetzt": "Ein Objekt als Übergang, danach Objekte und Kommunalgebäude",
-   "loesung": "Entschieden in D55 am 13.11.2026",
+   "jetzt": "Wir nennen es Wohneinheiten: eine Wohneinheit als Übergang, danach Wohneinheiten und Kommunalgebäude",
+   "loesung": "Entschieden in D55 am 13.11.2026; Begriff: Kommentar vom 17.11.2026",
    "status": "DOCUMENTED"
   },
   {
    "id": "W20",
    "thema": "Preis",
    "bisher": "Etwa 30.000 € je Käufer (E78)",
-   "jetzt": "Selbstkostenpreis je Objekt; kein klassischer Verkauf",
-   "loesung": "Entschieden in D49 am 13.11.2026; Zahlen aus OD-008",
+   "jetzt": "Es wird nichts verkauft, weder Häuser noch Container. Die Wohneinheiten werden vermietet; Miete aus den Selbstkosten je Wohneinheit",
+   "loesung": "D45, D48, D49; Kommentar vom 17.11.2026; Zahlen aus OD-008",
    "status": "DOCUMENTED"
   },
   {
    "id": "W21",
    "thema": "Mission",
    "bisher": "Baseline v0.4 nennt keine Mission",
-   "jetzt": "Mission und Globalziele bleiben Ausgangspunkt (Kommentar D42)",
-   "loesung": "Harmonisierung offen",
-   "status": "DECISION REQUIRED"
+   "jetzt": "Mission und Globalziele stehen im Index 3.0 unter „Grundlage: Mission, Ziele, Ort“ und sind der Ausgangspunkt (D42)",
+   "loesung": "Kommentar vom 17.11.2026",
+   "status": "DOCUMENTED"
   }
  ]
 }

@@ -6,7 +6,7 @@ Bezugsrahmen ist die Reference Architecture v0.4-WB1 (`quellen/reference-archite
 
 | Nr | Thema | Bisher im Index | Baseline v0.4 und Deck | Was jetzt gilt | Status | Im Index |
 |---|---|---|---|---|---|---|
-| W01 | Vision und Mission | Vision der Leitlinie P01; Mission „Innovationshubs“ (E28) | Neue Vision (Abschnitt 2), keine Mission, Kerndefinition (Abschnitt 18) | Vision v0.4 steht in der Grundlage des Baums. Ob eine Mission bleibt, ist offen. | OPEN | angepasst |
+| W01 | Vision und Mission | Vision der Leitlinie P01; Mission „Innovationshubs“ (E28) | Neue Vision (Abschnitt 2), keine Mission, Kerndefinition (Abschnitt 18) | Mission und Globalziele stehen in der Grundlage des Baums und sind der Ausgangspunkt (D42); Vision v0.4 steht daneben (Kommentar vom 17.11.2026). | DOCUMENTED | angepasst 17.11. |
 | W02 | Was „X-PORTAL“ heißt | „Dachfirma“ (Vorgabe 05.11.), „Firma“ | X-PORTAL ist das sozio-technische Gesamtsystem; die Firma heißt X-PORTAL Organisation bzw. Company; Systemgrenze zum Node-Betrieb offen (OD-001) | Zielblatt X1 heißt „X-PORTAL Organisation (Company)“. Wo die DT Agentur steht, nennen Baseline und Deck nicht. | DECISION REQUIRED | angepasst |
 | W03 | Kapital für Node001 | „Kein Investor“ (E04); der Ort trägt sich aus Käufergeld, Pre-Seed nur für die Firma (E57) | Zwei getrennte Investment Cases; Node001 als eigener Project-/Asset-Case mit Kapital für Infrastruktur und ersten Bauabschnitt | Entschieden in D46 am 13.11.2026: Verkaufsmodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen. | DOCUMENTED | entschieden 13.11. |
 | W04 | Produkt- und Preismodell | Hausverkauf als Token über die Blockchain, Grund pachten, etwa 30.000 € je Plot, Verkauf ab Januar 2027 (E50, E52, E78) | „Miete bzw. geeignetes Eigentums-/Nutzungsmodell“, Produktmix und Preis werden validiert; kein öffentliches Angebot von Kryptowerten | Entschieden in D45, D48, D49, D50 am 13.11.2026: kein klassischer Immobilienverkauf, zuerst Mieter, Selbstkostenpreis, Tokenisierung erst nach Klärung. | DOCUMENTED | entschieden 13.11. |
@@ -24,9 +24,9 @@ Bezugsrahmen ist die Reference Architecture v0.4-WB1 (`quellen/reference-archite
 | W16 | Erlöse | Agenten je Aufruf über Masumi (E56); Einstieg ab 490 € (E76, abgelöst durch E83) | Vier Erlösstufen: Kundenprojekte (heute), KI-Lösungen (in Entwicklung), Nutzung und Services Node001, System-Skalierung (später) | Preismodell bleibt offen (E83); Masumi ist eine Option, keine Aussage im Deck. | OPEN | markiert |
 | W17 | Versionsstand der Infografik | – | Infografik „Integrierte Managementarchitektur · SGMM II“ nennt Reference Architecture v0.2; Baseline und Deck nennen v0.4 | Widerspruch innerhalb der neuen Unterlagen: Infografik auf v0.4 heben, bevor sie rausgeht. | DECISION REQUIRED | offen |
 | W18 | Kürzel H1 bis H8 | H01 bis H09 sind Anforderungen der Stufe Grundbedürfnisse (M02) | H1 bis H8 sind die PoC-Hypothesen | Verwechslungsgefahr. Im Index heißen Hypothesen immer H1 bis H8 ohne Null, Anforderungen H01 bis H09. | DOCUMENTED | markiert |
-| W19 | Container oder Objekte | Die Container sind die Tiny Houses der Käufer und bleiben stehen (E59, D21 B) | Kommentar zu D55: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur; danach Wohn- und Arbeitsobjekte und Kommunalgebäude | Entschieden in D55 am 13.11.2026. Material und Bauart plant eine Bau-KI (D56). | DOCUMENTED | entschieden 13.11. |
-| W20 | Preis | Etwa 30.000 € je Käufer (E78, E84) | Kommentar zu D49: Selbstkostenpreis statt Verkaufspreis | Entschieden in D49 am 13.11.2026; Zahlen aus dem Business Case (OD-008). | DOCUMENTED | entschieden 13.11. |
-| W21 | Mission | Die Baseline v0.4 nennt keine Mission (W01) | Kommentar zu D42: Mission und Globalziele sind der Ausgangspunkt; der Bruch in der Logik muss harmonisiert werden | Aufgabe: Mission, Globalziele, Vision v0.4 und Zielblatt in eine Logik bringen. | DECISION REQUIRED | offen |
+| W19 | Begriff: Wohneinheiten | Die Container sind die Tiny Houses der Käufer und bleiben stehen (E59, D21 B) | Kommentar zu D55: eine Wohneinheit für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur; danach Wohneinheiten mit Arbeitsplatz und Kommunalgebäude | Entschieden in D55 am 13.11.2026. Der Begriff ist Wohneinheit (Kommentar vom 17.11.2026). Material und Bauart plant eine Bau-KI (D56). | DOCUMENTED | angepasst 17.11. |
+| W20 | Preis | Etwa 30.000 € je Käufer (E78, E84) | Kommentar zu D49: Selbstkostenpreis statt Verkaufspreis | Es wird nichts verkauft, weder Häuser noch Container. Die Wohneinheiten werden vermietet; die Miete baut auf den Selbstkosten je Wohneinheit auf (D45, D48, D49, Kommentar vom 17.11.2026). Zahlen aus dem Business Case (OD-008). | DOCUMENTED | angepasst 17.11. |
+| W21 | Mission | Die Baseline v0.4 nennt keine Mission (W01) | Kommentar zu D42: Mission und Globalziele sind der Ausgangspunkt | Mission und Globalziele stehen im Index unter „Grundlage: Mission, Ziele, Ort“ und gelten für alle Seiten (Kommentar vom 17.11.2026). | DOCUMENTED | erledigt 17.11. |
 | W22 | Kostenstand | Papierrechnung 12 Mio. € (E84), 12,5 Mio. € (E65) | Kostenregister vom 13.11.2026: Teilsumme für eine kleine Phase 0, 69 von 137 Positionen ohne Betrag | Für Investoren keine Beträge, bis Angebote vorliegen (D53: neu rechnen). | ASSUMPTION | markiert |
 
 Stand 12.11.2026. Erzeugt aus `werkzeug/baum.py`; die lesbare Seite ist `index-3.html`. Quellen in Klammern (E = Entscheidung, O = offener Punkt, 2.x.y = Teilergebnis, H01 … = Anforderung).
@@ -36,7 +36,7 @@ Stand 12.11.2026. Erzeugt aus `werkzeug/baum.py`; die lesbare Seite ist `index-3
 | Nr | Ziel | Messgröße | Zielwert oder Klärungsauftrag | Termin | Wer · Review | Grenze | Globalziel | Quelle |
 |---|---|---|---|---|---|---|---|---|
 | Z1 | 2–3 Leute wohnen und arbeiten ganzjährig oben | Personen, die den ersten Winter oben gewohnt und gearbeitet haben | 2–3 Personen vom Team; ab Phase 1 Mieter (D45) | Baubeginn 2027 ist Ziel, nur nach den Gates (D58); ganzjährig nach dem ersten Winter | Projektleitung oben; Geschäftsführung mit dem Architekten (Beratung) für den Bau · Review G2, G3, G4 | Zeit: Bauen erst ohne Frost. Kapital: Eigenkapital bis zur Bauplanung, danach Investoren (D46, D47) | 1 und 3 | D45, D55, D58; prüft H1, H2, H3 |
-| Z2 | Das Grundstück mit Mietern füllen | Vermietete Einheiten von der Zahl, die Geologie und Planung erlauben; Mietinteressenten vor dem Bau | Klärungsauftrag: Zahl der Einheiten nach geprüfter Geologie und Bau-KI-Planung (D54, D56). Interessenten jetzt sammeln (D50). Kein Immobilienverkauf im klassischen Sinn (D45, D48) | Interessenten ab sofort; Einzug ab Phase 1, Termine sind Ziele (D58) | Projektleitung (Interessenten), Geschäftsführung (Grundstück) · Review G0, G1 | Kapital: Eigenkapital bis zur fertigen Bauplanung, danach Investoren für Infrastruktur und Objekte (D46, D47) | 1 und 2 | D45, D46, D48, D50; prüft H4 |
+| Z2 | Das Grundstück mit Mietern füllen | Vermietete Einheiten von der Zahl, die Geologie und Planung erlauben; Mietinteressenten vor dem Bau | Klärungsauftrag: Zahl der Einheiten nach geprüfter Geologie und Bau-KI-Planung (D54, D56). Interessenten jetzt sammeln (D50). Kein Immobilienverkauf im klassischen Sinn (D45, D48) | Interessenten ab sofort; Einzug ab Phase 1, Termine sind Ziele (D58) | Projektleitung (Interessenten), Geschäftsführung (Grundstück) · Review G0, G1 | Kapital: Eigenkapital bis zur fertigen Bauplanung, danach Investoren für Infrastruktur und Wohneinheiten (D46, D47) | 1 und 2 | D45, D46, D48, D50; prüft H4 |
 | Z3 | Erster bezahlter Umsatz | Bezahlte Rechnungen je Monat in €, getrennt von Interesse und Marge | Klärungsauftrag: Monatswert festlegen; enthält die laufenden Kosten oben und das Einkommen der Geschäftsführung (D52 offen) | laufend, vor dem Investorengespräch (D71) | Projektleitung und Geschäftsführung · Review monatlich (3.3) | – | 1 | D51, D52; prüft H4, H6 |
 | Z4 | Genome: wiederverwendbares Systemwissen für den nächsten Node | Systemlogik und validierte Standards getrennt von den Werten dieses Grundstücks; ein geänderter Standortparameter macht betroffene Anforderungen, Varianten und Beschlüsse auffindbar (2.6.6) | Standardisierung von Anfang an; Node001 als Proof of Concept (D51) | ab jetzt; belastbar erst mit Node002 | Geschäftsführung · Review nach dem ersten Winter | – | 2 | D51; prüft H7, H8 |
 | X1 | X-PORTAL als Holding: Unternehmensarchitektur, Lizenzen, Markenrechte | festlegen, je Aufgabe | Klärungsauftrag: Rechtsprüfung der Struktur (D44); wo Services auf den Nodes abgewickelt werden, voraussichtlich in einer lokalen Gesellschaft als Teil der Holding (OD-001) | vor dem Investorengespräch (D71) | Geschäftsführung und Projektleitung | Rechtsprüfung ist Teil des Pakets „Vor dem Investment“ | 1 und 2 | D44 mit Kommentar, 13.11.2026 |
@@ -52,22 +52,22 @@ Globalziele, in dieser Rangfolge: 1. wirtschaftliche Tragfähigkeit und Resilien
 Vision (Reference Architecture v0.4): „X-PORTAL entwickelt menschenzentrierte, weitgehend versorgungsautarke, operativ autonome, resiliente und wirtschaftlich tragfähige Lebens-, Arbeits- und Aufenthaltsumgebungen, in denen Mensch, physische Welt, Services, Organisation und Technologie als integriertes, lernendes Gesamtsystem zusammenwirken.“
 Kerndefinition: X-PORTAL definiert keinen Baukasten fertiger Lösungen, sondern einen kontrollierten Mechanismus, mit dem standortspezifische Lösungen entwickelt, betrieben, gemessen, verbessert und, soweit Evidenz es rechtfertigt, reproduziert werden. Node001 Beregniza ist die erste reale Umgebung dafür.
 Entscheidungsgrundsatz: Systementscheidungen werden an ihrer Wirkung auf Menschen bewertet (XP-SYS-001) und an CAPEX, OPEX und Lebenszyklus (XP-SYS-004). Menschenwürde, Sicherheit und gesetzliche Anforderungen sind verbindliche Grenzen.
-Mission und Globalziele sind der Ausgangspunkt (D42). Wie Mission, Globalziele, Vision v0.4 und Zielblatt eine durchgehende Logik werden, ist noch zu harmonisieren (Abgleich W21).
+Mission und Globalziele sind der Ausgangspunkt (D42). Sie gelten für alle Seiten: SGMM, Whitepaper und Deck übernehmen sie von hier (Abgleich W21, Kommentar vom 17.11.2026).
 Endprodukt Stufe 1
 2–3 Leute vom Team wohnen und arbeiten ganzjährig oben und verdienen dort Geld; ab Phase 1 kommen Mieter dazu (D45). Vermietet wird, verkauft wird im klassischen Sinn nichts (D48). Der Betrieb trägt sich selbst, X-PORTAL stellt die Basis.
 Grundmodell eines Node
 
-Transport und Bauart: In Phase 0 kommt alles auf kleinem Fahrzeug hoch, ohne Befestigung der Zufahrt am Anfang (D57). Die Bauart der Objekte ist offen (Holz, Beton, Glas, Metall); eine Bau-KI plant nach den lokalen Gegebenheiten (D56).
+Transport und Bauart: In Phase 0 kommt alles auf kleinem Fahrzeug hoch, ohne Befestigung der Zufahrt am Anfang (D57). Die Bauart der Wohneinheiten ist offen (Holz, Beton, Glas, Metall); eine Bau-KI plant nach den lokalen Gegebenheiten (D56).
 Kommunal und gemeinschaftlich: Das Kommunalgebäude ist der erste Bau in Phase 1, mit Arbeitsplätzen, Küche und Sanitär (D64). Gemeinschaftsarbeit wird gefördert, erfasst und angerechnet (D36, D38).
-Privatsphäre: Jede Person hat ihre eigene Einheit. Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur (D55). Ab Phase 1 wohnen und arbeiten Mieter und Team in eigenen Objekten.
+Privatsphäre: Jede Person hat ihre eigene Einheit. Phase 0: eine Wohneinheit für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur (D55). Ab Phase 1 wohnen und arbeiten Mieter und Team in eigenen Wohneinheiten.
 Weitgehend versorgungsautark: Netzanschluss mit Generator als Reserve, Solar mit Speicher ab Phase 1 (D59); Ofen mit eigenem und gekauftem Holz (D60); Grundwasser mit Aufbereitung zu Trinkwasser (D61); Spültoilette, Dusche, Warmwasser und Abwasser ab Phase 0 (D62). Zielwerte je kritischer Funktion sind OPEN (OD-002).
 Mobilität: ein gemeinsames Fahrzeug; keine E-Bikes in Phase 0 (D65).
 
 Der Ort: Detailplan Blatt 3 und Geologie
 Detailplan des Gebiets (Stadium ДПТ, Blatt 3 von 8, M 1:500): 2,0 ha, bebaute Fläche 4.701,2 m², 24 nummerierte Parzellen mit Flächen, Höhenlinien, Straßen mit 6 m Fahrbahn und Gehwegen, Bohrbrunnen und lokale Kläranlage.
 Detailplan Blatt 3 (Architekt, Januar 2025). Zum Vergrößern: Bild antippen.
-Wo Phase 0 steht (Antwort vom 17.11.2026, voraussichtlich): im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche, neben den Parzellen 9 (0,0355 ha), 7 (0,0550 ha) und 8 (0,1740 ha). Dort stehen das Objekt Phase 0 und die ersten Wohneinheiten (Knoten „lage“ in Ast 1).
-Blau markiert von der Projektleitung am 17.11.2026: Hier stehen voraussichtlich das Objekt Phase 0 und die ersten Wohneinheiten, unterhalb der Herrenhaus-Fläche. Die Fläche ist ziemlich eben und von der Einfahrt leicht erreichbar. Quelle: quellen/lage-wohneinheiten-2026-11-17.pdf.
+Wo Phase 0 steht (Antwort vom 17.11.2026, voraussichtlich): im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche, neben den Parzellen 9 (0,0355 ha), 7 (0,0550 ha) und 8 (0,1740 ha). Dort stehen die Wohneinheit Phase 0 und die ersten Wohneinheiten (Knoten „lage“ in Ast 1).
+Blau markiert von der Projektleitung am 17.11.2026: Hier stehen voraussichtlich die Wohneinheit Phase 0 und die ersten Wohneinheiten, unterhalb der Herrenhaus-Fläche. Die Fläche ist ziemlich eben und von der Einfahrt leicht erreichbar. Quelle: quellen/lage-wohneinheiten-2026-11-17.pdf.
 Legende des Plans auf Deutsch (17 Objektarten)
 WachpostenAutowäscheMüllsammelplatzGästeparkplatzVerwaltungs- und Erholungskomplex mit Tiefgarage (Räume mit Doppelnutzung) und Technikräumen für die Siedlung
 HandelspavillonLaden mit CaféRestaurant- und HotelkomplexHandelspavillonKapelleKinderspielplatzHandels- und Unterhaltungskomplex
@@ -93,9 +93,9 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Empfehlung: Kombinierte Streifen- und Stützfundamentierung auf IGE-3 oder IGE-4; hangseitiger Fundamentbereich als Stützkonstruktion; hangseitiger Entwässerungsgraben; Wasser vor Abfällen und Abwasser schützen.
     - Zusatzerkundung: Vom Gutachter verlangt für Zufahrt, Stützkonstruktionen und Hauptgebäude. Liegt vor (Kommentar vom 15.11.2026); das Ergebnis wird eingetragen, sobald der Bericht im Plan liegt (AP-A1).
     - Dient: Z1, Z2
-    - **Ausgang (Fall A):** Leichte eingeschossige Objekte: Gründung auf IGE-3. _[offen]_
-      - Laut Gutachter geeignet für leichte eingeschossige Gebäude. Gilt für das Objekt Phase 0, wenn es leicht und eingeschossig ist (Zuordnung Vorschlag KI).
-      - **Entscheidung:** Fundament für das Objekt Phase 0: Streifen- und Stützfundament nach Empfehlung, bemessen durch einen Fachexperten _[offen]_
+    - **Ausgang (Fall A):** Leichte eingeschossige Wohneinheiten: Gründung auf IGE-3. _[offen]_
+      - Laut Gutachter geeignet für leichte eingeschossige Gebäude. Gilt für die Wohneinheit Phase 0, wenn sie leicht und eingeschossig ist (Zuordnung Vorschlag KI).
+      - **Entscheidung:** Fundament für die Wohneinheit Phase 0: Streifen- und Stützfundament nach Empfehlung, bemessen durch einen Fachexperten _[offen]_
         - Fachexperte Bau · Freigabe Geschäftsführung
         - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
         - Beschlussblatt, Fachliche Prüfung: Fachexperte; Architekt berät (D67)
@@ -104,24 +104,24 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
         - Beschlussblatt, Gültigkeit: bis ihr sie ändert
         - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
     - **Ausgang (Fall B):** Massive, dauerhafte Gebäude: Gründung auf IGE-4, mit Zusatzerkundung. _[offen]_
-      - Laut Gutachter für massive Gebäude. Betrifft Kommunalgebäude und Objekte in Phase 1 (Zuordnung Vorschlag KI).
+      - Laut Gutachter für massive Gebäude. Betrifft Kommunalgebäude und Wohneinheiten in Phase 1 (Zuordnung Vorschlag KI).
       - **Schritt:** Ergebnis der vorhandenen Zusatzerkundung für die Gebäude in Phase 1 auswerten _[offen]_
         - Fachexperte Bau · nach AP-A1
     - **Ausgang (Fall C):** Flächen mit Grundwasseraustritt und Rutschprozessen. _[offen]_
       - Bohrpunkte 6, 7 und 11. Entwässerungsgraben und Stützkonstruktion nach Empfehlung; die Lage von Phase 0 berücksichtigt diese Punkte.
-    - **Entscheidung:** Wo stehen das Objekt Phase 0 und die ersten Wohneinheiten? Im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche _[entschieden]_
+    - **Entscheidung:** Wo stehen die Wohneinheit Phase 0 und die ersten Wohneinheiten? Im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche _[entschieden]_
       - Antwort der Projektleitung vom 17.11.2026, voraussichtlich · endgültig mit der Bauplanung (AP-A4) und dem Fachexperten Bau · D55
-      - Grundlage ist der Detailplan Blatt 3. Der markierte Bereich liegt an der Kehre der Zufahrt, neben den Parzellen 9 (0,0355 ha), 7 (0,0550 ha) und 8 (0,1740 ha). Dort stehen das Objekt Phase 0 und, beim Bauen in Chargen, die ersten Wohneinheiten für Mieter (AP-C5, AP-G3).
+      - Grundlage ist der Detailplan Blatt 3. Der markierte Bereich liegt an der Kehre der Zufahrt, neben den Parzellen 9 (0,0355 ha), 7 (0,0550 ha) und 8 (0,1740 ha). Dort stehen die Wohneinheit Phase 0 und, beim Bauen in Chargen, die ersten Wohneinheiten für Mieter (AP-C5, AP-G3).
       - Antwort 17.11.: „im screenshot habe ich ein blaues rechteck eingefückt das zeigt wo unterhalb vom herrenhaus die wohneinheiten voraussichtlich stehen werden da es dort ziemlich eben ist und man es von einer einfahrt leicht erreichen könnte“
       - Gründe: ziemlich eben; von der Einfahrt leicht erreichbar
       - Noch zu prüfen: Lage der Bohrpunkte 6, 7 und 11 (Grundwasseraustritt) gegenüber dem Bereich, mit dem Lageplan der Bohrungen aus dem Geologiebericht; Abstand zur Straße und zur Kehre; Wege für Wasser, Strom und Abwasser; wie viele Wohneinheiten Platz haben. Das klärt die Bauplanung (AP-A4).
       - Quelle: quellen/lage-wohneinheiten-2026-11-17.pdf (Detailplan) und das markierte Bild in der Grundlage
       - Dient: Z1, Z2
   - **Schritt:** Strecke ablaufen und messen: einspurige, teils enge Straße bis zum Grundstück _[offen]_
-    - Kommentar vom 17.11.2026: Die Objekte müssen über eine einfache, einspurige und teils enge Straße transportierbar sein; deshalb „leicht“. Route von der Auffahrt bis zum Grundstück: https://maps.app.goo.gl/MVxhHzmvbfyLqY89A (Google Maps, 17.11.2026). Eine Auswertung aus Karten- und Satellitenansicht (ChatGPT, 17.11.2026, nicht vor Ort geprüft) nennt acht kritische Messpunkte; am kritischsten sind die Kehren bei MP04 und MP06, das unklare Endstück MP07 und der Abladeplatz MP08. Alle Werte sind bis zur Messung offen.
+    - Kommentar vom 17.11.2026: Die Wohneinheiten müssen über eine einfache, einspurige und teils enge Straße transportierbar sein; deshalb „leicht“. Route von der Auffahrt bis zum Grundstück: https://maps.app.goo.gl/MVxhHzmvbfyLqY89A (Google Maps, 17.11.2026). Eine Auswertung aus Karten- und Satellitenansicht (ChatGPT, 17.11.2026, nicht vor Ort geprüft) nennt acht kritische Messpunkte; am kritischsten sind die Kehren bei MP04 und MP06, das unklare Endstück MP07 und der Abladeplatz MP08. Alle Werte sind bis zur Messung offen.
     - Wann: jetzt; vor jeder Anfrage an Anbieter und Spediteure
     - Voraussetzung: Maßband, Neigungsmesser, Kamera mit GPS
-    - Blockiert: Auswahl des Objekts (hausart, AP-C1), Logistik (AP-C3), Bestellung
+    - Blockiert: Auswahl der Wohneinheit (hausart, AP-C1), Logistik (AP-C3), Bestellung
     - Grundbestimmungen: GB1, GB11
     - Rolle: führt aus: Projektleitung oder Team vor Ort · wertet aus: planende KI
     - Ergebnis: Streckenprotokoll mit den Messpunkten MP01 bis MP08 bis zum Abladeplatz am markierten Bereich (GB3); Umschlagplatz festgelegt: schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt
@@ -201,9 +201,9 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > Mit freundlichen Grüßen
       > [Geschäftsführung, Node-Gesellschaft bzw. Eigentümer]
     - Auftrag für die ausführende KI: auftraege/AP-A3.md
-  - **Entscheidung:** Bauart der Objekte: Holz, Beton, Glas, Metall? Erste Bedingung: transportierbar über die einspurige, enge Straße _[offen]_
+  - **Entscheidung:** Bauart der Wohneinheiten: Holz, Beton, Glas, Metall? Erste Bedingung: transportierbar über die einspurige, enge Straße _[offen]_
     - Geschäftsführung nach Vorschlag Fachexperte Bau · Lage steht voraussichtlich (17.11.2026)
-    - Antwort vom 13.11. (D56): Der Plan für die Objekte steht aus; eine Bau-KI bewertet und plant in Abhängigkeit von den lokalen Gegebenheiten (Geologie, Gelände, Zufahrt).
+    - Antwort vom 13.11. (D56): Der Plan für die Wohneinheiten steht aus; eine Bau-KI bewertet und plant in Abhängigkeit von den lokalen Gegebenheiten (Geologie, Gelände, Zufahrt).
     - Dient: Z1, Z2
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
     - Beschlussblatt, Fachliche Prüfung: –
@@ -217,7 +217,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Blockiert: Angebote, Bestellung, Selbstkosten
     - Grundbestimmungen: GB1, GB2, GB3, GB5, GB6, GB7
     - Rolle: entscheidet: Geschäftsführung · führt aus: Fachexperte Bau mit Bau-KI · berät: Architekt
-    - Ergebnis: Basis of Design: Objekt, Fundament, Entwässerung, Leitungen (Wasser, Abwasser, Strom, Internet), Weg, Lageplan; Grundlage für alle Anfragen
+    - Ergebnis: Basis of Design: Wohneinheit, Fundament, Entwässerung, Leitungen (Wasser, Abwasser, Strom, Internet), Weg, Lageplan; Grundlage für alle Anfragen
     - Anschaffungen: A010
     - Auftrag für die ausführende KI: auftraege/AP-A4.md
   - **Schritt:** Angebote für die großen Posten einholen _[offen]_
@@ -226,10 +226,10 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Blockiert: Kostenband, Selbstkosten, Investorengespräch
     - Grundbestimmungen: GB1, GB8, GB11
     - Rolle: führt aus: Projektleitung · entscheidet: Geschäftsführung
-    - Ergebnis: Je Posten drei schriftliche Angebote: Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung
-  - **Schritt O03:** Selbstkosten je Objekt, daraus Miete und monatliche Pauschale _[offen]_
+    - Ergebnis: Je Posten drei schriftliche Angebote: Wohneinheit Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung
+  - **Schritt O03:** Selbstkosten je Wohneinheit, daraus Miete und monatliche Pauschale _[offen]_
     - KI rechnet, Geschäftsführung und Projektleitung entscheiden · nach Angeboten (O31)
-    - Statt eines Verkaufspreises wird der Selbstkostenpreis je Objekt ermittelt (D49): Objekt, Transport, Montage, Fundament, Anschlüsse, Anteil an Kommunalgebäude und Infrastruktur, Betrieb. Daraus Miete und Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen (D38). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung, 69 von 137 Positionen ohne Betrag).
+    - Statt eines Verkaufspreises wird der Selbstkostenpreis je Wohneinheit ermittelt (D49): Wohneinheit, Transport, Montage, Fundament, Anschlüsse, Anteil an Kommunalgebäude und Infrastruktur, Betrieb. Daraus Miete und Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen (D38). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung, 69 von 137 Positionen ohne Betrag).
     - Dient: Z2
     - Braucht: O31, D36, D37, D38
   - **Schritt:** Mietinteressenten gewinnen: Whitelist der künftigen Mieter, ab sofort und vor dem Bau _[offen]_
@@ -247,8 +247,8 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Unterlage: Text für die Anmeldung
       > X-PORTAL Node001 · Karpaten, Ukraine
       > 
-      > Wohnen und arbeiten an einem Ort in den Bergen: eigenes Objekt, Gemeinschaftsräume, Internet für Remote-Arbeit, Projekte im Team.
-      > Wir bauen in Abschnitten. Wer sich einträgt, erfährt als Erstes, wann ein Objekt frei wird, und kann es mieten.
+      > Wohnen und arbeiten an einem Ort in den Bergen: eigene Wohneinheit, Gemeinschaftsräume, Internet für Remote-Arbeit, Projekte im Team.
+      > Wir bauen in Abschnitten. Wer sich einträgt, erfährt als Erstes, wann eine Wohneinheit frei wird, und kann sie mieten.
       > 
       > Für Remote-Arbeit: Aufenthalt etwa ein Jahr.
       > 
@@ -334,7 +334,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > 
       > Guten Tag,
       > 
-      > X-PORTAL verbindet bezahlte digitale Arbeit mit realen Orten. Node001 entsteht in den ukrainischen Karpaten auf einem 2-ha-Grundstück; Geologiebericht und Detailplan liegen vor, die Bauplanung für einen ersten Abschnitt ist [Stand]. Finanziert ist die Planung aus Eigenkapital; für Infrastruktur und Objekte suchen wir Investoren, verbunden mit wiederkehrenden Erlösen aus Miete und Services.
+      > X-PORTAL verbindet bezahlte digitale Arbeit mit realen Orten. Node001 entsteht in den ukrainischen Karpaten auf einem 2-ha-Grundstück; Geologiebericht und Detailplan liegen vor, die Bauplanung für einen ersten Abschnitt ist [Stand]. Finanziert ist die Planung aus Eigenkapital; für Infrastruktur und Wohneinheiten suchen wir Investoren, verbunden mit wiederkehrenden Erlösen aus Miete und Services.
       > 
       > Gern stellen wir Ihnen Whitepaper und Präsentation in einem Gespräch vor.
       > 
@@ -342,7 +342,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > 
       > Mit freundlichen Grüßen
       > [Geschäftsführung]
-  - **Ereignis O23:** Kapital: Steigen Investoren für Infrastruktur und Objekte ein? _[offen]_
+  - **Ereignis O23:** Kapital: Steigen Investoren für Infrastruktur und Wohneinheiten ein? _[offen]_
     - Geschäftsführung · nach dem Paket vor dem Investment (D69, D71)
     - So viel wie möglich mit Eigenkapital; bis zu welchem Punkt, ist offen (D69, D71, Seite „Vor dem Investment“). Investoren für Infrastruktur und weitere Chargen, gestützt auf Whitelist und Mieterlöse (D46, D47; AP-F3). Ein Verkauf an Einzelne ist abgewählt.
     - Dient: Z2
@@ -358,7 +358,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
         - Beschlussblatt, Gültigkeit: bis ihr sie ändert
         - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
         - Möglichkeit A: Phase 0 verschieben — Gebaut wird, sobald das Kapital steht; die Termine rücken nach hinten (D58: Termine sind Ziele).
-        - Möglichkeit B: Kleiner anfangen — Mit einem kleineren Objekt Phase 0; die Selbstkosten werden neu gerechnet (O03).
+        - Möglichkeit B: Kleiner anfangen — Mit einer kleineren Wohneinheit Phase 0; die Selbstkosten werden neu gerechnet (O03).
         - Möglichkeit C: Eigenmittel erhöhen — Mehr Eigenkapital oder Eigenleistung, um den Anteil zu halten (D69, D70).
   - **Schritt:** Token-Crowdfunding über Cardano vorbereiten _[später]_
     - Wann: erst nach der Rechtsprüfung (AP-A6)
@@ -376,10 +376,10 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Beschlussblatt, Fachliche Prüfung: Anwälte zu Struktur und Verträgen (O05)
     - Beschlussblatt, Freigabe: Gate: Geschäftsführung und Projektleitung; Bestellung und Betrag: Geschäftsführung
     - Beschlussblatt, Budgetgrenze: nur Geld auf dem Konto; Eigenkapital bis zur Bauplanung, danach Investoren (D46, D47)
-    - Beschlussblatt, Gültigkeit: für die Bestellung des Objekts Phase 0
-    - Beschlussblatt, Wiedervorlage: neue Information zu Objekt, Kapital oder Budget: G1 und G2 neu
+    - Beschlussblatt, Gültigkeit: für die Bestellung der Wohneinheit Phase 0
+    - Beschlussblatt, Wiedervorlage: neue Information zu Wohneinheit, Kapital oder Budget: G1 und G2 neu
 - **Ast:** C · Beschaffung, Import und Transport
-  - **Schritt:** Objekt Phase 0: Anbieter aus Ungarn, Polen und über Alibaba vergleichen _[offen]_
+  - **Schritt:** Wohneinheit Phase 0: Anbieter aus Ungarn, Polen und über Alibaba vergleichen _[offen]_
     - Wann: nach der Bauplanung (AP-A4); bestellen spätestens Lieferzeit plus Zoll plus Transport vor dem Montagebeginn (AP-C4)
     - Voraussetzung: Basis of Design
     - Blockiert: Bestellung, Logistik, Zoll
@@ -428,7 +428,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > Kind regards
       > [Projektleitung, X-PORTAL]
     - Auftrag für die ausführende KI: auftraege/AP-C1.md
-  - **Entscheidung:** Wer liefert und baut das Objekt Phase 0, mit oder ohne Montage? _[offen]_
+  - **Entscheidung:** Wer liefert und baut die Wohneinheit Phase 0, mit oder ohne Montage? _[offen]_
     - Projektleitung holt Angebote ein, die Geschäftsführung entscheidet die Bestellung · nach Bauart
     - Drei schriftliche Angebote; zuerst geprüft wird, ob jedes Teil über die einspurige, enge Straße hochkommt (GB1, AP-A0), dann Preis, Lieferform, schwerstes Teil, Montageaufwand und Winterwerte (O31). Die Anfrage enthält die Raumliste aus M02, die Anforderungen an Sanitär ab Phase 0 (D62) und die Maße der Zufahrt. Wer was selbst macht, steht in 2.4.8.
     - Dient: Z1, Z2
@@ -479,7 +479,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > Mit freundlichen Grüßen
       > [Projektleitung]
     - Auftrag für die ausführende KI: auftraege/AP-C3.md
-  - **Ereignis:** Kommt das Objekt Phase 0 die Zufahrt hoch, im Sommer und im Winter (2.2.4)? _[entschieden]_
+  - **Ereignis:** Kommt die Wohneinheit Phase 0 die Zufahrt hoch, im Sommer und im Winter (2.2.4)? _[entschieden]_
     - Antwort vom 13.11. (D57)
     - Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch. Die Gesamtplanung der Zufahrt entscheidet sich in Phase 1 mit 3D-Modellen der Bau-KI. Die Straße ist einfach, einspurig und teils eng (Kommentar vom 17.11.2026); die letzten etwa 200 m haben über 15 % Steigung; bis 2,6 m Breite geht ein Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite und Engstellen werden gemessen (AP-A0).
     - Dient: Z1
@@ -487,14 +487,14 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       - Damit ist klar, welche Anbieter in Frage kommen.
     - **Ausgang (nein):** Kleinere Teile oder eine andere Lieferform. _[offen]_
       - Bauart und Anbieter werden neu bewertet (2.2.3).
-  - **Schritt:** Charge 1 festlegen: welche Objekte und welches Material jetzt kaufen und hochbringen _[offen]_
-    - Business Case (Kommentar vom 17.11.2026): jetzt Objekte oder Material einkaufen und hochbringen; während dessen wächst die Whitelist; ist sie groß genug, wird nachbestellt (AP-G3), und Leute von der Whitelist ziehen ein und zahlen Miete. Die Mieterlöse zeigen wir Investoren (AP-F3).
+  - **Schritt:** Charge 1 festlegen: welche Wohneinheiten und welches Material jetzt kaufen und hochbringen _[offen]_
+    - Business Case (Kommentar vom 17.11.2026): jetzt Wohneinheiten oder Material einkaufen und hochbringen; während dessen wächst die Whitelist; ist sie groß genug, wird nachbestellt (AP-G3), und Leute von der Whitelist ziehen ein und zahlen Miete. Die Mieterlöse zeigen wir Investoren (AP-F3).
     - Wann: nach Angeboten (AP-C1) und Streckenprotokoll (AP-A0)
     - Voraussetzung: Transportierbarkeit geprüft, Geld nach GB8, Lager oben
     - Blockiert: Bestellung, Logistik (AP-C3)
     - Grundbestimmungen: GB1, GB4, GB8
     - Rolle: schlägt vor: planende KI · entscheidet: Geschäftsführung
-    - Ergebnis: Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch
+    - Ergebnis: Liste der Charge 1 mit Anzahl Wohneinheiten (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch
   - **Schritt:** Gemeinsames geländegängiges Fahrzeug beschaffen _[offen]_
     - Wann: vor dem Baubeginn; nach dem Streckenprotokoll (AP-A0)
     - Voraussetzung: Streckenprotokoll, Zulassung und Versicherung in der Ukraine, Geld nach GB8
@@ -528,7 +528,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Rolle: plant: Fachexperte Bau · führt aus: Firma oder Team · nimmt ab: Fachexperte
     - Ergebnis: Hangwasser wird abgeleitet; Stützbauwerk nach Statik
     - Anschaffungen: A004, A006, A008
-  - **Schritt:** Fundament für das Objekt Phase 0 _[offen]_
+  - **Schritt:** Fundament für die Wohneinheit Phase 0 _[offen]_
     - Wann: nach Entwässerung (AP-D2), ohne Frost (GB4)
     - Voraussetzung: Bemessung durch Fachexperten; Lasten aus dem Angebot (AP-C1)
     - Blockiert: Montage
@@ -547,15 +547,15 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
   - **Ereignis:** Ist der Boden frostfrei? _[wartet]_
     - Baubeginn 2027 ist Ziel, nur nach den Gates (D58)
     - Dient: Z1
-    - **Ausgang (ja):** Objekt Phase 0 hoch und oben montieren. _[Regel steht]_
+    - **Ausgang (ja):** Wohneinheit Phase 0 hoch und oben montieren. _[Regel steht]_
       - Auf kleinem Fahrzeug (D57), auf dem Fundament nach Empfehlung des Gutachters, bemessen durch einen Fachexperten (2.2.8).
     - **Ausgang (nein):** Warten, bis der Boden frei ist. _[Regel steht]_
       - Baubeginn erst ohne Frost.
     - **Ausgang (Wetter, Straße):** Anderes Einsatzfenster nötig. _[Regel steht]_
       - Einsatzplan aktualisieren, G2 neu vorlegen.
-    - **Ausgang (neue Information):** Objekt, Kapital oder Budget ändern sich. _[Regel steht]_
+    - **Ausgang (neue Information):** Wohneinheit, Kapital oder Budget ändern sich. _[Regel steht]_
       - Auswirkung rechnen, dann G1 und G2 neu; Projektleitung koordiniert, Geschäftsführung prüft.
-  - **Entscheidung:** Technik im Objekt: Zugang, Server, Netzwerk. Liefert der Anbieter sie mit, oder beschaffen wir sie selbst? _[offen]_
+  - **Entscheidung:** Technik in der Wohneinheit: Zugang, Server, Netzwerk. Liefert der Anbieter sie mit, oder beschaffen wir sie selbst? _[offen]_
     - Geschäftsführung und Projektleitung
     - Zugang per Chip an den Türen, auch zur Erfassung der Gemeinschaftsarbeit, voraussichtlich mit Cardano-Technik (D36). Internet: Bandbreite, Router und Anbieter werden verglichen (D63). Maßstab: alles läuft immer; vor dem ersten Übernachten ist jede Funktion abgenommen, nach einer Tabelle, die die Projektleitung prüft und freigibt (D66). Server oben werden nur bei VC-Funding für personenbezogene Daten mit Deutschland verbunden (D47).
     - Möglichkeiten: Vorschlag KI, noch keine Entscheidung; sie gilt erst, wenn ihr eine wählt (D43).
@@ -597,7 +597,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > Brandschutz | S01 | Melder, Löscher, Ofenabstände | vollständig | | | |
       > Zugang | GB10 | Öffnen mit Chip und mit Schlüssel | beides geht | | | |
   - **Schritt:** Mietvertrag und Einzug der ersten Mieter von der Whitelist _[offen]_
-    - Wann: nach G2, sobald ein Objekt frei ist
+    - Wann: nach G2, sobald eine Wohneinheit frei ist
     - Voraussetzung: Mietvertrag rechtlich geprüft (O05), Miete und Pauschale (O03), Abnahme (AP-E1)
     - Blockiert: Mieterlöse (AP-F3)
     - Grundbestimmungen: GB5, GB8, GB9
@@ -634,7 +634,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Blockiert: Investorengespräche (AP-B1), Nachbestellung (AP-G3)
     - Grundbestimmungen: GB8, GB11
     - Rolle: erstellt: planende KI · prüft: Geschäftsführung
-    - Ergebnis: Monatsbericht: belegte Objekte, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren
+    - Ergebnis: Monatsbericht: belegte Wohneinheiten, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren
   - **Schritt:** Gemeinschaftsarbeit: Bedarfe erfassen, Aufgaben festlegen, Anreize setzen _[offen]_
     - Kommentar zu D36: nach dem St. Galler Managementmodell kommunale Arbeit mit Anreizen stark fördern, Bedarfe erfassen, festlegen und umsetzen. Ziel des Teams: wirtschaftlich denken und gemeinschaftliches Leben im Rahmen der X-PORTAL-Vision gestalten; daraus leitet sich die Lernkurve für die nächsten Nodes ab.
     - Wann: ab Einzug; Konzept vor der Bestellung des Zugangssystems (AP-D5)
@@ -670,12 +670,12 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Beschlussblatt, Gültigkeit: Phase 0
     - Beschlussblatt, Wiedervorlage: Entscheidung über Phase 1
     - **Ende:** 2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld.
-      - Danach Phase 1: Kommunalgebäude zuerst (D64), dann Wohn- und Arbeitsobjekte für Mieter und Team. Skalierung und Standardisierung werden von Anfang an mitgedacht; Node001 ist der Proof of Concept (D51).
-- **Ast:** G · Phase 1: Kommunalgebäude und Objekte
+      - Danach Phase 1: Kommunalgebäude zuerst (D64), dann Wohneinheiten mit Arbeitsplatz für Mieter und Team. Skalierung und Standardisierung werden von Anfang an mitgedacht; Node001 ist der Proof of Concept (D51).
+- **Ast:** G · Phase 1: Kommunalgebäude und Wohneinheiten
   - **Schritt:** Kommunalgebäude _[später]_
     - Wann: erster Bau in Phase 1 (D64)
     - Voraussetzung: Kapital, vorhandene Zusatzerkundung (AP-A1)
-    - Blockiert: Objekte für Mieter
+    - Blockiert: Wohneinheiten für Mieter
     - Grundbestimmungen: GB1, GB2, GB5, GB8
     - Rolle: entscheidet: Geschäftsführung · plant: Fachexperte Bau
     - Ergebnis: Arbeitsplätze, Küche, Sanitär; Feuerstelle und Sauna (D34, D35)
@@ -711,7 +711,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Blockiert: –
     - Grundbestimmungen: GB3, GB8
     - Rolle: entscheidet: Geschäftsführung
-    - Ergebnis: Weitere Objekte; die Herrenhaus-Fläche wird zuletzt bebaut
+    - Ergebnis: Weitere Wohneinheiten; die Herrenhaus-Fläche wird zuletzt bebaut
   - **Schritt:** Hypothesen H1 bis H8 bewerten _[später]_
     - Wann: nach dem ersten Winter und nach Phase 1
     - Voraussetzung: Messgrößen und Grenzen (OD-005)
@@ -745,7 +745,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       - Fertig, wenn: entschieden
       - Rolle: Geschäftsführung
       - Abhängig: O11
-      - Stand: Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur die Pflichtangaben gegenüber Kapitalgebern
+      - Stand: Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Wohneinheiten mit Investoren. Förderung wird nicht öffentlich gezeigt, nur die Pflichtangaben gegenüber Kapitalgebern
       - Quelle: D47, Kommentar 13.11.2026
     - **Schritt:** 2.1.6 · Paket vor dem Investment: was vor dem Investorengespräch bezahlt werden muss und woher das Geld kommt _[offen]_
       - Fertig, wenn: Betrag je Posten und Monat, von der Geschäftsführung bestätigt
@@ -772,13 +772,13 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       - Abhängig: –
       - Stand: Bericht 34.11/26 liegt vor (Grundlage, O01); Fachprüfung, Zusatzerkundung und Vermessung liegen vor, noch nicht im Plan abgelegt (AP-A1)
       - Quelle: Kommentar 15.11.2026
-    - **Schritt:** 2.2.2 · Lageplan Phase 0 und Ausbau: Lage der Objekte, Zufahrt, Leitungen, Entwässerung, freie Flächen _[offen]_
+    - **Schritt:** 2.2.2 · Lageplan Phase 0 und Ausbau: Lage der Wohneinheiten, Zufahrt, Leitungen, Entwässerung, freie Flächen _[offen]_
       - Fertig, wenn: Lageplan auf Grundlage des Detailplans, vom Fachexperten geprüft
       - Rolle: Architekt (Beratung) mit Fachexperte Bau
       - Abhängig: lage, AP-A4
       - Stand: Bereich für Phase 0 und erste Wohneinheiten voraussichtlich festgelegt (17.11.2026); Lageplan im Einzelnen offen
       - Quelle: D55, D56; Antwort 17.11.2026
-    - **Schritt:** 2.2.3 · Objekt Phase 0 gewählt: in Teilen geliefert, über die einspurige, enge Straße transportierbar _[offen]_
+    - **Schritt:** 2.2.3 · Wohneinheit Phase 0 gewählt: in Teilen geliefert, über die einspurige, enge Straße transportierbar _[offen]_
       - Fertig, wenn: Angebot mit Preis, Lieferform, größtem und schwerstem Teil, Montageaufwand
       - Rolle: Projektleitung · entscheidet: Geschäftsführung
       - Abhängig: hausart, AP-A0, AP-C1
@@ -809,7 +809,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       - Stand: offen
       - Quelle: D59 bis D63
     - **Schritt:** 2.2.8 · Fundament und Aufstellen _[wartet]_
-      - Fertig, wenn: Objekte stehen auf dem Fundament, abgenommen
+      - Fertig, wenn: Wohneinheiten stehen auf dem Fundament, abgenommen
       - Rolle: Fachexperte Bau
       - Abhängig: AP-D3, G1
       - Stand: wartet
@@ -870,7 +870,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       - Abhängig: AP-A8, 2.5.4
       - Stand: noch nicht eingerichtet (Kommentar 12.11.2026: „ist nicht vorhanden, kommt erst“)
       - Quelle: D50; Antwort 17.11.2026
-    - **Schritt:** 2.4.3 · Werbematerial für Mietinteressenten: Video und Bilder, die Objekte realitätsnah auf dem Grundstück _[in Arbeit]_
+    - **Schritt:** 2.4.3 · Werbematerial für Mietinteressenten: Video und Bilder, die Wohneinheiten realitätsnah auf dem Grundstück _[in Arbeit]_
       - Fertig, wenn: Video und Bilder fertig; der Jurist hat die Texte gesehen
       - Rolle: Projektleitung mit KI
       - Abhängig: 2.5.4
@@ -1370,7 +1370,7 @@ Je Ressource drei Zustände: normaler Betrieb, Störung und Ausbau auf Team und 
 - **Schritt:** Wärme _[offen]_
   - Dient: Z1
   - **Ausgang (Grundbetrieb):** Ofen mit Plan zum Überwintern (D60). _[offen]_
-    - Heizlast je Objekt bei −20 °C rechnen (H02). Annahme: mindestens 12 °C im Schlafbereich und 16 °C im Arbeitsbereich nach 8 Stunden ohne Feuer; am Arbeitsplatz mindestens 20 °C (H03).
+    - Heizlast je Wohneinheit bei −20 °C rechnen (H02). Annahme: mindestens 12 °C im Schlafbereich und 16 °C im Arbeitsbereich nach 8 Stunden ohne Feuer; am Arbeitsplatz mindestens 20 °C (H03).
   - **Ausgang (Störung):** Der Ofen ist über Nacht aus. _[nicht geprüft]_
     - Winter-Arbeitstag 06:30; Rauch- und CO-Melder, Generator nur draußen (S01).
   - **Ausgang (Ausbau):** Je weiteres Haus eine eigene Heizlast. _[wartet]_
@@ -1389,9 +1389,9 @@ Je Ressource drei Zustände: normaler Betrieb, Störung und Ausbau auf Team und 
     - Die Analyse bestimmt die Aufbereitung. Abwasser: lokale Kläranlage wie im Detailplan, ab Phase 0 (D62).
 - **Schritt:** Internet _[offen]_
   - Dient: Z1
-  - **Ausgang (Grundbetrieb):** Eigener Anschluss (D63). _[Regel steht]_
+  - **Ausgang (Grundbetrieb):** Eigener Anschluss über einen lokalen Internetanbieter (D63, Kommentar 17.11.). _[Regel steht]_
     - Zwei Videocalls gleichzeitig: mindestens etwa 8 Mbit/s Upload in 95 % der Minuten (D01, Annahme).
-  - **Ausgang (Störung):** Starlink als Reserve, auch bei Schnee; Mobilfunk gibt es oben nicht (D63). _[nicht geprüft]_
+  - **Ausgang (Störung):** Starlink als redundante Reserve für Ausfälle, auch bei Schnee; Mobilfunk gibt es oben nicht (D63, Kommentar 17.11.). _[nicht geprüft]_
     - Ist zusätzlich die Auffahrt frei: Ausweicharbeitsplatz unten (A03, M02-39).
   - **Ausgang (Ausbau):** Bandbreite für Team und Mieter in Phase 1. _[wartet]_
     - Neu rechnen (O29).
@@ -1425,10 +1425,10 @@ Je Ressource drei Zustände: normaler Betrieb, Störung und Ausbau auf Team und 
   - **Ereignis:** Test: Nutzungstest und erster Winter _[nicht geprüft]_
     - T00 bis T06 (2.4.9) und die Messung bei Frost (2.3.5).
   - **Schritt:** Team und erste Mieter (Phase 1) _[wartet]_
-    - Kommunalgebäude zuerst (D64), dann Wohn- und Arbeitsobjekte für Mieter und Team. Strom, Wasser und Wärme wachsen mit; die Infrastruktur aus Phase 0 ist dafür ausgelegt (D55).
+    - Kommunalgebäude zuerst (D64), dann Wohneinheiten mit Arbeitsplatz für Mieter und Team. Strom, Wasser und Wärme wachsen mit; die Infrastruktur aus Phase 0 ist dafür ausgelegt (D55).
     - Dient: Z1, Z2
   - **Schritt:** Das Grundstück mit Mietern gefüllt (Phase 2) _[wartet]_
-    - So viele Objekte, wie Detailplan, Geologie und Zusatzerkundung erlauben; Mieter nach Nachfrage (D50). Die Herrenhaus-Fläche wird zuletzt bebaut.
+    - So viele Wohneinheiten, wie Detailplan, Geologie und Zusatzerkundung erlauben; Mieter nach Nachfrage (D50). Die Herrenhaus-Fläche wird zuletzt bebaut.
     - Dient: Z2
   - **Ende:** Der nächste Node mit demselben Schema
     - Standardisierung von Anfang an; Node001 ist der Proof of Concept, sein Modell wird für den nächsten Node übernommen (D51). Geologie und Gelände sind an jedem Ort neu.
@@ -1450,9 +1450,9 @@ Verglichen wird die betriebsfähige Lösung für das Team mit Ausbaupfad. Die am
   - Beschlussblatt, Gültigkeit: bis ihr sie ändert
   - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
   - Möglichkeit A: Bis zum Ende des ersten Winters
-  - Möglichkeit B: Über die Nutzungsdauer der Objekte — Für Objekte in Phase 1, die vermietet werden.
-- **Entscheidung:** Objekt für Phase 0 (2.2.3) _[offen]_
-  - Bauart offen (D56); eine Bau-KI plant nach den lokalen Gegebenheiten. Mindestbedingungen aus M02: H01, H02, H06, H08, S04, D02, D03. Gründung nach Geologie: leichte eingeschossige Objekte auf IGE-3 mit Streifen- und Stützfundament. Transport auf kleinem Fahrzeug (D57). Kostenregister: Modul 18 m² 674.900 UAH laut Anbieter inklusive Transport und Montage (Annahme, kein Angebot).
+  - Möglichkeit B: Über die Nutzungsdauer der Wohneinheiten — Für Wohneinheiten in Phase 1, die vermietet werden.
+- **Entscheidung:** Wohneinheit für Phase 0 (2.2.3) _[offen]_
+  - Bauart offen (D56); eine Bau-KI plant nach den lokalen Gegebenheiten. Mindestbedingungen aus M02: H01, H02, H06, H08, S04, D02, D03. Gründung nach Geologie: leichte eingeschossige Wohneinheiten auf IGE-3 mit Streifen- und Stützfundament. Transport auf kleinem Fahrzeug (D57). Kostenregister: Modul 18 m² 674.900 UAH laut Anbieter inklusive Transport und Montage (Annahme, kein Angebot).
   - Dient: Z1, Z2
   - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
   - Beschlussblatt, Fachliche Prüfung: Fachexperte; Architekt berät (D67)
@@ -1469,7 +1469,7 @@ Verglichen wird die betriebsfähige Lösung für das Team mit Ausbaupfad. Die am
     - Transport: ob es die Zufahrt hochkommt, ist offen (2.2.4)
   - Möglichkeit C: Massive Bauweise
     - Stand: für dauerhafte Gebäude auf IGE-4 mit Zusatzerkundung; eher Phase 1
-  - Möglichkeit D: Erstes Objekt selbst bauen
+  - Möglichkeit D: Erste Wohneinheit selbst bauen
     - Kosten: Schätzung der Projektleitung vom 03.11.: höchstens 10.000–15.000 € ohne Wasser und Strom
     - Stand: Idee, nicht entschieden
 - **Entscheidung:** Strom: Größen und Kosten (2.3.2) _[entschieden]_
@@ -1484,10 +1484,10 @@ Verglichen wird die betriebsfähige Lösung für das Team mit Ausbaupfad. Die am
   - Möglichkeit C: Generator als Reserve [entschieden]
     - Kosten: Kostenregister: 3,2 kW für 17.424 UAH; Eignung nach Lastliste
     - Betrieb: Kraftstoff für 3 Tage, steht draußen (S03, Annahme)
-- **Entscheidung:** Wärme: Ofen je Objekt oder zentral (2.3.2) _[entschieden]_
+- **Entscheidung:** Wärme: Ofen je Wohneinheit oder zentral (2.3.2) _[entschieden]_
   - Entschieden am 13.11. (D60): Mix; Ofen als eine Möglichkeit mit Plan zum Überwintern, eigenes und gekauftes Holz, Holzlager in jedem Fall. Mindestbedingungen: H02, H03, S01, H08. Annahme: grob 1,5–3 kW Heizlast je gut gedämmtem Modul bei −20 °C (H02). Test: Winter-Arbeitstag.
   - Dient: Z1
-  - Möglichkeit A: Holzofen mit Kochplatte je Objekt [entschieden]
+  - Möglichkeit A: Holzofen mit Kochplatte je Wohneinheit [entschieden]
     - Kosten: Kostenregister: Ofen 5.200 UAH, Kaminsatz 15.788 UAH nur Material, Montage 3.500–6.000 UAH
     - Kippt bei: Öfen haben meist 6–10 kW; zu groß gedrosselt schwelen sie und bilden CO (H02)
     - Eigenleistung: Holz machen und nachlegen, Person A
@@ -1522,9 +1522,9 @@ Verglichen wird die betriebsfähige Lösung für das Team mit Ausbaupfad. Die am
   - Möglichkeit B: Trenntoilette
     - Stand: erfüllt die Spülung nach D62 nicht
 - **Entscheidung:** Internet: Anschluss und Reserve _[entschieden]_
-  - Entschieden (D63): eigener Anschluss, Starlink als Reserve; Bandbreite, Router und Anbieter werden verglichen. Mindestbedingungen: D01, Z02, A01. Test: D01 über beide Anschlüsse, Starlink bei Schnee.
+  - Entschieden (D63): eigener Anschluss über einen lokalen Internetanbieter, Starlink als redundante Reserve für Ausfälle; Bandbreite, Router und Anbieter werden verglichen. In Deutschland: Anbieter Teledata (Kommentar 17.11.). Kosten: IT10 bis IT12 in Ast 9. Mindestbedingungen: D01, Z02, A01. Test: D01 über beide Anschlüsse, Starlink bei Schnee.
   - Dient: Z1, Z3
-  - Möglichkeit A: Eigener Anschluss [entschieden]
+  - Möglichkeit A: Eigener Anschluss über lokalen Anbieter [entschieden]
     - Kosten: fehlt; Anbieter oben und Bandbreite fehlen (A4)
   - Möglichkeit B: Starlink als Reserve [entschieden]
     - Kosten: Kostenregister: Gerät 24.000 UAH, Tarif 1.363 UAH im Monat
@@ -1580,17 +1580,17 @@ Verglichen wird die betriebsfähige Lösung für das Team mit Ausbaupfad. Die am
     - Anwälte Deutschland und Ukraine · nach O05
 - **Schritt O12:** Paket vor dem Investment: was aus Eigenmitteln und Eigenleistung geht (D69) _[offen]_
   - Geschäftsführung entscheidet · vor dem Investorengespräch
-  - Richtwert etwa 10.000 € Eigenkapital; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten (D69, D70). Mit dem Geld: Wasseranalyse, Rechtsprüfung der Struktur, Netzanschluss beantragen, Planung des Objekts Phase 0 auf Grundlage von Detailplan und Geologiebericht, Angebote. In Eigenleistung: Abgleich der deutschen Geologie-Zusammenfassung mit dem Original, Bäume fällen und Holz einlagern (D60), Mietinteressenten (D50). Die Beträge der Varianten werden ohne die Posten neu gerechnet, die schon vorliegen (Geologie, Vermessung).
+  - Richtwert etwa 10.000 € Eigenkapital; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten (D69, D70). Mit dem Geld: Wasseranalyse, Rechtsprüfung der Struktur, Netzanschluss beantragen, Planung der Wohneinheit Phase 0 auf Grundlage von Detailplan und Geologiebericht, Angebote. In Eigenleistung: Abgleich der deutschen Geologie-Zusammenfassung mit dem Original, Bäume fällen und Holz einlagern (D60), Mietinteressenten (D50). Die Beträge der Varianten werden ohne die Posten neu gerechnet, die schon vorliegen (Geologie, Vermessung).
   - Dient: Z2
 - **Schritt:** Texte für Mietinteressenten und Website prüfen lassen (2.5.4) _[offen]_
   - Projektleitung
   - Ein Jurist sieht die Texte, bevor etwas veröffentlicht wird. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen (D47).
   - Dient: Z2
-- **Schritt O31:** Angebote für das Objekt Phase 0 und die Infrastruktur einholen _[offen]_
+- **Schritt O31:** Angebote für die Wohneinheit Phase 0 und die Infrastruktur einholen _[offen]_
   - KI bereitet vor, Projektleitung schickt nach Freigabe
-  - Je großem Posten drei schriftliche Angebote: Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung. Grundlage: Detailplan, Geologiebericht, Anschaffungsliste A001–A120.
+  - Je großem Posten drei schriftliche Angebote: Wohneinheit Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung. Grundlage: Detailplan, Geologiebericht, Anschaffungsliste A001–A120.
   - Dient: Z1, Z2
-  - **Entscheidung:** Welches Objekt für Phase 0 (2.2.3)? _[wartet]_
+  - **Entscheidung:** Welche Wohneinheit für Phase 0 (2.2.3)? _[wartet]_
     - Projektleitung, Geschäftsführung · nach O31
     - Angebot mit Preis, Lieferform, schwerstem Teil und Montageaufwand; Kriterium Transport auf kleinem Fahrzeug (D57). Bauart nach D56.
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
@@ -1662,16 +1662,17 @@ Je Karte die Antwort und der Kommentar im Wortlaut; die gewählte Möglichkeit i
     - Beschlussblatt, Budgetgrenze: –
     - Beschlussblatt, Gültigkeit: bis ihr sie ändert
     - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
-    - Möglichkeit A: Die fünf größten Posten — Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung.
+    - Möglichkeit A: Die fünf größten Posten — Wohneinheit Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung.
     - Möglichkeit B: Alles nach Maslow — Zuerst Grundbedürfnisse (Wärme, Wasser, Sanitär), dann Sicherheit, dann Arbeit und Verbindung.
-    - Möglichkeit C: Phase 1 gleich mit — Zusätzlich Richtangebote für Wohn- und Arbeitsobjekte und das Kommunalgebäude.
+    - Möglichkeit C: Phase 1 gleich mit — Zusätzlich Richtangebote für Wohneinheiten mit Arbeitsplatz und das Kommunalgebäude.
 - **Ast:** Normativ: wofür und nach welchen Regeln
   - **Entscheidung D42:** Vision und Mission: was gilt? _[entschieden]_
-    - Gilt: Mission und Globalziele bleiben der Ausgangspunkt. Aufgabe: mit Vision v0.4 und Zielblatt in eine durchgehende Logik bringen.
-    - Antwort 13.11.: ohne Wahl, Kommentar gilt
+    - Gilt: Mission und Globalziele sind der Ausgangspunkt und stehen im Index 3.0 unter „Grundlage: Mission, Ziele, Ort“; Vision v0.4 und Zielblatt stehen daneben. SGMM, Whitepaper und Deck übernehmen sie von dort (Kommentar auf der SGMM-Seite vom 17.11.2026).
+    - Antwort 13.11.: per Kommentar gewählt: B (Kommentare vom 13.11. und 17.11.2026)
     - Kommentar 13.11.: Es gilt die Vision v0.4 mit Kerndefinition. Mission und Globalziele entfallen; die Ziele stehen im Zielblatt (Z1–Z4).
 
 bruch in der logik, muss harmonisiert werden, die mission und globalziele sind ausgangspunkt.
+    - Möglichkeit B: Vision v0.4 plus Mission — Die Vision v0.4 gilt; die Mission „Innovationshubs“ bleibt als kurze Fassung für Website und Pitch. [entschieden]
   - **Entscheidung D43:** Wer bereitet vor, wer prüft, wer gibt frei? _[entschieden]_
     - Gilt: Rollenbasiert: Texte nennen Rollen statt Namen, und es heißt „Fachexperte“. Ein KI-Vorschlag gilt erst mit Wahl auf der Entscheidungsseite.
     - Antwort 13.11.: A
@@ -1696,7 +1697,7 @@ zu klären wo services auf den nodes abgewickelt werden -> vorrausstichlich loka
     - Antwort 13.11.: ohne Wahl, Kommentar gilt
     - Kommentar 13.11.: wir haben uns gegen das käufermodelll entschieden, es werden eine mischung aus eigenkapital und vc/investments -> verbund mit Recurring Revenue
   - **Entscheidung D47:** Kapital für die Firma: woher? _[entschieden]_
-    - Gilt: Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding.
+    - Gilt: Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Wohneinheiten mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding.
     - Antwort 13.11.: ohne Wahl, Kommentar gilt
     - Kommentar 13.11.: eigenkapital bis zur vollendeten bauplanung -> infrastruktur (wasser/wärme etc)/objekte mit investoren 
 förderung sollte nicht öffenltihc zugänglich ersichtlich sein - - - nur obligatorische anforderungen vom kapitalgeber
@@ -1707,8 +1708,8 @@ förderung sollte nicht öffenltihc zugänglich ersichtlich sein - - - nur oblig
     - Kommentar 13.11.: verkauf steht ausser frage im klassischen sinne
 - - - tokenisierung -> nach klärung und weiteren informationen - auch x-portal beteiligung in unterscheidlichen ebenen - - -
     - Möglichkeit B: Nur Miete am Anfang — In Phase 1 wird nur vermietet; Verkauf erst, wenn Recht und Preis geklärt sind. [entschieden]
-  - **Entscheidung D49:** Hausgröße und Preis je Objekt _[entschieden]_
-    - Gilt: Statt eines Verkaufspreises wird der Selbstkostenpreis je Objekt ermittelt.
+  - **Entscheidung D49:** Hausgröße und Preis je Wohneinheit _[entschieden]_
+    - Gilt: Statt eines Verkaufspreises wird der Selbstkostenpreis je Wohneinheit ermittelt.
     - Antwort 13.11.: ohne Wahl, Kommentar gilt
     - Kommentar 13.11.: preisfrage sollte in selbstkostenpreis umgewandelt werden da wir keinen immobilien verkauf im klassischen sinne betreiebn. v0.4 stimmt hier
   - **Entscheidung D50:** Start der Vermarktung und Schwelle zum Bauen _[entschieden]_
@@ -1742,12 +1743,12 @@ Zuerst Mieter gewinnen - ziel interessenten jetzt bekommen
     - Gilt: Der Geologiebericht 34.11/26 liegt vor, mit KI-Zusammenfassung XPB-N001-GEO-SUM-001. Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026). Die Lage von Phase 0 ist seit dem 17.11.2026 voraussichtlich festgelegt.
     - Antwort 13.11.: ohne Wahl, Kommentar gilt
     - Kommentar 13.11.: geologie plan erhälsts du im nächsten prompt
-  - **Entscheidung D55:** Bauphasen: ein Objekt nur für den Anfang? _[entschieden]_
-    - Gilt: Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohn- und Arbeitsobjekte und Kommunalgebäude. Phase 2: Ausbau.
-    - Antwort 13.11.: per Kommentar gewählt: A (angepasst: Objekt statt Container, unterhalb der Herrenhaus-Fläche)
+  - **Entscheidung D55:** Bauphasen: eine Wohneinheit nur für den Anfang? _[entschieden]_
+    - Gilt: Phase 0: eine Wohneinheit für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohneinheiten mit Arbeitsplatz und Kommunalgebäude. Phase 2: Ausbau.
+    - Antwort 13.11.: per Kommentar gewählt: A (angepasst: Wohneinheit statt Container, unterhalb der Herrenhaus-Fläche)
     - Kommentar 13.11.: A  Objekt nur Übergang Vorschlag KI
 Phase 0 Objekt für Team und Bauarbeiter unterhalb der Herrenhaus Fläche - skalierbare infrastruktur (wasser/strom/internet); Phase 1 Häuser (wohn und arbeitsobjekte) und Kommunalgebäude; Phase 2 Ausbau
-    - Möglichkeit A: Objekt nur Übergang — Phase 0: ein Objekt als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur; Phase 1 Wohn- und Arbeitsobjekte und Kommunalgebäude; Phase 2 Ausbau, die Herrenhaus-Fläche zuletzt (Wortlaut des Kommentars). [entschieden]
+    - Möglichkeit A: Wohneinheit nur Übergang — Phase 0: eine Wohneinheit als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur; Phase 1 Wohneinheiten mit Arbeitsplatz und Kommunalgebäude; Phase 2 Ausbau, die Herrenhaus-Fläche zuletzt (Wortlaut des Kommentars). [entschieden]
   - **Entscheidung D56:** Hausart in Phase 1 _[offen]_
     - Grundmodell bisher: leichter Transport, kommunal, gemeinschaftlich, autark; Häuser in Teilen (Rahmen oder Paneele), oben montiert. Die Wahl hängt an Geologie (D54) und Zufahrt (D57).
     - Antwort 13.11.: ohne Wahl, Kommentar gilt
@@ -1793,13 +1794,13 @@ Phase 0: Netzanschluss beantragen und Generator als Reserve. Phase 1: Solar mit 
 muss ab phase 0 verfügbar sein
     - Möglichkeit C: Kläranlage sofort — Die dauerhafte Anlage kommt schon in Phase 0. [entschieden]
   - **Entscheidung D63:** Internet _[entschieden]_
-    - Gilt: Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Objekte und steht in der Anschaffungsliste.
+    - Gilt: In der Ukraine ein lokaler Internetanbieter, Starlink als redundante Reserve für Ausfälle; in Deutschland Teledata (Kommentar im Index vom 17.11.). Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Wohneinheiten und steht in der Anschaffungsliste.
     - Antwort 13.11.: ohne Wahl, Kommentar gilt
     - Kommentar 13.11.: bandbreite/router/anbieter müssen geprüft und verlgichen werden, aufnehmen in objekte
   - **Entscheidung D64:** Kommunalgebäude und Garten _[entschieden]_
     - Gilt: Kommunalgebäude ist der erste Bau in Phase 1.
     - Antwort 13.11.: A
-    - Möglichkeit A: Zuerst in Phase 1 — Das Kommunalgebäude ist der erste Bau in Phase 1, vor den übrigen Objekten; Garten daneben. [entschieden]
+    - Möglichkeit A: Zuerst in Phase 1 — Das Kommunalgebäude ist der erste Bau in Phase 1, vor den übrigen Wohneinheiten; Garten daneben. [entschieden]
   - **Entscheidung D65:** Mobilität _[entschieden]_
     - Gilt: Ein gemeinsames geländegängiges Fahrzeug; keine E-Bikes in Phase 0.
     - Antwort 13.11.: C
@@ -1927,7 +1928,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
     - Beschlussblatt, Wiedervorlage: vor Technologie- und Betriebsfreigabe
   - **Entscheidung:** OD-008 · Parametrischer Business Case und Architektur-Sensitivitäten _[offen]_
     - OPEN · parallel zur Node001 System Architecture
-    - Im Plan: Make-or-Buy (Ast 4), Selbstkosten je Objekt (O03), Geldfluss (2.1.3). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung); eine Rechnung über Verkaufserlöse gibt es nicht mehr (Abgleich W05).
+    - Im Plan: Make-or-Buy (Ast 4), Selbstkosten je Wohneinheit (O03), Geldfluss (2.1.3). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung); eine Rechnung über Verkaufserlöse gibt es nicht mehr (Abgleich W05).
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
     - Beschlussblatt, Fachliche Prüfung: –
     - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
@@ -2037,7 +2038,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
 - **Ast:** Kapitalentscheidungen
   - **Entscheidung:** Zwei Investment Cases: X-PORTAL Company und Node001. Welche Struktur, welcher Kapitalbedarf, welcher Investor Ask? _[offen]_
     - Geschäftsführung · vor dem Investorengespräch (D71)
-    - Node001: Eigenkapital bis zur vollendeten Bauplanung, Infrastruktur und Objekte mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47). Company: Kundenprojekte, Technologielösungen, später Skalierung (D51). Kapitalbedarf und Investor Ask entstehen erst aus den Angeboten (O31) und den Selbstkosten (O03); bis dahin keine Beträge nach außen (D53).
+    - Node001: Eigenkapital bis zur vollendeten Bauplanung, Infrastruktur und Wohneinheiten mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47). Company: Kundenprojekte, Technologielösungen, später Skalierung (D51). Kapitalbedarf und Investor Ask entstehen erst aus den Angeboten (O31) und den Selbstkosten (O03); bis dahin keine Beträge nach außen (D53).
     - Dient: X1, X3
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
     - Beschlussblatt, Fachliche Prüfung: –
@@ -2070,7 +2071,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
   - **Entscheidung:** D38 · Pauschale für Leistungen _[entschieden]_
     - Monatliche Pauschale. Davon abgezogen werden oben erbrachte Leistungen: Gemeinschaftsleistungen wie Kapelle und Gartenarbeit sowie Projektarbeit, zum Beispiel Robotik und Drohnen oder Freelancer-Leistungen für den DACH-Raum über die DT Agentur. Weiter zu besprechen.
   - **Entscheidung:** D42 · Vision und Mission _[entschieden]_
-    - Mission und Globalziele bleiben der Ausgangspunkt. Aufgabe: mit Vision v0.4 und Zielblatt in eine durchgehende Logik bringen.
+    - Mission und Globalziele sind der Ausgangspunkt und stehen im Index 3.0 unter „Grundlage: Mission, Ziele, Ort“; Vision v0.4 und Zielblatt stehen daneben. SGMM, Whitepaper und Deck übernehmen sie von dort (Kommentar auf der SGMM-Seite vom 17.11.2026).
   - **Entscheidung:** D43 · Entscheidungsrechte _[entschieden]_
     - Rollenbasiert: Texte nennen Rollen statt Namen, und es heißt „Fachexperte“. Ein KI-Vorschlag gilt erst mit Wahl auf der Entscheidungsseite.
   - **Entscheidung:** D44 · Organisation _[entschieden]_
@@ -2080,11 +2081,11 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
   - **Entscheidung:** D46 · Kapital Node001 _[entschieden]_
     - Node001 wird mit Eigenkapital und VC oder Investments finanziert, verbunden mit wiederkehrenden Erlösen. Ein Verkauf an Einzelne ist abgewählt.
   - **Entscheidung:** D47 · Kapital Company _[entschieden]_
-    - Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding.
+    - Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Wohneinheiten mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding.
   - **Entscheidung:** D48 · Produktmodell _[entschieden]_
     - Nur Miete am Anfang; kein klassischer Verkauf. Tokenisierung und Beteiligung auf mehreren Ebenen erst nach Klärung.
   - **Entscheidung:** D49 · Preislogik _[entschieden]_
-    - Statt eines Verkaufspreises wird der Selbstkostenpreis je Objekt ermittelt.
+    - Statt eines Verkaufspreises wird der Selbstkostenpreis je Wohneinheit ermittelt.
   - **Entscheidung:** D50 · Start der Vermarktung _[entschieden]_
     - Zuerst Mieter gewinnen, schon vor dem Bau: Interessenten jetzt sammeln.
   - **Entscheidung:** D51 · Erlösstufen _[entschieden]_
@@ -2094,7 +2095,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
   - **Entscheidung:** D54 · Geologie _[entschieden]_
     - Der Geologiebericht 34.11/26 liegt vor, mit KI-Zusammenfassung XPB-N001-GEO-SUM-001. Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026). Die Lage von Phase 0 ist seit dem 17.11.2026 voraussichtlich festgelegt.
   - **Entscheidung:** D55 · Bauphasen _[entschieden]_
-    - Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohn- und Arbeitsobjekte und Kommunalgebäude. Phase 2: Ausbau.
+    - Phase 0: eine Wohneinheit für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohneinheiten mit Arbeitsplatz und Kommunalgebäude. Phase 2: Ausbau.
   - **Entscheidung:** D57 · Zufahrt und Transport _[entschieden]_
     - Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung. Gesamtplanung der Zufahrt in Phase 1 mit 3D-Modellen.
   - **Entscheidung:** D58 · Termine _[entschieden]_
@@ -2108,7 +2109,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
   - **Entscheidung:** D62 · Sanitär und Abwasser _[entschieden]_
     - Kläranlage sofort: Die dauerhafte Anlage kommt schon in Phase 0. Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser werden von vornherein mit der Infrastruktur geplant und eingebaut.
   - **Entscheidung:** D63 · Internet _[entschieden]_
-    - Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Objekte und steht in der Anschaffungsliste.
+    - In der Ukraine ein lokaler Internetanbieter, Starlink als redundante Reserve für Ausfälle; in Deutschland Teledata (Kommentar im Index vom 17.11.). Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Wohneinheiten und steht in der Anschaffungsliste.
   - **Entscheidung:** D64 · Kommunalgebäude _[entschieden]_
     - Kommunalgebäude ist der erste Bau in Phase 1.
   - **Entscheidung:** D65 · Mobilität _[entschieden]_
@@ -2128,55 +2129,85 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
 
 Investoren sehen nicht nur Unterlagen, sondern eine Infrastruktur, die genutzt wird, und Erlösquellen mit Reifegrad. Getrennt von Node001, wie die zwei Investment Cases im Whitepaper. Quelle: plan/technik/technik.json.
 
-- **Ast:** Infrastruktur im Betrieb (IT01 bis IT09)
-  - Feste Kosten je Monat, soweit bekannt: 248,33 € ohne Microsoft 365; dazu Microsoft 365 Business Premium je Nutzer (Nutzerzahl offen) und Cardano je Transaktion. Quelle: Angaben der Projektleitung vom 17.11.2026; Microsoft-Listenpreis aus Händlerlisten. Nachweise und Nutzung trägt das Team im Cockpit ein (AP-A10).
+- **Ast:** Infrastruktur im Betrieb (IT01 bis IT09) und Internetzugang (IT10 bis IT12)
+  - Feste Kosten je Monat, soweit bekannt: 248,33 € ohne Microsoft 365; dazu Microsoft 365 Business Premium je Nutzer (Nutzerzahl offen) und Cardano je Transaktion. Internet: in der Ukraine ein lokaler Anbieter, Starlink als redundante Reserve für Ausfälle; in Deutschland Teledata; Kosten offen (Kommentar vom 17.11.2026). Quelle: Angaben der Projektleitung vom 17.11.2026; Microsoft-Listenpreis aus Händlerlisten. Nachweise und Nutzung trägt das Team im Cockpit ein (AP-A10).
   - **Schritt:** ChatGPT: KI-Arbeitsplatz: Recherche, Texte, Code, Agenten _[läuft]_
     - Bereich: KI
+    - Stand: im Betrieb
     - Kosten: 90,00 € je Monat
     - Quelle: Angabe der Projektleitung vom 17.11.2026
     - Nachweis für Investoren: Abo-Rechnung; Nutzung in Projekten
   - **Schritt:** Claude: KI-Arbeitsplatz: Planung, Code, Auswertung _[läuft]_
     - Bereich: KI
+    - Stand: im Betrieb
     - Kosten: 90,00 € je Monat
     - Quelle: Angabe der Projektleitung vom 17.11.2026
     - Nachweis für Investoren: Abo-Rechnung; Repository mit Commits
   - **Schritt:** Website-Hosting: Website und Plattform x-portal.eu _[läuft]_
     - Bereich: Web
+    - Stand: im Betrieb
     - Kosten: 10,00 € je Monat
     - Quelle: Angabe der Projektleitung vom 17.11.2026
     - Nachweis für Investoren: Live-URL; Hosting-Rechnung
   - **Schritt:** Supabase: Datenbank und Backend der Plattform _[läuft]_
     - Bereich: Daten
+    - Stand: im Betrieb
     - Kosten: 25,00 € je Monat
     - Quelle: Angabe der Projektleitung vom 17.11.2026
     - Nachweis für Investoren: Projekt-Dashboard: Tabellen, Nutzer, Abfragen
   - **Schritt:** Cardano-Transaktionen: Nachweise und Zahlungen on-chain; Grundlage für Zugang und Erfassung (AP-D5, AP-F4) _[läuft]_
     - Bereich: Blockchain
+    - Stand: im Betrieb
     - Kosten: 0,02 € je Transaktion
     - Quelle: Angabe der Projektleitung vom 17.11.2026: 0,16 ADA, umgerechnet etwa 2 Cent
     - Nachweis für Investoren: Transaktions-Hashes, öffentlich im Explorer prüfbar
     - Hinweis: ADA-Kurs schwankt; Anzahl je Monat offen
   - **Schritt:** X Premium mit Grok-Bot: Marketing und Reichweite auf X; Grok-Bot im Abo enthalten _[läuft]_
     - Bereich: Marketing
+    - Stand: im Betrieb
     - Kosten: 30,00 € je Monat
     - Quelle: Angabe der Projektleitung vom 17.11.2026
     - Nachweis für Investoren: Profil, Reichweitenzahlen, Abo-Beleg
   - **Schritt:** Microsoft 365 Business Premium: E-Mail, Teams, OneDrive, Office, Sicherheit und Geräteverwaltung _[läuft]_
     - Bereich: Büro
+    - Stand: im Betrieb
     - Kosten: etwa 20–22 € je Nutzer und Monat netto
     - Quelle: Listenpreis etwa 20–22 € netto je Nutzer und Monat im Jahresabo (Händlerlisten 08/2026; Microsoft-Seite am 17.11.2026 nicht erreichbar); Betrag aus der Rechnung übernehmen
     - Nachweis für Investoren: Rechnung; Mandant mit Nutzern
     - Hinweis: Nutzerzahl offen
   - **Schritt:** Domain: x-portal.eu _[läuft]_
     - Bereich: Web
+    - Stand: im Betrieb
     - Kosten: 40,00 € je Jahr (≈ 3,33 € im Monat)
     - Quelle: Angabe der Projektleitung vom 17.11.2026
     - Nachweis für Investoren: Registrierung
   - **Schritt:** Plattform x-portal.eu: KI-Matching und Freelancer-Profile; läuft auf IT03 und IT04 _[läuft]_
     - Bereich: Plattform
+    - Stand: im Betrieb
     - Kosten: offen
     - Quelle: eigene Entwicklung; Kosten stecken in IT03 und IT04
     - Nachweis für Investoren: Live-URL, Nutzerzahlen, Repository
+  - **Schritt:** Internetanschluss Ukraine: Hauptanschluss am Node001 über einen lokalen Internetanbieter (D63) _[später]_
+    - Bereich: Internet
+    - Stand: geplant für Node001
+    - Kosten: offen
+    - Quelle: Kommentar der Projektleitung im Index vom 17.11.2026
+    - Nachweis für Investoren: Vertrag, gemessene Bandbreite
+    - Hinweis: Anbieter oben und Bandbreite werden verglichen (D63)
+  - **Schritt:** Starlink: Redundanter Zugang am Node001 für Ausfälle des Hauptanschlusses (D63) _[später]_
+    - Bereich: Internet
+    - Stand: geplant für Node001
+    - Kosten: offen
+    - Quelle: Kommentar der Projektleitung im Index vom 17.11.2026
+    - Nachweis für Investoren: Gerät, Vertrag, Test bei Schnee
+    - Hinweis: Kostenregister vom 13.11.: Gerät 24.000 UAH, Tarif 1.363 UAH im Monat (Richtwerte, kein Angebot)
+  - **Schritt:** Internetanschluss Deutschland: Anschluss in Deutschland über den Anbieter Teledata _[offen]_
+    - Bereich: Internet
+    - Stand: Anbieter genannt, Stand offen
+    - Kosten: offen
+    - Quelle: Kommentar der Projektleitung im Index vom 17.11.2026
+    - Nachweis für Investoren: Vertrag
+    - Hinweis: Kosten offen
 - **Ast:** Digitale und weitere Erlösquellen
   - Zuordnung zu den Erlösstufen des Whitepapers. Beträge erst mit Belegen (D53).
   - **Schritt:** Kundenprojekte über die DT Agentur (Deutschland, Österreich, Schweiz) _[läuft]_

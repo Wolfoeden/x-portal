@@ -43,7 +43,7 @@
    "gegenstand": "Liegt vor: Vermessung",
    "phase": "0",
    "art": "Dienstleistung",
-   "wofuer": "Liegt vor (Kommentar vom 15.11.2026); Absteckung von Objekt Phase 0, Leitungen und Wegen folgt mit der Bauplanung.",
+   "wofuer": "Liegt vor (Kommentar vom 15.11.2026); Absteckung von Wohneinheit Phase 0, Leitungen und Wegen folgt mit der Bauplanung.",
    "recherche": "Kopie in den Plan legen (Index 3.0, AP-A1); Absteckung als Eigenleistung",
    "menge": "je Bauabschnitt",
    "entscheidungen": [
@@ -76,12 +76,12 @@
   {
    "nr": "A005",
    "bereich": "Grundstück und Gründung",
-   "gegenstand": "Fundament für Objekt Phase 0",
+   "gegenstand": "Fundament für Wohneinheit Phase 0",
    "phase": "0",
    "art": "Dienstleistung",
    "wofuer": "Leichte eingeschossige Gebäude können laut Bericht auf IGE-3 gründen; hangseitig als Stütze bemessen.",
    "recherche": "Punkt-, Streifen- oder Schraubfundament; was ein Fachexperte für den Standort zulässt",
-   "menge": "Größe und Gewicht des Objekts",
+   "menge": "Größe und Gewicht der Wohneinheit",
    "entscheidungen": [
     "D54",
     "D55",
@@ -147,8 +147,8 @@
   },
   {
    "nr": "A009",
-   "bereich": "Objekt Phase 0",
-   "gegenstand": "Wohn- und Arbeitsobjekt für Team und Bauarbeiter",
+   "bereich": "Wohneinheit Phase 0",
+   "gegenstand": "Wohneinheit mit Arbeitsplatz für Team und Bauarbeiter",
    "phase": "0",
    "art": "kaufen oder mieten",
    "wofuer": "Schlafen, arbeiten, Sanitär; ganzjährig bewohnbar bei −20 °C.",
@@ -165,8 +165,8 @@
   },
   {
    "nr": "A010",
-   "bereich": "Objekt Phase 0",
-   "gegenstand": "Planung der Objekte mit Bau-KI und 3D-Modell",
+   "bereich": "Wohneinheit Phase 0",
+   "gegenstand": "Planung der Wohneinheiten mit Bau-KI und 3D-Modell",
    "phase": "0",
    "art": "Dienstleistung",
    "wofuer": "Kommentar D56 und D57: Bau-KI plant und bewertet; 3D-Modelle für die Gesamtplanung in Phase 1.",
@@ -183,12 +183,12 @@
   },
   {
    "nr": "A011",
-   "bereich": "Objekt Phase 0",
+   "bereich": "Wohneinheit Phase 0",
    "gegenstand": "Betten und Matratzen",
    "phase": "0",
    "art": "kaufen",
    "wofuer": "Schlafplatz je Person.",
-   "recherche": "Maße passend zum Objekt",
+   "recherche": "Maße passend zur Wohneinheit",
    "menge": "je Person",
    "entscheidungen": [
     "D55",
@@ -201,7 +201,7 @@
   },
   {
    "nr": "A012",
-   "bereich": "Objekt Phase 0",
+   "bereich": "Wohneinheit Phase 0",
    "gegenstand": "Schreibtische und Arbeitsstühle",
    "phase": "0",
    "art": "kaufen",
@@ -219,7 +219,7 @@
   },
   {
    "nr": "A013",
-   "bereich": "Objekt Phase 0",
+   "bereich": "Wohneinheit Phase 0",
    "gegenstand": "Bildschirme",
    "phase": "0",
    "art": "kaufen",
@@ -237,7 +237,7 @@
   },
   {
    "nr": "A014",
-   "bereich": "Objekt Phase 0",
+   "bereich": "Wohneinheit Phase 0",
    "gegenstand": "Schränke und Regale",
    "phase": "0",
    "art": "kaufen",
@@ -255,11 +255,11 @@
   },
   {
    "nr": "A015",
-   "bereich": "Objekt Phase 0",
+   "bereich": "Wohneinheit Phase 0",
    "gegenstand": "LED-Beleuchtung innen und außen",
    "phase": "0",
    "art": "kaufen",
-   "wofuer": "Licht im Objekt und auf den Wegen zu Holzlager und Technik.",
+   "wofuer": "Licht in der Wohneinheit und auf den Wegen zu Holzlager und Technik.",
    "recherche": "Außenleuchten frostfest; Bewegungsmelder",
    "menge": "Räume und Wegemeter",
    "entscheidungen": [
@@ -273,7 +273,7 @@
   },
   {
    "nr": "A016",
-   "bereich": "Objekt Phase 0",
+   "bereich": "Wohneinheit Phase 0",
    "gegenstand": "Bettwäsche, Decken, Schlafsäcke für den Winter",
    "phase": "0",
    "art": "kaufen",
@@ -291,7 +291,7 @@
   },
   {
    "nr": "A017",
-   "bereich": "Objekt Phase 0",
+   "bereich": "Wohneinheit Phase 0",
    "gegenstand": "Waschmaschine",
    "phase": "0",
    "art": "kaufen",
@@ -329,7 +329,7 @@
    "gegenstand": "Leitung vom Netz zum Grundstück (Erdkabel oder Freileitung)",
    "phase": "0",
    "art": "Dienstleistung",
-   "wofuer": "Verbindung vom Anschlusspunkt bis zum Objekt.",
+   "wofuer": "Verbindung vom Anschlusspunkt bis zur Wohneinheit.",
    "recherche": "Wer baut; Kabelquerschnitt für den Ausbau",
    "menge": "Meter bis zum Anschlusspunkt",
    "entscheidungen": [
@@ -361,9 +361,9 @@
    "gegenstand": "Unterverteilung, Sicherungen, FI-Schutzschalter",
    "phase": "0",
    "art": "kaufen mit Einbau",
-   "wofuer": "Sicherheit im Objekt.",
+   "wofuer": "Sicherheit in der Wohneinheit.",
    "recherche": "Normen vor Ort",
-   "menge": "je Objekt",
+   "menge": "je Wohneinheit",
    "entscheidungen": [
     "D59"
    ],
@@ -379,7 +379,7 @@
    "art": "Dienstleistung",
    "wofuer": "Schutz von Personen und Technik am Hang.",
    "recherche": "Erder bei felsigem Untergrund",
-   "menge": "je Objekt",
+   "menge": "je Wohneinheit",
    "entscheidungen": [
     "D59"
    ],
@@ -426,7 +426,7 @@
    "phase": "0",
    "art": "kaufen",
    "wofuer": "Kraftstoff für mehrere Tage.",
-   "recherche": "zulässige Lagermenge; Abstand zum Objekt",
+   "recherche": "zulässige Lagermenge; Abstand zur Wohneinheit",
    "menge": "Tage Reserve × Verbrauch",
    "entscheidungen": [
     "D59"
@@ -486,12 +486,12 @@
   {
    "nr": "A029",
    "bereich": "Wärme und Holz",
-   "gegenstand": "Heizlastberechnung für das Objekt",
+   "gegenstand": "Heizlastberechnung für die Wohneinheit",
    "phase": "0",
    "art": "Dienstleistung",
    "wofuer": "Ohne Heizlast keine Ofengröße.",
    "recherche": "Wer rechnet; Auslegung −20 °C",
-   "menge": "einmal je Objekt",
+   "menge": "einmal je Wohneinheit",
    "entscheidungen": [
     "D60"
    ],
@@ -761,7 +761,7 @@
    "gegenstand": "Schubkarre oder Holzschlitten",
    "phase": "0",
    "art": "kaufen",
-   "wofuer": "Holz vom Lager zum Objekt, auch bei Schnee.",
+   "wofuer": "Holz vom Lager zur Wohneinheit, auch bei Schnee.",
    "recherche": "",
    "menge": "1–2",
    "entscheidungen": [
@@ -905,7 +905,7 @@
    "gegenstand": "Wasserleitung frostfrei verlegt",
    "phase": "0",
    "art": "Dienstleistung",
-   "wofuer": "Vom Brunnen zum Objekt, ohne Heizkabel.",
+   "wofuer": "Vom Brunnen zur Wohneinheit, ohne Heizkabel.",
    "recherche": "Frosttiefe am Standort; Rohrmaterial; Dimension für den Ausbau",
    "menge": "Meter",
    "entscheidungen": [
@@ -969,7 +969,7 @@
    "gegenstand": "Abwasserleitungen frostfrei mit Gefälle",
    "phase": "0",
    "art": "Dienstleistung",
-   "wofuer": "Vom Objekt zur Anlage.",
+   "wofuer": "Von der Wohneinheit zur Anlage.",
    "recherche": "Rohr für Papier geeignet (Durchmesser, Gefälle)",
    "menge": "Meter",
    "entscheidungen": [
@@ -1001,7 +1001,7 @@
    "gegenstand": "Dusche mit Armatur",
    "phase": "0",
    "art": "kaufen",
-   "wofuer": "Warm duschen im Objekt.",
+   "wofuer": "Warm duschen in der Wohneinheit.",
    "recherche": "Sparbrause",
    "menge": "je Sanitäreinheit",
    "entscheidungen": [
@@ -1149,7 +1149,7 @@
    "gegenstand": "WLAN-Zugangspunkte",
    "phase": "0",
    "art": "kaufen",
-   "wofuer": "Abdeckung in Objekt und später im Gelände.",
+   "wofuer": "Abdeckung in Wohneinheit und später im Gelände.",
    "recherche": "Außengeräte frostfest",
    "menge": "Fläche",
    "entscheidungen": [
@@ -1329,7 +1329,7 @@
    "gegenstand": "Transport nach oben mit kleinem Fahrzeug",
    "phase": "0",
    "art": "Dienstleistung",
-   "wofuer": "Material und Objekt hochbringen.",
+   "wofuer": "Material und Wohneinheit hochbringen.",
    "recherche": "Wer vor Ort Traktor oder Allrad-Transporter mit Anhänger hat; Nutzlast; Preis je Fahrt",
    "menge": "Tonnen und Fahrten",
    "entscheidungen": [
@@ -1361,7 +1361,7 @@
    "gegenstand": "Schneeschaufeln und Schneeschieber",
    "phase": "0",
    "art": "kaufen",
-   "wofuer": "Wege am Objekt.",
+   "wofuer": "Wege am Wohneinheit.",
    "recherche": "",
    "menge": "je Person",
    "entscheidungen": [
@@ -1667,7 +1667,7 @@
    "art": "kaufen",
    "wofuer": "Erster Löschangriff.",
    "recherche": "Typ und Größe; Prüffrist",
-   "menge": "je Objekt und Technikraum",
+   "menge": "je Wohneinheit und Technikraum",
    "entscheidungen": [
     "D66"
    ],
@@ -1699,7 +1699,7 @@
    "art": "kaufen",
    "wofuer": "Verletzungen, auch Schnittwunden von der Säge.",
    "recherche": "Inhalt für abgelegene Orte",
-   "menge": "je Objekt und Fahrzeug",
+   "menge": "je Wohneinheit und Fahrzeug",
    "entscheidungen": [
     "D66"
    ],
@@ -1745,7 +1745,7 @@
    "gegenstand": "Versicherungen",
    "phase": "0",
    "art": "Dienstleistung",
-   "wofuer": "Haftung, Unfall, Objekt.",
+   "wofuer": "Haftung, Unfall, Wohneinheit.",
    "recherche": "Was in der Ukraine für Ausländer und Baustellen möglich ist",
    "menge": "einmal",
    "entscheidungen": [

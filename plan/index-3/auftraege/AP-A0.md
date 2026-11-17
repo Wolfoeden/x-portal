@@ -6,10 +6,10 @@ Für die ausführende KI (kleineres Modell). Das Ergebnis prüft die planende KI
 
 - Wann: jetzt; vor jeder Anfrage an Anbieter und Spediteure
 - Voraussetzung: Maßband, Neigungsmesser, Kamera mit GPS
-- Ergebnis wird gebraucht für: Auswahl des Objekts (hausart, AP-C1), Logistik (AP-C3), Bestellung
+- Ergebnis wird gebraucht für: Auswahl der Wohneinheit (hausart, AP-C1), Logistik (AP-C3), Bestellung
 - Grundbestimmungen: GB1, GB11
 
-  - GB1 Weg nach oben: transportierbar: Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jedes Objekt muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen; die Route und acht kritische Messpunkte MP01 bis MP08 stehen in AP-A0. Im Winter muss geräumt werden.
+  - GB1 Weg nach oben: transportierbar: Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jede Wohneinheit muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen; die Route und acht kritische Messpunkte MP01 bis MP08 stehen in AP-A0. Im Winter muss geräumt werden.
   - GB11 Rollen und Freigabe: Rollen statt Namen. Technische Werte legt ein Fachexperte fest. Ein Vorschlag der KI gilt erst, wenn er gewählt ist. Unterlagen werden von Hand verschickt.
 
 ## Auftrag

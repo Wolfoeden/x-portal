@@ -16,7 +16,8 @@
    "quelle": "Angabe der Projektleitung vom 17.11.2026",
    "nachweis": "Abo-Rechnung; Nutzung in Projekten",
    "hinweis": "",
-   "je_monat": 90.0
+   "je_monat": 90.0,
+   "stand": "im Betrieb"
   },
   {
    "id": "IT02",
@@ -28,7 +29,8 @@
    "quelle": "Angabe der Projektleitung vom 17.11.2026",
    "nachweis": "Abo-Rechnung; Repository mit Commits",
    "hinweis": "",
-   "je_monat": 90.0
+   "je_monat": 90.0,
+   "stand": "im Betrieb"
   },
   {
    "id": "IT03",
@@ -40,7 +42,8 @@
    "quelle": "Angabe der Projektleitung vom 17.11.2026",
    "nachweis": "Live-URL; Hosting-Rechnung",
    "hinweis": "",
-   "je_monat": 10.0
+   "je_monat": 10.0,
+   "stand": "im Betrieb"
   },
   {
    "id": "IT04",
@@ -52,7 +55,8 @@
    "quelle": "Angabe der Projektleitung vom 17.11.2026",
    "nachweis": "Projekt-Dashboard: Tabellen, Nutzer, Abfragen",
    "hinweis": "",
-   "je_monat": 25.0
+   "je_monat": 25.0,
+   "stand": "im Betrieb"
   },
   {
    "id": "IT05",
@@ -64,7 +68,8 @@
    "quelle": "Angabe der Projektleitung vom 17.11.2026: 0,16 ADA, umgerechnet etwa 2 Cent",
    "nachweis": "Transaktions-Hashes, öffentlich im Explorer prüfbar",
    "hinweis": "ADA-Kurs schwankt; Anzahl je Monat offen",
-   "je_monat": null
+   "je_monat": null,
+   "stand": "im Betrieb"
   },
   {
    "id": "IT06",
@@ -76,7 +81,8 @@
    "quelle": "Angabe der Projektleitung vom 17.11.2026",
    "nachweis": "Profil, Reichweitenzahlen, Abo-Beleg",
    "hinweis": "",
-   "je_monat": 30.0
+   "je_monat": 30.0,
+   "stand": "im Betrieb"
   },
   {
    "id": "IT07",
@@ -88,7 +94,8 @@
    "quelle": "Listenpreis etwa 20–22 € netto je Nutzer und Monat im Jahresabo (Händlerlisten 08/2026; Microsoft-Seite am 17.11.2026 nicht erreichbar); Betrag aus der Rechnung übernehmen",
    "nachweis": "Rechnung; Mandant mit Nutzern",
    "hinweis": "Nutzerzahl offen",
-   "je_monat": null
+   "je_monat": null,
+   "stand": "im Betrieb"
   },
   {
    "id": "IT08",
@@ -100,7 +107,8 @@
    "quelle": "Angabe der Projektleitung vom 17.11.2026",
    "nachweis": "Registrierung",
    "hinweis": "",
-   "je_monat": 3.33
+   "je_monat": 3.33,
+   "stand": "im Betrieb"
   },
   {
    "id": "IT09",
@@ -112,7 +120,47 @@
    "quelle": "eigene Entwicklung; Kosten stecken in IT03 und IT04",
    "nachweis": "Live-URL, Nutzerzahlen, Repository",
    "hinweis": "",
-   "je_monat": null
+   "je_monat": null,
+   "stand": "im Betrieb"
+  },
+  {
+   "id": "IT10",
+   "bereich": "Internet",
+   "werkzeug": "Internetanschluss Ukraine",
+   "zweck": "Hauptanschluss am Node001 über einen lokalen Internetanbieter (D63)",
+   "betrag": null,
+   "einheit": "Monat",
+   "quelle": "Kommentar der Projektleitung im Index vom 17.11.2026",
+   "nachweis": "Vertrag, gemessene Bandbreite",
+   "hinweis": "Anbieter oben und Bandbreite werden verglichen (D63)",
+   "je_monat": null,
+   "stand": "geplant für Node001"
+  },
+  {
+   "id": "IT11",
+   "bereich": "Internet",
+   "werkzeug": "Starlink",
+   "zweck": "Redundanter Zugang am Node001 für Ausfälle des Hauptanschlusses (D63)",
+   "betrag": null,
+   "einheit": "Monat",
+   "quelle": "Kommentar der Projektleitung im Index vom 17.11.2026",
+   "nachweis": "Gerät, Vertrag, Test bei Schnee",
+   "hinweis": "Kostenregister vom 13.11.: Gerät 24.000 UAH, Tarif 1.363 UAH im Monat (Richtwerte, kein Angebot)",
+   "je_monat": null,
+   "stand": "geplant für Node001"
+  },
+  {
+   "id": "IT12",
+   "bereich": "Internet",
+   "werkzeug": "Internetanschluss Deutschland",
+   "zweck": "Anschluss in Deutschland über den Anbieter Teledata",
+   "betrag": null,
+   "einheit": "Monat",
+   "quelle": "Kommentar der Projektleitung im Index vom 17.11.2026",
+   "nachweis": "Vertrag",
+   "hinweis": "Kosten offen",
+   "je_monat": null,
+   "stand": "Anbieter genannt, Stand offen"
   }
  ],
  "erloese": [

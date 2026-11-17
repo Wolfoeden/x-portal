@@ -45,7 +45,7 @@ HTML = r'''<section id="cockpit"><h2>Cockpit: wo wir stehen, was jetzt dran ist<
 <h3 class="ck-h3" id="ck-jetzt">Jetzt dran</h3>
 <p class="ck-note">Alle Schritte, deren Vorgänger erledigt sind. Mehr zu jedem Schritt (Unterlagen, Auftrag für die KI) im Baum unten.</p>
 <div class="ck-cards" id="ck-cards"></div>
-<h3 class="ck-h3" id="ck-bestellung">Bestellung der Objekte: Anbieter, Lieferzeit, Bestelltag</h3>
+<h3 class="ck-h3" id="ck-bestellung">Bestellung der Wohneinheiten: Anbieter, Lieferzeit, Bestelltag</h3>
 <div class="ck-order" id="ck-order"></div>
 <h4 style="margin:14px 0 6px">Werte für die Rechnung</h4>
 <div class="ck-werte" id="ck-werte"></div>
@@ -220,7 +220,7 @@ JS = r'''<script>
     var tbt = document.querySelector('#ck-tech tbody'); tbt.textContent = '';
     T.stack.forEach(function(t){ var r = TE[t.id] || {}, tr = el('tr');
       tr.appendChild(el('td', null, t.id)); tr.appendChild(el('td', null, t.werkzeug));
-      tr.appendChild(el('td', null, t.je_monat != null ? eur(t.je_monat) : (t.id === 'IT07' ? (nutzer != null ? eur(nutzer * spanne[0]) + '–' + eur(nutzer * spanne[1]) : 'je Nutzer') : (t.einheit === 'Transaktion' ? 'je Transaktion' : 'in anderen enthalten'))));
+      tr.appendChild(el('td', null, t.je_monat != null ? eur(t.je_monat) : (t.id === 'IT07' ? (nutzer != null ? eur(nutzer * spanne[0]) + '–' + eur(nutzer * spanne[1]) : 'je Nutzer') : (t.einheit === 'Transaktion' ? 'je Transaktion' : (t.id === 'IT09' ? 'in anderen enthalten' : 'offen')))));
       [['link', 'url', '14em'], ['seit', 'date', '9em'], ['nutzung', 'text', '14em']].forEach(function(f){ var td = el('td'), i = el('input'); i.type = f[1]; i.style.width = f[2]; i.value = r[f[0]] || ''; i.disabled = !schreibbar;
         i.onchange = function(){ var p = {}; p[f[0]] = i.value; if (db && schreibbar) db.doc('technik/' + t.id).set(Object.assign({}, TE[t.id] || {}, p, {von: me || '', am: new Date().toISOString()})); };
         td.appendChild(i); if (f[0] === 'link' && r.link){ var a2 = el('a', null, ' ↗'); a2.href = r.link; a2.target = '_blank'; a2.rel = 'noreferrer'; td.appendChild(a2); } tr.appendChild(td); });

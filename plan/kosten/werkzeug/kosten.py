@@ -13,6 +13,15 @@ import csv, html, io, json, re, sys
 from pathlib import Path
 import openpyxl
 
+# Begriff „Wohneinheit“ statt „Objekt“ (Kommentar vom 17.11.2026); das Excel vom 13.11. bleibt unverändert, umbenannt wird beim Einlesen.
+_WE = [(r'\bdas Objekt\b', 'die Wohneinheit'), (r'\bDas Objekt\b', 'Die Wohneinheit'), (r'\bein Objekt\b', 'eine Wohneinheit'), (r'\bEin Objekt\b', 'Eine Wohneinheit'),
+       (r'\bdem Objekt\b', 'der Wohneinheit'), (r'\bim Objekt\b', 'in der Wohneinheit'), (r'\bjedes Objekt\b', 'jede Wohneinheit'), (r'\bdes Objekts\b', 'der Wohneinheit'),
+       (r'\bObjekten\b', 'Wohneinheiten'), (r'\bObjekte\b', 'Wohneinheiten'), (r'\bObjekt\b', 'Wohneinheit')]
+def WE(x):
+    if not isinstance(x, str): return x
+    for a, b in _WE: x = re.sub(a, b, x)
+    return x
+
 STAND = '17.11.2026'
 KURS = 50.3379  # UAH je EUR, NBU 13.11.2026 laut Register
 RICHTWERT_EUR = 10000
@@ -20,7 +29,7 @@ RESERVE = 0.15
 STUNDENSATZ_UAH = round(30000 / 168)  # aus Register B007: 30.000 UAH im Monat für eine Betriebsrolle
 ENT = 'https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP'
 MASLOW = {1: 'Grundbedürfnisse', 2: 'Sicherheit', 3: 'Arbeit und Verbindung', 4: 'Gemeinschaft', 5: 'Entwicklung'}
-M_BEREICH = {'Grundstück und Gründung': 2, 'Grundstück': 2, 'Planung': 2, 'Objekt Phase 0': 1, 'Strom': 2, 'Wärme und Holz': 1, 'Wärme': 1, 'Wasser': 1,
+M_BEREICH = {'Grundstück und Gründung': 2, 'Grundstück': 2, 'Planung': 2, 'Wohneinheit Phase 0': 1, 'Strom': 2, 'Wärme und Holz': 1, 'Wärme': 1, 'Wasser': 1,
              'Sanitär und Abwasser': 1, 'Abwasser': 1, 'Internet und IT': 3, 'Küche und Essen': 1, 'Zufahrt, Schnee und Transport': 3, 'Transport': 3,
              'Mobilität': 3, 'Werkzeug und Wartung': 2, 'Sicherheit und Notfall': 2, 'Sicherheit': 2, 'Gemeinschaft in Phase 1': 4, 'Erfassung und Zugang': 5, 'Betrieb': 1}
 M_ID = {'A012': 3, 'A013': 3, 'A010': 2, 'B016': 3, 'B007': 3, 'A082': 3, 'B008-F': 3, 'B008-E': 2, 'A065': 1, 'A108': 1}
@@ -33,11 +42,11 @@ VORHANDEN_IDS = {'A001', 'A002', 'A003'}
 VORHANDEN = ['Fachprüfung des Geologieberichts (früher A001)', 'Zusatzerkundung (früher A002)', 'Vermessung mit Höhenmodell (früher A003)']
 PAKET = [
  ('A048', 'Wasseranalyse im Labor', A, 'K', 'Register', None, None, 3, 'Wasser: bestimmt die Aufbereitung (5.625 bis über 45.000 UAH Unterschied).', ''),
- ('A010', 'Objekt-Skizze und Bau-KI-Planung', A, 'K', 'Register', None, None, 40, 'Kosten: Basis of Design für Objekt Phase 0 und Phase 1.', 'Register deckt nur eine Architektur-Skizze.'),
+ ('A010', 'Skizze der Wohneinheiten und Bau-KI-Planung', A, 'K', 'Register', None, None, 40, 'Kosten: Basis of Design für Wohneinheit Phase 0 und Phase 1.', 'Register deckt nur eine Architektur-Skizze.'),
  ('A029', 'Heizlastberechnung', A, 'K', 'Register', None, None, 2, 'Wärme: Ofengröße und Holzmenge.', ''),
  ('A057', 'Abwasserplanung', A, 'K', 'Register', None, None, 4, 'Recht und Umwelt: Zulässigkeit am Hang mit Grundwasseraustritten.', ''),
  ('X01', 'Rechtsprüfung: ukrainische Gesellschaft, Miete, Holding', A, 'K', 'Annahme KI, Angebot nötig', 50000, 150000, 10, 'Recht: Struktur, in die ein Investor einsteigen kann (D44, D48).', 'Nicht im Register.'),
- ('X02', 'Drei schriftliche Angebote je großem Posten', A, 'K', 'kostet nur Zeit', 0, 0, 40, 'Kosten: macht aus Internet-Richtwerten ein belastbares Kostenband (Objekt, Brunnen, Kläranlage, Fundament, Netz).', ''),
+ ('X02', 'Drei schriftliche Angebote je großem Posten', A, 'K', 'kostet nur Zeit', 0, 0, 40, 'Kosten: macht aus Internet-Richtwerten ein belastbares Kostenband (Wohneinheit, Brunnen, Kläranlage, Fundament, Netz).', ''),
  ('A018', 'Netzanschluss beantragen', A, 'O', 'Früherer Richtwert 2.927 UAH je kW, 10–15 kW; im Register offen', 29270, 43905, 6, 'Strom: lange Frist; mit Bescheid ist Leistung und Preis belegt.', 'Leitung zum Grundstück kommt dazu (Register A019: 12.600–17.400 UAH für 30 m).'),
  ('A036', 'Motorsäge', Bs, 'K', 'Register', None, None, 0, '', ''),
  ('A037', 'Schutzausrüstung für die Säge', Bs, 'K', 'Register', None, None, 0, 'Sicherheit und Haftung bei der Eigenleistung.', 'Register: nur Jacke und Hose; Helm, Handschuhe, Stiefel fehlen.'),
@@ -59,7 +68,7 @@ PAKET = [
  ('A049', 'Brunnen bohren, 20–40 m', Bs, 'E', 'Register', None, None, 8, 'Wasser: beweist Menge und Qualität am Ort. Größtes offenes Risiko nach dem Boden.', 'Tiefe unbekannt; Pumpe und Leitung kommen später dazu.'),
  ('X04', 'Whitelist der künftigen Mieter einrichten und führen', C, 'K', 'kostet nur Zeit', 0, 0, 60, 'Nachfrage: belegt, dass jemand oben wohnen und Miete zahlen will (D50; Index AP-A8).', 'Noch nicht eingerichtet.'),
  ('X05', 'Erster bezahlter Kundenauftrag der Agentur', C, 'K', 'bringt Umsatz', 0, 0, 0, 'Umsatz: zeigt, dass die Company Geld verdient.', ''),
- ('X06', 'Selbstkostenrechnung je Objekt', C, 'K', 'kostet nur Zeit', 0, 0, 20, 'Wirtschaftlichkeit: Miete und Pauschale aus echten Kosten (D49).', ''),
+ ('X06', 'Selbstkostenrechnung je Wohneinheit', C, 'K', 'kostet nur Zeit', 0, 0, 20, 'Wirtschaftlichkeit: Miete und Pauschale aus echten Kosten (D49).', ''),
  ('X07', 'Investorenunterlagen mit geprüften Zahlen', C, 'K', 'kostet nur Zeit', 0, 0, 40, 'Vertrauen: Whitepaper und Deck ohne offene Kernfragen.', ''),
 ]
 NICHT = ['Reisen und Unterkunft vor Ort während der Vor-Phase', 'Honorar des Architekten für Beratung', 'Gebühren für Fällgenehmigung und Anträge', 'Gründungskosten der ukrainischen Gesellschaft', 'Versicherung für die Eigenleistung']
@@ -78,10 +87,10 @@ def read(base):
         if not r[0]: continue
         per = r[8] if isinstance(r[8], (int, float)) else 1
         lo, hi = r[4] * r[6] * per, r[5] * r[7] * per
-        kal.append(dict(id=str(r[0]), bereich=r[1], position=r[2], art=r[3], niedrig=lo, hoch=hi, annahme=r[9] or '', quelle=r[10] or ''))
+        kal.append(dict(id=str(r[0]), bereich=WE(r[1]), position=WE(r[2]), art=r[3], niedrig=lo, hoch=hi, annahme=WE(r[9] or ''), quelle=r[10] or ''))
     reg = []
     for r in wb['Gesamtregister'].iter_rows(min_row=2, values_only=True):
-        if r[0]: reg.append(dict(id=str(r[0]), bereich=r[1], phase=str(r[2]), position=r[3], preisvergleich=r[7] or '', status=r[10] or ''))
+        if r[0]: reg.append(dict(id=str(r[0]), bereich=WE(r[1]), phase=str(r[2]), position=WE(r[3]), preisvergleich=r[7] or '', status=r[10] or ''))
     ub = {str(r[0]): r[1:3] for r in wb['Überblick'].iter_rows(values_only=True) if r[0]}
     return kal, reg, ub
 
@@ -159,7 +168,7 @@ def page(D):
 <div class="w">
 <header><p class="eyebrow">Node001 Beregniza · Vor dem Investment · Stand {STAND}</p>
 <h1>Was vor dem Investment mit Eigenkapital und Eigenleistung geht</h1>
-<p class="lead">So viel wie möglich mit Eigenkapital (Antwort vom 17.11.2026); bis zu welchem Punkt, und ab wann Investoren dazukommen, entscheiden D69 und D71. Bisheriger Richtwert: {n(RICHTWERT_EUR)} €. Damit lassen sich die Risiken klären, die ein Investor sonst einpreist: Wasser, Strom, Recht, Kosten und Nachfrage. Danach kommt Charge 1: Objekte und Material kaufen und hochbringen; weitere Chargen werden nachbestellt, wenn die Whitelist wächst, und die Mieterlöse sind der Nachweis für Investoren (Index 3.0, Ast 1).</p>
+<p class="lead">So viel wie möglich mit Eigenkapital (Antwort vom 17.11.2026); bis zu welchem Punkt, und ab wann Investoren dazukommen, entscheiden D69 und D71. Bisheriger Richtwert: {n(RICHTWERT_EUR)} €. Damit lassen sich die Risiken klären, die ein Investor sonst einpreist: Wasser, Strom, Recht, Kosten und Nachfrage. Danach kommt Charge 1: Wohneinheiten und Material kaufen und hochbringen; weitere Chargen werden nachbestellt, wenn die Whitelist wächst, und die Mieterlöse sind der Nachweis für Investoren (Index 3.0, Ast 1).</p>
 <p class="rule">Liegen schon vor und sind deshalb nicht mehr im Paket (Kommentar vom 15.11.2026): {e("; ".join(VORHANDEN))}. Die Kopien kommen in den Plan (Index 3.0, AP-A1).</p>
 <p class="note">Alle Beträge stammen aus dem Kostenregister vom 13.11.2026 (Teilschätzung mit Internet-Richtwerten, viele aus dem Raum Kyjiw, keine Angebote) und sind Annahmen. Kurs {str(KURS).replace(".", ",")} UAH je EUR. Entschieden wird auf der <a href="{ENT}">Entscheidungsseite</a>, Karten D69 bis D72.</p></header>
 <section><h2>Drei Varianten</h2><div class="vars">
@@ -187,10 +196,10 @@ def page(D):
     o.append(f'''<section><h2>Was danach mit Investoren finanziert wird</h2>
 <p>Das Register rechnet für eine kleine Phase 0 (ein Modul mit 18 m², zwei Personen) einmalig {span(*R["einmalig"])} UAH und für zwölf Monate Betrieb {span(*R["betrieb"])} UAH. Nach Abzug der Posten aus dem Paket bleiben:</p>
 <div class="tw"><table><thead><tr><th>Block</th><th class="num">UAH</th><th class="num">€</th><th>Hinweis</th></tr></thead><tbody>
-<tr><td><b>Einmaliger Aufbau Phase 0</b></td><td class="num">{span(*K["einmalig"])}</td><td class="num">{span(*K["einmalig"], "EUR")}</td><td>Objekt, Fundament, Brunnenausbau, Kläranlage, Strom, Internet, Fahrzeug</td></tr>
+<tr><td><b>Einmaliger Aufbau Phase 0</b></td><td class="num">{span(*K["einmalig"])}</td><td class="num">{span(*K["einmalig"], "EUR")}</td><td>Wohneinheit, Fundament, Brunnenausbau, Kläranlage, Strom, Internet, Fahrzeug</td></tr>
 <tr><td><b>Betrieb zwölf Monate</b></td><td class="num">{span(*K["betrieb"])}</td><td class="num">{span(*K["betrieb"], "EUR")}</td><td>eine bezahlte Rolle, Essen, Strom, Kraftstoff, Internet</td></tr>
 </tbody></table></div>
-<p class="warn">Das ist eine Teilsumme, kein Kapitalbedarf. {R["offen"]} von {R["positionen"]} Positionen haben keinen Betrag, darunter Netzanschluss, Gelände, Arbeitgeberabgaben und Reserven. Phase 1 (Wohn- und Arbeitsobjekte, Kommunalgebäude) ist nicht gerechnet. Der Betrag für das Investorengespräch entsteht erst aus den Angeboten der Stufe A.</p></section>''')
+<p class="warn">Das ist eine Teilsumme, kein Kapitalbedarf. {R["offen"]} von {R["positionen"]} Positionen haben keinen Betrag, darunter Netzanschluss, Gelände, Arbeitgeberabgaben und Reserven. Phase 1 (Wohneinheiten mit Arbeitsplatz, Kommunalgebäude) ist nicht gerechnet. Der Betrag für das Investorengespräch entsteht erst aus den Angeboten der Stufe A.</p></section>''')
     phs = ['Vor-Phase', 'Phase 0', 'Phase 1', 'Betrieb 12 Monate']
     o.append('<section><h2>Nach Maslow und Phase</h2><p>Die gerechneten Zeilen des Registers, geordnet nach Bedürfnisstufe. Leere Felder heißen: nichts gerechnet, nicht: kostet nichts.</p><div class="tw"><table><thead><tr><th>Stufe</th>' + ''.join(f'<th class="num">{p} · €</th>' for p in phs) + '</tr></thead><tbody>')
     for m, name in MASLOW.items():

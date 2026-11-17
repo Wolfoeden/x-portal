@@ -5,7 +5,7 @@
   {
    "nr": "GB1",
    "thema": "Weg nach oben: transportierbar",
-   "gilt": "Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jedes Objekt muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen; die Route und acht kritische Messpunkte MP01 bis MP08 stehen in AP-A0. Im Winter muss geräumt werden.",
+   "gilt": "Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jede Wohneinheit muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen; die Route und acht kritische Messpunkte MP01 bis MP08 stehen in AP-A0. Im Winter muss geräumt werden.",
    "quelle": "Kommentar und Route 17.11.2026; Standortangaben vom 04.11.2026; D57"
   },
   {
@@ -93,9 +93,9 @@
    "thema": "Vision und Mission",
    "bisher": "Vision der Leitlinie P01; Mission „Innovationshubs“ (E28)",
    "baseline": "Neue Vision (Abschnitt 2), keine Mission, Kerndefinition (Abschnitt 18)",
-   "gilt": "Vision v0.4 steht in der Grundlage des Baums. Ob eine Mission bleibt, ist offen.",
-   "status": "OPEN",
-   "im_index": "angepasst"
+   "gilt": "Mission und Globalziele stehen in der Grundlage des Baums und sind der Ausgangspunkt (D42); Vision v0.4 steht daneben (Kommentar vom 17.11.2026).",
+   "status": "DOCUMENTED",
+   "im_index": "angepasst 17.11."
   },
   {
    "nr": "W02",
@@ -252,30 +252,30 @@
   },
   {
    "nr": "W19",
-   "thema": "Container oder Objekte",
+   "thema": "Begriff: Wohneinheiten",
    "bisher": "Die Container sind die Tiny Houses der Käufer und bleiben stehen (E59, D21 B)",
-   "baseline": "Kommentar zu D55: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur; danach Wohn- und Arbeitsobjekte und Kommunalgebäude",
-   "gilt": "Entschieden in D55 am 13.11.2026. Material und Bauart plant eine Bau-KI (D56).",
+   "baseline": "Kommentar zu D55: eine Wohneinheit für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur; danach Wohneinheiten mit Arbeitsplatz und Kommunalgebäude",
+   "gilt": "Entschieden in D55 am 13.11.2026. Der Begriff ist Wohneinheit (Kommentar vom 17.11.2026). Material und Bauart plant eine Bau-KI (D56).",
    "status": "DOCUMENTED",
-   "im_index": "entschieden 13.11."
+   "im_index": "angepasst 17.11."
   },
   {
    "nr": "W20",
    "thema": "Preis",
    "bisher": "Etwa 30.000 € je Käufer (E78, E84)",
    "baseline": "Kommentar zu D49: Selbstkostenpreis statt Verkaufspreis",
-   "gilt": "Entschieden in D49 am 13.11.2026; Zahlen aus dem Business Case (OD-008).",
+   "gilt": "Es wird nichts verkauft, weder Häuser noch Container. Die Wohneinheiten werden vermietet; die Miete baut auf den Selbstkosten je Wohneinheit auf (D45, D48, D49, Kommentar vom 17.11.2026). Zahlen aus dem Business Case (OD-008).",
    "status": "DOCUMENTED",
-   "im_index": "entschieden 13.11."
+   "im_index": "angepasst 17.11."
   },
   {
    "nr": "W21",
    "thema": "Mission",
    "bisher": "Die Baseline v0.4 nennt keine Mission (W01)",
-   "baseline": "Kommentar zu D42: Mission und Globalziele sind der Ausgangspunkt; der Bruch in der Logik muss harmonisiert werden",
-   "gilt": "Aufgabe: Mission, Globalziele, Vision v0.4 und Zielblatt in eine Logik bringen.",
-   "status": "DECISION REQUIRED",
-   "im_index": "offen"
+   "baseline": "Kommentar zu D42: Mission und Globalziele sind der Ausgangspunkt",
+   "gilt": "Mission und Globalziele stehen im Index unter „Grundlage: Mission, Ziele, Ort“ und gelten für alle Seiten (Kommentar vom 17.11.2026).",
+   "status": "DOCUMENTED",
+   "im_index": "erledigt 17.11."
   },
   {
    "nr": "W22",
@@ -311,7 +311,7 @@
    "klaerungsauftrag": true,
    "termin": "Interessenten ab sofort; Einzug ab Phase 1, Termine sind Ziele (D58)",
    "wer_review": "Projektleitung (Interessenten), Geschäftsführung (Grundstück) · Review G0, G1",
-   "grenze": "Kapital: Eigenkapital bis zur fertigen Bauplanung, danach Investoren für Infrastruktur und Objekte (D46, D47)",
+   "grenze": "Kapital: Eigenkapital bis zur fertigen Bauplanung, danach Investoren für Infrastruktur und Wohneinheiten (D46, D47)",
    "globalziel": "1 und 2",
    "quelle": "D45, D46, D48, D50; prüft H4"
   },
@@ -846,13 +846,13 @@
        "kids": [
         {
          "kind": "outcome",
-         "title": "Leichte eingeschossige Objekte: Gründung auf IGE-3.",
+         "title": "Leichte eingeschossige Wohneinheiten: Gründung auf IGE-3.",
          "state": "open",
-         "text": "Laut Gutachter geeignet für leichte eingeschossige Gebäude. Gilt für das Objekt Phase 0, wenn es leicht und eingeschossig ist (Zuordnung Vorschlag KI).",
+         "text": "Laut Gutachter geeignet für leichte eingeschossige Gebäude. Gilt für die Wohneinheit Phase 0, wenn sie leicht und eingeschossig ist (Zuordnung Vorschlag KI).",
          "kids": [
           {
            "kind": "decision",
-           "title": "Fundament für das Objekt Phase 0: Streifen- und Stützfundament nach Empfehlung, bemessen durch einen Fachexperten",
+           "title": "Fundament für die Wohneinheit Phase 0: Streifen- und Stützfundament nach Empfehlung, bemessen durch einen Fachexperten",
            "state": "open",
            "meta": "Fachexperte Bau · Freigabe Geschäftsführung",
            "beschlussblatt": {
@@ -870,7 +870,7 @@
          "kind": "outcome",
          "title": "Massive, dauerhafte Gebäude: Gründung auf IGE-4, mit Zusatzerkundung.",
          "state": "open",
-         "text": "Laut Gutachter für massive Gebäude. Betrifft Kommunalgebäude und Objekte in Phase 1 (Zuordnung Vorschlag KI).",
+         "text": "Laut Gutachter für massive Gebäude. Betrifft Kommunalgebäude und Wohneinheiten in Phase 1 (Zuordnung Vorschlag KI).",
          "kids": [
           {
            "kind": "step",
@@ -889,10 +889,10 @@
         {
          "kind": "decision",
          "id": "lage",
-         "title": "Wo stehen das Objekt Phase 0 und die ersten Wohneinheiten? Im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche",
+         "title": "Wo stehen die Wohneinheit Phase 0 und die ersten Wohneinheiten? Im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche",
          "state": "done",
          "meta": "Antwort der Projektleitung vom 17.11.2026, voraussichtlich · endgültig mit der Bauplanung (AP-A4) und dem Fachexperten Bau · D55",
-         "text": "Grundlage ist der Detailplan Blatt 3. Der markierte Bereich liegt an der Kehre der Zufahrt, neben den Parzellen 9 (0,0355 ha), 7 (0,0550 ha) und 8 (0,1740 ha). Dort stehen das Objekt Phase 0 und, beim Bauen in Chargen, die ersten Wohneinheiten für Mieter (AP-C5, AP-G3).",
+         "text": "Grundlage ist der Detailplan Blatt 3. Der markierte Bereich liegt an der Kehre der Zufahrt, neben den Parzellen 9 (0,0355 ha), 7 (0,0550 ha) und 8 (0,1740 ha). Dort stehen die Wohneinheit Phase 0 und, beim Bauen in Chargen, die ersten Wohneinheiten für Mieter (AP-C5, AP-G3).",
          "ziel": [
           "Z1",
           "Z2"
@@ -963,7 +963,7 @@
        "id": "AP-A0",
        "title": "Strecke ablaufen und messen: einspurige, teils enge Straße bis zum Grundstück",
        "state": "open",
-       "text": "Kommentar vom 17.11.2026: Die Objekte müssen über eine einfache, einspurige und teils enge Straße transportierbar sein; deshalb „leicht“. Route von der Auffahrt bis zum Grundstück: https://maps.app.goo.gl/MVxhHzmvbfyLqY89A (Google Maps, 17.11.2026). Eine Auswertung aus Karten- und Satellitenansicht (ChatGPT, 17.11.2026, nicht vor Ort geprüft) nennt acht kritische Messpunkte; am kritischsten sind die Kehren bei MP04 und MP06, das unklare Endstück MP07 und der Abladeplatz MP08. Alle Werte sind bis zur Messung offen.",
+       "text": "Kommentar vom 17.11.2026: Die Wohneinheiten müssen über eine einfache, einspurige und teils enge Straße transportierbar sein; deshalb „leicht“. Route von der Auffahrt bis zum Grundstück: https://maps.app.goo.gl/MVxhHzmvbfyLqY89A (Google Maps, 17.11.2026). Eine Auswertung aus Karten- und Satellitenansicht (ChatGPT, 17.11.2026, nicht vor Ort geprüft) nennt acht kritische Messpunkte; am kritischsten sind die Kehren bei MP04 und MP06, das unklare Endstück MP07 und der Abladeplatz MP08. Alle Werte sind bis zur Messung offen.",
        "facts": [
         {
          "feld": "Wann",
@@ -975,7 +975,7 @@
         },
         {
          "feld": "Blockiert",
-         "wert": "Auswahl des Objekts (hausart, AP-C1), Logistik (AP-C3), Bestellung"
+         "wert": "Auswahl der Wohneinheit (hausart, AP-C1), Logistik (AP-C3), Bestellung"
         },
         {
          "feld": "Grundbestimmungen",
@@ -993,7 +993,7 @@
        "ap": {
         "wann": "jetzt; vor jeder Anfrage an Anbieter und Spediteure",
         "voraus": "Maßband, Neigungsmesser, Kamera mit GPS",
-        "blockiert": "Auswahl des Objekts (hausart, AP-C1), Logistik (AP-C3), Bestellung",
+        "blockiert": "Auswahl der Wohneinheit (hausart, AP-C1), Logistik (AP-C3), Bestellung",
         "gb": [
          "GB1",
          "GB11"
@@ -1171,10 +1171,10 @@
       {
        "kind": "decision",
        "id": "hausart",
-       "title": "Bauart der Objekte: Holz, Beton, Glas, Metall? Erste Bedingung: transportierbar über die einspurige, enge Straße",
+       "title": "Bauart der Wohneinheiten: Holz, Beton, Glas, Metall? Erste Bedingung: transportierbar über die einspurige, enge Straße",
        "state": "open",
        "meta": "Geschäftsführung nach Vorschlag Fachexperte Bau · Lage steht voraussichtlich (17.11.2026)",
-       "text": "Antwort vom 13.11. (D56): Der Plan für die Objekte steht aus; eine Bau-KI bewertet und plant in Abhängigkeit von den lokalen Gegebenheiten (Geologie, Gelände, Zufahrt).",
+       "text": "Antwort vom 13.11. (D56): Der Plan für die Wohneinheiten steht aus; eine Bau-KI bewertet und plant in Abhängigkeit von den lokalen Gegebenheiten (Geologie, Gelände, Zufahrt).",
        "ziel": [
         "Z1",
         "Z2"
@@ -1222,7 +1222,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Basis of Design: Objekt, Fundament, Entwässerung, Leitungen (Wasser, Abwasser, Strom, Internet), Weg, Lageplan; Grundlage für alle Anfragen"
+         "wert": "Basis of Design: Wohneinheit, Fundament, Entwässerung, Leitungen (Wasser, Abwasser, Strom, Internet), Weg, Lageplan; Grundlage für alle Anfragen"
         },
         {
          "feld": "Anschaffungen",
@@ -1242,9 +1242,9 @@
          "GB7"
         ],
         "rolle": "entscheidet: Geschäftsführung · führt aus: Fachexperte Bau mit Bau-KI · berät: Architekt",
-        "ergebnis": "Basis of Design: Objekt, Fundament, Entwässerung, Leitungen (Wasser, Abwasser, Strom, Internet), Weg, Lageplan; Grundlage für alle Anfragen"
+        "ergebnis": "Basis of Design: Wohneinheit, Fundament, Entwässerung, Leitungen (Wasser, Abwasser, Strom, Internet), Weg, Lageplan; Grundlage für alle Anfragen"
        },
-       "auftrag": "Ziel: Das Eingangspaket für die Bauplanung zusammenstellen.\nEingang: Detailplan Blatt 3, Geologiebericht und Abgleich (AP-A1), Anforderungen Ast 2 (Maslow und Sinne), Grundbestimmungen GB1–GB11.\nAusgabe: Liste der Planungsvorgaben je Gewerk (Objekt, Fundament, Entwässerung, Wasser, Abwasser, Strom, Internet, Weg) mit Quelle der Vorgabe und offenen Werten, die ein Fachexperte festlegen muss.\n\nRegeln: Jede Angabe mit Quelle (Link) und Abrufdatum. Was nicht belegt ist, als OFFEN kennzeichnen, nicht schätzen. Nichts bestellen, nichts versenden, keine Konten anlegen, keine Entscheidung treffen. Ergebnis als Markdown-Tabelle und als JSON-Liste mit denselben Feldern."
+       "auftrag": "Ziel: Das Eingangspaket für die Bauplanung zusammenstellen.\nEingang: Detailplan Blatt 3, Geologiebericht und Abgleich (AP-A1), Anforderungen Ast 2 (Maslow und Sinne), Grundbestimmungen GB1–GB11.\nAusgabe: Liste der Planungsvorgaben je Gewerk (Wohneinheit, Fundament, Entwässerung, Wasser, Abwasser, Strom, Internet, Weg) mit Quelle der Vorgabe und offenen Werten, die ein Fachexperte festlegen muss.\n\nRegeln: Jede Angabe mit Quelle (Link) und Abrufdatum. Was nicht belegt ist, als OFFEN kennzeichnen, nicht schätzen. Nichts bestellen, nichts versenden, keine Konten anlegen, keine Entscheidung treffen. Ergebnis als Markdown-Tabelle und als JSON-Liste mit denselben Feldern."
       },
       {
        "kind": "step",
@@ -1274,7 +1274,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Je Posten drei schriftliche Angebote: Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung"
+         "wert": "Je Posten drei schriftliche Angebote: Wohneinheit Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung"
         }
        ],
        "see": [
@@ -1284,7 +1284,7 @@
         ],
         [
          "#b-AP-C1",
-         "Objekt: Ungarn, Polen, Alibaba"
+         "Wohneinheit: Ungarn, Polen, Alibaba"
         ]
        ],
        "ap": {
@@ -1297,16 +1297,16 @@
          "GB11"
         ],
         "rolle": "führt aus: Projektleitung · entscheidet: Geschäftsführung",
-        "ergebnis": "Je Posten drei schriftliche Angebote: Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung"
+        "ergebnis": "Je Posten drei schriftliche Angebote: Wohneinheit Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung"
        }
       },
       {
        "kind": "step",
        "id": "O03",
-       "title": "Selbstkosten je Objekt, daraus Miete und monatliche Pauschale",
+       "title": "Selbstkosten je Wohneinheit, daraus Miete und monatliche Pauschale",
        "state": "open",
        "meta": "KI rechnet, Geschäftsführung und Projektleitung entscheiden · nach Angeboten (O31)",
-       "text": "Statt eines Verkaufspreises wird der Selbstkostenpreis je Objekt ermittelt (D49): Objekt, Transport, Montage, Fundament, Anschlüsse, Anteil an Kommunalgebäude und Infrastruktur, Betrieb. Daraus Miete und Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen (D38). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung, 69 von 137 Positionen ohne Betrag).",
+       "text": "Statt eines Verkaufspreises wird der Selbstkostenpreis je Wohneinheit ermittelt (D49): Wohneinheit, Transport, Montage, Fundament, Anschlüsse, Anteil an Kommunalgebäude und Infrastruktur, Betrieb. Daraus Miete und Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen (D38). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung, 69 von 137 Positionen ohne Betrag).",
        "needs": [
         "O31",
         "D36",
@@ -1375,7 +1375,7 @@
        "vorlagen": [
         {
          "titel": "Text für die Anmeldung",
-         "text": "X-PORTAL Node001 · Karpaten, Ukraine\n\nWohnen und arbeiten an einem Ort in den Bergen: eigenes Objekt, Gemeinschaftsräume, Internet für Remote-Arbeit, Projekte im Team.\nWir bauen in Abschnitten. Wer sich einträgt, erfährt als Erstes, wann ein Objekt frei wird, und kann es mieten.\n\nFür Remote-Arbeit: Aufenthalt etwa ein Jahr.\n\nFelder: Name · E-Mail · ab wann · wie lange (Richtwert etwa 1 Jahr) · allein oder zu zweit · Beruf oder Tätigkeit (remote) · Fragen\nHinweis: Der Eintrag ist unverbindlich und kein Vertrag. Wir speichern die Angaben nur für diese Liste und löschen sie auf Wunsch."
+         "text": "X-PORTAL Node001 · Karpaten, Ukraine\n\nWohnen und arbeiten an einem Ort in den Bergen: eigene Wohneinheit, Gemeinschaftsräume, Internet für Remote-Arbeit, Projekte im Team.\nWir bauen in Abschnitten. Wer sich einträgt, erfährt als Erstes, wann eine Wohneinheit frei wird, und kann sie mieten.\n\nFür Remote-Arbeit: Aufenthalt etwa ein Jahr.\n\nFelder: Name · E-Mail · ab wann · wie lange (Richtwert etwa 1 Jahr) · allein oder zu zweit · Beruf oder Tätigkeit (remote) · Fragen\nHinweis: Der Eintrag ist unverbindlich und kein Vertrag. Wir speichern die Angaben nur für diese Liste und löschen sie auf Wunsch."
         }
        ]
       },
@@ -1724,14 +1724,14 @@
        "vorlagen": [
         {
          "titel": "Anschreiben an Investoren",
-         "text": "Betreff: X-PORTAL Node001 – Gespräch zu einem ersten Bauabschnitt\n\nGuten Tag,\n\nX-PORTAL verbindet bezahlte digitale Arbeit mit realen Orten. Node001 entsteht in den ukrainischen Karpaten auf einem 2-ha-Grundstück; Geologiebericht und Detailplan liegen vor, die Bauplanung für einen ersten Abschnitt ist [Stand]. Finanziert ist die Planung aus Eigenkapital; für Infrastruktur und Objekte suchen wir Investoren, verbunden mit wiederkehrenden Erlösen aus Miete und Services.\n\nGern stellen wir Ihnen Whitepaper und Präsentation in einem Gespräch vor.\n\nDies ist kein Angebot von Wertpapieren oder Vermögensanlagen.\n\nMit freundlichen Grüßen\n[Geschäftsführung]"
+         "text": "Betreff: X-PORTAL Node001 – Gespräch zu einem ersten Bauabschnitt\n\nGuten Tag,\n\nX-PORTAL verbindet bezahlte digitale Arbeit mit realen Orten. Node001 entsteht in den ukrainischen Karpaten auf einem 2-ha-Grundstück; Geologiebericht und Detailplan liegen vor, die Bauplanung für einen ersten Abschnitt ist [Stand]. Finanziert ist die Planung aus Eigenkapital; für Infrastruktur und Wohneinheiten suchen wir Investoren, verbunden mit wiederkehrenden Erlösen aus Miete und Services.\n\nGern stellen wir Ihnen Whitepaper und Präsentation in einem Gespräch vor.\n\nDies ist kein Angebot von Wertpapieren oder Vermögensanlagen.\n\nMit freundlichen Grüßen\n[Geschäftsführung]"
         }
        ]
       },
       {
        "kind": "chance",
        "id": "O23",
-       "title": "Kapital: Steigen Investoren für Infrastruktur und Objekte ein?",
+       "title": "Kapital: Steigen Investoren für Infrastruktur und Wohneinheiten ein?",
        "state": "open",
        "meta": "Geschäftsführung · nach dem Paket vor dem Investment (D69, D71)",
        "text": "So viel wie möglich mit Eigenkapital; bis zu welchem Punkt, ist offen (D69, D71, Seite „Vor dem Investment“). Investoren für Infrastruktur und weitere Chargen, gestützt auf Whitelist und Mieterlöse (D46, D47; AP-F3). Ein Verkauf an Einzelne ist abgewählt.",
@@ -1762,7 +1762,7 @@
              "kind": "option",
              "letter": "B",
              "title": "Kleiner anfangen",
-             "text": "Mit einem kleineren Objekt Phase 0; die Selbstkosten werden neu gerechnet (O03)."
+             "text": "Mit einer kleineren Wohneinheit Phase 0; die Selbstkosten werden neu gerechnet (O03)."
             },
             {
              "kind": "option",
@@ -1850,8 +1850,8 @@
         "Fachliche Prüfung": "Anwälte zu Struktur und Verträgen (O05)",
         "Freigabe": "Gate: Geschäftsführung und Projektleitung; Bestellung und Betrag: Geschäftsführung",
         "Budgetgrenze": "nur Geld auf dem Konto; Eigenkapital bis zur Bauplanung, danach Investoren (D46, D47)",
-        "Gültigkeit": "für die Bestellung des Objekts Phase 0",
-        "Wiedervorlage": "neue Information zu Objekt, Kapital oder Budget: G1 und G2 neu"
+        "Gültigkeit": "für die Bestellung der Wohneinheit Phase 0",
+        "Wiedervorlage": "neue Information zu Wohneinheit, Kapital oder Budget: G1 und G2 neu"
        }
       }
      ]
@@ -1864,7 +1864,7 @@
       {
        "kind": "step",
        "id": "AP-C1",
-       "title": "Objekt Phase 0: Anbieter aus Ungarn, Polen und über Alibaba vergleichen",
+       "title": "Wohneinheit Phase 0: Anbieter aus Ungarn, Polen und über Alibaba vergleichen",
        "state": "open",
        "facts": [
         {
@@ -1920,12 +1920,12 @@
          "text": "Subject: Request for quotation – insulated living/working module, Carpathians (Ukraine), delivery in parts\n\nDear Sir or Madam,\n\nwe are planning a living and working module for 2–3 persons in the Ukrainian Carpathians (approx. 1,050 m above sea level, winters down to −20 °C). Please send us a quotation including:\n\n1. Model, floor area, interior height, wall/roof/floor build-up and U-values; suitability for −20 °C.\n2. Delivery form: in parts or as complete module. Dimensions and weight of the heaviest and the largest part. Access is a simple single-lane road, narrow in places; the last 200 m are unpaved with more than 15 % gradient. Every part must be transportable on a small vehicle; transport width up to 2.6 m without permit. Please state the smallest delivery form you offer.\n3. Sanitary: prepared or installed flush toilet, shower, hot water, drainage connection.\n4. Electrical installation, heating options (wood stove with chimney, electric backup).\n5. Foundation requirements (point loads); our soil report recommends strip and retaining foundations.\n6. Assembly: time, crew, tools, lifting equipment required; can a small team assemble it?\n7. Price, Incoterms (FCA/DAP Ukrainian border), delivery time, payment terms, warranty.\n8. Documents for export/import: invoice, packing list, certificate of origin, HS code.\n\nThis is a request for information and quotation only, not an order.\n\nKind regards\n[Projektleitung, X-PORTAL]"
         }
        ],
-       "auftrag": "Hinweis: Internet und Netzwerk gehören zur Ausstattung der Objekte (D63): Leerrohr, Netzwerkdose, Platz für Router abfragen.\nZiel: Anbieter gedämmter Wohn- und Arbeitsmodule (auch Container-Bauweise und Bausätze in Teilen) in Ungarn, Polen und über Alibaba finden und nach den Grundbestimmungen vergleichen.\nPrüfkriterien, in dieser Reihenfolge: zuerst Transportierbarkeit, also Maße und Gewicht des größten und schwersten Teils (Zufahrt: einspurige, teils enge Straße, zuletzt über 15 % Steigung, bis 2,6 m Breite ohne Genehmigung; Werte aus AP-A0, sobald gemessen); dann Eignung für −20 °C, Sanitär vorbereitet (Spültoilette, Dusche, Warmwasser), Lieferform, Montageaufwand, Lieferzeit, Preis und Lieferbedingung, Gewährleistung, Bewertungen.\nAusgabe: Tabelle mit Herkunft | Anbieter | Modell | Fläche | Teile und Gewicht | Wintertauglichkeit | Sanitär | Lieferzeit | Preis | Lieferbedingung | passt zu GB1 ja/nein/offen | Quelle.\n\nRegeln: Jede Angabe mit Quelle (Link) und Abrufdatum. Was nicht belegt ist, als OFFEN kennzeichnen, nicht schätzen. Nichts bestellen, nichts versenden, keine Konten anlegen, keine Entscheidung treffen. Ergebnis als Markdown-Tabelle und als JSON-Liste mit denselben Feldern."
+       "auftrag": "Hinweis: Internet und Netzwerk gehören zur Ausstattung der Wohneinheiten (D63): Leerrohr, Netzwerkdose, Platz für Router abfragen.\nZiel: Anbieter gedämmter Wohn- und Arbeitsmodule (auch Container-Bauweise und Bausätze in Teilen) in Ungarn, Polen und über Alibaba finden und nach den Grundbestimmungen vergleichen.\nPrüfkriterien, in dieser Reihenfolge: zuerst Transportierbarkeit, also Maße und Gewicht des größten und schwersten Teils (Zufahrt: einspurige, teils enge Straße, zuletzt über 15 % Steigung, bis 2,6 m Breite ohne Genehmigung; Werte aus AP-A0, sobald gemessen); dann Eignung für −20 °C, Sanitär vorbereitet (Spültoilette, Dusche, Warmwasser), Lieferform, Montageaufwand, Lieferzeit, Preis und Lieferbedingung, Gewährleistung, Bewertungen.\nAusgabe: Tabelle mit Herkunft | Anbieter | Modell | Fläche | Teile und Gewicht | Wintertauglichkeit | Sanitär | Lieferzeit | Preis | Lieferbedingung | passt zu GB1 ja/nein/offen | Quelle.\n\nRegeln: Jede Angabe mit Quelle (Link) und Abrufdatum. Was nicht belegt ist, als OFFEN kennzeichnen, nicht schätzen. Nichts bestellen, nichts versenden, keine Konten anlegen, keine Entscheidung treffen. Ergebnis als Markdown-Tabelle und als JSON-Liste mit denselben Feldern."
       },
       {
        "kind": "decision",
        "id": "lieferant",
-       "title": "Wer liefert und baut das Objekt Phase 0, mit oder ohne Montage?",
+       "title": "Wer liefert und baut die Wohneinheit Phase 0, mit oder ohne Montage?",
        "state": "open",
        "meta": "Projektleitung holt Angebote ein, die Geschäftsführung entscheidet die Bestellung · nach Bauart",
        "text": "Drei schriftliche Angebote; zuerst geprüft wird, ob jedes Teil über die einspurige, enge Straße hochkommt (GB1, AP-A0), dann Preis, Lieferform, schwerstes Teil, Montageaufwand und Winterwerte (O31). Die Anfrage enthält die Raumliste aus M02, die Anforderungen an Sanitär ab Phase 0 (D62) und die Maße der Zufahrt. Wer was selbst macht, steht in 2.4.8.",
@@ -2058,7 +2058,7 @@
       {
        "kind": "chance",
        "id": "zufahrt",
-       "title": "Kommt das Objekt Phase 0 die Zufahrt hoch, im Sommer und im Winter (2.2.4)?",
+       "title": "Kommt die Wohneinheit Phase 0 die Zufahrt hoch, im Sommer und im Winter (2.2.4)?",
        "state": "done",
        "meta": "Antwort vom 13.11. (D57)",
        "text": "Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch. Die Gesamtplanung der Zufahrt entscheidet sich in Phase 1 mit 3D-Modellen der Bau-KI. Die Straße ist einfach, einspurig und teils eng (Kommentar vom 17.11.2026); die letzten etwa 200 m haben über 15 % Steigung; bis 2,6 m Breite geht ein Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite und Engstellen werden gemessen (AP-A0).",
@@ -2083,9 +2083,9 @@
       {
        "kind": "step",
        "id": "AP-C5",
-       "title": "Charge 1 festlegen: welche Objekte und welches Material jetzt kaufen und hochbringen",
+       "title": "Charge 1 festlegen: welche Wohneinheiten und welches Material jetzt kaufen und hochbringen",
        "state": "open",
-       "text": "Business Case (Kommentar vom 17.11.2026): jetzt Objekte oder Material einkaufen und hochbringen; während dessen wächst die Whitelist; ist sie groß genug, wird nachbestellt (AP-G3), und Leute von der Whitelist ziehen ein und zahlen Miete. Die Mieterlöse zeigen wir Investoren (AP-F3).",
+       "text": "Business Case (Kommentar vom 17.11.2026): jetzt Wohneinheiten oder Material einkaufen und hochbringen; während dessen wächst die Whitelist; ist sie groß genug, wird nachbestellt (AP-G3), und Leute von der Whitelist ziehen ein und zahlen Miete. Die Mieterlöse zeigen wir Investoren (AP-F3).",
        "facts": [
         {
          "feld": "Wann",
@@ -2109,7 +2109,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch"
+         "wert": "Liste der Charge 1 mit Anzahl Wohneinheiten (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch"
         }
        ],
        "ap": {
@@ -2122,7 +2122,7 @@
          "GB8"
         ],
         "rolle": "schlägt vor: planende KI · entscheidet: Geschäftsführung",
-        "ergebnis": "Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch"
+        "ergebnis": "Liste der Charge 1 mit Anzahl Wohneinheiten (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch"
        }
       },
       {
@@ -2324,7 +2324,7 @@
       {
        "kind": "step",
        "id": "AP-D3",
-       "title": "Fundament für das Objekt Phase 0",
+       "title": "Fundament für die Wohneinheit Phase 0",
        "state": "open",
        "facts": [
         {
@@ -2425,7 +2425,7 @@
        "kids": [
         {
          "kind": "outcome",
-         "title": "Objekt Phase 0 hoch und oben montieren.",
+         "title": "Wohneinheit Phase 0 hoch und oben montieren.",
          "state": "rule",
          "text": "Auf kleinem Fahrzeug (D57), auf dem Fundament nach Empfehlung des Gutachters, bemessen durch einen Fachexperten (2.2.8)."
         },
@@ -2443,7 +2443,7 @@
         },
         {
          "kind": "outcome",
-         "title": "Objekt, Kapital oder Budget ändern sich.",
+         "title": "Wohneinheit, Kapital oder Budget ändern sich.",
          "state": "rule",
          "text": "Auswirkung rechnen, dann G1 und G2 neu; Projektleitung koordiniert, Geschäftsführung prüft."
         }
@@ -2455,7 +2455,7 @@
       {
        "kind": "decision",
        "id": "technik",
-       "title": "Technik im Objekt: Zugang, Server, Netzwerk. Liefert der Anbieter sie mit, oder beschaffen wir sie selbst?",
+       "title": "Technik in der Wohneinheit: Zugang, Server, Netzwerk. Liefert der Anbieter sie mit, oder beschaffen wir sie selbst?",
        "state": "open",
        "meta": "Geschäftsführung und Projektleitung",
        "text": "Zugang per Chip an den Türen, auch zur Erfassung der Gemeinschaftsarbeit, voraussichtlich mit Cardano-Technik (D36). Internet: Bandbreite, Router und Anbieter werden verglichen (D63). Maßstab: alles läuft immer; vor dem ersten Übernachten ist jede Funktion abgenommen, nach einer Tabelle, die die Projektleitung prüft und freigibt (D66). Server oben werden nur bei VC-Funding für personenbezogene Daten mit Deutschland verbunden (D47).",
@@ -2609,7 +2609,7 @@
        "facts": [
         {
          "feld": "Wann",
-         "wert": "nach G2, sobald ein Objekt frei ist"
+         "wert": "nach G2, sobald eine Wohneinheit frei ist"
         },
         {
          "feld": "Voraussetzung",
@@ -2633,7 +2633,7 @@
         }
        ],
        "ap": {
-        "wann": "nach G2, sobald ein Objekt frei ist",
+        "wann": "nach G2, sobald eine Wohneinheit frei ist",
         "voraus": "Mietvertrag rechtlich geprüft (O05), Miete und Pauschale (O03), Abnahme (AP-E1)",
         "blockiert": "Mieterlöse (AP-F3)",
         "gb": [
@@ -2732,7 +2732,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Monatsbericht: belegte Objekte, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren"
+         "wert": "Monatsbericht: belegte Wohneinheiten, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren"
         }
        ],
        "ap": {
@@ -2744,7 +2744,7 @@
          "GB11"
         ],
         "rolle": "erstellt: planende KI · prüft: Geschäftsführung",
-        "ergebnis": "Monatsbericht: belegte Objekte, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren"
+        "ergebnis": "Monatsbericht: belegte Wohneinheiten, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren"
        }
       },
       {
@@ -2891,7 +2891,7 @@
          "kind": "end",
          "id": "ende",
          "title": "2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld.",
-         "text": "Danach Phase 1: Kommunalgebäude zuerst (D64), dann Wohn- und Arbeitsobjekte für Mieter und Team. Skalierung und Standardisierung werden von Anfang an mitgedacht; Node001 ist der Proof of Concept (D51)."
+         "text": "Danach Phase 1: Kommunalgebäude zuerst (D64), dann Wohneinheiten mit Arbeitsplatz für Mieter und Team. Skalierung und Standardisierung werden von Anfang an mitgedacht; Node001 ist der Proof of Concept (D51)."
         }
        ],
        "ziel": [
@@ -2912,7 +2912,7 @@
     {
      "kind": "group",
      "id": "ab-g",
-     "title": "G · Phase 1: Kommunalgebäude und Objekte",
+     "title": "G · Phase 1: Kommunalgebäude und Wohneinheiten",
      "kids": [
       {
        "kind": "step",
@@ -2930,7 +2930,7 @@
         },
         {
          "feld": "Blockiert",
-         "wert": "Objekte für Mieter"
+         "wert": "Wohneinheiten für Mieter"
         },
         {
          "feld": "Grundbestimmungen",
@@ -2952,7 +2952,7 @@
        "ap": {
         "wann": "erster Bau in Phase 1 (D64)",
         "voraus": "Kapital, vorhandene Zusatzerkundung (AP-A1)",
-        "blockiert": "Objekte für Mieter",
+        "blockiert": "Wohneinheiten für Mieter",
         "gb": [
          "GB1",
          "GB2",
@@ -3138,7 +3138,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Weitere Objekte; die Herrenhaus-Fläche wird zuletzt bebaut"
+         "wert": "Weitere Wohneinheiten; die Herrenhaus-Fläche wird zuletzt bebaut"
         }
        ],
        "ap": {
@@ -3150,7 +3150,7 @@
          "GB8"
         ],
         "rolle": "entscheidet: Geschäftsführung",
-        "ergebnis": "Weitere Objekte; die Herrenhaus-Fläche wird zuletzt bebaut"
+        "ergebnis": "Weitere Wohneinheiten; die Herrenhaus-Fläche wird zuletzt bebaut"
        }
       },
       {
@@ -3326,7 +3326,7 @@
           },
           {
            "feld": "Stand",
-           "wert": "Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur die Pflichtangaben gegenüber Kapitalgebern"
+           "wert": "Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Wohneinheiten mit Investoren. Förderung wird nicht öffentlich gezeigt, nur die Pflichtangaben gegenüber Kapitalgebern"
           },
           {
            "feld": "Quelle",
@@ -3456,7 +3456,7 @@
         {
          "kind": "step",
          "id": "te-2-2-2",
-         "title": "2.2.2 · Lageplan Phase 0 und Ausbau: Lage der Objekte, Zufahrt, Leitungen, Entwässerung, freie Flächen",
+         "title": "2.2.2 · Lageplan Phase 0 und Ausbau: Lage der Wohneinheiten, Zufahrt, Leitungen, Entwässerung, freie Flächen",
          "state": "open",
          "facts": [
           {
@@ -3484,7 +3484,7 @@
         {
          "kind": "step",
          "id": "te-2-2-3",
-         "title": "2.2.3 · Objekt Phase 0 gewählt: in Teilen geliefert, über die einspurige, enge Straße transportierbar",
+         "title": "2.2.3 · Wohneinheit Phase 0 gewählt: in Teilen geliefert, über die einspurige, enge Straße transportierbar",
          "state": "open",
          "facts": [
           {
@@ -3629,7 +3629,7 @@
          "facts": [
           {
            "feld": "Fertig, wenn",
-           "wert": "Objekte stehen auf dem Fundament, abgenommen"
+           "wert": "Wohneinheiten stehen auf dem Fundament, abgenommen"
           },
           {
            "feld": "Rolle",
@@ -3918,7 +3918,7 @@
         {
          "kind": "step",
          "id": "te-2-4-3",
-         "title": "2.4.3 · Werbematerial für Mietinteressenten: Video und Bilder, die Objekte realitätsnah auf dem Grundstück",
+         "title": "2.4.3 · Werbematerial für Mietinteressenten: Video und Bilder, die Wohneinheiten realitätsnah auf dem Grundstück",
          "state": "run",
          "facts": [
           {
@@ -6193,7 +6193,7 @@
        "kind": "outcome",
        "title": "Ofen mit Plan zum Überwintern (D60).",
        "state": "open",
-       "text": "Heizlast je Objekt bei −20 °C rechnen (H02). Annahme: mindestens 12 °C im Schlafbereich und 16 °C im Arbeitsbereich nach 8 Stunden ohne Feuer; am Arbeitsplatz mindestens 20 °C (H03)."
+       "text": "Heizlast je Wohneinheit bei −20 °C rechnen (H02). Annahme: mindestens 12 °C im Schlafbereich und 16 °C im Arbeitsbereich nach 8 Stunden ohne Feuer; am Arbeitsplatz mindestens 20 °C (H03)."
       },
       {
        "kind": "outcome",
@@ -6261,13 +6261,13 @@
      "kids": [
       {
        "kind": "outcome",
-       "title": "Eigener Anschluss (D63).",
+       "title": "Eigener Anschluss über einen lokalen Internetanbieter (D63, Kommentar 17.11.).",
        "state": "rule",
        "text": "Zwei Videocalls gleichzeitig: mindestens etwa 8 Mbit/s Upload in 95 % der Minuten (D01, Annahme)."
       },
       {
        "kind": "outcome",
-       "title": "Starlink als Reserve, auch bei Schnee; Mobilfunk gibt es oben nicht (D63).",
+       "title": "Starlink als redundante Reserve für Ausfälle, auch bei Schnee; Mobilfunk gibt es oben nicht (D63, Kommentar 17.11.).",
        "state": "untested",
        "text": "Ist zusätzlich die Auffahrt frei: Ausweicharbeitsplatz unten (A03, M02-39)."
       },
@@ -6387,7 +6387,7 @@
        "id": "b-aus-2",
        "title": "Team und erste Mieter (Phase 1)",
        "state": "wait",
-       "text": "Kommunalgebäude zuerst (D64), dann Wohn- und Arbeitsobjekte für Mieter und Team. Strom, Wasser und Wärme wachsen mit; die Infrastruktur aus Phase 0 ist dafür ausgelegt (D55).",
+       "text": "Kommunalgebäude zuerst (D64), dann Wohneinheiten mit Arbeitsplatz für Mieter und Team. Strom, Wasser und Wärme wachsen mit; die Infrastruktur aus Phase 0 ist dafür ausgelegt (D55).",
        "ziel": [
         "Z1",
         "Z2"
@@ -6399,7 +6399,7 @@
        "id": "b-aus-3",
        "title": "Das Grundstück mit Mietern gefüllt (Phase 2)",
        "state": "wait",
-       "text": "So viele Objekte, wie Detailplan, Geologie und Zusatzerkundung erlauben; Mieter nach Nachfrage (D50). Die Herrenhaus-Fläche wird zuletzt bebaut.",
+       "text": "So viele Wohneinheiten, wie Detailplan, Geologie und Zusatzerkundung erlauben; Mieter nach Nachfrage (D50). Die Herrenhaus-Fläche wird zuletzt bebaut.",
        "ziel": [
         "Z2"
        ],
@@ -6444,8 +6444,8 @@
       {
        "kind": "option",
        "letter": "B",
-       "title": "Über die Nutzungsdauer der Objekte",
-       "text": "Für Objekte in Phase 1, die vermietet werden."
+       "title": "Über die Nutzungsdauer der Wohneinheiten",
+       "text": "Für Wohneinheiten in Phase 1, die vermietet werden."
       }
      ],
      "hint": "Möglichkeiten: Vorschlag KI, noch keine Entscheidung; sie gilt erst, wenn ihr eine wählt (D43).",
@@ -6461,9 +6461,9 @@
     {
      "kind": "decision",
      "id": "mb-haus",
-     "title": "Objekt für Phase 0 (2.2.3)",
+     "title": "Wohneinheit für Phase 0 (2.2.3)",
      "state": "open",
-     "text": "Bauart offen (D56); eine Bau-KI plant nach den lokalen Gegebenheiten. Mindestbedingungen aus M02: H01, H02, H06, H08, S04, D02, D03. Gründung nach Geologie: leichte eingeschossige Objekte auf IGE-3 mit Streifen- und Stützfundament. Transport auf kleinem Fahrzeug (D57). Kostenregister: Modul 18 m² 674.900 UAH laut Anbieter inklusive Transport und Montage (Annahme, kein Angebot).",
+     "text": "Bauart offen (D56); eine Bau-KI plant nach den lokalen Gegebenheiten. Mindestbedingungen aus M02: H01, H02, H06, H08, S04, D02, D03. Gründung nach Geologie: leichte eingeschossige Wohneinheiten auf IGE-3 mit Streifen- und Stützfundament. Transport auf kleinem Fahrzeug (D57). Kostenregister: Modul 18 m² 674.900 UAH laut Anbieter inklusive Transport und Montage (Annahme, kein Angebot).",
      "opts": [
       {
        "kind": "option",
@@ -6513,7 +6513,7 @@
       {
        "kind": "option",
        "letter": "D",
-       "title": "Erstes Objekt selbst bauen",
+       "title": "Erste Wohneinheit selbst bauen",
        "facts": [
         [
          "Kosten",
@@ -6601,14 +6601,14 @@
     {
      "kind": "decision",
      "id": "mb-waerme",
-     "title": "Wärme: Ofen je Objekt oder zentral (2.3.2)",
+     "title": "Wärme: Ofen je Wohneinheit oder zentral (2.3.2)",
      "state": "done",
      "text": "Entschieden am 13.11. (D60): Mix; Ofen als eine Möglichkeit mit Plan zum Überwintern, eigenes und gekauftes Holz, Holzlager in jedem Fall. Mindestbedingungen: H02, H03, S01, H08. Annahme: grob 1,5–3 kW Heizlast je gut gedämmtem Modul bei −20 °C (H02). Test: Winter-Arbeitstag.",
      "opts": [
       {
        "kind": "option",
        "letter": "A",
-       "title": "Holzofen mit Kochplatte je Objekt",
+       "title": "Holzofen mit Kochplatte je Wohneinheit",
        "facts": [
         [
          "Kosten",
@@ -6758,12 +6758,12 @@
      "id": "mb-netz",
      "title": "Internet: Anschluss und Reserve",
      "state": "done",
-     "text": "Entschieden (D63): eigener Anschluss, Starlink als Reserve; Bandbreite, Router und Anbieter werden verglichen. Mindestbedingungen: D01, Z02, A01. Test: D01 über beide Anschlüsse, Starlink bei Schnee.",
+     "text": "Entschieden (D63): eigener Anschluss über einen lokalen Internetanbieter, Starlink als redundante Reserve für Ausfälle; Bandbreite, Router und Anbieter werden verglichen. In Deutschland: Anbieter Teledata (Kommentar 17.11.). Kosten: IT10 bis IT12 in Ast 9. Mindestbedingungen: D01, Z02, A01. Test: D01 über beide Anschlüsse, Starlink bei Schnee.",
      "opts": [
       {
        "kind": "option",
        "letter": "A",
-       "title": "Eigener Anschluss",
+       "title": "Eigener Anschluss über lokalen Anbieter",
        "facts": [
         [
          "Kosten",
@@ -6953,7 +6953,7 @@
      "title": "Paket vor dem Investment: was aus Eigenmitteln und Eigenleistung geht (D69)",
      "state": "open",
      "meta": "Geschäftsführung entscheidet · vor dem Investorengespräch",
-     "text": "Richtwert etwa 10.000 € Eigenkapital; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten (D69, D70). Mit dem Geld: Wasseranalyse, Rechtsprüfung der Struktur, Netzanschluss beantragen, Planung des Objekts Phase 0 auf Grundlage von Detailplan und Geologiebericht, Angebote. In Eigenleistung: Abgleich der deutschen Geologie-Zusammenfassung mit dem Original, Bäume fällen und Holz einlagern (D60), Mietinteressenten (D50). Die Beträge der Varianten werden ohne die Posten neu gerechnet, die schon vorliegen (Geologie, Vermessung).",
+     "text": "Richtwert etwa 10.000 € Eigenkapital; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten (D69, D70). Mit dem Geld: Wasseranalyse, Rechtsprüfung der Struktur, Netzanschluss beantragen, Planung der Wohneinheit Phase 0 auf Grundlage von Detailplan und Geologiebericht, Angebote. In Eigenleistung: Abgleich der deutschen Geologie-Zusammenfassung mit dem Original, Bäume fällen und Holz einlagern (D60), Mietinteressenten (D50). Die Beträge der Varianten werden ohne die Posten neu gerechnet, die schon vorliegen (Geologie, Vermessung).",
      "ziel": [
       "Z2"
      ]
@@ -6972,15 +6972,15 @@
     {
      "kind": "step",
      "id": "O31",
-     "title": "Angebote für das Objekt Phase 0 und die Infrastruktur einholen",
+     "title": "Angebote für die Wohneinheit Phase 0 und die Infrastruktur einholen",
      "state": "open",
      "meta": "KI bereitet vor, Projektleitung schickt nach Freigabe",
-     "text": "Je großem Posten drei schriftliche Angebote: Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung. Grundlage: Detailplan, Geologiebericht, Anschaffungsliste A001–A120.",
+     "text": "Je großem Posten drei schriftliche Angebote: Wohneinheit Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung. Grundlage: Detailplan, Geologiebericht, Anschaffungsliste A001–A120.",
      "kids": [
       {
        "kind": "decision",
        "id": "haus",
-       "title": "Welches Objekt für Phase 0 (2.2.3)?",
+       "title": "Welche Wohneinheit für Phase 0 (2.2.3)?",
        "state": "wait",
        "meta": "Projektleitung, Geschäftsführung · nach O31",
        "text": "Angebot mit Preis, Lieferform, schwerstem Teil und Montageaufwand; Kriterium Transport auf kleinem Fahrzeug (D57). Bauart nach D56.",
@@ -7185,7 +7185,7 @@
          "kind": "option",
          "letter": "A",
          "title": "Die fünf größten Posten",
-         "text": "Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung."
+         "text": "Wohneinheit Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung."
         },
         {
          "kind": "option",
@@ -7197,7 +7197,7 @@
          "kind": "option",
          "letter": "C",
          "title": "Phase 1 gleich mit",
-         "text": "Zusätzlich Richtangebote für Wohn- und Arbeitsobjekte und das Kommunalgebäude."
+         "text": "Zusätzlich Richtangebote für Wohneinheiten mit Arbeitsplatz und das Kommunalgebäude."
         }
        ],
        "page": true,
@@ -7222,12 +7222,21 @@
        "id": "D42",
        "title": "Vision und Mission: was gilt?",
        "state": "done",
-       "text": "Gilt: Mission und Globalziele bleiben der Ausgangspunkt. Aufgabe: mit Vision v0.4 und Zielblatt in eine durchgehende Logik bringen.",
+       "text": "Gilt: Mission und Globalziele sind der Ausgangspunkt und stehen im Index 3.0 unter „Grundlage: Mission, Ziele, Ort“; Vision v0.4 und Zielblatt stehen daneben. SGMM, Whitepaper und Deck übernehmen sie von dort (Kommentar auf der SGMM-Seite vom 17.11.2026).",
+       "opts": [
+        {
+         "kind": "option",
+         "letter": "B",
+         "title": "Vision v0.4 plus Mission",
+         "text": "Die Vision v0.4 gilt; die Mission „Innovationshubs“ bleibt als kurze Fassung für Website und Pitch.",
+         "state": "done"
+        }
+       ],
        "page": true,
        "facts": [
         {
          "feld": "Antwort 13.11.",
-         "wert": "ohne Wahl, Kommentar gilt"
+         "wert": "per Kommentar gewählt: B (Kommentare vom 13.11. und 17.11.2026)"
         },
         {
          "feld": "Kommentar 13.11.",
@@ -7346,7 +7355,7 @@
        "id": "D47",
        "title": "Kapital für die Firma: woher?",
        "state": "done",
-       "text": "Gilt: Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding.",
+       "text": "Gilt: Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Wohneinheiten mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding.",
        "page": true,
        "facts": [
         {
@@ -7389,9 +7398,9 @@
       {
        "kind": "decision",
        "id": "D49",
-       "title": "Hausgröße und Preis je Objekt",
+       "title": "Hausgröße und Preis je Wohneinheit",
        "state": "done",
-       "text": "Gilt: Statt eines Verkaufspreises wird der Selbstkostenpreis je Objekt ermittelt.",
+       "text": "Gilt: Statt eines Verkaufspreises wird der Selbstkostenpreis je Wohneinheit ermittelt.",
        "page": true,
        "facts": [
         {
@@ -7533,15 +7542,15 @@
       {
        "kind": "decision",
        "id": "D55",
-       "title": "Bauphasen: ein Objekt nur für den Anfang?",
+       "title": "Bauphasen: eine Wohneinheit nur für den Anfang?",
        "state": "done",
-       "text": "Gilt: Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohn- und Arbeitsobjekte und Kommunalgebäude. Phase 2: Ausbau.",
+       "text": "Gilt: Phase 0: eine Wohneinheit für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohneinheiten mit Arbeitsplatz und Kommunalgebäude. Phase 2: Ausbau.",
        "opts": [
         {
          "kind": "option",
          "letter": "A",
-         "title": "Objekt nur Übergang",
-         "text": "Phase 0: ein Objekt als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur; Phase 1 Wohn- und Arbeitsobjekte und Kommunalgebäude; Phase 2 Ausbau, die Herrenhaus-Fläche zuletzt (Wortlaut des Kommentars).",
+         "title": "Wohneinheit nur Übergang",
+         "text": "Phase 0: eine Wohneinheit als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur; Phase 1 Wohneinheiten mit Arbeitsplatz und Kommunalgebäude; Phase 2 Ausbau, die Herrenhaus-Fläche zuletzt (Wortlaut des Kommentars).",
          "state": "done"
         }
        ],
@@ -7549,7 +7558,7 @@
        "facts": [
         {
          "feld": "Antwort 13.11.",
-         "wert": "per Kommentar gewählt: A (angepasst: Objekt statt Container, unterhalb der Herrenhaus-Fläche)"
+         "wert": "per Kommentar gewählt: A (angepasst: Wohneinheit statt Container, unterhalb der Herrenhaus-Fläche)"
         },
         {
          "feld": "Kommentar 13.11.",
@@ -7757,7 +7766,7 @@
        "id": "D63",
        "title": "Internet",
        "state": "done",
-       "text": "Gilt: Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Objekte und steht in der Anschaffungsliste.",
+       "text": "Gilt: In der Ukraine ein lokaler Internetanbieter, Starlink als redundante Reserve für Ausfälle; in Deutschland Teledata (Kommentar im Index vom 17.11.). Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Wohneinheiten und steht in der Anschaffungsliste.",
        "page": true,
        "facts": [
         {
@@ -7781,7 +7790,7 @@
          "kind": "option",
          "letter": "A",
          "title": "Zuerst in Phase 1",
-         "text": "Das Kommunalgebäude ist der erste Bau in Phase 1, vor den übrigen Objekten; Garten daneben.",
+         "text": "Das Kommunalgebäude ist der erste Bau in Phase 1, vor den übrigen Wohneinheiten; Garten daneben.",
          "state": "done"
         }
        ],
@@ -8213,7 +8222,7 @@
        "title": "OD-008 · Parametrischer Business Case und Architektur-Sensitivitäten",
        "state": "open",
        "meta": "OPEN · parallel zur Node001 System Architecture",
-       "text": "Im Plan: Make-or-Buy (Ast 4), Selbstkosten je Objekt (O03), Geldfluss (2.1.3). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung); eine Rechnung über Verkaufserlöse gibt es nicht mehr (Abgleich W05).",
+       "text": "Im Plan: Make-or-Buy (Ast 4), Selbstkosten je Wohneinheit (O03), Geldfluss (2.1.3). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung); eine Rechnung über Verkaufserlöse gibt es nicht mehr (Abgleich W05).",
        "dom": "b-OD-008",
        "see": [
         [
@@ -8456,7 +8465,7 @@
        "title": "Zwei Investment Cases: X-PORTAL Company und Node001. Welche Struktur, welcher Kapitalbedarf, welcher Investor Ask?",
        "state": "open",
        "meta": "Geschäftsführung · vor dem Investorengespräch (D71)",
-       "text": "Node001: Eigenkapital bis zur vollendeten Bauplanung, Infrastruktur und Objekte mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47). Company: Kundenprojekte, Technologielösungen, später Skalierung (D51). Kapitalbedarf und Investor Ask entstehen erst aus den Angeboten (O31) und den Selbstkosten (O03); bis dahin keine Beträge nach außen (D53).",
+       "text": "Node001: Eigenkapital bis zur vollendeten Bauplanung, Infrastruktur und Wohneinheiten mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47). Company: Kundenprojekte, Technologielösungen, später Skalierung (D51). Kapitalbedarf und Investor Ask entstehen erst aus den Angeboten (O31) und den Selbstkosten (O03); bis dahin keine Beträge nach außen (D53).",
        "ziel": [
         "X1",
         "X3"
@@ -8538,7 +8547,7 @@
        "kind": "decision",
        "title": "D42 · Vision und Mission",
        "state": "done",
-       "text": "Mission und Globalziele bleiben der Ausgangspunkt. Aufgabe: mit Vision v0.4 und Zielblatt in eine durchgehende Logik bringen."
+       "text": "Mission und Globalziele sind der Ausgangspunkt und stehen im Index 3.0 unter „Grundlage: Mission, Ziele, Ort“; Vision v0.4 und Zielblatt stehen daneben. SGMM, Whitepaper und Deck übernehmen sie von dort (Kommentar auf der SGMM-Seite vom 17.11.2026)."
       },
       {
        "kind": "decision",
@@ -8568,7 +8577,7 @@
        "kind": "decision",
        "title": "D47 · Kapital Company",
        "state": "done",
-       "text": "Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding."
+       "text": "Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Wohneinheiten mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding."
       },
       {
        "kind": "decision",
@@ -8580,7 +8589,7 @@
        "kind": "decision",
        "title": "D49 · Preislogik",
        "state": "done",
-       "text": "Statt eines Verkaufspreises wird der Selbstkostenpreis je Objekt ermittelt."
+       "text": "Statt eines Verkaufspreises wird der Selbstkostenpreis je Wohneinheit ermittelt."
       },
       {
        "kind": "decision",
@@ -8610,7 +8619,7 @@
        "kind": "decision",
        "title": "D55 · Bauphasen",
        "state": "done",
-       "text": "Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohn- und Arbeitsobjekte und Kommunalgebäude. Phase 2: Ausbau."
+       "text": "Phase 0: eine Wohneinheit für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohneinheiten mit Arbeitsplatz und Kommunalgebäude. Phase 2: Ausbau."
       },
       {
        "kind": "decision",
@@ -8652,7 +8661,7 @@
        "kind": "decision",
        "title": "D63 · Internet",
        "state": "done",
-       "text": "Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Objekte und steht in der Anschaffungsliste."
+       "text": "In der Ukraine ein lokaler Internetanbieter, Starlink als redundante Reserve für Ausfälle; in Deutschland Teledata (Kommentar im Index vom 17.11.). Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Wohneinheiten und steht in der Anschaffungsliste."
       },
       {
        "kind": "decision",
@@ -8709,8 +8718,8 @@
     {
      "kind": "group",
      "id": "b-it",
-     "title": "Infrastruktur im Betrieb (IT01 bis IT09)",
-     "text": "Feste Kosten je Monat, soweit bekannt: 248,33 € ohne Microsoft 365; dazu Microsoft 365 Business Premium je Nutzer (Nutzerzahl offen) und Cardano je Transaktion. Quelle: Angaben der Projektleitung vom 17.11.2026; Microsoft-Listenpreis aus Händlerlisten. Nachweise und Nutzung trägt das Team im Cockpit ein (AP-A10).",
+     "title": "Infrastruktur im Betrieb (IT01 bis IT09) und Internetzugang (IT10 bis IT12)",
+     "text": "Feste Kosten je Monat, soweit bekannt: 248,33 € ohne Microsoft 365; dazu Microsoft 365 Business Premium je Nutzer (Nutzerzahl offen) und Cardano je Transaktion. Internet: in der Ukraine ein lokaler Anbieter, Starlink als redundante Reserve für Ausfälle; in Deutschland Teledata; Kosten offen (Kommentar vom 17.11.2026). Quelle: Angaben der Projektleitung vom 17.11.2026; Microsoft-Listenpreis aus Händlerlisten. Nachweise und Nutzung trägt das Team im Cockpit ein (AP-A10).",
      "kids": [
       {
        "kind": "step",
@@ -8721,6 +8730,10 @@
         {
          "feld": "Bereich",
          "wert": "KI"
+        },
+        {
+         "feld": "Stand",
+         "wert": "im Betrieb"
         },
         {
          "feld": "Kosten",
@@ -8747,6 +8760,10 @@
          "wert": "KI"
         },
         {
+         "feld": "Stand",
+         "wert": "im Betrieb"
+        },
+        {
          "feld": "Kosten",
          "wert": "90,00 € je Monat"
         },
@@ -8769,6 +8786,10 @@
         {
          "feld": "Bereich",
          "wert": "Web"
+        },
+        {
+         "feld": "Stand",
+         "wert": "im Betrieb"
         },
         {
          "feld": "Kosten",
@@ -8795,6 +8816,10 @@
          "wert": "Daten"
         },
         {
+         "feld": "Stand",
+         "wert": "im Betrieb"
+        },
+        {
          "feld": "Kosten",
          "wert": "25,00 € je Monat"
         },
@@ -8817,6 +8842,10 @@
         {
          "feld": "Bereich",
          "wert": "Blockchain"
+        },
+        {
+         "feld": "Stand",
+         "wert": "im Betrieb"
         },
         {
          "feld": "Kosten",
@@ -8847,6 +8876,10 @@
          "wert": "Marketing"
         },
         {
+         "feld": "Stand",
+         "wert": "im Betrieb"
+        },
+        {
          "feld": "Kosten",
          "wert": "30,00 € je Monat"
         },
@@ -8869,6 +8902,10 @@
         {
          "feld": "Bereich",
          "wert": "Büro"
+        },
+        {
+         "feld": "Stand",
+         "wert": "im Betrieb"
         },
         {
          "feld": "Kosten",
@@ -8899,6 +8936,10 @@
          "wert": "Web"
         },
         {
+         "feld": "Stand",
+         "wert": "im Betrieb"
+        },
+        {
          "feld": "Kosten",
          "wert": "40,00 € je Jahr (≈ 3,33 € im Monat)"
         },
@@ -8923,6 +8964,10 @@
          "wert": "Plattform"
         },
         {
+         "feld": "Stand",
+         "wert": "im Betrieb"
+        },
+        {
          "feld": "Kosten",
          "wert": "offen"
         },
@@ -8933,6 +8978,102 @@
         {
          "feld": "Nachweis für Investoren",
          "wert": "Live-URL, Nutzerzahlen, Repository"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "IT10",
+       "title": "Internetanschluss Ukraine: Hauptanschluss am Node001 über einen lokalen Internetanbieter (D63)",
+       "state": "later",
+       "facts": [
+        {
+         "feld": "Bereich",
+         "wert": "Internet"
+        },
+        {
+         "feld": "Stand",
+         "wert": "geplant für Node001"
+        },
+        {
+         "feld": "Kosten",
+         "wert": "offen"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Kommentar der Projektleitung im Index vom 17.11.2026"
+        },
+        {
+         "feld": "Nachweis für Investoren",
+         "wert": "Vertrag, gemessene Bandbreite"
+        },
+        {
+         "feld": "Hinweis",
+         "wert": "Anbieter oben und Bandbreite werden verglichen (D63)"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "IT11",
+       "title": "Starlink: Redundanter Zugang am Node001 für Ausfälle des Hauptanschlusses (D63)",
+       "state": "later",
+       "facts": [
+        {
+         "feld": "Bereich",
+         "wert": "Internet"
+        },
+        {
+         "feld": "Stand",
+         "wert": "geplant für Node001"
+        },
+        {
+         "feld": "Kosten",
+         "wert": "offen"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Kommentar der Projektleitung im Index vom 17.11.2026"
+        },
+        {
+         "feld": "Nachweis für Investoren",
+         "wert": "Gerät, Vertrag, Test bei Schnee"
+        },
+        {
+         "feld": "Hinweis",
+         "wert": "Kostenregister vom 13.11.: Gerät 24.000 UAH, Tarif 1.363 UAH im Monat (Richtwerte, kein Angebot)"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "IT12",
+       "title": "Internetanschluss Deutschland: Anschluss in Deutschland über den Anbieter Teledata",
+       "state": "open",
+       "facts": [
+        {
+         "feld": "Bereich",
+         "wert": "Internet"
+        },
+        {
+         "feld": "Stand",
+         "wert": "Anbieter genannt, Stand offen"
+        },
+        {
+         "feld": "Kosten",
+         "wert": "offen"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Kommentar der Projektleitung im Index vom 17.11.2026"
+        },
+        {
+         "feld": "Nachweis für Investoren",
+         "wert": "Vertrag"
+        },
+        {
+         "feld": "Hinweis",
+         "wert": "Kosten offen"
         }
        ]
       }

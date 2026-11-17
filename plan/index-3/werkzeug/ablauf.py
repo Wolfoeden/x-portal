@@ -7,7 +7,7 @@ Nichts wird automatisch bestellt oder versendet. Termine ohne Quelle gibt es nic
 
 # Grundbestimmungen: gegen sie wird jedes Arbeitspaket geprüft.
 GB = [
-    ('GB1', 'Weg nach oben: transportierbar', 'Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jedes Objekt muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen; die Route und acht kritische Messpunkte MP01 bis MP08 stehen in AP-A0. Im Winter muss geräumt werden.', 'Kommentar und Route 17.11.2026; Standortangaben vom 04.11.2026; D57'),
+    ('GB1', 'Weg nach oben: transportierbar', 'Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jede Wohneinheit muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen; die Route und acht kritische Messpunkte MP01 bis MP08 stehen in AP-A0. Im Winter muss geräumt werden.', 'Kommentar und Route 17.11.2026; Standortangaben vom 04.11.2026; D57'),
     ('GB2', 'Boden und Hang', 'Rutsch- und Fließprozesse; Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Streifen- und Stützfundament, hangseitige Stützkonstruktion und Entwässerungsgraben. Fachprüfung des Berichts, Zusatzerkundung und Vermessung liegen vor, sind aber noch nicht im Plan abgelegt (AP-A1).', 'Geologiebericht 34.11/26; Kommentar 15.11.2026'),
     ('GB3', 'Lage', 'Phase 0 und die ersten Wohneinheiten stehen im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche (voraussichtlich); Grundlage ist der Detailplan Blatt 3.', 'D55; Antwort 17.11.2026'),
     ('GB4', 'Frost und Termine', 'Gebaut wird nur ohne Frost. Termine sind Ziele und gelten erst nach den Gates.', 'D58'),
@@ -88,10 +88,10 @@ def bau(N, X, O, alt):
     A = G('ab-a', 'A · Vor dem Investment: klären, was ein Investor sonst einpreist', [
         alt['O01'],
         AP(N, 'AP-A0', 'Strecke ablaufen und messen: einspurige, teils enge Straße bis zum Grundstück', 'open',
-           'jetzt; vor jeder Anfrage an Anbieter und Spediteure', 'Maßband, Neigungsmesser, Kamera mit GPS', 'Auswahl des Objekts (hausart, AP-C1), Logistik (AP-C3), Bestellung',
+           'jetzt; vor jeder Anfrage an Anbieter und Spediteure', 'Maßband, Neigungsmesser, Kamera mit GPS', 'Auswahl der Wohneinheit (hausart, AP-C1), Logistik (AP-C3), Bestellung',
            ['GB1', 'GB11'], 'führt aus: Projektleitung oder Team vor Ort · wertet aus: planende KI',
            'Streckenprotokoll mit den Messpunkten MP01 bis MP08 bis zum Abladeplatz am markierten Bereich (GB3); Umschlagplatz festgelegt: schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt',
-           text='Kommentar vom 17.11.2026: Die Objekte müssen über eine einfache, einspurige und teils enge Straße transportierbar sein; deshalb „leicht“. Route von der Auffahrt bis zum Grundstück: https://maps.app.goo.gl/MVxhHzmvbfyLqY89A (Google Maps, 17.11.2026). Eine Auswertung aus Karten- und Satellitenansicht (ChatGPT, 17.11.2026, nicht vor Ort geprüft) nennt acht kritische Messpunkte; am kritischsten sind die Kehren bei MP04 und MP06, das unklare Endstück MP07 und der Abladeplatz MP08. Alle Werte sind bis zur Messung offen.',
+           text='Kommentar vom 17.11.2026: Die Wohneinheiten müssen über eine einfache, einspurige und teils enge Straße transportierbar sein; deshalb „leicht“. Route von der Auffahrt bis zum Grundstück: https://maps.app.goo.gl/MVxhHzmvbfyLqY89A (Google Maps, 17.11.2026). Eine Auswertung aus Karten- und Satellitenansicht (ChatGPT, 17.11.2026, nicht vor Ort geprüft) nennt acht kritische Messpunkte; am kritischsten sind die Kehren bei MP04 und MP06, das unklare Endstück MP07 und der Abladeplatz MP08. Alle Werte sind bis zur Messung offen.',
            vorlagen=[('Messpunkte MP01 bis MP08', '''Messpunkte für die Strecke (aus der Karten- und Satellitenansicht, ChatGPT, 17.11.2026; nicht vor Ort geprüft)
 Route: https://maps.app.goo.gl/MVxhHzmvbfyLqY89A (von der Auffahrt bis zum Grundstück; letzter Abzweig laut Karte nach etwa 9,1 km)
 
@@ -161,15 +161,15 @@ Ausgabe: Tabelle mit Punkt | Ergebnis | Quelle | Abrufdatum; dazu Kontaktdaten d
         AP(N, 'AP-A4', 'Bauplanung Phase 0 mit Bau-KI und 3D-Modell (Basis of Design)', 'open',
            'jetzt; die Lage steht voraussichtlich (markierter Bereich, 17.11.2026), Nachweise aus AP-A1 fließen ein', 'Detailplan, Geologiebericht, Lastliste, Raumliste aus Ast 2', 'Angebote, Bestellung, Selbstkosten',
            ['GB1', 'GB2', 'GB3', 'GB5', 'GB6', 'GB7'], 'entscheidet: Geschäftsführung · führt aus: Fachexperte Bau mit Bau-KI · berät: Architekt',
-           'Basis of Design: Objekt, Fundament, Entwässerung, Leitungen (Wasser, Abwasser, Strom, Internet), Weg, Lageplan; Grundlage für alle Anfragen', anr='A010',
+           'Basis of Design: Wohneinheit, Fundament, Entwässerung, Leitungen (Wasser, Abwasser, Strom, Internet), Weg, Lageplan; Grundlage für alle Anfragen', anr='A010',
            auftrag='''Ziel: Das Eingangspaket für die Bauplanung zusammenstellen.
 Eingang: Detailplan Blatt 3, Geologiebericht und Abgleich (AP-A1), Anforderungen Ast 2 (Maslow und Sinne), Grundbestimmungen GB1–GB11.
-Ausgabe: Liste der Planungsvorgaben je Gewerk (Objekt, Fundament, Entwässerung, Wasser, Abwasser, Strom, Internet, Weg) mit Quelle der Vorgabe und offenen Werten, die ein Fachexperte festlegen muss.'''),
+Ausgabe: Liste der Planungsvorgaben je Gewerk (Wohneinheit, Fundament, Entwässerung, Wasser, Abwasser, Strom, Internet, Weg) mit Quelle der Vorgabe und offenen Werten, die ein Fachexperte festlegen muss.'''),
         AP(N, 'AP-A5', 'Angebote für die großen Posten einholen', 'open',
            'nach der Bauplanung (AP-A4)', 'Basis of Design', 'Kostenband, Selbstkosten, Investorengespräch',
            ['GB1', 'GB8', 'GB11'], 'führt aus: Projektleitung · entscheidet: Geschäftsführung',
-           'Je Posten drei schriftliche Angebote: Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung',
-           see=[('#b-O31', 'Angebote (Ast 5)'), ('#b-AP-C1', 'Objekt: Ungarn, Polen, Alibaba')]),
+           'Je Posten drei schriftliche Angebote: Wohneinheit Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung',
+           see=[('#b-O31', 'Angebote (Ast 5)'), ('#b-AP-C1', 'Wohneinheit: Ungarn, Polen, Alibaba')]),
         alt['O03'],
         alt['mieter'],
         AP(N, 'AP-A8', 'Whitelist der künftigen Mieter einrichten', 'open',
@@ -179,8 +179,8 @@ Ausgabe: Liste der Planungsvorgaben je Gewerk (Objekt, Fundament, Entwässerung,
            text='Auf der Whitelist stehen nur künftige Mieter. Investoren werden getrennt geführt (Antwort vom 17.11.2026). Zielgruppe nach D45: Remote-Freelancer, Buchung etwa ein Jahr.',
            vorlagen=[('Text für die Anmeldung', '''X-PORTAL Node001 · Karpaten, Ukraine
 
-Wohnen und arbeiten an einem Ort in den Bergen: eigenes Objekt, Gemeinschaftsräume, Internet für Remote-Arbeit, Projekte im Team.
-Wir bauen in Abschnitten. Wer sich einträgt, erfährt als Erstes, wann ein Objekt frei wird, und kann es mieten.
+Wohnen und arbeiten an einem Ort in den Bergen: eigene Wohneinheit, Gemeinschaftsräume, Internet für Remote-Arbeit, Projekte im Team.
+Wir bauen in Abschnitten. Wer sich einträgt, erfährt als Erstes, wann eine Wohneinheit frei wird, und kann sie mieten.
 
 Für Remote-Arbeit: Aufenthalt etwa ein Jahr.
 
@@ -235,7 +235,7 @@ Bis zur Antwort wird nichts angeboten oder beworben.''')]),
 
 Guten Tag,
 
-X-PORTAL verbindet bezahlte digitale Arbeit mit realen Orten. Node001 entsteht in den ukrainischen Karpaten auf einem 2-ha-Grundstück; Geologiebericht und Detailplan liegen vor, die Bauplanung für einen ersten Abschnitt ist [Stand]. Finanziert ist die Planung aus Eigenkapital; für Infrastruktur und Objekte suchen wir Investoren, verbunden mit wiederkehrenden Erlösen aus Miete und Services.
+X-PORTAL verbindet bezahlte digitale Arbeit mit realen Orten. Node001 entsteht in den ukrainischen Karpaten auf einem 2-ha-Grundstück; Geologiebericht und Detailplan liegen vor, die Bauplanung für einen ersten Abschnitt ist [Stand]. Finanziert ist die Planung aus Eigenkapital; für Infrastruktur und Wohneinheiten suchen wir Investoren, verbunden mit wiederkehrenden Erlösen aus Miete und Services.
 
 Gern stellen wir Ihnen Whitepaper und Präsentation in einem Gespräch vor.
 
@@ -252,12 +252,12 @@ Mit freundlichen Grüßen
     ])
 
     C = G('ab-c', 'C · Beschaffung, Import und Transport', [
-        AP(N, 'AP-C1', 'Objekt Phase 0: Anbieter aus Ungarn, Polen und über Alibaba vergleichen', 'open',
+        AP(N, 'AP-C1', 'Wohneinheit Phase 0: Anbieter aus Ungarn, Polen und über Alibaba vergleichen', 'open',
            'nach der Bauplanung (AP-A4); bestellen spätestens Lieferzeit plus Zoll plus Transport vor dem Montagebeginn (AP-C4)', 'Basis of Design', 'Bestellung, Logistik, Zoll',
            ['GB1', 'GB2', 'GB4', 'GB5', 'GB8'], 'führt aus: ausführende KI und Projektleitung · entscheidet: Geschäftsführung',
            'Vergleichstabelle mit mindestens je drei Anbietern; drei Angebote für die engere Wahl', anr='A009',
            vorlagen=[('Anfrage an Anbieter (Deutsch, für Ungarn und Polen)', ANFRAGE_OBJEKT('de')), ('Request for quotation (English, for Alibaba and others)', ANFRAGE_OBJEKT('en'))],
-           auftrag='''Hinweis: Internet und Netzwerk gehören zur Ausstattung der Objekte (D63): Leerrohr, Netzwerkdose, Platz für Router abfragen.
+           auftrag='''Hinweis: Internet und Netzwerk gehören zur Ausstattung der Wohneinheiten (D63): Leerrohr, Netzwerkdose, Platz für Router abfragen.
 Ziel: Anbieter gedämmter Wohn- und Arbeitsmodule (auch Container-Bauweise und Bausätze in Teilen) in Ungarn, Polen und über Alibaba finden und nach den Grundbestimmungen vergleichen.
 Prüfkriterien, in dieser Reihenfolge: zuerst Transportierbarkeit, also Maße und Gewicht des größten und schwersten Teils (Zufahrt: einspurige, teils enge Straße, zuletzt über 15 % Steigung, bis 2,6 m Breite ohne Genehmigung; Werte aus AP-A0, sobald gemessen); dann Eignung für −20 °C, Sanitär vorbereitet (Spültoilette, Dusche, Warmwasser), Lieferform, Montageaufwand, Lieferzeit, Preis und Lieferbedingung, Gewährleistung, Bewertungen.
 Ausgabe: Tabelle mit Herkunft | Anbieter | Modell | Fläche | Teile und Gewicht | Wintertauglichkeit | Sanitär | Lieferzeit | Preis | Lieferbedingung | passt zu GB1 ja/nein/offen | Quelle.'''),
@@ -297,11 +297,11 @@ Mit freundlichen Grüßen
            auftrag='''Ziel: Speditionen finden, die von Ungarn, Polen und aus einem Drittland in die Oblast Iwano-Frankiwsk liefern, möglichst mit Zollabwicklung und Abladen per Kran; dazu lokale Anbieter für die letzte Meile (Traktor, Allrad-Transporter, Hebegerät) im Raum Werchowyna.
 Ausgabe: Tabelle Anbieter | Strecke | Fahrzeuge | Zoll | Kran | Kontakt | Quelle.'''),
         alt['zufahrt'],
-        AP(N, 'AP-C5', 'Charge 1 festlegen: welche Objekte und welches Material jetzt kaufen und hochbringen', 'open',
+        AP(N, 'AP-C5', 'Charge 1 festlegen: welche Wohneinheiten und welches Material jetzt kaufen und hochbringen', 'open',
            'nach Angeboten (AP-C1) und Streckenprotokoll (AP-A0)', 'Transportierbarkeit geprüft, Geld nach GB8, Lager oben', 'Bestellung, Logistik (AP-C3)',
            ['GB1', 'GB4', 'GB8'], 'schlägt vor: planende KI · entscheidet: Geschäftsführung',
-           'Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch',
-           text='Business Case (Kommentar vom 17.11.2026): jetzt Objekte oder Material einkaufen und hochbringen; während dessen wächst die Whitelist; ist sie groß genug, wird nachbestellt (AP-G3), und Leute von der Whitelist ziehen ein und zahlen Miete. Die Mieterlöse zeigen wir Investoren (AP-F3).'),
+           'Liste der Charge 1 mit Anzahl Wohneinheiten (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch',
+           text='Business Case (Kommentar vom 17.11.2026): jetzt Wohneinheiten oder Material einkaufen und hochbringen; während dessen wächst die Whitelist; ist sie groß genug, wird nachbestellt (AP-G3), und Leute von der Whitelist ziehen ein und zahlen Miete. Die Mieterlöse zeigen wir Investoren (AP-F3).'),
         AP(N, 'AP-C6', 'Gemeinsames geländegängiges Fahrzeug beschaffen', 'open',
            'vor dem Baubeginn; nach dem Streckenprotokoll (AP-A0)', 'Streckenprotokoll, Zulassung und Versicherung in der Ukraine, Geld nach GB8', 'Einkauf, Notfall, kleine Lasten, letzte Strecke (AP-C3)',
            ['GB1', 'GB8'], 'schlägt vor: Projektleitung · entscheidet: Geschäftsführung',
@@ -322,7 +322,7 @@ Ausgabe: Tabelle Anbieter | Strecke | Fahrzeuge | Zoll | Kran | Kontakt | Quelle
            'nach Bauplanung (AP-A4)', 'Planung durch Fachexperten', 'Fundament',
            ['GB2', 'GB4'], 'plant: Fachexperte Bau · führt aus: Firma oder Team · nimmt ab: Fachexperte',
            'Hangwasser wird abgeleitet; Stützbauwerk nach Statik', anr='A004, A006, A008'),
-        AP(N, 'AP-D3', 'Fundament für das Objekt Phase 0', 'open',
+        AP(N, 'AP-D3', 'Fundament für die Wohneinheit Phase 0', 'open',
            'nach Entwässerung (AP-D2), ohne Frost (GB4)', 'Bemessung durch Fachexperten; Lasten aus dem Angebot (AP-C1)', 'Montage',
            ['GB2', 'GB4'], 'plant und nimmt ab: Fachexperte Bau', 'Fundament nach Empfehlung des Gutachters', anr='A005'),
         AP(N, 'AP-D4', 'Leitungen: Wasser, Abwasser, Strom, Internet', 'open',
@@ -354,7 +354,7 @@ Internet | D01 | 2 Videocalls 30 min | Upload ausreichend, keine Abbrüche | | |
 Brandschutz | S01 | Melder, Löscher, Ofenabstände | vollständig | | | |
 Zugang | GB10 | Öffnen mit Chip und mit Schlüssel | beides geht | | | |''')]),
         AP(N, 'AP-E2', 'Mietvertrag und Einzug der ersten Mieter von der Whitelist', 'open',
-           'nach G2, sobald ein Objekt frei ist', 'Mietvertrag rechtlich geprüft (O05), Miete und Pauschale (O03), Abnahme (AP-E1)', 'Mieterlöse (AP-F3)',
+           'nach G2, sobald eine Wohneinheit frei ist', 'Mietvertrag rechtlich geprüft (O05), Miete und Pauschale (O03), Abnahme (AP-E1)', 'Mieterlöse (AP-F3)',
            ['GB5', 'GB8', 'GB9'], 'schließt ab: Geschäftsführung · betreut: Projektleitung',
            'Unterschriebene Mietverträge, Laufzeit etwa ein Jahr (D45), erste Miete auf dem Konto'),
         alt['G2'],
@@ -365,7 +365,7 @@ Zugang | GB10 | Öffnen mit Chip und mit Schlüssel | beides geht | | | |''')]),
         AP(N, 'AP-F3', 'Mieterlöse und Whitelist monatlich berichten', 'later',
            'ab der ersten Miete, monatlich', 'Mietverträge (AP-E2), Whitelist (AP-A8)', 'Investorengespräche (AP-B1), Nachbestellung (AP-G3)',
            ['GB8', 'GB11'], 'erstellt: planende KI · prüft: Geschäftsführung',
-           'Monatsbericht: belegte Objekte, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren'),
+           'Monatsbericht: belegte Wohneinheiten, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren'),
         AP(N, 'AP-F4', 'Gemeinschaftsarbeit: Bedarfe erfassen, Aufgaben festlegen, Anreize setzen', 'open',
            'ab Einzug; Konzept vor der Bestellung des Zugangssystems (AP-D5)', 'Zugangssystem und Erfassung (AP-D5), Regeln für Pauschale und Abzug (D38)', 'Abzug von der Pauschale, Lernkurve für die nächsten Nodes (AP-H2, AP-H3)',
            ['GB10', 'GB11'], 'legt fest: Geschäftsführung und Projektleitung · führt: Team',
@@ -384,8 +384,8 @@ Ausgabe: Tabelle Lösung | Hardware | lokale Auswertung | Leistungsaufnahme | Wi
         alt['G4'],
     ])
 
-    Gp = G('ab-g', 'G · Phase 1: Kommunalgebäude und Objekte', [
-        AP(N, 'AP-G2', 'Kommunalgebäude', 'later', 'erster Bau in Phase 1 (D64)', 'Kapital, vorhandene Zusatzerkundung (AP-A1)', 'Objekte für Mieter',
+    Gp = G('ab-g', 'G · Phase 1: Kommunalgebäude und Wohneinheiten', [
+        AP(N, 'AP-G2', 'Kommunalgebäude', 'later', 'erster Bau in Phase 1 (D64)', 'Kapital, vorhandene Zusatzerkundung (AP-A1)', 'Wohneinheiten für Mieter',
            ['GB1', 'GB2', 'GB5', 'GB8'], 'entscheidet: Geschäftsführung · plant: Fachexperte Bau', 'Arbeitsplätze, Küche, Sanitär; Feuerstelle und Sauna (D34, D35)', anr='A109–A115'),
         AP(N, 'AP-G3', 'Nachbestellen in Chargen nach der Whitelist', 'later', 'jeweils wenn die Whitelist die Schwelle erreicht; Schwelle offen, sie steht im Business Case', 'Whitelist (AP-A8), Mieterlöse (AP-F3), Geld nach GB8', 'weitere Mieter, Phase 2',
            ['GB1', 'GB2', 'GB8', 'GB9'], 'entscheidet: Geschäftsführung', 'Charge n+1 bestellt, hochgebracht und vermietet; Bestellung wie AP-C4 und AP-C5'),
@@ -399,7 +399,7 @@ Ausgabe: Tabelle Lösung | Hardware | lokale Auswertung | Leistungsaufnahme | Wi
 
     H = G('ab-h', 'H · Phase 2 und Projektende', [
         AP(N, 'AP-H1', 'Ausbau nach Nachfrage', 'later', 'nach Phase 1', 'Auslastung, Kapital', '–', ['GB3', 'GB8'], 'entscheidet: Geschäftsführung',
-           'Weitere Objekte; die Herrenhaus-Fläche wird zuletzt bebaut'),
+           'Weitere Wohneinheiten; die Herrenhaus-Fläche wird zuletzt bebaut'),
         AP(N, 'AP-H2', 'Hypothesen H1 bis H8 bewerten', 'later', 'nach dem ersten Winter und nach Phase 1', 'Messgrößen und Grenzen (OD-005)', 'nächster Node',
            ['GB11'], 'wertet aus: planende KI · entscheidet: Geschäftsführung', 'Go, Revise oder Stop je Hypothese; Lernkurve aus der Gemeinschaftsarbeit (AP-F4, D36)'),
         AP(N, 'AP-H3', 'Übergabe an den nächsten Node', 'later', 'nach Bewertung (AP-H2)', 'Standards und Regeln aus Node001', '–', ['GB11'],

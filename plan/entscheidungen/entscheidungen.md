@@ -28,9 +28,9 @@ Für Investoren zählen geprüfte Nachweise. Das Deck nennt als Gate: belastbare
 ### D72 Welche offenen Kosten zuerst mit Angeboten belegen?
 Im Register haben 69 von 137 Positionen keinen Betrag. Die größten Unbekannten bestimmen den Kapitalbedarf.
 
-- A · Die fünf größten Posten (Vorschlag KI): Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung.
+- A · Die fünf größten Posten (Vorschlag KI): Wohneinheit Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung.
 - B · Alles nach Maslow: Zuerst Grundbedürfnisse (Wärme, Wasser, Sanitär), dann Sicherheit, dann Arbeit und Verbindung.
-- C · Phase 1 gleich mit: Zusätzlich Richtangebote für Wohn- und Arbeitsobjekte und das Kommunalgebäude.
+- C · Phase 1 gleich mit: Zusätzlich Richtangebote für Wohneinheiten mit Arbeitsplatz und das Kommunalgebäude.
 
 ## Normativ: wofür und nach welchen Regeln
 

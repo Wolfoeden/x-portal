@@ -51,9 +51,9 @@ ABSCHNITTE = [
      o('C', 'Erst nach dem ersten Winter', 'Warten, bis Messreihen, trockenes Holz und erste Mieter-Interessenten vorliegen.')]),
   K('D72', 'Welche offenen Kosten zuerst mit Angeboten belegen?',
     'Im Register haben 69 von 137 Positionen keinen Betrag. Die größten Unbekannten bestimmen den Kapitalbedarf.',
-    [o('A', 'Die fünf größten Posten', 'Objekt Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung.', ki=True),
+    [o('A', 'Die fünf größten Posten', 'Wohneinheit Phase 0, Fundament mit Stützkonstruktion, Brunnen mit Aufbereitung, Kläranlage mit Einbau, Netzanschluss mit Leitung.', ki=True),
      o('B', 'Alles nach Maslow', 'Zuerst Grundbedürfnisse (Wärme, Wasser, Sanitär), dann Sicherheit, dann Arbeit und Verbindung.'),
-     o('C', 'Phase 1 gleich mit', 'Zusätzlich Richtangebote für Wohn- und Arbeitsobjekte und das Kommunalgebäude.')]),
+     o('C', 'Phase 1 gleich mit', 'Zusätzlich Richtangebote für Wohneinheiten mit Arbeitsplatz und das Kommunalgebäude.')]),
  ]),
  ('normativ', 'Normativ: wofür und nach welchen Regeln', [
   K('D42', 'Vision und Mission: was gilt?',
@@ -256,20 +256,20 @@ ANS = 'https://claude.ai/artifact/Xt8ocuZNXnnwsZNfAfPsoY'
 VOR = 'https://claude.ai/artifact/2zHiqw7dU8oHFnsZWBsh1P'
 # Was aus Wahl und Kommentar vom 13.11.2026 folgt. Wo der Kommentar die Wahl ändert, gilt der Kommentar.
 FOLGT = {
- 'D42': 'Mission und Globalziele bleiben der Ausgangspunkt. Aufgabe: mit Vision v0.4 und Zielblatt in eine durchgehende Logik bringen.',
+ 'D42': 'Mission und Globalziele sind der Ausgangspunkt und stehen im Index 3.0 unter „Grundlage: Mission, Ziele, Ort“; Vision v0.4 und Zielblatt stehen daneben. SGMM, Whitepaper und Deck übernehmen sie von dort (Kommentar auf der SGMM-Seite vom 17.11.2026).',
  'D43': 'Rollenbasiert: Texte nennen Rollen statt Namen; fachlich prüft ein Fachexperte. Ein KI-Vorschlag gilt erst mit Wahl auf dieser Seite.',
  'D44': 'X-PORTAL hält als Holding Lizenzen und Markenrechte. Die DT Agentur übernimmt Projekte in Deutschland, Österreich und der Schweiz. Node001 hält eine ukrainische Gesellschaft. Offen: wo Services am Node abgewickelt werden (voraussichtlich lokale Gesellschaft); Rechtsprüfung.',
  'D45': 'Team plus Mieter: zuerst Team und einige Mieter, Remote-Freelancer mit einer Buchung von etwa einem Jahr. Es gibt keinen Immobilienverkauf im klassischen Sinn.',
  'D46': 'Das Verkaufsmodell ist abgewählt. Node001 wird mit Eigenkapital und VC oder Investments finanziert, verbunden mit wiederkehrenden Erlösen.',
- 'D47': 'Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding.',
+ 'D47': 'Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Wohneinheiten mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding.',
  'D48': 'Nur Miete am Anfang; kein klassischer Verkauf. Tokenisierung und Beteiligung auf mehreren Ebenen erst nach Klärung.',
- 'D49': 'Statt eines Preises je Haus wird der Selbstkostenpreis je Objekt ermittelt.',
+ 'D49': 'Statt eines Preises je Haus wird der Selbstkostenpreis je Wohneinheit ermittelt.',
  'D50': 'Zuerst Mieter gewinnen, schon vor dem Bau: Interessenten jetzt sammeln.',
  'D51': 'Vier Erlösstufen; Skalierung und Standardisierung werden von Anfang an mitgedacht, Node001 ist der Proof of Concept.',
  'D52': 'Noch unklar.',
  'D53': 'Die KI rechnet beide Zahlen mit Quellen neu; danach Entscheidung.',
  'D54': 'Der Geologiebericht 34.11/26 liegt vor, mit KI-Zusammenfassung XPB-N001-GEO-SUM-001. Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026). Die Lage von Phase 0 ist seit dem 17.11.2026 voraussichtlich festgelegt.',
- 'D55': 'Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohn- und Arbeitsobjekte und Kommunalgebäude. Phase 2: Ausbau.',
+ 'D55': 'Phase 0: eine Wohneinheit für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Phase 1: Wohneinheiten mit Arbeitsplatz und Kommunalgebäude. Phase 2: Ausbau.',
  'D56': 'Material offen (Holz, Beton, Glas, Metall). Eine Bau-KI plant und bewertet nach den lokalen Gegebenheiten.',
  'D57': 'Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung. Gesamtplanung der Zufahrt in Phase 1 mit 3D-Modellen.',
  'D58': 'Baubeginn 2027 als Ziel, nur nach Gates; kein Einzugstermin in der Werbung.',
@@ -277,7 +277,7 @@ FOLGT = {
  'D60': 'Mix: Ofen mit Plan zum Überwintern; eigene Bäume fällen (nass, müssen trocknen) und Holz kaufen; Holzlager in jedem Fall.',
  'D61': 'Anfangsstufe mit Tank für 10 Tage Sperre; Leitung und Boiler für den Ausbau vorbereitet. Das Grundwasser ist Rohwasser ohne Trinkwasserqualität; es wird für Trinken und Kochen zu Trinkwasser aufbereitet.',
  'D62': 'Kläranlage sofort: Die dauerhafte Anlage kommt schon in Phase 0. Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser werden von vornherein mit der Infrastruktur geplant und eingebaut.',
- 'D63': 'Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Objekte und steht in der Anschaffungsliste.',
+ 'D63': 'In der Ukraine ein lokaler Internetanbieter, Starlink als redundante Reserve für Ausfälle; in Deutschland Teledata (Kommentar im Index vom 17.11.). Bandbreite, Router und Anbieter vergleichen; das Netzwerk gehört zur Ausstattung der Wohneinheiten und steht in der Anschaffungsliste.',
  'D64': 'Kommunalgebäude ist der erste Bau in Phase 1.',
  'D65': 'Ein gemeinsames geländegängiges Fahrzeug; keine E-Bikes in Phase 0.',
  'D66': 'Zielwerte je kritischer Funktion; Tabelle der Abnahme-Entscheidungen, die die Projektleitung nach Absprache prüft und freigibt.',
@@ -293,16 +293,16 @@ FOLGT = {
 }
 UEBERHOLT = {'D45', 'D46', 'D48', 'D49', 'D50'}
 # Wahl steht nur im Kommentar (Analyse 17.11.2026): Karte -> (Möglichkeit, Hinweis)
-WAHL_PER_KOMMENTAR = {'D37': ('C', 'gemischt mit B'), 'D44': ('A', 'mit den Abweichungen aus dem Kommentar'), 'D55': ('A', 'angepasst: Objekt statt Container, unterhalb der Herrenhaus-Fläche'),
+WAHL_PER_KOMMENTAR = {'D37': ('C', 'gemischt mit B'), 'D42': ('B', 'Kommentare vom 13.11. und 17.11.2026'), 'D44': ('A', 'mit den Abweichungen aus dem Kommentar'), 'D55': ('A', 'angepasst: Wohneinheit statt Container, unterhalb der Herrenhaus-Fläche'),
                       'D57': ('B', ''), 'D59': ('A', '')}
 def effektive_wahl(i, a):
     w = (a or {}).get('wahl') or ''
     if not w and i in WAHL_PER_KOMMENTAR:
         return WAHL_PER_KOMMENTAR[i][0]
     return w
-PHASEN = [('Phase 0', 'Objekt als Übergang', 'Ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, voraussichtlich im blau markierten Bereich an der Kehre der Zufahrt (Antwort 17.11.2026, Bild im Index 3.0); dort später auch die ersten Wohneinheiten. Mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Die Bauart ist offen.'),
-          ('Phase 1', 'Objekte und Kommunalgebäude', 'Wohn- und Arbeitsobjekte und das Kommunalgebäude. Material und Bauart plant eine Bau-KI nach den lokalen Gegebenheiten. Zuerst das Kommunalgebäude.'),
-          ('Phase 2', 'Ausbau', 'Weitere Objekte nach Nachfrage; die Herrenhaus-Fläche wird zuletzt bebaut.')]
+PHASEN = [('Phase 0', 'Wohneinheit als Übergang', 'Eine Wohneinheit für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, voraussichtlich im blau markierten Bereich an der Kehre der Zufahrt (Antwort 17.11.2026, Bild im Index 3.0); dort später auch die ersten Wohneinheiten. Mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Die Bauart ist offen.'),
+          ('Phase 1', 'Wohneinheiten und Kommunalgebäude', 'Wohneinheiten mit Arbeitsplatz und das Kommunalgebäude. Material und Bauart plant eine Bau-KI nach den lokalen Gegebenheiten. Zuerst das Kommunalgebäude.'),
+          ('Phase 2', 'Ausbau', 'Weitere Wohneinheiten nach Nachfrage; die Herrenhaus-Fläche wird zuletzt bebaut.')]
 
 e = html.escape
 
@@ -327,7 +327,7 @@ def card_html(k, log, alt):
               + (f'<p class="note">Kommentare damals:</p><ol class="done">{kom}</ol>' if kom else '') + '</details>')
     pk = f' data-pk="{WAHL_PER_KOMMENTAR[i][0]}"' if i in WAHL_PER_KOMMENTAR else ''
     return f'''<article class="dec" id="{i}" data-id="{i}"{pk}>
-<header><span class="no">{i}</span><h3>{e(k["frage"])}</h3><span class="state" data-state="{i}">offen</span></header>
+<header><span class="no">{i}</span><h3>{e(k["frage"])}</h3><span class="state" data-state="{i}">{("per Kommentar: " + WAHL_PER_KOMMENTAR[i][0]) if i in WAHL_PER_KOMMENTAR and not a.get("wahl") else "offen"}</span></header>
 <p class="why">{e(k["warum"])}</p>
 {stand}
 <ol class="opts">{opts}</ol>

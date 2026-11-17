@@ -1,10 +1,10 @@
 ﻿Nr;Posten;Stufe;Variante;UAH niedrig;UAH hoch;Stunden;Risiko;Quelle;Hinweis
 A048;Wasseranalyse im Labor;A · Klären, was ein Investor sonst einpreist;K;3500;3500;3;Wasser: bestimmt die Aufbereitung (5.625 bis über 45.000 UAH Unterschied).;Register;
-A010;Objekt-Skizze und Bau-KI-Planung;A · Klären, was ein Investor sonst einpreist;K;5000;6300;40;Kosten: Basis of Design für Objekt Phase 0 und Phase 1.;Register;Register deckt nur eine Architektur-Skizze.
+A010;Skizze der Wohneinheiten und Bau-KI-Planung;A · Klären, was ein Investor sonst einpreist;K;5000;6300;40;Kosten: Basis of Design für Wohneinheit Phase 0 und Phase 1.;Register;Register deckt nur eine Architektur-Skizze.
 A029;Heizlastberechnung;A · Klären, was ein Investor sonst einpreist;K;810;810;2;Wärme: Ofengröße und Holzmenge.;Register;
 A057;Abwasserplanung;A · Klären, was ein Investor sonst einpreist;K;5000;10000;4;Recht und Umwelt: Zulässigkeit am Hang mit Grundwasseraustritten.;Register;
 X01;Rechtsprüfung: ukrainische Gesellschaft, Miete, Holding;A · Klären, was ein Investor sonst einpreist;K;50000;150000;10;Recht: Struktur, in die ein Investor einsteigen kann (D44, D48).;Annahme KI, Angebot nötig;Nicht im Register.
-X02;Drei schriftliche Angebote je großem Posten;A · Klären, was ein Investor sonst einpreist;K;0;0;40;Kosten: macht aus Internet-Richtwerten ein belastbares Kostenband (Objekt, Brunnen, Kläranlage, Fundament, Netz).;kostet nur Zeit;
+X02;Drei schriftliche Angebote je großem Posten;A · Klären, was ein Investor sonst einpreist;K;0;0;40;Kosten: macht aus Internet-Richtwerten ein belastbares Kostenband (Wohneinheit, Brunnen, Kläranlage, Fundament, Netz).;kostet nur Zeit;
 A018;Netzanschluss beantragen;A · Klären, was ein Investor sonst einpreist;O;29270;43905;6;"Strom: lange Frist; mit Bescheid ist Leistung und Preis belegt.";"Früherer Richtwert 2.927 UAH je kW, 10–15 kW; im Register offen";Leitung zum Grundstück kommt dazu (Register A019: 12.600–17.400 UAH für 30 m).
 A036;Motorsäge;B · Vorbereiten mit Eigenleistung;K;9999;9999;0;;Register;
 A037;Schutzausrüstung für die Säge;B · Vorbereiten mit Eigenleistung;K;11616;11616;0;Sicherheit und Haftung bei der Eigenleistung.;Register;"Register: nur Jacke und Hose; Helm, Handschuhe, Stiefel fehlen."
@@ -26,5 +26,5 @@ A004;Hangseitiger Entwässerungsgraben, 20 m;B · Vorbereiten mit Eigenleistung;
 A049;Brunnen bohren, 20–40 m;B · Vorbereiten mit Eigenleistung;E;36000;80000;8;Wasser: beweist Menge und Qualität am Ort. Größtes offenes Risiko nach dem Boden.;Register;"Tiefe unbekannt; Pumpe und Leitung kommen später dazu."
 X04;Whitelist der künftigen Mieter einrichten und führen;C · Whitelist, Umsatz, Unterlagen;K;0;0;60;"Nachfrage: belegt, dass jemand oben wohnen und Miete zahlen will (D50; Index AP-A8).";kostet nur Zeit;Noch nicht eingerichtet.
 X05;Erster bezahlter Kundenauftrag der Agentur;C · Whitelist, Umsatz, Unterlagen;K;0;0;0;Umsatz: zeigt, dass die Company Geld verdient.;bringt Umsatz;
-X06;Selbstkostenrechnung je Objekt;C · Whitelist, Umsatz, Unterlagen;K;0;0;20;Wirtschaftlichkeit: Miete und Pauschale aus echten Kosten (D49).;kostet nur Zeit;
+X06;Selbstkostenrechnung je Wohneinheit;C · Whitelist, Umsatz, Unterlagen;K;0;0;20;Wirtschaftlichkeit: Miete und Pauschale aus echten Kosten (D49).;kostet nur Zeit;
 X07;Investorenunterlagen mit geprüften Zahlen;C · Whitelist, Umsatz, Unterlagen;K;0;0;40;Vertrauen: Whitepaper und Deck ohne offene Kernfragen.;kostet nur Zeit;

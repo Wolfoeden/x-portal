@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Technik der Company: Infrastruktur im Betrieb, laufende Kosten, Nachweise, digitale Erlösquellen (Stand 17.11.2026).
+"""Technik der Company: Infrastruktur im Betrieb und geplanter Internetzugang, laufende Kosten, Nachweise, digitale Erlösquellen (Stand 17.11.2026).
 
 Eine Quelle für Index (Ast 9, Cockpit), Whitepaper und Deck. Beträge nur mit Quelle; Unbekanntes bleibt None (= offen).
 Nach außen (Whitepaper, Deck) ohne Beträge (Wahl vom 14.11.2026).
@@ -10,6 +10,7 @@ from pathlib import Path
 
 STAND = '2026-11-17'
 QP = 'Angabe der Projektleitung vom 17.11.2026'
+QK = 'Kommentar der Projektleitung im Index vom 17.11.2026'
 
 # (id, Bereich, Werkzeug, Zweck, Betrag €, Einheit, Quelle, Nachweis für Investoren, Hinweis)
 # Einheit: 'Monat', 'Jahr', 'Nutzer und Monat', 'Transaktion'
@@ -23,7 +24,12 @@ STACK = [
  ('IT07', 'Büro', 'Microsoft 365 Business Premium', 'E-Mail, Teams, OneDrive, Office, Sicherheit und Geräteverwaltung', None, 'Nutzer und Monat', 'Listenpreis etwa 20–22 € netto je Nutzer und Monat im Jahresabo (Händlerlisten 08/2026; Microsoft-Seite am 17.11.2026 nicht erreichbar); Betrag aus der Rechnung übernehmen', 'Rechnung; Mandant mit Nutzern', 'Nutzerzahl offen'),
  ('IT08', 'Web', 'Domain', 'x-portal.eu', 40.0, 'Jahr', QP, 'Registrierung', ''),
  ('IT09', 'Plattform', 'Plattform x-portal.eu', 'KI-Matching und Freelancer-Profile; läuft auf IT03 und IT04', None, 'Monat', 'eigene Entwicklung; Kosten stecken in IT03 und IT04', 'Live-URL, Nutzerzahlen, Repository', ''),
+ ('IT10', 'Internet', 'Internetanschluss Ukraine', 'Hauptanschluss am Node001 über einen lokalen Internetanbieter (D63)', None, 'Monat', QK, 'Vertrag, gemessene Bandbreite', 'Anbieter oben und Bandbreite werden verglichen (D63)'),
+ ('IT11', 'Internet', 'Starlink', 'Redundanter Zugang am Node001 für Ausfälle des Hauptanschlusses (D63)', None, 'Monat', QK, 'Gerät, Vertrag, Test bei Schnee', 'Kostenregister vom 13.11.: Gerät 24.000 UAH, Tarif 1.363 UAH im Monat (Richtwerte, kein Angebot)'),
+ ('IT12', 'Internet', 'Internetanschluss Deutschland', 'Anschluss in Deutschland über den Anbieter Teledata', None, 'Monat', QK, 'Vertrag', 'Kosten offen'),
 ]
+# Stand je Eintrag: was heute läuft, steht im Whitepaper unter „Technik, die schon läuft“; der Rest nur im Index.
+STAND_JE = {'IT10': 'geplant für Node001', 'IT11': 'geplant für Node001', 'IT12': 'Anbieter genannt, Stand offen'}
 M365_SPANNE = (20.0, 22.0)
 
 # (id, Erlösquelle, Erlösstufe (Whitepaper), Reifegrad, Stand, Nachweis, nächster Schritt)
@@ -41,7 +47,7 @@ def monat(betrag, einheit):
 
 def build():
     fix = sum(monat(b, e) for _, _, _, _, b, e, *_ in STACK if b is not None and monat(b, e) is not None)
-    stack = [dict(id=i, bereich=br, werkzeug=w, zweck=z, betrag=b, einheit=e, quelle=q, nachweis=n, hinweis=h, je_monat=(round(monat(b, e), 2) if b is not None and monat(b, e) is not None else None))
+    stack = [dict(id=i, bereich=br, werkzeug=w, zweck=z, betrag=b, einheit=e, quelle=q, nachweis=n, hinweis=h, je_monat=(round(monat(b, e), 2) if b is not None and monat(b, e) is not None else None), stand=STAND_JE.get(i, 'im Betrieb'))
              for i, br, w, z, b, e, q, n, h in STACK]
     erl = [dict(id=i, quelle=q, stufe=s, reife=r, stand=st, nachweis=n, naechstes=x) for i, q, s, r, st, n, x in ERLOESE]
     return dict(stand=STAND, fix_je_monat_ohne_m365=round(fix, 2), m365_spanne_je_nutzer=M365_SPANNE, stack=stack, erloese=erl)

@@ -14,22 +14,22 @@ Entscheidet: Geschäftsführung nach Vorschlag Fachexperte Geotechnik. Nimmt ab:
 | A002 | Liegt vor: Zusatzerkundung für Zufahrt, Stützkonstruktion und Hauptgebäude | 0 | Dienstleistung | Kopie in den Plan legen und für Phase 1 auswerten (Index 3.0, AP-A1) | – |
 | A003 | Liegt vor: Vermessung | 0 | Dienstleistung | Kopie in den Plan legen (Index 3.0, AP-A1); Absteckung als Eigenleistung | je Bauabschnitt |
 | A004 | Hangseitiger Entwässerungsgraben mit Rinnen oder Sammelbehälter | 0 | Dienstleistung | Bauweise, Länge, Material, Firma mit Kleinbagger | Länge des Hangs oberhalb der Baufläche |
-| A005 | Fundament für Objekt Phase 0 | 0 | Dienstleistung | Punkt-, Streifen- oder Schraubfundament; was ein Fachexperte für den Standort zulässt | Größe und Gewicht des Objekts |
+| A005 | Fundament für Wohneinheit Phase 0 | 0 | Dienstleistung | Punkt-, Streifen- oder Schraubfundament; was ein Fachexperte für den Standort zulässt | Größe und Gewicht der Wohneinheit |
 | A006 | Stützkonstruktion am Hang | 0–1 | Dienstleistung | Gabionen, Betonwinkel oder Holz; Statik; Firma | Geländeschnitt an der Baufläche |
 | A007 | Baumfällung und Rodung der Baufläche | 0 | kaufen mit Einbau | Fällgenehmigung in der Ukraine; Fällfirma oder selbst; Abtransport der Stämme | Zahl der Bäume auf Baufläche und Trasse |
 | A008 | Kleinbagger mit Fahrer | 0 | mieten | Miete je Tag mit Fahrer; ob er die Zufahrt schafft | Meter Graben |
 
-## Objekt Phase 0
+## Wohneinheit Phase 0
 
-Kommentar D55: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Die Bauart ist offen (D56: Holz, Beton, Glas, Metall; eine Bau-KI bewertet).
+Kommentar D55: eine Wohneinheit für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Die Bauart ist offen (D56: Holz, Beton, Glas, Metall; eine Bau-KI bewertet).
 
 Entscheidet: Geschäftsführung. Nimmt ab: Fachexperte Bau. Aus: D55, D56, D45.
 
 | Nr | Gegenstand | Phase | Art | Recherchieren | Menge hängt ab von |
 |---|---|---|---|---|---|
-| A009 | Wohn- und Arbeitsobjekt für Team und Bauarbeiter | 0 | kaufen oder mieten | Bauarten vergleichen: Wohncontainer, Modul, Holzrahmen; Dämmung, Maße, schwerstes Teil, Lieferzeit, Rückkauf oder Miete | Zahl der Personen (Team plus Bauarbeiter) |
-| A010 | Planung der Objekte mit Bau-KI und 3D-Modell | 0 | Dienstleistung | Welche Software oder welcher Dienst; welche Eingangsdaten (Geländemodell, Geologie) | einmal |
-| A011 | Betten und Matratzen | 0 | kaufen | Maße passend zum Objekt | je Person |
+| A009 | Wohneinheit mit Arbeitsplatz für Team und Bauarbeiter | 0 | kaufen oder mieten | Bauarten vergleichen: Wohncontainer, Modul, Holzrahmen; Dämmung, Maße, schwerstes Teil, Lieferzeit, Rückkauf oder Miete | Zahl der Personen (Team plus Bauarbeiter) |
+| A010 | Planung der Wohneinheiten mit Bau-KI und 3D-Modell | 0 | Dienstleistung | Welche Software oder welcher Dienst; welche Eingangsdaten (Geländemodell, Geologie) | einmal |
+| A011 | Betten und Matratzen | 0 | kaufen | Maße passend zur Wohneinheit | je Person |
 | A012 | Schreibtische und Arbeitsstühle | 0 | kaufen | Ergonomie, zerlegbar für den Transport | je Arbeitsplatz |
 | A013 | Bildschirme | 0 | kaufen | Stromverbrauch, Größe | je Arbeitsplatz |
 | A014 | Schränke und Regale | 0 | kaufen | zerlegbar | je Person und Raum |
@@ -48,11 +48,11 @@ Entscheidet: Geschäftsführung. Nimmt ab: Fachexperte Elektro. Aus: D59.
 | A018 | Netzanschluss | 0 | Antrag | Zuständiger Netzbetreiber; Leistung in kW; Frist; Entfernung zur nächsten Leitung | Lastliste Phase 0 und Ausbau |
 | A019 | Leitung vom Netz zum Grundstück (Erdkabel oder Freileitung) | 0 | Dienstleistung | Wer baut; Kabelquerschnitt für den Ausbau | Meter bis zum Anschlusspunkt |
 | A020 | Zählerschrank und Hauptverteilung | 0 | kaufen mit Einbau | Reserveplätze für Phase 1; Überspannungsschutz | 1 |
-| A021 | Unterverteilung, Sicherungen, FI-Schutzschalter | 0 | kaufen mit Einbau | Normen vor Ort | je Objekt |
-| A022 | Erdung und Blitzschutz | 0 | Dienstleistung | Erder bei felsigem Untergrund | je Objekt |
+| A021 | Unterverteilung, Sicherungen, FI-Schutzschalter | 0 | kaufen mit Einbau | Normen vor Ort | je Wohneinheit |
+| A022 | Erdung und Blitzschutz | 0 | Dienstleistung | Erder bei felsigem Untergrund | je Wohneinheit |
 | A023 | Generator | 0 | kaufen | Leistung nach Lastliste; Inverter ja oder nein; Winterstart; Lautstärke | 1 |
 | A024 | Umschalter Netz/Generator | 0 | kaufen mit Einbau | manuell oder automatisch | 1 |
-| A025 | Kraftstoffkanister und Lagerort | 0 | kaufen | zulässige Lagermenge; Abstand zum Objekt | Tage Reserve × Verbrauch |
+| A025 | Kraftstoffkanister und Lagerort | 0 | kaufen | zulässige Lagermenge; Abstand zur Wohneinheit | Tage Reserve × Verbrauch |
 | A026 | Außenkabel und Steckdosen im Außenbereich | 0 | kaufen | Schutzart, Kältefestigkeit | Meter |
 | A027 | USV für Internet und Server | 0 | kaufen | Laufzeit bei der Last von Router, Starlink, Server | 1 |
 | A028 | Solaranlage mit Speicher | 1 | kaufen mit Einbau | Ertrag im Winter am Nordosthang; Größe; Montageort | Lastliste Phase 1 |
@@ -65,7 +65,7 @@ Entscheidet: Geschäftsführung. Nimmt ab: Fachexperte Heizung und Schornstein. 
 
 | Nr | Gegenstand | Phase | Art | Recherchieren | Menge hängt ab von |
 |---|---|---|---|---|---|
-| A029 | Heizlastberechnung für das Objekt | 0 | Dienstleistung | Wer rechnet; Auslegung −20 °C | einmal je Objekt |
+| A029 | Heizlastberechnung für die Wohneinheit | 0 | Dienstleistung | Wer rechnet; Auslegung −20 °C | einmal je Wohneinheit |
 | A030 | Holzofen mit Kochplatte | 0 | kaufen | Leistung passend zur Heizlast; raumluftunabhängig; Speichermasse | je beheizter Einheit |
 | A031 | Schornstein, Rauchrohr, Dachdurchführung | 0 | kaufen mit Einbau | System passend zur Bauart; Abnahme | je Ofen |
 | A032 | Hitzeschutz für Boden und Wand | 0 | kaufen | Abstände laut Hersteller | je Ofen |
@@ -210,9 +210,9 @@ Entscheidet: Geschäftsführung. Nimmt ab: Fachexperte Brandschutz. Aus: D66.
 |---|---|---|---|---|---|
 | A100 | Rauchmelder | 0 | kaufen |  | je Raum |
 | A101 | CO-Melder | 0 | kaufen |  | je Raum mit Ofen |
-| A102 | Feuerlöscher | 0 | kaufen | Typ und Größe; Prüffrist | je Objekt und Technikraum |
+| A102 | Feuerlöscher | 0 | kaufen | Typ und Größe; Prüffrist | je Wohneinheit und Technikraum |
 | A103 | Löschdecke | 0 | kaufen |  | 1 |
-| A104 | Erste-Hilfe-Ausrüstung | 0 | kaufen | Inhalt für abgelegene Orte | je Objekt und Fahrzeug |
+| A104 | Erste-Hilfe-Ausrüstung | 0 | kaufen | Inhalt für abgelegene Orte | je Wohneinheit und Fahrzeug |
 | A105 | Erste-Hilfe-Kurs | 0 | Dienstleistung | Kurs für abgelegene Orte | je Person |
 | A106 | Notfallkommunikation | 0 | kaufen | Satelliten-Notrufgerät oder Funk | 1 |
 | A107 | Versicherungen | 0 | Dienstleistung | Was in der Ukraine für Ausländer und Baustellen möglich ist | einmal |

@@ -24,18 +24,18 @@ UMWELT = [
     ('Natur', 'Karpaten, Hang, Winter mit Schnee; Heizlast bei −20 °C angenommen (H02). Ob der Grund trägt, ist offen (O01, Geologie). Quellschüttung im Februar und Laborwerte offen (O27).', 'OPEN'),
     ('Gesellschaft', 'Dorf Bereschnyzja, Ortsteil Hrun; lokale Handwerker, Holz, Milch, Käse, Transport (2.4.6). Recht für Ausländer, Haus auf fremdem Grund, Pacht: Prüfauftrag an Anwälte (A5).', 'IN WORK'),
     ('Wirtschaft', 'Preise in UAH, gerechnet mit 50 UAH/EUR (E20). Nachfrage über Warteliste (E51, E58). Produkt- und Preismodell nicht validiert (W04).', 'ASSUMPTION'),
-    ('Technologie', 'Netz mit Batterie oder Generator, dazu Solar (E35); eigener Internetanschluss, Starlink als Reserve, kein Mobilfunk oben (E49). KI heute; Robotik, Drohnen und mechanische Systeme perspektivisch, nicht im MVS.', 'DOCUMENTED'),
+    ('Technologie', 'Netzanschluss mit Generator als Reserve, Solar ab Phase 1 (D59); Internet über einen lokalen Anbieter, Starlink als redundante Reserve für Ausfälle, kein Mobilfunk oben (D63, E49); in Deutschland Teledata (Kommentar vom 17.11.2026). KI heute; Robotik, Drohnen und mechanische Systeme perspektivisch, nicht im MVS.', 'DOCUMENTED'),
 ]
 ROLLEN = [  # Rolle, Stand im Plan, Stufe-1-Bezug, Status, Relevanz
-    ('Mitarbeitende (Team oben)', 'Zwei bis drei Personen mit Tagesabläufen; Gleitzeit 9–14 Uhr, Jour fixe und Sport Pflicht (Vorgabe 05.11.2026).', 'Wohnen und arbeiten ab Phase 0 im Objekt', 'DOCUMENTED', 'REQUIRED'),
+    ('Mitarbeitende (Team oben)', 'Zwei bis drei Personen mit Tagesabläufen; Gleitzeit 9–14 Uhr, Jour fixe und Sport Pflicht (Vorgabe 05.11.2026).', 'Wohnen und arbeiten ab Phase 0 in der Wohneinheit', 'DOCUMENTED', 'REQUIRED'),
     ('Mieter', 'Wohnen und arbeiten zur Miete; kein Immobilienverkauf im klassischen Sinn (D45, D48). Monatliche Pauschale, erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen (D38).', 'Interessenten ab jetzt sammeln (D50); Einzug ab Phase 1', 'DOCUMENTED', 'REQUIRED'),
     ('Mitwirkende mit Beteiligung', 'Wer mitwirkt, kann am jeweiligen Node beteiligt werden, nicht an der Holding (D37). Tokenisierung erst nach Klärung (D48).', 'Struktur vor Phase 1 klären', 'DECISION REQUIRED', 'PREPARE'),
     ('Digitale Nomaden', 'Nicht im Plan der Stufe 1.', 'Später, nach Auslastungsdaten', 'OPEN', 'DEFER'),
     ('Gäste', 'Nicht im Plan der Stufe 1; Sauna und Feuerstelle als Möglichkeiten im Index.', 'Später', 'OPEN', 'DEFER'),
-    ('Bauarbeiter', 'Bleiben längere Zeit oben.', 'Phase 0 und 1, im Objekt unterhalb der Herrenhaus-Fläche (D55)', 'DOCUMENTED', 'REQUIRED'),
+    ('Bauarbeiter', 'Bleiben längere Zeit oben.', 'Phase 0 und 1, in der Wohneinheit unterhalb der Herrenhaus-Fläche (D55)', 'DOCUMENTED', 'REQUIRED'),
     ('Betreiber', 'Node001 wird von einer ukrainischen Gesellschaft gehalten; wo Services abgewickelt werden, ist rechtlich zu klären (D44, OD-001).', 'Vor Phase 0', 'DECISION REQUIRED', 'REQUIRED'),
-    ('Partner und Lieferanten', 'Anbieter für Objekt, Brunnen, Kläranlage, Fundament; Bauer (Holz, Räumen), Elektriker, Spediteur; Architekt in beratender Funktion (D67).', 'Ab Vor-Phase: drei Angebote je großem Posten', 'IN WORK', 'REQUIRED'),
-    ('Investoren', 'Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Objekte mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47).', 'Nach dem Paket „Vor dem Investment“', 'IN WORK', 'REQUIRED'),
+    ('Partner und Lieferanten', 'Anbieter für Wohneinheit, Brunnen, Kläranlage, Fundament; Bauer (Holz, Räumen), Elektriker, Spediteur; Architekt in beratender Funktion (D67).', 'Ab Vor-Phase: drei Angebote je großem Posten', 'IN WORK', 'REQUIRED'),
+    ('Investoren', 'Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Wohneinheiten mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47).', 'Nach dem Paket „Vor dem Investment“', 'IN WORK', 'REQUIRED'),
     ('Staat und Behörden', 'Genehmigungen, Anschlussrecht Strom, Abwasser (Reference Architecture 6.2).', 'Vor Phase 0', 'OPEN', 'REQUIRED'),
 ]
 
@@ -45,7 +45,7 @@ MATRIX = {
     'Normativ': [
         ('Vision und Politik', ['Vision v0.4 (Baseline Abschnitt 2) und Kerndefinition (Abschnitt 18)',
                                 'Disziplin: Node001 trägt sich aus realer Nutzung; Genome- und IP-Erlöse sind Upside',
-                                'Mission und Globalziele nach D42, Grundlage im Index 3.0 (W01, W21)'], 'XP-SYS-001, 004', 'DOCUMENTED'),
+                                'Mission (D42, Index 3.0): „Wir schaffen und vernetzen menschenzentrierte Innovationshubs, in denen Menschen leben, arbeiten und gemeinsam neue Lösungen entwickeln.“ Globalziele in dieser Rangfolge: wirtschaftliche Tragfähigkeit und Resilienz, internationale Skalierung, gesellschaftlicher Nutzen (W01, W21)'], 'XP-SYS-001, 004', 'DOCUMENTED'),
         ('Verfassung und Governance', ['X-PORTAL Organisation als Dach; DT Agentur übernimmt Projekte aus Deutschland; Grundstücke (X1–X3)',
                                        'Systemgrenze Organisation ↔ Node-Betrieb: OD-001',
                                        'KI bereitet vor; Geschäftsführung und Projektleitung geben frei, Bestellung und Betrag die Geschäftsführung; ein KI-Vorschlag gilt erst, wenn er gewählt ist (D43)',
@@ -58,7 +58,7 @@ MATRIX = {
         ('Programme', ['Vier Erlösstufen: Kundenprojekte, Technologielösungen, Nutzung und Services, System-Skalierung',
                        'Zwei Investment Cases: Company und Node001',
                        'Roadmap: Marktnachweis → Site Truth → Product & Economics → Financing & Permissions → Build & Operate → Learn & Replicate',
-                       'Bauphasen: ein Objekt als Übergang, danach Objekte und Kommunalgebäude (D55)', 'Mietmodell mit Selbstkosten als Basis; kein klassischer Immobilienverkauf (D48, D49)'], 'XP-SYS-004', 'IN WORK'),
+                       'Bauphasen: eine Wohneinheit als Übergang, danach Wohneinheiten und Kommunalgebäude (D55)', 'Mietmodell mit Selbstkosten als Basis; kein klassischer Immobilienverkauf (D48, D49)'], 'XP-SYS-004', 'IN WORK'),
         ('Organisation und Standards', ['Reference Architecture v0.4 als Arbeitsbaseline',
                                         'X-PORTAL Genome v0.1: Invarianten, Module, Parameter, Regeln, Evidenz (OD-006)',
                                         'Team: Produkt und Projekt, Lead Developer; Architektur und Bau als externe Beratung (D67); Geschäftsführung in der Darstellung offen (W14)'], 'XP-SYS-006, 014', 'IN WORK'),
@@ -82,14 +82,14 @@ SPALTEN = ['Aktivitäten', 'Strukturen', 'Verhalten']
 
 # ---------------------------------------------------------------- Bauphasen
 PHASEN = [
-    ('Phase 0', 'Objekt als Übergang', 'Ein Wohn- und Arbeitsobjekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet (D55). Spültoilette, Dusche, Warmwasser und Abwasser fest eingebaut (D62). Netzanschluss mit Generator als Reserve (D59).', 'Team (2–3) und Bauarbeiter (Zahl OPEN)', 'Teilsumme im Kostenregister für ein Modul mit 18 m² und zwei Personen; 69 von 137 Positionen ohne Betrag. Siehe „Vor dem Investment“.', 'ASSUMPTION'),
-    ('Phase 1', 'Objekte und Kommunalgebäude', 'Zuerst das Kommunalgebäude (D64), dann Wohn- und Arbeitsobjekte für Mieter und Team. Material offen (Holz, Beton, Glas, Metall); eine Bau-KI plant nach den lokalen Gegebenheiten (D56). Solar mit Speicher, Feuerstelle, Sauna, Bergkapelle als Gruppenprojekt (D59, D34, D35).', 'Mieter, Team', 'Nicht gerechnet. Selbstkosten je Objekt aus dem Business Case (D49, OD-008).', 'OPEN'),
-    ('Phase 2', 'Ausbau', 'Weitere Objekte nach Nachfrage. Die Herrenhaus-Fläche wird zuletzt bebaut.', 'Alle Rollen', 'OPEN', 'OPEN'),
+    ('Phase 0', 'Wohneinheit als Übergang', 'Eine Wohneinheit mit Arbeitsplatz für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet (D55). Spültoilette, Dusche, Warmwasser und Abwasser fest eingebaut (D62). Netzanschluss mit Generator als Reserve (D59).', 'Team (2–3) und Bauarbeiter (Zahl OPEN)', 'Teilsumme im Kostenregister für ein Modul mit 18 m² und zwei Personen; 69 von 137 Positionen ohne Betrag. Siehe „Vor dem Investment“.', 'ASSUMPTION'),
+    ('Phase 1', 'Wohneinheiten und Kommunalgebäude', 'Zuerst das Kommunalgebäude (D64), dann Wohneinheiten mit Arbeitsplatz für Mieter und Team. Material offen (Holz, Beton, Glas, Metall); eine Bau-KI plant nach den lokalen Gegebenheiten (D56). Solar mit Speicher, Feuerstelle, Sauna, Bergkapelle als Gruppenprojekt (D59, D34, D35).', 'Mieter, Team', 'Nicht gerechnet. Selbstkosten je Wohneinheit aus dem Business Case (D49, OD-008).', 'OPEN'),
+    ('Phase 2', 'Ausbau', 'Weitere Wohneinheiten nach Nachfrage. Die Herrenhaus-Fläche wird zuletzt bebaut.', 'Alle Rollen', 'OPEN', 'OPEN'),
 ]
 CR = [  # früher Change Requests; seit 13.11.2026 auf der Entscheidungsseite entschieden
-    ('D55', 'Container oder Objekte', 'Container sind die Tiny Houses der Käufer und bleiben (E59).', 'Ein Objekt als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche; danach Objekte und Kommunalgebäude.', 'Antwort mit Kommentar, 13.11.2026', 'DOCUMENTED'),
+    ('D55', 'Begriff: Wohneinheiten', 'Container sind die Tiny Houses der Käufer und bleiben (E59).', 'Eine Wohneinheit als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche; danach Wohneinheiten und Kommunalgebäude. Der Begriff ist Wohneinheit.', 'Antwort mit Kommentar, 13.11.2026; Begriff: Kommentar vom 17.11.2026', 'DOCUMENTED'),
     ('D56', 'Bauart', 'Tiny Houses in Teilen, oben montiert (E75).', 'Material offen (Holz, Beton, Glas, Metall); Bau-KI plant und bewertet nach lokalen Gegebenheiten.', 'Kommentar, 13.11.2026', 'OPEN'),
-    ('D49', 'Preis', 'Etwa 30.000 € je Käufer (E78).', 'Selbstkostenpreis je Objekt statt Verkaufspreis; kein Immobilienverkauf im klassischen Sinn.', 'Kommentar, 13.11.2026', 'DOCUMENTED'),
+    ('D49', 'Preis', 'Etwa 30.000 € je Käufer (E78).', 'Es wird nichts verkauft, weder Häuser noch Container. Die Wohneinheiten werden vermietet; die Miete baut auf den Selbstkosten je Wohneinheit auf.', 'Kommentar, 13.11.2026; Kommentar vom 17.11.2026', 'DOCUMENTED'),
     ('D46', 'Kapital Node001', 'Kein Investor; der Ort trägt sich aus Käufergeld (E57).', 'Verkaufsmodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen.', 'Kommentar, 13.11.2026', 'DOCUMENTED'),
     ('D69', 'Vor dem Investment', '–', 'Welches Paket aus Eigenmitteln und Eigenleistung (Kern, Optimum, Erweitert).', 'Karte offen', 'DECISION REQUIRED'),
 ]
@@ -122,7 +122,7 @@ KETTEN = [
 
  dict(id='F02', name='Strom', ebene='Physische Welt', anf='S03, D04', sys='XP-SYS-002, 003, 004', rel='REQUIRED', status='DECISION REQUIRED',
   ziel='Muss-Lasten laufen bei Netzausfall weiter: Licht, Laptops, Starlink, Router, Pumpe, Kühlschrank.',
-  kette=[('Funktion', 'Strom für Arbeit, Wasser, Kühlung, Licht'), ('Lösung', 'Netz mit Batterie oder Generator, dazu Solar (E35)'),
+  kette=[('Funktion', 'Strom für Arbeit, Wasser, Kühlung, Licht'), ('Lösung', 'Netzanschluss mit Generator als Reserve, Solar ab Phase 1 (D59); Batterie nur als Überbrückung (S03)'),
          ('Betriebsmittel', 'Netzstrom; Benzin für 3 Tage (S03, ASSUMPTION)'),
          ('Beschaffung', 'Netzanschluss beim Versorger beantragen; Elektriker vor Ort (Buy)'),
          ('Werkzeug', 'Generator 3 kW, Kanister, Außenkabel, Spannungsprüfer'),
@@ -167,8 +167,8 @@ KETTEN = [
 
  dict(id='F05', name='Internet', ebene='Technologie', anf='Arbeitsplatz oben, E49', sys='XP-SYS-002, 003, 007', rel='REQUIRED', status='OPEN',
   ziel='Zwei gleichzeitige Videocalls, während die dritte Person arbeitet, auch bei Schnee.',
-  kette=[('Funktion', 'Bezahlte digitale Arbeit oben'), ('Lösung', 'Eigener Internetanschluss, Starlink als Reserve; kein Mobilfunk oben (E49)'),
-         ('Beschaffung', 'Anbieter für den Hauptanschluss: OPEN; Starlink für die Adresse auf starlink.com prüfen'),
+  kette=[('Funktion', 'Bezahlte digitale Arbeit oben'), ('Lösung', 'Eigener Anschluss über einen lokalen Internetanbieter, Starlink als redundante Reserve für Ausfälle; kein Mobilfunk oben (D63, E49, Kommentar vom 17.11.2026)'),
+         ('Beschaffung', 'Lokaler Anbieter für den Hauptanschluss, welcher: OPEN; Starlink für die Adresse auf starlink.com prüfen'),
          ('Werkzeug', 'Router mit Umschaltung, Teleskopbesen für Schnee auf der Antenne'),
          ('Wer', 'Pavel richtet ein (ASSUMPTION); Team räumt die Antenne'),
          ('Wartung', 'Firmware, Kabel prüfen'), ('Ausfall', 'Umschalten auf Starlink; Test: 30 Minuten zwei Calls über jeden Anschluss')],
@@ -178,12 +178,12 @@ KETTEN = [
 
  dict(id='F06', name='Essen und Küche', ebene='Services', anf='H07, E74, E81', sys='XP-SYS-001, 002', rel='REQUIRED', status='OPEN',
   ziel='Drei Mahlzeiten am Tag; Vorrat für eine Sperre; Küche im Kommunalgebäude.',
-  kette=[('Funktion', 'Kochen, Kühlen, Vorrat'), ('Lösung', 'Phase 0 Kochplatte am Ofen und Kühlschrank im Objekt; ab Phase 1 Küche im Kommunalgebäude (E74)'),
+  kette=[('Funktion', 'Kochen, Kühlen, Vorrat'), ('Lösung', 'Phase 0 Kochplatte am Ofen und Kühlschrank in der Wohneinheit; ab Phase 1 Küche im Kommunalgebäude (E74)'),
          ('Betriebsmittel', 'Lebensmittel, Vorrat für 10 Tage (ASSUMPTION, wie Wasser); Milch und Käse vor Ort (2.4.6)'),
          ('Beschaffung', 'Einkauf unten; Person A holt Lieferungen an der Auffahrt'),
          ('Werkzeug', 'Kühlschrank (im Mittel 40 W, S03), Töpfe, Vorratsregal'), ('Wer', 'Gemeinsam, nach Plan; Garten freiwillig (E74)'),
          ('Ausfall', 'Kochen auf dem Holzofen; Vorrat')],
-  pos=[P('Kühlschrank', 'je Objekt', None, None, 'nicht gesucht', 'OPEN'), P('Kochfeld für das Kommunalgebäude (Phase 1)', '1', None, None, 'nicht gesucht', 'OPEN')],
+  pos=[P('Kühlschrank', 'je Wohneinheit', None, None, 'nicht gesucht', 'OPEN'), P('Kochfeld für das Kommunalgebäude (Phase 1)', '1', None, None, 'nicht gesucht', 'OPEN')],
   stunden='Einkauf unten 2–3 Stunden je Woche (ASSUMPTION).'),
 
  dict(id='F07', name='Zufahrt und Schnee', ebene='Physische Welt', anf='2.2.4, Wege sicher begehbar', sys='XP-SYS-003, 009, 012', rel='REQUIRED', status='OPEN',
@@ -233,8 +233,8 @@ KETTEN = [
   pos=[P('NAS Synology DS224+', '1', 20200, 20750, 'EU-Shops rund 404–415 €, ohne Platten'), P('RFID-Schloss', 'je Tür', None, None, 'nicht gefunden', 'OPEN')],
   stunden='Pflege 1 Stunde im Monat (ASSUMPTION).'),
 
- dict(id='F12', name='Wohnen und Arbeiten (Objekt)', ebene='Physische Welt', anf='D55, D56', sys='XP-SYS-001, 004, 006', rel='REQUIRED', status='OPEN',
-  ziel='Phase 0: ein Objekt für Team und Bauarbeiter; ab Phase 1 Wohn- und Arbeitsobjekte zur Miete.',
+ dict(id='F12', name='Wohnen und Arbeiten (Wohneinheit)', ebene='Physische Welt', anf='D55, D56', sys='XP-SYS-001, 004, 006', rel='REQUIRED', status='OPEN',
+  ziel='Phase 0: eine Wohneinheit für Team und Bauarbeiter; ab Phase 1 Wohneinheiten mit Arbeitsplatz zur Miete.',
   kette=[('Funktion', 'Wohnen, Arbeiten, Rückzug'), ('Lösung', 'Bauart offen: Holz, Beton, Glas, Metall; Bau-KI plant nach lokalen Gegebenheiten (D56)'),
          ('Beschaffung', 'Drei schriftliche Angebote; kaufen oder mieten'),
          ('Werkzeug', 'Kleines Fahrzeug für den Transport in Phase 0 (D57); Fundament nach geprüfter Geologie'),
@@ -245,9 +245,9 @@ KETTEN = [
 
 LERNEN = ['Anforderung', 'Annahme / Designentscheidung', 'Implementierung', 'Betrieb', 'Datenerfassung', 'Analyse', 'Bewertung', 'Entscheidung', 'Anpassung', 'neuer Standard']
 NEU_W = [
-    ('W19', 'Container oder Objekte', 'Container sind die Tiny Houses der Käufer und bleiben (E59)', 'Ein Objekt als Übergang, danach Objekte und Kommunalgebäude', 'Entschieden in D55 am 13.11.2026', 'DOCUMENTED'),
-    ('W20', 'Preis', 'Etwa 30.000 € je Käufer (E78)', 'Selbstkostenpreis je Objekt; kein klassischer Verkauf', 'Entschieden in D49 am 13.11.2026; Zahlen aus OD-008', 'DOCUMENTED'),
-    ('W21', 'Mission', 'Baseline v0.4 nennt keine Mission', 'Mission und Globalziele bleiben Ausgangspunkt (Kommentar D42)', 'Harmonisierung offen', 'DECISION REQUIRED'),
+    ('W19', 'Begriff: Wohneinheiten', 'Container sind die Tiny Houses der Käufer und bleiben (E59)', 'Wir nennen es Wohneinheiten: eine Wohneinheit als Übergang, danach Wohneinheiten und Kommunalgebäude', 'Entschieden in D55 am 13.11.2026; Begriff: Kommentar vom 17.11.2026', 'DOCUMENTED'),
+    ('W20', 'Preis', 'Etwa 30.000 € je Käufer (E78)', 'Es wird nichts verkauft, weder Häuser noch Container. Die Wohneinheiten werden vermietet; Miete aus den Selbstkosten je Wohneinheit', 'D45, D48, D49; Kommentar vom 17.11.2026; Zahlen aus OD-008', 'DOCUMENTED'),
+    ('W21', 'Mission', 'Baseline v0.4 nennt keine Mission', 'Mission und Globalziele stehen im Index 3.0 unter „Grundlage: Mission, Ziele, Ort“ und sind der Ausgangspunkt (D42)', 'Kommentar vom 17.11.2026', 'DOCUMENTED'),
 ]
 
 # ---------------------------------------------------------------- Ausgabe
@@ -340,7 +340,7 @@ def build_html():
             o.append(f'<div class="card"><h3 data-col="{col}">{e(t)}</h3><ul>{"".join(f"<li>{e(x)}</li>" for x in pts)}</ul><div class="meta">{st(s)} {e(sysid)}</div></div>')
     o.append('</div></section>')
     # Bauphasen
-    o.append('<section id="bauphasen"><p class="num">03 · Bauphasen</p><h2>Ein Objekt für den Anfang, danach Objekte und Kommunalgebäude</h2><p>Stand der Entscheidung D55 vom 13.11.2026. Termine sind Ziele; jede Phase braucht die Freigabe über die Gates.</p><div class="ph">')
+    o.append('<section id="bauphasen"><p class="num">03 · Bauphasen</p><h2>Eine Wohneinheit für den Anfang, danach Wohneinheiten und Kommunalgebäude</h2><p>Stand der Entscheidung D55 vom 13.11.2026. Termine sind Ziele; jede Phase braucht die Freigabe über die Gates.</p><div class="ph">')
     for p, t, was, wer, kosten, s in PHASEN:
         o.append(f'<div class="card"><p class="eyebrow">{p}</p><h3>{e(t)}</h3><dl><dt>Was</dt><dd>{e(was)}</dd><dt>Für wen</dt><dd>{e(wer)}</dd><dt>Kosten</dt><dd>{e(kosten)}</dd></dl><div class="meta">{st(s)}</div></div>')
     o.append('</div></section>')

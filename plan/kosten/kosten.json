@@ -20,14 +20,14 @@
   },
   {
    "id": "A010",
-   "titel": "Objekt-Skizze und Bau-KI-Planung",
+   "titel": "Skizze der Wohneinheiten und Bau-KI-Planung",
    "stufe": "A · Klären, was ein Investor sonst einpreist",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 5000,
    "hoch": 6300,
    "stunden": 40,
-   "risiko": "Kosten: Basis of Design für Objekt Phase 0 und Phase 1.",
+   "risiko": "Kosten: Basis of Design für Wohneinheit Phase 0 und Phase 1.",
    "hinweis": "Register deckt nur eine Architektur-Skizze.",
    "im_register": true
   },
@@ -79,7 +79,7 @@
    "niedrig": 0,
    "hoch": 0,
    "stunden": 40,
-   "risiko": "Kosten: macht aus Internet-Richtwerten ein belastbares Kostenband (Objekt, Brunnen, Kläranlage, Fundament, Netz).",
+   "risiko": "Kosten: macht aus Internet-Richtwerten ein belastbares Kostenband (Wohneinheit, Brunnen, Kläranlage, Fundament, Netz).",
    "hinweis": "",
    "im_register": false
   },
@@ -358,7 +358,7 @@
   },
   {
    "id": "X06",
-   "titel": "Selbstkostenrechnung je Objekt",
+   "titel": "Selbstkostenrechnung je Wohneinheit",
    "stufe": "C · Whitelist, Umsatz, Unterlagen",
    "variante": "K",
    "quelle": "kostet nur Zeit",
@@ -491,7 +491,7 @@
   },
   {
    "id": "A009",
-   "bereich": "Objekt Phase 0",
+   "bereich": "Wohneinheit Phase 0",
    "position": "Wohn- und Arbeitsobjekt für Team und Bauarbeiter",
    "art": "Investition",
    "niedrig": 674900,
@@ -1068,7 +1068,7 @@
   {
    "id": "A010",
    "bereich": "Planung",
-   "position": "Objekt-Skizze",
+   "position": "Wohneinheit-Skizze",
    "art": "Investition",
    "niedrig": 5000,
    "hoch": 6300,
@@ -1079,7 +1079,7 @@
   },
   {
    "id": "A016",
-   "bereich": "Objekt Phase 0",
+   "bereich": "Wohneinheit Phase 0",
    "position": "Zwei Winterschlafsäcke",
    "art": "Investition",
    "niedrig": 7600,
