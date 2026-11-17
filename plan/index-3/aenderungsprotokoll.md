@@ -613,3 +613,12 @@ Schwerpunkt: 3 × Balance, 2 × Dominanz.
   - **Gäste** kommen kurzfristig und können auch langfristig bleiben. Im internen Modell sind sie dann Mieter (D45, D48).
   - **Investoren** werden getrennt von der Whitelist geführt.
 - OD-003 und Abgleich W08 verweisen auf die vier Rollen. Siedler, Remote-Siedler, Mitarbeitende, Betreiber und Partner bleiben offen.
+
+## 17.11.2026 (später) · Whitelist auf /orte: ohne „kostenlos“, Mitgestalten
+
+Vorgabe der Projektleitung vom 17.11.2026; geändert auf Deutsch und Englisch.
+
+- „kostenlos“ ist gestrichen, im Schritt 01 und im Vertrauenshinweis. Es weckte den Eindruck, dass später etwas kostet. Der Hinweis heißt jetzt „Unverbindlich, jederzeit abmelden“.
+- Neuer Einleitungstext: „Wir bauen Node001 von Grund auf, Abschnitt für Abschnitt. Wer früh dabei ist, gestaltet mit: wie es aussieht, wie wir bauen und wie wir zusammen leben.“ Das zahlt auf den Sternbild-Begriff Freiheit ein.
+- Schritt 02 heißt jetzt „Infos bekommen und mitgestalten, wie Node001 entsteht“.
+- Index: Die Limbic-Tabelle führt diese Formulierung in der Zeile Freiheit.
