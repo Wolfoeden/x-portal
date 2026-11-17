@@ -109,6 +109,12 @@ a {{ color:var(--forest) }}
         ('Kostenstruktur','Was es kostet','Company: Team und Plattform. Node001: Infrastruktur, Wohneinheiten, Kommunalgebäude, Betrieb. Getrennt gerechnet.'),
         ('Preislogik','Selbstkosten als Basis','Miete und Pauschalen werden aus gemessenen Kosten abgeleitet. Wer in Projekten oder für die Gemeinschaft mitarbeitet, bekommt diese Leistung angerechnet.'),
         ('Prüfstein','Was es beweisen muss','Node001 trägt sich aus Nutzung. Cost-to-Serve je Bewohner und Monat wird gemessen, nicht angenommen.')])}
+<h3>Mitarbeiten ohne Ortsbindung</h3>
+<p>Wer bei X-PORTAL mitarbeitet, muss nicht vor Ort sein. Der Arbeitsort wird im Profil gewählt (Profil-Baukasten der Website, Feld „Arbeitsort“).</p>
+{cards([('Remote','Von überall','Projekte laufen digital über die Plattform: Profil, Matching und Zusammenarbeit funktionieren von überall. Gearbeitet wird mit synthetischen Testdaten.'),
+        ('Vor Ort im Node','Mit Kundendaten','Zusätzlich Wohnen, Gemeinschaft und eine sichere IT-Umgebung nach DSGVO und ISMS. Damit ist auch Arbeit mit echten Kundendaten möglich.'),
+        ('Beides','Je nach Projekt','Der Node ist ein Angebot, keine Voraussetzung. Wer mag, wechselt zwischen remote und vor Ort.')])}
+<p>Für das Geschäftsmodell heißt das: Das Lieferteam wächst unabhängig von der Zahl der Wohneinheiten. Kundenprojekte (Erlösstufe 01) hängen nicht an der Fertigstellung von Node001. Der Node ist Zusatznutzen für Team und Kunden, nicht Engpass.</p>
 <p class="rule">Kernregel: Node001 muss aus realer Nutzung wirtschaftlich tragfähig werden. Künftige IP- und Genome-Erlöse sind Upside, kein Rettungsanker im Base Case.</p></section>
 
 <section id="node001"><p class="num">05 · Node001</p><h2>Der erste reale Proof of Concept</h2>

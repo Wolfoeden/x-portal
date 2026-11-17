@@ -563,3 +563,17 @@ Schwerpunkt: 3 × Balance, 1 × Dominanz.
 **Index 3.0:** In der Limbic-Tabelle ist die Spalte „So sagt es die Website“ angepasst:
 - Effizienz: moderne Arbeitsplätze, sichere IT-Umgebung
 - Sicherheit: autarke Siedlung
+
+## 17.11.2026 (später) · Arbeiten ohne vor Ort zu sein (FAQ und Whitepaper)
+
+- **FAQ /orte (de und en):**
+  - Neue Frage „Kann ich bei XPORTAL auch arbeiten, ohne vor Ort zu sein?“
+  - Antwort: Ja, remote von überall; Node001 ist ein Angebot, keine Pflicht.
+  - Dazu der Link „Melde dich an: Für digitale Nomaden“ zum Profil (`/digitale-nomaden#profil`).
+- **Whitepaper, Abschnitt 04:**
+  - Neuer Unterabschnitt „Mitarbeiten ohne Ortsbindung“ mit drei Arbeitsorten:
+    - remote mit synthetischen Testdaten
+    - vor Ort mit echten Kundendaten in der sicheren IT-Umgebung
+    - beides
+  - Folge für das Geschäftsmodell: Das Lieferteam wächst unabhängig von den Wohneinheiten.
+  - Quelle: Profil-Baukasten der Website, Feld „Arbeitsort“.

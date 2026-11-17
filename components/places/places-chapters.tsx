@@ -79,7 +79,7 @@ export function ChapterPlacesFaq({ locale }: { locale: Locale }) {
                 {item.link ? (
                   <>
                     {' '}
-                    <Link href={pageHref(item.link.page, locale)} className="whitespace-nowrap font-medium text-brand underline-offset-4 hover:underline">
+                    <Link href={pageHref(item.link.page, locale, item.link.anchor)} className="whitespace-nowrap font-medium text-brand underline-offset-4 hover:underline">
                       {item.link.label} →
                     </Link>
                   </>
