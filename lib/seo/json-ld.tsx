@@ -25,7 +25,7 @@ export function siteLd(locale: Locale): Thing[] {
       url: abs('/'),
       logo: abs('/brand/xportal-wordmark.svg'),
       description: dict.seo.definition,
-      knowsAbout: locale === 'de' ? ['KI-Projekte', 'KI-Freelancer', 'KI-Schulung nach EU AI Act', 'ISMS nach ISO 27001', 'Wohnen und Arbeiten in den Karpaten'] : ['AI projects', 'AI freelancers', 'AI training under the EU AI Act', 'ISMS to ISO 27001', 'Living and working in the Carpathians'],
+      knowsAbout: locale === 'de' ? ['KI-Projekte', 'Digitale Nomaden mit KI-Know-how', 'KI-Schulung nach EU AI Act', 'ISMS nach ISO 27001', 'Wohnen und Arbeiten in den Karpaten'] : ['AI projects', 'Digital nomads with AI skills', 'AI training under the EU AI Act', 'ISMS to ISO 27001', 'Living and working in the Carpathians'],
     },
     {
       '@context': 'https://schema.org',

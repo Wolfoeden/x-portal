@@ -33,8 +33,8 @@ STERNBILD = {'name': 'X-Portal Node001', 'datum': '17.11.2026', 'von': 'Projektl
 # Brücke zu Maslow und M02 (Vorschlag KI) und wie die Website es sagt (Stand 17.11.2026).
 BRUECKE = {
     'Gesundheit': ('Grundbedürfnisse', 'H05 Waschen und duschen, H07 Essen, H08 Gute Luft; Trinkwasseraufbereitung (D61), Sanitär ab Phase 0 (D62)', '„Gesund essen“: Gemüse aus den Hochbeeten, Trinkwasser aus eigener Aufbereitung'),
-    'Sicherheit': ('Sicherheit', 'S04 Privatheit; Versorgung bei Störung (Ast 3): Generator (D59), Wasservorrat 10 Tage (D61), Ofen mit Holzlager (D60), Starlink (D63); Notfallplan', '„Ruhig schlafen“: Strom, Wärme und Wasser laufen weiter; FAQ zu Stromausfall und Schnee'),
-    'Effizienz': ('Wertschätzung und Leistung', 'D01 Gleichzeitige Nutzung, D03 Licht, D05 Wärme und Luft am Platz; Internet (D63)', '„Konzentriert arbeiten“: ruhiger Platz, kurze Wege, stabiles Internet'),
+    'Sicherheit': ('Sicherheit', 'S04 Privatheit; Versorgung bei Störung (Ast 3): Generator (D59), Wasservorrat 10 Tage (D61), Ofen mit Holzlager (D60), Starlink (D63); Notfallplan', '„Autarke Siedlung“: Kennzahl „Autark“, Szene „Ruhig schlafen“, FAQ zu Stromausfall und Schnee (Vorgabe Projektleitung 17.11.)'),
+    'Effizienz': ('Wertschätzung und Leistung', 'D01 Gleichzeitige Nutzung, D03 Licht, D05 Wärme und Luft am Platz; Internet (D63)', '„Moderne Arbeitsplätze“, schnelles Internet, sichere IT-Umgebung nach DSGVO und ISMS (Vorgabe Projektleitung 17.11.)'),
     'Natur': ('Grundbedürfnisse und Erholung', 'M02-23 Gemüsegarten, M02-14 Gemeinsamer Weg, Lage am Hang (1.016–1.077 m)', '„Morgen am Hang“, „Draußen sein“; Titel „Ein Tag in der Natur“'),
 }
 

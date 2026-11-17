@@ -82,6 +82,7 @@ ALT_WEB = {
     r'1\.010|1\.075|1,010|1,075': 'Höhe 1.016–1.077 m (Geologiebericht)',
     r'Gemeinschaftshaus': 'Kommunalgebäude (D64)',
     r'[Mm]iete\w*|\b[Mm]ieten\b|[Mm]ieter\w*|[Vv]ermiet\w*|[Mm]iet\w+|\b[Rr]ent(s|al|ing|ed)?\b|[Tt]enants?\b': 'nichts von Miete auf der Website (Vorgabe 17.11.2026)',
+    r'[Ff]reelanc\w*': '„digitale Nomaden“ statt Freelancer (Vorgabe 17.11.2026)',
     r'\b[Bb]uy(ing|er)?\b|\b[Pp]urchase|[Tt]iny house|[Pp]re-seed|ten nodes|Hungarian border|border with Hungary|\b[Rr]estaurant|\b[Ff]or sale\b(?<!nothing for sale)|living modules?|\bmodules?\b': 'englisch: nur Miete, Begriffe nach Plan',
 }
 # Ausnahmen: verneinte Aussagen, die genau das Richtige sagen.
@@ -91,7 +92,8 @@ def pruefe_website(name, path):
     s = path.read_text()
     s = re.sub(r'^\s*//.*$', ' ', s, flags=re.M)
     # Interne Kennungen (id, use, Kampagnenwerte) sind keine sichtbaren Texte.
-    s = re.sub(r"\b(id|use|anchor|key): '[^']*'", ' ', s)
+    s = re.sub(r"\b(id|use|anchor|key|page|icon): '[^']*'", ' ', s)
+    s = re.sub(r'^import .*$', ' ', s, flags=re.M)
     texte = ' | '.join(m.group(1) for m in re.finditer(r"'((?:[^'\\]|\\.)*)'", s))
     for x in OK_WEB:
         texte = re.sub(x, ' ', texte)

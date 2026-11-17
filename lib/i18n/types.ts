@@ -13,4 +13,5 @@ export type CtaKey = 'default' | 'freelancer' | 'places' | 'investors'
 export type FooterColumn = { title: string; links: NavLink[] }
 export type TeamMember = { name: string; role: string; photo?: string; pending?: boolean; linkedin?: string }
 export type Door = { key: 'companies' | 'freelancers' | 'investors'; who: string; title: string; text: string; action: string }
-export type Faq = { question: string; answer: string }
+/** Optional ein Link unter der Antwort, z. B. „Kann ich auch kaufen?“ → Kontakt (17.11.2026). */
+export type Faq = { question: string; answer: string; link?: { label: string; page: NavLink['page'] } }

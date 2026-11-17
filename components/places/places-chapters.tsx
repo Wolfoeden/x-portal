@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import { KindBadge } from '@/components/places/ai-badge'
 import { IMAGES } from '@/lib/images'
@@ -6,7 +7,7 @@ import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { HeroEmailForm } from '@/components/places/hero-form'
 import { ReappearEmail } from '@/components/places/sticky-email'
 import { getDictionary } from '@/lib/i18n/dictionary'
-import { IDS, type Locale } from '@/lib/i18n/routes'
+import { IDS, pageHref, type Locale } from '@/lib/i18n/routes'
 
 const card = 'transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(.2,.7,.2,1)] hover:-translate-y-1.5 hover:shadow-[0_2px_4px_rgb(14_20_17/0.05),0_34px_64px_-30px_rgb(14_20_17/0.38)]'
 
@@ -73,7 +74,17 @@ export function ChapterPlacesFaq({ locale }: { locale: Locale }) {
                   +
                 </span>
               </summary>
-              <p className="max-w-[720px] pb-6 text-muted">{item.answer}</p>
+              <p className="max-w-[720px] pb-6 text-muted">
+                {item.answer}
+                {item.link ? (
+                  <>
+                    {' '}
+                    <Link href={pageHref(item.link.page, locale)} className="whitespace-nowrap font-medium text-brand underline-offset-4 hover:underline">
+                      {item.link.label} →
+                    </Link>
+                  </>
+                ) : null}
+              </p>
             </details>
           ))}
         </div>

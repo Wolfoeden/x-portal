@@ -5,7 +5,7 @@ export type Locale = (typeof LOCALES)[number]
 
 export const PAGES = {
   home: { de: '/', en: '/en' },
-  freelancer: { de: '/freelancer', en: '/en/freelancers' },
+  freelancer: { de: '/digitale-nomaden', en: '/en/digital-nomads' }, // bis 17.11.2026 /freelancer, /en/freelancers (Weiterleitung in next.config.ts)
   investors: { de: '/investoren', en: '/en/investors' },
   places: { de: '/orte', en: '/en/places' },
   contact: { de: '/kontakt', en: '/en/contact' },
@@ -34,7 +34,7 @@ export const IDS = {
     terms: 'agb',
     signIn: 'anmelden',
     doorCompanies: 'unternehmen',
-    doorFreelancers: 'freelancer',
+    doorFreelancers: 'nomaden',
     doorInvestors: 'investoren',
     profile: 'profil',
     requests: 'anfragen',
@@ -78,7 +78,7 @@ export const IDS = {
     terms: 'terms',
     signIn: 'sign-in',
     doorCompanies: 'companies',
-    doorFreelancers: 'freelancers',
+    doorFreelancers: 'nomads',
     doorInvestors: 'investors',
     profile: 'profile',
     requests: 'requests',

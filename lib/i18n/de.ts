@@ -25,11 +25,11 @@ export const de = {
   meta: {
     home: {
       title: 'KI-Projekt in einem Satz: Ihr Team · XPORTAL',
-      description: 'Beschreiben Sie Ihr KI-Projekt in einem Satz. XPORTAL stellt das passende Team aus KI-Freelancern zusammen und führt es bis zur Abnahme.',
+      description: 'Beschreiben Sie Ihr KI-Projekt in einem Satz. XPORTAL stellt das passende Team aus digitalen Nomaden mit KI-Know-how zusammen und führt es bis zur Abnahme.',
     },
     freelancer: {
-      title: 'KI-Freelancer: Projekte ohne Provision · XPORTAL',
-      description: 'Als KI-Freelancer in drei Minuten ein Profil anlegen, kostenlos und ohne Provision. Passende Projekte kommen zu Ihnen, Ihre Kontaktdaten bleiben privat.',
+      title: 'Digitale Nomaden: KI-Projekte ohne Provision · XPORTAL',
+      description: 'Als digitaler Nomade mit KI-Know-how in drei Minuten ein Profil anlegen, ohne Provision. Passende Projekte kommen zu Ihnen, Kontaktdaten bleiben privat.',
     },
     investors: {
       title: 'Investoren · XPORTAL und Node001 in den Karpaten',
@@ -64,12 +64,12 @@ export const de = {
   common: {
     onSite: 'Vor Ort',
     remote: 'Remote',
-    mix: typed<MixWords>({ freelancer: ['Freelancer', 'Freelancer'], agent: ['KI-Agent', 'KI-Agenten'], client: 'aus Ihrem Team' }),
+    mix: typed<MixWords>({ freelancer: ['digitaler Nomade', 'digitale Nomaden'], agent: ['KI-Agent', 'KI-Agenten'], client: 'aus Ihrem Team' }),
     quote: '„{text}“',
     percent: '{n} %',
   },
 
-  // Navigation nach Zielgruppen (17.11.2026): Unternehmen, Freelancer, Orte, Investoren. Rechts oben der Aufruf der jeweiligen Seite (StoryBrand).
+  // Navigation nach Zielgruppen (17.11.2026): Unternehmen, digitale Nomaden, Orte, Investoren. Rechts oben der Aufruf der jeweiligen Seite (StoryBrand).
   header: {
     homeLabel: 'XPORTAL Startseite',
     navLabel: 'Hauptnavigation',
@@ -85,14 +85,14 @@ export const de = {
       },
     ],
     links: typed<NavLink[]>([
-      { label: 'Für Freelancer', page: 'freelancer' },
+      { label: 'Für digitale Nomaden', page: 'freelancer' },
       { label: 'Orte', page: 'places' },
       { label: 'Investoren', page: 'investors' },
     ]),
     audienceTitle: 'Für wen?',
     audiences: typed<MenuEntry[]>([
       { label: 'Unternehmen', page: 'home', text: 'KI-Projekt in einem Satz, Team bis zur Abnahme', icon: 'company' },
-      { label: 'Freelancer', page: 'freelancer', text: 'Profil in drei Minuten, ohne Provision', icon: 'freelancer' },
+      { label: 'Digitale Nomaden', page: 'freelancer', text: 'Profil in drei Minuten, ohne Provision', icon: 'freelancer' },
       { label: 'Orte', page: 'places', text: 'Wohnen und arbeiten in den Karpaten', icon: 'hubs' },
       { label: 'Investoren', page: 'investors', text: 'Whitepaper und Deck auf Anfrage', icon: 'investors' },
     ]),
@@ -117,13 +117,13 @@ export const de = {
 
   // Wie Suchmaschinen und KI-Systeme XPORTAL einordnen sollen: ein Definitionssatz für Fußzeile, JSON-LD und /llms.txt (17.11.2026).
   seo: {
-    definition: 'XPORTAL bildet Teams aus KI-Freelancern, führt Projekte bis zur Abnahme und baut mit Node001 einen Ort zum Leben und Arbeiten.',
+    definition: 'XPORTAL bildet Teams aus digitalen Nomaden mit KI-Know-how und führt Projekte bis zur Abnahme. Mit Node001 baut es einen Ort zum Leben und Arbeiten.',
     facts: [
       'Node001 liegt in den Karpaten der Westukraine, auf einem eigenen Grundstück mit 2 ha, mitten in der Natur.',
-      'Strom, Wasser, Wärme und Internet haben eine Reserve: Generator, Wasservorrat für 10 Tage, Ofen mit Holzlager, Starlink.',
+      'Node001 wird als autarke Siedlung gebaut: Strom, Wärme, Wasser und Internet laufen auch ohne öffentliches Netz.',
       'Die Wohneinheiten werden nicht verkauft.',
       'Baubeginn ist für 2027 geplant, erst nach den nötigen Prüfungen. Termine sind Ziele, keine Zusagen.',
-      'Freelancer zahlen nichts und keine Provision.',
+      'Digitale Nomaden zahlen nichts und keine Provision.',
       'Die Investorenseite ist kein Angebot von Wertpapieren, Vermögensanlagen oder Kryptowerten und keine Anlageberatung.',
       'Gebäude auf den Bildern sind mit KI erstellt und zeigen keine finale Planung.',
     ],
@@ -133,7 +133,7 @@ export const de = {
   },
 
   footer: {
-    tagline: 'XPORTAL bildet Teams aus KI-Freelancern, führt Projekte bis zur Abnahme und baut mit Node001 einen Ort zum Leben und Arbeiten.',
+    tagline: 'XPORTAL bildet Teams aus digitalen Nomaden mit KI-Know-how und führt Projekte bis zur Abnahme. Mit Node001 baut es einen Ort zum Leben und Arbeiten.',
     columns: typed<FooterColumn[]>([
       {
         title: 'Für Unternehmen',
@@ -145,7 +145,7 @@ export const de = {
         ],
       },
       {
-        title: 'Für Freelancer',
+        title: 'Für digitale Nomaden',
         links: [
           { label: 'Profil anlegen', page: 'freelancer', anchor: 'profile' },
           { label: 'Fragen', page: 'freelancer', anchor: 'faq' },
@@ -313,7 +313,7 @@ export const de = {
     open: 'noch offen, im Gespräch klären',
     onSite: 'Vor Ort im Projekt',
     profile: 'Profil',
-    freelancer: 'Freelancer',
+    freelancer: 'Digitaler Nomade',
   },
 
   agents,
@@ -333,7 +333,7 @@ export const de = {
     wait: 'Bitte warten Sie einen Moment und versuchen Sie es dann noch einmal.',
     unavailable: 'Die Anmeldung ist gerade nicht verfügbar.',
     failed: 'Die Anmeldung hat nicht geklappt. Bitte versuchen Sie es noch einmal.',
-    newHere: 'Neu als KI-Freelancer?',
+    newHere: 'Neu als digitaler Nomade?',
     newHereLink: 'Profil anlegen',
     signup: {
       label: 'Profil speichern',
@@ -541,7 +541,7 @@ export const de = {
     facts: [
       { value: '2 ha', text: 'eigenes Grundstück' },
       { value: '1.077 m', text: 'höchster Punkt des Grundstücks' },
-      { value: '10 Tage', text: 'Wasservorrat bei Störung' },
+      { value: 'Autark', text: 'Strom, Wärme, Wasser, Internet' },
       { value: '2027', text: 'Baubeginn als Ziel' },
     ],
     // StoryBrand-Erfolgsbild als Tagesablauf; Limbic Map je Szene im Kommentar der Komponente (components/places/chapter-day.tsx).
@@ -551,10 +551,10 @@ export const de = {
       text: 'So stellen wir uns einen Tag vor. Kommunalgebäude, Feuerstelle und Sauna entstehen in Phase 1.',
       scenes: [
         { time: '07:00', title: 'Morgen am Hang.', text: 'Du trittst auf deine Terrasse. Vor dir Wald und Wiese, unten im Tal zieht der Nebel ab.', imageAlt: 'Drohnenfoto mit KI eingesetzter Wohneinheit: dunkel, große Fenster, Terrasse auf Stützen am Waldrand' },
-        { time: '09:30', title: 'Konzentriert arbeiten.', text: 'Ein ruhiger Platz im Kommunalgebäude, kurze Wege, stabiles Internet. Fällt der Anschluss aus, springt Starlink ein.', imageAlt: 'Schaubild: Kommunalgebäude aus Holz mit Glasfront und Terrasse am Hang, im Tal Nebel über den Karpaten' },
+        { time: '09:30', title: 'Konzentriert arbeiten.', text: 'Moderne Arbeitsplätze im Kommunalgebäude, kurze Wege, schnelles Internet. Die IT-Umgebung ist sicher, nach DSGVO und ISMS.', imageAlt: 'Schaubild: Kommunalgebäude aus Holz mit Glasfront und Terrasse am Hang, im Tal Nebel über den Karpaten' },
         { time: '13:00', title: 'Gesund essen.', text: 'Gemüse aus den Hochbeeten, gekocht in der gemeinsamen Küche. Das Wasser kommt aus der eigenen Trinkwasseraufbereitung.', imageAlt: '' },
         { time: '17:00', title: 'Draußen sein.', text: 'Ein Gang über den Hang, Holz für den Winter, Arbeit im Garten. Bewegung gehört hier zum Tag.', imageAlt: '' },
-        { time: '20:00', title: 'Ruhig schlafen.', text: 'Sauna oder Feuerstelle, dann Ruhe. Strom, Wärme und Wasser laufen weiter, auch wenn das Netz ausfällt.', imageAlt: 'Schaubild des Zielbilds am Abend: Wohneinheiten aus Holz am Hang, in der Mitte das Kommunalgebäude mit beleuchteter Terrasse' },
+        { time: '20:00', title: 'Ruhig schlafen.', text: 'Sauna oder Feuerstelle, dann Ruhe. Die Siedlung ist autark, Strom, Wärme und Wasser laufen immer.', imageAlt: 'Schaubild des Zielbilds am Abend: Wohneinheiten aus Holz am Hang, in der Mitte das Kommunalgebäude mit beleuchteter Terrasse' },
       ],
       ctaText: 'So möchtest du deine Tage verbringen?',
       cta: 'Interesse vormerken',
@@ -608,13 +608,12 @@ export const de = {
     faq: {
       title: 'Häufige Fragen.',
       items: typed<Faq[]>([
-        { question: 'Kann ich länger bleiben?', answer: 'Ja, für einige Wochen oder viele Monate. Konditionen und Leistungen erfährst du in der Whitelist zuerst.' },
-        { question: 'Kann ich auch kaufen?', answer: 'Nein. Die Wohneinheiten werden nicht verkauft.' },
-        { question: 'Wann kann ich einziehen?', answer: 'Nach Fertigstellung und Abnahme. Baubeginn ist 2027 geplant; einen Termin nennen wir erst, wenn er feststeht.' },
-        { question: 'Kann ich dort wirklich arbeiten?', answer: 'Ja, konzentriert und ohne Umwege: ruhige Arbeitsplätze im Kommunalgebäude, Internet vom lokalen Anbieter, Starlink als Reserve.' },
-        { question: 'Was passiert bei Stromausfall oder Schnee?', answer: 'Die Versorgung läuft weiter: Generator als Reserve, Wasservorrat für 10 Tage, Ofen mit Holzlager und Starlink fürs Internet.' },
-        { question: 'Wie kommt man hin?', answer: 'Über eine schmale, einspurige Zufahrt den Hang hinauf. Oben gibt es ein gemeinsames Geländefahrzeug.' },
-        { question: 'Was hat das mit XPORTAL zu tun?', answer: 'XPORTAL bildet Teams aus KI-Freelancern für Unternehmen. Auf Node001 wohnen und arbeiten Menschen gemeinsam, auch an diesen Projekten.' },
+        { question: 'Kann ich länger bleiben?', answer: 'Ja, für einige Wochen oder Monate. Konditionen und Leistungen erfährst du in der Whitelist zuerst.' },
+        { question: 'Kann ich auch kaufen?', answer: 'Nein, die Wohneinheiten werden nicht verkauft. Du kannst aber in Node001 investieren und am Erfolg teilhaben. Melde dich bei Interesse, wir schicken dir die Unterlagen.', link: { label: 'Interesse als Investor melden', page: 'contact' } },
+        { question: 'Wann kann ich einziehen?', answer: 'Den genauen Termin erfährst du in unserer Whitelist. Baubeginn ist 2027.' },
+        { question: 'Kann ich dort wirklich arbeiten?', answer: 'Ja. Moderne Arbeitsplätze im Kommunalgebäude, schnelles Internet und eine sichere IT-Umgebung nach DSGVO und ISMS (ISO 27001).' },
+        { question: 'Was passiert bei Stromausfall oder Schnee?', answer: 'Kaum etwas: Node001 wird als autarke Siedlung gebaut. Strom, Wärme, Wasser und Internet laufen auch ohne öffentliches Netz weiter.' },
+        { question: 'Was hat das mit XPORTAL zu tun?', answer: 'XPORTAL bildet Teams aus digitalen Nomaden mit KI-Know-how für Unternehmen. Auf Node001 leben und arbeiten sie gemeinsam, auch an diesen Projekten.' },
         { question: 'Wie sicher ist der Standort?', answer: 'Für die Ukraine gilt eine Reisewarnung. Über Lage, Versicherung und Notfallplan informieren wir offen, bevor jemand einzieht.' },
       ]),
     },
@@ -694,7 +693,7 @@ export const de = {
       reading: 'Ihr Satz wird gelesen …',
       forming: 'Team entsteht',
       why: 'Warum diese Leute',
-      freelancerMobile: 'Sie sind KI-Freelancer? Profil anlegen',
+      freelancerMobile: 'Digitaler Nomade mit KI-Know-how? Profil anlegen',
       freelancerDesktop: 'Ihr Profil?',
       or: 'Oder:',
       note: 'Kostenlos und ohne Konto. Danach führen wir Ihr Projekt bis zur Abnahme.',
@@ -773,7 +772,7 @@ export const de = {
       title: 'Wo wollen Sie einsteigen?',
       doors: typed<Door[]>([
         { key: 'companies', who: 'Unternehmen', title: 'Team finden.', text: 'Ein Satz genügt. Die erste Analyse ist kostenlos.', action: 'Projekt beschreiben' },
-        { key: 'freelancers', who: 'KI-Freelancer', title: 'Profil in drei Minuten.', text: 'Sofort sichtbar, ohne Provision. Vor Ort im Node oder remote.', action: 'Profil anlegen' },
+        { key: 'freelancers', who: 'Digitale Nomaden', title: 'Profil in drei Minuten.', text: 'Sofort sichtbar, ohne Provision. Vor Ort im Node oder remote.', action: 'Profil anlegen' },
         { key: 'investors', who: 'Investoren', title: 'Whitepaper und Deck.', text: 'Plan, Stand und Meilensteine, auf Anfrage.', action: 'Unterlagen anfordern' },
       ]),
     },
@@ -837,7 +836,7 @@ export const de = {
       available: 'Verfügbar',
       availableOpen: 'noch offen',
       skillsLabel: 'Stärken',
-      selfReported: 'Angaben laut Freelancer',
+      selfReported: 'Eigene Angaben',
       inMatching: 'Im Matching',
       percentLabel: 'Profil zu {percent} Prozent vollständig',
       teaserLabel: 'Passende Anfrage · Beispiel',
@@ -976,7 +975,7 @@ export const de = {
       privateOnly: 'Nur für XPORTAL',
       rows: ['E-Mail', 'Telefon', 'Lebenslauf', 'Kalenderlink'],
       companiesSee: 'Das sehen Unternehmen',
-      selfReported: 'Angaben laut Freelancer',
+      selfReported: 'Eigene Angaben',
       verified: 'Von XPORTAL geprüft',
       verifyText: 'Ihr Profil ist sofort sichtbar. Später gleichen wir einzelne Angaben mit Nachweisen ab, etwa mit Ihrem Lebenslauf.',
     },
@@ -1006,7 +1005,7 @@ export const de = {
         {
           question: 'Was wird geprüft?',
           answer:
-            'Ihre Angaben erscheinen zuerst als „Angaben laut Freelancer“. Einzelne gleichen wir später mit Nachweisen ab, etwa mit Ihrem Lebenslauf oder einem öffentlichen Berufsprofil. Nur diese erscheinen als „Von XPORTAL geprüft“.',
+            'Ihre Angaben erscheinen zuerst als „Eigene Angaben“. Einzelne gleichen wir später mit Nachweisen ab, etwa mit Ihrem Lebenslauf oder einem öffentlichen Berufsprofil. Nur diese erscheinen als „Von XPORTAL geprüft“.',
         },
         { question: 'Brauche ich einen Lebenslauf?', answer: 'Er hilft, ist aber kein Muss. Als PDF bis 10 MB. Unternehmen sehen ihn nicht.' },
         {
@@ -1050,7 +1049,7 @@ export const de = {
       hubImageAlt: 'Drohnenfoto des Grundstücks: grüner Hang in den Karpaten, die Wohneinheiten zwischen den Bäumen sind mit KI eingesetzt',
       deck: 'Whitepaper und Deck anfordern',
       statusLink: 'Stand ansehen',
-      mapLabel: 'Europakarte mit Geländehöhen: KI-Freelancer in vielen Ländern, Node001 in den Karpaten der Westukraine, Daten in der EU',
+      mapLabel: 'Europakarte mit Geländehöhen: digitale Nomaden in vielen Ländern, Node001 in den Karpaten der Westukraine, Daten in der EU',
       hubName: 'Node001 · Westukraine',
       hubStatus: 'Baubeginn 2027 · Ziel',
       dataSite: 'Daten in der EU',
@@ -1064,7 +1063,7 @@ export const de = {
       title: 'Viele zeigen Bilder. Wir zeigen Nachweise.',
       text: [
         'Digitale Arbeit geht von überall. Orte, an denen Arbeit, Wohnen und Gemeinschaft zusammenpassen, sind selten.',
-        'XPORTAL bildet Teams aus KI-Freelancern, entwickelt eigene Lösungen und baut mit Node001 den ersten solchen Ort.',
+        'XPORTAL bildet Teams aus digitalen Nomaden mit KI-Know-how, entwickelt eigene Lösungen und baut mit Node001 den ersten solchen Ort.',
       ],
       missionLabel: 'Unsere Mission',
       mission: 'Wir schaffen und vernetzen menschenzentrierte Innovationshubs, in denen Menschen leben, arbeiten und gemeinsam neue Lösungen entwickeln.',
@@ -1074,7 +1073,7 @@ export const de = {
       title: 'Vom ersten Node zum Netzwerk.',
       text: 'Menschen, bezahlte Arbeit und gemeinsame Orte stärken sich gegenseitig. Was Node001 misst, verbessert den nächsten Node. Jeder Standort wird einzeln finanziert.',
       steps: [
-        { title: 'Menschen verbinden', text: 'Team, Freelancer und künftige Bewohner zusammenbringen.' },
+        { title: 'Menschen verbinden', text: 'Team, digitale Nomaden und künftige Bewohner zusammenbringen.' },
         { title: 'Wert schaffen', text: 'Kundenprojekte umsetzen, KI-Agenten und die ISMS-App entwickeln.' },
         { title: 'In Abschnitten bauen', text: 'Wohneinheiten in Chargen bestellen, wenn die Whitelist wächst.' },
         { title: 'Leben und arbeiten', text: 'Eigene Wohneinheiten mit Arbeitsplatz und Gemeinschaft.' },
@@ -1106,7 +1105,7 @@ export const de = {
           { area: 'Blockchain', tool: 'Cardano', purpose: 'Nachweise und Zahlungen', proof: 'Transaktions-Hashes, öffentlich prüfbar' },
           { area: 'Marketing', tool: 'X Premium mit Grok', purpose: 'Reichweite auf X', proof: 'Profil und Reichweite' },
           { area: 'Büro', tool: 'Microsoft 365', purpose: 'E-Mail, Teams, Office, Sicherheit', proof: 'Mandant mit Nutzern' },
-          { area: 'Plattform', tool: 'x-portal.eu', purpose: 'KI-Matching, Freelancer-Profile', proof: 'Live-URL, Nutzerzahlen' },
+          { area: 'Plattform', tool: 'x-portal.eu', purpose: 'KI-Matching, Profile digitaler Nomaden', proof: 'Live-URL, Nutzerzahlen' },
         ],
       },
     },
@@ -1240,7 +1239,7 @@ export const de = {
         { title: 'Kontakt und Anfrage nach Whitepaper und Deck', lines: ['Wir speichern Name, E-Mail-Adresse, Firma und Nachricht. Wir bekommen einen Hinweis per E-Mail, Sie eine kurze Bestätigung (Art. 6 Abs. 1 lit. b DSGVO). ⟦Löschfrist festlegen⟧'] },
         { title: 'Whitelist Node001', lines: ['Wir speichern E-Mail-Adresse, freiwillig den Vornamen, Nutzung, Zeitpunkt und Sprache. Der Eintrag zählt erst nach dem Klick in der Bestätigungsmail (Double-Opt-in).', 'Den Link speichern wir nicht, nur eine Prüfsumme. Er gilt sieben Tage.', 'Grundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können sie jederzeit widerrufen, etwa per Antwort auf eine Mail.'] },
         { title: 'E-Mail-Versand', lines: ['E-Mails gehen über den Mailserver unseres E-Mail-Anbieters. ⟦Anbieter bestätigen⟧'] },
-        { title: 'KI-Auswertung', lines: ['Einige Funktionen senden Text an die API von OpenAI: die Projektbeschreibung auf der Startseite, Freelancer-Profile für das Matching und hochgeladene Lebensläufe.', 'Ohne diese Funktionen geht nichts an OpenAI. OpenAI sitzt in den USA. ⟦Grundlage der Übermittlung und Auftragsverarbeitung prüfen und nennen⟧'] },
+        { title: 'KI-Auswertung', lines: ['Einige Funktionen senden Text an die API von OpenAI: die Projektbeschreibung auf der Startseite, Profile digitaler Nomaden für das Matching und hochgeladene Lebensläufe.', 'Ohne diese Funktionen geht nichts an OpenAI. OpenAI sitzt in den USA. ⟦Grundlage der Übermittlung und Auftragsverarbeitung prüfen und nennen⟧'] },
         { title: 'Schutz vor Missbrauch', lines: ['Formulare haben ein Tageslimit je Absender. Dafür bilden wir aus der IP-Adresse mit einem geheimen Schlüssel einen Prüfwert. Die IP-Adresse selbst speichern wir dafür nicht (Art. 6 Abs. 1 lit. f DSGVO).'] },
         { title: 'Cookies und Schriften', lines: ['Cookies setzen wir nur für die Anmeldung. Analyse- und Werbe-Cookies gibt es nicht. Die Schriften liegen auf unserem Server.'] },
         { title: 'Ihre Rechte', lines: ['Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung. Dazu kommen Datenübertragbarkeit, Widerspruch und Widerruf einer Einwilligung.', 'Sie können sich bei einer Datenschutz-Aufsichtsbehörde beschweren.'] },

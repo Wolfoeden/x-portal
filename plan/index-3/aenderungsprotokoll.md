@@ -518,3 +518,48 @@ Schwerpunkt: 3 × Balance, 1 × Dominanz.
 - 80 Tests, tsc, Build, `check:copy` und `pruefe_alle.py` grün.
 - /orte auf dem Handy 10,2 Bildschirme, kein Überlauf, eine H1.
 - Index-Block am Bildschirm geprüft: Tabelle ohne Überlauf.
+
+## 17.11.2026 (später) · FAQ auf /orte geschärft, „digitale Nomaden“ statt „Freelancer“
+
+**FAQ /orte (de und en), Vorgabe der Projektleitung vom 17.11.:**
+- „Kann ich länger bleiben?“: „Wochen oder Monate“; „viele“ entfällt.
+- „Kann ich auch kaufen?“:
+  - Neue Antwort: „Nein, die Wohneinheiten werden nicht verkauft. Du kannst aber in Node001 investieren und am Erfolg teilhaben.“
+  - Darunter der Link „Interesse als Investor melden“ zur Kontaktseite.
+  - Keine Beträge.
+- „Wann kann ich einziehen?“: „Den genauen Termin erfährst du in unserer Whitelist. Baubeginn ist 2027.“
+- „Kann ich dort wirklich arbeiten?“: moderne Arbeitsplätze, schnelles Internet, sichere IT-Umgebung nach DSGVO und ISMS (ISO 27001).
+- „Was passiert bei Stromausfall oder Schnee?“:
+  - Das Stichwort ist jetzt „autarke Siedlung“.
+  - Generator, Wasservorrat, Ofen und Starlink werden nicht mehr einzeln genannt.
+  - Im Plan bleiben sie die Grundlage (D59–D63).
+- „Wie kommt man hin?“ entfällt.
+- „Was hat das mit XPORTAL zu tun?“: „Teams aus digitalen Nomaden mit KI-Know-how“.
+
+**Weitere Änderungen auf /orte, damit die Seite stimmig bleibt:**
+- Die Kennzahl heißt „Autark · Strom, Wärme, Wasser, Internet“.
+- Szene 09:30: moderne Arbeitsplätze, sichere IT-Umgebung.
+- Szene 20:00: „Die Siedlung ist autark“.
+- `seo.facts` sind angepasst.
+
+**„Freelancer“ → „digitale Nomaden“ auf der ganzen Website (de und en):**
+- Geändert sind:
+  - Menü und Fußzeile
+  - Metas
+  - Startseite
+  - Seite für digitale Nomaden
+  - Konto und Anmeldung
+  - Investoren
+  - Datenschutz
+  - JSON-LD
+  - Matching-Vorschau
+- Neue Adressen:
+  - `/digitale-nomaden` und `/en/digital-nomads`
+  - Die alten Adressen `/freelancer` und `/en/freelancers` leiten mit 308 weiter.
+- Interne Kennungen, APIs und Datenbank (`freelancer`, `ops.freelancer`) bleiben.
+- `pruefe_alle.py` meldet „Freelancer“ in Website-Texten als alten Stand.
+- Whitepaper, Deck und Index bleiben unverändert, weil der Auftrag nur die Website betrifft.
+
+**Index 3.0:** In der Limbic-Tabelle ist die Spalte „So sagt es die Website“ angepasst:
+- Effizienz: moderne Arbeitsplätze, sichere IT-Umgebung
+- Sicherheit: autarke Siedlung

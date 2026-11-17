@@ -54,8 +54,8 @@ export function MatchPreview() {
         </ul>
 
         <div className="mt-auto flex items-center justify-between">
-          <span className="text-[12px] text-faint">Kontakt erst mit Zustimmung der Freelancer</span>
-          <span className="inline-flex h-8 items-center rounded-full bg-brand px-3.5 font-medium text-white">Freelancer anfragen</span>
+          <span className="text-[12px] text-faint">Kontakt erst mit Zustimmung der Person</span>
+          <span className="inline-flex h-8 items-center rounded-full bg-brand px-3.5 font-medium text-white">Team anfragen</span>
         </div>
       </div>
     </div>

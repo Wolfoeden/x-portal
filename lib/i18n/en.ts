@@ -21,11 +21,11 @@ export const en: Dictionary = {
   meta: {
     home: {
       title: 'Your AI project in one sentence · XPORTAL',
-      description: 'Describe your AI project in one sentence. XPORTAL puts together the right team of AI freelancers and leads it through to acceptance.',
+      description: 'Describe your AI project in one sentence. XPORTAL puts together the right team of digital nomads with AI skills and leads it through to acceptance.',
     },
     freelancer: {
-      title: 'AI freelancers: projects, no commission · XPORTAL',
-      description: 'Create a profile as an AI freelancer in three minutes, free and with no commission. Matching projects come to you, and your contact details stay private.',
+      title: 'Digital nomads: AI projects, no commission · XPORTAL',
+      description: 'Create a profile as a digital nomad with AI skills in three minutes, no commission. Matching projects come to you; contact details stay private.',
     },
     investors: {
       title: 'Investors · XPORTAL and Node001 in the Carpathians',
@@ -60,7 +60,7 @@ export const en: Dictionary = {
   common: {
     onSite: 'On site',
     remote: 'Remote',
-    mix: { freelancer: ['freelancer', 'freelancers'], agent: ['AI agent', 'AI agents'], client: 'from your team' },
+    mix: { freelancer: ['digital nomad', 'digital nomads'], agent: ['AI agent', 'AI agents'], client: 'from your team' },
     quote: '“{text}”',
     percent: '{n}%',
   },
@@ -80,14 +80,14 @@ export const en: Dictionary = {
       },
     ],
     links: [
-      { label: 'For freelancers', page: 'freelancer' },
+      { label: 'For digital nomads', page: 'freelancer' },
       { label: 'Places', page: 'places' },
       { label: 'Investors', page: 'investors' },
     ],
     audienceTitle: 'Who are you?',
     audiences: [
       { label: 'Companies', page: 'home', text: 'AI project in one sentence, team through to acceptance', icon: 'company' },
-      { label: 'Freelancers', page: 'freelancer', text: 'Profile in three minutes, no commission', icon: 'freelancer' },
+      { label: 'Digital nomads', page: 'freelancer', text: 'Profile in three minutes, no commission', icon: 'freelancer' },
       { label: 'Places', page: 'places', text: 'Live and work in the Carpathians', icon: 'hubs' },
       { label: 'Investors', page: 'investors', text: 'Whitepaper and deck on request', icon: 'investors' },
     ],
@@ -111,13 +111,13 @@ export const en: Dictionary = {
   },
 
   seo: {
-    definition: 'XPORTAL builds teams of AI freelancers, leads projects to acceptance and is building Node001, a place to live and work.',
+    definition: 'XPORTAL builds teams of digital nomads with AI skills and leads projects to acceptance. With Node001 it is building a place to live and work.',
     facts: [
       'Node001 is in the Carpathians of western Ukraine, on a 2 ha site owned by XPORTAL, surrounded by nature.',
-      'Power, water, heat and internet have a backup: generator, water supply for 10 days, stove with a wood store, Starlink.',
+      'Node001 is built as a self-sufficient settlement: power, heat, water and internet run even without the public grid.',
       'The living units are not sold.',
       'Construction is targeted for 2027, only after the necessary checks. Dates are goals, not promises.',
-      'Freelancers pay nothing and no commission.',
+      'Digital nomads pay nothing and no commission.',
       'The investors page is not an offer of securities, investment products or crypto-assets and not investment advice.',
       'Buildings in the images were created with AI and do not show final plans.',
     ],
@@ -127,7 +127,7 @@ export const en: Dictionary = {
   },
 
   footer: {
-    tagline: 'XPORTAL builds teams of AI freelancers, leads projects to acceptance and is building Node001, a place to live and work.',
+    tagline: 'XPORTAL builds teams of digital nomads with AI skills and leads projects to acceptance. With Node001 it is building a place to live and work.',
     columns: [
       {
         title: 'For companies',
@@ -139,7 +139,7 @@ export const en: Dictionary = {
         ],
       },
       {
-        title: 'For freelancers',
+        title: 'For digital nomads',
         links: [
           { label: 'Create profile', page: 'freelancer', anchor: 'profile' },
           { label: 'Questions', page: 'freelancer', anchor: 'faq' },
@@ -306,7 +306,7 @@ export const en: Dictionary = {
     open: 'still open, to clarify in the call',
     onSite: 'On site in the project',
     profile: 'Profile',
-    freelancer: 'Freelancer',
+    freelancer: 'Digital nomad',
   },
 
   agents,
@@ -325,7 +325,7 @@ export const en: Dictionary = {
     wait: 'Please wait a moment and try again.',
     unavailable: 'Sign-in is not available right now.',
     failed: 'Sign-in did not work. Please try again.',
-    newHere: 'New as an AI freelancer?',
+    newHere: 'New as a digital nomad?',
     newHereLink: 'Create your profile',
     signup: {
       label: 'Save your profile',
@@ -527,7 +527,7 @@ export const en: Dictionary = {
     facts: [
       { value: '2 ha', text: 'our own site' },
       { value: '1,077 m', text: 'highest point of the site' },
-      { value: '10 days', text: 'water supply during outages' },
+      { value: 'Off-grid', text: 'power, heat, water, internet' },
       { value: '2027', text: 'target start of construction' },
     ],
     day: {
@@ -536,10 +536,10 @@ export const en: Dictionary = {
       text: 'This is how we picture a day. The community building, fire pit and sauna come in phase 1.',
       scenes: [
         { time: '07:00', title: 'Morning on the slope.', text: 'You step onto your terrace. Forest and meadow in front of you, mist lifting in the valley below.', imageAlt: 'Drone photo with a living unit added with AI: dark, large windows, a terrace on stilts at the edge of the forest' },
-        { time: '09:30', title: 'Focused work.', text: 'A quiet desk in the community building, short distances, stable internet. If the line drops, Starlink takes over.', imageAlt: 'Visualisation: timber community building with a glass front and terrace on the slope, mist over the Carpathians in the valley' },
+        { time: '09:30', title: 'Focused work.', text: 'Modern workspaces in the community building, short distances, fast internet. The IT environment is secure, GDPR and ISMS compliant.', imageAlt: 'Visualisation: timber community building with a glass front and terrace on the slope, mist over the Carpathians in the valley' },
         { time: '13:00', title: 'Eat well.', text: 'Vegetables from the raised beds, cooked in the shared kitchen. The water comes from our own drinking-water treatment.', imageAlt: '' },
         { time: '17:00', title: 'Time outside.', text: 'A walk across the slope, wood for the winter, work in the garden. Moving is part of the day here.', imageAlt: '' },
-        { time: '20:00', title: 'Sleep soundly.', text: 'Sauna or fire pit, then quiet. Power, heat and water keep running even if the grid goes down.', imageAlt: 'Visualisation of the target picture in the evening: timber living units on the slope, the community building with a lit terrace in the middle' },
+        { time: '20:00', title: 'Sleep soundly.', text: 'Sauna or fire pit, then quiet. The settlement is self-sufficient, so power, heat and water always run.', imageAlt: 'Visualisation of the target picture in the evening: timber living units on the slope, the community building with a lit terrace in the middle' },
       ],
       ctaText: 'Want to spend your days like this?',
       cta: 'Register interest',
@@ -593,13 +593,12 @@ export const en: Dictionary = {
     faq: {
       title: 'Frequently asked questions.',
       items: [
-        { question: 'Can I stay longer?', answer: 'Yes, for a few weeks or many months. People on the whitelist hear about terms and services first.' },
-        { question: 'Can I also buy?', answer: 'No. The living units are not sold.' },
-        { question: 'When can I move in?', answer: 'After completion and acceptance. Construction is targeted for 2027; we name a date only once it is certain.' },
-        { question: 'Can I really work there?', answer: 'Yes, with focus and no detours: quiet workspaces in the community building, internet from a local provider, Starlink as backup.' },
-        { question: 'What happens in a power cut or snow?', answer: 'Supply keeps running: a generator as backup, water for 10 days, a stove with a wood store and Starlink for the internet.' },
-        { question: 'How do you get there?', answer: 'Up the slope on a narrow single-track road. Up top there is one shared off-road vehicle.' },
-        { question: 'What does this have to do with XPORTAL?', answer: 'XPORTAL builds teams of AI freelancers for companies. On Node001, people live and work together, including on these projects.' },
+        { question: 'Can I stay longer?', answer: 'Yes, for a few weeks or months. People on the whitelist hear about terms and services first.' },
+        { question: 'Can I also buy?', answer: 'No, the living units are not sold. But you can invest in Node001 and share in its success. Get in touch if you are interested and we will send you the documents.', link: { label: 'Register interest as an investor', page: 'contact' } },
+        { question: 'When can I move in?', answer: 'You get the exact date on our whitelist. Construction starts in 2027.' },
+        { question: 'Can I really work there?', answer: 'Yes. Modern workspaces in the community building, fast internet and a secure IT environment, GDPR and ISMS compliant (ISO 27001).' },
+        { question: 'What happens in a power cut or snow?', answer: 'Hardly anything: Node001 is built as a self-sufficient settlement. Power, heat, water and internet keep running without the public grid.' },
+        { question: 'What does this have to do with XPORTAL?', answer: 'XPORTAL builds teams of digital nomads with AI skills for companies. On Node001, they live and work together, including on these projects.' },
         { question: 'How safe is the location?', answer: 'There is a travel warning for Ukraine. We inform openly about the situation, insurance and emergency plan before anyone moves in.' },
       ],
     },
@@ -677,7 +676,7 @@ export const en: Dictionary = {
       reading: 'Reading your sentence …',
       forming: 'Team forming',
       why: 'Why these people',
-      freelancerMobile: 'AI freelancer? Create your profile',
+      freelancerMobile: 'Digital nomad with AI skills? Create your profile',
       freelancerDesktop: 'Your profile?',
       or: 'Or:',
       note: 'Free, no account needed. Then we lead your project all the way to sign-off.',
@@ -755,7 +754,7 @@ export const en: Dictionary = {
       title: 'Where do you start?',
       doors: [
         { key: 'companies', who: 'Companies', title: 'Find a team.', text: 'One sentence is enough. The first analysis is free.', action: 'Describe your project' },
-        { key: 'freelancers', who: 'AI freelancers', title: 'A profile in three minutes.', text: 'Visible right away, no commission. On site at a node or remote.', action: 'Create profile' },
+        { key: 'freelancers', who: 'Digital nomads', title: 'A profile in three minutes.', text: 'Visible right away, no commission. On site at a node or remote.', action: 'Create profile' },
         { key: 'investors', who: 'Investors', title: 'Whitepaper and deck.', text: 'Plan, status and milestones, on request.', action: 'Request documents' },
       ],
     },
@@ -1029,7 +1028,7 @@ export const en: Dictionary = {
       hubImageAlt: 'Drone photo of the site: green slope in the Carpathians; the living units between the trees were added with AI',
       deck: 'Request whitepaper and deck',
       statusLink: 'See where we stand',
-      mapLabel: 'Map of Europe with terrain height: AI freelancers in many countries, Node001 in the Carpathians of western Ukraine, data in the EU',
+      mapLabel: 'Map of Europe with terrain height: digital nomads in many countries, Node001 in the Carpathians of western Ukraine, data in the EU',
       hubName: 'Node001 · Western Ukraine',
       hubStatus: 'Construction 2027 · target',
       dataSite: 'Data in the EU',
@@ -1043,7 +1042,7 @@ export const en: Dictionary = {
       title: 'Many show pictures. We show evidence.',
       text: [
         'Digital work can happen anywhere. Places where work, living and community fit together are rare.',
-        'XPORTAL builds teams of AI freelancers, develops its own solutions and is building Node001 as the first such place.',
+        'XPORTAL builds teams of digital nomads with AI skills and develops its own solutions. Node001 is the first such place.',
       ],
       missionLabel: 'Our mission',
       mission: 'We create and connect human-centred innovation hubs where people live, work and develop new solutions together.',
@@ -1053,7 +1052,7 @@ export const en: Dictionary = {
       title: 'From one node to a network.',
       text: 'People, paid work and shared places strengthen each other. What Node001 measures improves the next node. Each site is financed on its own.',
       steps: [
-        { title: 'Connect people', text: 'Bring together the team, freelancers and future residents.' },
+        { title: 'Connect people', text: 'Bring together the team, digital nomads and future residents.' },
         { title: 'Create value', text: 'Deliver client projects, build AI agents and the ISMS app.' },
         { title: 'Build in stages', text: 'Order living units in batches as the whitelist grows.' },
         { title: 'Live and work', text: 'Private living units with a workspace and community.' },
@@ -1085,7 +1084,7 @@ export const en: Dictionary = {
           { area: 'Blockchain', tool: 'Cardano', purpose: 'Records and payments', proof: 'Transaction hashes, publicly verifiable' },
           { area: 'Marketing', tool: 'X Premium with Grok', purpose: 'Reach on X', proof: 'Profile and reach' },
           { area: 'Office', tool: 'Microsoft 365', purpose: 'Email, Teams, Office, security', proof: 'Organisation account with users' },
-          { area: 'Platform', tool: 'x-portal.eu', purpose: 'AI matching, freelancer profiles', proof: 'Live URL, user numbers' },
+          { area: 'Platform', tool: 'x-portal.eu', purpose: 'AI matching, digital nomad profiles', proof: 'Live URL, user numbers' },
         ],
       },
     },
@@ -1219,7 +1218,7 @@ export const en: Dictionary = {
         { title: 'Contact and whitepaper and deck requests', lines: ['We store name, email address, company and message. We get a notice by email, you get a short confirmation (Art. 6(1)(b) GDPR). ⟦Set the retention period⟧'] },
         { title: 'Whitelist Node001', lines: ['We store your email address, optionally your first name, use, timing and language. The entry only counts after you click the link in the confirmation email (double opt-in).', 'We do not store the link, only a checksum. It is valid for seven days.', 'The legal basis is your consent (Art. 6(1)(a) GDPR). You can withdraw it at any time, for example by replying to an email.'] },
         { title: 'Sending email', lines: ['Emails go through the mail server of our email provider. ⟦Confirm the provider⟧'] },
-        { title: 'AI analysis', lines: ['Some features send text to the OpenAI API: the project description on the home page, freelancer profiles for matching and uploaded CVs.', 'Without these features, nothing goes to OpenAI. OpenAI is based in the USA. ⟦Check and name the legal basis for the transfer and the processing agreement⟧'] },
+        { title: 'AI analysis', lines: ['Some features send text to the OpenAI API: the project description on the home page, digital nomad profiles for matching and uploaded CVs.', 'Without these features, nothing goes to OpenAI. OpenAI is based in the USA. ⟦Check and name the legal basis for the transfer and the processing agreement⟧'] },
         { title: 'Protection against abuse', lines: ['Forms have a daily limit per sender. For this we derive a check value from the IP address with a secret key. We do not store the IP address itself for this (Art. 6(1)(f) GDPR).'] },
         { title: 'Cookies and fonts', lines: ['We only set cookies for sign-in. There are no analytics or advertising cookies. The fonts are served from our own server.'] },
         { title: 'Your rights', lines: ['You have the right to access, rectification, erasure and restriction. You also have the right to data portability, to object and to withdraw consent.', 'You can lodge a complaint with a data protection supervisory authority.'] },

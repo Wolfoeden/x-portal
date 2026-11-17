@@ -15,6 +15,13 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   // Zwei Root-Layouts (Deutsch und Englisch) brauchen eine eigene, globale 404.
   experimental: { globalNotFound: true },
+  // „Freelancer“ heißt seit 17.11.2026 „digitale Nomaden“; alte Adressen leiten dauerhaft weiter.
+  async redirects() {
+    return [
+      { source: '/freelancer', destination: '/digitale-nomaden', permanent: true },
+      { source: '/en/freelancers', destination: '/en/digital-nomads', permanent: true },
+    ]
+  },
   async headers() {
     return [
       {
