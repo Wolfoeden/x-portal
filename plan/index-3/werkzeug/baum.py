@@ -1460,7 +1460,8 @@ _all = _neu(_all).replace('<h3 id="u-alltag"><span class="pn">2</span>Alltag obe
                           '<h4 class="dt-h4" id="u-alltag">Alltag oben: für wen wir bauen (Spielregeln und Tagesabläufe)</h4>')
 _all = re.sub(r'Käuferinnen und Käufer wohnen in ihrem eigenen Haus und sind frei; sie können bei allem mitmachen, müssen aber nicht \(E63\)\. Deshalb stehen sie in keinem Tagesablauf\.',
               'Mieter wohnen in ihrer eigenen Wohneinheit und sind frei; sie können bei allem mitmachen, müssen aber nicht. Deshalb stehen sie in keinem Tagesablauf.', _all)
-body = body.replace('<h4 class="dt-h4" id="b-zielblatt-tab">', '<h4 class="dt-h4" id="u-zielbild">Zielbild: was wir bauen, und was jeder Bereich den Menschen bieten muss</h4>' + _zb + _zbm + '<h4 class="dt-h4" id="b-zielblatt-tab">', 1)
+import limbic as _lm  # Limbic Map für Node001 beim Maslow-Teil (Sternbild der Projektleitung vom 17.11.2026)
+body = body.replace('<h4 class="dt-h4" id="b-zielblatt-tab">', '<h4 class="dt-h4" id="u-zielbild">Zielbild: was wir bauen, und was jeder Bereich den Menschen bieten muss</h4>' + _zb + _zbm + _lm.html() + '<h4 class="dt-h4" id="b-zielblatt-tab">', 1)
 body = body.replace('<div class="dt-ber" role="group"', _all + '<div class="dt-ber" role="group"', 1)
 _i = body.index('<details class="dt-hist" id="index-2-historie">'); _j = body.rindex('</details></main>')
 body = body[:_i] + body[_j + len('</details>'):]

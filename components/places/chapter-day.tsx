@@ -9,14 +9,14 @@ import { IDS, type Locale } from '@/lib/i18n/routes'
 
 /**
  * „Ein Tag auf Node001“ (17.11.2026): das StoryBrand-Erfolgsbild als Tagesablauf, statt der Angebotskarten.
- * Jede Szene spricht gezielt Felder der Limbic Map an (Sternbild „Ein Tag auf Node001“ im Planungs-Artefakt):
- *   07:00 Nebel im Tal         Natur, Genuss, Geborgenheit       (Balance, Fantasie & Genuss)
- *   09:30 Konzentriert arbeiten Leistung, Autonomie, Freiheit    (Dominanz, Abenteuer & Thrill)
- *   13:00 Zusammen kochen       Geselligkeit, Freundschaft       (Balance)
- *   17:00 Mit anpacken          Neugier, Abwechslung, Kreativität (Stimulanz)
- *   20:00 Feuer und Sterne      Genuss, Abenteuer, Heimat         (Stimulanz, Balance)
- * Fakten nur nach Plan: Kommunalgebäude (D64), Feuerstelle (D34), Sauna (D35) in Phase 1; Internet mit Starlink als Reserve (D63);
- * Bergkapelle als Gruppenprojekt (D34), Holz für den Winter (D60).
+ * Wording nach dem Limbic-Sternbild „X-Portal Node001“ (Projektleitung, 17.11.2026; Index 3.0, Limbic Map beim Maslow-Teil):
+ *   07:00 Morgen am Hang         Natur                    (Balance · Fantasie & Genuss)
+ *   09:30 Konzentriert arbeiten  Effizienz                (Dominanz · Disziplin & Kontrolle)
+ *   13:00 Gesund essen           Gesundheit               (Balance · Disziplin & Kontrolle)
+ *   17:00 Draußen sein           Gesundheit, Natur        (Balance)
+ *   20:00 Ruhig schlafen         Sicherheit               (Balance · Disziplin & Kontrolle)
+ * Fakten nur nach Plan: Kommunalgebäude (D64), Feuerstelle (D34), Sauna (D35), Gemüsegarten (M02-23) in Phase 1; Internet mit Starlink als Reserve (D63);
+ * Trinkwasseraufbereitung (D61), Holz für den Winter (D60), Generator als Reserve (D59).
  */
 const SCENE_IMAGES: (ImageKey | null)[] = ['unit', 'slope', null, null, 'target']
 const POSITION: Record<string, string> = { unit: 'object-center', slope: 'object-[78%_50%]', target: 'object-[48%_45%]' }

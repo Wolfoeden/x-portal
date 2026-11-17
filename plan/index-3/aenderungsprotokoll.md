@@ -469,3 +469,52 @@ Gekennzeichnet als Vorstellung; Kommunalgebäude, Feuerstelle und Sauna entstehe
 - 80 Tests, Build, `check:copy` und `pruefe_alle.py` grün.
 - Alle Seiten, JSON-LD und /llms.txt ohne Treffer zu Miete.
 - /orte auf dem Handy 10,1 Bildschirme.
+
+## 17.11.2026 (später) · Wording nach dem Sternbild „X-Portal Node001“, Limbic Map im Index
+
+**Sternbild der Projektleitung vom 17.11.2026** (Tool „Limbic Sternbild“):
+1. Gesundheit (Balance · Disziplin & Kontrolle)
+2. Sicherheit (Balance · Disziplin & Kontrolle)
+3. Effizienz (Dominanz · Disziplin & Kontrolle)
+4. Natur (Balance · Fantasie & Genuss)
+
+Schwerpunkt: 3 × Balance, 1 × Dominanz.
+
+**Regel für die Kommunikation zu Node001:**
+- Jeder Abschnitt über Node001 greift mindestens einen der vier Begriffe auf.
+- Stimulanz-Wörter treten zurück: Abenteuer, Ausflug, Neugier, Kreativität.
+- Gesundheit nur über belegte Dinge: Trinkwasseraufbereitung (D61), Sanitär ab Phase 0 (D62), Gemüsegarten (M02-23), Bewegung draußen. Keine Heilversprechen.
+
+**Website (de und en):**
+- /orte: Hero „Gesund leben, konzentriert arbeiten.“; Titel „Gesund leben und arbeiten in den Karpaten“; neue Beschreibung.
+- /orte, „Der Ort“: „Gesund leben, sicher versorgt sein und konzentriert arbeiten, an einem Ort mitten in der Natur, ist selten.“
+- /orte, neue Kennzahl: „10 Tage · Wasservorrat bei Störung“ (D61).
+- „Ein Tag in der Natur.“ mit fünf Szenen. Diese ersetzen die Szenen aus der vorigen Runde:
+
+  | Zeit | Szene | Begriff | Beleg |
+  |---|---|---|---|
+  | 07:00 | Morgen am Hang | Natur | Lage am Hang |
+  | 09:30 | Konzentriert arbeiten | Effizienz | Starlink als Reserve, D63 |
+  | 13:00 | Gesund essen | Gesundheit | Hochbeete M02-23, Trinkwasser D61 |
+  | 17:00 | Draußen sein | Gesundheit, Natur | – |
+  | 20:00 | Ruhig schlafen | Sicherheit | Strom, Wärme und Wasser bei Netzausfall: D59–D61 |
+
+- FAQ, neue Frage: „Was passiert bei Stromausfall oder Schnee?“ (D59–D63). Die Antwort zum Arbeiten ist auf Effizienz geschärft.
+- Node001 an anderen Stellen, je ein Satz mit Natur, sicherer Versorgung und Effizienz:
+  - Startseite (Nodes)
+  - Investoren (Vorschau und Kapitel Node001)
+  - `seo.facts` für /llms.txt
+
+**Index 3.0:**
+- Neuer Block „Limbic Map für Node001“ direkt nach „Was jeder Bereich den Menschen bieten muss“ (Maslow- und Sinneskonzept) im Zielbild.
+- Erzeugt von `werkzeug/limbic.py`:
+  - Karte mit allen Wörtern an ihren Stellen und den vier Sternen in der gewählten Reihenfolge.
+  - Tabelle Begriff → Pol und Feld → Maslow-Bezug (Vorschlag KI) → Anforderungen und Entscheidungen im Plan → So sagt es die Website.
+  - Link zum Tool.
+- Pol und Feld sind wie im Tool berechnet.
+- Quelle der Karte: Limbic Map® von H.-G. Häusel, © Gruppe Nymphenburg Consult AG.
+
+**Prüfung:**
+- 80 Tests, tsc, Build, `check:copy` und `pruefe_alle.py` grün.
+- /orte auf dem Handy 10,2 Bildschirme, kein Überlauf, eine H1.
+- Index-Block am Bildschirm geprüft: Tabelle ohne Überlauf.

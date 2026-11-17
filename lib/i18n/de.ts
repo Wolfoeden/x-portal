@@ -36,8 +36,8 @@ export const de = {
       description: 'XPORTAL verbindet KI-Projekte mit Orten zum Leben und Arbeiten. Stand, Erlöse, Roadmap und Node001 in den Karpaten. Whitepaper und Deck auf Anfrage.',
     },
     places: {
-      title: 'Wohnen und arbeiten in den Karpaten · XPORTAL',
-      description: 'Eigene Wohneinheit, Arbeitsplatz und Gemeinschaft auf Node001 in den Karpaten der Westukraine. Für eine Workation oder länger. Jetzt vormerken.',
+      title: 'Gesund leben und arbeiten in den Karpaten · XPORTAL',
+      description: 'Gesund leben und konzentriert arbeiten, mitten in der Natur der Karpaten: eigene Wohneinheit, sichere Versorgung, Node001. Jetzt vormerken.',
     },
     contact: {
       title: 'Kontakt: KI-Automatisierung, Schulung, ISMS · XPORTAL',
@@ -119,7 +119,8 @@ export const de = {
   seo: {
     definition: 'XPORTAL bildet Teams aus KI-Freelancern, führt Projekte bis zur Abnahme und baut mit Node001 einen Ort zum Leben und Arbeiten.',
     facts: [
-      'Node001 liegt in den Karpaten der Westukraine, auf einem eigenen Grundstück mit 2 ha.',
+      'Node001 liegt in den Karpaten der Westukraine, auf einem eigenen Grundstück mit 2 ha, mitten in der Natur.',
+      'Strom, Wasser, Wärme und Internet haben eine Reserve: Generator, Wasservorrat für 10 Tage, Ofen mit Holzlager, Starlink.',
       'Die Wohneinheiten werden nicht verkauft.',
       'Baubeginn ist für 2027 geplant, erst nach den nötigen Prüfungen. Termine sind Ziele, keine Zusagen.',
       'Freelancer zahlen nichts und keine Provision.',
@@ -505,7 +506,9 @@ export const de = {
   },
 
   // Kontaktseite: Leistungen aus dem Menü und allgemeine Anfragen.
-  // Orte nach StoryBrand (17.11.2026): Held ist, wer remote arbeitet und Ruhe, gutes Internet und gute Leute sucht.
+  // Orte nach StoryBrand (17.11.2026): Held ist, wer remote arbeitet und gesund, sicher versorgt und konzentriert in der Natur leben will.
+  // Wording nach dem Limbic-Sternbild „X-Portal Node001“ (Projektleitung, 17.11.2026): Gesundheit, Sicherheit, Effizienz, Natur;
+  // Schwerpunkt Balance. Stimulanz-Wörter (Abenteuer, Neugier, Ausflug) treten zurück. Siehe Index 3.0, Limbic Map beim Maslow-Teil.
   // Plan: eintragen → Infos zu Konditionen → einziehen, sobald eine Wohneinheit frei ist. Du-Form wie bisher. Kein Verkauf (D45, D48).
   // Seit 17.11.2026 steht auf der Website nichts von Miete (Vorgabe Roman); Konditionen nennen wir in der Whitelist.
   places: {
@@ -514,7 +517,7 @@ export const de = {
       label: 'Node001',
       region: 'Karpaten, Westukraine',
       eyebrow: 'Node001 · Karpaten, Westukraine',
-      title: 'Wohnen und arbeiten in den Karpaten.',
+      title: 'Gesund leben, konzentriert arbeiten.',
       pill: 'Whitelist · Workation oder länger bleiben',
       emailLabel: 'E-Mail-Adresse',
       emailPlaceholder: 'Deine E-Mail-Adresse',
@@ -533,25 +536,25 @@ export const de = {
       titleGray: 'Ein Ort.',
       title: 'Für Dich.',
       imageAlt: 'Drohnenfoto des Hangs mit KI eingesetztem Kommunalgebäude: dunkle Fassade, große Fenster, überdachte Terrasse, dahinter Fichten und das Tal',
-      text: 'Remote arbeiten geht überall. Ruhe, gutes Internet und gute Leute an einem Ort sind selten. Genau das planen wir auf Node001: eigene Wohneinheiten, Arbeitsplätze und Gemeinschaft.',
+      text: 'Remote arbeiten geht überall. Gesund leben, sicher versorgt sein und konzentriert arbeiten, an einem Ort mitten in der Natur, ist selten. Genau das planen wir auf Node001.',
     },
     facts: [
       { value: '2 ha', text: 'eigenes Grundstück' },
       { value: '1.077 m', text: 'höchster Punkt des Grundstücks' },
-      { value: 'Phase 0', text: 'erste Wohneinheit für das Team' },
+      { value: '10 Tage', text: 'Wasservorrat bei Störung' },
       { value: '2027', text: 'Baubeginn als Ziel' },
     ],
     // StoryBrand-Erfolgsbild als Tagesablauf; Limbic Map je Szene im Kommentar der Komponente (components/places/chapter-day.tsx).
     day: {
       label: 'Ein Tag auf Node001',
-      title: 'Ein Tag in den Karpaten.',
+      title: 'Ein Tag in der Natur.',
       text: 'So stellen wir uns einen Tag vor. Kommunalgebäude, Feuerstelle und Sauna entstehen in Phase 1.',
       scenes: [
-        { time: '07:00', title: 'Nebel im Tal.', text: 'Der erste Kaffee auf deiner Terrasse. Unter dir zieht der Nebel durchs Tal, um dich nur Wald und Wiese.', imageAlt: 'Drohnenfoto mit KI eingesetzter Wohneinheit: dunkel, große Fenster, Terrasse auf Stützen am Waldrand' },
-        { time: '09:30', title: 'Konzentriert arbeiten.', text: 'Dein Platz im Kommunalgebäude ist ruhig, das Internet stabil. Fällt der Anschluss aus, springt Starlink ein.', imageAlt: 'Schaubild: Kommunalgebäude aus Holz mit Glasfront und Terrasse am Hang, im Tal Nebel über den Karpaten' },
-        { time: '13:00', title: 'Zusammen kochen.', text: 'Wer mag, trifft sich mittags in der gemeinsamen Küche. Es geht um Projekte, Pläne und den nächsten Ausflug.', imageAlt: '' },
-        { time: '17:00', title: 'Mit anpacken.', text: 'Hochbeete, Holz für den Winter, die Bergkapelle: Wer mitbaut, gestaltet den Ort mit.', imageAlt: '' },
-        { time: '20:00', title: 'Feuer und Sterne.', text: 'Am Abend Feuerstelle oder Sauna. Danach Stille und Sterne über den Karpaten.', imageAlt: 'Schaubild des Zielbilds am Abend: Wohneinheiten aus Holz am Hang, in der Mitte das Kommunalgebäude mit beleuchteter Terrasse' },
+        { time: '07:00', title: 'Morgen am Hang.', text: 'Du trittst auf deine Terrasse. Vor dir Wald und Wiese, unten im Tal zieht der Nebel ab.', imageAlt: 'Drohnenfoto mit KI eingesetzter Wohneinheit: dunkel, große Fenster, Terrasse auf Stützen am Waldrand' },
+        { time: '09:30', title: 'Konzentriert arbeiten.', text: 'Ein ruhiger Platz im Kommunalgebäude, kurze Wege, stabiles Internet. Fällt der Anschluss aus, springt Starlink ein.', imageAlt: 'Schaubild: Kommunalgebäude aus Holz mit Glasfront und Terrasse am Hang, im Tal Nebel über den Karpaten' },
+        { time: '13:00', title: 'Gesund essen.', text: 'Gemüse aus den Hochbeeten, gekocht in der gemeinsamen Küche. Das Wasser kommt aus der eigenen Trinkwasseraufbereitung.', imageAlt: '' },
+        { time: '17:00', title: 'Draußen sein.', text: 'Ein Gang über den Hang, Holz für den Winter, Arbeit im Garten. Bewegung gehört hier zum Tag.', imageAlt: '' },
+        { time: '20:00', title: 'Ruhig schlafen.', text: 'Sauna oder Feuerstelle, dann Ruhe. Strom, Wärme und Wasser laufen weiter, auch wenn das Netz ausfällt.', imageAlt: 'Schaubild des Zielbilds am Abend: Wohneinheiten aus Holz am Hang, in der Mitte das Kommunalgebäude mit beleuchteter Terrasse' },
       ],
       ctaText: 'So möchtest du deine Tage verbringen?',
       cta: 'Interesse vormerken',
@@ -608,7 +611,8 @@ export const de = {
         { question: 'Kann ich länger bleiben?', answer: 'Ja, für einige Wochen oder viele Monate. Konditionen und Leistungen erfährst du in der Whitelist zuerst.' },
         { question: 'Kann ich auch kaufen?', answer: 'Nein. Die Wohneinheiten werden nicht verkauft.' },
         { question: 'Wann kann ich einziehen?', answer: 'Nach Fertigstellung und Abnahme. Baubeginn ist 2027 geplant; einen Termin nennen wir erst, wenn er feststeht.' },
-        { question: 'Kann ich dort wirklich arbeiten?', answer: 'Ja. Es gibt Arbeitsplätze im Kommunalgebäude, Internet von einem lokalen Anbieter und Starlink als Reserve.' },
+        { question: 'Kann ich dort wirklich arbeiten?', answer: 'Ja, konzentriert und ohne Umwege: ruhige Arbeitsplätze im Kommunalgebäude, Internet vom lokalen Anbieter, Starlink als Reserve.' },
+        { question: 'Was passiert bei Stromausfall oder Schnee?', answer: 'Die Versorgung läuft weiter: Generator als Reserve, Wasservorrat für 10 Tage, Ofen mit Holzlager und Starlink fürs Internet.' },
         { question: 'Wie kommt man hin?', answer: 'Über eine schmale, einspurige Zufahrt den Hang hinauf. Oben gibt es ein gemeinsames Geländefahrzeug.' },
         { question: 'Was hat das mit XPORTAL zu tun?', answer: 'XPORTAL bildet Teams aus KI-Freelancern für Unternehmen. Auf Node001 wohnen und arbeiten Menschen gemeinsam, auch an diesen Projekten.' },
         { question: 'Wie sicher ist der Standort?', answer: 'Für die Ukraine gilt eine Reisewarnung. Über Lage, Versicherung und Notfallplan informieren wir offen, bevor jemand einzieht.' },
@@ -756,7 +760,7 @@ export const de = {
       andThen: 'Und dann …',
       label: 'Nodes',
       title: 'Und dann bauen wir Orte.',
-      text: 'Orte zum Leben und Arbeiten, mit eigenen Wohneinheiten. Der erste in den Karpaten der Westukraine ist geplant.',
+      text: 'Orte, an denen man gesund lebt, sicher versorgt ist und konzentriert arbeitet. Der erste in den Karpaten ist geplant.',
       count: 'Node001 · der erste Standort; weitere erst nach den Nachweisen',
       investors: 'Für Investoren',
       disclaimer: 'Schematische Darstellung. Künftige Meilensteine sind Ziele, keine Zusagen.',
@@ -1039,7 +1043,7 @@ export const de = {
       text: 'XPORTAL verbindet KI-Projekte mit Orten zum Leben und Arbeiten. Der erste entsteht in den Karpaten der Westukraine.',
       textAfterLogo: 'verbindet KI-Projekte mit Orten zum Leben und Arbeiten. Der erste entsteht in den Karpaten der Westukraine.',
       hubShow: 'Node001 · Karpaten: Vorschau zeigen',
-      hubPreviewTitle: 'Eigene Wohneinheit, Arbeit, Gemeinschaft.',
+      hubPreviewTitle: 'Gesund leben und arbeiten, in der Natur.',
       hubPreviewText: 'Karpaten, Westukraine · kein Verkauf',
       hubPreviewAction: 'Orte',
       hubPreviewLabel: 'Node001 ansehen: zur Seite Orte',
@@ -1109,7 +1113,7 @@ export const de = {
     node: {
       label: 'Node001',
       title: 'Der erste Ort.',
-      text: 'In den Karpaten der Westukraine, bis 1.077 m hoch. Eigene Wohneinheiten mit Arbeitsplatz und Gemeinschaft.',
+      text: 'In den Karpaten der Westukraine, bis 1.077 m hoch, mitten in der Natur. Eigene Wohneinheiten mit Arbeitsplatz und einer Versorgung, die auch bei Störungen läuft.',
       link: 'Node001 ansehen',
       phasesLabel: 'In drei Phasen',
       phases: [
