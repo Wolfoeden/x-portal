@@ -1,53 +1,14 @@
 {
- "stand": "13.11.2026",
+ "stand": "17.11.2026",
  "kurs": 50.3379,
  "richtwert_eur": 10000,
  "reserve": 0.15,
  "stundensatz_uah": 179,
  "paket": [
   {
-   "id": "A001",
-   "titel": "Fachprüfung des Geologieberichts",
-   "stufe": "A · Nachweise auf Papier",
-   "variante": "K",
-   "quelle": "Register: 3.000 UAH „Beratung ab“; hoch = Annahme KI",
-   "niedrig": 3000,
-   "hoch": 15000,
-   "stunden": 4,
-   "risiko": "Boden: Die KI-Zusammenfassung ist nicht geprüft. Ohne Freigabe ist jede Gründung und jeder Preis angreifbar.",
-   "hinweis": "",
-   "im_register": false
-  },
-  {
-   "id": "A002",
-   "titel": "Zusatzerkundung (3 Bohrungen à 8 m)",
-   "stufe": "A · Nachweise auf Papier",
-   "variante": "K",
-   "quelle": "Register",
-   "niedrig": 24000,
-   "hoch": 24000,
-   "stunden": 4,
-   "risiko": "Boden: Gründungshorizont für Objekt und Stützbauwerk.",
-   "hinweis": "Preis für anderen Standort; Hang ungeklärt.",
-   "im_register": true
-  },
-  {
-   "id": "A003",
-   "titel": "Vermessung mit Geländemodell",
-   "stufe": "A · Nachweise auf Papier",
-   "variante": "K",
-   "quelle": "Register: 2.500 UAH für kleine Fläche in Kyjiw; hoch = Annahme KI für 2 ha am Hang",
-   "niedrig": 2500,
-   "hoch": 25000,
-   "stunden": 4,
-   "risiko": "Planung: Grundlage für 3D-Modell, Leitungen und Kosten.",
-   "hinweis": "Der Registerwert ist auffällig niedrig.",
-   "im_register": true
-  },
-  {
    "id": "A048",
    "titel": "Wasseranalyse im Labor",
-   "stufe": "A · Nachweise auf Papier",
+   "stufe": "A · Klären, was ein Investor sonst einpreist",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 3500,
@@ -60,7 +21,7 @@
   {
    "id": "A010",
    "titel": "Objekt-Skizze und Bau-KI-Planung",
-   "stufe": "A · Nachweise auf Papier",
+   "stufe": "A · Klären, was ein Investor sonst einpreist",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 5000,
@@ -73,7 +34,7 @@
   {
    "id": "A029",
    "titel": "Heizlastberechnung",
-   "stufe": "A · Nachweise auf Papier",
+   "stufe": "A · Klären, was ein Investor sonst einpreist",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 810,
@@ -86,7 +47,7 @@
   {
    "id": "A057",
    "titel": "Abwasserplanung",
-   "stufe": "A · Nachweise auf Papier",
+   "stufe": "A · Klären, was ein Investor sonst einpreist",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 5000,
@@ -99,7 +60,7 @@
   {
    "id": "X01",
    "titel": "Rechtsprüfung: ukrainische Gesellschaft, Miete, Holding",
-   "stufe": "A · Nachweise auf Papier",
+   "stufe": "A · Klären, was ein Investor sonst einpreist",
    "variante": "K",
    "quelle": "Annahme KI, Angebot nötig",
    "niedrig": 50000,
@@ -112,7 +73,7 @@
   {
    "id": "X02",
    "titel": "Drei schriftliche Angebote je großem Posten",
-   "stufe": "A · Nachweise auf Papier",
+   "stufe": "A · Klären, was ein Investor sonst einpreist",
    "variante": "K",
    "quelle": "kostet nur Zeit",
    "niedrig": 0,
@@ -125,7 +86,7 @@
   {
    "id": "A018",
    "titel": "Netzanschluss beantragen",
-   "stufe": "A · Nachweise auf Papier",
+   "stufe": "A · Klären, was ein Investor sonst einpreist",
    "variante": "O",
    "quelle": "Früherer Richtwert 2.927 UAH je kW, 10–15 kW; im Register offen",
    "niedrig": 29270,
@@ -138,7 +99,7 @@
   {
    "id": "A036",
    "titel": "Motorsäge",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 9999,
@@ -151,7 +112,7 @@
   {
    "id": "A037",
    "titel": "Schutzausrüstung für die Säge",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 11615.76,
@@ -164,7 +125,7 @@
   {
    "id": "A038",
    "titel": "Motorsägenkurs",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 5000,
@@ -177,7 +138,7 @@
   {
    "id": "A040",
    "titel": "Spaltaxt",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 2989,
@@ -190,7 +151,7 @@
   {
    "id": "A041",
    "titel": "Spaltkeile",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 2356,
@@ -203,7 +164,7 @@
   {
    "id": "A044",
    "titel": "Bügelsäge",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 294,
@@ -216,7 +177,7 @@
   {
    "id": "A045",
    "titel": "Holzfeuchtemesser",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 3720,
@@ -229,7 +190,7 @@
   {
    "id": "A046",
    "titel": "Schubkarre",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 3709,
@@ -242,7 +203,7 @@
   {
    "id": "A093",
    "titel": "Werkzeugset mit Akkuschrauber",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 2499,
@@ -255,7 +216,7 @@
   {
    "id": "A096",
    "titel": "Stirnlampen",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 2292,
@@ -268,7 +229,7 @@
   {
    "id": "A104",
    "titel": "Erste-Hilfe-Ausrüstung",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 1140,
@@ -281,7 +242,7 @@
   {
    "id": "A105",
    "titel": "Erste-Hilfe-Kurs",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 3000,
@@ -294,7 +255,7 @@
   {
    "id": "A102",
    "titel": "Feuerlöscher",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register",
    "niedrig": 969,
@@ -307,7 +268,7 @@
   {
    "id": "A007",
    "titel": "Baufläche und Trasse roden, Holz aufarbeiten",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Eigenleistung; hoch = Register (Fällfirma für schwierige Bäume)",
    "niedrig": 0,
@@ -320,7 +281,7 @@
   {
    "id": "A035",
    "titel": "Holzlager bauen",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "Register (fertiger Holzständer); Eigenbau aus eigenem Holz kann günstiger sein",
    "niedrig": 19000,
@@ -333,7 +294,7 @@
   {
    "id": "X03",
    "titel": "Absteckung und Messreihen (Quellschüttung, Wetter, Schnee)",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "K",
    "quelle": "kostet nur Zeit",
    "niedrig": 0,
@@ -346,7 +307,7 @@
   {
    "id": "A004",
    "titel": "Hangseitiger Entwässerungsgraben, 20 m",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "O",
    "quelle": "Register",
    "niedrig": 30000,
@@ -359,7 +320,7 @@
   {
    "id": "A049",
    "titel": "Brunnen bohren, 20–40 m",
-   "stufe": "B · Eigenanteil am Grundstück",
+   "stufe": "B · Vorbereiten mit Eigenleistung",
    "variante": "E",
    "quelle": "Register",
    "niedrig": 36000,
@@ -371,21 +332,21 @@
   },
   {
    "id": "X04",
-   "titel": "Mieter-Interessenten sammeln",
-   "stufe": "C · Nachfrage und Umsatz",
+   "titel": "Whitelist der künftigen Mieter einrichten und führen",
+   "stufe": "C · Whitelist, Umsatz, Unterlagen",
    "variante": "K",
    "quelle": "kostet nur Zeit",
    "niedrig": 0,
    "hoch": 0,
    "stunden": 60,
-   "risiko": "Nachfrage: belegt, dass jemand oben wohnen und zahlen will (D50).",
-   "hinweis": "",
+   "risiko": "Nachfrage: belegt, dass jemand oben wohnen und Miete zahlen will (D50; Index AP-A8).",
+   "hinweis": "Noch nicht eingerichtet.",
    "im_register": false
   },
   {
    "id": "X05",
    "titel": "Erster bezahlter Kundenauftrag der Agentur",
-   "stufe": "C · Nachfrage und Umsatz",
+   "stufe": "C · Whitelist, Umsatz, Unterlagen",
    "variante": "K",
    "quelle": "bringt Umsatz",
    "niedrig": 0,
@@ -398,7 +359,7 @@
   {
    "id": "X06",
    "titel": "Selbstkostenrechnung je Objekt",
-   "stufe": "C · Nachfrage und Umsatz",
+   "stufe": "C · Whitelist, Umsatz, Unterlagen",
    "variante": "K",
    "quelle": "kostet nur Zeit",
    "niedrig": 0,
@@ -411,7 +372,7 @@
   {
    "id": "X07",
    "titel": "Investorenunterlagen mit geprüften Zahlen",
-   "stufe": "C · Nachfrage und Umsatz",
+   "stufe": "C · Whitelist, Umsatz, Unterlagen",
    "variante": "K",
    "quelle": "kostet nur Zeit",
    "niedrig": 0,
@@ -424,22 +385,22 @@
  ],
  "varianten": {
   "Kern": {
-   "niedrig": 162392.76,
-   "hoch": 310685.76,
-   "hoch_mit_reserve": 357288.624,
-   "stunden": 397
+   "niedrig": 132892.76,
+   "hoch": 246685.76,
+   "hoch_mit_reserve": 283688.624,
+   "stunden": 385
   },
   "Optimum": {
-   "niedrig": 221662.76,
-   "hoch": 414590.76,
-   "hoch_mit_reserve": 476779.37399999995,
-   "stunden": 443
+   "niedrig": 192162.76,
+   "hoch": 350590.76,
+   "hoch_mit_reserve": 403179.37399999995,
+   "stunden": 431
   },
   "Erweitert": {
-   "niedrig": 257662.76,
-   "hoch": 494590.76,
-   "hoch_mit_reserve": 568779.374,
-   "stunden": 451
+   "niedrig": 228162.76,
+   "hoch": 430590.76,
+   "hoch_mit_reserve": 495179.37399999995,
+   "stunden": 439
   }
  },
  "register": {
@@ -466,11 +427,6 @@
   ]
  },
  "matrix": {
-  "2|Vor-Phase": [
-   73800,
-   109693,
-   10
-  ],
   "1|Phase 0": [
    832727.8,
    910646.18,
@@ -496,6 +452,11 @@
    222421,
    8
   ],
+  "2|Vor-Phase": [
+   47300,
+   83193,
+   8
+  ],
   "1|Betrieb 12 Monate": [
    121600,
    149000,
@@ -516,9 +477,7 @@
    "niedrig": 24000,
    "hoch": 24000,
    "annahme": "Paket",
-   "quelle": "3 Bohrungen à 8 m für übliche Gebäude; anderer Standort, Hangumfang ungeklärt. | https://www.geospektr-7.com.ua/cziny/",
-   "maslow": 2,
-   "phase_neu": "Vor-Phase"
+   "quelle": "3 Bohrungen à 8 m für übliche Gebäude; anderer Standort, Hangumfang ungeklärt. | https://www.geospektr-7.com.ua/cziny/"
   },
   {
    "id": "A003",
@@ -528,9 +487,7 @@
    "niedrig": 2500,
    "hoch": 2500,
    "annahme": "kleine Teilfläche",
-   "quelle": "Topographie ohne Abstimmung im Raum Kyjiw; nur kleinflächiger Vergleich, kein Angebot für 2 ha. | https://aquatoria.kiev.ua/heodezychni-roboty/topohrafichna-ziomka-dilianky",
-   "maslow": 2,
-   "phase_neu": "Vor-Phase"
+   "quelle": "Topographie ohne Abstimmung im Raum Kyjiw; nur kleinflächiger Vergleich, kein Angebot für 2 ha. | https://aquatoria.kiev.ua/heodezychni-roboty/topohrafichna-ziomka-dilianky"
   },
   {
    "id": "A009",

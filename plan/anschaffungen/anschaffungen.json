@@ -1,15 +1,15 @@
 {
- "stand": "13.11.2026",
+ "stand": "17.11.2026",
  "positionen": [
   {
    "nr": "A001",
    "bereich": "Grundstück und Gründung",
-   "gegenstand": "Fachprüfung des Geologieberichts",
+   "gegenstand": "Liegt vor: Fachprüfung des Geologieberichts",
    "phase": "0",
    "art": "Dienstleistung",
-   "wofuer": "Die KI-Zusammenfassung ist nicht geprüft; vor jeder Planung braucht es Abgleich mit dem Original und Freigabe.",
-   "recherche": "Geotechniker oder Prüfingenieur in der Region; Umfang, Dauer, Honorar",
-   "menge": "einmal",
+   "wofuer": "Liegt vor (Kommentar vom 15.11.2026); nichts anzuschaffen.",
+   "recherche": "Kopie in den Plan legen (Index 3.0, AP-A1)",
+   "menge": "–",
    "entscheidungen": [
     "D54",
     "D55",
@@ -17,17 +17,17 @@
    ],
    "entscheidet": "Geschäftsführung nach Vorschlag Fachexperte Geotechnik",
    "nimmt_ab": "Fachexperte Geotechnik",
-   "hinweis": ""
+   "hinweis": "vorhanden"
   },
   {
    "nr": "A002",
    "bereich": "Grundstück und Gründung",
-   "gegenstand": "Zusatzerkundung für Zufahrt, Stützkonstruktion und Hauptgebäude",
+   "gegenstand": "Liegt vor: Zusatzerkundung für Zufahrt, Stützkonstruktion und Hauptgebäude",
    "phase": "0",
    "art": "Dienstleistung",
-   "wofuer": "Der Bericht verlangt weitere Untersuchungen, wenn bis zur Schicht IGE-4 gegründet wird oder sich Gebäude ändern.",
-   "recherche": "Bohrfirma, Zahl und Tiefe der Bohrungen",
-   "menge": "Zahl der Gebäude und Stützbauwerke",
+   "wofuer": "Liegt vor (Kommentar vom 15.11.2026); nichts anzuschaffen.",
+   "recherche": "Kopie in den Plan legen und für Phase 1 auswerten (Index 3.0, AP-A1)",
+   "menge": "–",
    "entscheidungen": [
     "D54",
     "D55",
@@ -35,17 +35,17 @@
    ],
    "entscheidet": "Geschäftsführung nach Vorschlag Fachexperte Geotechnik",
    "nimmt_ab": "Fachexperte Geotechnik",
-   "hinweis": ""
+   "hinweis": "vorhanden"
   },
   {
    "nr": "A003",
    "bereich": "Grundstück und Gründung",
-   "gegenstand": "Vermessung und Absteckung",
+   "gegenstand": "Liegt vor: Vermessung",
    "phase": "0",
    "art": "Dienstleistung",
-   "wofuer": "Lage von Objekt Phase 0, Leitungen und Wegen festlegen.",
-   "recherche": "Vermesser vor Ort; digitales Geländemodell für die 3D-Planung",
-   "menge": "einmal, später je Bauabschnitt",
+   "wofuer": "Liegt vor (Kommentar vom 15.11.2026); Absteckung von Objekt Phase 0, Leitungen und Wegen folgt mit der Bauplanung.",
+   "recherche": "Kopie in den Plan legen (Index 3.0, AP-A1); Absteckung als Eigenleistung",
+   "menge": "je Bauabschnitt",
    "entscheidungen": [
     "D54",
     "D55",
@@ -53,7 +53,7 @@
    ],
    "entscheidet": "Geschäftsführung nach Vorschlag Fachexperte Geotechnik",
    "nimmt_ab": "Fachexperte Geotechnik",
-   "hinweis": ""
+   "hinweis": "vorhanden"
   },
   {
    "nr": "A004",

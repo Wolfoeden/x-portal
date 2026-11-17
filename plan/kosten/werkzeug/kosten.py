@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Vor dem Investment: was mit rund 10.000 € Eigenkapital geht.
+"""Vor dem Investment: was mit Eigenkapital und Eigenleistung geht (so viel wie möglich, Antwort 17.11.2026).
 
 Liest das Kostenregister (quellen/Kosten_Gesamtregister_2026-11-13.xlsx, erstellt von der Projektleitung mit GPT; Teilschätzung,
 keine Angebote) und ordnet jede gerechnete Zeile nach Phase, Maslow-Stufe und Geldquelle ein.
@@ -13,7 +13,7 @@ import csv, html, io, json, re, sys
 from pathlib import Path
 import openpyxl
 
-STAND = '13.11.2026'
+STAND = '17.11.2026'
 KURS = 50.3379  # UAH je EUR, NBU 13.11.2026 laut Register
 RICHTWERT_EUR = 10000
 RESERVE = 0.15
@@ -27,11 +27,11 @@ M_ID = {'A012': 3, 'A013': 3, 'A010': 2, 'B016': 3, 'B007': 3, 'A082': 3, 'B008-
 
 # Paket vor dem Investment. (ID, Titel, Stufe, Variante, Quelle der Zahl, niedrig UAH, hoch UAH, Stunden Eigenleistung, welches Risiko wegfällt, Hinweis)
 # Variante: K = Kern, O = Optimum (zusätzlich), E = erweitert (über dem Richtwert). Zahl None = aus Register übernehmen.
-A, Bs, C = 'A · Nachweise auf Papier', 'B · Eigenanteil am Grundstück', 'C · Nachfrage und Umsatz'
+A, Bs, C = 'A · Klären, was ein Investor sonst einpreist', 'B · Vorbereiten mit Eigenleistung', 'C · Whitelist, Umsatz, Unterlagen'
+# Fachprüfung des Geologieberichts, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026) und sind nicht mehr im Paket.
+VORHANDEN_IDS = {'A001', 'A002', 'A003'}
+VORHANDEN = ['Fachprüfung des Geologieberichts (früher A001)', 'Zusatzerkundung (früher A002)', 'Vermessung mit Höhenmodell (früher A003)']
 PAKET = [
- ('A001', 'Fachprüfung des Geologieberichts', A, 'K', 'Register: 3.000 UAH „Beratung ab“; hoch = Annahme KI', 3000, 15000, 4, 'Boden: Die KI-Zusammenfassung ist nicht geprüft. Ohne Freigabe ist jede Gründung und jeder Preis angreifbar.', ''),
- ('A002', 'Zusatzerkundung (3 Bohrungen à 8 m)', A, 'K', 'Register', None, None, 4, 'Boden: Gründungshorizont für Objekt und Stützbauwerk.', 'Preis für anderen Standort; Hang ungeklärt.'),
- ('A003', 'Vermessung mit Geländemodell', A, 'K', 'Register: 2.500 UAH für kleine Fläche in Kyjiw; hoch = Annahme KI für 2 ha am Hang', 2500, 25000, 4, 'Planung: Grundlage für 3D-Modell, Leitungen und Kosten.', 'Der Registerwert ist auffällig niedrig.'),
  ('A048', 'Wasseranalyse im Labor', A, 'K', 'Register', None, None, 3, 'Wasser: bestimmt die Aufbereitung (5.625 bis über 45.000 UAH Unterschied).', ''),
  ('A010', 'Objekt-Skizze und Bau-KI-Planung', A, 'K', 'Register', None, None, 40, 'Kosten: Basis of Design für Objekt Phase 0 und Phase 1.', 'Register deckt nur eine Architektur-Skizze.'),
  ('A029', 'Heizlastberechnung', A, 'K', 'Register', None, None, 2, 'Wärme: Ofengröße und Holzmenge.', ''),
@@ -57,7 +57,7 @@ PAKET = [
  ('X03', 'Absteckung und Messreihen (Quellschüttung, Wetter, Schnee)', Bs, 'K', 'kostet nur Zeit', 0, 0, 30, 'Wasser und Klima: Winterwerte, die sonst ein Jahr fehlen.', ''),
  ('A004', 'Hangseitiger Entwässerungsgraben, 20 m', Bs, 'O', 'Register', None, None, 40, 'Boden: schützt die Baufläche vor Hangwasser; Empfehlung des Gutachters.', 'Erst nach Freigabe durch den Fachexperten. Mit Eigenleistung sinkt der Betrag.'),
  ('A049', 'Brunnen bohren, 20–40 m', Bs, 'E', 'Register', None, None, 8, 'Wasser: beweist Menge und Qualität am Ort. Größtes offenes Risiko nach dem Boden.', 'Tiefe unbekannt; Pumpe und Leitung kommen später dazu.'),
- ('X04', 'Mieter-Interessenten sammeln', C, 'K', 'kostet nur Zeit', 0, 0, 60, 'Nachfrage: belegt, dass jemand oben wohnen und zahlen will (D50).', ''),
+ ('X04', 'Whitelist der künftigen Mieter einrichten und führen', C, 'K', 'kostet nur Zeit', 0, 0, 60, 'Nachfrage: belegt, dass jemand oben wohnen und Miete zahlen will (D50; Index AP-A8).', 'Noch nicht eingerichtet.'),
  ('X05', 'Erster bezahlter Kundenauftrag der Agentur', C, 'K', 'bringt Umsatz', 0, 0, 0, 'Umsatz: zeigt, dass die Company Geld verdient.', ''),
  ('X06', 'Selbstkostenrechnung je Objekt', C, 'K', 'kostet nur Zeit', 0, 0, 20, 'Wirtschaftlichkeit: Miete und Pauschale aus echten Kosten (D49).', ''),
  ('X07', 'Investorenunterlagen mit geprüften Zahlen', C, 'K', 'kostet nur Zeit', 0, 0, 40, 'Vertrauen: Whitepaper und Deck ohne offene Kernfragen.', ''),
@@ -102,10 +102,11 @@ def build(base):
     V = {'Kern': tot('K'), 'Optimum': tot('KO'), 'Erweitert': tot('KOE')}
     # Rest für Investoren: Register minus die Zeilen, die das Paket schon enthält
     inpak = {p['id'] for p in P if p['im_register'] and p['variante'] in 'KOE'}
-    ask_inv = (sum(k['niedrig'] for k in kal if k['art'] == 'Investition' and k['id'] not in inpak), sum(k['hoch'] for k in kal if k['art'] == 'Investition' and k['id'] not in inpak))
+    ask_inv = (sum(k['niedrig'] for k in kal if k['art'] == 'Investition' and k['id'] not in inpak and k['id'] not in VORHANDEN_IDS), sum(k['hoch'] for k in kal if k['art'] == 'Investition' and k['id'] not in inpak and k['id'] not in VORHANDEN_IDS))
     # Matrix Maslow × Phase (nur gerechnete Zeilen)
     M = {}
     for k in kal:
+        if k['id'] in VORHANDEN_IDS: continue
         m = M_ID.get(k['id'], M_BEREICH[k['bereich']])
         ph = 'Vor-Phase' if k['id'] in inpak else ('Betrieb 12 Monate' if k['art'] == 'Betrieb' else 'Phase ' + phase.get(k['id'].split('-')[0], '0')[0])
         c = M.setdefault((m, ph), [0, 0, 0]); c[0] += k['niedrig']; c[1] += k['hoch']; c[2] += 1
@@ -157,11 +158,12 @@ def page(D):
 <style>{CSS}</style>
 <div class="w">
 <header><p class="eyebrow">Node001 Beregniza · Vor dem Investment · Stand {STAND}</p>
-<h1>Was rund 10.000 € Eigenkapital vor dem Investment leisten</h1>
-<p class="lead">Mit dem Richtwert von {n(RICHTWERT_EUR)} € lassen sich die Risiken klären, die ein Investor sonst einpreist: Boden, Wasser, Strom, Recht, Kosten und Nachfrage. Dazu kommt ein sichtbarer Eigenanteil am Grundstück. Gebaut wird damit noch nichts.</p>
+<h1>Was vor dem Investment mit Eigenkapital und Eigenleistung geht</h1>
+<p class="lead">So viel wie möglich mit Eigenkapital (Antwort vom 17.11.2026); bis zu welchem Punkt, und ab wann Investoren dazukommen, entscheiden D69 und D71. Bisheriger Richtwert: {n(RICHTWERT_EUR)} €. Damit lassen sich die Risiken klären, die ein Investor sonst einpreist: Wasser, Strom, Recht, Kosten und Nachfrage. Danach kommt Charge 1: Objekte und Material kaufen und hochbringen; weitere Chargen werden nachbestellt, wenn die Whitelist wächst, und die Mieterlöse sind der Nachweis für Investoren (Index 3.0, Ast 1).</p>
+<p class="rule">Liegen schon vor und sind deshalb nicht mehr im Paket (Kommentar vom 15.11.2026): {e("; ".join(VORHANDEN))}. Die Kopien kommen in den Plan (Index 3.0, AP-A1).</p>
 <p class="note">Alle Beträge stammen aus dem Kostenregister vom 13.11.2026 (Teilschätzung mit Internet-Richtwerten, viele aus dem Raum Kyjiw, keine Angebote) und sind Annahmen. Kurs {str(KURS).replace(".", ",")} UAH je EUR. Entschieden wird auf der <a href="{ENT}">Entscheidungsseite</a>, Karten D69 bis D72.</p></header>
 <section><h2>Drei Varianten</h2><div class="vars">
-{vbox('Kern', 'Kern', 'Alle Nachweise auf Papier, Werkzeug und Kurse für die Eigenleistung, Holz schlagen und einlagern, Interessenten und Unterlagen.')}
+{vbox('Kern', 'Kern', 'Wasseranalyse, Planung, Rechtsprüfung und Angebote, Werkzeug und Kurse für die Eigenleistung, Holz schlagen und einlagern, Whitelist und Unterlagen.')}
 {vbox('Optimum', 'Optimum · Vorschlag KI', 'Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. Bleibt auch im hohen Fall nahe am Richtwert.', True)}
 {vbox('Erweitert', 'Erweitert', 'Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort, liegt im hohen Fall über dem Richtwert.')}
 </div>

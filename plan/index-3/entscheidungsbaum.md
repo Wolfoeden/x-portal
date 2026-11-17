@@ -8,18 +8,18 @@ Bezugsrahmen ist die Reference Architecture v0.4-WB1 (`quellen/reference-archite
 |---|---|---|---|---|---|---|
 | W01 | Vision und Mission | Vision der Leitlinie P01; Mission „Innovationshubs“ (E28) | Neue Vision (Abschnitt 2), keine Mission, Kerndefinition (Abschnitt 18) | Vision v0.4 steht in der Grundlage des Baums. Ob eine Mission bleibt, ist offen. | OPEN | angepasst |
 | W02 | Was „X-PORTAL“ heißt | „Dachfirma“ (Vorgabe 05.11.), „Firma“ | X-PORTAL ist das sozio-technische Gesamtsystem; die Firma heißt X-PORTAL Organisation bzw. Company; Systemgrenze zum Node-Betrieb offen (OD-001) | Zielblatt X1 heißt „X-PORTAL Organisation (Company)“. Wo die DT Agentur steht, nennen Baseline und Deck nicht. | DECISION REQUIRED | angepasst |
-| W03 | Kapital für Node001 | „Kein Investor“ (E04); der Ort trägt sich aus Käufergeld, Pre-Seed nur für die Firma (E57) | Zwei getrennte Investment Cases; Node001 als eigener Project-/Asset-Case mit Kapital für Infrastruktur und ersten Bauabschnitt | Entschieden in D46 am 13.11.2026: Käufermodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen. | DOCUMENTED | entschieden 13.11. |
+| W03 | Kapital für Node001 | „Kein Investor“ (E04); der Ort trägt sich aus Käufergeld, Pre-Seed nur für die Firma (E57) | Zwei getrennte Investment Cases; Node001 als eigener Project-/Asset-Case mit Kapital für Infrastruktur und ersten Bauabschnitt | Entschieden in D46 am 13.11.2026: Verkaufsmodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen. | DOCUMENTED | entschieden 13.11. |
 | W04 | Produkt- und Preismodell | Hausverkauf als Token über die Blockchain, Grund pachten, etwa 30.000 € je Plot, Verkauf ab Januar 2027 (E50, E52, E78) | „Miete bzw. geeignetes Eigentums-/Nutzungsmodell“, Produktmix und Preis werden validiert; kein öffentliches Angebot von Kryptowerten | Entschieden in D45, D48, D49, D50 am 13.11.2026: kein klassischer Immobilienverkauf, zuerst Mieter, Selbstkostenpreis, Tokenisierung erst nach Klärung. | DOCUMENTED | entschieden 13.11. |
 | W05 | Zahlen zum Invest | Papierrechnung rund 12 Mio. € „rechtfertigt das Invest“ (E84); Kostenhochrechnung 12,5 Mio. € (E65) | Parametrischer Business Case offen (OD-008); Scheingenauigkeit vermeiden (KI-Regel 10); Kostenband „zu validieren“ | Beide Zahlen bleiben intern und gehören in keine Investorenunterlage. | ASSUMPTION | markiert |
 | W06 | Termine | Verkauf Januar 2027, Container ab März, „Einzug ab Frühjahr 2027“ (E51, E55) | „Baubeginn 2027 · Ziel“, nur nach Gates; Meilensteine sind Ziele, keine Zusagen | Grenzentabelle führt alle Termine als Ziele. | ASSUMPTION | angepasst |
-| W07 | Genehmigung und Finanzierung | „Genehmigung und Planung liegen vor, 12,5 Mio. € privat finanziert“ (E60, durch E65 schon berichtigt) | Finanzierung des ersten Bauabschnitts und Freigaben: „zu validieren“; „Grundstück gesichert“ | Es gilt das Deck. Belege zum Grundstück fehlen weiter (O14): DOCUMENTED, nicht VERIFIED. | DOCUMENTED | markiert |
-| W08 | Rollen der Menschen | Team (drei Personen) und Käufer oder Mieter (E63) | Acht Rollen in der Infografik: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren; Human Roles v1.0 in Arbeit (OD-003) | Der Plan bleibt bei Team und Käufern, bis OD-003 entschieden ist. | IN WORK | markiert |
+| W07 | Genehmigung und Finanzierung | „Genehmigung und Planung liegen vor, 12,5 Mio. € privat finanziert“ (E60, durch E65 schon berichtigt) | Finanzierung des ersten Bauabschnitts und Freigaben: „zu validieren“; „Grundstück gesichert“ | Es gilt das Deck. Grundstück im Besitz, Detailplan und Bebauungsplan liegen vor (Kommentar 12.11.2026); die Kopien fehlen im Plan (AP-A1): DOCUMENTED, nicht VERIFIED. | DOCUMENTED | markiert |
+| W08 | Rollen der Menschen | Team (drei Personen) und Käufer oder Mieter (E63) | Acht Rollen in der Infografik: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren; Human Roles v1.0 in Arbeit (OD-003) | Team und Mieter (D45, D50); weitere Rollen erst mit OD-003. | IN WORK | markiert |
 | W09 | Digital Twin | „Digitaler Zwilling der Organisation“, „Unternehmenszwilling“ (2.6.6, M07) | System Model ist nicht Digital Twin; voller Twin später und nur bei Nutzen | Text in 2.6.6 angepasst; M07 bleibt als Methodenname der Historie. | OPEN | angepasst |
 | W10 | Zahl der Nodes | „Node001, der erste von zehn Nodes“ (E63) | Node002 als Replikationstest; keine Zahl; Multi-Node-Plattform nicht im MVS | Die Zahl zehn steht in keiner aktuellen Aussage mehr. | ASSUMPTION | CHANGE REQUEST |
 | W11 | Genome | „Schema für den nächsten Node“ (Z4, E11) | X-PORTAL Genome: Invarianten, Module, Parameter, Entscheidungsregeln, Evidenz; belastbar erst mit Evidenz aus Node001 und Node002 | Z4 heißt jetzt Genome. | IN WORK | angepasst |
 | W12 | Autarkie | „autark“ (E46, E54, E72) | „weitgehend versorgungsautark, operativ autonom“; Zielwerte je kritischer Funktion offen (OD-002) | Grundmodell angepasst. | OPEN | angepasst |
 | W13 | Statusbegriffe | offen, wartet, nicht geprüft, entschieden, Regel steht | VERIFIED, DOCUMENTED, IN WORK, ASSUMPTION, OPEN, DECISION REQUIRED | Zuordnung steht in der Legende des Baums. „Entschieden“ heißt DOCUMENTED, nicht VERIFIED. | DOCUMENTED | angepasst |
-| W14 | Team und Rollen | Paul ist CEO zu 100 %, Roman Produkt und Projekt (E62); Nazar ist beauftragte Fachperson (E64) | Deck nennt als operatives Team Roman Dering, Pavel J., Nazar D. („Architekt · Nodes“); Founder-, Ownership- und Governance-Darstellung vor Versand offen | Wer Gründer und Gesellschafter ist und ob Nazar Teammitglied oder Auftragnehmer ist, muss vor dem Versand feststehen. | DECISION REQUIRED | offen |
+| W14 | Team und Rollen | Paul ist CEO zu 100 %, Roman Produkt und Projekt (E62); Nazar ist beauftragte Fachperson (E64) | Deck nennt als operatives Team Roman Dering, Pavel J., Nazar D. („Architekt · Nodes“); Founder-, Ownership- und Governance-Darstellung vor Versand offen | Wer Gründer und Gesellschafter ist und ob der Architekt (Beratung) Teammitglied oder Auftragnehmer ist, muss vor dem Versand feststehen. | DECISION REQUIRED | offen |
 | W15 | Ortsangabe | Website nennt, wenn überhaupt, nur „Ukraine“ (E66) | Deck: „Karpatenregion, Westukraine“; Baseline: „Node001 Beregniza“ | Für Investoren gilt die Angabe des Decks; E66 betrifft die öffentliche Website. | DOCUMENTED | markiert |
 | W16 | Erlöse | Agenten je Aufruf über Masumi (E56); Einstieg ab 490 € (E76, abgelöst durch E83) | Vier Erlösstufen: Kundenprojekte (heute), KI-Lösungen (in Entwicklung), Nutzung und Services Node001, System-Skalierung (später) | Preismodell bleibt offen (E83); Masumi ist eine Option, keine Aussage im Deck. | OPEN | markiert |
 | W17 | Versionsstand der Infografik | – | Infografik „Integrierte Managementarchitektur · SGMM II“ nennt Reference Architecture v0.2; Baseline und Deck nennen v0.4 | Widerspruch innerhalb der neuen Unterlagen: Infografik auf v0.4 heben, bevor sie rausgeht. | DECISION REQUIRED | offen |
@@ -80,16 +80,16 @@ Offen: welche Parzelle die Herrenhaus-Fläche ist und wo darunter das Objekt Pha
 Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeitspaket nennt Wann, Voraussetzung, was es blockiert, die Grundbestimmungen (GB1 bis GB11 in der Grundlage), die Rolle und das Ergebnis; dazu Unterlagen zum Kopieren und, wo es passt, einen Auftrag für die ausführende KI. Nichts wird automatisch bestellt oder verschickt. Die bisherigen Knoten (Geologie, Lage, Bauart, Zufahrt, Lieferant, Technik, Selbstkosten, Mieter, Gates) stehen unverändert an ihrer Stelle.
 
 - **Ast:** A · Vor dem Investment: klären, was ein Investor sonst einpreist
-  - Mit Eigenmitteln und Eigenleistung; Richtwert etwa 10.000 € (D69 offen).
+  - So viel wie möglich mit Eigenmitteln und Eigenleistung; wie viel und bis wann, ist offen (D69, D71, Seite „Vor dem Investment“).
   - **Ereignis O01:** Geologie: Bericht liegt vor. Was sagt er für Phase 0 und Phase 1? _[entschieden]_
-    - Technischer Bericht 34.11/26, Ingenieurgeologe, Iwano-Frankiwsk 2026 · deutsche Zusammenfassung XPB-N001-GEO-SUM-001 (KI-erstellt, mit dem Original abzugleichen)
+    - Technischer Bericht 34.11/26, Ingenieurgeologe, Iwano-Frankiwsk 2026 · deutsche Zusammenfassung XPB-N001-GEO-SUM-001 (KI-erstellt) · Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026), noch nicht im Plan abgelegt (AP-A1)
     - Feldarbeiten September bis November 2026: 3 Schürfgruben mit zusammen 7,5 m, 12 Handbohrungen bis je 2 m. Nordöstlich exponierter Hang des Bila Kobyla, Geländehöhen 1.016–1.077 m. Ingenieurgeologische Komplexität Kategorie III.
     - Schichten: IGE-1 lehmiger Oberboden, 0,6–1,1 m, von Rutschprozessen betroffen; IGE-2 weichplastischer Lehm, 0,8–1,1 m; IGE-3 Schuttmaterial mit Sandstein, 1,0–1,4 m, bei den Punkten 6, 7, 11 wassergesättigt; IGE-4 Flysch, Schichten etwa 70° geneigt.
     - Kennwerte: IGE-1: E 19 MPa, φ 23°, c 27 kPa, R₀ 240 kPa. IGE-2: 6 MPa, 14°, 13 kPa, 130 kPa. IGE-3: 45 MPa, 33°, 8 kPa, 500 kPa; am Standort mit 70 % anzusetzen.
     - Grundwasser: Austritte an den Bohrpunkten 6, 7 und 11; mehr Wasser bei Starkregen und Schneeschmelze. Gegen Beton normaler Dichte nicht aggressiv.
     - Hang: Verbreitete Rutsch- und Fließprozesse; bewegte Schichten 0,8–1,2 m (im erläuternden Text 0,9–1,2 m), Flächen meist 3–4 m², teils bis 15 m².
     - Empfehlung: Kombinierte Streifen- und Stützfundamentierung auf IGE-3 oder IGE-4; hangseitiger Fundamentbereich als Stützkonstruktion; hangseitiger Entwässerungsgraben; Wasser vor Abfällen und Abwasser schützen.
-    - Zusatzerkundung: Verlangt für Zufahrt, Stützkonstruktionen und Hauptgebäude, wenn bis IGE-4 gegründet wird, und bei geänderten Gebäuden oder Fundamenten.
+    - Zusatzerkundung: Vom Gutachter verlangt für Zufahrt, Stützkonstruktionen und Hauptgebäude. Liegt vor (Kommentar vom 15.11.2026); das Ergebnis wird eingetragen, sobald der Bericht im Plan liegt (AP-A1).
     - Dient: Z1, Z2
     - **Ausgang (Fall A):** Leichte eingeschossige Objekte: Gründung auf IGE-3. _[offen]_
       - Laut Gutachter geeignet für leichte eingeschossige Gebäude. Gilt für das Objekt Phase 0, wenn es leicht und eingeschossig ist (Zuordnung Vorschlag KI).
@@ -103,14 +103,8 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
         - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
     - **Ausgang (Fall B):** Massive, dauerhafte Gebäude: Gründung auf IGE-4, mit Zusatzerkundung. _[offen]_
       - Laut Gutachter für massive Gebäude. Betrifft Kommunalgebäude und Objekte in Phase 1 (Zuordnung Vorschlag KI).
-      - **Entscheidung:** Zusatzerkundung für Phase 1 beauftragen, sobald Lage und Bauart der Gebäude feststehen (D56) _[offen]_
-        - Geschäftsführung · vor Phase 1
-        - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
-        - Beschlussblatt, Fachliche Prüfung: –
-        - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
-        - Beschlussblatt, Budgetgrenze: –
-        - Beschlussblatt, Gültigkeit: bis ihr sie ändert
-        - Beschlussblatt, Wiedervorlage: vor Phase 1
+      - **Schritt:** Ergebnis der vorhandenen Zusatzerkundung für die Gebäude in Phase 1 auswerten _[offen]_
+        - Fachexperte Bau · nach AP-A1
     - **Ausgang (Fall C):** Flächen mit Grundwasseraustritt und Rutschprozessen. _[offen]_
       - Bohrpunkte 6, 7 und 11. Entwässerungsgraben und Stützkonstruktion nach Empfehlung; die Lage von Phase 0 berücksichtigt diese Punkte.
     - **Entscheidung:** Wo im Detailplan steht das Objekt Phase 0 (unterhalb der Herrenhaus-Fläche, D55)? _[offen]_
@@ -123,14 +117,26 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
       - Beschlussblatt, Gültigkeit: bis ihr sie ändert
       - Beschlussblatt, Wiedervorlage: vor der Planung von Phase 0
-  - **Schritt:** Geologie: deutsche Zusammenfassung mit dem ukrainischen Original abgleichen _[offen]_
+  - **Schritt:** Strecke ablaufen und messen: einspurige, teils enge Straße bis zum Grundstück _[offen]_
+    - Kommentar vom 17.11.2026: Die Objekte müssen über eine einfache, einspurige und teils enge Straße transportierbar sein; deshalb „leicht“. Breite, Engstellen und Ausweichstellen sind bis zur Messung offen.
+    - Wann: jetzt; vor jeder Anfrage an Anbieter und Spediteure
+    - Voraussetzung: Maßband, Neigungsmesser, Kamera mit GPS
+    - Blockiert: Auswahl des Objekts (hausart, AP-C1), Logistik (AP-C3), Bestellung
+    - Grundbestimmungen: GB1, GB11
+    - Rolle: führt aus: Projektleitung oder Team vor Ort · wertet aus: planende KI
+    - Ergebnis: Streckenprotokoll: schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt
+    - Unterlage: Streckenprotokoll
+      > Abschnitt | von (GPS) | bis (GPS) | Länge m | schmalste Breite m | Kurvenradius m | Steigung % | Untergrund | Ausweichstelle ja/nein | Wendestelle ja/nein | Brücke, Lastgrenze t | Foto-Nr. | Bemerkung
+      > 1 | | | | | | | | | | | |
+      > 2 | | | | | | | | | | | |
+      > Ergebnis: größtes Teil (L × B × H) und schwerstes Teil, das bis zum Grundstück kommt; Fahrzeug, das es bringt; Jahreszeit.
+  - **Schritt:** Vorhandene Nachweise in den Plan legen: Geologie-Fachprüfung, Zusatzerkundung, Vermessung _[offen]_
     - Wann: jetzt
-    - Voraussetzung: Originalbericht 34.11/26 (16 Seiten) und Zusammenfassung XPB-N001-GEO-SUM-001 liegen vor
-    - Blockiert: Fundament, Lage von Phase 0, Angebote
-    - Grundbestimmungen: GB2, GB11
-    - Rolle: führt aus: ausführende KI, dann Projektleitung · prüft: Architekt (Beratung)
-    - Ergebnis: Abweichungsliste; geklärte Stellen, zum Beispiel die Mächtigkeit der bewegten Schichten (0,8–1,2 m gegen 0,9–1,2 m)
-    - Auftrag für die ausführende KI: auftraege/AP-A1.md
+    - Voraussetzung: Die Unterlagen liegen bei der Geschäftsführung oder dem Architekten (Kommentar vom 15.11.2026: „haben wir schon“)
+    - Blockiert: Bauplanung (AP-A4), Phase 1, Kostenrechnung
+    - Grundbestimmungen: GB2, GB3, GB11
+    - Rolle: liefert: Geschäftsführung · legt ab: Projektleitung
+    - Ergebnis: Die drei Dokumente liegen im Plan unter quellen/; Ergebnis der Zusatzerkundung und Höhenmodell sind in Grundlage und Ast 1 eingetragen
   - **Schritt:** Wasseranalyse im Labor _[offen]_
     - Wann: jetzt; Vorabprobe aus dem vorhandenen Grundwasser, Endprobe nach der Brunnenbohrung
     - Voraussetzung: akkreditiertes Labor gefunden
@@ -176,7 +182,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > Mit freundlichen Grüßen
       > [Geschäftsführung, Node-Gesellschaft bzw. Eigentümer]
     - Auftrag für die ausführende KI: auftraege/AP-A3.md
-  - **Entscheidung:** Bauart der Objekte: Holz, Beton, Glas, Metall? _[offen]_
+  - **Entscheidung:** Bauart der Objekte: Holz, Beton, Glas, Metall? Erste Bedingung: transportierbar über die einspurige, enge Straße _[offen]_
     - Geschäftsführung nach Vorschlag Fachexperte Bau · nach Lage (O01)
     - Antwort vom 13.11. (D56): Der Plan für die Objekte steht aus; eine Bau-KI bewertet und plant in Abhängigkeit von den lokalen Gegebenheiten (Geologie, Gelände, Zufahrt).
     - Dient: Z1, Z2
@@ -207,10 +213,26 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Statt eines Verkaufspreises wird der Selbstkostenpreis je Objekt ermittelt (D49): Objekt, Transport, Montage, Fundament, Anschlüsse, Anteil an Kommunalgebäude und Infrastruktur, Betrieb. Daraus Miete und Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen (D38). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung, 69 von 137 Positionen ohne Betrag).
     - Dient: Z2
     - Braucht: O31, D36, D37, D38
-  - **Schritt:** Mietinteressenten gewinnen, ab sofort und vor dem Bau _[offen]_
+  - **Schritt:** Mietinteressenten gewinnen: Whitelist der künftigen Mieter, ab sofort und vor dem Bau _[offen]_
     - Projektleitung · laufend (D50)
-    - Zuerst Mieter gewinnen; Ziel ist, Interessenten jetzt zu bekommen (D50). Verkauft wird im klassischen Sinn nichts (D45, D48). Tokenisierung und Beteiligung auf mehreren Ebenen erst nach rechtlicher Klärung (O05).
+    - Zuerst Mieter gewinnen; Ziel ist, Interessenten jetzt zu bekommen (D50). Es wird nicht verkauft; es gibt nur Mieter mit wiederkehrenden Erlösen, die wir Investoren zeigen (D45, D46, D48; Kommentar vom 17.11.2026). Die Whitelist ist noch nicht eingerichtet (AP-A8). Tokenisierung und Beteiligung erst nach rechtlicher Klärung (O05, AP-A6).
     - Dient: Z2
+  - **Schritt:** Whitelist der künftigen Mieter einrichten _[offen]_
+    - Auf der Whitelist stehen nur künftige Mieter. Investoren werden getrennt geführt (Antwort vom 17.11.2026).
+    - Wann: jetzt (D50: Interessenten vor dem Bau)
+    - Voraussetzung: Text und Bilder vom Ort; Datenschutzhinweis (GB10)
+    - Blockiert: Chargen (AP-C5, AP-G3), Nachweis für Investoren (AP-F3)
+    - Grundbestimmungen: GB8, GB9, GB10
+    - Rolle: führt: Projektleitung · prüft: Jurist (Datenschutz, keine verbindliche Zusage)
+    - Ergebnis: Anmeldung auf x-portal.eu; gezählt werden Einträge, gewünschter Einzug und Bereitschaft zur Miete. Die Whitelist ist noch nicht vorhanden (Kommentar vom 12.11.2026 im Whitepaper).
+    - Unterlage: Text für die Anmeldung
+      > X-PORTAL Node001 · Karpaten, Ukraine
+      > 
+      > Wohnen und arbeiten an einem Ort in den Bergen: eigenes Objekt, Gemeinschaftsräume, Internet für Remote-Arbeit, Projekte im Team.
+      > Wir bauen in Abschnitten. Wer sich einträgt, erfährt als Erstes, wann ein Objekt frei wird, und kann es mieten.
+      > 
+      > Felder: Name · E-Mail · ab wann · wie lange · allein oder zu zweit · Beruf oder Tätigkeit · Fragen
+      > Hinweis: Der Eintrag ist unverbindlich und kein Vertrag. Wir speichern die Angaben nur für diese Liste und löschen sie auf Wunsch.
   - **Schritt:** Token über Cardano: Rechtsprüfung _[offen]_
     - Wann: jetzt; vor jeder Ansprache von Kleinanlegern
     - Voraussetzung: Anwälte in Deutschland und der Ukraine (O05)
@@ -237,10 +259,10 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Grundbestimmungen: GB8, GB9
     - Rolle: führt aus: planende KI · prüft: Geschäftsführung, Jurist
     - Ergebnis: Whitepaper und Deck mit Meilensteinen aus diesem Ablaufplan, Mittelverwendung je Phase, Risiken; Beträge erst nach Angeboten
-- **Ast:** B · Kapital: vermieten können, Investoren, Token
+- **Ast:** B · Kapital: so viel Eigenkapital wie möglich, Investoren mit Whitelist und Mieterlösen, Token
   - **Gate G0:** Können wir vermieten? _[wartet]_
     - vor dem Investorengespräch · Geschäftsführung und Projektleitung geben frei oder lassen nacharbeiten
-    - Muss fertig sein: Selbstkosten und Pauschale (O03), Mietvertrag und Struktur rechtlich geprüft (O05), Leistungen oben (2.1.8), Lage und Bauart von Phase 0, Abnahmetabelle (D66).
+    - Muss fertig sein: Whitelist läuft (AP-A8), Selbstkosten und Pauschale (O03), Mietvertrag und Struktur rechtlich geprüft (O05), Leistungen oben (2.1.8), Lage und Bauart von Phase 0, Abnahmetabelle (D66).
     - Dient: Z2
     - Braucht: O05, O12, D36, D37, D38
     - Beschlussblatt, Vorbereitung: KI stellt die Nachweise zusammen
@@ -271,7 +293,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > [Geschäftsführung]
   - **Ereignis O23:** Kapital: Steigen Investoren für Infrastruktur und Objekte ein? _[offen]_
     - Geschäftsführung · nach dem Paket vor dem Investment (D69, D71)
-    - Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Objekte mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47). Ein Verkauf an Einzelne ist abgewählt.
+    - So viel wie möglich mit Eigenkapital; bis zu welchem Punkt, ist offen (D69, D71, Seite „Vor dem Investment“). Investoren für Infrastruktur und weitere Chargen, gestützt auf Whitelist und Mieterlöse (D46, D47; AP-F3). Ein Verkauf an Einzelne ist abgewählt.
     - Dient: Z2
     - **Ausgang (ja):** Bestellen. _[Regel steht]_
       - Die Geschäftsführung entscheidet über Bestellung und Betrag; bestellt wird nur mit Geld auf dem Konto.
@@ -294,9 +316,9 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Grundbestimmungen: GB9, GB10
     - Rolle: entscheidet: Geschäftsführung · prüft: Anwälte
     - Ergebnis: Entscheidungsvorlage zu Variante, Pflichten, Plattform und Zeitplan (wird in Stufe 3 ausgearbeitet)
-  - **Gate G1:** Ist genug Geld da, ist bestellt? _[wartet]_
+  - **Gate G1:** Ist genug Geld für Charge 1 da, ist bestellt? _[wartet]_
     - nach G0 und O23
-    - Investment oder Eigenkapital für Phase 0 auf dem Konto; Objekt Phase 0 bestellt; Leitungen für Wasser, Abwasser, Strom und Internet geplant (2.2.7); kritische Fehlerarten bewertet (2.3.7); Prüfsituation T00 vor der Bestellung (2.4.9).
+    - Eigenkapital, wo nötig mit Investment, für Charge 1 auf dem Konto (GB8); Charge 1 bestellt (AP-C5); Leitungen für Wasser, Abwasser, Strom und Internet geplant (2.2.7); kritische Fehlerarten bewertet (2.3.7); Prüfsituation T00 vor der Bestellung (2.4.9).
     - Dient: Z2
     - Braucht: O17, O23
     - Beschlussblatt, Vorbereitung: KI rechnet den Geldfluss (2.1.3)
@@ -322,7 +344,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > wir planen ein Wohn- und Arbeitsmodul für 2–3 Personen in den ukrainischen Karpaten (etwa 1.050 m Höhe, Winter bis −20 °C). Bitte senden Sie uns ein Angebot mit:
       > 
       > 1. Modell, Fläche, Raumhöhe, Aufbau und U-Werte von Wand, Dach und Boden; Eignung für −20 °C.
-      > 2. Lieferform: in Teilen oder als ganzes Modul. Maße und Gewicht des schwersten und des größten Teils. Die letzten 200 m der Zufahrt sind unbefestigt mit über 15 % Steigung; Transportbreite bis 2,6 m ohne Genehmigung.
+      > 2. Lieferform: in Teilen oder als ganzes Modul. Maße und Gewicht des schwersten und des größten Teils. Die Zufahrt ist eine einfache, einspurige, teils enge Straße; die letzten 200 m sind unbefestigt mit über 15 % Steigung. Jedes Teil muss auf kleinem Fahrzeug hochkommen; Transportbreite bis 2,6 m ohne Genehmigung. Bitte nennen Sie die kleinste Lieferform, die Sie anbieten.
       > 3. Sanitär: vorbereitet oder eingebaut für Spültoilette, Dusche, Warmwasser, Abwasseranschluss.
       > 4. Elektroinstallation, Heizung (Holzofen mit Schornstein, elektrische Reserve).
       > 5. Anforderungen an das Fundament (Punktlasten); unser Gutachten empfiehlt Streifen- und Stützfundament.
@@ -342,7 +364,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > we are planning a living and working module for 2–3 persons in the Ukrainian Carpathians (approx. 1,050 m above sea level, winters down to −20 °C). Please send us a quotation including:
       > 
       > 1. Model, floor area, interior height, wall/roof/floor build-up and U-values; suitability for −20 °C.
-      > 2. Delivery form: in parts or as complete module. Dimensions and weight of the heaviest and the largest part. The last 200 m of the access road are unpaved with more than 15 % gradient; transport width up to 2.6 m without permit.
+      > 2. Delivery form: in parts or as complete module. Dimensions and weight of the heaviest and the largest part. Access is a simple single-lane road, narrow in places; the last 200 m are unpaved with more than 15 % gradient. Every part must be transportable on a small vehicle; transport width up to 2.6 m without permit. Please state the smallest delivery form you offer.
       > 3. Sanitary: prepared or installed flush toilet, shower, hot water, drainage connection.
       > 4. Electrical installation, heating options (wood stove with chimney, electric backup).
       > 5. Foundation requirements (point loads); our soil report recommends strip and retaining foundations.
@@ -357,7 +379,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Auftrag für die ausführende KI: auftraege/AP-C1.md
   - **Entscheidung:** Wer liefert und baut das Objekt Phase 0, mit oder ohne Montage? _[offen]_
     - Projektleitung holt Angebote ein, die Geschäftsführung entscheidet die Bestellung · nach Bauart
-    - Drei schriftliche Angebote mit Preis, Lieferform, schwerstem Teil, Montageaufwand und Winterwerten (O31). Die Anfrage enthält die Raumliste aus M02, die Anforderungen an Sanitär ab Phase 0 (D62) und die Maße der Zufahrt. Wer was selbst macht, steht in 2.4.8.
+    - Drei schriftliche Angebote; zuerst geprüft wird, ob jedes Teil über die einspurige, enge Straße hochkommt (GB1, AP-A0), dann Preis, Lieferform, schwerstes Teil, Montageaufwand und Winterwerte (O31). Die Anfrage enthält die Raumliste aus M02, die Anforderungen an Sanitär ab Phase 0 (D62) und die Maße der Zufahrt. Wer was selbst macht, steht in 2.4.8.
     - Dient: Z1, Z2
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
     - Beschlussblatt, Fachliche Prüfung: Fachexperte; Architekt berät (D67)
@@ -408,12 +430,20 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Auftrag für die ausführende KI: auftraege/AP-C3.md
   - **Ereignis:** Kommt das Objekt Phase 0 die Zufahrt hoch, im Sommer und im Winter (2.2.4)? _[entschieden]_
     - Antwort vom 13.11. (D57)
-    - Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch. Die Gesamtplanung der Zufahrt entscheidet sich in Phase 1 mit 3D-Modellen der Bau-KI. Die letzten etwa 200 m haben über 15 % Steigung; bis 2,6 m Breite geht ein Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug.
+    - Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch. Die Gesamtplanung der Zufahrt entscheidet sich in Phase 1 mit 3D-Modellen der Bau-KI. Die Straße ist einfach, einspurig und teils eng (Kommentar vom 17.11.2026); die letzten etwa 200 m haben über 15 % Steigung; bis 2,6 m Breite geht ein Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite und Engstellen werden gemessen (AP-A0).
     - Dient: Z1
     - **Ausgang (ja):** Die Lieferform steht fest. _[offen]_
       - Damit ist klar, welche Anbieter in Frage kommen.
     - **Ausgang (nein):** Kleinere Teile oder eine andere Lieferform. _[offen]_
       - Bauart und Anbieter werden neu bewertet (2.2.3).
+  - **Schritt:** Charge 1 festlegen: welche Objekte und welches Material jetzt kaufen und hochbringen _[offen]_
+    - Business Case (Kommentar vom 17.11.2026): jetzt Objekte oder Material einkaufen und hochbringen; während dessen wächst die Whitelist; ist sie groß genug, wird nachbestellt (AP-G3), und Leute von der Whitelist ziehen ein und zahlen Miete. Die Mieterlöse zeigen wir Investoren (AP-F3).
+    - Wann: nach Angeboten (AP-C1) und Streckenprotokoll (AP-A0)
+    - Voraussetzung: Transportierbarkeit geprüft, Geld nach GB8, Lager oben
+    - Blockiert: Bestellung, Logistik (AP-C3)
+    - Grundbestimmungen: GB1, GB4, GB8
+    - Rolle: schlägt vor: planende KI · entscheidet: Geschäftsführung
+    - Ergebnis: Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter), Material und A-Nummern; was sich lagern lässt, kommt früh hoch
   - **Schritt:** Bestellzeitpunkte rückwärts vom Montagebeginn _[offen]_
     - Wann: sobald Angebote mit Lieferzeiten vorliegen
     - Voraussetzung: Lieferzeiten (AP-C1), Zollabwicklung (AP-C2), Transportdauer (AP-C3), Frostgrenze (GB4)
@@ -507,6 +537,13 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > Internet | D01 | 2 Videocalls 30 min | Upload ausreichend, keine Abbrüche | | | |
       > Brandschutz | S01 | Melder, Löscher, Ofenabstände | vollständig | | | |
       > Zugang | GB10 | Öffnen mit Chip und mit Schlüssel | beides geht | | | |
+  - **Schritt:** Mietvertrag und Einzug der ersten Mieter von der Whitelist _[offen]_
+    - Wann: nach G2, sobald ein Objekt frei ist
+    - Voraussetzung: Mietvertrag rechtlich geprüft (O05), Miete und Pauschale (O03), Abnahme (AP-E1)
+    - Blockiert: Mieterlöse (AP-F3)
+    - Grundbestimmungen: GB5, GB8, GB9
+    - Rolle: schließt ab: Geschäftsführung · betreut: Projektleitung
+    - Ergebnis: Unterschriebene Mietverträge, erste Miete auf dem Konto
   - **Gate G2:** Darf eingezogen werden? _[wartet]_
     - nach Montage und Abnahme
     - Ein Fachexperte bestätigt Heizung, Wasser mit Aufbereitung zu Trinkwasser, Strom, Sanitär (Spültoilette, Dusche, Warmwasser, Abwasser, D62) und Brandschutz schriftlich. Die Abnahmetabelle prüft die Projektleitung und gibt frei (D66). Muss fertig sein: 2.2.8, 2.3.2, 2.3.3, 2.4.6, 2.4.9 mit T00, T01, T05, T06.
@@ -532,6 +569,13 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Beschlussblatt, Budgetgrenze: festlegen
     - Beschlussblatt, Gültigkeit: erster Winter
     - Beschlussblatt, Wiedervorlage: vor dem ersten Frost
+  - **Schritt:** Mieterlöse und Whitelist monatlich berichten _[später]_
+    - Wann: ab der ersten Miete, monatlich
+    - Voraussetzung: Mietverträge (AP-E2), Whitelist (AP-A8)
+    - Blockiert: Investorengespräche (AP-B1), Nachbestellung (AP-G3)
+    - Grundbestimmungen: GB8, GB11
+    - Rolle: erstellt: planende KI · prüft: Geschäftsführung
+    - Ergebnis: Monatsbericht: belegte Objekte, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren
   - **Schritt:** Messreihen: Wärme, Holzfeuchte, Wasser, Strom, Internet _[später]_
     - Wann: ab Einzug, den ganzen ersten Winter
     - Voraussetzung: Messgeräte (A045 und weitere)
@@ -561,29 +605,21 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - **Ende:** 2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld.
       - Danach Phase 1: Kommunalgebäude zuerst (D64), dann Wohn- und Arbeitsobjekte für Mieter und Team. Skalierung und Standardisierung werden von Anfang an mitgedacht; Node001 ist der Proof of Concept (D51).
 - **Ast:** G · Phase 1: Kommunalgebäude und Objekte
-  - **Schritt:** Zusatzerkundung für Phase 1 _[später]_
-    - Wann: sobald Lage und Bauart der Gebäude feststehen
-    - Voraussetzung: Bauplanung Phase 1
-    - Blockiert: Fundamente Phase 1
-    - Grundbestimmungen: GB2
-    - Rolle: beauftragt: Geschäftsführung · führt aus: Bohrfirma
-    - Ergebnis: Bericht für Zufahrt, Stützbauwerke und massive Gebäude
-    - Anschaffungen: A002
   - **Schritt:** Kommunalgebäude _[später]_
     - Wann: erster Bau in Phase 1 (D64)
-    - Voraussetzung: Kapital, Zusatzerkundung
+    - Voraussetzung: Kapital, vorhandene Zusatzerkundung (AP-A1)
     - Blockiert: Objekte für Mieter
     - Grundbestimmungen: GB1, GB2, GB5, GB8
     - Rolle: entscheidet: Geschäftsführung · plant: Fachexperte Bau
     - Ergebnis: Arbeitsplätze, Küche, Sanitär; Feuerstelle und Sauna (D34, D35)
     - Anschaffungen: A109–A115
-  - **Schritt:** Objekte für Mieter und Team _[später]_
-    - Wann: nach dem Kommunalgebäude, nach Nachfrage (D50)
-    - Voraussetzung: Mietinteressenten, Selbstkosten
-    - Blockiert: Phase 2
+  - **Schritt:** Nachbestellen in Chargen nach der Whitelist _[später]_
+    - Wann: jeweils wenn die Whitelist die Schwelle erreicht; Schwelle offen, sie steht im Business Case
+    - Voraussetzung: Whitelist (AP-A8), Mieterlöse (AP-F3), Geld nach GB8
+    - Blockiert: weitere Mieter, Phase 2
     - Grundbestimmungen: GB1, GB2, GB8, GB9
     - Rolle: entscheidet: Geschäftsführung
-    - Ergebnis: Objekte bezogen, Mietverträge
+    - Ergebnis: Charge n+1 bestellt, hochgebracht und vermietet; Bestellung wie AP-C4 und AP-C5
   - **Schritt:** Solar mit Speicher _[später]_
     - Wann: Phase 1 (D59)
     - Voraussetzung: Lastliste, Messwerte aus dem Winter
@@ -614,6 +650,289 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Grundbestimmungen: GB11
     - Rolle: führt aus: planende KI · entscheidet: Geschäftsführung
     - Ergebnis: Genome-Regeln mit Quelle, Messwert und Vertrauensniveau
+- **Ast:** Bausteine und Teilergebnisse 2.1 bis 2.6 (Produktstrukturplan)
+  - Aus dem Index 2.0 vom 04.11.2026 übernommen und auf den Stand vom 17.11.2026 gebracht. Jedes Teilergebnis lässt sich als Arbeitspaket vergeben; wo es schon ein Arbeitspaket A bis H gibt, steht es unter „Abhängig“. Entfallen sind 2.1.1, 2.1.2, 2.5.6, 2.6.3 und 2.6.5 (Gründe im Änderungsprotokoll).
+  - **Ast:** 2.1 Geschäftsmodell und Geld
+    - **Schritt:** 2.1.3 · Geldfluss Phase 0 und Chargen: welches Geld wann kommt (Eigenkapital, Investoren, Miete) und wann es gebraucht wird _[offen]_
+      - Fertig, wenn: Monatstabelle, jede Zeile mit Quelle
+      - Rolle: rechnet: planende KI · prüft: Geschäftsführung
+      - Abhängig: O03, AP-C4, AP-C5
+      - Stand: offen; Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung)
+      - Quelle: D46, D47, D69, D71
+    - **Schritt:** 2.1.4 · Kapazität der Geschäftsführung: ab wann Vollzeit, und wie sie finanziert ist _[offen]_
+      - Fertig, wenn: Angabe der Geschäftsführung mit Monat und Finanzierung
+      - Rolle: Geschäftsführung
+      - Abhängig: 2.6.1
+      - Stand: offen; der frühere Betrag stammt aus dem zurückgenommenen Log und ist neu zu bestätigen
+      - Quelle: früher E03, E67
+    - **Schritt:** 2.1.5 · Kapital für die Firma _[entschieden]_
+      - Fertig, wenn: entschieden
+      - Rolle: Geschäftsführung
+      - Abhängig: O11
+      - Stand: Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur die Pflichtangaben gegenüber Kapitalgebern
+      - Quelle: D47, Kommentar 13.11.2026
+    - **Schritt:** 2.1.6 · Paket vor dem Investment: was vor dem Investorengespräch bezahlt werden muss und woher das Geld kommt _[offen]_
+      - Fertig, wenn: Betrag je Posten und Monat, von der Geschäftsführung bestätigt
+      - Rolle: stellt auf: planende KI · entscheidet: Geschäftsführung
+      - Abhängig: AP-A5, O05
+      - Stand: offen; ohne Geologie-Fachprüfung, Zusatzerkundung und Vermessung, die vorliegen (Kommentar 15.11.2026)
+      - Quelle: D69, D71; Seite „Vor dem Investment“
+    - **Schritt:** 2.1.7 · Matching der BW Bank für IT in Deutschland: Rechner, Server, Hardware _[offen]_
+      - Fertig, wenn: Betrag und Bedingungen schriftlich; Liste der IT mit Kosten; Antwort der Anwälte zur Datenverbindung
+      - Rolle: Geschäftsführung · IT-Liste: planende KI
+      - Abhängig: O05
+      - Stand: offen; Server oben nur bei VC-Funding mit Deutschland verbunden
+      - Quelle: D47
+    - **Schritt:** 2.1.8 · Geld und Leistungen oben: wie das Team bezahlt wird und wie Mieter für Leistungen zahlen (Essen, Strom, Wasser, Internet, Sauna, Coworking, Betrieb) _[offen]_
+      - Fertig, wenn: Leistungsliste mit Preis oder Gegenleistung, von Geschäftsführung und Projektleitung entschieden
+      - Rolle: bereitet vor: planende KI · entscheiden: Geschäftsführung und Projektleitung
+      - Abhängig: O03, 2.4.5
+      - Stand: offen; Regeln aus D36 bis D38 umsetzen
+      - Quelle: D36, D37, D38
+  - **Ast:** 2.2 Standort und Bau
+    - **Schritt:** 2.2.1 · Geologie _[entschieden]_
+      - Fertig, wenn: Bericht und Fachprüfung liegen vor
+      - Rolle: Geschäftsführung
+      - Abhängig: –
+      - Stand: Bericht 34.11/26 liegt vor (Grundlage, O01); Fachprüfung, Zusatzerkundung und Vermessung liegen vor, noch nicht im Plan abgelegt (AP-A1)
+      - Quelle: Kommentar 15.11.2026
+    - **Schritt:** 2.2.2 · Lageplan Phase 0 und Ausbau: Lage der Objekte, Zufahrt, Leitungen, Entwässerung, freie Flächen _[offen]_
+      - Fertig, wenn: Lageplan auf Grundlage des Detailplans, vom Fachexperten geprüft
+      - Rolle: Architekt (Beratung) mit Fachexperte Bau
+      - Abhängig: lage, AP-A4
+      - Stand: offen; Grundlage Detailplan Blatt 3
+      - Quelle: D55, D56
+    - **Schritt:** 2.2.3 · Objekt Phase 0 gewählt: in Teilen geliefert, über die einspurige, enge Straße transportierbar _[offen]_
+      - Fertig, wenn: Angebot mit Preis, Lieferform, größtem und schwerstem Teil, Montageaufwand
+      - Rolle: Projektleitung · entscheidet: Geschäftsführung
+      - Abhängig: hausart, AP-A0, AP-C1
+      - Stand: offen
+      - Quelle: D56, GB1; Kommentar 17.11.2026
+    - **Schritt:** 2.2.4 · Zufahrt und Transport, im Sommer und im Winter _[offen]_
+      - Fertig, wenn: Streckenprotokoll; Spediteur bestätigt schriftlich, dass die Teile auf kleinem Fahrzeug hochkommen; Winterräumung geregelt
+      - Rolle: Projektleitung
+      - Abhängig: AP-A0, AP-C3
+      - Stand: Phase 0 entschieden: kleines Fahrzeug, keine Befestigung am Anfang (D57); Strecke noch nicht gemessen
+      - Quelle: D57; Kommentar 17.11.2026
+    - **Schritt:** 2.2.5 · Belege zum Grundstück _[offen]_
+      - Fertig, wenn: Kopien von Eigentumsnachweis, Detailplan und Bebauungsplan im Plan; Klärung, ob die Katasternummer für alle Teile gilt
+      - Rolle: liefert: Geschäftsführung · legt ab: Projektleitung
+      - Abhängig: AP-A1
+      - Stand: Grundstück im Besitz, Detailplan und Bebauungsplan liegen vor (Kommentar 12.11.2026); Kopien fehlen im Plan
+      - Quelle: Kommentar 12.11.2026 im Whitepaper
+    - **Schritt:** 2.2.6 · Genehmigung: was aufgestellt und bewohnt werden darf _[offen]_
+      - Fertig, wenn: Schriftliche Auskunft
+      - Rolle: Architekt (Beratung), Anwälte Ukraine
+      - Abhängig: lage, O05
+      - Stand: offen
+      - Quelle: –
+    - **Schritt:** 2.2.7 · Leitungen geplant: Wasser, Abwasser, Strom, Internet _[offen]_
+      - Fertig, wenn: Leitungsplan
+      - Rolle: Fachexperten
+      - Abhängig: AP-A4
+      - Stand: offen
+      - Quelle: D59 bis D63
+    - **Schritt:** 2.2.8 · Fundament und Aufstellen _[wartet]_
+      - Fertig, wenn: Objekte stehen auf dem Fundament, abgenommen
+      - Rolle: Fachexperte Bau
+      - Abhängig: AP-D3, G1
+      - Stand: wartet
+      - Quelle: Geologiebericht 34.11/26
+  - **Ast:** 2.3 Versorgung
+    - **Schritt:** 2.3.1 · Ressourcenbilanz für Team und erste Mieter: Energie (auch E-Bikes), Wärme, Wasser, Kommunikation; je Ressource Last, Quelle, Reserve und Ausfallfolge _[offen]_
+      - Fertig, wenn: Tabelle mit Ausbaustufen, Werte vom Fachexperten bestätigt
+      - Rolle: planende KI aus M02 · bestätigt: Fachexperte
+      - Abhängig: AP-C5 (Größe der Charge 1)
+      - Stand: teilweise; die M02-Mengen gelten für 3 Personen und werden für Team plus erste Mieter neu gerechnet
+      - Quelle: M02
+    - **Schritt:** 2.3.2 · Lösung je Ressource _[entschieden]_
+      - Fertig, wenn: entschieden
+      - Rolle: Geschäftsführung
+      - Abhängig: –
+      - Stand: Netz mit Generator, Solar ab Phase 1; Grundwasser mit Aufbereitung; Sanitär fest ab Phase 0; Holzofen; Internet mit Vergleich
+      - Quelle: D59 bis D63
+    - **Schritt:** 2.3.3 · Abnahmeliste vor dem Einzug _[offen]_
+      - Fertig, wenn: Abnahmetabelle ausgefüllt und von der Projektleitung freigegeben
+      - Rolle: Fachexperten · Freigabe Projektleitung
+      - Abhängig: AP-E1
+      - Stand: Entwurf in AP-E1
+      - Quelle: D66
+    - **Schritt:** 2.3.4 · Vor dem ersten Frost fertig: Heizung nach Heizlast, frostfreie Wasserleitung, Toilette und Batterie im Warmen, Generator draußen _[wartet]_
+      - Fertig, wenn: Abnahme durch Fachexperten
+      - Rolle: Fachexperte Heizung
+      - Abhängig: G3
+      - Stand: wartet
+      - Quelle: D59, D60
+    - **Schritt:** 2.3.5 · Messung bei Frost im ersten Winter _[später]_
+      - Fertig, wenn: Alle M02-Zeilen „Grundbetrieb“ bei Frost gemessen und bestanden
+      - Rolle: Team · wertet aus: planende KI
+      - Abhängig: AP-F1
+      - Stand: später
+      - Quelle: M02
+    - **Schritt:** 2.3.6 · E-Bikes und Laden: wie viele, wo geladen wird, welche Leistung, wer zahlt _[offen]_
+      - Fertig, wenn: Last in 2.3.1 und Kosten im Register
+      - Rolle: bereitet vor: planende KI · entscheidet: Geschäftsführung
+      - Abhängig: 2.3.1
+      - Stand: offen
+      - Quelle: –
+    - **Schritt:** 2.3.7 · Kritische Fehlerarten und zulässige Tests (FMEA) für Wärme, Wasser, Strom für die Arbeit, Brand und CO, Zugang _[offen]_
+      - Fertig, wenn: Je Funktion Fehlerart, Wirkung, Erkennung, Maßnahme, Test; vom Fachexperten bewertet
+      - Rolle: entwirft: planende KI · bewertet: Fachexperte
+      - Abhängig: 2.3.1, 2.3.2
+      - Stand: offen
+      - Quelle: M06
+  - **Ast:** 2.4 Menschen
+    - **Schritt:** 2.4.1 · Team oben: Rollen, Plätze, Finanzierung; je Person, womit sie Geld verdient, Geräte, Strom und Internet _[offen]_
+      - Fertig, wenn: Liste je Rolle
+      - Rolle: Geschäftsführung und Projektleitung
+      - Abhängig: –
+      - Stand: offen
+      - Quelle: –
+    - **Schritt:** 2.4.2 · Whitelist der künftigen Mieter _[offen]_
+      - Fertig, wenn: Whitelist läuft, Einträge gezählt
+      - Rolle: Projektleitung
+      - Abhängig: AP-A8, 2.5.4
+      - Stand: noch nicht eingerichtet (Kommentar 12.11.2026: „ist nicht vorhanden, kommt erst“)
+      - Quelle: D50; Antwort 17.11.2026
+    - **Schritt:** 2.4.3 · Werbematerial für Mietinteressenten: Video und Bilder, die Objekte realitätsnah auf dem Grundstück _[in Arbeit]_
+      - Fertig, wenn: Video und Bilder fertig; der Jurist hat die Texte gesehen
+      - Rolle: Projektleitung mit KI
+      - Abhängig: 2.5.4
+      - Stand: in Arbeit
+      - Quelle: –
+    - **Schritt:** 2.4.4 · Kommunalgebäude: Arbeitsplatz, Küche, Sanitär, Gemüsegarten _[später]_
+      - Fertig, wenn: Planung mit Kosten
+      - Rolle: Geschäftsführung mit Architekt (Beratung)
+      - Abhängig: AP-G2
+      - Stand: erster Bau in Phase 1
+      - Quelle: D64
+    - **Schritt:** 2.4.5 · Betrieb oben: wer Holz, Wasser, Schnee und Wartung übernimmt _[offen]_
+      - Fertig, wenn: Liste mit Aufgaben und Rollen
+      - Rolle: Geschäftsführung und Projektleitung
+      - Abhängig: 2.4.1
+      - Stand: offen
+      - Quelle: –
+    - **Schritt:** 2.4.6 · Was es vor Ort gibt: Holz, Lebensmittel, Reparatur, Kraftstoff, Handwerker, Transport _[offen]_
+      - Fertig, wenn: Liste mit Anbieter, Preis, Entfernung, im Winter erreichbar
+      - Rolle: ausführende KI · prüft: Projektleitung
+      - Abhängig: –
+      - Stand: offen
+      - Quelle: –
+    - **Schritt:** 2.4.7 · Absprachen oben und Notfallplan, auch bei gesperrter Auffahrt _[offen]_
+      - Fertig, wenn: Schriftliche Absprachen; Notfallplan mit Vorräten (Menge legt der Fachexperte fest)
+      - Rolle: Projektleitung
+      - Abhängig: 2.4.1, 2.4.2
+      - Stand: offen
+      - Quelle: M02-08
+    - **Schritt:** 2.4.8 · Wer macht was selbst: je Leistung (Planung, Transport, Fundament, Aufstellen, Anschlüsse, Innenausbau) selbst, mit Hilfe oder extern _[offen]_
+      - Fertig, wenn: Liste je Leistung mit Stunden und Fachkosten
+      - Rolle: bereitet vor: planende KI · bestätigen: Geschäftsführung und Projektleitung
+      - Abhängig: 2.4.1
+      - Stand: offen
+      - Quelle: D70
+    - **Schritt:** 2.4.9 · Nutzungstest mit drei Personas: Prüfsituationen T00 bis T06 _[offen]_
+      - Fertig, wenn: Matrix M02 ausgefüllt mit Kriterium, Nachweis, Prüfer, Datum
+      - Rolle: führt: Projektleitung · bestätigen: Fachexperten
+      - Abhängig: 2.3.7
+      - Stand: offen; T00 vor der Bestellung, T01, T05, T06 vor dem Einzug
+      - Quelle: M02
+  - **Ast:** 2.5 Firma und Recht
+    - **Schritt:** 2.5.1 · Wer tritt auf: Rechtsform der Gesellschaften _[offen]_
+      - Fertig, wenn: siehe O11
+      - Rolle: Geschäftsführung
+      - Abhängig: O11
+      - Stand: nach D44
+      - Quelle: D44
+    - **Schritt:** 2.5.2 · Verhältnis von Holding, Agentur und Node-Gesellschaft _[offen]_
+      - Fertig, wenn: Antwort des Anwalts
+      - Rolle: Anwalt Deutschland
+      - Abhängig: O05
+      - Stand: Prüfauftrag
+      - Quelle: –
+    - **Schritt:** 2.5.3 · Welche Arbeit, welches Geld und welche Rechte zu X-PORTAL gehören und welche zur Agentur _[offen]_
+      - Fertig, wenn: Übersicht, von Geschäftsführung und Projektleitung freigegeben
+      - Rolle: Geschäftsführung und Projektleitung
+      - Abhängig: 2.5.1
+      - Stand: offen
+      - Quelle: –
+    - **Schritt:** 2.5.4 · Website und Whitelist rechtlich geprüft, auch „Daten in der EU“ gegen die Server oben _[offen]_
+      - Fertig, wenn: Ein Jurist hat die Texte gesehen
+      - Rolle: Projektleitung
+      - Abhängig: AP-A8
+      - Stand: offen
+      - Quelle: GB10
+    - **Schritt:** 2.5.5 · Vertrags- und Rollenmodell: wer vermietet, wer betreibt die Infrastruktur, wer erfüllt welche Zusage, was der Token ist _[offen]_
+      - Fertig, wenn: Antworten der Anwälte in Deutschland und der Ukraine
+      - Rolle: Anwälte
+      - Abhängig: O05, AP-A6
+      - Stand: Prüfauftrag
+      - Quelle: D45, D48
+    - **Schritt:** 2.5.7 · Ablage: KI arbeitet sicher und DSGVO-konform auf OneDrive _[offen]_
+      - Fertig, wenn: Testordner ohne Personaldaten verbunden; Zustimmung des Admins; Vertrag zur Auftragsverarbeitung
+      - Rolle: Projektleitung
+      - Abhängig: –
+      - Stand: offen
+      - Quelle: –
+    - **Schritt:** 2.5.8 · Förderung _[offen]_
+      - Fertig, wenn: Gespräch mit dem Förderer geführt
+      - Rolle: Geschäftsführung
+      - Abhängig: O11
+      - Stand: offen; nicht öffentlich zeigen
+      - Quelle: D47
+  - **Ast:** 2.6 Umsatz
+    - **Schritt:** 2.6.1 · Erster bezahlter Auftrag mit Testkarte (M09) _[offen]_
+      - Fertig, wenn: Bezahlte Rechnung
+      - Rolle: Geschäftsführung und Projektleitung
+      - Abhängig: 2.6.2
+      - Stand: offen; laufend, vor dem Investorengespräch
+      - Quelle: D51, D71
+    - **Schritt:** 2.6.2 · Preismodell für Agenten: Abo, Einmalzahlung mit Betreuung, nach Nutzung _[offen]_
+      - Fertig, wenn: Modell entschieden, mit Kosten je Leistung
+      - Rolle: rechnet: planende KI · entscheiden: Geschäftsführung und Projektleitung
+      - Abhängig: –
+      - Stand: offen
+      - Quelle: –
+    - **Schritt:** 2.6.4 · Agenten über Masumi verkaufen _[später]_
+      - Fertig, wenn: Erster bezahlter Verkauf eines Agenten
+      - Rolle: Team oben
+      - Abhängig: 2.6.1
+      - Stand: später
+      - Quelle: –
+    - **Schritt:** 2.6.6 · Schema für den nächsten Node: Standards getrennt von den Werten dieses Grundstücks (System Model, Datenwörterbuch) _[später]_
+      - Fertig, wenn: Probe: Ein geänderter Standortparameter macht betroffene Anforderungen, Varianten und Beschlüsse auffindbar
+      - Rolle: planende KI · Geschäftsführung
+      - Abhängig: AP-H3
+      - Stand: später; Probe vor G1
+      - Quelle: Z4
+- **Ast:** Steuerung: Eingänge, Routine, Methoden (M01 bis M11)
+  - **Schritt:** Bei jeder Runde zuerst die Eingänge _[Regel steht]_
+    - Bevor etwas geändert wird, liest die planende KI die Kommentare auf allen Seiten (Index, Entscheidungsseite, Vor dem Investment, Anschaffungen, SGMM, Whitepaper) und die Antworten in der Datenbank. Jeder Eingang steht im Änderungsprotokoll mit Seite, Datum, Wortlaut, Umsetzung und Stelle; danach prüft ein Skript alle Seiten auf alten Stand.
+    - Quelle: Vorgabe vom 17.11.2026
+  - **Schritt:** Montag, 15 Minuten _[Regel steht]_
+    - Geschäftsführung und Projektleitung gehen den Plan durch: was fertig ist, was überfällig, was frei. Der Wechselkurs wird neu angesetzt.
+    - Quelle: Index 2.0, 3.3 (M10)
+  - **Schritt:** Neue Markt- oder Preisinformation _[Regel steht]_
+    - Mit Quelle und Datum notieren, als Fakt, Angebotspreis, Annahme oder Szenario kennzeichnen, mit der betroffenen Annahme und dem nötigen Test oder Beschluss.
+    - Quelle: Index 2.0, 3.3 (M08)
+  - **Schritt:** Monatsende _[Regel steht]_
+    - Eine Zeile: was lief, was nicht, was ändern wir, was kommt ins Schema für den nächsten Node. Größere Probleme als A3-Fall: Beobachtung, Ausgangswert, Ursache, Maßnahme, Freigabe, Ergebnis, Änderung am Standard.
+    - Quelle: Index 2.0, 3.3 (M11)
+  - **Schritt:** Quartal _[Regel steht]_
+    - Plan, Methoden und Bausteine im Ganzen: was wird vereinfacht, was bleibt, was wird vertieft.
+    - Quelle: Index 2.0, 3.3
+  - **Schritt:** Methoden M01 bis M11: so klein wie die nächste Entscheidung es braucht _[Regel steht]_
+    - Aus der Methodenbewertung V1.0 (Index 2.0, Anhang A1). Weitere Vertiefungen erst bei ihrem Auslöser: QFD-Bewertung, formales Systemmodell, automatische Regeln, Termin- und Autarkiesimulation.
+    - M01: Zielbaum und kompakte Ergebniskennzahlen · jetzt; Zielblatt in der Grundlage
+    - M02: Nutzungsszenarien, Anforderungs- und Testmatrix · jetzt; Ast 2, Werte vom Fachexperten offen
+    - M03: Angepasste PRINCE2-Steuerung, eindeutige Rollen · jetzt; Beschlussblätter, Gates
+    - M04: Ausgewählte Abläufe und Entscheidungstabellen · jetzt; Ausgänge im Baum
+    - M05: Make-or-Buy, Vollkosten, Sensitivität · vor der Investition; Ast 4
+    - M06: Ressourcenbilanzen, gezielte FMEA, Szenariotests · vor der Investition und im Pilot; Ast 3, 2.3.1, 2.3.7
+    - M07: Systemmodell, Schnittstellen und Konfiguration · Probe vor G1; 2.6.6
+    - M08: Markt, PESTL und Trends mit Quellen · jetzt, je Entscheidung
+    - M09: Umsatz und Technologiepartner: Experimente, Ergebnisrechnung · jetzt; 2.6.1
+    - M10: Arbeitsfluss und Terminplan nach Abhängigkeiten · jetzt; Ablaufplan, AP-C4
+    - M11: Verbesserung (PDCA), A3-Fälle, Standardversionen · jetzt; ab Betrieb mit mehr Daten
 
 ## 2 · Alltag oben: prüfbare Anforderungen nach Maslow und Sinnen (M02)
 
@@ -623,7 +942,7 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
   - Die Projektleitung ist von Anfang an oben, führt Produkt und Projekt und koordiniert den Betrieb. Zwei weitere Teammitglieder bauen Technologielösungen und liefern Kundenprojekte. Ab Phase 1 kommen Mieter dazu (D45); sie sind frei in Arbeit und Tagesablauf, ihre Gemeinschaftsarbeit wird angerechnet (D36, D38).
 - **Schritt:** Spielregeln oben: ein einfaches Leben aus Arbeit und Erholung _[offen]_
   - Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog
-  - Wer oben ist, soll sich nur auf Arbeit und Erholung konzentrieren müssen. Versorgung, Technik und Betrieb laufen im Hintergrund; deshalb sind Grundbedürfnisse und Sicherheit nach Maslow geklärt, bevor jemand oben arbeitet (E53).
+  - Wer oben ist, soll sich nur auf Arbeit und Erholung konzentrieren müssen. Versorgung, Technik und Betrieb laufen im Hintergrund; deshalb sind Grundbedürfnisse und Sicherheit nach Maslow geklärt, bevor jemand oben arbeitet (D66).
   - Arbeitszeit: Kernzeit 9 bis 14 Uhr als Gleitzeit. Wer Kunden in einer anderen Zeitzone hat, verlegt sie, zum Beispiel auf den Abend.
   - Pflicht: Jour fixe am Morgen und gemeinsame Aktivitäten wie Sport.
   - Angebot: Zusammen arbeiten steht offen, ist aber keine Voraussetzung.
@@ -652,7 +971,7 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
     - Anforderung: Jede Person hat einen eigenen Schlafplatz, vom Arbeits- und Küchenbereich getrennt.
     - Prüfverfahren: Nachts messen, während im Nachbarbereich gesprochen wird.
     - Grenzwert: Nachtwert festlegen
-    - Planwert: Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (E22).
+    - Planwert: Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (GB11).
     - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr
     - Abnahme: Projektleitung (ist von Anfang an oben)
     - Teilergebnis: 2.2.3 (früher N12)
@@ -661,9 +980,9 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
     - Anforderung: Der Raum kühlt über Nacht, wenn der Ofen ausgeht, nicht unter einen festgelegten Morgenwert ab. Dafür braucht jedes Modul eine Heizlastrechnung bei −20 °C, und die Ofenleistung muss dazu passen: ein überdimensionierter Ofen wird gedrosselt, schwelt und bildet CO.
     - Prüfverfahren: Heizlastrechnung vor der Bestellung; im Oktober Auskühlkurve über eine Nacht messen und auf −20 °C umrechnen; im ersten Winter bei Frost nachmessen.
     - Grenzwert: Annahme: grob 1,5–3 kW Heizlast je gut gedämmtem Modul bei −20 °C (Auslegungstemperatur als Annahme; Klimadaten für Werchowyna trägt der Rechercheur bis 21.11.2026 ein (Terminvorschlag)), Annahme: Öfen mit Kochplatte haben meist 6–10 kW; Rechnung durch Fachexperte
-    - Planwert: Annahme: mindestens 12 °C im Schlafbereich und 16 °C im Arbeitsbereich nach 8 Stunden ohne Feuer. Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (E22).
+    - Planwert: Annahme: mindestens 12 °C im Schlafbereich und 16 °C im Arbeitsbereich nach 8 Stunden ohne Feuer. Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (GB11).
     - Nachweis: vor Nutzung: Rechnung oder Abnahme vor dem Einzug; im ersten Winter: Rechnung vor Bestellung (N16); Messung im Oktober und bei Frost im ersten Winter
-    - Abnahme: Architekt (Beratung) (über Geschäftsführung, Preis unbekannt, E27) und Projektleitung (ist von Anfang an oben)
+    - Abnahme: Architekt (Beratung) (über Geschäftsführung, Preis unbekannt) und Projektleitung (ist von Anfang an oben)
     - Teilergebnis: 2.3.2 (früher N07), 2.2.3 (früher N12)
   - **Anforderung H03:** Warm arbeiten _[nicht geprüft]_
     - von Anfang an
@@ -671,7 +990,7 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
     - Prüfverfahren: Temperatur am Platz messen, morgens und nachmittags.
     - Grenzwert: mindestens 20 °C ( ASR A3.5 Raumtemperatur )
     - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost
-    - Abnahme: Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (E53); Projektleitung prüft im Alltag (E24)
+    - Abnahme: Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (D66); Projektleitung prüft im Alltag
     - Teilergebnis: 2.3.2 (früher N07)
   - **Anforderung H04:** Trinken _[nicht geprüft]_
     - von Anfang an · heute in M02 als M02-04 (laut Index)
@@ -687,9 +1006,9 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
     - Anforderung: Warmes Wasser zum Waschen und Duschen, im Winter ohne Weg nach draußen. Daraus folgt die Größe von Tank und Boiler und die Wassermenge für 10 Tage Sperre.
     - Prüfverfahren: Duschtest im Wintertest.
     - Grenzwert: Rechnung aus den Annahmen: Ein 1.000-l-Tank reicht in der Anfangsstufe knapp 7 Tage, in der Ausbaustufe knapp 3 Tage. 1.000 l wiegen 1 t: Bodenlast prüft ein Fachexperte Statik.
-    - Planwert: Stufe Anfang: 50 l je Person und Tag, für 3 Personen 150 l am Tag und 1.500 l für 10 Tage Sperre (Annahme). Stufe Ausbau: 120 l je Person und Tag, für 3 Personen 360 l am Tag und 3.600 l für 10 Tage (der Projektleitung Vergleich mit dem Durchschnitt in Deutschland, E26). Tank, Boiler und Leitung werden für die Ausbaustufe vorbereitet, gebaut wird zuerst die Anfangsstufe. Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (E22).
+    - Planwert: Stufe Anfang: 50 l je Person und Tag, für 3 Personen 150 l am Tag und 1.500 l für 10 Tage Sperre (Annahme). Stufe Ausbau: 120 l je Person und Tag, für 3 Personen 360 l am Tag und 3.600 l für 10 Tage (der Projektleitung Vergleich mit dem Durchschnitt in Deutschland). Tank, Boiler und Leitung werden für die Ausbaustufe vorbereitet, gebaut wird zuerst die Anfangsstufe. Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (GB11).
     - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost
-    - Abnahme: Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (E53); Projektleitung prüft im Alltag (E24)
+    - Abnahme: Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (D66); Projektleitung prüft im Alltag
     - Teilergebnis: 2.3.2 (früher N08), 2.3.2 (früher N09)
   - **Anforderung H06:** Toilette _[nicht geprüft]_
     - von Anfang an
@@ -697,7 +1016,7 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
     - Prüfverfahren: Nutzung im Wintertest; Geruch und Erreichbarkeit beurteilen.
     - Grenzwert: ja oder nein
     - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost
-    - Abnahme: Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (E53); Projektleitung prüft im Alltag (E24)
+    - Abnahme: Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (D66); Projektleitung prüft im Alltag
     - Teilergebnis: 2.3.2 (früher N09)
   - **Anforderung H07:** Essen _[nicht geprüft]_
     - von Anfang an · heute in M02 als M02-08 (laut Index)
@@ -712,9 +1031,9 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
     - Anforderung: Frische Luft in Arbeits- und Schlafbereich, auch bei geschlossenen Fenstern im Winter. Lüftung mit Frostschutz; der Ofen bekommt Verbrennungsluft von außen, damit er keinen Rauch in den Raum zieht.
     - Prüfverfahren: CO₂-Messgerät im Raum.
     - Grenzwert: unter 1.000 ppm ohne weitere Maßnahme, 1.000–2.000 ppm lüften ( DGUV 215-510: CO₂ und Lüften )
-    - Planwert: Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (E22).
+    - Planwert: Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (GB11).
     - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost
-    - Abnahme: Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (E53); Projektleitung prüft im Alltag (E24)
+    - Abnahme: Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (D66); Projektleitung prüft im Alltag
     - Teilergebnis: 2.2.3 (früher N12)
   - **Anforderung H09:** Wege bei Schnee und Dunkelheit _[nicht geprüft]_
     - von Anfang an
@@ -747,9 +1066,9 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
     - Anforderung: Licht, Laptops, Bildschirme, Starlink, Router, Pumpe und Kühlschrank laufen bei Netzausfall eine festgelegte Zeit weiter. Frostschutz der Wasserleitung hängt nicht am Strom (Tiefe statt Heizkabel). Batterie steht im Warmen; Generator draußen mit Kraftstoff für 3 Tage (Annahme, passend zur Sperre im Störungstag).
     - Prüfverfahren: Netz im Test absichtlich abschalten und Zeit messen; Lastliste mit Watt und Stunden.
     - Grenzwert: Die 4,8-kWh-Batterie aus N06 reicht nach dieser Rechnung nicht sicher: ohne Pumpe 3,8–4,56 kWh, dazu Verluste und Pumpe. Batteriegröße rechnet der Fachexperte.
-    - Planwert: Annahme: Muss-Lasten etwa 380 W ohne Pumpe (3 Laptops à 50 W, 3 Bildschirme à 25 W, Starlink 75 W, Router 10 W, LED-Licht 30 W, Kühlschrank im Mittel 40 W). Über 10–12 Stunden sind das 3,8–4,56 kWh vor Verlusten. Die Pumpe fehlt in dieser Summe; ihre Leistung und Laufzeit kommen nach der Pumpenwahl dazu. Eine ausreichende Batteriegröße ist damit noch nicht nachgewiesen. Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (E22).
+    - Planwert: Annahme: Muss-Lasten etwa 380 W ohne Pumpe (3 Laptops à 50 W, 3 Bildschirme à 25 W, Starlink 75 W, Router 10 W, LED-Licht 30 W, Kühlschrank im Mittel 40 W). Über 10–12 Stunden sind das 3,8–4,56 kWh vor Verlusten. Die Pumpe fehlt in dieser Summe; ihre Leistung und Laufzeit kommen nach der Pumpenwahl dazu. Eine ausreichende Batteriegröße ist damit noch nicht nachgewiesen. Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (GB11).
     - Nachweis: vor Nutzung: Lastliste mit Pumpe und Batterierechnung; im ersten Winter: Netzausfall-Test
-    - Abnahme: Architekt (Beratung) (über Geschäftsführung, Preis unbekannt, E27)
+    - Abnahme: Architekt (Beratung) (über Geschäftsführung, Preis unbekannt)
     - Teilergebnis: 2.3.2 (früher N06)
   - **Anforderung S04:** Privatheit _[nicht geprüft]_
     - von Anfang an
@@ -772,7 +1091,7 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
     - Anforderung: Wer oben ist, kann über x-portal.eu bezahlte Arbeit bekommen.
     - Prüfverfahren: Erstes bezahltes Projekt einer Person, die oben wohnt; bis 31.12.2026 erstes bezahltes Projekt über x-portal.eu überhaupt (Ereignis Umsatz).
     - Grenzwert: Gibt es bis 31.12.2026 kein bezahltes Projekt, gilt nur die Stufe „1 Person“
-    - Planwert: Monatsumsatz über x-portal.eu mindestens der Geschäftsführung 8.000 € netto (brutto rechnet ein Steuerberater) plus laufende Kosten oben aus N02 (bekannt: Starlink laut Suchergebnissen um 2.950 UAH im Monat, auf starlink.com für die Adresse prüfen, siehe N11, rund 59 € bei 50 UAH/EUR (E20)); Geschäftsführung und Projektleitung bis 21.11.2026 (Terminvorschlag)
+    - Planwert: Monatsumsatz über x-portal.eu mindestens der Geschäftsführung 8.000 € netto (brutto rechnet ein Steuerberater) plus laufende Kosten oben aus N02 (bekannt: Starlink laut Suchergebnissen um 2.950 UAH im Monat, auf starlink.com für die Adresse prüfen, siehe N11, rund 59 € bei 50 UAH/EUR); Geschäftsführung und Projektleitung bis 21.11.2026 (Terminvorschlag)
     - Nachweis: vor Nutzung: 31.12.2026 und monatlich
     - Abnahme: Projektleitung
     - Teilergebnis: 2.6.1 (früher N26)
@@ -787,7 +1106,7 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
 - **Ast:** Zugehörigkeit
   - **Anforderung Z01:** Gemeinsam essen und reden _[nicht geprüft]_
     - von Anfang an
-    - Anforderung: Ein gemeinsamer Bereich zum Essen und Reden. Liegt er im Gemeinschaftscontainer mit Arbeitsplätzen, Küche und Sanitär (E40), muss der Grundriss zeigen: Küche und Calls stören die konzentrierte Arbeit nicht (D02).
+    - Anforderung: Ein gemeinsamer Bereich zum Essen und Reden. Liegt er im Gemeinschaftscontainer mit Arbeitsplätzen, Küche und Sanitär, muss der Grundriss zeigen: Küche und Calls stören die konzentrierte Arbeit nicht (D02).
     - Prüfverfahren: Grundriss des Gemeinschaftscontainers prüfen; Schallpegel am Arbeitsplatz messen, während gekocht und telefoniert wird.
     - Grenzwert: ja oder nein
     - Nachweis: vor Nutzung: Grundriss vor der Bestellung; Messung vor dem Einzug
@@ -828,8 +1147,8 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
     - Teilergebnis: 2.4.5 (früher N29)
   - **Anforderung A03:** Kundentermin trotz Ausfall _[nicht geprüft]_
     - von Anfang an · heute in M02 als M02-39 (laut Index)
-    - Anforderung: Fällt oben Strom oder Internet aus und ist die Auffahrt passierbar: Ausweicharbeitsplatz unten mit bekannter Fahrzeit. Sind Verbindung und Auffahrt gleichzeitig weg, läuft die Arbeit oben weiter (E46, E54): Starlink, Batterie und Generator mit Vorrat reichen, bis Auffahrt oder Netz zurück sind.
-    - Prüfverfahren: Beide Fälle einmal durchspielen. Wie lange die Auffahrt im Winter gesperrt sein kann und wie groß Batterie und Vorrat dafür sein müssen, legen Architekt (Beratung) und der Fachexperte fest (E22).
+    - Anforderung: Fällt oben Strom oder Internet aus und ist die Auffahrt passierbar: Ausweicharbeitsplatz unten mit bekannter Fahrzeit. Sind Verbindung und Auffahrt gleichzeitig weg, läuft die Arbeit oben weiter: Starlink, Batterie und Generator mit Vorrat reichen, bis Auffahrt oder Netz zurück sind.
+    - Prüfverfahren: Beide Fälle einmal durchspielen. Wie lange die Auffahrt im Winter gesperrt sein kann und wie groß Batterie und Vorrat dafür sein müssen, legen Architekt (Beratung) und der Fachexperte fest (GB11).
     - Grenzwert: Vorlaufzeit festlegen
     - Nachweis: vor Nutzung: Ablauf schriftlich vor dem ersten Kundencall von oben
     - Abnahme: Projektleitung
@@ -854,7 +1173,7 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
 - **Ast:** Beispiel: konzentriert digital arbeiten
   - **Anforderung D01:** Gleichzeitige Nutzung _[nicht geprüft]_
     - von Anfang an
-    - Anforderung: Zwei Personen können gleichzeitig in Videocalls sein, während die dritte arbeitet, auch bei Schnee. Hauptanschluss ist ein eigener Internetanschluss, Reserve ist Starlink; Mobilfunk gibt es oben nicht (E49). Die Reserve muss den Upload ebenfalls schaffen.
+    - Anforderung: Zwei Personen können gleichzeitig in Videocalls sein, während die dritte arbeitet, auch bei Schnee. Hauptanschluss ist ein eigener Internetanschluss, Reserve ist Starlink; Mobilfunk gibt es oben nicht. Die Reserve muss den Upload ebenfalls schaffen.
     - Prüfverfahren: 30 Minuten zwei Calls gleichzeitig, Upload je Minute und Abbrüche messen, einmal über den Hauptanschluss und einmal nur über Starlink.
     - Grenzwert: Zoom nennt für 1080p 3,8 Mbit/s hoch und 3,0 runter je Teilnehmer; für zwei Calls also mindestens etwa 8 Mbit/s Upload plus Reserve ( Zoom: Bandbreite berechnen )
     - Planwert: Annahme: mindestens 8 Mbit/s Upload in 95 % der Minuten, kein Abbruch; Geschäftsführung und Projektleitung bis 21.11.2026 (Terminvorschlag)
@@ -863,10 +1182,10 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
     - Teilergebnis: 2.3.2 (früher N11)
   - **Anforderung D02:** Akustik _[nicht geprüft]_
     - von Anfang an
-    - Anforderung: Calls finden nicht am Platz der Person statt, die konzentriert arbeitet. Konzentriertes Arbeiten geht im eigenen Wohncontainer (E40); der Gemeinschaftsplatz braucht dafür eine Trennung oder eine Telefonecke.
+    - Anforderung: Calls finden nicht am Platz der Person statt, die konzentriert arbeitet. Konzentriertes Arbeiten geht im eigenen Wohncontainer; der Gemeinschaftsplatz braucht dafür eine Trennung oder eine Telefonecke.
     - Prüfverfahren: Schallpegel am Platz messen, während nebenan telefoniert wird.
     - Grenzwert: höchstens 55 dB(A) für Tätigkeiten mit hoher Konzentration ( ASR A3.7 Lärm, Abschnitt 5 )
-    - Planwert: Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (E22).
+    - Planwert: Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (GB11).
     - Nachweis: vor Nutzung: Grundriss; Messung vor dem Einzug
     - Abnahme: Projektleitung (ist von Anfang an oben)
     - Teilergebnis: 2.2.3 (früher N12)
@@ -885,7 +1204,7 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
     - Grenzwert: wie S03
     - Planwert: wie S03
     - Nachweis: vor Nutzung: Lastliste mit Pumpe und Batterierechnung; im ersten Winter: Netzausfall-Test
-    - Abnahme: Architekt (Beratung) (über Geschäftsführung, Preis unbekannt, E27)
+    - Abnahme: Architekt (Beratung) (über Geschäftsführung, Preis unbekannt)
     - Teilergebnis: 2.3.2 (früher N06)
   - **Anforderung D05:** Wärme und Luft am Platz _[nicht geprüft]_
     - von Anfang an
@@ -893,12 +1212,12 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
     - Prüfverfahren: Mit H03 und H08 messen.
     - Grenzwert: siehe H03, H08
     - Nachweis: vor Nutzung: Abnahme vor dem Einzug im Frühjahr; im ersten Winter: Messung bei Frost
-    - Abnahme: Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (E53); Projektleitung prüft im Alltag (E24)
+    - Abnahme: Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (D66); Projektleitung prüft im Alltag
     - Teilergebnis: 2.3.2 (früher N07), 2.2.3 (früher N12)
 - **Ast:** In M02 dazugekommen, im Index nur als Nummer
   - Der Text dieser Zeilen steht in plan/daten/m02.json. Hier steht, was der Index über sie sagt.
   - **Anforderung:** Jour fixe am Morgen im Kommunalgebäude _[nicht geprüft]_
-    - M02-44 · aus E81 (Vorschlag KI, E80)
+    - M02-44 · aus E81 (Vorschlag KI)
   - **Anforderung:** Laufen, Wandern und Yoga _[nicht geprüft]_
     - M02-45 · aus E81
   - **Anforderung:** Sauna und Wellness _[nicht geprüft]_
@@ -914,7 +1233,7 @@ Das Maslow- und Sinneskonzept als Anforderungen an Raum, Service, Versorgung und
   - **Anforderung:** Technik: Strom, Solar, Wasser _[nicht geprüft]_
     - M02-28 · Zielbild Bereich 6, 2.3.1, 2.3.7
 - **Ast:** Szenariotests: drei Tage, gegen die jede Variante geprüft wird
-  - Aus der Matrix vom 03.11.2026. Jeder Schritt nennt die Anforderungen, die er prüft. Die Prüfsituationen T00 bis T06 im Nutzungstest (2.4.9) setzen sie um; Ausfalltests nur mit einem von einem Fachexperten freigegebenen Ablauf (E22).
+  - Aus der Matrix vom 03.11.2026. Jeder Schritt nennt die Anforderungen, die er prüft. Die Prüfsituationen T00 bis T06 im Nutzungstest (2.4.9) setzen sie um; Ausfalltests nur mit einem von einem Fachexperten freigegebenen Ablauf (GB11).
   - **Ereignis:** Sommer-Arbeitstag _[nicht geprüft]_
     - Juli, trocken, 15–16 Stunden Tageslicht
     - **Ausgang (07:00):** Aufstehen, Toilette, Waschen, Kaffee _[nicht geprüft]_
@@ -962,7 +1281,7 @@ Je Ressource drei Zustände: normaler Betrieb, Störung und Ausbau auf Team und 
 
 - **Schritt:** Energie _[offen]_
   - Dient: Z1
-  - **Ausgang (Grundbetrieb):** Netz mit Batterie oder Generator, dazu Solar (E35). _[Regel steht]_
+  - **Ausgang (Grundbetrieb):** Netz mit Batterie oder Generator, dazu Solar. _[Regel steht]_
     - Muss-Lasten etwa 380 W ohne Pumpe, über 10–12 Stunden 3,8–4,56 kWh vor Verlusten (S03, Annahme).
   - **Ausgang (Störung):** Netz 6 Stunden weg: Licht, Laptops, Starlink, Router, Pumpe und Kühlschrank laufen weiter. _[nicht geprüft]_
     - Batterie im Warmen, Generator draußen mit Kraftstoff für 3 Tage (S03, Annahme). Die Batteriegröße ist nicht nachgewiesen.
@@ -1005,9 +1324,9 @@ Je Ressource drei Zustände: normaler Betrieb, Störung und Ausbau auf Team und 
 - **Schritt:** Essen _[offen]_
   - Dient: Z1
   - **Ausgang (Grundbetrieb):** Kochen für drei Personen mit Kühlung, gemeinsam oder privat. _[offen]_
-    - H07, E81; Küche im Kommunalgebäude (E74, 2.4.4); Kühlschrank im Mittel 40 W in der Lastliste (S03).
+    - H07; Küche im Kommunalgebäude (E74, 2.4.4); Kühlschrank im Mittel 40 W in der Lastliste (S03).
   - **Ausgang (Herkunft):** Gemüsegarten, Höfe in der Umgebung, Lieferung über die Zufahrt. _[offen]_
-    - Garten am Kommunalgebäude (E74); Milch und Käse vor Ort prüfen (E15, 2.4.6); Person A holt Lieferungen unten an der Auffahrt (Sommer-Arbeitstag).
+    - Garten am Kommunalgebäude; Milch und Käse vor Ort prüfen (E15, 2.4.6); Person A holt Lieferungen unten an der Auffahrt (Sommer-Arbeitstag).
   - **Ausgang (Störung):** Auffahrt gesperrt: keine Lieferung. _[nicht geprüft]_
     - Vorrat für 10 Tage nach BBK (H07, M02-08); Notfallplan 2.4.7.
   - **Ausgang (Ausbau):** Essen für Team und Mieter in Phase 1. _[wartet]_
@@ -1025,7 +1344,7 @@ Je Ressource drei Zustände: normaler Betrieb, Störung und Ausbau auf Team und 
 - **Ast:** Ausbaupfad: von drei Personen bis zum nächsten Node
   - Jede Stufe beginnt erst, wenn die vorige ihren Test bestanden hat (M06).
   - **Schritt:** Drei Personen: das Team oben _[wartet]_
-    - 2–3 Leute wohnen und arbeiten ganzjährig oben (E01, E23); Grundbetrieb aller Ressourcen.
+    - 2–3 Leute wohnen und arbeiten ganzjährig oben; Grundbetrieb aller Ressourcen.
     - Dient: Z1
   - **Ereignis:** Test: Nutzungstest und erster Winter _[nicht geprüft]_
     - T00 bis T06 (2.4.9) und die Messung bei Frost (2.3.5).
@@ -1155,7 +1474,7 @@ Verglichen wird die betriebsfähige Lösung für das Team mit Ausbaupfad. Die am
   - Möglichkeit D: Vorrat
     - Menge: 10 Tage nach BBK (H07, M02-08)
 - **Entscheidung:** Selbst, mit Hilfe oder extern: je Leistung (2.4.8) _[offen]_
-  - Planung, Transport, Fundament, Aufstellen, Anschlüsse, Innenausbau. Je Leistung Fähigkeit, Gerät, Stunden, Fachkosten, Vertretung und wer verantwortet. Eigenleistung bekommt Zeit-, Qualitäts- und Kapazitätsansätze (M05). Geschäftsführung und Projektleitung sind nicht vom Bau; technische Werte legt ein Fachexperte fest (E22). Es fehlen die Wochenstunden von Geschäftsführung (O13) und Projektleitung.
+  - Planung, Transport, Fundament, Aufstellen, Anschlüsse, Innenausbau. Je Leistung Fähigkeit, Gerät, Stunden, Fachkosten, Vertretung und wer verantwortet. Eigenleistung bekommt Zeit-, Qualitäts- und Kapazitätsansätze (M05). Geschäftsführung und Projektleitung sind nicht vom Bau; technische Werte legt ein Fachexperte fest (GB11). Es fehlen die Wochenstunden von Geschäftsführung (O13) und Projektleitung.
   - Dient: Z1, Z2
   - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
   - Beschlussblatt, Fachliche Prüfung: Fachexperte; Architekt berät (D67)
@@ -1241,18 +1560,18 @@ Je Karte die Antwort und der Kommentar im Wortlaut; die gewählte Möglichkeit i
 
 - **Ast:** Vor dem Investment: was aus Eigenkapital und Eigenleistung geht
   - **Entscheidung D69:** Welches Paket vor dem Investment? _[offen]_
-    - Richtwert etwa 10.000 € Eigenkapital; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten. Die Beträge kommen aus dem Kostenregister vom 13.11. (Teilschätzung, keine Angebote). Nicht enthalten sind Reisen, Architektenhonorar, Gebühren und Gründungskosten. Details auf der Seite „Vor dem Investment“.
+    - So viel wie möglich mit Eigenkapital (Antwort vom 17.11.2026), bisheriger Richtwert etwa 10.000 €; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten. Fachprüfung des Geologieberichts, Zusatzerkundung und Vermessung liegen vor und sind nicht mehr enthalten (Kommentar vom 15.11.2026). Die Beträge kommen aus dem Kostenregister vom 13.11. (Teilschätzung, keine Angebote). Nicht enthalten sind Reisen, Architektenhonorar, Gebühren und Gründungskosten. Details auf der Seite „Vor dem Investment“.
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
     - Beschlussblatt, Fachliche Prüfung: –
     - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
     - Beschlussblatt, Budgetgrenze: –
     - Beschlussblatt, Gültigkeit: bis ihr sie ändert
     - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
-    - Möglichkeit A: Kern — Nachweise auf Papier (Geologie-Prüfung, Zusatzerkundung, Vermessung, Wasseranalyse, Planung, Rechtsprüfung, Angebote), Werkzeug und Kurse, Holz schlagen und einlagern, Interessenten und Unterlagen. 3.226–6.172 € (mit Reserve bis 7.098 €).
-    - Möglichkeit B: Optimum — Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. 4.403–8.236 € (mit Reserve bis 9.472 €).
-    - Möglichkeit C: Erweitert — Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. 5.119–9.825 € (mit Reserve bis 11.299 €).
+    - Möglichkeit A: Kern — Wasseranalyse, Planung, Rechtsprüfung und Angebote, Werkzeug und Kurse, Holz schlagen und einlagern, Whitelist und Unterlagen. 2.640–4.901 € (mit Reserve bis 5.636 €).
+    - Möglichkeit B: Optimum — Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. 3.817–6.965 € (mit Reserve bis 8.009 €).
+    - Möglichkeit C: Erweitert — Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. 4.533–8.554 € (mit Reserve bis 9.837 €).
   - **Entscheidung D70:** Wie wird Eigenleistung bewertet und belegt? _[offen]_
-    - Im Optimum stecken rund 443 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.
+    - Im Optimum stecken rund 431 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
     - Beschlussblatt, Fachliche Prüfung: –
     - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
@@ -1270,7 +1589,7 @@ Je Karte die Antwort und der Kommentar im Wortlaut; die gewählte Möglichkeit i
     - Beschlussblatt, Budgetgrenze: –
     - Beschlussblatt, Gültigkeit: bis ihr sie ändert
     - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
-    - Möglichkeit A: Nach Stufe A — Sobald Geologie geprüft, Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher.
+    - Möglichkeit A: Nach Stufe A — Sobald Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher.
     - Möglichkeit B: Sofort mit dem heutigen Stand — Gespräche jetzt führen, mit offenen Punkten klar benannt.
     - Möglichkeit C: Erst nach dem ersten Winter — Warten, bis Messreihen, trockenes Holz und erste Mieter-Interessenten vorliegen.
   - **Entscheidung D72:** Welche offenen Kosten zuerst mit Angeboten belegen? _[offen]_
@@ -1488,7 +1807,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
     - Beschlussblatt, Wiedervorlage: vor Node001 Governance Design
   - **Entscheidung:** OD-002 · Kritische Funktionen und Ziel-Autarkie-/Autonomiewerte für Node001 _[offen]_
     - OPEN · vor Basis of Design
-    - Im Plan: Versorgung je Ressource mit Grundbetrieb, Störung, Ausbau (Ast 3); Werte sind Annahmen, keine geprüft (E22).
+    - Im Plan: Versorgung je Ressource mit Grundbetrieb, Störung, Ausbau (Ast 3); Werte sind Annahmen, keine geprüft (GB11).
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
     - Beschlussblatt, Fachliche Prüfung: –
     - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
@@ -1524,7 +1843,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
     - Beschlussblatt, Wiedervorlage: vor Investitionsfreigabe
   - **Entscheidung:** OD-006 · Genome Invariants v0.1 _[offen]_
     - IN WORK · vor Node001 Architecture Freeze
-    - Im Plan: Z4 und 2.6.6; wiederholbar sind Schema, Planung, Nutzbarkeit und Sinn (E11).
+    - Im Plan: Z4 und 2.6.6; wiederholbar sind Schema, Planung, Nutzbarkeit und Sinn.
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
     - Beschlussblatt, Fachliche Prüfung: –
     - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
@@ -1533,7 +1852,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
     - Beschlussblatt, Wiedervorlage: vor Node001 Architecture Freeze
   - **Entscheidung:** OD-007 · Safety/Security/Privacy/Legal Baseline Node001 _[offen]_
     - OPEN · vor Technologie- und Betriebsfreigabe
-    - Im Plan: Prüfaufträge an die Anwälte (A5), Abnahmen (E53), Zugang und Server (Technik im Haus), Datenverbindung Ukraine–Deutschland (E85).
+    - Im Plan: Prüfaufträge an die Anwälte (A5), Abnahmen (D66), Zugang und Server (Technik im Haus), Datenverbindung Ukraine–Deutschland.
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
     - Beschlussblatt, Fachliche Prüfung: –
     - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
@@ -1542,7 +1861,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
     - Beschlussblatt, Wiedervorlage: vor Technologie- und Betriebsfreigabe
   - **Entscheidung:** OD-008 · Parametrischer Business Case und Architektur-Sensitivitäten _[offen]_
     - OPEN · parallel zur Node001 System Architecture
-    - Im Plan: Make-or-Buy (Ast 4), Selbstkosten je Objekt (O03), Geldfluss (2.1.3). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung); die alte Papierrechnung ist kein Business Case (Abgleich W05).
+    - Im Plan: Make-or-Buy (Ast 4), Selbstkosten je Objekt (O03), Geldfluss (2.1.3). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung); eine Rechnung über Verkaufserlöse gibt es nicht mehr (Abgleich W05).
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
     - Beschlussblatt, Fachliche Prüfung: –
     - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
@@ -1553,7 +1872,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
   - Geschäftsführung und Projektleitung · vor G1
   - Dient: Z1
   - **Ausgang (sofort):** Notfallplan zuerst. _[Regel steht]_
-    - Schutzmaßnahmen folgen sofort dem Notfallplan (2.4.7); er geht jeder anderen Regel vor (A6). Im Notfall ist man in unter 2 Stunden unten (E26).
+    - Schutzmaßnahmen folgen sofort dem Notfallplan (2.4.7); er geht jeder anderen Regel vor (A6). Im Notfall ist man in unter 2 Stunden unten.
   - **Entscheidung:** Ab wann wird abgebrochen? _[offen]_
     - Noch ohne Entwürfe.
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
@@ -1671,7 +1990,7 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
   - Beschlussblatt, Gültigkeit: bis ihr sie ändert
   - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
 
-## 8 · Entschieden am 13.11.2026, darunter das alte Log als Historie
+## 8 · Entschieden am 13.11.2026
 
 - **Ast:** Was seit 13.11.2026 gilt
   - **Entscheidung:** D34 · Feuerstelle, Gastronomie, Kapelle _[entschieden]_
@@ -1734,51 +2053,3 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
     - Rollen wie im Pitch. Der Architekt berät zu Architektur und Bau und ist kein Teammitglied.
   - **Entscheidung:** D68 · Arbeitsweise _[entschieden]_
     - Repo als Quelle und Regeln der Baseline; vieles ist noch zu klären.
-- **Ast:** Historie: Entscheidungslog E01–E85, am 13.11.2026 zurückgenommen
-  - Nur noch zur Nachvollziehbarkeit. Es gilt, was darüber steht.
-  - **Entscheidung:** Ort _[später]_
-    - Node001: Bereschnyzja, Ortsteil Hrun, bei Werchowyna. Der Name ist überall Node001, der Oberbegriff Nodes. Als Ort nennt die Website, wenn überhaupt, nur „Ukraine“, dazu europaweite Standorte. (E33, E63, E66)
-  - **Entscheidung:** Ziel _[später]_
-    - 2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld. Roman ist von Anfang an dabei. (E01, E23, E24)
-  - **Entscheidung:** Vorrang _[später]_
-    - Das Grundstück voll bekommen, auf Autarkie hinarbeiten, alles läuft immer. Der Betrieb trägt sich selbst. (E46, E54)
-  - **Entscheidung:** Geld _[später]_
-    - Reihenfolge: Pauls Lebensunterhalt, Kosten auf dem Berg, Weiterentwicklung, Kapital über die Chain. (E05)
-  - **Entscheidung:** Paul _[später]_
-    - Ist Paul Vollzeit dabei, sind seine 8.000 € netto im Monat unabdingbar. Sie stehen nicht im Mittelpunkt des Plans. (E03, E32, E67)
-  - **Entscheidung:** Kapital _[später]_
-    - Der Ort braucht keinen Investor: Käufergeld ist Umsatz und kommt zuerst. Die Firma darf Pre-Seed aufnehmen. Kapital über die Chain erst, wenn Umsatz da ist. (E04, E30, E57)
-  - **Entscheidung:** Kosten _[später]_
-    - Die 12,5 Mio. € sind eure Hochrechnung der Kosten in Werchowyna, keine Finanzierung. (E65)
-  - **Entscheidung:** Umsatz _[später]_
-    - Projekte und Freelancer-Aufträge aus Deutschland; oben werden daraus Agenten, verkauft über Masumi. Projekte werden verkauft, ihr Preis ist offen; für Agenten ist das Modell offen: Abo, Einmalzahlung mit Betreuung oder nach Nutzung. Erster bezahlter Auftrag bis Januar 2027. (E31, E56, E77, E83)
-  - **Entscheidung:** Verkauf _[später]_
-    - Warteliste; ab Januar 2027 kaufen als Token, Grund pachten; mieten mit Miete nach dem Einzug. (E47, E51, E52)
-  - **Entscheidung:** Preis _[später]_
-    - Etwa 30.000 € je Plot als Ausgangspunkt der Rechnung. Bestellt wird, wenn 5 Käufer ihr Geld belegt haben. (E50, E78)
-  - **Entscheidung:** Nachfrage _[später]_
-    - Die Warteliste zeigt die Nachfrage; bei großem Andrang gibt es mehr Plots. Umfragen ohne Angebot gibt es nicht. (E09, E51, E58)
-  - **Entscheidung:** Bauweise _[später]_
-    - Die Häuser kommen in Teilen und werden oben montiert; sie sind die Tiny Houses der Käufer und bleiben, den Grund pachten sie. (E39, E52, E59, E75)
-  - **Entscheidung:** Zeit _[später]_
-    - Die Häuser kommen frühestens im März 2027 hoch, sobald frostfrei, in Teilen (E75); Werbung „Einzug ab Frühjahr 2027“. (E21, E55)
-  - **Entscheidung:** Versorgung _[später]_
-    - Netzstrom mit Batterie oder Generator und Solar; eigener Internetanschluss, Starlink als Reserve; 50 l Wasser je Person und Tag. (E26, E35, E49)
-  - **Entscheidung:** Abnahme _[später]_
-    - Vor dem Einzug schriftlich abgenommen durch Nazar oder eine Fachperson. (E22, E27, E53)
-  - **Entscheidung:** Pläne _[später]_
-    - Generalplan Variante 1 ist die Grundlage. Nazar ist beauftragt, seine Ergebnisse sind offen. (E37, E43, E64)
-  - **Entscheidung:** Firma _[später]_
-    - Heute Romans Einzelunternehmen; UG in Gründung, Sitz offen (W09). (E17, E61)
-  - **Entscheidung:** Grundstücke _[später]_
-    - Das eigene und höchstens ein weiteres; die übrigen von Dritten. (E18)
-  - **Entscheidung:** Rollen _[später]_
-    - Paul ist CEO, hält den Kontakt zu Nazar und entscheidet über Bestellungen und den Betrag; Roman führt Produkt und Projekt und ist oben. Die KI macht, was sie kann; ein Mensch prüft. (E06, E13, E19, E62, E71)
-  - **Entscheidung:** Arbeit oben _[später]_
-    - Das Team baut Agenten und liefert alle Projekte, auch Cybersecurity und Blockchain; das eigene Produkt sind nur Agenten. Käufer und Mieter bilden eine Community. (E63, E70)
-  - **Entscheidung:** Grundmodell _[später]_
-    - Leichter Transport, kommunal, gemeinschaftlich, autark; Privatsphäre im eigenen Haus, Community vorausgesetzt. E-Bikes statt Benzin, Kommunalgebäude mit Gemüsegarten. (E72, E73, E74)
-  - **Entscheidung:** Alltag _[später]_
-    - Arbeit, Gesundheit und Freizeit gehören zusammen: Jour fixe am Morgen, gemeinsam oder privat essen, Sauna, Wandern, Laufen, Yoga; abgelegen und doch im Team. (E81)
-  - **Entscheidung:** Ablage _[später]_
-    - OneDrive in Microsoft 365, DSGVO-konform. (E12)

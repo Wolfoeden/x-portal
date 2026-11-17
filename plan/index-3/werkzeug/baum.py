@@ -30,36 +30,36 @@ KI = 'Möglichkeiten: Vorschlag KI, noch keine Entscheidung; sie gilt erst, wenn
 
 hauptweg = [
     N('chance', 'O01', 'Geologie: Bericht liegt vor. Was sagt er für Phase 0 und Phase 1?', 'done',
-      meta='Technischer Bericht 34.11/26, Ingenieurgeologe, Iwano-Frankiwsk 2026 · deutsche Zusammenfassung XPB-N001-GEO-SUM-001 (KI-erstellt, mit dem Original abzugleichen)',
+      meta='Technischer Bericht 34.11/26, Ingenieurgeologe, Iwano-Frankiwsk 2026 · deutsche Zusammenfassung XPB-N001-GEO-SUM-001 (KI-erstellt) · Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026), noch nicht im Plan abgelegt (AP-A1)',
       text='Feldarbeiten September bis November 2026: 3 Schürfgruben mit zusammen 7,5 m, 12 Handbohrungen bis je 2 m. Nordöstlich exponierter Hang des Bila Kobyla, Geländehöhen 1.016–1.077 m. Ingenieurgeologische Komplexität Kategorie III.',
       facts=[('Schichten', 'IGE-1 lehmiger Oberboden, 0,6–1,1 m, von Rutschprozessen betroffen; IGE-2 weichplastischer Lehm, 0,8–1,1 m; IGE-3 Schuttmaterial mit Sandstein, 1,0–1,4 m, bei den Punkten 6, 7, 11 wassergesättigt; IGE-4 Flysch, Schichten etwa 70° geneigt.'),
              ('Kennwerte', 'IGE-1: E 19 MPa, φ 23°, c 27 kPa, R₀ 240 kPa. IGE-2: 6 MPa, 14°, 13 kPa, 130 kPa. IGE-3: 45 MPa, 33°, 8 kPa, 500 kPa; am Standort mit 70 % anzusetzen.'),
              ('Grundwasser', 'Austritte an den Bohrpunkten 6, 7 und 11; mehr Wasser bei Starkregen und Schneeschmelze. Gegen Beton normaler Dichte nicht aggressiv.'),
              ('Hang', 'Verbreitete Rutsch- und Fließprozesse; bewegte Schichten 0,8–1,2 m (im erläuternden Text 0,9–1,2 m), Flächen meist 3–4 m², teils bis 15 m².'),
              ('Empfehlung', 'Kombinierte Streifen- und Stützfundamentierung auf IGE-3 oder IGE-4; hangseitiger Fundamentbereich als Stützkonstruktion; hangseitiger Entwässerungsgraben; Wasser vor Abfällen und Abwasser schützen.'),
-             ('Zusatzerkundung', 'Verlangt für Zufahrt, Stützkonstruktionen und Hauptgebäude, wenn bis IGE-4 gegründet wird, und bei geänderten Gebäuden oder Fundamenten.')],
+             ('Zusatzerkundung', 'Vom Gutachter verlangt für Zufahrt, Stützkonstruktionen und Hauptgebäude. Liegt vor (Kommentar vom 15.11.2026); das Ergebnis wird eingetragen, sobald der Bericht im Plan liegt (AP-A1).')],
       kids=[
           X('Fall A', 'Leichte eingeschossige Objekte: Gründung auf IGE-3.', 'Laut Gutachter geeignet für leichte eingeschossige Gebäude. Gilt für das Objekt Phase 0, wenn es leicht und eingeschossig ist (Zuordnung Vorschlag KI).', state='open',
             kids=[N('decision', None, 'Fundament für das Objekt Phase 0: Streifen- und Stützfundament nach Empfehlung, bemessen durch einen Fachexperten', 'open', meta='Fachexperte Bau · Freigabe Geschäftsführung')]),
           X('Fall B', 'Massive, dauerhafte Gebäude: Gründung auf IGE-4, mit Zusatzerkundung.', 'Laut Gutachter für massive Gebäude. Betrifft Kommunalgebäude und Objekte in Phase 1 (Zuordnung Vorschlag KI).', state='open',
-            kids=[N('decision', None, 'Zusatzerkundung für Phase 1 beauftragen, sobald Lage und Bauart der Gebäude feststehen (D56)', 'open', meta='Geschäftsführung · vor Phase 1')]),
+            kids=[N('step', None, 'Ergebnis der vorhandenen Zusatzerkundung für die Gebäude in Phase 1 auswerten', 'open', meta='Fachexperte Bau · nach AP-A1')]),
           X('Fall C', 'Flächen mit Grundwasseraustritt und Rutschprozessen.', 'Bohrpunkte 6, 7 und 11. Entwässerungsgraben und Stützkonstruktion nach Empfehlung; die Lage von Phase 0 berücksichtigt diese Punkte.', state='open'),
           N('decision', 'lage', 'Wo im Detailplan steht das Objekt Phase 0 (unterhalb der Herrenhaus-Fläche, D55)?', 'open',
             meta='Geschäftsführung mit dem Architekten (Beratung) · vor der Planung von Phase 0',
             text='Grundlage ist der Detailplan Blatt 3 (2,0 ha, 24 Parzellen, Höhenlinien, Brunnen, lokale Kläranlage; Bild unter „Der Ort“ in der Grundlage). Zu klären: welche Parzelle die Herrenhaus-Fläche ist, wo darunter das Objekt Phase 0 steht und wie Wasser, Strom, Abwasser und Weg dorthin kommen.'),
       ]),
-    N('decision', 'hausart', 'Bauart der Objekte: Holz, Beton, Glas, Metall?', 'open',
+    N('decision', 'hausart', 'Bauart der Objekte: Holz, Beton, Glas, Metall? Erste Bedingung: transportierbar über die einspurige, enge Straße', 'open',
       meta='Geschäftsführung nach Vorschlag Fachexperte Bau · nach Lage (O01)',
       text='Antwort vom 13.11. (D56): Der Plan für die Objekte steht aus; eine Bau-KI bewertet und plant in Abhängigkeit von den lokalen Gegebenheiten (Geologie, Gelände, Zufahrt).',
       see=[('#b-mb-haus', 'Varianten im Make-or-Buy')], ziel=['Z1', 'Z2']),
     N('chance', 'zufahrt', 'Kommt das Objekt Phase 0 die Zufahrt hoch, im Sommer und im Winter (2.2.4)?', 'done',
       meta='Antwort vom 13.11. (D57)',
-      text='Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch. Die Gesamtplanung der Zufahrt entscheidet sich in Phase 1 mit 3D-Modellen der Bau-KI. Die letzten etwa 200 m haben über 15 % Steigung; bis 2,6 m Breite geht ein Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug.',
+      text='Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch. Die Gesamtplanung der Zufahrt entscheidet sich in Phase 1 mit 3D-Modellen der Bau-KI. Die Straße ist einfach, einspurig und teils eng (Kommentar vom 17.11.2026); die letzten etwa 200 m haben über 15 % Steigung; bis 2,6 m Breite geht ein Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite und Engstellen werden gemessen (AP-A0).',
       ziel=['Z1'], kids=[X('ja', 'Die Lieferform steht fest.', 'Damit ist klar, welche Anbieter in Frage kommen.', state='open'),
                          X('nein', 'Kleinere Teile oder eine andere Lieferform.', 'Bauart und Anbieter werden neu bewertet (2.2.3).', state='open')]),
     N('decision', 'lieferant', 'Wer liefert und baut das Objekt Phase 0, mit oder ohne Montage?', 'open',
       meta='Projektleitung holt Angebote ein, die Geschäftsführung entscheidet die Bestellung · nach Bauart',
-      text='Drei schriftliche Angebote mit Preis, Lieferform, schwerstem Teil, Montageaufwand und Winterwerten (O31). Die Anfrage enthält die Raumliste aus M02, die Anforderungen an Sanitär ab Phase 0 (D62) und die Maße der Zufahrt. Wer was selbst macht, steht in 2.4.8.',
+      text='Drei schriftliche Angebote; zuerst geprüft wird, ob jedes Teil über die einspurige, enge Straße hochkommt (GB1, AP-A0), dann Preis, Lieferform, schwerstes Teil, Montageaufwand und Winterwerte (O31). Die Anfrage enthält die Raumliste aus M02, die Anforderungen an Sanitär ab Phase 0 (D62) und die Maße der Zufahrt. Wer was selbst macht, steht in 2.4.8.',
       see=[('#b-mb-eigen', 'Selbst, mit Hilfe oder extern')], ziel=['Z1', 'Z2']),
     N('decision', 'technik', 'Technik im Objekt: Zugang, Server, Netzwerk. Liefert der Anbieter sie mit, oder beschaffen wir sie selbst?', 'open',
       meta='Geschäftsführung und Projektleitung',
@@ -72,16 +72,16 @@ hauptweg = [
       meta='KI rechnet, Geschäftsführung und Projektleitung entscheiden · nach Angeboten (O31)',
       text='Statt eines Verkaufspreises wird der Selbstkostenpreis je Objekt ermittelt (D49): Objekt, Transport, Montage, Fundament, Anschlüsse, Anteil an Kommunalgebäude und Infrastruktur, Betrieb. Daraus Miete und Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen (D38). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung, 69 von 137 Positionen ohne Betrag).',
       needs=['O31', 'D36', 'D37', 'D38']),
-    N('step', 'mieter', 'Mietinteressenten gewinnen, ab sofort und vor dem Bau', 'open',
+    N('step', 'mieter', 'Mietinteressenten gewinnen: Whitelist der künftigen Mieter, ab sofort und vor dem Bau', 'open',
       meta='Projektleitung · laufend (D50)',
-      text='Zuerst Mieter gewinnen; Ziel ist, Interessenten jetzt zu bekommen (D50). Verkauft wird im klassischen Sinn nichts (D45, D48). Tokenisierung und Beteiligung auf mehreren Ebenen erst nach rechtlicher Klärung (O05).'),
+      text='Zuerst Mieter gewinnen; Ziel ist, Interessenten jetzt zu bekommen (D50). Es wird nicht verkauft; es gibt nur Mieter mit wiederkehrenden Erlösen, die wir Investoren zeigen (D45, D46, D48; Kommentar vom 17.11.2026). Die Whitelist ist noch nicht eingerichtet (AP-A8). Tokenisierung und Beteiligung erst nach rechtlicher Klärung (O05, AP-A6).'),
     N('gate', 'G0', 'Können wir vermieten?', 'wait',
       meta='vor dem Investorengespräch · Geschäftsführung und Projektleitung geben frei oder lassen nacharbeiten',
-      text='Muss fertig sein: Selbstkosten und Pauschale (O03), Mietvertrag und Struktur rechtlich geprüft (O05), Leistungen oben (2.1.8), Lage und Bauart von Phase 0, Abnahmetabelle (D66).',
+      text='Muss fertig sein: Whitelist läuft (AP-A8), Selbstkosten und Pauschale (O03), Mietvertrag und Struktur rechtlich geprüft (O05), Leistungen oben (2.1.8), Lage und Bauart von Phase 0, Abnahmetabelle (D66).',
       needs=['O05', 'O12', 'D36', 'D37', 'D38']),
     N('chance', 'O23', 'Kapital: Steigen Investoren für Infrastruktur und Objekte ein?', 'open',
       meta='Geschäftsführung · nach dem Paket vor dem Investment (D69, D71)',
-      text='Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Objekte mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47). Ein Verkauf an Einzelne ist abgewählt.',
+      text='So viel wie möglich mit Eigenkapital; bis zu welchem Punkt, ist offen (D69, D71, Seite „Vor dem Investment“). Investoren für Infrastruktur und weitere Chargen, gestützt auf Whitelist und Mieterlöse (D46, D47; AP-F3). Ein Verkauf an Einzelne ist abgewählt.',
       kids=[
           X('ja', 'Bestellen.', 'Die Geschäftsführung entscheidet über Bestellung und Betrag; bestellt wird nur mit Geld auf dem Konto.'),
           X('noch nicht', 'Was dann?', state='open', kids=[
@@ -90,8 +90,8 @@ hauptweg = [
                   O('B', 'Kleiner anfangen', 'Mit einem kleineren Objekt Phase 0; die Selbstkosten werden neu gerechnet (O03).'),
                   O('C', 'Eigenmittel erhöhen', 'Mehr Eigenkapital oder Eigenleistung, um den Anteil zu halten (D69, D70).')])]),
       ]),
-    N('gate', 'G1', 'Ist genug Geld da, ist bestellt?', 'wait', meta='nach G0 und O23',
-      text='Investment oder Eigenkapital für Phase 0 auf dem Konto; Objekt Phase 0 bestellt; Leitungen für Wasser, Abwasser, Strom und Internet geplant (2.2.7); kritische Fehlerarten bewertet (2.3.7); Prüfsituation T00 vor der Bestellung (2.4.9).',
+    N('gate', 'G1', 'Ist genug Geld für Charge 1 da, ist bestellt?', 'wait', meta='nach G0 und O23',
+      text='Eigenkapital, wo nötig mit Investment, für Charge 1 auf dem Konto (GB8); Charge 1 bestellt (AP-C5); Leitungen für Wasser, Abwasser, Strom und Internet geplant (2.2.7); kritische Fehlerarten bewertet (2.3.7); Prüfsituation T00 vor der Bestellung (2.4.9).',
       needs=['O17', 'O23']),
     N('chance', 'frost', 'Ist der Boden frostfrei?', 'wait', meta='Baubeginn 2027 ist Ziel, nur nach den Gates (D58)', kids=[
         X('ja', 'Objekt Phase 0 hoch und oben montieren.', 'Auf kleinem Fahrzeug (D57), auf dem Fundament nach Empfehlung des Gutachters, bemessen durch einen Fachexperten (2.2.8).'),
@@ -115,6 +115,22 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ablauf as _ab
 _alt = {n['id']: n for n in hauptweg}
 ast1 = _ab.bau(N, X, O, _alt)
+import uebernahme as _ue
+E_IDS = set()  # Log E01–E85 am 13.11.2026 zurückgenommen; E-Nummern nur noch als Herkunft, ohne Link
+def _te_baum():
+    gr = []
+    for b, (name, rows) in _ue.TE.items():
+        kids = [N('step', 'te-' + nr.replace('.', '-'), f'{nr} · {titel}', st,
+                  facts=[('Fertig, wenn', fertig), ('Rolle', rolle), ('Abhängig', abh), ('Stand', stand), ('Quelle', quelle)])
+                for nr, titel, fertig, rolle, abh, stand, quelle, st in rows]
+        gr.append(N('group', 'te-' + b.replace('.', '-'), f'{b} {name}', kids=kids, opened=False))
+    return N('group', 'ab-te', 'Bausteine und Teilergebnisse 2.1 bis 2.6 (Produktstrukturplan)', kids=gr, opened=False,
+             text='Aus dem Index 2.0 vom 04.11.2026 übernommen und auf den Stand vom 17.11.2026 gebracht. Jedes Teilergebnis lässt sich als Arbeitspaket vergeben; wo es schon ein Arbeitspaket A bis H gibt, steht es unter „Abhängig“. Entfallen sind 2.1.1, 2.1.2, 2.5.6, 2.6.3 und 2.6.5 (Gründe im Änderungsprotokoll).')
+_steu = N('group', 'ab-steuerung', 'Steuerung: Eingänge, Routine, Methoden (M01 bis M11)', opened=False, kids=
+    [N('step', None, t, 'rule', text=x, facts=[('Quelle', q)]) for t, x, q in _ue.STEUERUNG]
+    + [N('step', 'methoden', 'Methoden M01 bis M11: so klein wie die nächste Entscheidung es braucht', 'rule', facts=[(m, f'{n} · {e}') for m, n, e in _ue.METHODEN],
+         text='Aus der Methodenbewertung V1.0 (Index 2.0, Anhang A1). Weitere Vertiefungen erst bei ihrem Auslöser: QFD-Bewertung, formales Systemmodell, automatische Regeln, Termin- und Autarkiesimulation.')])
+ast1 = ast1 + [_te_baum(), _steu]
 def _ids(nodes):
     for n in nodes:
         yield n.get('id'); yield from _ids(n.get('kids', []))
@@ -474,7 +490,7 @@ imPlan.insert(0, N('group', 'g-od', 'Offene Architekturentscheidungen der Refere
     N('decision', None, 'OD-005 · Node001 PoC-KPIs und Go/Revise/Stop-Grenzen', 'open', meta='OPEN · vor Investitionsfreigabe', text='Jede Hypothese H1 bis H8 braucht Messgröße, Datengrundlage, Zielwert, Prüfzeitpunkt und Go/Revise/Stop-Kriterium. Im Plan: Zielblatt Z1 bis Z4 und Gates G0 bis G4; Zielwerte fehlen großenteils.', see=[('#b-zielblatt', 'Zielblatt')], dom='b-OD-005'),
     N('decision', None, 'OD-006 · Genome Invariants v0.1', 'open', meta='IN WORK · vor Node001 Architecture Freeze', text='Im Plan: Z4 und 2.6.6; wiederholbar sind Schema, Planung, Nutzbarkeit und Sinn (E11).', dom='b-OD-006'),
     N('decision', None, 'OD-007 · Safety/Security/Privacy/Legal Baseline Node001', 'open', meta='OPEN · vor Technologie- und Betriebsfreigabe', text='Im Plan: Prüfaufträge an die Anwälte (A5), Abnahmen (E53), Zugang und Server (Technik im Haus), Datenverbindung Ukraine–Deutschland (E85).', see=[('#b-technik', 'Technik im Haus')], dom='b-OD-007'),
-    N('decision', None, 'OD-008 · Parametrischer Business Case und Architektur-Sensitivitäten', 'open', meta='OPEN · parallel zur Node001 System Architecture', text='Im Plan: Make-or-Buy (Ast 4), Selbstkosten je Objekt (O03), Geldfluss (2.1.3). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung); die alte Papierrechnung ist kein Business Case (Abgleich W05).', see=[('#b-makebuy', 'Ast 4 Make-or-Buy')], dom='b-OD-008'),
+    N('decision', None, 'OD-008 · Parametrischer Business Case und Architektur-Sensitivitäten', 'open', meta='OPEN · parallel zur Node001 System Architecture', text='Im Plan: Make-or-Buy (Ast 4), Selbstkosten je Objekt (O03), Geldfluss (2.1.3). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung); eine Rechnung über Verkaufserlöse gibt es nicht mehr (Abgleich W05).', see=[('#b-makebuy', 'Ast 4 Make-or-Buy')], dom='b-OD-008'),
 ]))
 imPlan.append(N('decision', 'gleitzeit', 'Gleitzeit: wie wird die Kernzeit 9–14 Uhr verlegt, und wer ist für Betrieb und Notfall erreichbar?', 'open',
     meta='Planungspunkt neu (' + VORGABE + ') · Paul und Roman',
@@ -626,10 +642,9 @@ tree = [
       text='Je Karte die Antwort und der Kommentar im Wortlaut; die gewählte Möglichkeit ist markiert. Wo der Kommentar die Wahl ändert, gilt der Kommentar.'),
     N('group', 'b-plan', '7 · Offen im Plan, noch ohne Karte auf der Entscheidungsseite', kids=imPlan,
       text='Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, Agentur und Node-Gesellschaft, Kapital, Rollen und Betrieb oben.'),
-    N('group', 'b-entschieden', '8 · Entschieden am 13.11.2026, darunter das alte Log als Historie', kids=[
+    N('group', 'b-entschieden', '8 · Entschieden am 13.11.2026', kids=[
         N('group', 'g-13', 'Was seit 13.11.2026 gilt', kids=[N('decision', None, f'{i} · {THEMA[i]}', 'done', text=FOLGT[i]) for i in sorted(FOLGT) if i in ANT and i not in OFFEN_KARTEN and (ANT[i].get('wahl') or '') != 'unklar']),
-        N('group', 'g-hist', 'Historie: Entscheidungslog E01–E85, am 13.11.2026 zurückgenommen', kids=entschieden, opened=False,
-          text='Nur noch zur Nachvollziehbarkeit. Es gilt, was darüber steht.'),
+
     ]),
 ]
 
@@ -652,9 +667,21 @@ ROLLEN = [(r'Der Jurist \(Max H\.\)', 'Ein Jurist'), (r'\bPaul mit Nazar\b', 'di
           (r'\bRomans\b', 'der Projektleitung'), (r'\bRoman\b', 'Projektleitung'), (r'\bNazars\b', 'des Architekten'), (r'\bNazar\b', 'Architekt (Beratung)'),
           (r'\beine Fachperson\b', 'ein Fachexperte'), (r'\beiner Fachperson\b', 'einem Fachexperten'), (r'\bdie Fachperson\b', 'der Fachexperte'),
           (r'\bder Fachperson\b', 'dem Fachexperten'), (r'\bFachperson\b', 'Fachexperte'), (r'\bTiny Houses?\b', 'Objekt'), (r'Freelancer oder Käufer', 'Freelancer oder Mieter'), (r'\bje Haus\b', 'je Objekt')]
+E_NEU = {'E22': 'GB11', 'E53': 'D66', 'E27': 'D66'}
+def _eref(t):
+    # Log E01–E85 am 13.11.2026 zurückgenommen: Klammerverweise auf aktuelle Regeln umstellen oder weglassen; „früher Exx“ bleibt als Herkunft
+    def ers(m):
+        ids = [x for x in re.findall(r'E\d\d', m.group(1))]
+        neu = sorted({E_NEU[x] for x in ids if x in E_NEU})
+        return f' ({", ".join(neu)})' if neu else ''
+    t = re.sub(r'\s*\((E\d\d(?:\s*[,–]\s*E\d\d)*)\)', ers, t)
+    t = re.sub(r'(?<!früher )(?<!früher E\d\d, )(,\s*)E\d\d(?=[);,])', '', t)
+    return t
 def rolle(t):
     if not isinstance(t, str):
         return t
+    if 'früher E' not in t:
+        t = _eref(t)
     for a, b in ROLLEN:
         t = re.sub(a, b, t)
     return t
@@ -720,12 +747,16 @@ def href(tok):
     if tok.startswith('D'):
         return f'#b-{tok}' if tok in TREE_IDS else None
     if tok.startswith('O'):
-        return f'#b-{tok}' if tok in TREE_IDS else '#k4-offen'
+        if tok in TREE_IDS: return f'#b-{tok}'
+        z = _ue.O_ZIEL.get(tok)
+        return None if not z else (f'#{z}' if z.startswith('b-') else f'#b-{z}')
     if tok.startswith('G'):
         return f'#b-{tok}'
     if tok.startswith('A'):
-        return f'#{APPX[tok]}'
-    return f'#{ANCHOR[tok[:3]]}'
+        return {'A1': '#ab-steuerung', 'A3': '#gb-GB1', 'A4': '#b-ressourcen', 'A5': '#b-O05', 'A6': '#b-G2'}.get(tok)
+    if tok.count('.') == 2 and f'te-{tok.replace(".", "-")}' in TREE_IDS:
+        return f'#b-te-{tok.replace(".", "-")}'
+    return f'#te-{tok[:3].replace(".", "-")}'
 
 def linkify(text):
     out, last = [], 0
@@ -858,7 +889,7 @@ n_wait = count('decision', 'wait')
 n_chance = count('chance')
 n_gates = count('gate')
 
-blockers = [('lage', 'Lage von Phase 0 im Detailplan', 'Geschäftsführung mit dem Architekten'), ('mieter', 'Mietinteressenten gewinnen', 'Projektleitung · ab sofort'),
+blockers = [('AP-A0', 'Strecke messen: einspurige, enge Straße', 'Projektleitung · jetzt'), ('AP-A8', 'Whitelist der künftigen Mieter einrichten', 'Projektleitung · jetzt'), ('AP-A1', 'Vorhandene Nachweise in den Plan legen', 'Geschäftsführung · jetzt'), ('lage', 'Lage von Phase 0 im Detailplan', 'Geschäftsführung mit dem Architekten'),
             ('O12', 'Paket vor dem Investment (D69)', 'Geschäftsführung'), ('O31', 'Angebote für Objekt Phase 0', 'Projektleitung · nach Bauart'),
             ('O05', 'Anwälte und Prüfaufträge', 'Geschäftsführung und Projektleitung · vor G0')]
 
@@ -913,18 +944,18 @@ RA_MD = RA_MD.split('---', 2)[2] if RA_MD.startswith('---') else RA_MD
 ABGLEICH = [
     ('W01', 'Vision und Mission', 'Vision der Leitlinie P01; Mission „Innovationshubs“ (E28)', 'Neue Vision (Abschnitt 2), keine Mission, Kerndefinition (Abschnitt 18)', 'Vision v0.4 steht in der Grundlage des Baums. Ob eine Mission bleibt, ist offen.', 'OPEN', 'angepasst'),
     ('W02', 'Was „X-PORTAL“ heißt', '„Dachfirma“ (Vorgabe 05.11.), „Firma“', 'X-PORTAL ist das sozio-technische Gesamtsystem; die Firma heißt X-PORTAL Organisation bzw. Company; Systemgrenze zum Node-Betrieb offen (OD-001)', 'Zielblatt X1 heißt „X-PORTAL Organisation (Company)“. Wo die DT Agentur steht, nennen Baseline und Deck nicht.', 'DECISION REQUIRED', 'angepasst'),
-    ('W03', 'Kapital für Node001', '„Kein Investor“ (E04); der Ort trägt sich aus Käufergeld, Pre-Seed nur für die Firma (E57)', 'Zwei getrennte Investment Cases; Node001 als eigener Project-/Asset-Case mit Kapital für Infrastruktur und ersten Bauabschnitt', 'Entschieden in D46 am 13.11.2026: Käufermodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen.', 'DOCUMENTED', 'entschieden 13.11.'),
+    ('W03', 'Kapital für Node001', '„Kein Investor“ (E04); der Ort trägt sich aus Käufergeld, Pre-Seed nur für die Firma (E57)', 'Zwei getrennte Investment Cases; Node001 als eigener Project-/Asset-Case mit Kapital für Infrastruktur und ersten Bauabschnitt', 'Entschieden in D46 am 13.11.2026: Verkaufsmodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen.', 'DOCUMENTED', 'entschieden 13.11.'),
     ('W04', 'Produkt- und Preismodell', 'Hausverkauf als Token über die Blockchain, Grund pachten, etwa 30.000 € je Plot, Verkauf ab Januar 2027 (E50, E52, E78)', '„Miete bzw. geeignetes Eigentums-/Nutzungsmodell“, Produktmix und Preis werden validiert; kein öffentliches Angebot von Kryptowerten', 'Entschieden in D45, D48, D49, D50 am 13.11.2026: kein klassischer Immobilienverkauf, zuerst Mieter, Selbstkostenpreis, Tokenisierung erst nach Klärung.', 'DOCUMENTED', 'entschieden 13.11.'),
     ('W05', 'Zahlen zum Invest', 'Papierrechnung rund 12 Mio. € „rechtfertigt das Invest“ (E84); Kostenhochrechnung 12,5 Mio. € (E65)', 'Parametrischer Business Case offen (OD-008); Scheingenauigkeit vermeiden (KI-Regel 10); Kostenband „zu validieren“', 'Beide Zahlen bleiben intern und gehören in keine Investorenunterlage.', 'ASSUMPTION', 'markiert'),
     ('W06', 'Termine', 'Verkauf Januar 2027, Container ab März, „Einzug ab Frühjahr 2027“ (E51, E55)', '„Baubeginn 2027 · Ziel“, nur nach Gates; Meilensteine sind Ziele, keine Zusagen', 'Grenzentabelle führt alle Termine als Ziele.', 'ASSUMPTION', 'angepasst'),
-    ('W07', 'Genehmigung und Finanzierung', '„Genehmigung und Planung liegen vor, 12,5 Mio. € privat finanziert“ (E60, durch E65 schon berichtigt)', 'Finanzierung des ersten Bauabschnitts und Freigaben: „zu validieren“; „Grundstück gesichert“', 'Es gilt das Deck. Belege zum Grundstück fehlen weiter (O14): DOCUMENTED, nicht VERIFIED.', 'DOCUMENTED', 'markiert'),
-    ('W08', 'Rollen der Menschen', 'Team (drei Personen) und Käufer oder Mieter (E63)', 'Acht Rollen in der Infografik: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren; Human Roles v1.0 in Arbeit (OD-003)', 'Der Plan bleibt bei Team und Käufern, bis OD-003 entschieden ist.', 'IN WORK', 'markiert'),
+    ('W07', 'Genehmigung und Finanzierung', '„Genehmigung und Planung liegen vor, 12,5 Mio. € privat finanziert“ (E60, durch E65 schon berichtigt)', 'Finanzierung des ersten Bauabschnitts und Freigaben: „zu validieren“; „Grundstück gesichert“', 'Es gilt das Deck. Grundstück im Besitz, Detailplan und Bebauungsplan liegen vor (Kommentar 12.11.2026); die Kopien fehlen im Plan (AP-A1): DOCUMENTED, nicht VERIFIED.', 'DOCUMENTED', 'markiert'),
+    ('W08', 'Rollen der Menschen', 'Team (drei Personen) und Käufer oder Mieter (E63)', 'Acht Rollen in der Infografik: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren; Human Roles v1.0 in Arbeit (OD-003)', 'Team und Mieter (D45, D50); weitere Rollen erst mit OD-003.', 'IN WORK', 'markiert'),
     ('W09', 'Digital Twin', '„Digitaler Zwilling der Organisation“, „Unternehmenszwilling“ (2.6.6, M07)', 'System Model ist nicht Digital Twin; voller Twin später und nur bei Nutzen', 'Text in 2.6.6 angepasst; M07 bleibt als Methodenname der Historie.', 'OPEN', 'angepasst'),
     ('W10', 'Zahl der Nodes', '„Node001, der erste von zehn Nodes“ (E63)', 'Node002 als Replikationstest; keine Zahl; Multi-Node-Plattform nicht im MVS', 'Die Zahl zehn steht in keiner aktuellen Aussage mehr.', 'ASSUMPTION', 'CHANGE REQUEST'),
     ('W11', 'Genome', '„Schema für den nächsten Node“ (Z4, E11)', 'X-PORTAL Genome: Invarianten, Module, Parameter, Entscheidungsregeln, Evidenz; belastbar erst mit Evidenz aus Node001 und Node002', 'Z4 heißt jetzt Genome.', 'IN WORK', 'angepasst'),
     ('W12', 'Autarkie', '„autark“ (E46, E54, E72)', '„weitgehend versorgungsautark, operativ autonom“; Zielwerte je kritischer Funktion offen (OD-002)', 'Grundmodell angepasst.', 'OPEN', 'angepasst'),
     ('W13', 'Statusbegriffe', 'offen, wartet, nicht geprüft, entschieden, Regel steht', 'VERIFIED, DOCUMENTED, IN WORK, ASSUMPTION, OPEN, DECISION REQUIRED', 'Zuordnung steht in der Legende des Baums. „Entschieden“ heißt DOCUMENTED, nicht VERIFIED.', 'DOCUMENTED', 'angepasst'),
-    ('W14', 'Team und Rollen', 'Paul ist CEO zu 100 %, Roman Produkt und Projekt (E62); Nazar ist beauftragte Fachperson (E64)', 'Deck nennt als operatives Team Roman Dering, Pavel J., Nazar D. („Architekt · Nodes“); Founder-, Ownership- und Governance-Darstellung vor Versand offen', 'Wer Gründer und Gesellschafter ist und ob Nazar Teammitglied oder Auftragnehmer ist, muss vor dem Versand feststehen.', 'DECISION REQUIRED', 'offen'),
+    ('W14', 'Team und Rollen', 'Paul ist CEO zu 100 %, Roman Produkt und Projekt (E62); Nazar ist beauftragte Fachperson (E64)', 'Deck nennt als operatives Team Roman Dering, Pavel J., Nazar D. („Architekt · Nodes“); Founder-, Ownership- und Governance-Darstellung vor Versand offen', 'Wer Gründer und Gesellschafter ist und ob der Architekt (Beratung) Teammitglied oder Auftragnehmer ist, muss vor dem Versand feststehen.', 'DECISION REQUIRED', 'offen'),
     ('W15', 'Ortsangabe', 'Website nennt, wenn überhaupt, nur „Ukraine“ (E66)', 'Deck: „Karpatenregion, Westukraine“; Baseline: „Node001 Beregniza“', 'Für Investoren gilt die Angabe des Decks; E66 betrifft die öffentliche Website.', 'DOCUMENTED', 'markiert'),
     ('W16', 'Erlöse', 'Agenten je Aufruf über Masumi (E56); Einstieg ab 490 € (E76, abgelöst durch E83)', 'Vier Erlösstufen: Kundenprojekte (heute), KI-Lösungen (in Entwicklung), Nutzung und Services Node001, System-Skalierung (später)', 'Preismodell bleibt offen (E83); Masumi ist eine Option, keine Aussage im Deck.', 'OPEN', 'markiert'),
     ('W17', 'Versionsstand der Infografik', '–', 'Infografik „Integrierte Managementarchitektur · SGMM II“ nennt Reference Architecture v0.2; Baseline und Deck nennen v0.4', 'Widerspruch innerhalb der neuen Unterlagen: Infografik auf v0.4 heben, bevor sie rausgeht.', 'DECISION REQUIRED', 'offen'),
@@ -936,20 +967,20 @@ ABGLEICH = [
 ]
 PILL = {'OPEN': 'st-open', 'DECISION REQUIRED': 'st-open', 'ASSUMPTION': 'st-untested', 'IN WORK': 'st-run', 'DOCUMENTED': 'st-done', 'VERIFIED': 'st-done'}
 def abgleich_html():
-    rows = ''.join(f'<tr id="ab-{n}"><td class="mono">{n}</td><td><b>{html.escape(t)}</b></td><td>{linkify(a)}</td><td>{linkify(b)}</td><td>{linkify(c)}</td>'
-                   f'<td><span class="dt-bpill {PILL[st]}">{st}</span></td><td>{html.escape(done)}</td></tr>' for n, t, a, b, c, st, done in ABGLEICH)
+    rows = ''.join(f'<tr id="ab-{n}"><td class="mono">{n}</td><td><b>{html.escape(t)}</b></td><td class="bisher">{linkify(a)}</td><td class="bisher">{linkify(b)}</td><td>{linkify(c)}</td>'
+                   f'<td><span class="dt-bpill {PILL[st]}">{st}</span></td><td>{html.escape("alter Stand am 17.11. von der Seite genommen" if done == "markiert" else done)}</td></tr>' for n, t, a, b, c, st, done in ABGLEICH)
     return ('<div class="tablewrap"><table class="dt-ztab"><thead><tr><th>Nr</th><th>Thema</th><th>Bisher im Index</th><th>Baseline v0.4 und Deck 11.2026</th><th>Was jetzt gilt</th><th>Status</th><th>Im Index</th></tr></thead><tbody>'
             + rows + '</tbody></table></div>')
 
 HYP = [('H1', 'Human Value', 'Z1; Anforderungen nach Maslow und Sinnen (Ast 2), Nutzungstest 2.4.9'), ('H2', 'Autarkie & Resilienz', 'Z1; Versorgung je Ressource (Ast 3), Störungstag'),
-       ('H3', 'Operational Viability', 'Z1; Betrieb oben 2.4.5, Abnahmen (E53)'), ('H4', 'Economic Viability', 'Z2, Z3; Selbstkosten je Objekt (O03), Geldfluss 2.1.3, OD-008'),
-       ('H5', 'Digital Value', 'OD-004; Technik im Haus'), ('H6', 'AI Value', 'Z3; eigene Agenten (E56), Preismodell 2.6.2'),
-       ('H7', 'Learning Capability', 'Routine 3.3, Entscheidungslog'), ('H8', 'Replicability', 'Z4 Genome, 2.6.6; Beweis erst mit Node002')]
+       ('H3', 'Operational Viability', 'Z1; Betrieb oben 2.4.5, Abnahmetabelle (D66)'), ('H4', 'Economic Viability', 'Z2, Z3; Selbstkosten je Objekt (O03), Geldfluss 2.1.3, OD-008'),
+       ('H5', 'Digital Value', 'OD-004; Technik im Objekt, Zugang über Cardano (AP-D5)'), ('H6', 'AI Value', 'Z3; eigene Agenten, Preismodell 2.6.2; Kamera-KI (AP-F2)'),
+       ('H7', 'Learning Capability', 'Steuerung in Ast 1: Eingänge, Routine, Methoden; Änderungsprotokoll'), ('H8', 'Replicability', 'Z4 Genome, 2.6.6; Beweis erst mit Node002')]
 ra_section = ('<section id="ra"><h2>Reference Architecture v0.4: der Bezugsrahmen</h2>'
     '<p class="lede2">Seit dem 12.11.2026 ist die Reference Architecture v0.4-WB1 die gemeinsame Arbeitsreferenz für Menschen und KI. Alles Frühere in diesem Index, auch das Entscheidungslog E01 bis E85, ist Evidenz und Historie und gilt nur, soweit es der Baseline nicht widerspricht (KI-Regel 1). Widersprüche stehen im Abgleich und sind nicht stillschweigend geglättet (KI-Regel 8).</p>'
     '<p>Die Managementarchitektur nach dem St. Galler Modell, die Bauphasen (ein Objekt zuerst, dann Objekte und Kommunalgebäude) und die Funktionsketten bis zum Werkzeug mit Internetpreisen stehen auf der <a href="https://claude.ai/artifact/EYuUZwYARAk6bVpmPDyq9G">SGMM-Seite</a> (Repo: <code>plan/sgmm/</code>). Für Werkzeug, Preis und Zeitaufwand zu Ast 3 (Versorgung) und Ast 4 (Make-or-Buy) gilt die SGMM-Seite.</p>'
     '<h3 id="ra-abgleich">Abgleich: Widersprüche zwischen Index und Baseline</h3>'
-    f'<p>{len(ABGLEICH)} Punkte. „angepasst“: der Index sagt jetzt, was die Baseline sagt. „CHANGE REQUEST“: die Entscheidung im Log muss von Geschäftsführung und Projektleitung geändert werden. „markiert“: der alte Stand bleibt als Historie stehen und ist gekennzeichnet. „offen“: Widerspruch in den neuen Unterlagen selbst.</p>'
+    f'<p>{len(ABGLEICH)} Punkte. „angepasst“: der Index sagt jetzt, was die Baseline sagt. „CHANGE REQUEST“: die Entscheidung im Log muss von Geschäftsführung und Projektleitung geändert werden. Der Index 2.0 und das alte Log sind seit dem 17.11.2026 nicht mehr auf der Seite; sie liegen im Repo (quellen/index-2.0.html). Die Spalten „Bisher“ und „Baseline und Deck“ zitieren den alten Stand. „offen“: Widerspruch in den neuen Unterlagen selbst.</p>'
     + abgleich_html()
     + '<h3 id="ra-hyp">PoC-Hypothesen H1 bis H8 und wo der Plan sie prüft</h3><div class="tablewrap"><table><thead><tr><th>ID</th><th>Hypothese</th><th>Im Plan</th><th>Messgröße, Zielwert, Go/Revise/Stop</th></tr></thead><tbody>'
     + ''.join(f'<tr><td class="mono">{a}</td><td><b>{b}</b></td><td>{linkify(c)}</td><td><span class="dt-bpill st-open">OPEN</span> OD-005</td></tr>' for a, b, c in HYP)
@@ -957,7 +988,7 @@ ra_section = ('<section id="ra"><h2>Reference Architecture v0.4: der Bezugsrahme
     + '<p class="note">Der Wortlaut der Baseline steht im Repo unter plan/index-3/quellen/reference-architecture-v0.4.md.</p></section>\n')
 
 section = f'''<section id="baum"><h2>Offener Entscheidungsbaum</h2>
-<p class="lede2">Der ganze Plan Stufe 1 als Baum. Die Grundlage ist das Endprodukt mit seinen Zielen. Darunter stehen die Äste in der Reihenfolge, in der jetzt gearbeitet wird: 1 der Weg ab der Geologie, 2 der Alltag oben mit seinen prüfbaren Anforderungen, 3 die Versorgung je Ressource mit Ausbaupfad, 4 die Make-or-Buy-Vergleiche. Werkzeug, Preis und Zeitaufwand je Funktion stehen auf der <a href="https://claude.ai/artifact/EYuUZwYARAk6bVpmPDyq9G#ketten">SGMM-Seite</a>. Offene Äste bleiben aufgeklappt und zeigen jede Möglichkeit mit ihrer Folge; Entschiedenes ist eingeklappt. Gewählt wird weiter auf der <a href="{ENTSCHEIDUNGSSEITE}" target="_blank" rel="noreferrer">Entscheidungsseite</a>.</p>
+<p class="lede2">Der ganze Plan als Baum. Die Grundlage ist das Endprodukt mit seinen Zielen und den Grundbestimmungen. Darunter stehen die Äste in der Reihenfolge, in der jetzt gearbeitet wird: 1 der Ablaufplan A bis H mit Arbeitspaketen, Teilergebnissen und Steuerung, 2 der Alltag oben mit seinen prüfbaren Anforderungen, 3 die Versorgung je Ressource mit Ausbaupfad, 4 die Make-or-Buy-Vergleiche. Werkzeug, Preis und Zeitaufwand je Funktion stehen auf der <a href="https://claude.ai/artifact/EYuUZwYARAk6bVpmPDyq9G#ketten">SGMM-Seite</a>. Offene Äste bleiben aufgeklappt und zeigen jede Möglichkeit mit ihrer Folge; Entschiedenes ist eingeklappt. Gewählt wird weiter auf der <a href="{ENTSCHEIDUNGSSEITE}" target="_blank" rel="noreferrer">Entscheidungsseite</a>.</p>
 <ul class="dt-bkey" aria-label="Zeichen im Baum">
 <li><span class="dt-bg k-decision" aria-hidden="true"></span>Entscheidung, nur ihr</li>
 <li><span class="dt-bg k-chance" aria-hidden="true"></span>Ereignis, ihr wartet auf das Ergebnis</li>
@@ -972,7 +1003,8 @@ section = f'''<section id="baum"><h2>Offener Entscheidungsbaum</h2>
 <div class="dt-bstat"><b>{len(ZB)}</b><span>Ziele im Zielblatt</span><small>{sum(1 for z in ZB if z[5])} davon mit Klärungsauftrag</small></div>
 <div class="dt-bstat"><b>{len(M02)}</b><span>Anforderungen</span><small>keine geprüft; die M02 im Repo hat 46</small></div>
 <div class="dt-bstat"><b>{len(makebuy) - 1}</b><span>Make-or-Buy-Vergleiche</span><small>keiner mit Vollkosten gerechnet</small></div>
-<div class="dt-bstat"><b>{n_dec_open}</b><span>Entscheidungen offen</span><small>davon 6 auf der Entscheidungsseite</small></div>
+<div class="dt-bstat"><b>{n_dec_open}</b><span>Entscheidungen offen</span><small>davon {sum(1 for _a, _b, ks in SEITE.ABSCHNITTE for k in ks if k['id'] in OFFEN_KARTEN or k['id'] not in ANT or (ANT[k['id']].get('wahl') or '') == 'unklar')} auf der Entscheidungsseite</small></div>
+<div class="dt-bstat"><b>{sum(1 for n in _ab.alle_ap(tree) if n['state'] == 'open')}</b><span>Arbeitspakete offen</span><small>von {sum(1 for _ in _ab.alle_ap(tree))} im Ablaufplan; gezählt, nicht eingetragen</small></div>
 <div class="dt-bstat"><b>{n_wait}</b><span>Entscheidungen warten</span><small>auf Angebote, Anwälte oder Kapital</small></div>
 <div class="dt-bstat"><b>{sum(1 for i in ANT if i not in OFFEN_KARTEN and (ANT[i].get("wahl") or "") != "unklar")}</b><span>entschieden am 13.11.</span><small>mit Kommentaren, Ast 6 und 8</small></div>
 </div>
@@ -985,7 +1017,7 @@ section = f'''<section id="baum"><h2>Offener Entscheidungsbaum</h2>
 <button type="button" id="b-zu">Zuklappen</button>
 </div>
 <ul class="dt-bt" id="btree">{''.join(render(n, 0, top=True) for n in tree)}</ul>
-<p class="note">Neu in Index 3.0, sonst unverändert gegenüber <a href="{INDEX2}" target="_blank" rel="noreferrer">Index 2.0</a>. Der Baum ist aus Plan, Entscheidungsseite und Kapitel 4 zusammengesetzt (Stand 04.11.2026) und noch nicht im Generator <code>plan/werkzeuge/index_seite.py</code>.</p>
+<p class="note">Neu in Index 3.0, sonst unverändert gegenüber <a href="{INDEX2}" target="_blank" rel="noreferrer">Index 2.0</a>. Erzeugt mit <code>plan/index-3/werkzeug/baum.py</code> aus <code>ablauf.py</code>, <code>uebernahme.py</code>, der Entscheidungsseite und den Quellen in <code>quellen/</code>.</p>
 </section>
 '''
 
@@ -1164,9 +1196,9 @@ def sub_once(s, old, new, count=1):
     return s.replace(old, new)
 
 body = sub_once(body, '<title>X-PORTAL Index 2.0</title>', '<title>X-PORTAL Index 3.0</title>')
-body = sub_once(body, 'X-PORTAL Index 2.0 · Node001 · Stand 04.11.2026', 'X-PORTAL Index 3.0 · Node001 · Stand 16.11.2026 · Entscheidungen vom 13.11.2026 · Ablaufplan · Bezugsrahmen Reference Architecture v0.4-WB1')
+body = sub_once(body, 'X-PORTAL Index 2.0 · Node001 · Stand 04.11.2026', 'X-PORTAL Index 3.0 · Node001 · Stand 17.11.2026 · Entscheidungen vom 13.11.2026 · Kommentare bis 17.11.2026 · Bezugsrahmen Reference Architecture v0.4-WB1')
 old_lede = '<p class="lede">Oben sechs Bilder nach PRINCE2, darunter der Plan zum Arbeiten, unten zum Nachschlagen.'
-body = sub_once(body, old_lede, '<p class="lede">Oben der offene Entscheidungsbaum mit der Grundlage: Mission und Ziele, Endprodukt, Ort mit Detailplan und Geologie, Zielblatt. Darunter der Abgleich mit der Reference Architecture v0.4 und, eingeklappt, der Index 2.0 vom 04.11.2026 als Historie.')
+body = sub_once(body, old_lede, '<p class="lede">Ein Plan in einem Baum: die Grundlage mit Mission und Zielen, Endprodukt, Zielbild, Ort mit Detailplan und Geologie, Grundbestimmungen; darunter Ast 1 als Ablaufplan von Schritt 1 bis Projektende, dann Alltag, Versorgung, Make-or-Buy und die Entscheidungen. Der Index 2.0 vom 04.11.2026 ist eingearbeitet und liegt nur noch im Repo (quellen/index-2.0.html).')
 body = sub_once(body, '<ol class="side"><li><a href="#ueberblick" data-k="ueberblick">', '<ol class="side">' + toc + '<li><a href="#ra" data-k="ra">Reference Architecture v0.4</a><ol><li><a href="#ra-abgleich" data-k="ra-abgleich">Abgleich: Widersprüche</a></li><li><a href="#ra-hyp" data-k="ra-hyp">Hypothesen H1–H8</a></li></ol></li><li><a href="#index-2-historie">Historie: Index 2.0 vom 04.11.</a></li><li><a href="#ueberblick" data-k="ueberblick">', count=2)
 body = sub_once(body, '<div class="wrap" id="top">', css + '<div class="wrap" id="top">')
 REQ_NAME = {r['id']: r['bedarf'] for r in M02}
@@ -1193,7 +1225,7 @@ body = sub_once(body, '<main>\n', '<main>\n' + section + ra_section + HIST_START
 body = sub_once(body, '</main>', '</details></main>')
 body = body.replace('Fragen an Nazar', 'Fragen an den Architekten')
 body = sub_once(body, '<footer>Erzeugt aus plan/PLAN.md, plan/daten/ und plan/entscheidungen.md mit plan/werkzeuge/index_seite.py.</footer>',
-                '<footer>Erzeugt aus plan/PLAN.md, plan/daten/ und plan/entscheidungen.md mit plan/werkzeuge/index_seite.py. Der offene Entscheidungsbaum ist für Index 3.0 dazugekommen und noch nicht im Generator.</footer>')
+                '<footer>Erzeugt mit plan/index-3/werkzeug/baum.py. Änderungen stehen in plan/index-3/aenderungsprotokoll.md.</footer>')
 
 # ---------- Index: Alltag oben neu ----------
 DAYS = [
@@ -1246,7 +1278,7 @@ rules = ('<div class="dt-rules"><h5>Spielregeln oben: ein einfaches Leben aus Ar
          '<li>Pflicht: Jour fixe am Morgen und gemeinsame Aktivitäten wie Sport. Zusammen arbeiten steht offen, ist aber keine Voraussetzung.</li>'
          '<li>Frei einteilen: Wellness, Sauna, Entspannung.</li>'
          '<li>Betriebsarbeiten wie Holz hacken, Wasser und Schnee teilt sich das Team im Wechsel, nach einem Plan (' + linkify('2.4.5') + ').</li>'
-         '<li>Käuferinnen und Käufer wohnen in ihrem eigenen Haus und sind frei; sie können bei allem mitmachen, müssen aber nicht (' + linkify('E63') + '). Deshalb stehen sie in keinem Tagesablauf.</li>'
+         '<li>Mieter wohnen in ihrem eigenen Objekt und sind frei; sie können bei allem mitmachen, müssen aber nicht. Deshalb stehen sie in keinem Tagesablauf.</li>'
          '</ul><p class="note" style="margin:6px 0 0">Vorgabe vom 05.11.2026, noch nicht im Entscheidungslog. Die Tagesabläufe sind ein Vorschlag der KI danach und gelten, bis ihr widersprecht (' + linkify('E80') + ').</p></div>')
 
 def card(title, rows):
@@ -1257,29 +1289,29 @@ L = linkify
 def see(h, t):
     return f' <a class="dt-bchip" href="{h}">{html.escape(t)}</a>'
 RES = [
-    ('Energie', [('Quelle', L('Netz, dazu Solar (E35); Laden der E-Bikes (E73)')), ('Reserve', L('Batterie im Warmen oder Generator draußen, Kraftstoff für 3 Tage (S03, Annahme)')),
+    ('Energie', [('Quelle', L('Netz mit Generator als Reserve; Solar mit Speicher ab Phase 1 (D59); Laden der E-Bikes (2.3.6)')), ('Reserve', L('Generator draußen (D59), Kraftstoff für 3 Tage (Annahme, S03)')),
                  ('Bei Ausfall', L('Muss-Lasten etwa 380 W ohne Pumpe laufen weiter; Batteriegröße nicht nachgewiesen (M02-30)')),
-                 ('Was fehlt', L('Netzkapazität und Anschlussrecht; Lasten für Team plus 5 Käufer (O29)')), ('Planungspunkt', L('2.3.2') + see('#b-mb-strom', 'Make-or-Buy Strom'))]),
-    ('Wärme', [('Quelle', L('offen: Ofen je Haus oder zentral (2.3.2); Holz aus der Umgebung (E15)')), ('Reserve', 'festlegen'),
+                 ('Was fehlt', L('Zuständigkeit, Leistung, Kosten und Frist des Netzanschlusses (AP-A3); Lasten für Team und erste Mieter (2.3.1)')), ('Planungspunkt', L('2.3.2') + see('#b-mb-strom', 'Make-or-Buy Strom'))]),
+    ('Wärme', [('Quelle', L('Holzofen (D60); Holz aus eigener Fällung trocknet etwa ein Jahr (AP-D1), bis dahin gekauftes trockenes Holz')), ('Reserve', 'festlegen'),
                ('Bei Ausfall', L('mindestens 12 °C im Schlafbereich nach 8 Stunden ohne Feuer (Annahme, M02-06); Rauch- und CO-Melder (S01)')),
-               ('Was fehlt', L('Heizlast je Haus bei −20 °C (H02)')), ('Planungspunkt', L('2.3.2') + see('#b-mb-waerme', 'Make-or-Buy Wärme'))]),
-    ('Wasser', [('Quelle', L('Quellen auf oder bei dem Gelände (O27); 50 l je Person und Tag (E26)')), ('Reserve', L('Tank; Notvorrat Trinkwasser 60 l für 3 Personen (M02-04); 1.500 l für 10 Tage Sperre (H05)')),
-                ('Bei Ausfall', 'Pumpe steht: Wasser aus Tank und Notvorrat'), ('Was fehlt', L('Schüttung im Winter, Laborwerte (O27); Garten in der Bilanz (2.3.1)')),
+               ('Was fehlt', L('Heizlast je Objekt bei −20 °C (H02)')), ('Planungspunkt', L('2.3.2') + see('#b-mb-waerme', 'Make-or-Buy Wärme'))]),
+    ('Wasser', [('Quelle', L('Grundwasser, aufbereitet zu Trinkwasser (D61); 50 l je Person und Tag (Annahme vom 04.11.2026)')), ('Reserve', L('Tank; Notvorrat Trinkwasser 60 l für 3 Personen (M02-04); 1.500 l für 10 Tage Sperre (H05)')),
+                ('Bei Ausfall', 'Pumpe steht: Wasser aus Tank und Notvorrat'), ('Was fehlt', L('Laborwerte (AP-A2); Ergiebigkeit im Winter; Garten in der Bilanz (2.3.1)')),
                 ('Planungspunkt', L('2.3.2') + see('#b-mb-wasser', 'Make-or-Buy Wasser'))]),
-    ('Toilette und Abwasser', [('Quelle', L('Toilette im Warmen (E38); Campingtoilette als Übergang oder Trenntoilette (A4)')), ('Reserve', 'festlegen'),
+    ('Toilette und Abwasser', [('Quelle', L('Spültoilette, Dusche, Warmwasser und Abwasser fest ab Phase 0 (D62); lokale Kläranlage laut Detailplan')), ('Reserve', 'festlegen'),
                                ('Bei Ausfall', L('frostsicher und ohne Geruch (H06)')), ('Was fehlt', L('genehmigungsfähiges Abwasserkonzept (O28)')),
                                ('Planungspunkt', L('2.3.2') + see('#b-mb-toilette', 'Make-or-Buy Toilette'))]),
-    ('Internet', [('Quelle', L('eigener Anschluss (E49); zwei Videocalls gleichzeitig, etwa 8 Mbit/s Upload (D01)')), ('Reserve', L('Starlink; Mobilfunk gibt es oben nicht (E49)')),
-                  ('Bei Ausfall', L('Ausweicharbeitsplatz unten, wenn die Auffahrt frei ist (M02-39)')), ('Was fehlt', L('Anbieter oben und gemessene Bandbreite (A4)')),
+    ('Internet', [('Quelle', L('Anbieter, Bandbreite und Router werden verglichen (D63); zwei Videocalls gleichzeitig, etwa 8 Mbit/s Upload (D01)')), ('Reserve', L('zweiter Anschluss nach dem Vergleich (D63); Mobilfunk oben laut Angabe vom 04.11.2026 nicht vorhanden')),
+                  ('Bei Ausfall', L('Ausweicharbeitsplatz unten, wenn die Auffahrt frei ist (M02-39)')), ('Was fehlt', L('Anbieter oben und gemessene Bandbreite (D63)')),
                   ('Planungspunkt', L('2.3.2'))]),
-    ('Daten und Server', [('Quelle', L('OneDrive in Microsoft 365 (E12); Server oben, für personenbezogene Daten mit Deutschland verbunden (E85)')),
-                          ('Reserve', L('Datensicherung; Wiederherstellung einer Datei getestet (S05)')), ('Bei Ausfall', L('kein Serverausfall (E46)')),
-                          ('Was fehlt', L('welche Hardware und wer sie liefert; Rechtsprüfung der Datenverbindung (A5); Matching BW Bank für IT (2.1.7)')),
-                          ('Planungspunkt', see('#b-technik', 'Technik im Haus') + ' ' + L('2.5.7'))]),
-    ('Zugang und Sicherheit', [('Quelle', L('eigener abschließbarer Bereich je Person (S04); Zugangskontrolle mit Chip an den Türen (neu, 05.11.2026)')), ('Reserve', 'festlegen'),
+    ('Daten und Server', [('Quelle', L('OneDrive in Microsoft 365 (2.5.7); Server oben, für personenbezogene Daten nur bei VC-Funding mit Deutschland verbunden (D47)')),
+                          ('Reserve', L('Datensicherung; Wiederherstellung einer Datei getestet (S05)')), ('Bei Ausfall', L('kein Serverausfall; Maßstab: alles läuft immer (D66)')),
+                          ('Was fehlt', L('welche Hardware und wer sie liefert; Rechtsprüfung der Datenverbindung (O05); Matching BW Bank für IT (2.1.7)')),
+                          ('Planungspunkt', see('#b-technik', 'Technik im Objekt') + ' ' + L('2.5.7'))]),
+    ('Zugang und Sicherheit', [('Quelle', L('eigener abschließbarer Bereich je Person (S04); Zugangskontrolle mit Chip an den Türen (D36; Cardano, AP-D5)')), ('Reserve', 'festlegen'),
                                ('Bei Ausfall', L('Rauch- und CO-Melder, Feuerlöscher (S01); Brandschutz schriftlich abgenommen (E53)')),
                                ('Was fehlt', L('wer die Zugangskontrolle liefert und einbaut; Haftung und Versicherung (S07)')),
-                               ('Planungspunkt', see('#b-technik', 'Technik im Haus') + ' ' + L('2.3.3'))]),
+                               ('Planungspunkt', see('#b-technik', 'Technik im Objekt') + ' ' + L('2.3.3'))]),
     ('Zufahrt und Mobilität', [('Quelle', L('unbefestigte Zufahrt, letzte 200 m über 15 % (A3); E-Bikes statt Benzin (E73)')), ('Reserve', L('im Notfall in unter 2 Stunden unten (E26)')),
                                ('Bei Ausfall', L('Auffahrt gesperrt: Notfallplan und Vorräte für 10 Tage (2.4.7)')),
                                ('Was fehlt', L('wer im Winter räumt; Bestätigung des Spediteurs (2.2.4); wie viele E-Bikes und wo laden (O25)')),
@@ -1295,11 +1327,11 @@ RES = [
                                 ('Planungspunkt', L('2.4.7, O17'))]),
 ]
 res_html = ('<h4 class="sub">Was der Alltag braucht: Ressourcen und Ausfall (M06)</h4><div class="res">' + ''.join(card(t, r) for t, r in RES) + '</div>'
-            '<p class="note">Je Ressource drei Zustände: normaler Betrieb, Störung, Erweiterung auf Team plus 5 Käufer (' + L('E79') + '). Im Baum unter Ast 3 stehen sie einzeln, mit Ausbaupfad. Kritische Fehlerarten bewertet die Fachperson (' + L('2.3.7') + '); getestet wird im Nutzungstest (' + L('2.4.9') + '). Die nächste Autarkiestufe kommt erst nach bestandenem Test (M06).</p>')
+            '<p class="note">Je Ressource drei Zustände: normaler Betrieb, Störung, Erweiterung auf Team und erste Mieter (' + L('2.3.1') + '). Im Baum unter Ast 3 stehen sie einzeln, mit Ausbaupfad. Kritische Fehlerarten bewertet die Fachperson (' + L('2.3.7') + '); getestet wird im Nutzungstest (' + L('2.4.9') + '). Die nächste Autarkiestufe kommt erst nach bestandenem Test (M06).</p>')
 ia = body.index('<h3 id="u-alltag">'); ib = body.index('<h3 id="u-struktur">')
 old = body[ia:ib]
 h3_end = old.index('</h3>') + 5
-body = body[:ia] + old[:h3_end] + rules + legend + pers + res_html + '<p class="note">Dahinter stehen die Anforderungen nach Maslow und Sinnen, noch keine geprüft (Ast 2 im Baum), und der Nutzungstest mit 7 Prüfsituationen (' + L('2.4.9') + '). Technische Werte legt eine Fachperson fest (' + L('E22') + ').</p>' + body[ib:]
+body = body[:ia] + old[:h3_end] + rules + legend + pers + res_html + '<p class="note">Dahinter stehen die Anforderungen nach Maslow und Sinnen, noch keine geprüft (Ast 2 im Baum), und der Nutzungstest mit 7 Prüfsituationen (' + L('2.4.9') + '). Technische Werte legt ein Fachexperte fest (O15).</p>' + body[ib:]
 
 # ---------- Zielbild: Endprodukt und Ziele ----------
 endbox = ('<div class="dt-endbox" id="u-endprodukt"><h4>Endprodukt und Ziele</h4>'
@@ -1333,6 +1365,53 @@ body = body.rstrip() + '\n' + js + '''<script>
 })();
 </script>'''
 
+def _block(b, start, end):
+    i = b.index(start); j = b.index(end, i)
+    return b[i:j]
+_zb = _block(body, '<div class="zb">', '<div class="dt-endbox" id="u-endprodukt">')
+_zbm = _block(body, '<div class="dt-zbmap" id="u-zielbild-m02">', '<h3 id="u-alltag">')
+_all = _block(body, '<h3 id="u-alltag">', '<h3 id="u-struktur">')
+def _neu(h):
+    h = re.sub(r'<a class="ref" href="#E\d\d">(E\d\d)</a>', r'\1', h)
+    h = h.replace('Vorgabe vom 05.11.2026, noch nicht im Entscheidungslog. Die Tagesabläufe sind ein Vorschlag der KI danach und gelten, bis ihr widersprecht (E80).', 'Vorgabe vom 05.11.2026. Die Tagesabläufe sind ein Vorschlag der KI; sie gelten erst, wenn ihr sie wählt (D43).')
+    h = re.sub(r'\s*\(E\d\d(?:\s*[,–]\s*E\d\d)*\)', '', h)
+    h = re.sub(r',\s*E\d\d(?=[<,\s])', '', h)
+    h = re.sub(r'<a class="ref" href="#k2-[^"]*">(2\.\d(?:\.\d+)?)</a>', lambda m: linkify(m.group(1)), h)
+    h = re.sub(r'(?<![\w.>#-])(2\.\d\.\d+)(?![\w<])', lambda m: linkify(m.group(1)), h)
+    parts = re.split(r'(<[^>]+>)', h)
+    return ''.join(p if p.startswith('<') else rolle(p) for p in parts)
+_zb = _neu(_zb)
+for a, b in [('Zielbild von Roman, 04.11.2026. Lage, Zahl und Maße sind daraus nicht ablesbar; Grundlage für Stufe 1 ist Generalplan V1 (E37).', 'Zielbild der Projektleitung vom 04.11.2026, ein Entwurf. Lage, Zahl und Maße sind daraus nicht ablesbar; Grundlage ist der Detailplan Blatt 3 (D55).'),
+             ('Team plus die ersten 5 Käufer (E01, E79). Grundmodell: leichter Transport, kommunal, gemeinschaftlich, autark, mit Privatsphäre (E72).', 'Team in Phase 0, danach Mieter von der Whitelist. Grundmodell: transportierbar über eine einspurige, enge Straße, kommunal, gemeinschaftlich, autark, mit Privatsphäre.'),
+             ('Wohnhaus mit E-Bike-Unterstand', 'Objekt zum Wohnen mit E-Bike-Unterstand'), ('Wohnhaus mit E-Bike-Unterstand', 'Objekt zum Wohnen mit E-Bike-Unterstand'),
+             ('Die zweite Ansicht steht in Kapitel 6. ', '')]:
+    _zb = _zb.replace(a, b)
+_zb = re.sub(r'Zielbild von [^,<]+, 04\.11\.2026\. Lage, Zahl und Maße sind daraus nicht ablesbar; Grundlage für Stufe 1 ist Generalplan V1(?: \(E37\))?\.', 'Zielbild der Projektleitung vom 04.11.2026, ein Entwurf. Lage, Zahl und Maße sind daraus nicht ablesbar; Grundlage ist der Detailplan Blatt 3 (D55).', _zb)
+_zb = re.sub(r'Team plus die ersten 5 Käufer(?: \(E01, E79\))?\. Grundmodell: leichter Transport, kommunal, gemeinschaftlich, autark, mit Privatsphäre(?: \(E72\))?\.', 'Team in Phase 0, danach Mieter von der Whitelist. Grundmodell: transportierbar über eine einspurige, enge Straße, kommunal, gemeinschaftlich, autark, mit Privatsphäre.', _zb)
+_zb = re.sub(r'<span class="zb-m s1">Stufe 1</span>', '<span class="zb-m s1">Phase 0</span>', _zb)
+_zb = re.sub(r'(<b>(?:Kommunalgebäude: Arbeitsplatz, Küche, Sanitär|Gemüsegarten)</b><small>)(.*?)(</small></div><span class="zb-m s1">)Phase 0', r'\1\2, D64\3Phase 1', _zb)
+_zb = _zb.replace('<b>Kommunalgebäude: Arbeitsplatz, Küche, Sanitär</b><small>' + linkify('2.4.4') + ', E74</small></div><span class="zb-m s1">Phase 0</span>', '<b>Kommunalgebäude: Arbeitsplatz, Küche, Sanitär</b><small>' + linkify('2.4.4') + ', D64</small></div><span class="zb-m s1">Phase 1</span>')
+_zb = _zb.replace('<b>Gemüsegarten</b><small>' + linkify('2.4.4') + ', E74</small></div><span class="zb-m s1">Phase 0</span>', '<b>Gemüsegarten</b><small>' + linkify('2.4.4') + '</small></div><span class="zb-m s1">Phase 1</span>')
+_zbm = _neu(_zbm).replace('Wohnhaus mit E-Bike-Unterstand', 'Objekt zum Wohnen mit E-Bike-Unterstand').replace('<p>das Maslow-', '<p>Das Maslow-')
+_all = _neu(_all).replace('<h3 id="u-alltag"><span class="pn">2</span>Alltag oben: für wen wir bauen<small>Qualitätskriterien · M02 Mensch, Sinne, Nutzbarkeit</small></h3>',
+                          '<h4 class="dt-h4" id="u-alltag">Alltag oben: für wen wir bauen (Spielregeln und Tagesabläufe)</h4>')
+_all = re.sub(r'Käuferinnen und Käufer wohnen in ihrem eigenen Haus und sind frei; sie können bei allem mitmachen, müssen aber nicht \(E63\)\. Deshalb stehen sie in keinem Tagesablauf\.',
+              'Mieter wohnen in ihrem eigenen Objekt und sind frei; sie können bei allem mitmachen, müssen aber nicht. Deshalb stehen sie in keinem Tagesablauf.', _all)
+body = body.replace('<h4 class="dt-h4" id="b-zielblatt-tab">', '<h4 class="dt-h4" id="u-zielbild">Zielbild: was wir bauen, und was jeder Bereich den Menschen bieten muss</h4>' + _zb + _zbm + '<h4 class="dt-h4" id="b-zielblatt-tab">', 1)
+body = body.replace('<div class="dt-ber" role="group"', _all + '<div class="dt-ber" role="group"', 1)
+_i = body.index('<details class="dt-hist" id="index-2-historie">'); _j = body.rindex('</details></main>')
+body = body[:_i] + body[_j + len('</details>'):]
+while '<li><a href="#index-2-historie">' in body:
+    _t = body.index('<li><a href="#index-2-historie">'); _e = body.index('</nav>', _t); _e = body.rindex('</ol>', _t, _e)
+    body = body[:_t] + body[_e:]
+# Verweise auf entfernte Stellen: als Text stehen lassen und zählen
+_ids = set(re.findall(r'id="([^"]+)"', body))
+_tot = [0]
+def _ent(m):
+    if m.group(2) in _ids: return m.group(0)
+    _tot[0] += 1; return m.group(3)
+body = re.sub(r'<a ([^>]*?)href="#([^"]+)"[^>]*>(.*?)</a>', _ent, body)
+print('Verweise ohne Ziel entlinkt:', _tot[0])
 _fehler = pruefe_baum(tree)
 _fehler += _ab.pruefe(tree)
 _g = zielblatt_html()
@@ -1340,6 +1419,9 @@ _fehler += [f'Grundlage: „{w}“' for w in ALT if w in re.sub(r'<[^>]+>', ' ',
 for _w in ('Mission:', 'Globalziele, in dieser Rangfolge'):
     if _w not in _g: _fehler.append(f'Grundlage: {_w} fehlt')
 if 'DETAILPLAN_SRC' in _g or 'data:image/jpeg;base64,' not in _g: _fehler.append('Detailplan fehlt in der Grundlage')
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+import pruefe_alle as _pa
+_fehler += _pa.pruefe_text('Index 3.0', body)
 assert not _fehler, 'Alter Stand im gültigen Teil:\n' + '\n'.join(_fehler)
 OUT.write_text(body)
 print('ok', len(body), 'open decisions', n_dec_open, 'wait', n_wait, 'chance', n_chance, 'gates', n_gates, 'themes', len(entschieden))

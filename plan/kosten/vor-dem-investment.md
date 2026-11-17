@@ -1,18 +1,15 @@
-# Node001 vor dem Investment, Stand 13.11.2026
+# Node001 vor dem Investment, Stand 17.11.2026
 
 Richtwert Eigenkapital 10.000 €. Alle Beträge sind Annahmen aus dem Kostenregister (Teilschätzung, keine Angebote). Kurs 50.3379 UAH/EUR.
 
 | Variante | € niedrig–hoch | € hoch mit Reserve | Stunden Eigenleistung |
 |---|---|---|---|
-| Kern | 3.226–6.172 | 7.098 | 397 |
-| Optimum | 4.403–8.236 | 9.472 | 443 |
-| Erweitert | 5.119–9.825 | 11.299 | 451 |
+| Kern | 2.640–4.901 | 5.636 | 385 |
+| Optimum | 3.817–6.965 | 8.009 | 431 |
+| Erweitert | 4.533–8.554 | 9.837 | 439 |
 
 | Nr | Posten | Stufe | Variante | UAH | Stunden | Risiko, das wegfällt | Quelle |
 |---|---|---|---|---|---|---|---|
-| A001 | Fachprüfung des Geologieberichts | A | Kern | 3.000–15.000 | 4 | Boden: Die KI-Zusammenfassung ist nicht geprüft. Ohne Freigabe ist jede Gründung und jeder Preis angreifbar. | Register: 3.000 UAH „Beratung ab“; hoch = Annahme KI |
-| A002 | Zusatzerkundung (3 Bohrungen à 8 m) | A | Kern | 24.000 | 4 | Boden: Gründungshorizont für Objekt und Stützbauwerk. | Register |
-| A003 | Vermessung mit Geländemodell | A | Kern | 2.500–25.000 | 4 | Planung: Grundlage für 3D-Modell, Leitungen und Kosten. | Register: 2.500 UAH für kleine Fläche in Kyjiw; hoch = Annahme KI für 2 ha am Hang |
 | A048 | Wasseranalyse im Labor | A | Kern | 3.500 | 3 | Wasser: bestimmt die Aufbereitung (5.625 bis über 45.000 UAH Unterschied). | Register |
 | A010 | Objekt-Skizze und Bau-KI-Planung | A | Kern | 5.000–6.300 | 40 | Kosten: Basis of Design für Objekt Phase 0 und Phase 1. | Register |
 | A029 | Heizlastberechnung | A | Kern | 810 | 2 | Wärme: Ofengröße und Holzmenge. | Register |
@@ -38,7 +35,7 @@ Richtwert Eigenkapital 10.000 €. Alle Beträge sind Annahmen aus dem Kostenreg
 | X03 | Absteckung und Messreihen (Quellschüttung, Wetter, Schnee) | B | Kern | 0 | 30 | Wasser und Klima: Winterwerte, die sonst ein Jahr fehlen. | kostet nur Zeit |
 | A004 | Hangseitiger Entwässerungsgraben, 20 m | B | Optimum | 30.000–60.000 | 40 | Boden: schützt die Baufläche vor Hangwasser; Empfehlung des Gutachters. | Register |
 | A049 | Brunnen bohren, 20–40 m | B | Erweitert | 36.000–80.000 | 8 | Wasser: beweist Menge und Qualität am Ort. Größtes offenes Risiko nach dem Boden. | Register |
-| X04 | Mieter-Interessenten sammeln | C | Kern | 0 | 60 | Nachfrage: belegt, dass jemand oben wohnen und zahlen will (D50). | kostet nur Zeit |
+| X04 | Whitelist der künftigen Mieter einrichten und führen | C | Kern | 0 | 60 | Nachfrage: belegt, dass jemand oben wohnen und Miete zahlen will (D50; Index AP-A8). | kostet nur Zeit |
 | X05 | Erster bezahlter Kundenauftrag der Agentur | C | Kern | 0 | 0 | Umsatz: zeigt, dass die Company Geld verdient. | bringt Umsatz |
 | X06 | Selbstkostenrechnung je Objekt | C | Kern | 0 | 20 | Wirtschaftlichkeit: Miete und Pauschale aus echten Kosten (D49). | kostet nur Zeit |
 | X07 | Investorenunterlagen mit geprüften Zahlen | C | Kern | 0 | 40 | Vertrauen: Whitepaper und Deck ohne offene Kernfragen. | kostet nur Zeit |

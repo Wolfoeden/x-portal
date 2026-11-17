@@ -9,7 +9,7 @@ Für die ausführende KI (kleineres Modell). Das Ergebnis prüft die planende KI
 - Ergebnis wird gebraucht für: Lieferung
 - Grundbestimmungen: GB8, GB9, GB11
 
-  - GB8 Geld und Freigabe: Eigenkapital bis zur fertigen Bauplanung, danach Investoren. Bestellt wird nur mit Freigabe der Geschäftsführung und Geld auf dem Konto.
+  - GB8 Geld und Freigabe: So viel wie möglich mit Eigenkapital. Bis zu welchem Punkt, und ab wann Investoren dazukommen, ist offen: D69 und D71, Seite „Vor dem Investment“. Bestellt wird in Chargen, nur mit Freigabe der Geschäftsführung und Geld auf dem Konto. Kein Verkauf; Erlöse kommen aus Miete.
   - GB9 Recht: Rechtsprüfung vor Mietvertrag, Token, Import und Fällung. Kein öffentliches Angebot, bevor die Rechtslage geklärt ist.
   - GB11 Rollen und Freigabe: Rollen statt Namen. Technische Werte legt ein Fachexperte fest. Ein Vorschlag der KI gilt erst, wenn er gewählt ist. Unterlagen werden von Hand verschickt.
 

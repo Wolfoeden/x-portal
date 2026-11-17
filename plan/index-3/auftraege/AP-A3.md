@@ -10,7 +10,7 @@ Für die ausführende KI (kleineres Modell). Das Ergebnis prüft die planende KI
 - Grundbestimmungen: GB7, GB8, GB11
 
   - GB7 Strom: Netzanschluss mit Generator als Reserve; Solar mit Speicher ab Phase 1.
-  - GB8 Geld und Freigabe: Eigenkapital bis zur fertigen Bauplanung, danach Investoren. Bestellt wird nur mit Freigabe der Geschäftsführung und Geld auf dem Konto.
+  - GB8 Geld und Freigabe: So viel wie möglich mit Eigenkapital. Bis zu welchem Punkt, und ab wann Investoren dazukommen, ist offen: D69 und D71, Seite „Vor dem Investment“. Bestellt wird in Chargen, nur mit Freigabe der Geschäftsführung und Geld auf dem Konto. Kein Verkauf; Erlöse kommen aus Miete.
   - GB11 Rollen und Freigabe: Rollen statt Namen. Technische Werte legt ein Fachexperte fest. Ein Vorschlag der KI gilt erst, wenn er gewählt ist. Unterlagen werden von Hand verschickt.
 
 ## Auftrag

@@ -5,14 +5,14 @@ Alle früheren Entscheidungen E01–E85 sind zurückgenommen. Neu gilt nur, was 
 ## Vor dem Investment: was aus Eigenkapital und Eigenleistung geht
 
 ### D69 Welches Paket vor dem Investment?
-Richtwert etwa 10.000 € Eigenkapital; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten. Die Beträge kommen aus dem Kostenregister vom 13.11. (Teilschätzung, keine Angebote). Nicht enthalten sind Reisen, Architektenhonorar, Gebühren und Gründungskosten. Details auf der Seite „Vor dem Investment“.
+So viel wie möglich mit Eigenkapital (Antwort vom 17.11.2026), bisheriger Richtwert etwa 10.000 €; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten. Fachprüfung des Geologieberichts, Zusatzerkundung und Vermessung liegen vor und sind nicht mehr enthalten (Kommentar vom 15.11.2026). Die Beträge kommen aus dem Kostenregister vom 13.11. (Teilschätzung, keine Angebote). Nicht enthalten sind Reisen, Architektenhonorar, Gebühren und Gründungskosten. Details auf der Seite „Vor dem Investment“.
 
-- A · Kern: Nachweise auf Papier (Geologie-Prüfung, Zusatzerkundung, Vermessung, Wasseranalyse, Planung, Rechtsprüfung, Angebote), Werkzeug und Kurse, Holz schlagen und einlagern, Interessenten und Unterlagen. 3.226–6.172 € (mit Reserve bis 7.098 €).
-- B · Optimum (Vorschlag KI): Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. 4.403–8.236 € (mit Reserve bis 9.472 €).
-- C · Erweitert: Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. 5.119–9.825 € (mit Reserve bis 11.299 €).
+- A · Kern: Wasseranalyse, Planung, Rechtsprüfung und Angebote, Werkzeug und Kurse, Holz schlagen und einlagern, Whitelist und Unterlagen. 2.640–4.901 € (mit Reserve bis 5.636 €).
+- B · Optimum (Vorschlag KI): Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. 3.817–6.965 € (mit Reserve bis 8.009 €).
+- C · Erweitert: Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. 4.533–8.554 € (mit Reserve bis 9.837 €).
 
 ### D70 Wie wird Eigenleistung bewertet und belegt?
-Im Optimum stecken rund 443 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.
+Im Optimum stecken rund 431 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.
 
 - A · Stundenbuch plus Steuerberater (Vorschlag KI): Jede Stunde mit Datum, Rolle, Tätigkeit und Foto festhalten; der Steuerberater legt fest, wie sie in die Gesellschaft eingeht.
 - B · Nur dokumentieren: Stunden und Ergebnisse festhalten und Investoren zeigen, ohne sie zu bewerten.
@@ -21,7 +21,7 @@ Im Optimum stecken rund 443 Stunden eigene Arbeit. Ob und mit welchem Satz sie a
 ### D71 Ab wann sprechen wir Investoren an?
 Für Investoren zählen geprüfte Nachweise. Das Deck nennt als Gate: belastbares Kostenband, validiertes Revenue Model, rechtliche Struktur, messbare Meilensteine, klarer Kapitalbedarf.
 
-- A · Nach Stufe A (Vorschlag KI): Sobald Geologie geprüft, Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher.
+- A · Nach Stufe A (Vorschlag KI): Sobald Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher.
 - B · Sofort mit dem heutigen Stand: Gespräche jetzt führen, mit offenen Punkten klar benannt.
 - C · Erst nach dem ersten Winter: Warten, bis Messreihen, trockenes Holz und erste Mieter-Interessenten vorliegen.
 
@@ -108,7 +108,7 @@ Bisher: etwa 30.000 € je Käufer, 45 m² je Haus. Ein Holzhaus mit 45 m² kost
 
 Früher: E78, E84
 
-### D50 Verkaufsstart und Schwelle zum Bestellen
+### D50 Interessenten und Schwelle zum Bestellen
 Bisher: Verkauf ab Januar 2027, Warteliste als Nachfragebeleg, bestellt wird bei 5 Käufern mit belegtem Geld und 100 auf der Warteliste. Termine sind laut Deck Ziele, keine Zusagen (W06). Auf der Website heißt der Ort bisher nur „Ukraine“.
 
 - A · Warteliste jetzt, Verkauf nach Gate (Vorschlag KI): Die Warteliste läuft mit Bildern und Ablauf; verkauft wird erst nach Rechtsprüfung, Preis und Gate G2. Die Schwelle zum Bestellen steht im Business Case.

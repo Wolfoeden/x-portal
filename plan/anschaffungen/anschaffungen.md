@@ -1,18 +1,18 @@
-# Anschaffungsliste Node001, Stand 13.11.2026
+# Anschaffungsliste Node001, Stand 17.11.2026
 
 120 Positionen. Recherche-Einträge stehen in der Datenbank des Artefakts (Sammlung `recherche`).
 
 ## Grundstück und Gründung
 
-Aus der Geologie-Zusammenfassung (nicht geprüft, keine Fachfreigabe): Hang mit Rutsch- und Fließprozessen, Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Empfohlen sind Streifen- und Stützfundament, ein hangseitiger Entwässerungsgraben und Zusatzerkundungen. Alles hier plant ein Fachexperte.
+Aus dem Geologiebericht 34.11/26; Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026): Hang mit Rutsch- und Fließprozessen, Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Empfohlen sind Streifen- und Stützfundament, ein hangseitiger Entwässerungsgraben und Zusatzerkundungen. Alles hier plant ein Fachexperte.
 
 Entscheidet: Geschäftsführung nach Vorschlag Fachexperte Geotechnik. Nimmt ab: Fachexperte Geotechnik. Aus: D54, D55, D56.
 
 | Nr | Gegenstand | Phase | Art | Recherchieren | Menge hängt ab von |
 |---|---|---|---|---|---|
-| A001 | Fachprüfung des Geologieberichts | 0 | Dienstleistung | Geotechniker oder Prüfingenieur in der Region; Umfang, Dauer, Honorar | einmal |
-| A002 | Zusatzerkundung für Zufahrt, Stützkonstruktion und Hauptgebäude | 0 | Dienstleistung | Bohrfirma, Zahl und Tiefe der Bohrungen | Zahl der Gebäude und Stützbauwerke |
-| A003 | Vermessung und Absteckung | 0 | Dienstleistung | Vermesser vor Ort; digitales Geländemodell für die 3D-Planung | einmal, später je Bauabschnitt |
+| A001 | Liegt vor: Fachprüfung des Geologieberichts | 0 | Dienstleistung | Kopie in den Plan legen (Index 3.0, AP-A1) | – |
+| A002 | Liegt vor: Zusatzerkundung für Zufahrt, Stützkonstruktion und Hauptgebäude | 0 | Dienstleistung | Kopie in den Plan legen und für Phase 1 auswerten (Index 3.0, AP-A1) | – |
+| A003 | Liegt vor: Vermessung | 0 | Dienstleistung | Kopie in den Plan legen (Index 3.0, AP-A1); Absteckung als Eigenleistung | je Bauabschnitt |
 | A004 | Hangseitiger Entwässerungsgraben mit Rinnen oder Sammelbehälter | 0 | Dienstleistung | Bauweise, Länge, Material, Firma mit Kleinbagger | Länge des Hangs oberhalb der Baufläche |
 | A005 | Fundament für Objekt Phase 0 | 0 | Dienstleistung | Punkt-, Streifen- oder Schraubfundament; was ein Fachexperte für den Standort zulässt | Größe und Gewicht des Objekts |
 | A006 | Stützkonstruktion am Hang | 0–1 | Dienstleistung | Gabionen, Betonwinkel oder Holz; Statik; Firma | Geländeschnitt an der Baufläche |

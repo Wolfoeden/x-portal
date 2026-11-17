@@ -92,3 +92,69 @@ Auftrag vom 16.11.2026: alle Pläne vereinen, von Schritt 1 bis Projektende, mit
   - zuständiger Netzbetreiber (vermutlich АТ „Прикарпаттяобленерго“) und der frühere Richtwert von etwa 2.927 UAH je kW
   - Warennummer, Zoll und Einfuhrumsatzsteuer
 - **Knoten im Baum:** vorher 293, nachher 329. M02 ist unverändert (29 Zeilen).
+
+## 17.11.2026 · Kommentare umgesetzt, Index 2.0 eingearbeitet, alle Seiten nachgezogen
+
+Anlass: Roman fragt, ob der Plan noch fortlaufend angepasst wird. Antwort: nein, nur in den Teilen, die gerade bearbeitet wurden. Der Index 2.0 vom 04.11. stand noch auf der Seite, mit Käufern, Papierrechnung und fest eingetragenen Zahlen. Die Prüfung lief nur über den Baum. Kommentare vom 12. und 15.11. auf anderen Seiten waren nicht umgesetzt.
+
+### Eingänge dieser Runde
+
+Gelesen am 17.11.2026: Kommentare auf allen sechs Seiten und die Antworten in der Datenbank der Entscheidungsseite. Neue Antworten seit dem 13.11.: keine.
+
+| Seite | Datum | Wortlaut (gekürzt) | Umsetzung | Stelle |
+|---|---|---|---|---|
+| Index | 17.11. | „papierrechnung ist falsch weil wir nicht mehr verkaufen … business case ist container für die whiteliste … dann bestellen wir nach … miete … investoren zeigen“ | Papierrechnung entfernt; Business Case als Kreislauf: Charge 1 kaufen und hochbringen, Whitelist führen, nachbestellen, Miete, Bericht für Investoren | Index Ast 1: AP-A8, AP-C5, AP-E2, AP-F3, AP-G3; mieter, G0, O23, G1; GB8; Whitepaper Abschnitt 11; Deck Folien 13, 14; Vor dem Investment |
+| Index | 17.11. | „sind diese ganzen zahlen überhaupt richtig?“ | Nein, sie waren vom 04.11. eingetragen. Zahlen werden jetzt aus dem Baum gezählt | Index: Kopf des Baums; Prüfskript `plan/pruefe_alle.py` |
+| Index | 17.11. | „es wird keine käufer geben, nur mieter mit recurring revenue“ | „Käufer“ aus allen gültigen Texten aller Seiten entfernt; das Prüfskript bricht ab, wenn es wieder auftaucht | alle Seiten |
+| Index | 17.11. | „es muss transportierbar sein … einspurig und auch teils eng“ | GB1 neu: Transportierbarkeit ist das erste Prüfkriterium; neues AP-A0 „Strecke messen“ mit Protokoll; Anfragen an Anbieter nennen die enge Straße | Index GB1, AP-A0, hausart, lieferant, zufahrt, AP-C1; Whitepaper; Deck Folie 13 |
+| Vor dem Investment | 15.11. | „haben wir schon“ zu Fachprüfung Geologie, Zusatzerkundung, Vermessung | Aus dem Paket genommen, Summen neu gerechnet; als vorhanden geführt; Aufgabe „Kopien in den Plan legen“ (AP-A1) | Vor dem Investment; D69, D70 auf der Entscheidungsseite; Anschaffungen A001–A003; Index O01, GB2, 2.2.1; Whitepaper; Deck Folie 8 |
+| Whitepaper | 12.11. | „Warteliste … ist nicht vorhanden, kommt erst/in arbeit“ | aus „Vorhanden“ genommen, als „in Arbeit“ geführt | Whitepaper, Deck Folie 8, Index 2.4.2 |
+| Whitepaper | 12.11. | „grundstück im besitz, ein detailplan und bebauungsplan“ | so in „Vorhanden“; Kopien in den Plan legen (AP-A1) | Whitepaper, Deck Folie 8, Index 2.2.5, Abgleich W07 |
+| Antworten im Chat | 17.11. | Index 2.0 einarbeiten, dann entfernen; Whitelist nur künftige Mieter; Charge 1 „so viel wie möglich mit Eigenkapital“, der Rest ist die Frage D69/D71 | umgesetzt; keine neue Karte | Index, GB8, Vor dem Investment, D69 |
+
+### Index 2.0 eingearbeitet und von der Seite genommen
+
+Der Index 2.0 liegt weiter unter `quellen/index-2.0.html` und im Git. Übernommen:
+
+- Zielbild mit Legende und die Zuordnung „Was jeder Bereich den Menschen bieten muss“ (Maslow und Sinne): in die Grundlage, mit Objekt statt Wohnhaus, Phasen statt Stufe 1, Detailplan als Grundlage.
+- Alltag oben (Spielregeln, Tagesabläufe, Ressourcen und Ausfall): in Ast 2. Die Versorgungskarten folgen jetzt D59 bis D63 (Netz mit Generator, Holzofen, Grundwasser mit Aufbereitung, Sanitär fest ab Phase 0, Internet nach Vergleich).
+- Teilergebnisse 2.1 bis 2.6: 41 als Knoten in Ast 1 („Bausteine und Teilergebnisse“), jedes mit Stand 17.11.
+- Routine (3.3) und Methoden M01–M11 (Anhang A1): in Ast 1 „Steuerung“, dazu neu die Regel „Eingänge zuerst“.
+- Prüfaufträge an die Anwälte (Anhang A5): ohne Kauf- und Pachtfragen als Unterlage an O05.
+- Transportangaben aus Anhang A3: in GB1 und AP-A0.
+- Offene Punkte aus Kapitel 4 ohne Knoten: O14, O26 → AP-A1 bzw. 2.2.5; O19, O28 → AP-A4; O25 → 2.3.6; O27 → AP-A2; O29 → 2.3.1; O30, O21 → AP-A7; O32 → 2.1.8; O06 → 2.1.3; O15 → Ast 7; O20 → Ast 2.
+- Das alte Entscheidungslog E01–E85 ist nicht mehr im Index; es steht auf der Entscheidungsseite unter „Historie“ und in `plan/entscheidungen/archiv/`.
+
+Entfallen:
+
+- 2.1.1 Angebot je Gruppe: Kaufpreis, Pacht, Miete: kein Verkauf (D45, D48); ersetzt durch Selbstkosten, Miete und Pauschale (O03, D49)
+- 2.1.2 Kosten je Plot: ersetzt durch Selbstkosten je Objekt (O03, D49) und Make-or-Buy (Ast 4)
+- 2.5.6 Technik für den Verkauf: Token, Pachtvertrag, Zahlung: kein Verkauf (D45, D48); Token über Cardano nach Rechtsprüfung (AP-A6, AP-B2)
+- 2.6.3 Das Team oben liefert alle Projekte; eigenes Produkt nur Agenten: Entscheidung aus dem zurückgenommenen Log (E70); bei Bedarf neu entscheiden
+- 2.6.5 Kapital über die Chain: fraktionalisiertes Land: ersetzt durch Token über Cardano nach Rechtsprüfung (AP-A6, AP-B2; D37, D48)
+- Überblick 4: Ablauf in BPMN 2.0: beruhte auf Verkauf ab Januar 2027 und 5 Käufern; ersetzt durch den Ablaufplan A bis H
+- Überblick 5: Business Case mit Papierrechnung (30.000 € je Plot): kein Verkauf; Business Case ist Whitelist, Chargen und Mieterlöse (Kommentar 17.11.2026, AP-C5, AP-F3)
+- Überblick 6: Stand und Blocker mit festen Zahlen: Zahlen vom 04.11. waren eingetragen, nicht gezählt; jetzt zählt der Generator aus dem Baum
+- Kapitel 1 Endprodukt und Ziele: steht aktuell in der Grundlage
+- Kapitel 3.0 bis 3.2: Weg, Gates, Freigaben: stehen aktuell in Ast 1 und in den Beschlussblättern (M03)
+- Kapitel 3.4 Terminkette rückwärts mit Verkauf im Januar und Containern im März: Termine sind Ziele (D58); ersetzt durch Bestellzeitpunkte rückwärts (AP-C4)
+- Kapitel 5 Entscheidungen kurz und Log E01–E85: Log am 13.11.2026 zurückgenommen; Historie steht in Ast 8
+- Anhang A2 Bekannte Werte Geld (Preis je Plot, Hochrechnung): kein Verkauf; Kosten im Kostenregister vom 13.11.2026
+- Anhang A6 Freigabe zum Aufstellen: steht als Ausgänge bei „frost“ und G2 in Ast 1
+- O16 Widersprüche zwischen alten Entscheidungen: Log zurückgenommen
+- O24 Terminkette: ersetzt durch AP-C4
+
+### Andere Seiten
+
+- **Vor dem Investment:** Posten A001–A003 raus. Neu gerechnet: Kern 2.640–4.901 € (vorher 3.226–6.172 €), Optimum 3.817–6.965 € (vorher 4.403–8.236 €), Erweitert 4.533–8.554 € (vorher 5.119–9.825 €), Optimum 431 Stunden (vorher 443). Der Investor Ask bleibt gleich (1.178.645–1.351.683 UAH), weil die drei Posten auch dort nicht mehr zählen. Stufen umbenannt (statt „Nachweise auf Papier“ und „Eigenanteil am Grundstück“).
+- **Entscheidungsseite:** D69 und D70 rechnen aus `kosten.json`; Detailplan Blatt 3 statt Generalplan Variante 1 und „neues Bild folgt“; Geologie als geprüft; D71 A ohne „Geologie geprüft“; Texte zu D43, D46, D50 angepasst.
+- **Anschaffungsliste:** A001–A003 als „Liegt vor“; Nummern bleiben, damit Verweise stimmen.
+- **SGMM:** Rollen statt Namen, Freigaberegel nach D43, Mission nach D42; alte Werte in den Abgleichtabellen als „bisher“ markiert.
+- **Whitepaper:** Vorhanden und In Arbeit nach den Kommentaren; Abschnitt 11 mit Transport, Whitelist und Chargen.
+- **Deck:** neue Datei v4 (Folien 8, 13, 14), siehe `plan/praesentation/README.md`.
+
+### Prüfung
+
+- `plan/pruefe_alle.py` liest den fertigen Text aller sechs Seiten und meldet alten Stand (Käufer, Plot, Papierrechnung, Verkauf ab, Pre-Seed, Tiny House, Namen, Fachperson, Warteliste als vorhanden, Geologie-Fachprüfung als offen). Ausgenommen: Kommentare im Wortlaut, Spalten „bisher“, Historie der Entscheidungsseite, Frage und Möglichkeiten beantworteter Karten, die gewählten Namen im Team-Abschnitt. Ergebnis am 17.11.2026: keine Stelle.
+- Der Index-Generator ruft die Prüfung vor dem Schreiben auf und bricht ab, wenn etwas gefunden wird. Verweise auf entfernte Stellen werden als Text gelassen und gezählt.
+

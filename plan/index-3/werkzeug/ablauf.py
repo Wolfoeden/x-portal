@@ -7,14 +7,14 @@ Nichts wird automatisch bestellt oder versendet. Termine ohne Quelle gibt es nic
 
 # Grundbestimmungen: gegen sie wird jedes Arbeitspaket geprüft.
 GB = [
-    ('GB1', 'Weg nach oben', 'Letzte etwa 200 m mit über 15 % Steigung, unbefestigt. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. In Phase 0 kommt alles auf kleinem Fahrzeug hoch, keine Befestigung am Anfang. Im Winter muss geräumt werden.', 'Standortangaben im Index (Anhang A3); D57'),
-    ('GB2', 'Boden und Hang', 'Rutsch- und Fließprozesse; Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Streifen- und Stützfundament, hangseitige Stützkonstruktion und Entwässerungsgraben; Zusatzerkundung für Zufahrt, Stützbauwerke und massive Gebäude.', 'Geologiebericht 34.11/26'),
+    ('GB1', 'Weg nach oben: transportierbar', 'Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jedes Objekt muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen. Im Winter muss geräumt werden.', 'Kommentar 17.11.2026; Standortangaben vom 04.11.2026; D57'),
+    ('GB2', 'Boden und Hang', 'Rutsch- und Fließprozesse; Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Streifen- und Stützfundament, hangseitige Stützkonstruktion und Entwässerungsgraben. Fachprüfung des Berichts, Zusatzerkundung und Vermessung liegen vor, sind aber noch nicht im Plan abgelegt (AP-A1).', 'Geologiebericht 34.11/26; Kommentar 15.11.2026'),
     ('GB3', 'Lage', 'Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche; Grundlage ist der Detailplan Blatt 3.', 'D55; Detailplan'),
     ('GB4', 'Frost und Termine', 'Gebaut wird nur ohne Frost. Termine sind Ziele und gelten erst nach den Gates.', 'D58'),
     ('GB5', 'Sanitär', 'Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser ab Phase 0 fest eingebaut.', 'D62'),
     ('GB6', 'Wasser', 'Grundwasser, aufbereitet zu Trinkwasser; Anfangsstufe bauen, Ausbau vorbereiten.', 'D61'),
     ('GB7', 'Strom', 'Netzanschluss mit Generator als Reserve; Solar mit Speicher ab Phase 1.', 'D59'),
-    ('GB8', 'Geld und Freigabe', 'Eigenkapital bis zur fertigen Bauplanung, danach Investoren. Bestellt wird nur mit Freigabe der Geschäftsführung und Geld auf dem Konto.', 'D43, D46, D47'),
+    ('GB8', 'Geld und Freigabe', 'So viel wie möglich mit Eigenkapital. Bis zu welchem Punkt, und ab wann Investoren dazukommen, ist offen: D69 und D71, Seite „Vor dem Investment“. Bestellt wird in Chargen, nur mit Freigabe der Geschäftsführung und Geld auf dem Konto. Kein Verkauf; Erlöse kommen aus Miete.', 'D43, D45 bis D48, D69, D71; Antwort 17.11.2026'),
     ('GB9', 'Recht', 'Rechtsprüfung vor Mietvertrag, Token, Import und Fällung. Kein öffentliches Angebot, bevor die Rechtslage geklärt ist.', 'D48'),
     ('GB10', 'Datenschutz und Sicherheit', 'Kamera, Zugang und Daten nur mit geprüftem Konzept; Server oben nur bei VC-Funding mit Deutschland verbunden.', 'XP-SYS-009; D47'),
     ('GB11', 'Rollen und Freigabe', 'Rollen statt Namen. Technische Werte legt ein Fachexperte fest. Ein Vorschlag der KI gilt erst, wenn er gewählt ist. Unterlagen werden von Hand verschickt.', 'D43'),
@@ -49,7 +49,7 @@ Dear Sir or Madam,
 we are planning a living and working module for 2–3 persons in the Ukrainian Carpathians (approx. 1,050 m above sea level, winters down to −20 °C). Please send us a quotation including:
 
 1. Model, floor area, interior height, wall/roof/floor build-up and U-values; suitability for −20 °C.
-2. Delivery form: in parts or as complete module. Dimensions and weight of the heaviest and the largest part. The last 200 m of the access road are unpaved with more than 15 % gradient; transport width up to 2.6 m without permit.
+2. Delivery form: in parts or as complete module. Dimensions and weight of the heaviest and the largest part. Access is a simple single-lane road, narrow in places; the last 200 m are unpaved with more than 15 % gradient. Every part must be transportable on a small vehicle; transport width up to 2.6 m without permit. Please state the smallest delivery form you offer.
 3. Sanitary: prepared or installed flush toilet, shower, hot water, drainage connection.
 4. Electrical installation, heating options (wood stove with chimney, electric backup).
 5. Foundation requirements (point loads); our soil report recommends strip and retaining foundations.
@@ -68,7 +68,7 @@ Sehr geehrte Damen und Herren,
 wir planen ein Wohn- und Arbeitsmodul für 2–3 Personen in den ukrainischen Karpaten (etwa 1.050 m Höhe, Winter bis −20 °C). Bitte senden Sie uns ein Angebot mit:
 
 1. Modell, Fläche, Raumhöhe, Aufbau und U-Werte von Wand, Dach und Boden; Eignung für −20 °C.
-2. Lieferform: in Teilen oder als ganzes Modul. Maße und Gewicht des schwersten und des größten Teils. Die letzten 200 m der Zufahrt sind unbefestigt mit über 15 % Steigung; Transportbreite bis 2,6 m ohne Genehmigung.
+2. Lieferform: in Teilen oder als ganzes Modul. Maße und Gewicht des schwersten und des größten Teils. Die Zufahrt ist eine einfache, einspurige, teils enge Straße; die letzten 200 m sind unbefestigt mit über 15 % Steigung. Jedes Teil muss auf kleinem Fahrzeug hochkommen; Transportbreite bis 2,6 m ohne Genehmigung. Bitte nennen Sie die kleinste Lieferform, die Sie anbieten.
 3. Sanitär: vorbereitet oder eingebaut für Spültoilette, Dusche, Warmwasser, Abwasseranschluss.
 4. Elektroinstallation, Heizung (Holzofen mit Schornstein, elektrische Reserve).
 5. Anforderungen an das Fundament (Punktlasten); unser Gutachten empfiehlt Streifen- und Stützfundament.
@@ -87,14 +87,19 @@ def bau(N, X, O, alt):
 
     A = G('ab-a', 'A · Vor dem Investment: klären, was ein Investor sonst einpreist', [
         alt['O01'],
-        AP(N, 'AP-A1', 'Geologie: deutsche Zusammenfassung mit dem ukrainischen Original abgleichen', 'open',
-           'jetzt', 'Originalbericht 34.11/26 (16 Seiten) und Zusammenfassung XPB-N001-GEO-SUM-001 liegen vor', 'Fundament, Lage von Phase 0, Angebote',
-           ['GB2', 'GB11'], 'führt aus: ausführende KI, dann Projektleitung · prüft: Architekt (Beratung)',
-           'Abweichungsliste; geklärte Stellen, zum Beispiel die Mächtigkeit der bewegten Schichten (0,8–1,2 m gegen 0,9–1,2 m)',
-           auftrag='''Ziel: Die deutsche KI-Zusammenfassung des Geologieberichts Satz für Satz mit dem ukrainischen Original abgleichen.
-Eingang: Originalbericht (PDF, Ukrainisch), Zusammenfassung XPB-N001-GEO-SUM-001 (PDF, Deutsch).
-Vorgehen: Für jede Zahl und jede Empfehlung der Zusammenfassung die Fundstelle im Original (Seite, Absatz) angeben und den Originalwortlaut zitieren; Übersetzung prüfen.
-Ausgabe: Tabelle mit den Spalten Aussage Zusammenfassung | Fundstelle Original | Originalwortlaut | stimmt / weicht ab / fehlt | Hinweis.'''),
+        AP(N, 'AP-A0', 'Strecke ablaufen und messen: einspurige, teils enge Straße bis zum Grundstück', 'open',
+           'jetzt; vor jeder Anfrage an Anbieter und Spediteure', 'Maßband, Neigungsmesser, Kamera mit GPS', 'Auswahl des Objekts (hausart, AP-C1), Logistik (AP-C3), Bestellung',
+           ['GB1', 'GB11'], 'führt aus: Projektleitung oder Team vor Ort · wertet aus: planende KI',
+           'Streckenprotokoll: schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt',
+           text='Kommentar vom 17.11.2026: Die Objekte müssen über eine einfache, einspurige und teils enge Straße transportierbar sein; deshalb „leicht“. Breite, Engstellen und Ausweichstellen sind bis zur Messung offen.',
+           vorlagen=[('Streckenprotokoll', '''Abschnitt | von (GPS) | bis (GPS) | Länge m | schmalste Breite m | Kurvenradius m | Steigung % | Untergrund | Ausweichstelle ja/nein | Wendestelle ja/nein | Brücke, Lastgrenze t | Foto-Nr. | Bemerkung
+1 | | | | | | | | | | | |
+2 | | | | | | | | | | | |
+Ergebnis: größtes Teil (L × B × H) und schwerstes Teil, das bis zum Grundstück kommt; Fahrzeug, das es bringt; Jahreszeit.''')]),
+        AP(N, 'AP-A1', 'Vorhandene Nachweise in den Plan legen: Geologie-Fachprüfung, Zusatzerkundung, Vermessung', 'open',
+           'jetzt', 'Die Unterlagen liegen bei der Geschäftsführung oder dem Architekten (Kommentar vom 15.11.2026: „haben wir schon“)', 'Bauplanung (AP-A4), Phase 1, Kostenrechnung',
+           ['GB2', 'GB3', 'GB11'], 'liefert: Geschäftsführung · legt ab: Projektleitung',
+           'Die drei Dokumente liegen im Plan unter quellen/; Ergebnis der Zusatzerkundung und Höhenmodell sind in Grundlage und Ast 1 eingetragen'),
         AP(N, 'AP-A2', 'Wasseranalyse im Labor', 'open',
            'jetzt; Vorabprobe aus dem vorhandenen Grundwasser, Endprobe nach der Brunnenbohrung', 'akkreditiertes Labor gefunden', 'Auslegung der Aufbereitung, Angebot Brunnen und Aufbereitung',
            ['GB6', 'GB11'], 'entscheidet: Geschäftsführung · führt aus: Projektleitung · prüft: Fachexperte Wasser',
@@ -147,6 +152,18 @@ Ausgabe: Liste der Planungsvorgaben je Gewerk (Objekt, Fundament, Entwässerung,
            see=[('#b-O31', 'Angebote (Ast 5)'), ('#b-AP-C1', 'Objekt: Ungarn, Polen, Alibaba')]),
         alt['O03'],
         alt['mieter'],
+        AP(N, 'AP-A8', 'Whitelist der künftigen Mieter einrichten', 'open',
+           'jetzt (D50: Interessenten vor dem Bau)', 'Text und Bilder vom Ort; Datenschutzhinweis (GB10)', 'Chargen (AP-C5, AP-G3), Nachweis für Investoren (AP-F3)',
+           ['GB8', 'GB9', 'GB10'], 'führt: Projektleitung · prüft: Jurist (Datenschutz, keine verbindliche Zusage)',
+           'Anmeldung auf x-portal.eu; gezählt werden Einträge, gewünschter Einzug und Bereitschaft zur Miete. Die Whitelist ist noch nicht vorhanden (Kommentar vom 12.11.2026 im Whitepaper).',
+           text='Auf der Whitelist stehen nur künftige Mieter. Investoren werden getrennt geführt (Antwort vom 17.11.2026).',
+           vorlagen=[('Text für die Anmeldung', '''X-PORTAL Node001 · Karpaten, Ukraine
+
+Wohnen und arbeiten an einem Ort in den Bergen: eigenes Objekt, Gemeinschaftsräume, Internet für Remote-Arbeit, Projekte im Team.
+Wir bauen in Abschnitten. Wer sich einträgt, erfährt als Erstes, wann ein Objekt frei wird, und kann es mieten.
+
+Felder: Name · E-Mail · ab wann · wie lange · allein oder zu zweit · Beruf oder Tätigkeit · Fragen
+Hinweis: Der Eintrag ist unverbindlich und kein Vertrag. Wir speichern die Angaben nur für diese Liste und löschen sie auf Wunsch.''')]),
         AP(N, 'AP-A6', 'Token über Cardano: Rechtsprüfung', 'open',
            'jetzt; vor jeder Ansprache von Kleinanlegern', 'Anwälte in Deutschland und der Ukraine (O05)', 'Token-Crowdfunding (AP-B2)',
            ['GB9', 'GB11'], 'beauftragt: Geschäftsführung · prüft: Anwälte',
@@ -166,9 +183,9 @@ Bis zur Antwort wird nichts angeboten oder beworben.''')]),
            'nach Angeboten (AP-A5) und Selbstkosten (O03)', 'Kostenband, Selbstkosten, Rechtsprüfung', 'Investorengespräche',
            ['GB8', 'GB9'], 'führt aus: planende KI · prüft: Geschäftsführung, Jurist',
            'Whitepaper und Deck mit Meilensteinen aus diesem Ablaufplan, Mittelverwendung je Phase, Risiken; Beträge erst nach Angeboten'),
-    ], text='Mit Eigenmitteln und Eigenleistung; Richtwert etwa 10.000 € (D69 offen).')
+    ], text='So viel wie möglich mit Eigenmitteln und Eigenleistung; wie viel und bis wann, ist offen (D69, D71, Seite „Vor dem Investment“).')
 
-    B = G('ab-b', 'B · Kapital: vermieten können, Investoren, Token', [
+    B = G('ab-b', 'B · Kapital: so viel Eigenkapital wie möglich, Investoren mit Whitelist und Mieterlösen, Token', [
         alt['G0'],
         AP(N, 'AP-B1', 'Investorengespräche', 'open',
            'nach Stufe A, Zeitpunkt nach D71', 'Unterlagen (AP-A7), Struktur (O05)', 'Bestellung Phase 0',
@@ -201,7 +218,7 @@ Mit freundlichen Grüßen
            'Vergleichstabelle mit mindestens je drei Anbietern; drei Angebote für die engere Wahl', anr='A009',
            vorlagen=[('Anfrage an Anbieter (Deutsch, für Ungarn und Polen)', ANFRAGE_OBJEKT('de')), ('Request for quotation (English, for Alibaba and others)', ANFRAGE_OBJEKT('en'))],
            auftrag='''Ziel: Anbieter gedämmter Wohn- und Arbeitsmodule (auch Container-Bauweise und Bausätze in Teilen) in Ungarn, Polen und über Alibaba finden und nach den Grundbestimmungen vergleichen.
-Prüfkriterien: Maße und Gewicht des größten und schwersten Teils (Zufahrt: über 15 % Steigung, bis 2,6 m Breite ohne Genehmigung), Eignung für −20 °C, Sanitär vorbereitet (Spültoilette, Dusche, Warmwasser), Lieferform, Montageaufwand, Lieferzeit, Preis und Lieferbedingung, Gewährleistung, Bewertungen.
+Prüfkriterien, in dieser Reihenfolge: zuerst Transportierbarkeit, also Maße und Gewicht des größten und schwersten Teils (Zufahrt: einspurige, teils enge Straße, zuletzt über 15 % Steigung, bis 2,6 m Breite ohne Genehmigung; Werte aus AP-A0, sobald gemessen); dann Eignung für −20 °C, Sanitär vorbereitet (Spültoilette, Dusche, Warmwasser), Lieferform, Montageaufwand, Lieferzeit, Preis und Lieferbedingung, Gewährleistung, Bewertungen.
 Ausgabe: Tabelle mit Herkunft | Anbieter | Modell | Fläche | Teile und Gewicht | Wintertauglichkeit | Sanitär | Lieferzeit | Preis | Lieferbedingung | passt zu GB1 ja/nein/offen | Quelle.'''),
         alt['lieferant'],
         AP(N, 'AP-C2', 'Import in die Ukraine: Importeur und Verzollung', 'open',
@@ -239,6 +256,11 @@ Mit freundlichen Grüßen
            auftrag='''Ziel: Speditionen finden, die von Ungarn, Polen und aus einem Drittland in die Oblast Iwano-Frankiwsk liefern, möglichst mit Zollabwicklung und Abladen per Kran; dazu lokale Anbieter für die letzte Meile (Traktor, Allrad-Transporter, Hebegerät) im Raum Werchowyna.
 Ausgabe: Tabelle Anbieter | Strecke | Fahrzeuge | Zoll | Kran | Kontakt | Quelle.'''),
         alt['zufahrt'],
+        AP(N, 'AP-C5', 'Charge 1 festlegen: welche Objekte und welches Material jetzt kaufen und hochbringen', 'open',
+           'nach Angeboten (AP-C1) und Streckenprotokoll (AP-A0)', 'Transportierbarkeit geprüft, Geld nach GB8, Lager oben', 'Bestellung, Logistik (AP-C3)',
+           ['GB1', 'GB4', 'GB8'], 'schlägt vor: planende KI · entscheidet: Geschäftsführung',
+           'Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter), Material und A-Nummern; was sich lagern lässt, kommt früh hoch',
+           text='Business Case (Kommentar vom 17.11.2026): jetzt Objekte oder Material einkaufen und hochbringen; während dessen wächst die Whitelist; ist sie groß genug, wird nachbestellt (AP-G3), und Leute von der Whitelist ziehen ein und zahlen Miete. Die Mieterlöse zeigen wir Investoren (AP-F3).'),
         AP(N, 'AP-C4', 'Bestellzeitpunkte rückwärts vom Montagebeginn', 'open',
            'sobald Angebote mit Lieferzeiten vorliegen', 'Lieferzeiten (AP-C1), Zollabwicklung (AP-C2), Transportdauer (AP-C3), Frostgrenze (GB4)', 'Bestellung',
            ['GB4', 'GB8'], 'rechnet: planende KI · entscheidet: Geschäftsführung',
@@ -286,11 +308,19 @@ Strom | S03, D04 | Netzausfall 6 h | Muss-Lasten laufen | | | |
 Internet | D01 | 2 Videocalls 30 min | Upload ausreichend, keine Abbrüche | | | |
 Brandschutz | S01 | Melder, Löscher, Ofenabstände | vollständig | | | |
 Zugang | GB10 | Öffnen mit Chip und mit Schlüssel | beides geht | | | |''')]),
+        AP(N, 'AP-E2', 'Mietvertrag und Einzug der ersten Mieter von der Whitelist', 'open',
+           'nach G2, sobald ein Objekt frei ist', 'Mietvertrag rechtlich geprüft (O05), Miete und Pauschale (O03), Abnahme (AP-E1)', 'Mieterlöse (AP-F3)',
+           ['GB5', 'GB8', 'GB9'], 'schließt ab: Geschäftsführung · betreut: Projektleitung',
+           'Unterschriebene Mietverträge, erste Miete auf dem Konto'),
         alt['G2'],
     ])
 
     F = G('ab-f', 'F · Erster Winter und Betrieb', [
         alt['G3'],
+        AP(N, 'AP-F3', 'Mieterlöse und Whitelist monatlich berichten', 'later',
+           'ab der ersten Miete, monatlich', 'Mietverträge (AP-E2), Whitelist (AP-A8)', 'Investorengespräche (AP-B1), Nachbestellung (AP-G3)',
+           ['GB8', 'GB11'], 'erstellt: planende KI · prüft: Geschäftsführung',
+           'Monatsbericht: belegte Objekte, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren'),
         AP(N, 'AP-F1', 'Messreihen: Wärme, Holzfeuchte, Wasser, Strom, Internet', 'later',
            'ab Einzug, den ganzen ersten Winter', 'Messgeräte (A045 und weitere)', 'Bewertung der Hypothesen, Standards für den nächsten Node',
            ['GB11'], 'führt aus: Team · wertet aus: planende KI', 'Messwerte ersetzen Annahmen im Plan'),
@@ -305,12 +335,10 @@ Ausgabe: Tabelle Lösung | Hardware | lokale Auswertung | Leistungsaufnahme | Wi
     ])
 
     Gp = G('ab-g', 'G · Phase 1: Kommunalgebäude und Objekte', [
-        AP(N, 'AP-G1', 'Zusatzerkundung für Phase 1', 'later', 'sobald Lage und Bauart der Gebäude feststehen', 'Bauplanung Phase 1', 'Fundamente Phase 1',
-           ['GB2'], 'beauftragt: Geschäftsführung · führt aus: Bohrfirma', 'Bericht für Zufahrt, Stützbauwerke und massive Gebäude', anr='A002'),
-        AP(N, 'AP-G2', 'Kommunalgebäude', 'later', 'erster Bau in Phase 1 (D64)', 'Kapital, Zusatzerkundung', 'Objekte für Mieter',
+        AP(N, 'AP-G2', 'Kommunalgebäude', 'later', 'erster Bau in Phase 1 (D64)', 'Kapital, vorhandene Zusatzerkundung (AP-A1)', 'Objekte für Mieter',
            ['GB1', 'GB2', 'GB5', 'GB8'], 'entscheidet: Geschäftsführung · plant: Fachexperte Bau', 'Arbeitsplätze, Küche, Sanitär; Feuerstelle und Sauna (D34, D35)', anr='A109–A115'),
-        AP(N, 'AP-G3', 'Objekte für Mieter und Team', 'later', 'nach dem Kommunalgebäude, nach Nachfrage (D50)', 'Mietinteressenten, Selbstkosten', 'Phase 2',
-           ['GB1', 'GB2', 'GB8', 'GB9'], 'entscheidet: Geschäftsführung', 'Objekte bezogen, Mietverträge'),
+        AP(N, 'AP-G3', 'Nachbestellen in Chargen nach der Whitelist', 'later', 'jeweils wenn die Whitelist die Schwelle erreicht; Schwelle offen, sie steht im Business Case', 'Whitelist (AP-A8), Mieterlöse (AP-F3), Geld nach GB8', 'weitere Mieter, Phase 2',
+           ['GB1', 'GB2', 'GB8', 'GB9'], 'entscheidet: Geschäftsführung', 'Charge n+1 bestellt, hochgebracht und vermietet; Bestellung wie AP-C4 und AP-C5'),
         AP(N, 'AP-G4', 'Solar mit Speicher', 'later', 'Phase 1 (D59)', 'Lastliste, Messwerte aus dem Winter', '–',
            ['GB7'], 'entscheidet: Geschäftsführung · plant: Fachexperte Elektro', 'Anlage in Betrieb', anr='A028'),
     ])

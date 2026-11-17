@@ -4,15 +4,15 @@
  "grundbestimmungen": [
   {
    "nr": "GB1",
-   "thema": "Weg nach oben",
-   "gilt": "Letzte etwa 200 m mit über 15 % Steigung, unbefestigt. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. In Phase 0 kommt alles auf kleinem Fahrzeug hoch, keine Befestigung am Anfang. Im Winter muss geräumt werden.",
-   "quelle": "Standortangaben im Index (Anhang A3); D57"
+   "thema": "Weg nach oben: transportierbar",
+   "gilt": "Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jedes Objekt muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen. Im Winter muss geräumt werden.",
+   "quelle": "Kommentar 17.11.2026; Standortangaben vom 04.11.2026; D57"
   },
   {
    "nr": "GB2",
    "thema": "Boden und Hang",
-   "gilt": "Rutsch- und Fließprozesse; Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Streifen- und Stützfundament, hangseitige Stützkonstruktion und Entwässerungsgraben; Zusatzerkundung für Zufahrt, Stützbauwerke und massive Gebäude.",
-   "quelle": "Geologiebericht 34.11/26"
+   "gilt": "Rutsch- und Fließprozesse; Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Streifen- und Stützfundament, hangseitige Stützkonstruktion und Entwässerungsgraben. Fachprüfung des Berichts, Zusatzerkundung und Vermessung liegen vor, sind aber noch nicht im Plan abgelegt (AP-A1).",
+   "quelle": "Geologiebericht 34.11/26; Kommentar 15.11.2026"
   },
   {
    "nr": "GB3",
@@ -47,8 +47,8 @@
   {
    "nr": "GB8",
    "thema": "Geld und Freigabe",
-   "gilt": "Eigenkapital bis zur fertigen Bauplanung, danach Investoren. Bestellt wird nur mit Freigabe der Geschäftsführung und Geld auf dem Konto.",
-   "quelle": "D43, D46, D47"
+   "gilt": "So viel wie möglich mit Eigenkapital. Bis zu welchem Punkt, und ab wann Investoren dazukommen, ist offen: D69 und D71, Seite „Vor dem Investment“. Bestellt wird in Chargen, nur mit Freigabe der Geschäftsführung und Geld auf dem Konto. Kein Verkauf; Erlöse kommen aus Miete.",
+   "quelle": "D43, D45 bis D48, D69, D71; Antwort 17.11.2026"
   },
   {
    "nr": "GB9",
@@ -111,7 +111,7 @@
    "thema": "Kapital für Node001",
    "bisher": "„Kein Investor“ (E04); der Ort trägt sich aus Käufergeld, Pre-Seed nur für die Firma (E57)",
    "baseline": "Zwei getrennte Investment Cases; Node001 als eigener Project-/Asset-Case mit Kapital für Infrastruktur und ersten Bauabschnitt",
-   "gilt": "Entschieden in D46 am 13.11.2026: Käufermodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen.",
+   "gilt": "Entschieden in D46 am 13.11.2026: Verkaufsmodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen.",
    "status": "DOCUMENTED",
    "im_index": "entschieden 13.11."
   },
@@ -147,7 +147,7 @@
    "thema": "Genehmigung und Finanzierung",
    "bisher": "„Genehmigung und Planung liegen vor, 12,5 Mio. € privat finanziert“ (E60, durch E65 schon berichtigt)",
    "baseline": "Finanzierung des ersten Bauabschnitts und Freigaben: „zu validieren“; „Grundstück gesichert“",
-   "gilt": "Es gilt das Deck. Belege zum Grundstück fehlen weiter (O14): DOCUMENTED, nicht VERIFIED.",
+   "gilt": "Es gilt das Deck. Grundstück im Besitz, Detailplan und Bebauungsplan liegen vor (Kommentar 12.11.2026); die Kopien fehlen im Plan (AP-A1): DOCUMENTED, nicht VERIFIED.",
    "status": "DOCUMENTED",
    "im_index": "markiert"
   },
@@ -156,7 +156,7 @@
    "thema": "Rollen der Menschen",
    "bisher": "Team (drei Personen) und Käufer oder Mieter (E63)",
    "baseline": "Acht Rollen in der Infografik: Siedler, digitale Nomaden, Gäste, Remote-Siedler, Mitarbeitende, Betreiber, Partner, Investoren; Human Roles v1.0 in Arbeit (OD-003)",
-   "gilt": "Der Plan bleibt bei Team und Käufern, bis OD-003 entschieden ist.",
+   "gilt": "Team und Mieter (D45, D50); weitere Rollen erst mit OD-003.",
    "status": "IN WORK",
    "im_index": "markiert"
   },
@@ -210,7 +210,7 @@
    "thema": "Team und Rollen",
    "bisher": "Paul ist CEO zu 100 %, Roman Produkt und Projekt (E62); Nazar ist beauftragte Fachperson (E64)",
    "baseline": "Deck nennt als operatives Team Roman Dering, Pavel J., Nazar D. („Architekt · Nodes“); Founder-, Ownership- und Governance-Darstellung vor Versand offen",
-   "gilt": "Wer Gründer und Gesellschafter ist und ob Nazar Teammitglied oder Auftragnehmer ist, muss vor dem Versand feststehen.",
+   "gilt": "Wer Gründer und Gesellschafter ist und ob der Architekt (Beratung) Teammitglied oder Auftragnehmer ist, muss vor dem Versand feststehen.",
    "status": "DECISION REQUIRED",
    "im_index": "offen"
   },
@@ -834,14 +834,14 @@
      "kind": "group",
      "id": "ab-a",
      "title": "A · Vor dem Investment: klären, was ein Investor sonst einpreist",
-     "text": "Mit Eigenmitteln und Eigenleistung; Richtwert etwa 10.000 € (D69 offen).",
+     "text": "So viel wie möglich mit Eigenmitteln und Eigenleistung; wie viel und bis wann, ist offen (D69, D71, Seite „Vor dem Investment“).",
      "kids": [
       {
        "kind": "chance",
        "id": "O01",
        "title": "Geologie: Bericht liegt vor. Was sagt er für Phase 0 und Phase 1?",
        "state": "done",
-       "meta": "Technischer Bericht 34.11/26, Ingenieurgeologe, Iwano-Frankiwsk 2026 · deutsche Zusammenfassung XPB-N001-GEO-SUM-001 (KI-erstellt, mit dem Original abzugleichen)",
+       "meta": "Technischer Bericht 34.11/26, Ingenieurgeologe, Iwano-Frankiwsk 2026 · deutsche Zusammenfassung XPB-N001-GEO-SUM-001 (KI-erstellt) · Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026), noch nicht im Plan abgelegt (AP-A1)",
        "text": "Feldarbeiten September bis November 2026: 3 Schürfgruben mit zusammen 7,5 m, 12 Handbohrungen bis je 2 m. Nordöstlich exponierter Hang des Bila Kobyla, Geländehöhen 1.016–1.077 m. Ingenieurgeologische Komplexität Kategorie III.",
        "kids": [
         {
@@ -873,18 +873,10 @@
          "text": "Laut Gutachter für massive Gebäude. Betrifft Kommunalgebäude und Objekte in Phase 1 (Zuordnung Vorschlag KI).",
          "kids": [
           {
-           "kind": "decision",
-           "title": "Zusatzerkundung für Phase 1 beauftragen, sobald Lage und Bauart der Gebäude feststehen (D56)",
+           "kind": "step",
+           "title": "Ergebnis der vorhandenen Zusatzerkundung für die Gebäude in Phase 1 auswerten",
            "state": "open",
-           "meta": "Geschäftsführung · vor Phase 1",
-           "beschlussblatt": {
-            "Vorbereitung": "KI bereitet vor, gilt erst mit Wahl (D43)",
-            "Fachliche Prüfung": "–",
-            "Freigabe": "Geschäftsführung und Projektleitung gemeinsam",
-            "Budgetgrenze": "–",
-            "Gültigkeit": "bis ihr sie ändert",
-            "Wiedervorlage": "vor Phase 1"
-           }
+           "meta": "Fachexperte Bau · nach AP-A1"
           }
          ]
         },
@@ -942,14 +934,64 @@
         },
         {
          "feld": "Zusatzerkundung",
-         "wert": "Verlangt für Zufahrt, Stützkonstruktionen und Hauptgebäude, wenn bis IGE-4 gegründet wird, und bei geänderten Gebäuden oder Fundamenten."
+         "wert": "Vom Gutachter verlangt für Zufahrt, Stützkonstruktionen und Hauptgebäude. Liegt vor (Kommentar vom 15.11.2026); das Ergebnis wird eingetragen, sobald der Bericht im Plan liegt (AP-A1)."
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "AP-A0",
+       "title": "Strecke ablaufen und messen: einspurige, teils enge Straße bis zum Grundstück",
+       "state": "open",
+       "text": "Kommentar vom 17.11.2026: Die Objekte müssen über eine einfache, einspurige und teils enge Straße transportierbar sein; deshalb „leicht“. Breite, Engstellen und Ausweichstellen sind bis zur Messung offen.",
+       "facts": [
+        {
+         "feld": "Wann",
+         "wert": "jetzt; vor jeder Anfrage an Anbieter und Spediteure"
+        },
+        {
+         "feld": "Voraussetzung",
+         "wert": "Maßband, Neigungsmesser, Kamera mit GPS"
+        },
+        {
+         "feld": "Blockiert",
+         "wert": "Auswahl des Objekts (hausart, AP-C1), Logistik (AP-C3), Bestellung"
+        },
+        {
+         "feld": "Grundbestimmungen",
+         "wert": "GB1, GB11"
+        },
+        {
+         "feld": "Rolle",
+         "wert": "führt aus: Projektleitung oder Team vor Ort · wertet aus: planende KI"
+        },
+        {
+         "feld": "Ergebnis",
+         "wert": "Streckenprotokoll: schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt"
+        }
+       ],
+       "ap": {
+        "wann": "jetzt; vor jeder Anfrage an Anbieter und Spediteure",
+        "voraus": "Maßband, Neigungsmesser, Kamera mit GPS",
+        "blockiert": "Auswahl des Objekts (hausart, AP-C1), Logistik (AP-C3), Bestellung",
+        "gb": [
+         "GB1",
+         "GB11"
+        ],
+        "rolle": "führt aus: Projektleitung oder Team vor Ort · wertet aus: planende KI",
+        "ergebnis": "Streckenprotokoll: schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt"
+       },
+       "vorlagen": [
+        {
+         "titel": "Streckenprotokoll",
+         "text": "Abschnitt | von (GPS) | bis (GPS) | Länge m | schmalste Breite m | Kurvenradius m | Steigung % | Untergrund | Ausweichstelle ja/nein | Wendestelle ja/nein | Brücke, Lastgrenze t | Foto-Nr. | Bemerkung\n1 | | | | | | | | | | | |\n2 | | | | | | | | | | | |\nErgebnis: größtes Teil (L × B × H) und schwerstes Teil, das bis zum Grundstück kommt; Fahrzeug, das es bringt; Jahreszeit."
         }
        ]
       },
       {
        "kind": "step",
        "id": "AP-A1",
-       "title": "Geologie: deutsche Zusammenfassung mit dem ukrainischen Original abgleichen",
+       "title": "Vorhandene Nachweise in den Plan legen: Geologie-Fachprüfung, Zusatzerkundung, Vermessung",
        "state": "open",
        "facts": [
         {
@@ -958,37 +1000,37 @@
         },
         {
          "feld": "Voraussetzung",
-         "wert": "Originalbericht 34.11/26 (16 Seiten) und Zusammenfassung XPB-N001-GEO-SUM-001 liegen vor"
+         "wert": "Die Unterlagen liegen bei der Geschäftsführung oder dem Architekten (Kommentar vom 15.11.2026: „haben wir schon“)"
         },
         {
          "feld": "Blockiert",
-         "wert": "Fundament, Lage von Phase 0, Angebote"
+         "wert": "Bauplanung (AP-A4), Phase 1, Kostenrechnung"
         },
         {
          "feld": "Grundbestimmungen",
-         "wert": "GB2, GB11"
+         "wert": "GB2, GB3, GB11"
         },
         {
          "feld": "Rolle",
-         "wert": "führt aus: ausführende KI, dann Projektleitung · prüft: Architekt (Beratung)"
+         "wert": "liefert: Geschäftsführung · legt ab: Projektleitung"
         },
         {
          "feld": "Ergebnis",
-         "wert": "Abweichungsliste; geklärte Stellen, zum Beispiel die Mächtigkeit der bewegten Schichten (0,8–1,2 m gegen 0,9–1,2 m)"
+         "wert": "Die drei Dokumente liegen im Plan unter quellen/; Ergebnis der Zusatzerkundung und Höhenmodell sind in Grundlage und Ast 1 eingetragen"
         }
        ],
        "ap": {
         "wann": "jetzt",
-        "voraus": "Originalbericht 34.11/26 (16 Seiten) und Zusammenfassung XPB-N001-GEO-SUM-001 liegen vor",
-        "blockiert": "Fundament, Lage von Phase 0, Angebote",
+        "voraus": "Die Unterlagen liegen bei der Geschäftsführung oder dem Architekten (Kommentar vom 15.11.2026: „haben wir schon“)",
+        "blockiert": "Bauplanung (AP-A4), Phase 1, Kostenrechnung",
         "gb": [
          "GB2",
+         "GB3",
          "GB11"
         ],
-        "rolle": "führt aus: ausführende KI, dann Projektleitung · prüft: Architekt (Beratung)",
-        "ergebnis": "Abweichungsliste; geklärte Stellen, zum Beispiel die Mächtigkeit der bewegten Schichten (0,8–1,2 m gegen 0,9–1,2 m)"
-       },
-       "auftrag": "Ziel: Die deutsche KI-Zusammenfassung des Geologieberichts Satz für Satz mit dem ukrainischen Original abgleichen.\nEingang: Originalbericht (PDF, Ukrainisch), Zusammenfassung XPB-N001-GEO-SUM-001 (PDF, Deutsch).\nVorgehen: Für jede Zahl und jede Empfehlung der Zusammenfassung die Fundstelle im Original (Seite, Absatz) angeben und den Originalwortlaut zitieren; Übersetzung prüfen.\nAusgabe: Tabelle mit den Spalten Aussage Zusammenfassung | Fundstelle Original | Originalwortlaut | stimmt / weicht ab / fehlt | Hinweis.\n\nRegeln: Jede Angabe mit Quelle (Link) und Abrufdatum. Was nicht belegt ist, als OFFEN kennzeichnen, nicht schätzen. Nichts bestellen, nichts versenden, keine Konten anlegen, keine Entscheidung treffen. Ergebnis als Markdown-Tabelle und als JSON-Liste mit denselben Feldern."
+        "rolle": "liefert: Geschäftsführung · legt ab: Projektleitung",
+        "ergebnis": "Die drei Dokumente liegen im Plan unter quellen/; Ergebnis der Zusatzerkundung und Höhenmodell sind in Grundlage und Ast 1 eingetragen"
+       }
       },
       {
        "kind": "step",
@@ -1103,7 +1145,7 @@
       {
        "kind": "decision",
        "id": "hausart",
-       "title": "Bauart der Objekte: Holz, Beton, Glas, Metall?",
+       "title": "Bauart der Objekte: Holz, Beton, Glas, Metall? Erste Bedingung: transportierbar über die einspurige, enge Straße",
        "state": "open",
        "meta": "Geschäftsführung nach Vorschlag Fachexperte Bau · nach Lage (O01)",
        "text": "Antwort vom 13.11. (D56): Der Plan für die Objekte steht aus; eine Bau-KI bewertet und plant in Abhängigkeit von den lokalen Gegebenheiten (Geologie, Gelände, Zufahrt).",
@@ -1252,12 +1294,63 @@
       {
        "kind": "step",
        "id": "mieter",
-       "title": "Mietinteressenten gewinnen, ab sofort und vor dem Bau",
+       "title": "Mietinteressenten gewinnen: Whitelist der künftigen Mieter, ab sofort und vor dem Bau",
        "state": "open",
        "meta": "Projektleitung · laufend (D50)",
-       "text": "Zuerst Mieter gewinnen; Ziel ist, Interessenten jetzt zu bekommen (D50). Verkauft wird im klassischen Sinn nichts (D45, D48). Tokenisierung und Beteiligung auf mehreren Ebenen erst nach rechtlicher Klärung (O05).",
+       "text": "Zuerst Mieter gewinnen; Ziel ist, Interessenten jetzt zu bekommen (D50). Es wird nicht verkauft; es gibt nur Mieter mit wiederkehrenden Erlösen, die wir Investoren zeigen (D45, D46, D48; Kommentar vom 17.11.2026). Die Whitelist ist noch nicht eingerichtet (AP-A8). Tokenisierung und Beteiligung erst nach rechtlicher Klärung (O05, AP-A6).",
        "ziel": [
         "Z2"
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "AP-A8",
+       "title": "Whitelist der künftigen Mieter einrichten",
+       "state": "open",
+       "text": "Auf der Whitelist stehen nur künftige Mieter. Investoren werden getrennt geführt (Antwort vom 17.11.2026).",
+       "facts": [
+        {
+         "feld": "Wann",
+         "wert": "jetzt (D50: Interessenten vor dem Bau)"
+        },
+        {
+         "feld": "Voraussetzung",
+         "wert": "Text und Bilder vom Ort; Datenschutzhinweis (GB10)"
+        },
+        {
+         "feld": "Blockiert",
+         "wert": "Chargen (AP-C5, AP-G3), Nachweis für Investoren (AP-F3)"
+        },
+        {
+         "feld": "Grundbestimmungen",
+         "wert": "GB8, GB9, GB10"
+        },
+        {
+         "feld": "Rolle",
+         "wert": "führt: Projektleitung · prüft: Jurist (Datenschutz, keine verbindliche Zusage)"
+        },
+        {
+         "feld": "Ergebnis",
+         "wert": "Anmeldung auf x-portal.eu; gezählt werden Einträge, gewünschter Einzug und Bereitschaft zur Miete. Die Whitelist ist noch nicht vorhanden (Kommentar vom 12.11.2026 im Whitepaper)."
+        }
+       ],
+       "ap": {
+        "wann": "jetzt (D50: Interessenten vor dem Bau)",
+        "voraus": "Text und Bilder vom Ort; Datenschutzhinweis (GB10)",
+        "blockiert": "Chargen (AP-C5, AP-G3), Nachweis für Investoren (AP-F3)",
+        "gb": [
+         "GB8",
+         "GB9",
+         "GB10"
+        ],
+        "rolle": "führt: Projektleitung · prüft: Jurist (Datenschutz, keine verbindliche Zusage)",
+        "ergebnis": "Anmeldung auf x-portal.eu; gezählt werden Einträge, gewünschter Einzug und Bereitschaft zur Miete. Die Whitelist ist noch nicht vorhanden (Kommentar vom 12.11.2026 im Whitepaper)."
+       },
+       "vorlagen": [
+        {
+         "titel": "Text für die Anmeldung",
+         "text": "X-PORTAL Node001 · Karpaten, Ukraine\n\nWohnen und arbeiten an einem Ort in den Bergen: eigenes Objekt, Gemeinschaftsräume, Internet für Remote-Arbeit, Projekte im Team.\nWir bauen in Abschnitten. Wer sich einträgt, erfährt als Erstes, wann ein Objekt frei wird, und kann es mieten.\n\nFelder: Name · E-Mail · ab wann · wie lange · allein oder zu zweit · Beruf oder Tätigkeit · Fragen\nHinweis: Der Eintrag ist unverbindlich und kein Vertrag. Wir speichern die Angaben nur für diese Liste und löschen sie auf Wunsch."
+        }
        ]
       },
       {
@@ -1357,7 +1450,7 @@
     {
      "kind": "group",
      "id": "ab-b",
-     "title": "B · Kapital: vermieten können, Investoren, Token",
+     "title": "B · Kapital: so viel Eigenkapital wie möglich, Investoren mit Whitelist und Mieterlösen, Token",
      "kids": [
       {
        "kind": "gate",
@@ -1365,7 +1458,7 @@
        "title": "Können wir vermieten?",
        "state": "wait",
        "meta": "vor dem Investorengespräch · Geschäftsführung und Projektleitung geben frei oder lassen nacharbeiten",
-       "text": "Muss fertig sein: Selbstkosten und Pauschale (O03), Mietvertrag und Struktur rechtlich geprüft (O05), Leistungen oben (2.1.8), Lage und Bauart von Phase 0, Abnahmetabelle (D66).",
+       "text": "Muss fertig sein: Whitelist läuft (AP-A8), Selbstkosten und Pauschale (O03), Mietvertrag und Struktur rechtlich geprüft (O05), Leistungen oben (2.1.8), Lage und Bauart von Phase 0, Abnahmetabelle (D66).",
        "needs": [
         "O05",
         "O12",
@@ -1440,7 +1533,7 @@
        "title": "Kapital: Steigen Investoren für Infrastruktur und Objekte ein?",
        "state": "open",
        "meta": "Geschäftsführung · nach dem Paket vor dem Investment (D69, D71)",
-       "text": "Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Objekte mit Investoren, verbunden mit wiederkehrenden Erlösen (D46, D47). Ein Verkauf an Einzelne ist abgewählt.",
+       "text": "So viel wie möglich mit Eigenkapital; bis zu welchem Punkt, ist offen (D69, D71, Seite „Vor dem Investment“). Investoren für Infrastruktur und weitere Chargen, gestützt auf Whitelist und Mieterlöse (D46, D47; AP-F3). Ein Verkauf an Einzelne ist abgewählt.",
        "kids": [
         {
          "kind": "outcome",
@@ -1540,10 +1633,10 @@
       {
        "kind": "gate",
        "id": "G1",
-       "title": "Ist genug Geld da, ist bestellt?",
+       "title": "Ist genug Geld für Charge 1 da, ist bestellt?",
        "state": "wait",
        "meta": "nach G0 und O23",
-       "text": "Investment oder Eigenkapital für Phase 0 auf dem Konto; Objekt Phase 0 bestellt; Leitungen für Wasser, Abwasser, Strom und Internet geplant (2.2.7); kritische Fehlerarten bewertet (2.3.7); Prüfsituation T00 vor der Bestellung (2.4.9).",
+       "text": "Eigenkapital, wo nötig mit Investment, für Charge 1 auf dem Konto (GB8); Charge 1 bestellt (AP-C5); Leitungen für Wasser, Abwasser, Strom und Internet geplant (2.2.7); kritische Fehlerarten bewertet (2.3.7); Prüfsituation T00 vor der Bestellung (2.4.9).",
        "needs": [
         "O17",
         "O23"
@@ -1619,14 +1712,14 @@
        "vorlagen": [
         {
          "titel": "Anfrage an Anbieter (Deutsch, für Ungarn und Polen)",
-         "text": "Betreff: Angebotsanfrage – gedämmtes Wohn- und Arbeitsmodul, Karpaten (Ukraine), Lieferung in Teilen\n\nSehr geehrte Damen und Herren,\n\nwir planen ein Wohn- und Arbeitsmodul für 2–3 Personen in den ukrainischen Karpaten (etwa 1.050 m Höhe, Winter bis −20 °C). Bitte senden Sie uns ein Angebot mit:\n\n1. Modell, Fläche, Raumhöhe, Aufbau und U-Werte von Wand, Dach und Boden; Eignung für −20 °C.\n2. Lieferform: in Teilen oder als ganzes Modul. Maße und Gewicht des schwersten und des größten Teils. Die letzten 200 m der Zufahrt sind unbefestigt mit über 15 % Steigung; Transportbreite bis 2,6 m ohne Genehmigung.\n3. Sanitär: vorbereitet oder eingebaut für Spültoilette, Dusche, Warmwasser, Abwasseranschluss.\n4. Elektroinstallation, Heizung (Holzofen mit Schornstein, elektrische Reserve).\n5. Anforderungen an das Fundament (Punktlasten); unser Gutachten empfiehlt Streifen- und Stützfundament.\n6. Montage: Dauer, Personen, Werkzeug, Hebegerät; ist Montage durch ein kleines Team möglich?\n7. Preis, Lieferbedingung (FCA oder DAP ukrainische Grenze), Lieferzeit, Zahlungsbedingungen, Gewährleistung.\n8. Unterlagen für Export und Import: Rechnung, Packliste, Ursprungszeugnis, Warennummer.\n\nDies ist eine Anfrage, keine Bestellung.\n\nMit freundlichen Grüßen\n[Projektleitung, X-PORTAL]"
+         "text": "Betreff: Angebotsanfrage – gedämmtes Wohn- und Arbeitsmodul, Karpaten (Ukraine), Lieferung in Teilen\n\nSehr geehrte Damen und Herren,\n\nwir planen ein Wohn- und Arbeitsmodul für 2–3 Personen in den ukrainischen Karpaten (etwa 1.050 m Höhe, Winter bis −20 °C). Bitte senden Sie uns ein Angebot mit:\n\n1. Modell, Fläche, Raumhöhe, Aufbau und U-Werte von Wand, Dach und Boden; Eignung für −20 °C.\n2. Lieferform: in Teilen oder als ganzes Modul. Maße und Gewicht des schwersten und des größten Teils. Die Zufahrt ist eine einfache, einspurige, teils enge Straße; die letzten 200 m sind unbefestigt mit über 15 % Steigung. Jedes Teil muss auf kleinem Fahrzeug hochkommen; Transportbreite bis 2,6 m ohne Genehmigung. Bitte nennen Sie die kleinste Lieferform, die Sie anbieten.\n3. Sanitär: vorbereitet oder eingebaut für Spültoilette, Dusche, Warmwasser, Abwasseranschluss.\n4. Elektroinstallation, Heizung (Holzofen mit Schornstein, elektrische Reserve).\n5. Anforderungen an das Fundament (Punktlasten); unser Gutachten empfiehlt Streifen- und Stützfundament.\n6. Montage: Dauer, Personen, Werkzeug, Hebegerät; ist Montage durch ein kleines Team möglich?\n7. Preis, Lieferbedingung (FCA oder DAP ukrainische Grenze), Lieferzeit, Zahlungsbedingungen, Gewährleistung.\n8. Unterlagen für Export und Import: Rechnung, Packliste, Ursprungszeugnis, Warennummer.\n\nDies ist eine Anfrage, keine Bestellung.\n\nMit freundlichen Grüßen\n[Projektleitung, X-PORTAL]"
         },
         {
          "titel": "Request for quotation (English, for Alibaba and others)",
-         "text": "Subject: Request for quotation – insulated living/working module, Carpathians (Ukraine), delivery in parts\n\nDear Sir or Madam,\n\nwe are planning a living and working module for 2–3 persons in the Ukrainian Carpathians (approx. 1,050 m above sea level, winters down to −20 °C). Please send us a quotation including:\n\n1. Model, floor area, interior height, wall/roof/floor build-up and U-values; suitability for −20 °C.\n2. Delivery form: in parts or as complete module. Dimensions and weight of the heaviest and the largest part. The last 200 m of the access road are unpaved with more than 15 % gradient; transport width up to 2.6 m without permit.\n3. Sanitary: prepared or installed flush toilet, shower, hot water, drainage connection.\n4. Electrical installation, heating options (wood stove with chimney, electric backup).\n5. Foundation requirements (point loads); our soil report recommends strip and retaining foundations.\n6. Assembly: time, crew, tools, lifting equipment required; can a small team assemble it?\n7. Price, Incoterms (FCA/DAP Ukrainian border), delivery time, payment terms, warranty.\n8. Documents for export/import: invoice, packing list, certificate of origin, HS code.\n\nThis is a request for information and quotation only, not an order.\n\nKind regards\n[Projektleitung, X-PORTAL]"
+         "text": "Subject: Request for quotation – insulated living/working module, Carpathians (Ukraine), delivery in parts\n\nDear Sir or Madam,\n\nwe are planning a living and working module for 2–3 persons in the Ukrainian Carpathians (approx. 1,050 m above sea level, winters down to −20 °C). Please send us a quotation including:\n\n1. Model, floor area, interior height, wall/roof/floor build-up and U-values; suitability for −20 °C.\n2. Delivery form: in parts or as complete module. Dimensions and weight of the heaviest and the largest part. Access is a simple single-lane road, narrow in places; the last 200 m are unpaved with more than 15 % gradient. Every part must be transportable on a small vehicle; transport width up to 2.6 m without permit. Please state the smallest delivery form you offer.\n3. Sanitary: prepared or installed flush toilet, shower, hot water, drainage connection.\n4. Electrical installation, heating options (wood stove with chimney, electric backup).\n5. Foundation requirements (point loads); our soil report recommends strip and retaining foundations.\n6. Assembly: time, crew, tools, lifting equipment required; can a small team assemble it?\n7. Price, Incoterms (FCA/DAP Ukrainian border), delivery time, payment terms, warranty.\n8. Documents for export/import: invoice, packing list, certificate of origin, HS code.\n\nThis is a request for information and quotation only, not an order.\n\nKind regards\n[Projektleitung, X-PORTAL]"
         }
        ],
-       "auftrag": "Ziel: Anbieter gedämmter Wohn- und Arbeitsmodule (auch Container-Bauweise und Bausätze in Teilen) in Ungarn, Polen und über Alibaba finden und nach den Grundbestimmungen vergleichen.\nPrüfkriterien: Maße und Gewicht des größten und schwersten Teils (Zufahrt: über 15 % Steigung, bis 2,6 m Breite ohne Genehmigung), Eignung für −20 °C, Sanitär vorbereitet (Spültoilette, Dusche, Warmwasser), Lieferform, Montageaufwand, Lieferzeit, Preis und Lieferbedingung, Gewährleistung, Bewertungen.\nAusgabe: Tabelle mit Herkunft | Anbieter | Modell | Fläche | Teile und Gewicht | Wintertauglichkeit | Sanitär | Lieferzeit | Preis | Lieferbedingung | passt zu GB1 ja/nein/offen | Quelle.\n\nRegeln: Jede Angabe mit Quelle (Link) und Abrufdatum. Was nicht belegt ist, als OFFEN kennzeichnen, nicht schätzen. Nichts bestellen, nichts versenden, keine Konten anlegen, keine Entscheidung treffen. Ergebnis als Markdown-Tabelle und als JSON-Liste mit denselben Feldern."
+       "auftrag": "Ziel: Anbieter gedämmter Wohn- und Arbeitsmodule (auch Container-Bauweise und Bausätze in Teilen) in Ungarn, Polen und über Alibaba finden und nach den Grundbestimmungen vergleichen.\nPrüfkriterien, in dieser Reihenfolge: zuerst Transportierbarkeit, also Maße und Gewicht des größten und schwersten Teils (Zufahrt: einspurige, teils enge Straße, zuletzt über 15 % Steigung, bis 2,6 m Breite ohne Genehmigung; Werte aus AP-A0, sobald gemessen); dann Eignung für −20 °C, Sanitär vorbereitet (Spültoilette, Dusche, Warmwasser), Lieferform, Montageaufwand, Lieferzeit, Preis und Lieferbedingung, Gewährleistung, Bewertungen.\nAusgabe: Tabelle mit Herkunft | Anbieter | Modell | Fläche | Teile und Gewicht | Wintertauglichkeit | Sanitär | Lieferzeit | Preis | Lieferbedingung | passt zu GB1 ja/nein/offen | Quelle.\n\nRegeln: Jede Angabe mit Quelle (Link) und Abrufdatum. Was nicht belegt ist, als OFFEN kennzeichnen, nicht schätzen. Nichts bestellen, nichts versenden, keine Konten anlegen, keine Entscheidung treffen. Ergebnis als Markdown-Tabelle und als JSON-Liste mit denselben Feldern."
       },
       {
        "kind": "decision",
@@ -1634,7 +1727,7 @@
        "title": "Wer liefert und baut das Objekt Phase 0, mit oder ohne Montage?",
        "state": "open",
        "meta": "Projektleitung holt Angebote ein, die Geschäftsführung entscheidet die Bestellung · nach Bauart",
-       "text": "Drei schriftliche Angebote mit Preis, Lieferform, schwerstem Teil, Montageaufwand und Winterwerten (O31). Die Anfrage enthält die Raumliste aus M02, die Anforderungen an Sanitär ab Phase 0 (D62) und die Maße der Zufahrt. Wer was selbst macht, steht in 2.4.8.",
+       "text": "Drei schriftliche Angebote; zuerst geprüft wird, ob jedes Teil über die einspurige, enge Straße hochkommt (GB1, AP-A0), dann Preis, Lieferform, schwerstes Teil, Montageaufwand und Winterwerte (O31). Die Anfrage enthält die Raumliste aus M02, die Anforderungen an Sanitär ab Phase 0 (D62) und die Maße der Zufahrt. Wer was selbst macht, steht in 2.4.8.",
        "ziel": [
         "Z1",
         "Z2"
@@ -1767,7 +1860,7 @@
        "title": "Kommt das Objekt Phase 0 die Zufahrt hoch, im Sommer und im Winter (2.2.4)?",
        "state": "done",
        "meta": "Antwort vom 13.11. (D57)",
-       "text": "Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch. Die Gesamtplanung der Zufahrt entscheidet sich in Phase 1 mit 3D-Modellen der Bau-KI. Die letzten etwa 200 m haben über 15 % Steigung; bis 2,6 m Breite geht ein Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug.",
+       "text": "Phase 0: voraussichtlich kleines Fahrzeug, keine Befestigung am Anfang; alles kommt auf kleinem Fahrzeug hoch. Die Gesamtplanung der Zufahrt entscheidet sich in Phase 1 mit 3D-Modellen der Bau-KI. Die Straße ist einfach, einspurig und teils eng (Kommentar vom 17.11.2026); die letzten etwa 200 m haben über 15 % Steigung; bis 2,6 m Breite geht ein Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite und Engstellen werden gemessen (AP-A0).",
        "kids": [
         {
          "kind": "outcome",
@@ -1785,6 +1878,51 @@
        "ziel": [
         "Z1"
        ]
+      },
+      {
+       "kind": "step",
+       "id": "AP-C5",
+       "title": "Charge 1 festlegen: welche Objekte und welches Material jetzt kaufen und hochbringen",
+       "state": "open",
+       "text": "Business Case (Kommentar vom 17.11.2026): jetzt Objekte oder Material einkaufen und hochbringen; während dessen wächst die Whitelist; ist sie groß genug, wird nachbestellt (AP-G3), und Leute von der Whitelist ziehen ein und zahlen Miete. Die Mieterlöse zeigen wir Investoren (AP-F3).",
+       "facts": [
+        {
+         "feld": "Wann",
+         "wert": "nach Angeboten (AP-C1) und Streckenprotokoll (AP-A0)"
+        },
+        {
+         "feld": "Voraussetzung",
+         "wert": "Transportierbarkeit geprüft, Geld nach GB8, Lager oben"
+        },
+        {
+         "feld": "Blockiert",
+         "wert": "Bestellung, Logistik (AP-C3)"
+        },
+        {
+         "feld": "Grundbestimmungen",
+         "wert": "GB1, GB4, GB8"
+        },
+        {
+         "feld": "Rolle",
+         "wert": "schlägt vor: planende KI · entscheidet: Geschäftsführung"
+        },
+        {
+         "feld": "Ergebnis",
+         "wert": "Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter), Material und A-Nummern; was sich lagern lässt, kommt früh hoch"
+        }
+       ],
+       "ap": {
+        "wann": "nach Angeboten (AP-C1) und Streckenprotokoll (AP-A0)",
+        "voraus": "Transportierbarkeit geprüft, Geld nach GB8, Lager oben",
+        "blockiert": "Bestellung, Logistik (AP-C3)",
+        "gb": [
+         "GB1",
+         "GB4",
+         "GB8"
+        ],
+        "rolle": "schlägt vor: planende KI · entscheidet: Geschäftsführung",
+        "ergebnis": "Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter), Material und A-Nummern; was sich lagern lässt, kommt früh hoch"
+       }
       },
       {
        "kind": "step",
@@ -2216,6 +2354,50 @@
        ]
       },
       {
+       "kind": "step",
+       "id": "AP-E2",
+       "title": "Mietvertrag und Einzug der ersten Mieter von der Whitelist",
+       "state": "open",
+       "facts": [
+        {
+         "feld": "Wann",
+         "wert": "nach G2, sobald ein Objekt frei ist"
+        },
+        {
+         "feld": "Voraussetzung",
+         "wert": "Mietvertrag rechtlich geprüft (O05), Miete und Pauschale (O03), Abnahme (AP-E1)"
+        },
+        {
+         "feld": "Blockiert",
+         "wert": "Mieterlöse (AP-F3)"
+        },
+        {
+         "feld": "Grundbestimmungen",
+         "wert": "GB5, GB8, GB9"
+        },
+        {
+         "feld": "Rolle",
+         "wert": "schließt ab: Geschäftsführung · betreut: Projektleitung"
+        },
+        {
+         "feld": "Ergebnis",
+         "wert": "Unterschriebene Mietverträge, erste Miete auf dem Konto"
+        }
+       ],
+       "ap": {
+        "wann": "nach G2, sobald ein Objekt frei ist",
+        "voraus": "Mietvertrag rechtlich geprüft (O05), Miete und Pauschale (O03), Abnahme (AP-E1)",
+        "blockiert": "Mieterlöse (AP-F3)",
+        "gb": [
+         "GB5",
+         "GB8",
+         "GB9"
+        ],
+        "rolle": "schließt ab: Geschäftsführung · betreut: Projektleitung",
+        "ergebnis": "Unterschriebene Mietverträge, erste Miete auf dem Konto"
+       }
+      },
+      {
        "kind": "gate",
        "id": "G2",
        "title": "Darf eingezogen werden?",
@@ -2272,6 +2454,49 @@
         "Budgetgrenze": "festlegen",
         "Gültigkeit": "erster Winter",
         "Wiedervorlage": "vor dem ersten Frost"
+       }
+      },
+      {
+       "kind": "step",
+       "id": "AP-F3",
+       "title": "Mieterlöse und Whitelist monatlich berichten",
+       "state": "later",
+       "facts": [
+        {
+         "feld": "Wann",
+         "wert": "ab der ersten Miete, monatlich"
+        },
+        {
+         "feld": "Voraussetzung",
+         "wert": "Mietverträge (AP-E2), Whitelist (AP-A8)"
+        },
+        {
+         "feld": "Blockiert",
+         "wert": "Investorengespräche (AP-B1), Nachbestellung (AP-G3)"
+        },
+        {
+         "feld": "Grundbestimmungen",
+         "wert": "GB8, GB11"
+        },
+        {
+         "feld": "Rolle",
+         "wert": "erstellt: planende KI · prüft: Geschäftsführung"
+        },
+        {
+         "feld": "Ergebnis",
+         "wert": "Monatsbericht: belegte Objekte, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren"
+        }
+       ],
+       "ap": {
+        "wann": "ab der ersten Miete, monatlich",
+        "voraus": "Mietverträge (AP-E2), Whitelist (AP-A8)",
+        "blockiert": "Investorengespräche (AP-B1), Nachbestellung (AP-G3)",
+        "gb": [
+         "GB8",
+         "GB11"
+        ],
+        "rolle": "erstellt: planende KI · prüft: Geschäftsführung",
+        "ergebnis": "Monatsbericht: belegte Objekte, Miete und Pauschale, wiederkehrende Erlöse, Länge der Whitelist, Abgänge; Grundlage für Investoren"
        }
       },
       {
@@ -2399,52 +2624,6 @@
      "kids": [
       {
        "kind": "step",
-       "id": "AP-G1",
-       "title": "Zusatzerkundung für Phase 1",
-       "state": "later",
-       "facts": [
-        {
-         "feld": "Wann",
-         "wert": "sobald Lage und Bauart der Gebäude feststehen"
-        },
-        {
-         "feld": "Voraussetzung",
-         "wert": "Bauplanung Phase 1"
-        },
-        {
-         "feld": "Blockiert",
-         "wert": "Fundamente Phase 1"
-        },
-        {
-         "feld": "Grundbestimmungen",
-         "wert": "GB2"
-        },
-        {
-         "feld": "Rolle",
-         "wert": "beauftragt: Geschäftsführung · führt aus: Bohrfirma"
-        },
-        {
-         "feld": "Ergebnis",
-         "wert": "Bericht für Zufahrt, Stützbauwerke und massive Gebäude"
-        },
-        {
-         "feld": "Anschaffungen",
-         "wert": "A002"
-        }
-       ],
-       "ap": {
-        "wann": "sobald Lage und Bauart der Gebäude feststehen",
-        "voraus": "Bauplanung Phase 1",
-        "blockiert": "Fundamente Phase 1",
-        "gb": [
-         "GB2"
-        ],
-        "rolle": "beauftragt: Geschäftsführung · führt aus: Bohrfirma",
-        "ergebnis": "Bericht für Zufahrt, Stützbauwerke und massive Gebäude"
-       }
-      },
-      {
-       "kind": "step",
        "id": "AP-G2",
        "title": "Kommunalgebäude",
        "state": "later",
@@ -2455,7 +2634,7 @@
         },
         {
          "feld": "Voraussetzung",
-         "wert": "Kapital, Zusatzerkundung"
+         "wert": "Kapital, vorhandene Zusatzerkundung (AP-A1)"
         },
         {
          "feld": "Blockiert",
@@ -2480,7 +2659,7 @@
        ],
        "ap": {
         "wann": "erster Bau in Phase 1 (D64)",
-        "voraus": "Kapital, Zusatzerkundung",
+        "voraus": "Kapital, vorhandene Zusatzerkundung (AP-A1)",
         "blockiert": "Objekte für Mieter",
         "gb": [
          "GB1",
@@ -2495,20 +2674,20 @@
       {
        "kind": "step",
        "id": "AP-G3",
-       "title": "Objekte für Mieter und Team",
+       "title": "Nachbestellen in Chargen nach der Whitelist",
        "state": "later",
        "facts": [
         {
          "feld": "Wann",
-         "wert": "nach dem Kommunalgebäude, nach Nachfrage (D50)"
+         "wert": "jeweils wenn die Whitelist die Schwelle erreicht; Schwelle offen, sie steht im Business Case"
         },
         {
          "feld": "Voraussetzung",
-         "wert": "Mietinteressenten, Selbstkosten"
+         "wert": "Whitelist (AP-A8), Mieterlöse (AP-F3), Geld nach GB8"
         },
         {
          "feld": "Blockiert",
-         "wert": "Phase 2"
+         "wert": "weitere Mieter, Phase 2"
         },
         {
          "feld": "Grundbestimmungen",
@@ -2520,13 +2699,13 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Objekte bezogen, Mietverträge"
+         "wert": "Charge n+1 bestellt, hochgebracht und vermietet; Bestellung wie AP-C4 und AP-C5"
         }
        ],
        "ap": {
-        "wann": "nach dem Kommunalgebäude, nach Nachfrage (D50)",
-        "voraus": "Mietinteressenten, Selbstkosten",
-        "blockiert": "Phase 2",
+        "wann": "jeweils wenn die Whitelist die Schwelle erreicht; Schwelle offen, sie steht im Business Case",
+        "voraus": "Whitelist (AP-A8), Mieterlöse (AP-F3), Geld nach GB8",
+        "blockiert": "weitere Mieter, Phase 2",
         "gb": [
          "GB1",
          "GB2",
@@ -2534,7 +2713,7 @@
          "GB9"
         ],
         "rolle": "entscheidet: Geschäftsführung",
-        "ergebnis": "Objekte bezogen, Mietverträge"
+        "ergebnis": "Charge n+1 bestellt, hochgebracht und vermietet; Bestellung wie AP-C4 und AP-C5"
        }
       },
       {
@@ -2718,6 +2897,1324 @@
        }
       }
      ]
+    },
+    {
+     "kind": "group",
+     "id": "ab-te",
+     "title": "Bausteine und Teilergebnisse 2.1 bis 2.6 (Produktstrukturplan)",
+     "text": "Aus dem Index 2.0 vom 04.11.2026 übernommen und auf den Stand vom 17.11.2026 gebracht. Jedes Teilergebnis lässt sich als Arbeitspaket vergeben; wo es schon ein Arbeitspaket A bis H gibt, steht es unter „Abhängig“. Entfallen sind 2.1.1, 2.1.2, 2.5.6, 2.6.3 und 2.6.5 (Gründe im Änderungsprotokoll).",
+     "kids": [
+      {
+       "kind": "group",
+       "id": "te-2-1",
+       "title": "2.1 Geschäftsmodell und Geld",
+       "kids": [
+        {
+         "kind": "step",
+         "id": "te-2-1-3",
+         "title": "2.1.3 · Geldfluss Phase 0 und Chargen: welches Geld wann kommt (Eigenkapital, Investoren, Miete) und wann es gebraucht wird",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Monatstabelle, jede Zeile mit Quelle"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "rechnet: planende KI · prüft: Geschäftsführung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "O03, AP-C4, AP-C5"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen; Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung)"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D46, D47, D69, D71"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-1-4",
+         "title": "2.1.4 · Kapazität der Geschäftsführung: ab wann Vollzeit, und wie sie finanziert ist",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Angabe der Geschäftsführung mit Monat und Finanzierung"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Geschäftsführung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "2.6.1"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen; der frühere Betrag stammt aus dem zurückgenommenen Log und ist neu zu bestätigen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "früher E03, E67"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-1-5",
+         "title": "2.1.5 · Kapital für die Firma",
+         "state": "done",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "entschieden"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Geschäftsführung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "O11"
+          },
+          {
+           "feld": "Stand",
+           "wert": "Eigenkapital bis zur vollendeten Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur die Pflichtangaben gegenüber Kapitalgebern"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D47, Kommentar 13.11.2026"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-1-6",
+         "title": "2.1.6 · Paket vor dem Investment: was vor dem Investorengespräch bezahlt werden muss und woher das Geld kommt",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Betrag je Posten und Monat, von der Geschäftsführung bestätigt"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "stellt auf: planende KI · entscheidet: Geschäftsführung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "AP-A5, O05"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen; ohne Geologie-Fachprüfung, Zusatzerkundung und Vermessung, die vorliegen (Kommentar 15.11.2026)"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D69, D71; Seite „Vor dem Investment“"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-1-7",
+         "title": "2.1.7 · Matching der BW Bank für IT in Deutschland: Rechner, Server, Hardware",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Betrag und Bedingungen schriftlich; Liste der IT mit Kosten; Antwort der Anwälte zur Datenverbindung"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Geschäftsführung · IT-Liste: planende KI"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "O05"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen; Server oben nur bei VC-Funding mit Deutschland verbunden"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D47"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-1-8",
+         "title": "2.1.8 · Geld und Leistungen oben: wie das Team bezahlt wird und wie Mieter für Leistungen zahlen (Essen, Strom, Wasser, Internet, Sauna, Coworking, Betrieb)",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Leistungsliste mit Preis oder Gegenleistung, von Geschäftsführung und Projektleitung entschieden"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "bereitet vor: planende KI · entscheiden: Geschäftsführung und Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "O03, 2.4.5"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen; Regeln aus D36 bis D38 umsetzen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D36, D37, D38"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "kind": "group",
+       "id": "te-2-2",
+       "title": "2.2 Standort und Bau",
+       "kids": [
+        {
+         "kind": "step",
+         "id": "te-2-2-1",
+         "title": "2.2.1 · Geologie",
+         "state": "done",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Bericht und Fachprüfung liegen vor"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Geschäftsführung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "–"
+          },
+          {
+           "feld": "Stand",
+           "wert": "Bericht 34.11/26 liegt vor (Grundlage, O01); Fachprüfung, Zusatzerkundung und Vermessung liegen vor, noch nicht im Plan abgelegt (AP-A1)"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "Kommentar 15.11.2026"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-2-2",
+         "title": "2.2.2 · Lageplan Phase 0 und Ausbau: Lage der Objekte, Zufahrt, Leitungen, Entwässerung, freie Flächen",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Lageplan auf Grundlage des Detailplans, vom Fachexperten geprüft"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Architekt (Beratung) mit Fachexperte Bau"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "lage, AP-A4"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen; Grundlage Detailplan Blatt 3"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D55, D56"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-2-3",
+         "title": "2.2.3 · Objekt Phase 0 gewählt: in Teilen geliefert, über die einspurige, enge Straße transportierbar",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Angebot mit Preis, Lieferform, größtem und schwerstem Teil, Montageaufwand"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Projektleitung · entscheidet: Geschäftsführung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "hausart, AP-A0, AP-C1"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D56, GB1; Kommentar 17.11.2026"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-2-4",
+         "title": "2.2.4 · Zufahrt und Transport, im Sommer und im Winter",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Streckenprotokoll; Spediteur bestätigt schriftlich, dass die Teile auf kleinem Fahrzeug hochkommen; Winterräumung geregelt"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "AP-A0, AP-C3"
+          },
+          {
+           "feld": "Stand",
+           "wert": "Phase 0 entschieden: kleines Fahrzeug, keine Befestigung am Anfang (D57); Strecke noch nicht gemessen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D57; Kommentar 17.11.2026"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-2-5",
+         "title": "2.2.5 · Belege zum Grundstück",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Kopien von Eigentumsnachweis, Detailplan und Bebauungsplan im Plan; Klärung, ob die Katasternummer für alle Teile gilt"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "liefert: Geschäftsführung · legt ab: Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "AP-A1"
+          },
+          {
+           "feld": "Stand",
+           "wert": "Grundstück im Besitz, Detailplan und Bebauungsplan liegen vor (Kommentar 12.11.2026); Kopien fehlen im Plan"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "Kommentar 12.11.2026 im Whitepaper"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-2-6",
+         "title": "2.2.6 · Genehmigung: was aufgestellt und bewohnt werden darf",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Schriftliche Auskunft"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Architekt (Beratung), Anwälte Ukraine"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "lage, O05"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "–"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-2-7",
+         "title": "2.2.7 · Leitungen geplant: Wasser, Abwasser, Strom, Internet",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Leitungsplan"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Fachexperten"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "AP-A4"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D59 bis D63"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-2-8",
+         "title": "2.2.8 · Fundament und Aufstellen",
+         "state": "wait",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Objekte stehen auf dem Fundament, abgenommen"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Fachexperte Bau"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "AP-D3, G1"
+          },
+          {
+           "feld": "Stand",
+           "wert": "wartet"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "Geologiebericht 34.11/26"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "kind": "group",
+       "id": "te-2-3",
+       "title": "2.3 Versorgung",
+       "kids": [
+        {
+         "kind": "step",
+         "id": "te-2-3-1",
+         "title": "2.3.1 · Ressourcenbilanz für Team und erste Mieter: Energie (auch E-Bikes), Wärme, Wasser, Kommunikation; je Ressource Last, Quelle, Reserve und Ausfallfolge",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Tabelle mit Ausbaustufen, Werte vom Fachexperten bestätigt"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "planende KI aus M02 · bestätigt: Fachexperte"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "AP-C5 (Größe der Charge 1)"
+          },
+          {
+           "feld": "Stand",
+           "wert": "teilweise; die M02-Mengen gelten für 3 Personen und werden für Team plus erste Mieter neu gerechnet"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "M02"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-3-2",
+         "title": "2.3.2 · Lösung je Ressource",
+         "state": "done",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "entschieden"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Geschäftsführung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "–"
+          },
+          {
+           "feld": "Stand",
+           "wert": "Netz mit Generator, Solar ab Phase 1; Grundwasser mit Aufbereitung; Sanitär fest ab Phase 0; Holzofen; Internet mit Vergleich"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D59 bis D63"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-3-3",
+         "title": "2.3.3 · Abnahmeliste vor dem Einzug",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Abnahmetabelle ausgefüllt und von der Projektleitung freigegeben"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Fachexperten · Freigabe Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "AP-E1"
+          },
+          {
+           "feld": "Stand",
+           "wert": "Entwurf in AP-E1"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D66"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-3-4",
+         "title": "2.3.4 · Vor dem ersten Frost fertig: Heizung nach Heizlast, frostfreie Wasserleitung, Toilette und Batterie im Warmen, Generator draußen",
+         "state": "wait",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Abnahme durch Fachexperten"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Fachexperte Heizung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "G3"
+          },
+          {
+           "feld": "Stand",
+           "wert": "wartet"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D59, D60"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-3-5",
+         "title": "2.3.5 · Messung bei Frost im ersten Winter",
+         "state": "later",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Alle M02-Zeilen „Grundbetrieb“ bei Frost gemessen und bestanden"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Team · wertet aus: planende KI"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "AP-F1"
+          },
+          {
+           "feld": "Stand",
+           "wert": "später"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "M02"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-3-6",
+         "title": "2.3.6 · E-Bikes und Laden: wie viele, wo geladen wird, welche Leistung, wer zahlt",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Last in 2.3.1 und Kosten im Register"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "bereitet vor: planende KI · entscheidet: Geschäftsführung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "2.3.1"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "–"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-3-7",
+         "title": "2.3.7 · Kritische Fehlerarten und zulässige Tests (FMEA) für Wärme, Wasser, Strom für die Arbeit, Brand und CO, Zugang",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Je Funktion Fehlerart, Wirkung, Erkennung, Maßnahme, Test; vom Fachexperten bewertet"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "entwirft: planende KI · bewertet: Fachexperte"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "2.3.1, 2.3.2"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "M06"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "kind": "group",
+       "id": "te-2-4",
+       "title": "2.4 Menschen",
+       "kids": [
+        {
+         "kind": "step",
+         "id": "te-2-4-1",
+         "title": "2.4.1 · Team oben: Rollen, Plätze, Finanzierung; je Person, womit sie Geld verdient, Geräte, Strom und Internet",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Liste je Rolle"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Geschäftsführung und Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "–"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "–"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-4-2",
+         "title": "2.4.2 · Whitelist der künftigen Mieter",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Whitelist läuft, Einträge gezählt"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "AP-A8, 2.5.4"
+          },
+          {
+           "feld": "Stand",
+           "wert": "noch nicht eingerichtet (Kommentar 12.11.2026: „ist nicht vorhanden, kommt erst“)"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D50; Antwort 17.11.2026"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-4-3",
+         "title": "2.4.3 · Werbematerial für Mietinteressenten: Video und Bilder, die Objekte realitätsnah auf dem Grundstück",
+         "state": "run",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Video und Bilder fertig; der Jurist hat die Texte gesehen"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Projektleitung mit KI"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "2.5.4"
+          },
+          {
+           "feld": "Stand",
+           "wert": "in Arbeit"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "–"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-4-4",
+         "title": "2.4.4 · Kommunalgebäude: Arbeitsplatz, Küche, Sanitär, Gemüsegarten",
+         "state": "later",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Planung mit Kosten"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Geschäftsführung mit Architekt (Beratung)"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "AP-G2"
+          },
+          {
+           "feld": "Stand",
+           "wert": "erster Bau in Phase 1"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D64"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-4-5",
+         "title": "2.4.5 · Betrieb oben: wer Holz, Wasser, Schnee und Wartung übernimmt",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Liste mit Aufgaben und Rollen"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Geschäftsführung und Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "2.4.1"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "–"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-4-6",
+         "title": "2.4.6 · Was es vor Ort gibt: Holz, Lebensmittel, Reparatur, Kraftstoff, Handwerker, Transport",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Liste mit Anbieter, Preis, Entfernung, im Winter erreichbar"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "ausführende KI · prüft: Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "–"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "–"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-4-7",
+         "title": "2.4.7 · Absprachen oben und Notfallplan, auch bei gesperrter Auffahrt",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Schriftliche Absprachen; Notfallplan mit Vorräten (Menge legt der Fachexperte fest)"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "2.4.1, 2.4.2"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "M02-08"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-4-8",
+         "title": "2.4.8 · Wer macht was selbst: je Leistung (Planung, Transport, Fundament, Aufstellen, Anschlüsse, Innenausbau) selbst, mit Hilfe oder extern",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Liste je Leistung mit Stunden und Fachkosten"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "bereitet vor: planende KI · bestätigen: Geschäftsführung und Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "2.4.1"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D70"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-4-9",
+         "title": "2.4.9 · Nutzungstest mit drei Personas: Prüfsituationen T00 bis T06",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Matrix M02 ausgefüllt mit Kriterium, Nachweis, Prüfer, Datum"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "führt: Projektleitung · bestätigen: Fachexperten"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "2.3.7"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen; T00 vor der Bestellung, T01, T05, T06 vor dem Einzug"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "M02"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "kind": "group",
+       "id": "te-2-5",
+       "title": "2.5 Firma und Recht",
+       "kids": [
+        {
+         "kind": "step",
+         "id": "te-2-5-1",
+         "title": "2.5.1 · Wer tritt auf: Rechtsform der Gesellschaften",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "siehe O11"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Geschäftsführung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "O11"
+          },
+          {
+           "feld": "Stand",
+           "wert": "nach D44"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D44"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-5-2",
+         "title": "2.5.2 · Verhältnis von Holding, Agentur und Node-Gesellschaft",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Antwort des Anwalts"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Anwalt Deutschland"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "O05"
+          },
+          {
+           "feld": "Stand",
+           "wert": "Prüfauftrag"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "–"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-5-3",
+         "title": "2.5.3 · Welche Arbeit, welches Geld und welche Rechte zu X-PORTAL gehören und welche zur Agentur",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Übersicht, von Geschäftsführung und Projektleitung freigegeben"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Geschäftsführung und Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "2.5.1"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "–"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-5-4",
+         "title": "2.5.4 · Website und Whitelist rechtlich geprüft, auch „Daten in der EU“ gegen die Server oben",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Ein Jurist hat die Texte gesehen"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "AP-A8"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "GB10"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-5-5",
+         "title": "2.5.5 · Vertrags- und Rollenmodell: wer vermietet, wer betreibt die Infrastruktur, wer erfüllt welche Zusage, was der Token ist",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Antworten der Anwälte in Deutschland und der Ukraine"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Anwälte"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "O05, AP-A6"
+          },
+          {
+           "feld": "Stand",
+           "wert": "Prüfauftrag"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D45, D48"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-5-7",
+         "title": "2.5.7 · Ablage: KI arbeitet sicher und DSGVO-konform auf OneDrive",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Testordner ohne Personaldaten verbunden; Zustimmung des Admins; Vertrag zur Auftragsverarbeitung"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "–"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "–"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-5-8",
+         "title": "2.5.8 · Förderung",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Gespräch mit dem Förderer geführt"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Geschäftsführung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "O11"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen; nicht öffentlich zeigen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D47"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "kind": "group",
+       "id": "te-2-6",
+       "title": "2.6 Umsatz",
+       "kids": [
+        {
+         "kind": "step",
+         "id": "te-2-6-1",
+         "title": "2.6.1 · Erster bezahlter Auftrag mit Testkarte (M09)",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Bezahlte Rechnung"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Geschäftsführung und Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "2.6.2"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen; laufend, vor dem Investorengespräch"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "D51, D71"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-6-2",
+         "title": "2.6.2 · Preismodell für Agenten: Abo, Einmalzahlung mit Betreuung, nach Nutzung",
+         "state": "open",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Modell entschieden, mit Kosten je Leistung"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "rechnet: planende KI · entscheiden: Geschäftsführung und Projektleitung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "–"
+          },
+          {
+           "feld": "Stand",
+           "wert": "offen"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "–"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-6-4",
+         "title": "2.6.4 · Agenten über Masumi verkaufen",
+         "state": "later",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Erster bezahlter Verkauf eines Agenten"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "Team oben"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "2.6.1"
+          },
+          {
+           "feld": "Stand",
+           "wert": "später"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "–"
+          }
+         ]
+        },
+        {
+         "kind": "step",
+         "id": "te-2-6-6",
+         "title": "2.6.6 · Schema für den nächsten Node: Standards getrennt von den Werten dieses Grundstücks (System Model, Datenwörterbuch)",
+         "state": "later",
+         "facts": [
+          {
+           "feld": "Fertig, wenn",
+           "wert": "Probe: Ein geänderter Standortparameter macht betroffene Anforderungen, Varianten und Beschlüsse auffindbar"
+          },
+          {
+           "feld": "Rolle",
+           "wert": "planende KI · Geschäftsführung"
+          },
+          {
+           "feld": "Abhängig",
+           "wert": "AP-H3"
+          },
+          {
+           "feld": "Stand",
+           "wert": "später; Probe vor G1"
+          },
+          {
+           "feld": "Quelle",
+           "wert": "Z4"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "ab-steuerung",
+     "title": "Steuerung: Eingänge, Routine, Methoden (M01 bis M11)",
+     "kids": [
+      {
+       "kind": "step",
+       "title": "Bei jeder Runde zuerst die Eingänge",
+       "state": "rule",
+       "text": "Bevor etwas geändert wird, liest die planende KI die Kommentare auf allen Seiten (Index, Entscheidungsseite, Vor dem Investment, Anschaffungen, SGMM, Whitepaper) und die Antworten in der Datenbank. Jeder Eingang steht im Änderungsprotokoll mit Seite, Datum, Wortlaut, Umsetzung und Stelle; danach prüft ein Skript alle Seiten auf alten Stand.",
+       "facts": [
+        {
+         "feld": "Quelle",
+         "wert": "Vorgabe vom 17.11.2026"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "title": "Montag, 15 Minuten",
+       "state": "rule",
+       "text": "Geschäftsführung und Projektleitung gehen den Plan durch: was fertig ist, was überfällig, was frei. Der Wechselkurs wird neu angesetzt.",
+       "facts": [
+        {
+         "feld": "Quelle",
+         "wert": "Index 2.0, 3.3 (M10)"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "title": "Neue Markt- oder Preisinformation",
+       "state": "rule",
+       "text": "Mit Quelle und Datum notieren, als Fakt, Angebotspreis, Annahme oder Szenario kennzeichnen, mit der betroffenen Annahme und dem nötigen Test oder Beschluss.",
+       "facts": [
+        {
+         "feld": "Quelle",
+         "wert": "Index 2.0, 3.3 (M08)"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "title": "Monatsende",
+       "state": "rule",
+       "text": "Eine Zeile: was lief, was nicht, was ändern wir, was kommt ins Schema für den nächsten Node. Größere Probleme als A3-Fall: Beobachtung, Ausgangswert, Ursache, Maßnahme, Freigabe, Ergebnis, Änderung am Standard.",
+       "facts": [
+        {
+         "feld": "Quelle",
+         "wert": "Index 2.0, 3.3 (M11)"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "title": "Quartal",
+       "state": "rule",
+       "text": "Plan, Methoden und Bausteine im Ganzen: was wird vereinfacht, was bleibt, was wird vertieft.",
+       "facts": [
+        {
+         "feld": "Quelle",
+         "wert": "Index 2.0, 3.3"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "methoden",
+       "title": "Methoden M01 bis M11: so klein wie die nächste Entscheidung es braucht",
+       "state": "rule",
+       "text": "Aus der Methodenbewertung V1.0 (Index 2.0, Anhang A1). Weitere Vertiefungen erst bei ihrem Auslöser: QFD-Bewertung, formales Systemmodell, automatische Regeln, Termin- und Autarkiesimulation.",
+       "facts": [
+        {
+         "feld": "M01",
+         "wert": "Zielbaum und kompakte Ergebniskennzahlen · jetzt; Zielblatt in der Grundlage"
+        },
+        {
+         "feld": "M02",
+         "wert": "Nutzungsszenarien, Anforderungs- und Testmatrix · jetzt; Ast 2, Werte vom Fachexperten offen"
+        },
+        {
+         "feld": "M03",
+         "wert": "Angepasste PRINCE2-Steuerung, eindeutige Rollen · jetzt; Beschlussblätter, Gates"
+        },
+        {
+         "feld": "M04",
+         "wert": "Ausgewählte Abläufe und Entscheidungstabellen · jetzt; Ausgänge im Baum"
+        },
+        {
+         "feld": "M05",
+         "wert": "Make-or-Buy, Vollkosten, Sensitivität · vor der Investition; Ast 4"
+        },
+        {
+         "feld": "M06",
+         "wert": "Ressourcenbilanzen, gezielte FMEA, Szenariotests · vor der Investition und im Pilot; Ast 3, 2.3.1, 2.3.7"
+        },
+        {
+         "feld": "M07",
+         "wert": "Systemmodell, Schnittstellen und Konfiguration · Probe vor G1; 2.6.6"
+        },
+        {
+         "feld": "M08",
+         "wert": "Markt, PESTL und Trends mit Quellen · jetzt, je Entscheidung"
+        },
+        {
+         "feld": "M09",
+         "wert": "Umsatz und Technologiepartner: Experimente, Ergebnisrechnung · jetzt; 2.6.1"
+        },
+        {
+         "feld": "M10",
+         "wert": "Arbeitsfluss und Terminplan nach Abhängigkeiten · jetzt; Ablaufplan, AP-C4"
+        },
+        {
+         "feld": "M11",
+         "wert": "Verbesserung (PDCA), A3-Fälle, Standardversionen · jetzt; ab Betrieb mit mehr Daten"
+        }
+       ]
+      }
+     ]
     }
    ]
   },
@@ -2741,7 +4238,7 @@
      "title": "Spielregeln oben: ein einfaches Leben aus Arbeit und Erholung",
      "state": "open",
      "meta": "Vorgabe vom 05.11.2026 im Chat, noch nicht im Entscheidungslog",
-     "text": "Wer oben ist, soll sich nur auf Arbeit und Erholung konzentrieren müssen. Versorgung, Technik und Betrieb laufen im Hintergrund; deshalb sind Grundbedürfnisse und Sicherheit nach Maslow geklärt, bevor jemand oben arbeitet (E53).",
+     "text": "Wer oben ist, soll sich nur auf Arbeit und Erholung konzentrieren müssen. Versorgung, Technik und Betrieb laufen im Hintergrund; deshalb sind Grundbedürfnisse und Sicherheit nach Maslow geklärt, bevor jemand oben arbeitet (D66).",
      "ziel": [
       "Z1"
      ],
@@ -2879,7 +4376,7 @@
         },
         {
          "feld": "Planwert",
-         "wert": "Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (E22)."
+         "wert": "Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (GB11)."
         },
         {
          "feld": "Nachweis",
@@ -2922,7 +4419,7 @@
         },
         {
          "feld": "Planwert",
-         "wert": "Annahme: mindestens 12 °C im Schlafbereich und 16 °C im Arbeitsbereich nach 8 Stunden ohne Feuer. Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (E22)."
+         "wert": "Annahme: mindestens 12 °C im Schlafbereich und 16 °C im Arbeitsbereich nach 8 Stunden ohne Feuer. Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (GB11)."
         },
         {
          "feld": "Nachweis",
@@ -2930,7 +4427,7 @@
         },
         {
          "feld": "Abnahme",
-         "wert": "Architekt (Beratung) (über Geschäftsführung, Preis unbekannt, E27) und Projektleitung (ist von Anfang an oben)"
+         "wert": "Architekt (Beratung) (über Geschäftsführung, Preis unbekannt) und Projektleitung (ist von Anfang an oben)"
         },
         {
          "feld": "Teilergebnis",
@@ -2969,7 +4466,7 @@
         },
         {
          "feld": "Abnahme",
-         "wert": "Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (E53); Projektleitung prüft im Alltag (E24)"
+         "wert": "Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (D66); Projektleitung prüft im Alltag"
         },
         {
          "feld": "Teilergebnis",
@@ -3047,7 +4544,7 @@
         },
         {
          "feld": "Planwert",
-         "wert": "Stufe Anfang: 50 l je Person und Tag, für 3 Personen 150 l am Tag und 1.500 l für 10 Tage Sperre (Annahme). Stufe Ausbau: 120 l je Person und Tag, für 3 Personen 360 l am Tag und 3.600 l für 10 Tage (der Projektleitung Vergleich mit dem Durchschnitt in Deutschland, E26). Tank, Boiler und Leitung werden für die Ausbaustufe vorbereitet, gebaut wird zuerst die Anfangsstufe. Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (E22)."
+         "wert": "Stufe Anfang: 50 l je Person und Tag, für 3 Personen 150 l am Tag und 1.500 l für 10 Tage Sperre (Annahme). Stufe Ausbau: 120 l je Person und Tag, für 3 Personen 360 l am Tag und 3.600 l für 10 Tage (der Projektleitung Vergleich mit dem Durchschnitt in Deutschland). Tank, Boiler und Leitung werden für die Ausbaustufe vorbereitet, gebaut wird zuerst die Anfangsstufe. Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (GB11)."
         },
         {
          "feld": "Nachweis",
@@ -3055,7 +4552,7 @@
         },
         {
          "feld": "Abnahme",
-         "wert": "Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (E53); Projektleitung prüft im Alltag (E24)"
+         "wert": "Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (D66); Projektleitung prüft im Alltag"
         },
         {
          "feld": "Teilergebnis",
@@ -3094,7 +4591,7 @@
         },
         {
          "feld": "Abnahme",
-         "wert": "Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (E53); Projektleitung prüft im Alltag (E24)"
+         "wert": "Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (D66); Projektleitung prüft im Alltag"
         },
         {
          "feld": "Teilergebnis",
@@ -3168,7 +4665,7 @@
         },
         {
          "feld": "Planwert",
-         "wert": "Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (E22)."
+         "wert": "Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (GB11)."
         },
         {
          "feld": "Nachweis",
@@ -3176,7 +4673,7 @@
         },
         {
          "feld": "Abnahme",
-         "wert": "Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (E53); Projektleitung prüft im Alltag (E24)"
+         "wert": "Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (D66); Projektleitung prüft im Alltag"
         },
         {
          "feld": "Teilergebnis",
@@ -3339,7 +4836,7 @@
         },
         {
          "feld": "Planwert",
-         "wert": "Annahme: Muss-Lasten etwa 380 W ohne Pumpe (3 Laptops à 50 W, 3 Bildschirme à 25 W, Starlink 75 W, Router 10 W, LED-Licht 30 W, Kühlschrank im Mittel 40 W). Über 10–12 Stunden sind das 3,8–4,56 kWh vor Verlusten. Die Pumpe fehlt in dieser Summe; ihre Leistung und Laufzeit kommen nach der Pumpenwahl dazu. Eine ausreichende Batteriegröße ist damit noch nicht nachgewiesen. Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (E22)."
+         "wert": "Annahme: Muss-Lasten etwa 380 W ohne Pumpe (3 Laptops à 50 W, 3 Bildschirme à 25 W, Starlink 75 W, Router 10 W, LED-Licht 30 W, Kühlschrank im Mittel 40 W). Über 10–12 Stunden sind das 3,8–4,56 kWh vor Verlusten. Die Pumpe fehlt in dieser Summe; ihre Leistung und Laufzeit kommen nach der Pumpenwahl dazu. Eine ausreichende Batteriegröße ist damit noch nicht nachgewiesen. Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (GB11)."
         },
         {
          "feld": "Nachweis",
@@ -3347,7 +4844,7 @@
         },
         {
          "feld": "Abnahme",
-         "wert": "Architekt (Beratung) (über Geschäftsführung, Preis unbekannt, E27)"
+         "wert": "Architekt (Beratung) (über Geschäftsführung, Preis unbekannt)"
         },
         {
          "feld": "Teilergebnis",
@@ -3459,7 +4956,7 @@
         },
         {
          "feld": "Planwert",
-         "wert": "Monatsumsatz über x-portal.eu mindestens der Geschäftsführung 8.000 € netto (brutto rechnet ein Steuerberater) plus laufende Kosten oben aus N02 (bekannt: Starlink laut Suchergebnissen um 2.950 UAH im Monat, auf starlink.com für die Adresse prüfen, siehe N11, rund 59 € bei 50 UAH/EUR (E20)); Geschäftsführung und Projektleitung bis 21.11.2026 (Terminvorschlag)"
+         "wert": "Monatsumsatz über x-portal.eu mindestens der Geschäftsführung 8.000 € netto (brutto rechnet ein Steuerberater) plus laufende Kosten oben aus N02 (bekannt: Starlink laut Suchergebnissen um 2.950 UAH im Monat, auf starlink.com für die Adresse prüfen, siehe N11, rund 59 € bei 50 UAH/EUR); Geschäftsführung und Projektleitung bis 21.11.2026 (Terminvorschlag)"
         },
         {
          "feld": "Nachweis",
@@ -3534,7 +5031,7 @@
        "facts": [
         {
          "feld": "Anforderung",
-         "wert": "Ein gemeinsamer Bereich zum Essen und Reden. Liegt er im Gemeinschaftscontainer mit Arbeitsplätzen, Küche und Sanitär (E40), muss der Grundriss zeigen: Küche und Calls stören die konzentrierte Arbeit nicht (D02)."
+         "wert": "Ein gemeinsamer Bereich zum Essen und Reden. Liegt er im Gemeinschaftscontainer mit Arbeitsplätzen, Küche und Sanitär, muss der Grundriss zeigen: Küche und Calls stören die konzentrierte Arbeit nicht (D02)."
         },
         {
          "feld": "Prüfverfahren",
@@ -3733,11 +5230,11 @@
        "facts": [
         {
          "feld": "Anforderung",
-         "wert": "Fällt oben Strom oder Internet aus und ist die Auffahrt passierbar: Ausweicharbeitsplatz unten mit bekannter Fahrzeit. Sind Verbindung und Auffahrt gleichzeitig weg, läuft die Arbeit oben weiter (E46, E54): Starlink, Batterie und Generator mit Vorrat reichen, bis Auffahrt oder Netz zurück sind."
+         "wert": "Fällt oben Strom oder Internet aus und ist die Auffahrt passierbar: Ausweicharbeitsplatz unten mit bekannter Fahrzeit. Sind Verbindung und Auffahrt gleichzeitig weg, läuft die Arbeit oben weiter: Starlink, Batterie und Generator mit Vorrat reichen, bis Auffahrt oder Netz zurück sind."
         },
         {
          "feld": "Prüfverfahren",
-         "wert": "Beide Fälle einmal durchspielen. Wie lange die Auffahrt im Winter gesperrt sein kann und wie groß Batterie und Vorrat dafür sein müssen, legen Architekt (Beratung) und der Fachexperte fest (E22)."
+         "wert": "Beide Fälle einmal durchspielen. Wie lange die Auffahrt im Winter gesperrt sein kann und wie groß Batterie und Vorrat dafür sein müssen, legen Architekt (Beratung) und der Fachexperte fest (GB11)."
         },
         {
          "feld": "Grenzwert",
@@ -3862,7 +5359,7 @@
        "facts": [
         {
          "feld": "Anforderung",
-         "wert": "Zwei Personen können gleichzeitig in Videocalls sein, während die dritte arbeitet, auch bei Schnee. Hauptanschluss ist ein eigener Internetanschluss, Reserve ist Starlink; Mobilfunk gibt es oben nicht (E49). Die Reserve muss den Upload ebenfalls schaffen."
+         "wert": "Zwei Personen können gleichzeitig in Videocalls sein, während die dritte arbeitet, auch bei Schnee. Hauptanschluss ist ein eigener Internetanschluss, Reserve ist Starlink; Mobilfunk gibt es oben nicht. Die Reserve muss den Upload ebenfalls schaffen."
         },
         {
          "feld": "Prüfverfahren",
@@ -3905,7 +5402,7 @@
        "facts": [
         {
          "feld": "Anforderung",
-         "wert": "Calls finden nicht am Platz der Person statt, die konzentriert arbeitet. Konzentriertes Arbeiten geht im eigenen Wohncontainer (E40); der Gemeinschaftsplatz braucht dafür eine Trennung oder eine Telefonecke."
+         "wert": "Calls finden nicht am Platz der Person statt, die konzentriert arbeitet. Konzentriertes Arbeiten geht im eigenen Wohncontainer; der Gemeinschaftsplatz braucht dafür eine Trennung oder eine Telefonecke."
         },
         {
          "feld": "Prüfverfahren",
@@ -3917,7 +5414,7 @@
         },
         {
          "feld": "Planwert",
-         "wert": "Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (E22)."
+         "wert": "Planwert ist eine Annahme; der Wert wird mit einem Fachexperten festgelegt (GB11)."
         },
         {
          "feld": "Nachweis",
@@ -4007,7 +5504,7 @@
         },
         {
          "feld": "Abnahme",
-         "wert": "Architekt (Beratung) (über Geschäftsführung, Preis unbekannt, E27)"
+         "wert": "Architekt (Beratung) (über Geschäftsführung, Preis unbekannt)"
         },
         {
          "feld": "Teilergebnis",
@@ -4045,7 +5542,7 @@
         },
         {
          "feld": "Abnahme",
-         "wert": "Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (E53); Projektleitung prüft im Alltag (E24)"
+         "wert": "Architekt (Beratung) oder eine von ihm genannte Fachexperte, schriftlich (D66); Projektleitung prüft im Alltag"
         },
         {
          "feld": "Teilergebnis",
@@ -4071,7 +5568,7 @@
        "kind": "req",
        "title": "Jour fixe am Morgen im Kommunalgebäude",
        "state": "untested",
-       "meta": "M02-44 · aus E81 (Vorschlag KI, E80)",
+       "meta": "M02-44 · aus E81 (Vorschlag KI)",
        "tags": [
         "Service"
        ],
@@ -4164,7 +5661,7 @@
      "kind": "group",
      "id": "g-szen",
      "title": "Szenariotests: drei Tage, gegen die jede Variante geprüft wird",
-     "text": "Aus der Matrix vom 03.11.2026. Jeder Schritt nennt die Anforderungen, die er prüft. Die Prüfsituationen T00 bis T06 im Nutzungstest (2.4.9) setzen sie um; Ausfalltests nur mit einem von einem Fachexperten freigegebenen Ablauf (E22).",
+     "text": "Aus der Matrix vom 03.11.2026. Jeder Schritt nennt die Anforderungen, die er prüft. Die Prüfsituationen T00 bis T06 im Nutzungstest (2.4.9) setzen sie um; Ausfalltests nur mit einem von einem Fachexperten freigegebenen Ablauf (GB11).",
      "kids": [
       {
        "kind": "chance",
@@ -4312,7 +5809,7 @@
      "kids": [
       {
        "kind": "outcome",
-       "title": "Netz mit Batterie oder Generator, dazu Solar (E35).",
+       "title": "Netz mit Batterie oder Generator, dazu Solar.",
        "state": "rule",
        "text": "Muss-Lasten etwa 380 W ohne Pumpe, über 10–12 Stunden 3,8–4,56 kWh vor Verlusten (S03, Annahme)."
       },
@@ -4460,13 +5957,13 @@
        "kind": "outcome",
        "title": "Kochen für drei Personen mit Kühlung, gemeinsam oder privat.",
        "state": "open",
-       "text": "H07, E81; Küche im Kommunalgebäude (E74, 2.4.4); Kühlschrank im Mittel 40 W in der Lastliste (S03)."
+       "text": "H07; Küche im Kommunalgebäude (E74, 2.4.4); Kühlschrank im Mittel 40 W in der Lastliste (S03)."
       },
       {
        "kind": "outcome",
        "title": "Gemüsegarten, Höfe in der Umgebung, Lieferung über die Zufahrt.",
        "state": "open",
-       "text": "Garten am Kommunalgebäude (E74); Milch und Käse vor Ort prüfen (E15, 2.4.6); Person A holt Lieferungen unten an der Auffahrt (Sommer-Arbeitstag)."
+       "text": "Garten am Kommunalgebäude; Milch und Käse vor Ort prüfen (E15, 2.4.6); Person A holt Lieferungen unten an der Auffahrt (Sommer-Arbeitstag)."
       },
       {
        "kind": "outcome",
@@ -4532,7 +6029,7 @@
        "id": "b-aus-1",
        "title": "Drei Personen: das Team oben",
        "state": "wait",
-       "text": "2–3 Leute wohnen und arbeiten ganzjährig oben (E01, E23); Grundbetrieb aller Ressourcen.",
+       "text": "2–3 Leute wohnen und arbeiten ganzjährig oben; Grundbetrieb aller Ressourcen.",
        "ziel": [
         "Z1"
        ],
@@ -5037,7 +6534,7 @@
      "id": "mb-eigen",
      "title": "Selbst, mit Hilfe oder extern: je Leistung (2.4.8)",
      "state": "open",
-     "text": "Planung, Transport, Fundament, Aufstellen, Anschlüsse, Innenausbau. Je Leistung Fähigkeit, Gerät, Stunden, Fachkosten, Vertretung und wer verantwortet. Eigenleistung bekommt Zeit-, Qualitäts- und Kapazitätsansätze (M05). Geschäftsführung und Projektleitung sind nicht vom Bau; technische Werte legt ein Fachexperte fest (E22). Es fehlen die Wochenstunden von Geschäftsführung (O13) und Projektleitung.",
+     "text": "Planung, Transport, Fundament, Aufstellen, Anschlüsse, Innenausbau. Je Leistung Fähigkeit, Gerät, Stunden, Fachkosten, Vertretung und wer verantwortet. Eigenleistung bekommt Zeit-, Qualitäts- und Kapazitätsansätze (M05). Geschäftsführung und Projektleitung sind nicht vom Bau; technische Werte legt ein Fachexperte fest (GB11). Es fehlen die Wochenstunden von Geschäftsführung (O13) und Projektleitung.",
      "opts": [
       {
        "kind": "option",
@@ -5264,25 +6761,25 @@
        "id": "D69",
        "title": "Welches Paket vor dem Investment?",
        "state": "open",
-       "text": "Richtwert etwa 10.000 € Eigenkapital; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten. Die Beträge kommen aus dem Kostenregister vom 13.11. (Teilschätzung, keine Angebote). Nicht enthalten sind Reisen, Architektenhonorar, Gebühren und Gründungskosten. Details auf der Seite „Vor dem Investment“.",
+       "text": "So viel wie möglich mit Eigenkapital (Antwort vom 17.11.2026), bisheriger Richtwert etwa 10.000 €; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten. Fachprüfung des Geologieberichts, Zusatzerkundung und Vermessung liegen vor und sind nicht mehr enthalten (Kommentar vom 15.11.2026). Die Beträge kommen aus dem Kostenregister vom 13.11. (Teilschätzung, keine Angebote). Nicht enthalten sind Reisen, Architektenhonorar, Gebühren und Gründungskosten. Details auf der Seite „Vor dem Investment“.",
        "opts": [
         {
          "kind": "option",
          "letter": "A",
          "title": "Kern",
-         "text": "Nachweise auf Papier (Geologie-Prüfung, Zusatzerkundung, Vermessung, Wasseranalyse, Planung, Rechtsprüfung, Angebote), Werkzeug und Kurse, Holz schlagen und einlagern, Interessenten und Unterlagen. 3.226–6.172 € (mit Reserve bis 7.098 €)."
+         "text": "Wasseranalyse, Planung, Rechtsprüfung und Angebote, Werkzeug und Kurse, Holz schlagen und einlagern, Whitelist und Unterlagen. 2.640–4.901 € (mit Reserve bis 5.636 €)."
         },
         {
          "kind": "option",
          "letter": "B",
          "title": "Optimum",
-         "text": "Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. 4.403–8.236 € (mit Reserve bis 9.472 €)."
+         "text": "Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. 3.817–6.965 € (mit Reserve bis 8.009 €)."
         },
         {
          "kind": "option",
          "letter": "C",
          "title": "Erweitert",
-         "text": "Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. 5.119–9.825 € (mit Reserve bis 11.299 €)."
+         "text": "Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. 4.533–8.554 € (mit Reserve bis 9.837 €)."
         }
        ],
        "page": true,
@@ -5300,7 +6797,7 @@
        "id": "D70",
        "title": "Wie wird Eigenleistung bewertet und belegt?",
        "state": "open",
-       "text": "Im Optimum stecken rund 443 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.",
+       "text": "Im Optimum stecken rund 431 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.",
        "opts": [
         {
          "kind": "option",
@@ -5342,7 +6839,7 @@
          "kind": "option",
          "letter": "A",
          "title": "Nach Stufe A",
-         "text": "Sobald Geologie geprüft, Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher."
+         "text": "Sobald Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher."
         },
         {
          "kind": "option",
@@ -6250,7 +7747,7 @@
        "title": "OD-002 · Kritische Funktionen und Ziel-Autarkie-/Autonomiewerte für Node001",
        "state": "open",
        "meta": "OPEN · vor Basis of Design",
-       "text": "Im Plan: Versorgung je Ressource mit Grundbetrieb, Störung, Ausbau (Ast 3); Werte sind Annahmen, keine geprüft (E22).",
+       "text": "Im Plan: Versorgung je Ressource mit Grundbetrieb, Störung, Ausbau (Ast 3); Werte sind Annahmen, keine geprüft (GB11).",
        "dom": "b-OD-002",
        "see": [
         [
@@ -6332,7 +7829,7 @@
        "title": "OD-006 · Genome Invariants v0.1",
        "state": "open",
        "meta": "IN WORK · vor Node001 Architecture Freeze",
-       "text": "Im Plan: Z4 und 2.6.6; wiederholbar sind Schema, Planung, Nutzbarkeit und Sinn (E11).",
+       "text": "Im Plan: Z4 und 2.6.6; wiederholbar sind Schema, Planung, Nutzbarkeit und Sinn.",
        "dom": "b-OD-006",
        "beschlussblatt": {
         "Vorbereitung": "KI bereitet vor, gilt erst mit Wahl (D43)",
@@ -6348,7 +7845,7 @@
        "title": "OD-007 · Safety/Security/Privacy/Legal Baseline Node001",
        "state": "open",
        "meta": "OPEN · vor Technologie- und Betriebsfreigabe",
-       "text": "Im Plan: Prüfaufträge an die Anwälte (A5), Abnahmen (E53), Zugang und Server (Technik im Haus), Datenverbindung Ukraine–Deutschland (E85).",
+       "text": "Im Plan: Prüfaufträge an die Anwälte (A5), Abnahmen (D66), Zugang und Server (Technik im Haus), Datenverbindung Ukraine–Deutschland.",
        "dom": "b-OD-007",
        "see": [
         [
@@ -6370,7 +7867,7 @@
        "title": "OD-008 · Parametrischer Business Case und Architektur-Sensitivitäten",
        "state": "open",
        "meta": "OPEN · parallel zur Node001 System Architecture",
-       "text": "Im Plan: Make-or-Buy (Ast 4), Selbstkosten je Objekt (O03), Geldfluss (2.1.3). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung); die alte Papierrechnung ist kein Business Case (Abgleich W05).",
+       "text": "Im Plan: Make-or-Buy (Ast 4), Selbstkosten je Objekt (O03), Geldfluss (2.1.3). Grundlage ist das Kostenregister vom 13.11.2026 (Teilrechnung); eine Rechnung über Verkaufserlöse gibt es nicht mehr (Abgleich W05).",
        "dom": "b-OD-008",
        "see": [
         [
@@ -6400,7 +7897,7 @@
        "kind": "outcome",
        "title": "Notfallplan zuerst.",
        "state": "rule",
-       "text": "Schutzmaßnahmen folgen sofort dem Notfallplan (2.4.7); er geht jeder anderen Regel vor (A6). Im Notfall ist man in unter 2 Stunden unten (E26)."
+       "text": "Schutzmaßnahmen folgen sofort dem Notfallplan (2.4.7); er geht jeder anderen Regel vor (A6). Im Notfall ist man in unter 2 Stunden unten."
       },
       {
        "kind": "decision",
@@ -6654,7 +8151,7 @@
   {
    "kind": "group",
    "id": "b-entschieden",
-   "title": "8 · Entschieden am 13.11.2026, darunter das alte Log als Historie",
+   "title": "8 · Entschieden am 13.11.2026",
    "kids": [
     {
      "kind": "group",
@@ -6840,152 +8337,6 @@
        "title": "D68 · Arbeitsweise",
        "state": "done",
        "text": "Repo als Quelle und Regeln der Baseline; vieles ist noch zu klären."
-      }
-     ]
-    },
-    {
-     "kind": "group",
-     "id": "g-hist",
-     "title": "Historie: Entscheidungslog E01–E85, am 13.11.2026 zurückgenommen",
-     "text": "Nur noch zur Nachvollziehbarkeit. Es gilt, was darüber steht.",
-     "kids": [
-      {
-       "kind": "decision",
-       "title": "Ort",
-       "state": "later",
-       "text": "Node001: Bereschnyzja, Ortsteil Hrun, bei Werchowyna. Der Name ist überall Node001, der Oberbegriff Nodes. Als Ort nennt die Website, wenn überhaupt, nur „Ukraine“, dazu europaweite Standorte. (E33, E63, E66)"
-      },
-      {
-       "kind": "decision",
-       "title": "Ziel",
-       "state": "later",
-       "text": "2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld. Roman ist von Anfang an dabei. (E01, E23, E24)"
-      },
-      {
-       "kind": "decision",
-       "title": "Vorrang",
-       "state": "later",
-       "text": "Das Grundstück voll bekommen, auf Autarkie hinarbeiten, alles läuft immer. Der Betrieb trägt sich selbst. (E46, E54)"
-      },
-      {
-       "kind": "decision",
-       "title": "Geld",
-       "state": "later",
-       "text": "Reihenfolge: Pauls Lebensunterhalt, Kosten auf dem Berg, Weiterentwicklung, Kapital über die Chain. (E05)"
-      },
-      {
-       "kind": "decision",
-       "title": "Paul",
-       "state": "later",
-       "text": "Ist Paul Vollzeit dabei, sind seine 8.000 € netto im Monat unabdingbar. Sie stehen nicht im Mittelpunkt des Plans. (E03, E32, E67)"
-      },
-      {
-       "kind": "decision",
-       "title": "Kapital",
-       "state": "later",
-       "text": "Der Ort braucht keinen Investor: Käufergeld ist Umsatz und kommt zuerst. Die Firma darf Pre-Seed aufnehmen. Kapital über die Chain erst, wenn Umsatz da ist. (E04, E30, E57)"
-      },
-      {
-       "kind": "decision",
-       "title": "Kosten",
-       "state": "later",
-       "text": "Die 12,5 Mio. € sind eure Hochrechnung der Kosten in Werchowyna, keine Finanzierung. (E65)"
-      },
-      {
-       "kind": "decision",
-       "title": "Umsatz",
-       "state": "later",
-       "text": "Projekte und Freelancer-Aufträge aus Deutschland; oben werden daraus Agenten, verkauft über Masumi. Projekte werden verkauft, ihr Preis ist offen; für Agenten ist das Modell offen: Abo, Einmalzahlung mit Betreuung oder nach Nutzung. Erster bezahlter Auftrag bis Januar 2027. (E31, E56, E77, E83)"
-      },
-      {
-       "kind": "decision",
-       "title": "Verkauf",
-       "state": "later",
-       "text": "Warteliste; ab Januar 2027 kaufen als Token, Grund pachten; mieten mit Miete nach dem Einzug. (E47, E51, E52)"
-      },
-      {
-       "kind": "decision",
-       "title": "Preis",
-       "state": "later",
-       "text": "Etwa 30.000 € je Plot als Ausgangspunkt der Rechnung. Bestellt wird, wenn 5 Käufer ihr Geld belegt haben. (E50, E78)"
-      },
-      {
-       "kind": "decision",
-       "title": "Nachfrage",
-       "state": "later",
-       "text": "Die Warteliste zeigt die Nachfrage; bei großem Andrang gibt es mehr Plots. Umfragen ohne Angebot gibt es nicht. (E09, E51, E58)"
-      },
-      {
-       "kind": "decision",
-       "title": "Bauweise",
-       "state": "later",
-       "text": "Die Häuser kommen in Teilen und werden oben montiert; sie sind die Tiny Houses der Käufer und bleiben, den Grund pachten sie. (E39, E52, E59, E75)"
-      },
-      {
-       "kind": "decision",
-       "title": "Zeit",
-       "state": "later",
-       "text": "Die Häuser kommen frühestens im März 2027 hoch, sobald frostfrei, in Teilen (E75); Werbung „Einzug ab Frühjahr 2027“. (E21, E55)"
-      },
-      {
-       "kind": "decision",
-       "title": "Versorgung",
-       "state": "later",
-       "text": "Netzstrom mit Batterie oder Generator und Solar; eigener Internetanschluss, Starlink als Reserve; 50 l Wasser je Person und Tag. (E26, E35, E49)"
-      },
-      {
-       "kind": "decision",
-       "title": "Abnahme",
-       "state": "later",
-       "text": "Vor dem Einzug schriftlich abgenommen durch Nazar oder eine Fachperson. (E22, E27, E53)"
-      },
-      {
-       "kind": "decision",
-       "title": "Pläne",
-       "state": "later",
-       "text": "Generalplan Variante 1 ist die Grundlage. Nazar ist beauftragt, seine Ergebnisse sind offen. (E37, E43, E64)"
-      },
-      {
-       "kind": "decision",
-       "title": "Firma",
-       "state": "later",
-       "text": "Heute Romans Einzelunternehmen; UG in Gründung, Sitz offen (W09). (E17, E61)"
-      },
-      {
-       "kind": "decision",
-       "title": "Grundstücke",
-       "state": "later",
-       "text": "Das eigene und höchstens ein weiteres; die übrigen von Dritten. (E18)"
-      },
-      {
-       "kind": "decision",
-       "title": "Rollen",
-       "state": "later",
-       "text": "Paul ist CEO, hält den Kontakt zu Nazar und entscheidet über Bestellungen und den Betrag; Roman führt Produkt und Projekt und ist oben. Die KI macht, was sie kann; ein Mensch prüft. (E06, E13, E19, E62, E71)"
-      },
-      {
-       "kind": "decision",
-       "title": "Arbeit oben",
-       "state": "later",
-       "text": "Das Team baut Agenten und liefert alle Projekte, auch Cybersecurity und Blockchain; das eigene Produkt sind nur Agenten. Käufer und Mieter bilden eine Community. (E63, E70)"
-      },
-      {
-       "kind": "decision",
-       "title": "Grundmodell",
-       "state": "later",
-       "text": "Leichter Transport, kommunal, gemeinschaftlich, autark; Privatsphäre im eigenen Haus, Community vorausgesetzt. E-Bikes statt Benzin, Kommunalgebäude mit Gemüsegarten. (E72, E73, E74)"
-      },
-      {
-       "kind": "decision",
-       "title": "Alltag",
-       "state": "later",
-       "text": "Arbeit, Gesundheit und Freizeit gehören zusammen: Jour fixe am Morgen, gemeinsam oder privat essen, Sauna, Wandern, Laufen, Yoga; abgelegen und doch im Team. (E81)"
-      },
-      {
-       "kind": "decision",
-       "title": "Ablage",
-       "state": "later",
-       "text": "OneDrive in Microsoft 365, DSGVO-konform. (E12)"
       }
      ]
     }

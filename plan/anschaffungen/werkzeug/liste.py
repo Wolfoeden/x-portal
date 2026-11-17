@@ -2,7 +2,7 @@
 """Anschaffungsliste Node001: Objekte und Gegenstände, über deren Anschaffung zu entscheiden ist.
 
 Grundlage sind die Antworten vom 13.11.2026 auf der Entscheidungsseite (Wahl UND Kommentar; wo der Kommentar die Wahl
-ändert, gilt der Kommentar) und die Geologie-Zusammenfassung XPB-N001-GEO-SUM-001 (KI-erstellt, NICHT GEPRÜFT).
+ändert, gilt der Kommentar) und der Geologiebericht 34.11/26 (Fachprüfung liegt vor, Kommentar 15.11.2026).
 Die Liste nennt bewusst keine neuen Preise: die Projektleitung recherchiert. Früher gefundene Internetpreise stehen nur als Hinweis.
 
 Aufruf (aus plan/anschaffungen):  python3 werkzeug/liste.py .
@@ -13,7 +13,7 @@ mit anbieter, preis, link, notiz, stand, von, am.
 import csv, html, io, json, re, sys
 from pathlib import Path
 
-STAND = '13.11.2026'
+STAND = '17.11.2026'
 ENT = 'https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP'
 SGMM = 'https://claude.ai/artifact/EYuUZwYARAk6bVpmPDyq9G'
 ART = {'K': 'kaufen', 'M': 'mieten', 'S': 'selbst machen', 'D': 'Dienstleistung', 'KM': 'kaufen oder mieten', 'KS': 'kaufen oder selbst machen', 'KD': 'kaufen mit Einbau', 'A': 'Antrag'}
@@ -21,11 +21,11 @@ ART = {'K': 'kaufen', 'M': 'mieten', 'S': 'selbst machen', 'D': 'Dienstleistung'
 # Bereich: (Titel, Vorbemerkung, D-Karten, Rolle entscheidet, Rolle nimmt ab, Positionen)
 # Position: (Gegenstand, Phase, Art, wofür, was recherchieren, wovon die Menge abhängt, Hinweis)
 B = [
- ('Grundstück und Gründung', 'Aus der Geologie-Zusammenfassung (nicht geprüft, keine Fachfreigabe): Hang mit Rutsch- und Fließprozessen, Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Empfohlen sind Streifen- und Stützfundament, ein hangseitiger Entwässerungsgraben und Zusatzerkundungen. Alles hier plant ein Fachexperte.',
+ ('Grundstück und Gründung', 'Aus dem Geologiebericht 34.11/26; Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026): Hang mit Rutsch- und Fließprozessen, Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Empfohlen sind Streifen- und Stützfundament, ein hangseitiger Entwässerungsgraben und Zusatzerkundungen. Alles hier plant ein Fachexperte.',
   ['D54', 'D55', 'D56'], 'Geschäftsführung nach Vorschlag Fachexperte Geotechnik', 'Fachexperte Geotechnik', [
-  ('Fachprüfung des Geologieberichts', '0', 'D', 'Die KI-Zusammenfassung ist nicht geprüft; vor jeder Planung braucht es Abgleich mit dem Original und Freigabe.', 'Geotechniker oder Prüfingenieur in der Region; Umfang, Dauer, Honorar', 'einmal', ''),
-  ('Zusatzerkundung für Zufahrt, Stützkonstruktion und Hauptgebäude', '0', 'D', 'Der Bericht verlangt weitere Untersuchungen, wenn bis zur Schicht IGE-4 gegründet wird oder sich Gebäude ändern.', 'Bohrfirma, Zahl und Tiefe der Bohrungen', 'Zahl der Gebäude und Stützbauwerke', ''),
-  ('Vermessung und Absteckung', '0', 'D', 'Lage von Objekt Phase 0, Leitungen und Wegen festlegen.', 'Vermesser vor Ort; digitales Geländemodell für die 3D-Planung', 'einmal, später je Bauabschnitt', ''),
+  ('Liegt vor: Fachprüfung des Geologieberichts', '0', 'D', 'Liegt vor (Kommentar vom 15.11.2026); nichts anzuschaffen.', 'Kopie in den Plan legen (Index 3.0, AP-A1)', '–', 'vorhanden'),
+  ('Liegt vor: Zusatzerkundung für Zufahrt, Stützkonstruktion und Hauptgebäude', '0', 'D', 'Liegt vor (Kommentar vom 15.11.2026); nichts anzuschaffen.', 'Kopie in den Plan legen und für Phase 1 auswerten (Index 3.0, AP-A1)', '–', 'vorhanden'),
+  ('Liegt vor: Vermessung', '0', 'D', 'Liegt vor (Kommentar vom 15.11.2026); Absteckung von Objekt Phase 0, Leitungen und Wegen folgt mit der Bauplanung.', 'Kopie in den Plan legen (Index 3.0, AP-A1); Absteckung als Eigenleistung', 'je Bauabschnitt', 'vorhanden'),
   ('Hangseitiger Entwässerungsgraben mit Rinnen oder Sammelbehälter', '0', 'D', 'Oberflächenwasser geordnet ableiten (Empfehlung Gutachter).', 'Bauweise, Länge, Material, Firma mit Kleinbagger', 'Länge des Hangs oberhalb der Baufläche', ''),
   ('Fundament für Objekt Phase 0', '0', 'D', 'Leichte eingeschossige Gebäude können laut Bericht auf IGE-3 gründen; hangseitig als Stütze bemessen.', 'Punkt-, Streifen- oder Schraubfundament; was ein Fachexperte für den Standort zulässt', 'Größe und Gewicht des Objekts', ''),
   ('Stützkonstruktion am Hang', '0–1', 'D', 'Hangseitiger Fundamentbereich als Stützkonstruktion (Empfehlung Gutachter).', 'Gabionen, Betonwinkel oder Holz; Statik; Firma', 'Geländeschnitt an der Baufläche', ''),
@@ -291,7 +291,7 @@ def build(R, ans):
     for r in R: by.setdefault(r['bereich'], []).append(r)
     for bi, (titel, vor, ds, r1, r2, _) in enumerate(B, 1):
         o.append(f'<section data-b="{bi}"><h2>{e(titel)} <small>{len(by[titel])} Positionen</small></h2><p class="vor">{e(vor)}</p>')
-        kom = ''.join(f'<blockquote><span>{d} · {e(ans[d].get("wahl") or "ohne Wahl")}</span>{e(ans[d]["kommentar"])}</blockquote>' for d in ds if d in ans and ans[d].get('kommentar'))
+        kom = ''.join(f'<blockquote class="zitat"><span>{d} · {e(ans[d].get("wahl") or "ohne Wahl")}</span>{e(ans[d]["kommentar"])}</blockquote>' for d in ds if d in ans and ans[d].get('kommentar'))
         if kom: o.append(f'<details><summary class="note">Kommentare aus den Entscheidungen im Wortlaut</summary>{kom}</details>')
         for r in by[titel]:
             i = r['nr']; p0 = ' p0' if r['phase'].startswith('0') else ''

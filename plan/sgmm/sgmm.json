@@ -110,7 +110,7 @@
     "punkte": [
      "Vision v0.4 (Baseline Abschnitt 2) und Kerndefinition (Abschnitt 18)",
      "Disziplin: Node001 trägt sich aus realer Nutzung; Genome- und IP-Erlöse sind Upside",
-     "Mission: in v0.4 nicht enthalten, OPEN (W01)"
+     "Mission und Globalziele nach D42, Grundlage im Index 3.0 (W01, W21)"
     ],
     "xp_sys": "XP-SYS-001, 004",
     "status": "DOCUMENTED"
@@ -120,7 +120,7 @@
     "punkte": [
      "X-PORTAL Organisation als Dach; DT Agentur übernimmt Projekte aus Deutschland; Grundstücke (X1–X3)",
      "Systemgrenze Organisation ↔ Node-Betrieb: OD-001",
-     "KI bereitet vor (E13); Paul und Roman geben frei, Bestellung und Betrag Paul (E71); Vorschlag gilt ohne Widerspruch (E80)",
+     "KI bereitet vor; Geschäftsführung und Projektleitung geben frei, Bestellung und Betrag die Geschäftsführung; ein KI-Vorschlag gilt erst, wenn er gewählt ist (D43)",
      "Änderungen an Kernbegriffen nur als CHANGE REQUEST (XP-SYS-014)"
     ],
     "xp_sys": "XP-SYS-005, 014",
@@ -259,7 +259,7 @@
    "id": "D46",
    "betrifft": "Kapital Node001",
    "heute": "Kein Investor; der Ort trägt sich aus Käufergeld (E57).",
-   "vorschlag": "Käufermodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen.",
+   "vorschlag": "Verkaufsmodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen.",
    "anlass": "Kommentar, 13.11.2026",
    "status": "DOCUMENTED"
   },
@@ -968,7 +968,7 @@
     ],
     [
      "Wer",
-     "Alle; Notfallplan verantwortet Roman (ASSUMPTION)"
+     "Alle; Notfallplan verantwortet die Projektleitung (ASSUMPTION)"
     ],
     [
      "Wartung",

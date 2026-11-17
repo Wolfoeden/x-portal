@@ -132,8 +132,8 @@ a {{ color:var(--forest) }}
 
 <section id="stand"><p class="num">08 · Stand heute</p><h2>Reale Substanz, zentrale Nachweise fehlen noch</h2>
 <div class="status">
-<div class="card s-have"><h3>Vorhanden <span class="pill">belegt</span></h3>{lst(['Plattform x-portal.eu mit KI-Matching und Freelancer-Profilen','Warteliste für Node001','Grundstück für Node001 gesichert','Geologischer Untersuchungsbericht für Node001','Reference Architecture v0.4 als Arbeitsbaseline'])}</div>
-<div class="card s-work"><h3>In Arbeit <span class="pill">läuft</span></h3>{lst(['Fachprüfung des Geologieberichts und Lageplan','Rechtliche Prüfung von Website, Miet- und Nutzungsmodell','Erste eigene KI-Agenten','Node001 System Architecture und parametrischer Business Case'])}</div>
+<div class="card s-have"><h3>Vorhanden <span class="pill">belegt</span></h3>{lst(['Plattform x-portal.eu mit KI-Matching und Freelancer-Profilen','Grundstück im Besitz, mit Detailplan und Bebauungsplan','Geologiebericht mit Fachprüfung, Zusatzerkundung und Vermessung','Reference Architecture v0.4 als Arbeitsbaseline'])}</div>
+<div class="card s-work"><h3>In Arbeit <span class="pill">läuft</span></h3>{lst(['Lage von Phase 0 im Detailplan und Bauplanung','Whitelist der künftigen Mieter (wird eingerichtet)','Rechtliche Prüfung von Website, Miet- und Nutzungsmodell','Erste eigene KI-Agenten','Node001 System Architecture und parametrischer Business Case'])}</div>
 <div class="card s-open"><h3>Zu validieren <span class="pill">offen</span></h3>{lst(['Baukosten, Selbstkosten je Objekt und Produktmodell','Rechtliche Struktur der Gesellschaft für Node001','Finanzierung des ersten Bauabschnitts','Nachfrage, Auslastung und Cost-to-Serve','Daten- und Betriebsarchitektur zwischen Standorten und Organisation'])}</div>
 </div><p>Stand November 2026. Künftige Meilensteine sind Ziele, keine Zusagen.</p></section>
 
@@ -149,13 +149,14 @@ a {{ color:var(--forest) }}
 
 <section id="vorher"><p class="num">11 · Vor dem Investment</p><h2>Eigenmittel und Eigenleistung zuerst</h2>
 <p>Bevor Kapital für Infrastruktur und Objekte aufgenommen wird, klärt X-PORTAL aus eigenen Mitteln und eigener Arbeit die Fragen, die ein Investor sonst als Risiko einpreisen müsste.</p>
-{cards([('Boden','Geprüfte Gründung','Fachprüfung des geologischen Berichts, Zusatzerkundung und Vermessung mit Geländemodell.'),
+{cards([('Transport','Weg nach oben','Die Zufahrt ist einspurig und teils eng; sie wird vermessen. Jedes Objekt muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen.'),
         ('Wasser','Menge und Qualität','Laboranalyse des Grundwassers und Auslegung der Aufbereitung.'),
         ('Strom und Netz','Anschluss belegt','Antrag beim Netzbetreiber und Angebot für die Internetanbindung.'),
         ('Recht und Struktur','Investierbare Gesellschaft','Rechtliche Prüfung von Gesellschaft, Miet- und Nutzungsmodell.'),
         ('Kosten','Angebote statt Richtwerte','Bauplanung und schriftliche Angebote für die großen Posten; daraus entsteht das Kostenband.'),
-        ('Nachfrage','Interessenten und Umsatz','Mietinteressenten für Node001 und bezahlte Kundenprojekte der Company.')])}
+        ('Nachfrage','Whitelist und Umsatz','Whitelist künftiger Mieter für Node001 und bezahlte Kundenprojekte der Company.')])}
 <p>Dazu kommt sichtbare Vorarbeit am Grundstück: Baufläche vorbereiten, eigenes Holz schlagen und einlagern, Messreihen über den Winter. Jede Stunde wird dokumentiert.</p>
+<p>Geologiebericht mit Fachprüfung, Zusatzerkundung und Vermessung liegt bereits vor. Gebaut wird danach in Chargen: Charge 1 so weit wie möglich aus Eigenkapital; weitere Objekte werden nachbestellt, wenn die Whitelist der künftigen Mieter wächst. Die wiederkehrenden Mieterlöse sind der Nachweis für Investoren.</p>
 <p class="rule">Kapital wird erst gebraucht, wenn diese Nachweise vorliegen. Es fließt dann in Infrastruktur, Objekte und Betriebsfähigkeit, nicht in offene Grundsatzfragen.</p></section>
 
 <section id="kapital"><p class="num">12 · Kapital</p><h2>Zwei Investment Cases, eine gemeinsame Story</h2>
@@ -171,7 +172,7 @@ a {{ color:var(--forest) }}
 {cards([('Produkt und Projekt','Roman Dering',''),('Lead Developer','Pavel J.','')], 'c2')}
 <p><b>Beratung Architektur und Bau:</b> ein Architekt aus der Region begleitet Planung, Geologie und Baukontext in beratender Funktion.</p>
 <p>Die Architektur steht als Arbeitsbaseline. Als Nächstes werden Node001 und die Finanzierung quantitativ und rechtlich belastbar gemacht. Dieses Papier soll ein Gespräch eröffnen; technische, rechtliche und standortspezifische Details liefern später die Due-Diligence-Unterlagen.</p>
-<div class="intern"><h3>Intern: vor externem Versand finalisieren, dann diesen Kasten entfernen</h3>{lst(['Vollständige Founder-, Ownership- und Governance-Darstellung (im Team oben fehlt die Geschäftsführung)','Karten D69–D72 auf der <a href="https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP">Entscheidungsseite</a> entscheiden: Paket vor dem Investment, Bewertung der Eigenleistung, Zeitpunkt der Ansprache','Fachprüfung des Geologieberichts (heute nur KI-Zusammenfassung, nicht geprüft)','Rechtsprüfung der Struktur: Dach, Agentur, Gesellschaft für Node001; Beteiligung am Node','Mission und Globalziele mit der Vision v0.4 in eine Logik bringen','Parametrischer Business Case, Selbstkosten je Objekt, Kapitalbedarf und Investor Ask (Beträge stehen bewusst nicht im Papier)','Infografik „Integrierte Managementarchitektur“ von v0.2 auf v0.4 heben','Jurist prüft den Text vor dem Versand'])}</div></section>
+<div class="intern"><h3>Intern: vor externem Versand finalisieren, dann diesen Kasten entfernen</h3>{lst(['Vollständige Founder-, Ownership- und Governance-Darstellung (im Team oben fehlt die Geschäftsführung)','Karten D69–D72 auf der <a href="https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP">Entscheidungsseite</a> entscheiden: Paket vor dem Investment, Bewertung der Eigenleistung, Zeitpunkt der Ansprache','Fachprüfung, Zusatzerkundung und Vermessung als Dokumente in den Plan legen (liegen vor)','Whitelist der künftigen Mieter einrichten','Rechtsprüfung der Struktur: Dach, Agentur, Gesellschaft für Node001; Beteiligung am Node','Mission und Globalziele mit der Vision v0.4 in eine Logik bringen','Parametrischer Business Case, Selbstkosten je Objekt, Kapitalbedarf und Investor Ask (Beträge stehen bewusst nicht im Papier)','Infografik „Integrierte Managementarchitektur“ von v0.2 auf v0.4 heben','Jurist prüft den Text vor dem Versand'])}</div></section>
 
 <footer>Kein öffentliches Angebot von Wertpapieren, Vermögensanlagen oder Kryptowerten; keine Anlageberatung. Vertraulicher Diskussionsstand, November 2026. Künftige Meilensteine sind Ziele, keine Zusagen. Grundlage: X-PORTAL Reference Architecture v0.4 (Working Baseline, 12.11.2026) und Investor Deck, Working Draft, November 2026.</footer>
 </div>'''

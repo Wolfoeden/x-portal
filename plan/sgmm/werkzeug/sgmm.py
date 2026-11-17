@@ -45,10 +45,10 @@ MATRIX = {
     'Normativ': [
         ('Vision und Politik', ['Vision v0.4 (Baseline Abschnitt 2) und Kerndefinition (Abschnitt 18)',
                                 'Disziplin: Node001 trägt sich aus realer Nutzung; Genome- und IP-Erlöse sind Upside',
-                                'Mission: in v0.4 nicht enthalten, OPEN (W01)'], 'XP-SYS-001, 004', 'DOCUMENTED'),
+                                'Mission und Globalziele nach D42, Grundlage im Index 3.0 (W01, W21)'], 'XP-SYS-001, 004', 'DOCUMENTED'),
         ('Verfassung und Governance', ['X-PORTAL Organisation als Dach; DT Agentur übernimmt Projekte aus Deutschland; Grundstücke (X1–X3)',
                                        'Systemgrenze Organisation ↔ Node-Betrieb: OD-001',
-                                       'KI bereitet vor (E13); Paul und Roman geben frei, Bestellung und Betrag Paul (E71); Vorschlag gilt ohne Widerspruch (E80)',
+                                       'KI bereitet vor; Geschäftsführung und Projektleitung geben frei, Bestellung und Betrag die Geschäftsführung; ein KI-Vorschlag gilt erst, wenn er gewählt ist (D43)',
                                        'Änderungen an Kernbegriffen nur als CHANGE REQUEST (XP-SYS-014)'], 'XP-SYS-005, 014', 'DECISION REQUIRED'),
         ('Kultur', ['Prinzipien aus Abschnitt 5: Menschenzentrierung, Resilienz, Wartbarkeit, Messbarkeit, Lernfähigkeit',
                     'Spielregeln oben: Gleitzeit 9–14, Jour fixe und Sport Pflicht, Wellness frei, Arbeit wie Holz machen gemeinsam',
@@ -90,7 +90,7 @@ CR = [  # früher Change Requests; seit 13.11.2026 auf der Entscheidungsseite en
     ('D55', 'Container oder Objekte', 'Container sind die Tiny Houses der Käufer und bleiben (E59).', 'Ein Objekt als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche; danach Objekte und Kommunalgebäude.', 'Antwort mit Kommentar, 13.11.2026', 'DOCUMENTED'),
     ('D56', 'Bauart', 'Tiny Houses in Teilen, oben montiert (E75).', 'Material offen (Holz, Beton, Glas, Metall); Bau-KI plant und bewertet nach lokalen Gegebenheiten.', 'Kommentar, 13.11.2026', 'OPEN'),
     ('D49', 'Preis', 'Etwa 30.000 € je Käufer (E78).', 'Selbstkostenpreis je Objekt statt Verkaufspreis; kein Immobilienverkauf im klassischen Sinn.', 'Kommentar, 13.11.2026', 'DOCUMENTED'),
-    ('D46', 'Kapital Node001', 'Kein Investor; der Ort trägt sich aus Käufergeld (E57).', 'Käufermodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen.', 'Kommentar, 13.11.2026', 'DOCUMENTED'),
+    ('D46', 'Kapital Node001', 'Kein Investor; der Ort trägt sich aus Käufergeld (E57).', 'Verkaufsmodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen.', 'Kommentar, 13.11.2026', 'DOCUMENTED'),
     ('D69', 'Vor dem Investment', '–', 'Welches Paket aus Eigenmitteln und Eigenleistung (Kern, Optimum, Erweitert).', 'Karte offen', 'DECISION REQUIRED'),
 ]
 
@@ -219,7 +219,7 @@ KETTEN = [
   ziel='Brand, CO, Verletzung und Abschneiden werden erkannt und beherrscht.',
   kette=[('Funktion', 'Personen schützen'), ('Lösung', 'Melder, Löscher, Erste Hilfe, Notfallplan, Kommunikation'),
          ('Beschaffung', 'Kaufen; Erste-Hilfe-Kurs für alle'), ('Werkzeug', 'Rauch- und CO-Melder, Feuerlöscher je Einheit, Erste-Hilfe-Set, Stirnlampen'),
-         ('Wer', 'Alle; Notfallplan verantwortet Roman (ASSUMPTION)'), ('Wartung', 'Melder monatlich testen, Löscher nach Prüffrist'),
+         ('Wer', 'Alle; Notfallplan verantwortet die Projektleitung (ASSUMPTION)'), ('Wartung', 'Melder monatlich testen, Löscher nach Prüffrist'),
          ('Ausfall', 'Rettungszeit nach unten und Hubschrauberplatz: OPEN')],
   pos=[P('Rauch- und CO-Melder', 'je Raum mit Ofen', 580, 4249, 'siehe F01'), P('Feuerlöscher', 'je Einheit', None, None, 'nicht gefunden', 'OPEN'),
        P('Erste-Hilfe-Set', 'je Einheit', None, None, 'nicht gefunden', 'OPEN')],
@@ -346,7 +346,7 @@ def build_html():
     o.append('</div></section>')
     # CR
     o.append('<section id="change"><p class="num">04 · Entschieden am 13.11.2026</p><h2>Was sich gegenüber dem alten Log geändert hat</h2><p>Die früheren Entscheidungen E01–E85 sind zurückgenommen. Auf der <a href="https://claude.ai/artifact/MqsCPAFG4HDgGTPERowpyP">Entscheidungsseite</a> gelten Wahl und Kommentar zusammen.</p><div class="tw"><table><thead><tr><th>Karte</th><th>Betrifft</th><th>Früher im Log</th><th>Jetzt</th><th>Beleg</th><th>Status</th></tr></thead><tbody>')
-    for i, t, alt, neu, q, s in CR: o.append(f'<tr><td class="id">{i}</td><td><b>{e(t)}</b></td><td>{e(alt)}</td><td>{e(neu)}</td><td>{e(q)}</td><td>{st(s)}</td></tr>')
+    for i, t, alt, neu, q, s in CR: o.append(f'<tr><td class="id">{i}</td><td><b>{e(t)}</b></td><td class="bisher">{e(alt)}</td><td>{e(neu)}</td><td>{e(q)}</td><td>{st(s)}</td></tr>')
     o.append('</tbody></table></div></section>')
     # Ketten
     o.append('<section id="ketten"><p class="num">05 · Ausführungsebene</p><h2>Funktionsketten bis zum Werkzeug</h2><p>Jede Kette folgt demselben Muster: Funktion → Lösung → Betriebsmittel → Beschaffung → Werkzeug → Lager → wer → Wartung → Ausfall. Wo eine Wahl besteht, steht sie rot markiert. Aufklappen für Details.</p>')
@@ -364,7 +364,7 @@ def build_html():
     o.append('<section id="lernen"><p class="num">06 · Lernkreislauf</p><h2>Wie aus Betrieb ein Standard wird</h2><div class="loop">' + '<i>→</i>'.join(f'<span>{x}</span>' for x in LERNEN) + '</div><p>Für Node001 heißt das konkret: Jede Annahme in den Funktionsketten (zum Beispiel 3–6 m³ Holz je Einheit und Winter) wird im ersten Winter gemessen. Der Messwert ersetzt die Annahme und geht als Parameter ins Genome (XP-SYS-010, CO-05).</p></section>')
     # Abgleich
     o.append('<section id="abgleich"><p class="num">07 · Abgleich</p><h2>Neue Widersprüche zu W01–W18</h2><div class="tw"><table><thead><tr><th>ID</th><th>Thema</th><th>Bisher</th><th>Jetzt</th><th>Lösung</th><th>Status</th></tr></thead><tbody>')
-    for w in NEU_W: o.append(f'<tr><td class="id">{w[0]}</td><td><b>{e(w[1])}</b></td><td>{e(w[2])}</td><td>{e(w[3])}</td><td>{e(w[4])}</td><td>{st(w[5])}</td></tr>')
+    for w in NEU_W: o.append(f'<tr><td class="id">{w[0]}</td><td><b>{e(w[1])}</b></td><td class="bisher">{e(w[2])}</td><td>{e(w[3])}</td><td>{e(w[4])}</td><td>{st(w[5])}</td></tr>')
     o.append('</tbody></table></div></section>')
     o.append(f'<footer>Erzeugt aus plan/sgmm/werkzeug/sgmm.py im Repo Wolfoeden/x-portal, Stand {STAND}. Grundlage: Reference Architecture v0.4-WB1, Investor Deck 11.2026, Infografik „Integrierte Managementarchitektur · SGMM II“, Index 3.0. Keine Anlageberatung, kein Angebot.</footer></div>')
     return '\n'.join(o)

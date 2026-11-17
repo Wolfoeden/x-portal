@@ -9,7 +9,7 @@ Für die ausführende KI (kleineres Modell). Das Ergebnis prüft die planende KI
 - Ergebnis wird gebraucht für: Montage
 - Grundbestimmungen: GB1, GB4, GB11
 
-  - GB1 Weg nach oben: Letzte etwa 200 m mit über 15 % Steigung, unbefestigt. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. In Phase 0 kommt alles auf kleinem Fahrzeug hoch, keine Befestigung am Anfang. Im Winter muss geräumt werden.
+  - GB1 Weg nach oben: transportierbar: Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jedes Objekt muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen. Im Winter muss geräumt werden.
   - GB4 Frost und Termine: Gebaut wird nur ohne Frost. Termine sind Ziele und gelten erst nach den Gates.
   - GB11 Rollen und Freigabe: Rollen statt Namen. Technische Werte legt ein Fachexperte fest. Ein Vorschlag der KI gilt erst, wenn er gewählt ist. Unterlagen werden von Hand verschickt.
 

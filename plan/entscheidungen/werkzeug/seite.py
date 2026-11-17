@@ -13,6 +13,14 @@ Die Speicherlogik der alten Seite bleibt unverändert: jede Karte speichert in d
 """
 import html, json, re, sys
 from pathlib import Path
+import base64 as _b64
+_PLAN = Path(__file__).resolve().parents[2]
+KJ = json.loads((_PLAN / 'kosten' / 'kosten.json').read_text())  # Paket vor dem Investment, neu gerechnet am 17.11.2026
+def _eur(x): return f'{round(x / KJ["kurs"]):,}'.replace(',', '.')
+def band(name):
+    v = KJ['varianten'][name]
+    return f'{_eur(v["niedrig"])}–{_eur(v["hoch"])} € (mit Reserve bis {_eur(v["hoch_mit_reserve"])} €)'
+DETAILPLAN = 'data:image/jpeg;base64,' + _b64.b64encode((_PLAN / 'index-3' / 'quellen' / 'detailplan-blatt-3.jpg').read_bytes()).decode()
 
 STAND = '13.11.2026'  # Antworten vom 13.11. liegen in antworten-2026-11-13/
 INDEX = 'https://claude.ai/artifact/FFCJBeXkZAUyrREAbvZz9F'
@@ -27,18 +35,18 @@ def o(letter, title, text, ki=False):
 ABSCHNITTE = [
  ('vorinvest', 'Vor dem Investment: was aus Eigenkapital und Eigenleistung geht', [
   K('D69', 'Welches Paket vor dem Investment?',
-    'Richtwert etwa 10.000 € Eigenkapital; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten. Die Beträge kommen aus dem Kostenregister vom 13.11. (Teilschätzung, keine Angebote). Nicht enthalten sind Reisen, Architektenhonorar, Gebühren und Gründungskosten. Details auf der Seite „Vor dem Investment“.',
-    [o('A', 'Kern', 'Nachweise auf Papier (Geologie-Prüfung, Zusatzerkundung, Vermessung, Wasseranalyse, Planung, Rechtsprüfung, Angebote), Werkzeug und Kurse, Holz schlagen und einlagern, Interessenten und Unterlagen. 3.226–6.172 € (mit Reserve bis 7.098 €).'),
-     o('B', 'Optimum', 'Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. 4.403–8.236 € (mit Reserve bis 9.472 €).', ki=True),
-     o('C', 'Erweitert', 'Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. 5.119–9.825 € (mit Reserve bis 11.299 €).')]),
+    'So viel wie möglich mit Eigenkapital (Antwort vom 17.11.2026), bisheriger Richtwert etwa 10.000 €; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten. Fachprüfung des Geologieberichts, Zusatzerkundung und Vermessung liegen vor und sind nicht mehr enthalten (Kommentar vom 15.11.2026). Die Beträge kommen aus dem Kostenregister vom 13.11. (Teilschätzung, keine Angebote). Nicht enthalten sind Reisen, Architektenhonorar, Gebühren und Gründungskosten. Details auf der Seite „Vor dem Investment“.',
+    [o('A', 'Kern', 'Wasseranalyse, Planung, Rechtsprüfung und Angebote, Werkzeug und Kurse, Holz schlagen und einlagern, Whitelist und Unterlagen. ' + band('Kern') + '.'),
+     o('B', 'Optimum', 'Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. ' + band('Optimum') + '.', ki=True),
+     o('C', 'Erweitert', 'Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. ' + band('Erweitert') + '.')]),
   K('D70', 'Wie wird Eigenleistung bewertet und belegt?',
-    'Im Optimum stecken rund 443 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.',
+    f'Im Optimum stecken rund {KJ["varianten"]["Optimum"]["stunden"]} Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.',
     [o('A', 'Stundenbuch plus Steuerberater', 'Jede Stunde mit Datum, Rolle, Tätigkeit und Foto festhalten; der Steuerberater legt fest, wie sie in die Gesellschaft eingeht.', ki=True),
      o('B', 'Nur dokumentieren', 'Stunden und Ergebnisse festhalten und Investoren zeigen, ohne sie zu bewerten.'),
      o('C', 'Mit deutschem Stundensatz ansetzen', 'Eigenleistung mit einem Marktsatz aus Deutschland bewerten und als Einlage verhandeln.')]),
   K('D71', 'Ab wann sprechen wir Investoren an?',
     'Für Investoren zählen geprüfte Nachweise. Das Deck nennt als Gate: belastbares Kostenband, validiertes Revenue Model, rechtliche Struktur, messbare Meilensteine, klarer Kapitalbedarf.',
-    [o('A', 'Nach Stufe A', 'Sobald Geologie geprüft, Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher.', ki=True),
+    [o('A', 'Nach Stufe A', 'Sobald Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher.', ki=True),
      o('B', 'Sofort mit dem heutigen Stand', 'Gespräche jetzt führen, mit offenen Punkten klar benannt.'),
      o('C', 'Erst nach dem ersten Winter', 'Warten, bis Messreihen, trockenes Holz und erste Mieter-Interessenten vorliegen.')]),
   K('D72', 'Welche offenen Kosten zuerst mit Angeboten belegen?',
@@ -98,7 +106,7 @@ ABSCHNITTE = [
      o('B', 'Kleines Haus für 30.000 €', 'Der Preis bleibt bei 30.000 €; das Haus wird so klein, dass es mit Anschluss passt (etwa 20–25 m²).'),
      o('C', '45 m² mit höherem Preis', 'Das Haus hat 45 m² Wohnfläche; der Preis folgt aus den Kosten und liegt über 30.000 €.')],
     ['E78', 'E84']),
-  K('D50', 'Verkaufsstart und Schwelle zum Bestellen',
+  K('D50', 'Interessenten und Schwelle zum Bestellen',
     'Bisher: Verkauf ab Januar 2027, Warteliste als Nachfragebeleg, bestellt wird bei 5 Käufern mit belegtem Geld und 100 auf der Warteliste. Termine sind laut Deck Ziele, keine Zusagen (W06). Auf der Website heißt der Ort bisher nur „Ukraine“.',
     [o('A', 'Warteliste jetzt, Verkauf nach Gate', 'Die Warteliste läuft mit Bildern und Ablauf; verkauft wird erst nach Rechtsprüfung, Preis und Gate G2. Die Schwelle zum Bestellen steht im Business Case.', ki=True),
      o('B', 'Wie bisher', 'Verkauf ab Januar 2027; bestellt wird bei 5 Käufern mit belegtem Geld.'),
@@ -249,10 +257,10 @@ VOR = 'https://claude.ai/artifact/2zHiqw7dU8oHFnsZWBsh1P'
 # Was aus Wahl und Kommentar vom 13.11.2026 folgt. Wo der Kommentar die Wahl ändert, gilt der Kommentar.
 FOLGT = {
  'D42': 'Mission und Globalziele bleiben der Ausgangspunkt. Aufgabe: mit Vision v0.4 und Zielblatt in eine durchgehende Logik bringen.',
- 'D43': 'Rollenbasiert: Texte nennen Rollen statt Namen; „Fachexperte“ statt „Fachperson“. Ein KI-Vorschlag gilt erst mit Wahl auf dieser Seite.',
+ 'D43': 'Rollenbasiert: Texte nennen Rollen statt Namen; fachlich prüft ein Fachexperte. Ein KI-Vorschlag gilt erst mit Wahl auf dieser Seite.',
  'D44': 'X-PORTAL hält als Holding Lizenzen und Markenrechte. Die DT Agentur übernimmt Projekte in Deutschland, Österreich und der Schweiz. Node001 hält eine ukrainische Gesellschaft. Offen: wo Services am Node abgewickelt werden (voraussichtlich lokale Gesellschaft); Rechtsprüfung.',
  'D45': 'Team plus Mieter. Es gibt keinen Immobilienverkauf im klassischen Sinn.',
- 'D46': 'Das Käufermodell ist abgewählt. Node001 wird mit Eigenkapital und VC oder Investments finanziert, verbunden mit wiederkehrenden Erlösen.',
+ 'D46': 'Das Verkaufsmodell ist abgewählt. Node001 wird mit Eigenkapital und VC oder Investments finanziert, verbunden mit wiederkehrenden Erlösen.',
  'D47': 'Eigenkapital bis zur fertigen Bauplanung; Infrastruktur und Objekte mit Investoren. Förderung wird nicht öffentlich gezeigt, nur was Kapitalgeber verlangen. IT-Matching der BW Bank nur bei VC-Funding.',
  'D48': 'Nur Miete am Anfang; kein klassischer Verkauf. Tokenisierung und Beteiligung auf mehreren Ebenen erst nach Klärung.',
  'D49': 'Statt eines Preises je Haus wird der Selbstkostenpreis je Objekt ermittelt.',
@@ -345,14 +353,15 @@ def build(src, log, alt):
     assert len(ids) == len(set(ids)), 'doppelte Karten-IDs'
     missing = [x for x in log if x not in where]; assert not missing, f'nicht zugeordnet: {missing}'
     v1 = re.search(r'<figure><img alt="Generalplan Variante 1.*?</figure>', plans[0], re.S).group(0)
-    lage = '<div class="plans">' + v1.replace('Generalplan Variante 1: Grundlage für Stufe 1', 'Generalplan Variante 1') + '</div><p class="ph-note">Das Bild „Generalplan Variante 2“ war falsch und ist entfernt. Das Grundstück stimmt; ein neues Bild folgt.</p>'
+    lage = (f'<figure class="dp"><img alt="Detailplan Blatt 3, Node001" src="{DETAILPLAN}" style="width:100%;height:auto;display:block"><figcaption>Detailplan Blatt 3: 2,0 ha, 24 Parzellen, Höhenlinien, Brunnen, lokale Kläranlage. '
+            f'Legende und Geologie in der Grundlage des <a href="{INDEX}#b-zielblatt" target="_blank" rel="noreferrer">Index 3.0</a>.</figcaption></figure>')
     alt_plans = plans[1].replace('<figcaption>Ausschnitt: Fläche unten links</figcaption>', '<figcaption>Entwurf vom 04.11.2026 (Historie): Container unten links</figcaption>').replace('<figcaption>Gesamter Plan mit Legende</figcaption>', '<figcaption>Entwurf vom 04.11.2026 (Historie): gesamter Plan</figcaption>')
     hist = ''.join(f'<li><span>{eid}</span>{e(t)} <span>→ {", ".join(where[eid])}</span></li>' for eid, t in log.items())
     body = [f'''<div class="wrap">
 <p class="no">Node001 Beregniza · Stand {STAND}</p>
 <h1>Entscheidungen Node001</h1>
 <p class="reset"><b>Am 13.11.2026 sind alle 32 Karten neu beantwortet.</b> Es gelten Wahl und Kommentar zusammen; wo der Kommentar die Wahl ändert, gilt der Kommentar. Jede Karte zeigt oben, was daraus folgt. Die früheren Entscheidungen E01–E85 sind zurückgenommen und stehen unten als Historie.</p>
-<p><b>Nächster Schritt:</b> vier neue Karten D69–D72 zur Frage, was vor dem Investment aus Eigenkapital und Eigenleistung geht. Optimum laut Kostenregister: 4.403–8.236 € (mit Reserve bis 9.472 €). <a href="{VOR}" target="_blank" rel="noreferrer">Vor dem Investment →</a> · <a href="{ANS}" target="_blank" rel="noreferrer">Anschaffungsliste →</a></p>
+<p><b>Nächster Schritt:</b> vier neue Karten D69–D72 zur Frage, was vor dem Investment aus Eigenkapital und Eigenleistung geht. Optimum laut Kostenregister, neu gerechnet am 17.11.2026: {band('Optimum')}. <a href="{VOR}" target="_blank" rel="noreferrer">Vor dem Investment →</a> · <a href="{ANS}" target="_blank" rel="noreferrer">Anschaffungsliste →</a></p>
 <details><summary>Überblick: was seit 13.11. gilt ({len(FOLGT)})</summary><div class="tw2"><table class="ueb"><tbody>{"".join(f"<tr><td class=no>{k}</td><td>{e(v)}</td></tr>" for k, v in sorted(FOLGT.items()))}</tbody></table></div></details>
 <p>Zu jeder Entscheidung: <b>Gefällt mir</b> bei einer Möglichkeit, <b>Weiß ich noch nicht</b>, oder <b>Keine davon</b>, dann machen die Agenten neue Entwürfe. „Vorschlag KI“ ist nur ein Vorschlag und gilt erst, wenn ihr ihn wählt.</p>
 <p class="status" id="status">Lädt …</p>
@@ -361,20 +370,20 @@ def build(src, log, alt):
 <h2>Anfang</h2>
 <section class="start">
 <p><b>Vision (Reference Architecture v0.4):</b> X-PORTAL entwickelt menschenzentrierte, weitgehend versorgungsautarke, operativ autonome, resiliente und wirtschaftlich tragfähige Lebens-, Arbeits- und Aufenthaltsumgebungen, in denen Mensch, physische Welt, Services, Organisation und Technologie als integriertes, lernendes Gesamtsystem zusammenwirken.</p>
-<p><b>Mission und Globalziele:</b> offen, siehe D42.</p>
+<p><b>Mission und Globalziele:</b> siehe D42 und die Grundlage im Index 3.0.</p>
 <p><b>Grundstück:</b> Bereschnyzja (Beregniza), Ortsteil Hrun, bei Werchowyna, Kataster 2620885502:02:001:0013, etwa 1.016–1.077 m hoch (Geologiebericht), Nordosthang des Bila Kobyla.</p>
-<p><b>Geologie:</b> KI-Zusammenfassung XPB-N001-GEO-SUM-001 vom 13.11.2026, nicht geprüft und nicht freigegeben. Hang mit Rutsch- und Fließprozessen, Grundwasseraustritte an drei Bohrpunkten; empfohlen sind Streifen- und Stützfundament und ein hangseitiger Entwässerungsgraben. Maßgeblich bleibt der ukrainische Originalbericht (Repo: <code>plan/entscheidungen/quellen/</code>).</p>
+<p><b>Geologie:</b> Bericht 34.11/26 mit KI-Zusammenfassung XPB-N001-GEO-SUM-001; Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026). Hang mit Rutsch- und Fließprozessen, Grundwasseraustritte an drei Bohrpunkten; empfohlen sind Streifen- und Stützfundament und ein hangseitiger Entwässerungsgraben. Maßgeblich bleibt der ukrainische Originalbericht (Repo: <code>plan/entscheidungen/quellen/</code>).</p>
 {lage}
 </section>
 
 <h2>Bauphasen (nach D55 mit Kommentar)</h2>
 <section class="start"><div class="phasen">{"".join(f"<div><p class=no>{a}</p><b>{e(b)}</b><p>{e(c)}</p></div>" for a, b, c in PHASEN)}</div>
-<details><summary>Entwurf vom 04.11.2026 (Historie)</summary>{alt_plans}</details></section>
+</section>
 ''']
     for key, title, ks in ABSCHNITTE:
         body.append(f'<h2 id="{key}">{e(title)}</h2>')
         body += [card_html(k, log, alt) for k in ks]
-    body.append(f'''<details><summary>Historie: früher entschieden, jetzt zurückgenommen ({len(log)})</summary><ol>{hist}</ol></details>
+    body.append(f'''<details class="fr"><summary>Historie: früher entschieden, jetzt zurückgenommen ({len(log)})</summary><ol>{hist}</ol></details>
 <h2>Ende</h2>
 <section class="end"><p><b>Ziel:</b> Stufe 1 ist fertig geplant, wenn hier keine Entscheidung mehr offen ist. Dann steht fest, was gebaut und bestellt wird, wo, was es kostet, wie es bezahlt wird und wann.</p></section>
 </div>

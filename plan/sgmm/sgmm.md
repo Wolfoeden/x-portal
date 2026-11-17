@@ -29,12 +29,12 @@ Stand 13.11.2026. Bezugsrahmen Reference Architecture v0.4-WB1. Preise in UAH, 5
 ### Normativ · Aktivitäten: Vision und Politik [DOCUMENTED; XP-SYS-001, 004]
 - Vision v0.4 (Baseline Abschnitt 2) und Kerndefinition (Abschnitt 18)
 - Disziplin: Node001 trägt sich aus realer Nutzung; Genome- und IP-Erlöse sind Upside
-- Mission: in v0.4 nicht enthalten, OPEN (W01)
+- Mission und Globalziele nach D42, Grundlage im Index 3.0 (W01, W21)
 
 ### Normativ · Strukturen: Verfassung und Governance [DECISION REQUIRED; XP-SYS-005, 014]
 - X-PORTAL Organisation als Dach; DT Agentur übernimmt Projekte aus Deutschland; Grundstücke (X1–X3)
 - Systemgrenze Organisation ↔ Node-Betrieb: OD-001
-- KI bereitet vor (E13); Paul und Roman geben frei, Bestellung und Betrag Paul (E71); Vorschlag gilt ohne Widerspruch (E80)
+- KI bereitet vor; Geschäftsführung und Projektleitung geben frei, Bestellung und Betrag die Geschäftsführung; ein KI-Vorschlag gilt erst, wenn er gewählt ist (D43)
 - Änderungen an Kernbegriffen nur als CHANGE REQUEST (XP-SYS-014)
 
 ### Normativ · Verhalten: Kultur [DOCUMENTED; XP-SYS-001]
@@ -98,7 +98,7 @@ Stand 13.11.2026. Bezugsrahmen Reference Architecture v0.4-WB1. Preise in UAH, 5
 | D55 | Container oder Objekte | Container sind die Tiny Houses der Käufer und bleiben (E59). | Ein Objekt als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche; danach Objekte und Kommunalgebäude. | Antwort mit Kommentar, 13.11.2026 | DOCUMENTED |
 | D56 | Bauart | Tiny Houses in Teilen, oben montiert (E75). | Material offen (Holz, Beton, Glas, Metall); Bau-KI plant und bewertet nach lokalen Gegebenheiten. | Kommentar, 13.11.2026 | OPEN |
 | D49 | Preis | Etwa 30.000 € je Käufer (E78). | Selbstkostenpreis je Objekt statt Verkaufspreis; kein Immobilienverkauf im klassischen Sinn. | Kommentar, 13.11.2026 | DOCUMENTED |
-| D46 | Kapital Node001 | Kein Investor; der Ort trägt sich aus Käufergeld (E57). | Käufermodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen. | Kommentar, 13.11.2026 | DOCUMENTED |
+| D46 | Kapital Node001 | Kein Investor; der Ort trägt sich aus Käufergeld (E57). | Verkaufsmodell abgewählt; Eigenkapital plus Investoren, verbunden mit wiederkehrenden Erlösen. | Kommentar, 13.11.2026 | DOCUMENTED |
 | D69 | Vor dem Investment | – | Welches Paket aus Eigenmitteln und Eigenleistung (Kern, Optimum, Erweitert). | Karte offen | DECISION REQUIRED |
 
 ## 05 Funktionsketten
@@ -303,7 +303,7 @@ Systemebene Querschnitt; Anforderungen S01, S07, 2.4.7; XP-SYS-003, 009
 - Lösung: Melder, Löscher, Erste Hilfe, Notfallplan, Kommunikation
 - Beschaffung: Kaufen; Erste-Hilfe-Kurs für alle
 - Werkzeug: Rauch- und CO-Melder, Feuerlöscher je Einheit, Erste-Hilfe-Set, Stirnlampen
-- Wer: Alle; Notfallplan verantwortet Roman (ASSUMPTION)
+- Wer: Alle; Notfallplan verantwortet die Projektleitung (ASSUMPTION)
 - Wartung: Melder monatlich testen, Löscher nach Prüffrist
 - Ausfall: Rettungszeit nach unten und Hubschrauberplatz: OPEN
 

@@ -8,24 +8,24 @@
     {
      "id": "D69",
      "frage": "Welches Paket vor dem Investment?",
-     "warum": "Richtwert etwa 10.000 € Eigenkapital; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten. Die Beträge kommen aus dem Kostenregister vom 13.11. (Teilschätzung, keine Angebote). Nicht enthalten sind Reisen, Architektenhonorar, Gebühren und Gründungskosten. Details auf der Seite „Vor dem Investment“.",
+     "warum": "So viel wie möglich mit Eigenkapital (Antwort vom 17.11.2026), bisheriger Richtwert etwa 10.000 €; möglichst viel Eigenleistung, um einen höheren Eigenanteil zu halten. Fachprüfung des Geologieberichts, Zusatzerkundung und Vermessung liegen vor und sind nicht mehr enthalten (Kommentar vom 15.11.2026). Die Beträge kommen aus dem Kostenregister vom 13.11. (Teilschätzung, keine Angebote). Nicht enthalten sind Reisen, Architektenhonorar, Gebühren und Gründungskosten. Details auf der Seite „Vor dem Investment“.",
      "opts": [
       {
        "v": "A",
        "titel": "Kern",
-       "text": "Nachweise auf Papier (Geologie-Prüfung, Zusatzerkundung, Vermessung, Wasseranalyse, Planung, Rechtsprüfung, Angebote), Werkzeug und Kurse, Holz schlagen und einlagern, Interessenten und Unterlagen. 3.226–6.172 € (mit Reserve bis 7.098 €).",
+       "text": "Wasseranalyse, Planung, Rechtsprüfung und Angebote, Werkzeug und Kurse, Holz schlagen und einlagern, Whitelist und Unterlagen. 2.640–4.901 € (mit Reserve bis 5.636 €).",
        "ki": false
       },
       {
        "v": "B",
        "titel": "Optimum",
-       "text": "Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. 4.403–8.236 € (mit Reserve bis 9.472 €).",
+       "text": "Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. 3.817–6.965 € (mit Reserve bis 8.009 €).",
        "ki": true
       },
       {
        "v": "C",
        "titel": "Erweitert",
-       "text": "Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. 5.119–9.825 € (mit Reserve bis 11.299 €).",
+       "text": "Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. 4.533–8.554 € (mit Reserve bis 9.837 €).",
        "ki": false
       }
      ],
@@ -35,7 +35,7 @@
     {
      "id": "D70",
      "frage": "Wie wird Eigenleistung bewertet und belegt?",
-     "warum": "Im Optimum stecken rund 443 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.",
+     "warum": "Im Optimum stecken rund 431 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.",
      "opts": [
       {
        "v": "A",
@@ -67,7 +67,7 @@
       {
        "v": "A",
        "titel": "Nach Stufe A",
-       "text": "Sobald Geologie geprüft, Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher.",
+       "text": "Sobald Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher.",
        "ki": true
       },
       {
@@ -381,7 +381,7 @@
     },
     {
      "id": "D50",
-     "frage": "Verkaufsstart und Schwelle zum Bestellen",
+     "frage": "Interessenten und Schwelle zum Bestellen",
      "warum": "Bisher: Verkauf ab Januar 2027, Warteliste als Nachfragebeleg, bestellt wird bei 5 Käufern mit belegtem Geld und 100 auf der Warteliste. Termine sind laut Deck Ziele, keine Zusagen (W06). Auf der Website heißt der Ort bisher nur „Ukraine“.",
      "opts": [
       {
