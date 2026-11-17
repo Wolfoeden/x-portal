@@ -1,7 +1,8 @@
--- Warteliste für Node001 (Seite Orte): Interessenten für Workation, Miete oder Kauf.
+-- Whitelist für Node001 (Seite Orte; Tabellen heißen „waitlist“): künftige Mieter, Workation oder Miete.
+-- Kein Kauf: Es wird nichts verkauft (Plan vom 13.11.2026, D45 und D48; Kommentar vom 17.11.2026).
 -- Double-Opt-in: Ein Eintrag zählt erst, wenn der Link aus der Mail geklickt wurde. Nur der Server liest und schreibt.
 
-create type public.waitlist_interest as enum ('workation', 'rent', 'buy');
+create type public.waitlist_interest as enum ('workation', 'rent');
 
 create table public.waitlist_entries (
   id uuid primary key default gen_random_uuid(),
@@ -24,7 +25,7 @@ create table public.waitlist_entries (
 create index waitlist_entries_status_idx on public.waitlist_entries (node, status, created_at desc);
 comment on table public.waitlist_entries is 'Warteliste je Node. pending = Link verschickt, confirmed = per Link bestätigt, unsubscribed = abgemeldet.';
 comment on column public.waitlist_entries.timing is 'now = sofort, later = nur Interesse, für später.';
-comment on column public.waitlist_entries.campaign is 'Kampagnen-Link der Seite, z. B. ?angebot=kaufen. Nur zur Auswertung.';
+comment on column public.waitlist_entries.campaign is 'Kampagnen-Link der Seite, z. B. ?angebot=workation. Nur zur Auswertung.';
 comment on column public.waitlist_entries.confirm_token_hash is 'SHA-256 des Bestätigungslinks. Der Link selbst wird nie gespeichert.';
 
 create trigger waitlist_entries_touch before update on public.waitlist_entries

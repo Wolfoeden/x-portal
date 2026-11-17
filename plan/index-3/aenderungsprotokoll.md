@@ -333,3 +333,37 @@ Wunsch von Roman: Das Bild unter „Zielbild“ in der Grundlage ist jetzt die K
 - `pruefe_alle.py` sucht jetzt zusätzlich nach Objekt, offener Mission und „zweiter Anschluss“.
 - Ergebnis: keine Stelle mit altem Stand auf den sechs Seiten.
 - Screenshots: Internet im Index, SGMM W19–W21, D42.
+
+## 17.11.2026 (später) · Website nach dem Plan: Investoren, Orte, Impressum, Datenschutz
+
+**Eingang:** Roman möchte die Website so vorbereiten, dass alles online gehen kann. Ausgangspunkt ist Deploy Preview 5 (Pull Request #5 mit /investoren und /orte).
+- Das Wording soll dem Plan folgen, zum Beispiel beim Kreislauf.
+- Neue Bilder sollen hinein.
+- Transparent angeben, wie was wo entstanden ist.
+- Impressum ergänzen.
+
+**Antworten:** Impressum mit Platzhaltern; Ort „Karpaten, Westukraine“; Whitepaper und Deck auf Anfrage; Vorschau als neuer Pull Request.
+
+| Was auf der Website stand | Was jetzt dort steht | Grundlage |
+|---|---|---|
+| Kaufen oder mieten, Tiny House, Verkauf ab Januar 2027, Formularoption „Kaufen“ | Nur Miete; Begriff Wohneinheit; Formular nur Workation und Miete; FAQ „Kann ich kaufen?“ mit Nein | D45, D48, Kommentar vom 17.11. |
+| 01 → 10, Ziel zehn Nodes (auch Startseite) | Phasen 0 bis 2; „weitere erst nach den Nachweisen“ | Abgleich W10 |
+| Pre-Seed, Käuferzahlungen | Zwei getrennte Fälle; Eigenkapital bis zur Bauplanung, danach so weit wie möglich; Mieterlöse | D46, D47, GB8 |
+| Restaurant und Bar | Gemeinsame Küche; Feuerstelle und Sauna in Phase 1; Gastronomie später | D34, D35, D64 |
+| Strom mit Batterie, Internet „eigener Anschluss“ | Netzanschluss, Generator als Reserve, Solar ab Phase 1; lokaler Anbieter, Starlink als Reserve | D59, D63 |
+| 1.010–1.075 m, „an der Grenze zu Ungarn“ | 1.016–1.077 m laut Geologiebericht; Karpaten, Westukraine | Geologiebericht, Antwort vom 17.11. |
+| Kreislauf mit „Nodes entwickeln“ | Menschen verbinden, Wert schaffen (ISMS-App, KI-Agenten), in Abschnitten bauen, leben und arbeiten, messen und lernen, weitere Nodes | Ablaufplan, Ast 9 |
+| kein Technik-Block | „Technik, die schon läuft“ aus Ast 9, ohne Beträge | Wahl vom 14.11. |
+| „Deck anfordern“ schickte nichts | Anfrage geht in die Datenbank und ans Postfach; Versand von Hand | Antwort vom 17.11. |
+| Kennzeichnung der Bilder teils widersprüchlich | Ein Bildverzeichnis; Abschnitt „Was echt ist und was geplant“ mit Bildnachweis; zwei Schaubilder aus dem Whitepaper neu | Wunsch vom 17.11. |
+| Impressum, Datenschutz, AGB verlinkt, aber nicht vorhanden | Impressum und Datenschutz als Entwurf mit markierten Platzhaltern; AGB-Link entfernt | Antwort vom 17.11. |
+
+**Im Plan:**
+- Neues Arbeitspaket AP-A13 „Website online schalten“ im Ablaufplan und im Netz, vor AP-A8.
+- AP-A8 sagt jetzt, dass Formular und Tabelle für die Whitelist gebaut sind und mit der Website online gehen.
+
+**Prüfung:**
+- `pruefe_alle.py` liest jetzt auch die Wörterbücher der Website (de und en). Ergebnis: keine Stelle mit altem Stand.
+- `pnpm check:golive` listet die Blocker vor dem Merge: Platzhalter, juristische Prüfung, Migration, Netlify-Einstellungen für die Produktion.
+- Typprüfung, 80 Tests und Build laufen durch.
+- Screenshots auf Desktop und Handy, deutsch und englisch; keine Seite ist breiter als der Bildschirm.

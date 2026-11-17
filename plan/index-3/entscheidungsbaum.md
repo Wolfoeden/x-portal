@@ -243,7 +243,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Blockiert: Chargen (AP-C5, AP-G3), Nachweis für Investoren (AP-F3)
     - Grundbestimmungen: GB8, GB9, GB10
     - Rolle: führt: Projektleitung · prüft: Jurist (Datenschutz, keine verbindliche Zusage)
-    - Ergebnis: Anmeldung auf x-portal.eu; gezählt werden Einträge, gewünschter Einzug und Bereitschaft zur Miete. Die Whitelist ist noch nicht vorhanden (Kommentar vom 12.11.2026 im Whitepaper).
+    - Ergebnis: Anmeldung auf x-portal.eu (Seite Orte, Bestätigung per E-Mail); gezählt werden Einträge, gewünschter Einzug und Bereitschaft zur Miete. Die Whitelist ist noch nicht online (Kommentar vom 12.11.2026 im Whitepaper); Formular und Tabelle sind gebaut und gehen mit der Website online (AP-A13).
     - Unterlage: Text für die Anmeldung
       > X-PORTAL Node001 · Karpaten, Ukraine
       > 
@@ -302,6 +302,14 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Grundbestimmungen: GB9, GB11
     - Rolle: beauftragt: Geschäftsführung · prüft: Anwälte, Steuerberater
     - Ergebnis: Schriftliche Einordnung: Erlaubnispflicht, Bilanzierung und Steuer der Staking-Erträge in Deutschland und der Ukraine; welche Gesellschaft sie hält
+  - **Schritt:** Website online schalten: Investoren, Orte, Impressum, Datenschutz _[in Arbeit]_
+    - Wunsch vom 17.11.2026: Wording nach dem Plan, neue Bilder, transparent angeben, wie was wo entstanden ist, Impressum. Antworten: Impressum mit Platzhaltern, Ort „Karpaten, Westukraine“, Whitepaper und Deck auf Anfrage, Vorschau als neuer Pull Request.
+    - Wann: jetzt; Vorschau steht seit 17.11.2026, online nach den Freigaben
+    - Voraussetzung: Impressumsdaten der Gesellschaft; Prüfung von Impressum und Datenschutz durch den Juristen; OK zum Einspielen der Migration für die Whitelist
+    - Blockiert: Whitelist (AP-A8), Anfragen nach Whitepaper und Deck (AP-B1)
+    - Grundbestimmungen: GB9, GB10
+    - Rolle: baut: planende KI · liefert Daten und gibt frei: Geschäftsführung · prüft: Jurist
+    - Ergebnis: Seiten /investoren und /orte nach diesem Plan (nur Miete, Wohneinheiten, Kreislauf, Technik ohne Beträge, Bildnachweis); Impressum und Datenschutz ohne Platzhalter; Migration der Whitelist eingespielt; „pnpm check:golive“ meldet nichts mehr; Merge auf main
   - **Schritt:** Zahlen neu rechnen: Kostenhochrechnung 12,5 Mio. € und frühere Erlösrechnung 12 Mio. € _[offen]_
     - Antwort zu D53 vom 13.11.2026: Wahl C, die KI rechnet beide Zahlen mit Quellen neu, danach entscheidet ihr.
     - Wann: nach Angeboten (AP-A5); vor Investorengesprächen

@@ -151,11 +151,26 @@
    "quelle": null
   },
   {
+   "id": "AP-A13",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "GF",
+   "nach": [],
+   "titel": "Website online schalten",
+   "lang": "Website online schalten: Investoren, Orte, Impressum, Datenschutz",
+   "baum": "b-AP-A13",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
    "id": "AP-A8",
    "ab": "A",
    "art": "aufgabe",
    "bahn": "PL",
-   "nach": [],
+   "nach": [
+    "AP-A13"
+   ],
    "titel": "Whitelist einrichten",
    "lang": "Whitelist der künftigen Mieter einrichten",
    "baum": "b-AP-A8",
@@ -982,6 +997,7 @@
   "AP-A1",
   "AP-A2",
   "AP-A3",
+  "AP-A13",
   "AP-A8",
   "mieter",
   "AP-A6",

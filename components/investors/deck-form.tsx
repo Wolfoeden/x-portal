@@ -5,11 +5,13 @@ import { ArrowRight, Check } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { useLocale } from '@/components/i18n/locale-provider'
 import { fill } from '@/lib/i18n/format'
+import { pageHref } from '@/lib/i18n/routes'
 
-/** Deck-Anfrage. In der Vorschau wird nichts gesendet oder gespeichert. */
+/** Anfrage nach Whitepaper und Deck (Antwort vom 17.11.2026: „auf Anfrage“). Läuft über /api/contact mit dem Thema „investors“:
+ *  gespeichert in contact_requests, Hinweis ans Postfach, kurze Bestätigung an den Absender. Verschickt wird von Hand. */
 export function DeckForm() {
   const id = useId()
-  const { dict, ids } = useLocale()
+  const { dict, ids, locale } = useLocale()
   const copy = dict.investors.deck
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -18,14 +20,40 @@ export function DeckForm() {
   const [consent, setConsent] = useState(false)
   const [tried, setTried] = useState(false)
   const [sent, setSent] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'sending' | 'failed' | 'limit'>('idle')
+  const [website, setWebsite] = useState('')
 
   const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim())
   const valid = name.trim().length >= 2 && emailOk && consent
 
-  const onSubmit = (event: FormEvent) => {
+  const onSubmit = async (event: FormEvent) => {
     event.preventDefault()
     setTried(true)
-    if (valid) setSent(true)
+    if (!valid || status === 'sending') return
+    setStatus('sending')
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          topic: 'investors',
+          name: name.trim(),
+          email: email.trim(),
+          company: organisation.trim() || undefined,
+          message: fill(copy.message, { kind: kind ?? '–' }),
+          locale,
+          website: website || undefined,
+        }),
+      })
+      if (response.ok) {
+        setStatus('idle')
+        setSent(true)
+        return
+      }
+      setStatus(response.status === 429 ? 'limit' : 'failed')
+    } catch {
+      setStatus('failed')
+    }
   }
 
   const field = 'h-12 w-full rounded-2xl border border-line-strong bg-white px-4 text-[16px] text-ink outline-none transition-colors placeholder:text-faint focus:border-ink/50'
@@ -52,7 +80,6 @@ export function DeckForm() {
                 </span>
                 <p className="text-[24px] font-medium tracking-[-0.015em]">{fill(copy.thanks, { name: name.trim().split(' ')[0] })}</p>
                 <p className="text-[15px] text-muted">{copy.thanksText}</p>
-                <p className="rounded-2xl bg-amber-soft px-4 py-3 text-[13.5px] text-amber-ink">{copy.previewNote}</p>
               </div>
             ) : (
               <form onSubmit={onSubmit} noValidate className="flex flex-col gap-4">
@@ -99,14 +126,27 @@ export function DeckForm() {
                     className="mt-1 size-4 shrink-0 accent-[#17643b]"
                     aria-invalid={tried && !consent}
                   />
-                  {copy.consent}
+                  <span>
+                    {copy.consent}{' '}
+                    <a href={pageHref('privacy', locale)} className="text-brand underline underline-offset-2">
+                      {copy.privacy}
+                    </a>
+                  </span>
                 </label>
+                {/* Honigtopf: Menschen sehen das Feld nicht. */}
+                <input type="text" tabIndex={-1} autoComplete="off" aria-hidden value={website} onChange={(event) => setWebsite(event.target.value)} className="hidden" />
                 {tried && !valid ? <p className="text-[13.5px] text-amber-ink">{copy.error}</p> : null}
+                {status === 'failed' || status === 'limit' ? (
+                  <p role="alert" className="text-[13.5px] text-amber-ink">
+                    {status === 'limit' ? copy.limit : copy.failed}
+                  </p>
+                ) : null}
                 <button
                   type="submit"
+                  disabled={status === 'sending'}
                   className="mt-2 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-brand text-[15px] font-medium text-white transition-colors hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:w-fit sm:px-7"
                 >
-                  {copy.submit}
+                  {status === 'sending' ? copy.sending : copy.submit}
                   <ArrowRight aria-hidden size={17} strokeWidth={2} />
                 </button>
               </form>

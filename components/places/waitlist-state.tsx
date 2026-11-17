@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { useLocale } from '@/components/i18n/locale-provider'
 
-export type WaitlistUse = 'workation' | 'mieten' | 'kaufen'
+export type WaitlistUse = 'workation' | 'mieten'
 export type WaitlistStart = 'sofort' | 'spaeter'
 
 type WaitlistState = {
@@ -19,9 +19,9 @@ type WaitlistState = {
 
 const WaitlistContext = createContext<WaitlistState | null>(null)
 
-/** Kampagnen-Links wie /orte?angebot=workation (englisch ?offer=workation|rent|buy) belegen die Nutzung vor. */
+/** Kampagnen-Links wie /orte?angebot=workation (englisch ?offer=workation|rent) belegen die Nutzung vor. */
 const OFFER_PARAM = { de: 'angebot', en: 'offer' } as const
-const OFFER_VALUES: Record<string, WaitlistUse> = { workation: 'workation', mieten: 'mieten', kaufen: 'kaufen', rent: 'mieten', buy: 'kaufen' }
+const OFFER_VALUES: Record<string, WaitlistUse> = { workation: 'workation', mieten: 'mieten', rent: 'mieten' }
 
 export function WaitlistProvider({ children }: { children: ReactNode }) {
   const { locale, ids } = useLocale()

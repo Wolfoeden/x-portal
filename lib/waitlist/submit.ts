@@ -7,20 +7,21 @@ import { deliverEmail, operatorAddress, type EmailMessage } from '@/lib/email/de
 import { waitlistConfirmLink, waitlistNotification } from '@/lib/email/messages'
 import type { Visitor } from '@/lib/server/request'
 
-// Warteliste Node001 (Seite Orte) → public.waitlist_entries. Erst der Klick auf den Link in der Mail bestätigt den Eintrag
+// Whitelist Node001 (Seite Orte; im Code „waitlist“) → public.waitlist_entries. Erst der Klick auf den Link in der Mail bestätigt den Eintrag
 // (Double-Opt-in); gespeichert wird nur der SHA-256 des Links. Nach der Bestätigung geht ein Hinweis ans Postfach.
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 
-export const WAITLIST_USES = ['workation', 'mieten', 'kaufen'] as const
+// Nur Miete: Es wird nichts verkauft (Plan vom 13.11.2026, D45 und D48; Kommentar vom 17.11.2026).
+export const WAITLIST_USES = ['workation', 'mieten'] as const
 export const WAITLIST_STARTS = ['sofort', 'spaeter'] as const
 /** Fassung des Einwilligungstexts auf der Seite. Ändert sich der Text, ändert sich diese Kennung. */
-export const WAITLIST_CONSENT_VERSION = 'orte-2026-11-10-node001'
+export const WAITLIST_CONSENT_VERSION = 'orte-2026-11-17-node001'
 export const WAITLIST_PER_DAY = 5
 const LINK_DAYS = 7
 
 // Werte in der Datenbank, englisch wie die übrigen Aufzählungen dort.
-const INTEREST = { workation: 'workation', mieten: 'rent', kaufen: 'buy' } as const
+const INTEREST = { workation: 'workation', mieten: 'rent' } as const
 const TIMING = { sofort: 'now', spaeter: 'later' } as const
 
 export const WaitlistBody = z.object({

@@ -58,11 +58,6 @@ function HubsContent({ relief, hub }: MapProps) {
         </h2>
         <p className="max-w-[420px] text-[18px] leading-relaxed text-[#bfd8c8]">{copy.text}</p>
         <div className="mt-4 flex flex-col gap-3">
-          <div className="flex items-center gap-1.5" aria-label={copy.squaresLabel}>
-            {Array.from({ length: 10 }, (_, index) => (
-              <span key={index} className={`size-3.5 ${index === 0 ? 'bg-white' : 'border border-[#bfd8c8]/60'}`} />
-            ))}
-          </div>
           <p className="text-[14px] text-[#bfd8c8]">{copy.count}</p>
         </div>
         <Link href={pagePath('investors', locale)} className="mt-4 inline-flex w-fit items-center gap-2 text-[15px] font-medium text-white underline decoration-white/40 underline-offset-[6px] hover:decoration-white">

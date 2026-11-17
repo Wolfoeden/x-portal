@@ -2,7 +2,7 @@ import 'server-only'
 
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { z } from 'zod'
-import { CONTACT_TOPICS } from '@/lib/contact/topics'
+import { REQUEST_TOPICS } from '@/lib/contact/topics'
 import { deliverEmail, operatorAddress, type EmailMessage } from '@/lib/email/deliver'
 import { contactConfirmation, contactNotification } from '@/lib/email/messages'
 import type { Visitor } from '@/lib/server/request'
@@ -13,7 +13,7 @@ import type { Visitor } from '@/lib/server/request'
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 
 export const ContactBody = z.object({
-  topic: z.enum(CONTACT_TOPICS),
+  topic: z.enum(REQUEST_TOPICS),
   name: z.string().trim().min(2).max(120),
   email: z.string().trim().max(254).regex(EMAIL),
   company: z.string().trim().max(160).optional(),
@@ -43,9 +43,10 @@ export async function submitContact(input: ContactInput, visitor: Visitor, db: S
 
   // Fragen zu den Orten haben in der Tabelle kein eigenes Thema: Sie laufen als „general“ mit einem Kennzeichen vorn in der Nachricht,
   // damit sie in ops.posteingang ohne neue Migration erkennbar sind.
-  const service = input.topic === 'general' || input.topic === 'places' ? null : input.topic
+  // Anfragen nach Whitepaper und Deck haben in der Tabelle das Thema „investors“ (seit der Migration vom 27.10. erlaubt).
+  const service = input.topic === 'general' || input.topic === 'places' || input.topic === 'investors' ? null : input.topic
   const { error } = await db.from('contact_requests').insert({
-    topic: service ? 'services' : 'general',
+    topic: input.topic === 'investors' ? 'investors' : service ? 'services' : 'general',
     service,
     name: input.name,
     email: input.email,

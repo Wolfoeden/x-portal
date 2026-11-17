@@ -68,9 +68,41 @@ def pruefe_text(name, s):
             out.append(f'{name}: „{m.group(0)}“ ({grund}) … {t[max(0, m.start() - 60):m.end() + 40].strip()} …')
     return out
 
+# Website (Wunsch vom 17.11.2026: Investoren und Orte nach dem Plan). Geprüft werden nur die Texte in Anführungszeichen,
+# nicht Kommentare und Schlüssel. Namen sind auf der Website erlaubt (Zitat auf der Seite Orte, Team).
+WEBSITE = {'Website de': PLAN.parent / 'lib' / 'i18n' / 'de.ts', 'Website en': PLAN.parent / 'lib' / 'i18n' / 'en.ts'}
+ALT_WEB = {
+    r'\b[Kk]auf(en|s|t|e)?\b|\bKäufer|\b[Vv]erkauf(t|en)?\b(?! wird nichts)(?!smodell ist abgewählt)': 'nur Miete, kein Verkauf (D45, D48; Kommentar 17.11.)',
+    r'Tiny House|\bObjekte?\b|\bModule?\b|Wohnmodul': 'Begriff ist Wohneinheit (Kommentar 17.11.)',
+    r'Pre-Seed|Käuferzahlung': 'Kapital nach D46, D47',
+    r'zehn Nodes|01 von 10|01 → 10|Ziel zehn': '„zehn Nodes“ gestrichen (Abgleich W10)',
+    r'Grenze zu Ungarn': 'Ort: Karpaten, Westukraine (Antwort 17.11.)',
+    r'Restaurant|\bBar\b': 'Gastronomie später (D34)',
+    r'Batterie': 'Strom nach D59',
+    r'1\.010|1\.075|1,010|1,075': 'Höhe 1.016–1.077 m (Geologiebericht)',
+    r'Gemeinschaftshaus': 'Kommunalgebäude (D64)',
+    r'\b[Bb]uy(ing|er)?\b|\b[Pp]urchase|[Tt]iny house|[Pp]re-seed|ten nodes|Hungarian border|border with Hungary|\b[Rr]estaurant|\b[Ff]or sale\b(?<!nothing for sale)|living modules?|\bmodules?\b': 'englisch: nur Miete, Begriffe nach Plan',
+}
+# Ausnahmen: verneinte Aussagen, die genau das Richtige sagen.
+OK_WEB = [r'Verkauft wird nichts', r'verkaufen keine', r'kein Verkauf', r'Kann ich auch kaufen\?', r'Nothing is sold', r'nothing is sold', r'do not sell', r'Can I also buy\?', r'nothing for sale', r'Lösungen mehrfach verkaufen', r'Sell or run solutions']
+
+def pruefe_website(name, path):
+    s = path.read_text()
+    s = re.sub(r'^\s*//.*$', ' ', s, flags=re.M)
+    texte = ' | '.join(m.group(1) for m in re.finditer(r"'((?:[^'\\]|\\.)*)'", s))
+    for x in OK_WEB:
+        texte = re.sub(x, ' ', texte)
+    out = []
+    for w, grund in ALT_WEB.items():
+        for m in re.finditer(w, texte):
+            out.append(f'{name}: „{m.group(0)}“ ({grund}) … {texte[max(0, m.start() - 60):m.end() + 40].strip()} …')
+    return out
+
 def main(args):
     ziele = {Path(a).name: Path(a) for a in args} if args else SEITEN
     fehler = [f for n, p in ziele.items() for f in pruefe(n, p)]
+    if not args:
+        fehler += [f for n, p in WEBSITE.items() if p.exists() for f in pruefe_website(n, p)]
     for f in fehler:
         print(f)
     print(f'{len(fehler)} Stellen mit altem Stand' if fehler else 'keine Stellen mit altem Stand')

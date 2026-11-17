@@ -8,6 +8,7 @@ import { PlacesHero } from '@/components/places/places-hero'
 import { ChapterEveryday, ChapterOffers, ChapterPlace, ChapterPlacesFaq, PlaceFacts } from '@/components/places/places-chapters'
 import { WaitlistCard } from '@/components/places/waitlist-card'
 import { WaitlistProvider } from '@/components/places/waitlist-state'
+import { Transparency } from '@/components/site/transparency'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, pageHref, type Locale } from '@/lib/i18n/routes'
 
@@ -53,7 +54,7 @@ function ChapterWaitlist({ locale }: { locale: Locale }) {
   )
 }
 
-/** Seite Orte: Wohnen, arbeiten, zusammenkommen. Die Warteliste ist das Ziel aller Knöpfe. */
+/** Seite Orte: Wohnen, arbeiten, zusammenkommen. Die Whitelist (im Code „waitlist“) ist das Ziel aller Knöpfe. */
 export function PlacesPage({ locale }: { locale: Locale }) {
   return (
     <>
@@ -67,6 +68,7 @@ export function PlacesPage({ locale }: { locale: Locale }) {
           <ChapterEveryday locale={locale} />
           <ChapterWaitlist locale={locale} />
           <ChapterPlacesFaq locale={locale} />
+          <Transparency locale={locale} page="places" />
         </main>
       </WaitlistProvider>
       <SiteFooter locale={locale} />

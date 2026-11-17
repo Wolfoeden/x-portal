@@ -1,3 +1,5 @@
+import type { ImageKind } from '@/lib/images'
+
 /** Kleines i auf den Bildern: zeigt beim Überfahren oder Antippen, dass es Drohnenfotos sind und die Gebäude mit KI eingesetzt wurden. */
 export function AiBadge({ text, label, className = 'left-3.5 top-3.5' }: { text: string; label: string; className?: string }) {
   return (
@@ -14,4 +16,13 @@ export function AiBadge({ text, label, className = 'left-3.5 top-3.5' }: { text:
       </span>
     </span>
   )
+}
+
+type BadgeWords = { aiImage: string; aiImageLabel: string; renderImage: string; renderImageLabel: string }
+
+/** Kennzeichnung nach der Art des Bildes aus lib/images.ts: Drohnenfoto mit eingesetzten Gebäuden oder reines Schaubild. */
+export function KindBadge({ kind, words, className }: { kind: ImageKind; words: BadgeWords; className?: string }) {
+  return kind === 'render'
+    ? <AiBadge text={words.renderImage} label={words.renderImageLabel} className={className} />
+    : <AiBadge text={words.aiImage} label={words.aiImageLabel} className={className} />
 }

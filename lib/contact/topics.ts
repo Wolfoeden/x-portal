@@ -5,6 +5,10 @@ import { IDS, TOPIC_PARAM, pageHref, type IdKey, type Locale } from '@/lib/i18n/
 export const CONTACT_TOPICS = ['automation', 'training', 'isms', 'places', 'general'] as const
 export type ContactTopic = (typeof CONTACT_TOPICS)[number]
 
+/** Was die Schnittstelle annimmt: die Themen der Kontaktseite plus die Anfrage nach Whitepaper und Deck von der Investorenseite. */
+export const REQUEST_TOPICS = [...CONTACT_TOPICS, 'investors'] as const
+export type RequestTopic = (typeof REQUEST_TOPICS)[number]
+
 const ANCHOR: Record<Exclude<ContactTopic, 'general'>, IdKey> = { automation: 'topicAutomation', training: 'topicTraining', isms: 'topicIsms', places: 'topicPlaces' }
 
 export function contactHref(topic: ContactTopic, locale: Locale) {

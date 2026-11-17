@@ -11,6 +11,8 @@ export const PAGES = {
   contact: { de: '/kontakt', en: '/en/contact' },
   signIn: { de: '/anmelden', en: '/en/sign-in' },
   account: { de: '/konto', en: '/en/account' },
+  imprint: { de: '/impressum', en: '/en/imprint' },
+  privacy: { de: '/datenschutz', en: '/en/privacy' },
 } as const
 export type PageKey = keyof typeof PAGES
 
@@ -44,7 +46,7 @@ export const IDS = {
     whyNow: 'warum-jetzt',
     revenue: 'erloese',
     hub01: 'node001',
-    plots: 'kaufen-oder-mieten',
+    plots: 'mieten',
     about: 'wer-wir-sind',
     status: 'stand',
     capital: 'kapital',
@@ -87,7 +89,7 @@ export const IDS = {
     whyNow: 'why-now',
     revenue: 'revenue',
     hub01: 'node001',
-    plots: 'buy-or-rent',
+    plots: 'rent',
     about: 'about',
     status: 'status',
     capital: 'capital',

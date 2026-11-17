@@ -74,10 +74,15 @@ export function ChapterLoop() {
                   transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1], delay: 0.25 + index * 0.18 }}
                 />
               ))}
-              {/* Ein Punkt läuft langsam den Kreis entlang: der Kreislauf ist nie fertig. */}
-              <motion.g animate={reduceMotion ? undefined : { rotate: 360 }} transition={{ repeat: Infinity, duration: 24, ease: 'linear' }} style={{ transformOrigin: '500px 500px' }}>
-                <circle cx={C} cy={C - RING} r="5" fill="#17643b" />
-              </motion.g>
+              {/* Ein Punkt läuft langsam den Kreis entlang: der Kreislauf ist nie fertig. Start und Ruhe (ohne Animation) auf dem
+                  Bogen zwischen Schritt 1 und 2, nicht unter dem Text von Schritt 1. */}
+              {reduceMotion ? (
+                <circle cx={polar(-60, RING)[0]} cy={polar(-60, RING)[1]} r="5" fill="#17643b" />
+              ) : (
+                <motion.g animate={{ rotate: [30, 390] }} transition={{ repeat: Infinity, duration: 24, ease: 'linear' }} style={{ transformOrigin: '500px 500px' }}>
+                  <circle cx={C} cy={C - RING} r="5" fill="#17643b" />
+                </motion.g>
+              )}
             </svg>
 
             {/* Mitte: XPORTAL in der CI, darunter die drei Bausteine. */}

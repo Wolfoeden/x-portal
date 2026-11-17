@@ -1,14 +1,14 @@
 'use client'
 
 import { useEffect, useRef, useState, type ComponentType } from 'react'
-import { ArrowRight, Check, Clock, House, Laptop, Mail, Tag, User, type LucideProps } from 'lucide-react'
+import { ArrowRight, Check, Clock, House, Laptop, Mail, User, type LucideProps } from 'lucide-react'
 import { useLocale } from '@/components/i18n/locale-provider'
 import { useWaitlist, type WaitlistStart, type WaitlistUse } from '@/components/places/waitlist-state'
 import { fill } from '@/lib/i18n/format'
 import { pageHref } from '@/lib/i18n/routes'
 import { WAITLIST_RESULT_PARAM, type WaitlistResultValue } from '@/lib/waitlist/result'
 
-const ICONS: Record<WaitlistUse, ComponentType<LucideProps>> = { workation: Laptop, mieten: House, kaufen: Tag }
+const ICONS: Record<WaitlistUse, ComponentType<LucideProps>> = { workation: Laptop, mieten: House }
 
 function Step({ number, children }: { number: number; children: string }) {
   return (
@@ -251,7 +251,7 @@ export function WaitlistCard() {
             />
             <span>
               {copy.consent}{' '}
-              <a href={pageHref('home', locale, 'privacy')} className="text-brand underline underline-offset-2">
+              <a href={pageHref('privacy', locale)} className="text-brand underline underline-offset-2">
                 {copy.privacy}
               </a>
             </span>

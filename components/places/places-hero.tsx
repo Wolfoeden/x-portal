@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import { Container } from '@/components/ui/primitives'
 import { ReliefLayer, reliefPoint } from '@/components/map/relief-map'
-import { AiBadge } from '@/components/places/ai-badge'
+import { KindBadge } from '@/components/places/ai-badge'
+import { IMAGES } from '@/lib/images'
 import { HeroEmailForm, HeroPill } from '@/components/places/hero-form'
 import { StickyEmail } from '@/components/places/sticky-email'
 import { getDictionary } from '@/lib/i18n/dictionary'
@@ -30,7 +31,7 @@ export function PlacesHero({ locale }: { locale: Locale }) {
       <div className="relative flex flex-col gap-10 pb-16 md:pb-24">
         <div className="relative h-[min(calc(100svh-4rem),860px)] min-h-[560px] overflow-hidden">
           <Image
-            src="/orte/hub-01-hang.webp"
+            src={IMAGES.hub01.src}
             alt={copy.imageAlt}
             fill
             priority
@@ -39,7 +40,7 @@ export function PlacesHero({ locale }: { locale: Locale }) {
           />
           <div aria-hidden className="absolute inset-0 bg-[linear-gradient(180deg,rgb(10_30_20/0.15)_0%,rgb(10_30_20/0)_30%,rgb(10_30_20/0.55)_62%,rgb(10_30_20/0.9)_100%)] md:bg-[linear-gradient(90deg,rgb(10_30_20/0.88)_0%,rgb(10_30_20/0.55)_45%,rgb(10_30_20/0)_75%)]" />
           <Container className="relative flex h-full flex-col justify-end pb-[calc(1.5rem+140px)] sm:pb-[calc(3rem+76px)] md:pb-[calc(4.5rem+76px)]">
-            <AiBadge text={dict.aiImage} label={dict.aiImageLabel} className="left-5 top-5 md:left-8 md:top-8" />
+            <KindBadge kind={IMAGES.hub01.kind} words={dict} className="left-5 top-5 md:left-8 md:top-8" />
             <div className="flex max-w-[780px] flex-col items-start gap-4 md:gap-5">
               <p className="text-[clamp(1rem,1.6vw,1.375rem)] tracking-[0.01em] text-[#bfd8c8]">{copy.eyebrow}</p>
               <h1 id="orte-title" className="text-[clamp(2.5rem,5vw,4.25rem)] font-medium leading-[1.02] tracking-[-0.035em] text-balance">

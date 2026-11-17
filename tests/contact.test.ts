@@ -56,6 +56,14 @@ describe('submitContact', () => {
     expect(rows[0]).toMatchObject({ topic: 'general', service: null, message: '[Orte und Node001] Gibt es dort Kinderbetreuung?' })
   })
 
+  it('speichert Anfragen nach Whitepaper und Deck unter dem Thema „investors“', async () => {
+    const { db, rows } = fakeDb()
+    const sent: { subject: string }[] = []
+    await submitContact({ ...input, topic: 'investors', message: 'Anfrage: Whitepaper und Deck. Sie sind: Fonds.' }, visitor, db, async (message) => (sent.push(message), { delivered: true }))
+    expect(rows[0]).toMatchObject({ topic: 'investors', service: null, message: 'Anfrage: Whitepaper und Deck. Sie sind: Fonds.' })
+    expect(sent.at(-1)?.subject).toBe('Ihre Anfrage bei XPORTAL')
+  })
+
   it('hält das Tageslimit ein und speichert dann nichts', async () => {
     const { db, rows } = fakeDb({ allowed: false })
     const sent: unknown[] = []

@@ -67,9 +67,9 @@ describe('Warteliste Node001: eintragen', () => {
 
   it('übersetzt Nutzung und Zeitpunkt in die Werte der Datenbank', async () => {
     const { db, rows } = fakeDb()
-    await submitWaitlist({ ...input, use: 'kaufen', start: 'spaeter', firstName: undefined, offer: undefined }, visitor, 'https://x-portal.eu', db, send, TOKEN)
+    await submitWaitlist({ ...input, use: 'workation', start: 'spaeter', firstName: undefined, offer: undefined }, visitor, 'https://x-portal.eu', db, send, TOKEN)
     await submitWaitlist({ ...input, use: 'mieten', firstName: 'L' }, visitor, 'https://x-portal.eu', db, send, TOKEN)
-    expect(rows[0]).toMatchObject({ interest: 'buy', timing: 'later', first_name: null, campaign: null })
+    expect(rows[0]).toMatchObject({ interest: 'workation', timing: 'later', first_name: null, campaign: null })
     expect(rows[1]).toMatchObject({ interest: 'rent', timing: 'now', first_name: null })
   })
 
@@ -101,7 +101,7 @@ describe('Warteliste Node001: eintragen', () => {
 })
 
 describe('Warteliste Node001: bestätigen', () => {
-  const entry = { first_name: 'Lena', email: 'lena@example.com', interest: 'buy', timing: 'later', campaign: 'kaufen', locale: 'en' }
+  const entry = { first_name: 'Lena', email: 'lena@example.com', interest: 'rent', timing: 'later', campaign: 'mieten', locale: 'en' }
 
   it('bestätigt nur offene, gültige Links, löscht den Hash und meldet es dem Postfach', async () => {
     vi.stubEnv('CONTACT_NOTIFICATION_EMAIL', 'info@x-portal.eu')
@@ -114,8 +114,8 @@ describe('Warteliste Node001: bestätigen', () => {
     expect(filters).toContainEqual(['eq', 'status', 'pending'])
     expect(filters.some(([op, column]) => op === 'gt' && column === 'confirm_expires_at')).toBe(true)
     expect(sent).toHaveLength(1)
-    expect(sent[0]).toMatchObject({ to: 'info@x-portal.eu', replyTo: 'lena@example.com', subject: 'Warteliste Node001 bestätigt: Kaufen · Nur Interesse, für später' })
-    expect(sent[0].text).toContain('Kampagne: kaufen')
+    expect(sent[0]).toMatchObject({ to: 'info@x-portal.eu', replyTo: 'lena@example.com', subject: 'Whitelist Node001 bestätigt: Mieten · Nur Interesse, für später' })
+    expect(sent[0].text).toContain('Kampagne: mieten')
   })
 
   it('lehnt falsche, abgelaufene oder benutzte Links ab', async () => {
@@ -129,10 +129,10 @@ describe('Warteliste Node001: bestätigen', () => {
 describe('Warteliste Node001: Mails', () => {
   it('wiederholen keine Eingaben an die Person und sprechen sie in Du-Form an', () => {
     const mail = waitlistConfirmLink({ locale: 'de', link: 'https://x-portal.eu/api/waitlist/confirm?token=x' })
-    expect(mail.subject).toBe('Bitte bestätigen: Warteliste Node001')
+    expect(mail.subject).toBe('Bitte bestätigen: Whitelist Node001')
     expect(mail.text).toContain('bitte bestätige')
     expect(mail.text).not.toContain('Lena')
-    expect(waitlistConfirmLink({ locale: 'en', link: 'l' }).subject).toBe('Please confirm: waitlist for Node001')
+    expect(waitlistConfirmLink({ locale: 'en', link: 'l' }).subject).toBe('Please confirm: whitelist for Node001')
   })
 
   it('nennen dem Betreiber Nutzung und Zeitpunkt, auch ohne Vorname und Kampagne', () => {

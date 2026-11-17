@@ -1357,7 +1357,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Anmeldung auf x-portal.eu; gezählt werden Einträge, gewünschter Einzug und Bereitschaft zur Miete. Die Whitelist ist noch nicht vorhanden (Kommentar vom 12.11.2026 im Whitepaper)."
+         "wert": "Anmeldung auf x-portal.eu (Seite Orte, Bestätigung per E-Mail); gezählt werden Einträge, gewünschter Einzug und Bereitschaft zur Miete. Die Whitelist ist noch nicht online (Kommentar vom 12.11.2026 im Whitepaper); Formular und Tabelle sind gebaut und gehen mit der Website online (AP-A13)."
         }
        ],
        "ap": {
@@ -1370,7 +1370,7 @@
          "GB10"
         ],
         "rolle": "führt: Projektleitung · prüft: Jurist (Datenschutz, keine verbindliche Zusage)",
-        "ergebnis": "Anmeldung auf x-portal.eu; gezählt werden Einträge, gewünschter Einzug und Bereitschaft zur Miete. Die Whitelist ist noch nicht vorhanden (Kommentar vom 12.11.2026 im Whitepaper)."
+        "ergebnis": "Anmeldung auf x-portal.eu (Seite Orte, Bestätigung per E-Mail); gezählt werden Einträge, gewünschter Einzug und Bereitschaft zur Miete. Die Whitelist ist noch nicht online (Kommentar vom 12.11.2026 im Whitepaper); Formular und Tabelle sind gebaut und gehen mit der Website online (AP-A13)."
        },
        "vorlagen": [
         {
@@ -1600,6 +1600,50 @@
         ],
         "rolle": "beauftragt: Geschäftsführung · prüft: Anwälte, Steuerberater",
         "ergebnis": "Schriftliche Einordnung: Erlaubnispflicht, Bilanzierung und Steuer der Staking-Erträge in Deutschland und der Ukraine; welche Gesellschaft sie hält"
+       }
+      },
+      {
+       "kind": "step",
+       "id": "AP-A13",
+       "title": "Website online schalten: Investoren, Orte, Impressum, Datenschutz",
+       "state": "run",
+       "text": "Wunsch vom 17.11.2026: Wording nach dem Plan, neue Bilder, transparent angeben, wie was wo entstanden ist, Impressum. Antworten: Impressum mit Platzhaltern, Ort „Karpaten, Westukraine“, Whitepaper und Deck auf Anfrage, Vorschau als neuer Pull Request.",
+       "facts": [
+        {
+         "feld": "Wann",
+         "wert": "jetzt; Vorschau steht seit 17.11.2026, online nach den Freigaben"
+        },
+        {
+         "feld": "Voraussetzung",
+         "wert": "Impressumsdaten der Gesellschaft; Prüfung von Impressum und Datenschutz durch den Juristen; OK zum Einspielen der Migration für die Whitelist"
+        },
+        {
+         "feld": "Blockiert",
+         "wert": "Whitelist (AP-A8), Anfragen nach Whitepaper und Deck (AP-B1)"
+        },
+        {
+         "feld": "Grundbestimmungen",
+         "wert": "GB9, GB10"
+        },
+        {
+         "feld": "Rolle",
+         "wert": "baut: planende KI · liefert Daten und gibt frei: Geschäftsführung · prüft: Jurist"
+        },
+        {
+         "feld": "Ergebnis",
+         "wert": "Seiten /investoren und /orte nach diesem Plan (nur Miete, Wohneinheiten, Kreislauf, Technik ohne Beträge, Bildnachweis); Impressum und Datenschutz ohne Platzhalter; Migration der Whitelist eingespielt; „pnpm check:golive“ meldet nichts mehr; Merge auf main"
+        }
+       ],
+       "ap": {
+        "wann": "jetzt; Vorschau steht seit 17.11.2026, online nach den Freigaben",
+        "voraus": "Impressumsdaten der Gesellschaft; Prüfung von Impressum und Datenschutz durch den Juristen; OK zum Einspielen der Migration für die Whitelist",
+        "blockiert": "Whitelist (AP-A8), Anfragen nach Whitepaper und Deck (AP-B1)",
+        "gb": [
+         "GB9",
+         "GB10"
+        ],
+        "rolle": "baut: planende KI · liefert Daten und gibt frei: Geschäftsführung · prüft: Jurist",
+        "ergebnis": "Seiten /investoren und /orte nach diesem Plan (nur Miete, Wohneinheiten, Kreislauf, Technik ohne Beträge, Bildnachweis); Impressum und Datenschutz ohne Platzhalter; Migration der Whitelist eingespielt; „pnpm check:golive“ meldet nichts mehr; Merge auf main"
        }
       },
       {

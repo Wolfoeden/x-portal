@@ -3,15 +3,17 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
-import { AiBadge } from '@/components/places/ai-badge'
+import { KindBadge } from '@/components/places/ai-badge'
+import { IMAGES } from '@/lib/images'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, pagePath, type Locale } from '@/lib/i18n/routes'
 
-// Bilder vom Grundstück: Drohnenfoto mit eingesetzten Häusern, dazu zwei Schaubilder. Pläne vom Architekten folgen.
+// Drohnenfoto mit eingesetzten Wohneinheiten, dazu die zwei Schaubilder aus dem Whitepaper (Kommunalgebäude, Zielbild).
+// Die Kennzeichnung kommt aus lib/images.ts. Pläne vom Architekten folgen.
 const frames = [
-  { image: '/orte/hub-01-hang.webp', position: 'object-center', drone: true, className: 'aspect-[4/3] md:col-span-2' },
-  { image: '/orte/gemeinschaftshaus-hang.webp', position: 'object-[50%_45%]', drone: false, className: 'aspect-[4/3] md:aspect-auto' },
-  { image: '/orte/holzbloecke.webp', position: 'object-[50%_55%]', drone: false, className: 'aspect-[4/3] md:col-span-3 md:aspect-[3/1]' },
+  { image: IMAGES.hub01, position: 'object-center', className: 'aspect-[4/3] md:col-span-2' },
+  { image: IMAGES.slope, position: 'object-[80%_50%]', className: 'aspect-[4/3] md:aspect-auto' },
+  { image: IMAGES.target, position: 'object-[50%_45%]', className: 'aspect-[4/3] md:col-span-3 md:aspect-[3/1]' },
 ]
 
 export function ChapterHub({ locale }: { locale: Locale }) {
@@ -30,12 +32,15 @@ export function ChapterHub({ locale }: { locale: Locale }) {
           </h2>
           <p className="max-w-[420px] text-[18px] leading-relaxed text-[#cfe2d6]">{copy.text}</p>
           <div className="mt-6 flex flex-col gap-3">
-            <div className="flex items-center gap-1.5" aria-label={copy.squaresLabel}>
-              {Array.from({ length: 10 }, (_, index) => (
-                <span key={index} className={`size-4 ${index === 0 ? 'bg-white' : 'border border-[#bfd8c8]/50'}`} />
+            <p className="text-[13px] text-[#bfd8c8]">{copy.phasesLabel}</p>
+            <ol className="flex flex-col">
+              {copy.phases.map((phase) => (
+                <li key={phase.name} className="grid grid-cols-[76px_minmax(0,1fr)] gap-3 border-t border-white/15 py-3 text-[15px] leading-snug">
+                  <span className="font-medium text-white">{phase.name}</span>
+                  <span className="text-[#cfe2d6]">{phase.text}</span>
+                </li>
               ))}
-            </div>
-            <p className="text-[14px] text-[#bfd8c8]">{copy.count}</p>
+            </ol>
           </div>
           <Link
             href={pagePath('places', locale)}
@@ -50,12 +55,8 @@ export function ChapterHub({ locale }: { locale: Locale }) {
         <div className="grid grid-cols-[minmax(0,1fr)] gap-3 md:grid-cols-3">
           {frames.map((frame, index) => (
             <figure key={copy.frames[index]} className={`relative overflow-hidden rounded-[22px] bg-white/[0.04] ${frame.className}`}>
-              <Image src={frame.image} alt="" fill sizes="(min-width: 1024px) 560px, 100vw" className={`object-cover ${frame.position}`} />
-              <AiBadge
-                text={frame.drone ? images.aiImage : images.renderImage}
-                label={frame.drone ? images.aiImageLabel : images.renderImageLabel}
-                className="left-3 top-3"
-              />
+              <Image src={frame.image.src} alt="" fill sizes="(min-width: 1024px) 560px, 100vw" className={`object-cover ${frame.position}`} />
+              <KindBadge kind={frame.image.kind} words={images} className="left-3 top-3" />
               <figcaption className="absolute bottom-3 left-3 rounded-full bg-[rgb(14_20_17/0.7)] px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-md">{copy.frames[index]}</figcaption>
             </figure>
           ))}

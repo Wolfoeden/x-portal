@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { AiBadge } from '@/components/places/ai-badge'
+import { KindBadge } from '@/components/places/ai-badge'
+import { IMAGES } from '@/lib/images'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { HeroEmailForm, OfferAction } from '@/components/places/hero-form'
@@ -29,8 +30,8 @@ export function ChapterPlace({ locale }: { locale: Locale }) {
           <p className="max-w-[460px] text-[17px] leading-relaxed text-muted md:text-[18px]">{copy.text}</p>
         </div>
         <figure className="group relative aspect-[1122/1402] w-full overflow-hidden rounded-[28px] shadow-[0_1px_2px_rgb(14_20_17/0.04),0_30px_70px_-30px_rgb(14_20_17/0.35)] lg:h-full lg:max-h-[820px] lg:w-auto lg:self-center">
-          <Image src="/orte/gemeinschaftshaus-hang.webp" alt={copy.imageAlt} fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.03]" />
-          <AiBadge text={dict.aiImage} label={dict.aiImageLabel} />
+          <Image src={IMAGES.community.src} alt={copy.imageAlt} fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.03]" />
+          <KindBadge kind={IMAGES.community.kind} words={dict} />
         </figure>
       </Container>
     </section>
@@ -55,10 +56,11 @@ export function PlaceFacts({ locale }: { locale: Locale }) {
   )
 }
 
+// Bilder seit 17.11.2026: Arbeiten und Gemeinschaft zeigen die Schaubilder aus dem Whitepaper (Kommunalgebäude, Zielbild).
 const OFFERS = [
-  { use: 'mieten' as const, tone: 'light' as const, image: '/orte/modul-wald.webp' },
-  { use: 'workation' as const, tone: 'soft' as const, image: '/orte/coworking-hang.webp' },
-  { use: 'mieten' as const, tone: 'deep' as const, image: '/orte/haus-gross-hang.webp' },
+  { use: 'mieten' as const, tone: 'light' as const, image: IMAGES.unit, position: 'object-center' },
+  { use: 'workation' as const, tone: 'soft' as const, image: IMAGES.slope, position: 'object-[78%_50%]' },
+  { use: 'mieten' as const, tone: 'deep' as const, image: IMAGES.target, position: 'object-[48%_50%]' },
 ]
 
 const offerTones = {
@@ -89,8 +91,8 @@ export function ChapterOffers({ locale }: { locale: Locale }) {
             return (
               <li key={item.title} className={`flex flex-col overflow-hidden rounded-[28px] ${tone.card} ${card}`}>
                 <div className="group/media relative aspect-[1122/1402] overflow-hidden">
-                  <Image src={offer.image} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, 100vw" className="object-cover transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover/media:scale-[1.04]" />
-                  <AiBadge text={dict.aiImage} label={dict.aiImageLabel} />
+                  <Image src={offer.image.src} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, 100vw" className={`object-cover ${offer.position} transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover/media:scale-[1.04]`} />
+                  <KindBadge kind={offer.image.kind} words={dict} />
                 </div>
                 <div className="flex flex-1 flex-col gap-3 p-7">
                   <span className={`self-start rounded-full px-2.5 py-1 text-[13px] font-medium ${tone.tag}`}>{item.tag}</span>
@@ -109,12 +111,8 @@ export function ChapterOffers({ locale }: { locale: Locale }) {
   )
 }
 
-// Bilder zu „Alltag“; render: reines KI-Schaubild (kein Drohnenfoto), bekommt den anderen Hinweis.
-const EVERYDAY = [
-  { image: '/orte/holzbloecke.webp', render: true },
-  { image: '/orte/gemeinschaft-weg.webp', render: false },
-  { image: '/orte/terrasse-abend.webp', render: false },
-]
+// Bilder zu „Alltag“; die Kennzeichnung kommt aus lib/images.ts.
+const EVERYDAY = [IMAGES.blocks, IMAGES.path, IMAGES.terrace]
 
 export function ChapterEveryday({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale).places
@@ -139,8 +137,8 @@ export function ChapterEveryday({ locale }: { locale: Locale }) {
           {copy.items.map((item, index) => (
             <figure key={item.title} className={`overflow-hidden rounded-[28px] border border-line bg-white ${card}`}>
               <div className="group/media relative aspect-[1122/1402] overflow-hidden">
-                <Image src={EVERYDAY[index].image} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, 100vw" className="object-cover transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover/media:scale-[1.04]" />
-                {EVERYDAY[index].render ? <AiBadge text={dict.renderImage} label={dict.renderImageLabel} /> : <AiBadge text={dict.aiImage} label={dict.aiImageLabel} />}
+                <Image src={EVERYDAY[index].src} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, 100vw" className="object-cover transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover/media:scale-[1.04]" />
+                <KindBadge kind={EVERYDAY[index].kind} words={dict} />
               </div>
               <figcaption className="flex flex-col gap-1 px-6 pb-6 pt-5">
                 <strong className="text-[20px] font-medium tracking-[-0.02em] text-ink">{item.title}</strong>

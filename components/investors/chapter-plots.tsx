@@ -5,9 +5,9 @@ import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, pagePath, type Locale } from '@/lib/i18n/routes'
 
-// Kaufen oder mieten auf Node001: Ablauf in vier Schritten. Kein Preis und keine Rendite, bis die Prüfung abgeschlossen ist.
-// Der Knopf führt zur Warteliste auf der Seite Orte und wählt dort „Kaufen“ vor (Kampagnen-Link, siehe waitlist-state.tsx).
-const BUY_OFFER = { de: 'angebot=kaufen', en: 'offer=buy' } as const
+// Mieten auf Node001, in Abschnitten gebaut: Ablauf in vier Schritten. Verkauft wird nichts (Plan vom 13.11.2026, D45 und D48).
+// Der Knopf führt zur Whitelist auf der Seite Orte und wählt dort „Mieten“ vor (Kampagnen-Link, siehe waitlist-state.tsx).
+const RENT_OFFER = { de: 'angebot=mieten', en: 'offer=rent' } as const
 
 export function ChapterPlots({ locale }: { locale: Locale }) {
   const copy = getDictionary(locale).investors.plots
@@ -50,7 +50,7 @@ export function ChapterPlots({ locale }: { locale: Locale }) {
           </div>
           <div className="flex flex-col gap-4">
             <Link
-              href={`${pagePath('places', locale)}?${BUY_OFFER[locale]}#${ids.waitlist}`}
+              href={`${pagePath('places', locale)}?${RENT_OFFER[locale]}#${ids.waitlist}`}
               className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-brand text-[15px] font-medium text-white transition-colors hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:w-fit sm:px-7"
             >
               {copy.cta}

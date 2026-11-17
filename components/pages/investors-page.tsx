@@ -12,6 +12,7 @@ import { ChapterCapital } from '@/components/investors/chapter-capital'
 import { ChapterRoadmap } from '@/components/investors/chapter-roadmap'
 import { ChapterTeam } from '@/components/story/chapter-team'
 import { DeckForm } from '@/components/investors/deck-form'
+import { Transparency } from '@/components/site/transparency'
 import type { Locale } from '@/lib/i18n/routes'
 
 export function InvestorsPage({ locale }: { locale: Locale }) {
@@ -27,6 +28,7 @@ export function InvestorsPage({ locale }: { locale: Locale }) {
         <ChapterStatus locale={locale} />
         <ChapterHub locale={locale} />
         <ChapterPlots locale={locale} />
+        <Transparency locale={locale} page="investors" />
         <ChapterRoadmap />
         <ChapterCapital locale={locale} />
         <ChapterTeam locale={locale} number="10" />
