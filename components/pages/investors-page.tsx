@@ -10,6 +10,8 @@ import { ChapterRoadmap } from '@/components/investors/chapter-roadmap'
 import { ChapterTeam } from '@/components/story/chapter-team'
 import { DeckForm } from '@/components/investors/deck-form'
 import { Transparency } from '@/components/site/transparency'
+import { SectionNav } from '@/components/site/section-nav'
+import { getDictionary } from '@/lib/i18n/dictionary'
 import type { Locale } from '@/lib/i18n/routes'
 import { JsonLd, pageLd } from '@/lib/seo/json-ld'
 
@@ -22,6 +24,7 @@ export function InvestorsPage({ locale }: { locale: Locale }) {
       <SiteHeader />
       <main>
         <InvestorOpener locale={locale} />
+        <SectionNav locale={locale} {...getDictionary(locale).investors.sectionNav} />
         <ChapterWhy locale={locale} />
         <ChapterLoop />
         <ChapterStatus locale={locale} />

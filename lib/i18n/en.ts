@@ -70,33 +70,42 @@ export const en: Dictionary = {
     navLabel: 'Main navigation',
     menus: [
       {
-        label: 'Platform',
+        label: 'For companies',
         entries: [
-          { label: 'Talent', page: 'home', anchor: 'reasons', text: 'Find AI freelancers, with reasons for every match', icon: 'talent' },
-          { label: 'Projects', page: 'home', anchor: 'platform', text: 'Team, sign-off and payment in one place', icon: 'projects' },
-          { label: 'Places', page: 'places', text: 'Live and work on Node001', icon: 'hubs' },
-        ],
-      },
-      {
-        label: 'Services',
-        entries: [
+          { label: 'Start an AI project', page: 'home', anchor: 'project', text: 'One sentence is enough, we build the team', icon: 'projects' },
           { label: 'AI automation', page: 'contact', anchor: 'topicAutomation', text: 'One workflow automated, price on request', icon: 'automation' },
           { label: 'AI training', page: 'contact', anchor: 'topicTraining', text: 'Required by the EU AI Act, Art. 4', icon: 'training' },
           { label: 'ISMS', page: 'contact', anchor: 'topicIsms', text: 'Information security to ISO 27001', icon: 'isms' },
-          { label: 'For freelancers', page: 'freelancer', text: 'Create a profile, get projects, no commission', icon: 'freelancer' },
         ],
       },
     ],
     links: [
+      { label: 'For freelancers', page: 'freelancer' },
       { label: 'Places', page: 'places' },
-      { label: 'Team', page: 'home', anchor: 'team' },
+      { label: 'Investors', page: 'investors' },
     ],
+    audienceTitle: 'Who are you?',
+    audiences: [
+      { label: 'Companies', page: 'home', text: 'AI project in one sentence, team through to acceptance', icon: 'company' },
+      { label: 'Freelancers', page: 'freelancer', text: 'Profile in three minutes, no commission', icon: 'freelancer' },
+      { label: 'Places', page: 'places', text: 'Live and work in the Carpathians', icon: 'hubs' },
+      { label: 'Investors', page: 'investors', text: 'Whitepaper and deck on request', icon: 'investors' },
+    ],
+    servicesTitle: 'Services',
+    more: [
+      { label: 'Team', page: 'home', anchor: 'team' },
+      { label: 'Contact', page: 'contact' },
+    ],
+    cta: {
+      default: { label: 'Start a project', short: 'Start', page: 'home', anchor: 'project' },
+      freelancer: { label: 'Create profile', short: 'Profile', page: 'freelancer', anchor: 'profile' },
+      places: { label: 'Register interest', short: 'Register', page: 'places', anchor: 'waitlist' },
+      investors: { label: 'Whitepaper & deck', short: 'Deck', page: 'investors', anchor: 'deck' },
+    },
     otherLanguage: 'Deutsch',
     signIn: 'Sign in',
     account: 'Account',
     start: 'Start a project',
-    waitlist: 'Register interest',
-    waitlistShort: 'Register',
     openMenu: 'Open menu',
     closeMenu: 'Close menu',
   },
@@ -120,27 +129,34 @@ export const en: Dictionary = {
     tagline: 'XPORTAL builds teams of AI freelancers, leads projects to acceptance and is building Node001, a place to live and work.',
     columns: [
       {
-        title: 'Platform',
+        title: 'For companies',
         links: [
-          { label: 'Talent', page: 'home', anchor: 'reasons' },
-          { label: 'Projects', page: 'home', anchor: 'platform' },
-          { label: 'Places', page: 'places' },
-          { label: 'For freelancers', page: 'freelancer' },
-        ],
-      },
-      {
-        title: 'Services',
-        links: [
+          { label: 'Start an AI project', page: 'home', anchor: 'project' },
           { label: 'AI automation', page: 'contact', anchor: 'topicAutomation' },
           { label: 'AI training', page: 'contact', anchor: 'topicTraining' },
           { label: 'ISMS', page: 'contact', anchor: 'topicIsms' },
         ],
       },
       {
+        title: 'For freelancers',
+        links: [
+          { label: 'Create profile', page: 'freelancer', anchor: 'profile' },
+          { label: 'Questions', page: 'freelancer', anchor: 'faq' },
+        ],
+      },
+      {
+        title: 'Places and investors',
+        links: [
+          { label: 'Node001', page: 'places' },
+          { label: 'Whitelist', page: 'places', anchor: 'waitlist' },
+          { label: 'Investors', page: 'investors' },
+          { label: 'Whitepaper & deck', page: 'investors', anchor: 'deck' },
+        ],
+      },
+      {
         title: 'XPORTAL',
         links: [
           { label: 'Team', page: 'home', anchor: 'team' },
-          { label: 'Investors', page: 'investors' },
           { label: 'Contact', page: 'contact' },
         ],
       },
@@ -481,6 +497,7 @@ export const en: Dictionary = {
   },
 
   places: {
+    sectionNav: { label: 'On this page', items: [{ label: 'The place', anchor: 'place' }, { label: 'Offers', anchor: 'offers' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Questions', anchor: 'faq' }] },
     hero: {
       label: 'Node001',
       region: 'Carpathians, western Ukraine',
@@ -993,6 +1010,7 @@ export const en: Dictionary = {
   },
 
   investors: {
+    sectionNav: { label: 'On this page', items: [{ label: 'Why', anchor: 'about' }, { label: 'Status', anchor: 'status' }, { label: 'Node001', anchor: 'hub01' }, { label: 'Revenue', anchor: 'revenue' }, { label: 'Roadmap', anchor: 'roadmap' }] },
     opener: {
       label: 'For investors',
       words: ['Talent.', 'Projects.', 'Places.'],

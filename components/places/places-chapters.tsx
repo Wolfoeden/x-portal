@@ -115,7 +115,7 @@ export function ChapterOffers({ locale }: { locale: Locale }) {
 export function ChapterPlacesFaq({ locale }: { locale: Locale }) {
   const copy = getDictionary(locale).places.faq
   return (
-    <section aria-labelledby="orte-fragen-title">
+    <section id={IDS[locale].faq} aria-labelledby="orte-fragen-title" className="scroll-mt-16">
       <Container className="max-w-[960px] py-14 md:py-28">
         <h2 id="orte-fragen-title" className="mb-8 text-[clamp(2.25rem,4vw,3.5rem)] font-medium leading-none tracking-[-0.04em] text-ink">
           {copy.title}

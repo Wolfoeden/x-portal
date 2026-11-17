@@ -404,3 +404,32 @@ Wunsch von Roman: Das Bild unter „Zielbild“ in der Grundlage ist jetzt die K
 - `pruefe_alle.py`: 0 Treffer.
 - 80 Tests grün, Build grün.
 - Jede Seite hat genau eine H1 und kein seitlicher Überlauf.
+
+## 17.11.2026 (später) · Navigation nach Zielgruppen
+
+**Eingang:** Roman fragt nach einem Vorschlag für die Navigation. Der Plan mit Kopfzeile, Aufruf je Seite, Handy-Menü, Sprungleiste und Fußzeile ist freigegeben.
+
+**Kopfzeile:**
+- Das Menü zeigt „Für Unternehmen ▾“ (KI-Projekt starten, KI-Automatisierung, KI-Schulung, ISMS), „Für Freelancer“, „Orte“ und „Investoren“.
+- Die Menüleiste steht ab 1.024 px statt ab 1.280 px.
+- „Orte“ steht nicht mehr doppelt, „Team“ ist in die Fußzeile gewandert.
+
+**Aufruf je Seite:**
+- Startseite, Kontakt und Rechtliches: „Projekt starten“
+- /freelancer: „Profil anlegen“
+- /orte: „Interesse vormerken“
+- /investoren: „Whitepaper & Deck“
+
+Bisher stand überall „Interesse vormerken“ für /orte.
+
+**Handy-Menü:** Es beginnt mit „Für wen?“ und vier Zielgruppen, darunter Leistungen, Team, Kontakt, Anmelden und Sprache. Es passt auf einen Bildschirm (779 px).
+
+**Sprungleiste:**
+- /investoren: Warum, Stand, Node001, Erlöse, Roadmap
+- /orte: Der Ort, Angebote, Whitelist, Fragen
+
+**Fußzeile:** Für Unternehmen, Für Freelancer, Orte und Investoren, XPORTAL, Rechtliches.
+
+**Prüfung:**
+- 390, 768, 1.024, 1.100, 1.280 und 1.440 px: kein Überlauf, der Knopf je Seite stimmt.
+- Escape schließt Menü und Dropdown; `aria-expanded` und `aria-current` stimmen.

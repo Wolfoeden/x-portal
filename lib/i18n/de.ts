@@ -3,8 +3,9 @@
 import { agentMember, type AgentWords } from '@/lib/agents'
 import type { MixWords, Scenario } from '@/lib/demo/scenarios'
 import type { AvailabilityOption, Draft, Role, WorkModeOption } from '@/lib/freelancer/profile'
-import { typed, type Door, type Faq, type FooterColumn, type MenuEntry, type NavLink, type TeamMember } from '@/lib/i18n/types'
+import { typed, type CtaKey, type Door, type Faq, type FooterColumn, type MenuEntry, type NavLink, type PageCta, type TeamMember } from '@/lib/i18n/types'
 import type { ContactTopic } from '@/lib/contact/topics'
+import type { IdKey } from '@/lib/i18n/routes'
 import type { ModelChoice } from '@/lib/story/choices'
 
 // Namen und Beschreibungen vom Betreiber freigegeben (27.10.).
@@ -68,38 +69,48 @@ export const de = {
     percent: '{n} %',
   },
 
+  // Navigation nach Zielgruppen (17.11.2026): Unternehmen, Freelancer, Orte, Investoren. Rechts oben der Aufruf der jeweiligen Seite (StoryBrand).
   header: {
     homeLabel: 'XPORTAL Startseite',
     navLabel: 'Hauptnavigation',
     menus: [
       {
-        label: 'Plattform',
+        label: 'Für Unternehmen',
         entries: typed<MenuEntry[]>([
-          { label: 'Talent', page: 'home', anchor: 'reasons', text: 'KI-Freelancer finden, mit Begründung je Treffer', icon: 'talent' },
-          { label: 'Projekte', page: 'home', anchor: 'platform', text: 'Team, Abnahme und Zahlung an einem Ort', icon: 'projects' },
-          { label: 'Orte', page: 'places', text: 'Wohnen und arbeiten auf Node001', icon: 'hubs' },
-        ]),
-      },
-      {
-        label: 'Leistungen',
-        entries: typed<MenuEntry[]>([
+          { label: 'KI-Projekt starten', page: 'home', anchor: 'project', text: 'Ein Satz genügt, wir bilden das Team', icon: 'projects' },
           { label: 'KI-Automatisierung', page: 'contact', anchor: 'topicAutomation', text: 'Ein Ablauf automatisiert, Preis nach Absprache', icon: 'automation' },
           { label: 'KI-Schulung', page: 'contact', anchor: 'topicTraining', text: 'Pflicht nach EU AI Act, Art. 4', icon: 'training' },
           { label: 'ISMS', page: 'contact', anchor: 'topicIsms', text: 'Informationssicherheit nach ISO 27001', icon: 'isms' },
-          { label: 'Für Freelancer', page: 'freelancer', text: 'Profil anlegen, Projekte bekommen, ohne Provision', icon: 'freelancer' },
         ]),
       },
     ],
     links: typed<NavLink[]>([
+      { label: 'Für Freelancer', page: 'freelancer' },
       { label: 'Orte', page: 'places' },
-      { label: 'Team', page: 'home', anchor: 'team' },
+      { label: 'Investoren', page: 'investors' },
     ]),
+    audienceTitle: 'Für wen?',
+    audiences: typed<MenuEntry[]>([
+      { label: 'Unternehmen', page: 'home', text: 'KI-Projekt in einem Satz, Team bis zur Abnahme', icon: 'company' },
+      { label: 'Freelancer', page: 'freelancer', text: 'Profil in drei Minuten, ohne Provision', icon: 'freelancer' },
+      { label: 'Orte', page: 'places', text: 'Wohnen und arbeiten in den Karpaten', icon: 'hubs' },
+      { label: 'Investoren', page: 'investors', text: 'Whitepaper und Deck auf Anfrage', icon: 'investors' },
+    ]),
+    servicesTitle: 'Leistungen',
+    more: typed<NavLink[]>([
+      { label: 'Team', page: 'home', anchor: 'team' },
+      { label: 'Kontakt', page: 'contact' },
+    ]),
+    cta: typed<Record<CtaKey, PageCta>>({
+      default: { label: 'Projekt starten', short: 'Starten', page: 'home', anchor: 'project' },
+      freelancer: { label: 'Profil anlegen', short: 'Profil', page: 'freelancer', anchor: 'profile' },
+      places: { label: 'Interesse vormerken', short: 'Vormerken', page: 'places', anchor: 'waitlist' },
+      investors: { label: 'Whitepaper & Deck', short: 'Deck', page: 'investors', anchor: 'deck' },
+    }),
     otherLanguage: 'English',
     signIn: 'Anmelden',
     account: 'Konto',
     start: 'Projekt starten',
-    waitlist: 'Interesse vormerken',
-    waitlistShort: 'Vormerken',
     openMenu: 'Menü öffnen',
     closeMenu: 'Menü schließen',
   },
@@ -124,27 +135,34 @@ export const de = {
     tagline: 'XPORTAL bildet Teams aus KI-Freelancern, führt Projekte bis zur Abnahme und baut mit Node001 einen Ort zum Leben und Arbeiten.',
     columns: typed<FooterColumn[]>([
       {
-        title: 'Plattform',
+        title: 'Für Unternehmen',
         links: [
-          { label: 'Talent', page: 'home', anchor: 'reasons' },
-          { label: 'Projekte', page: 'home', anchor: 'platform' },
-          { label: 'Orte', page: 'places' },
-          { label: 'Für Freelancer', page: 'freelancer' },
-        ],
-      },
-      {
-        title: 'Leistungen',
-        links: [
+          { label: 'KI-Projekt starten', page: 'home', anchor: 'project' },
           { label: 'KI-Automatisierung', page: 'contact', anchor: 'topicAutomation' },
           { label: 'KI-Schulung', page: 'contact', anchor: 'topicTraining' },
           { label: 'ISMS', page: 'contact', anchor: 'topicIsms' },
         ],
       },
       {
+        title: 'Für Freelancer',
+        links: [
+          { label: 'Profil anlegen', page: 'freelancer', anchor: 'profile' },
+          { label: 'Fragen', page: 'freelancer', anchor: 'faq' },
+        ],
+      },
+      {
+        title: 'Orte und Investoren',
+        links: [
+          { label: 'Node001', page: 'places' },
+          { label: 'Whitelist', page: 'places', anchor: 'waitlist' },
+          { label: 'Investoren', page: 'investors' },
+          { label: 'Whitepaper & Deck', page: 'investors', anchor: 'deck' },
+        ],
+      },
+      {
         title: 'XPORTAL',
         links: [
           { label: 'Team', page: 'home', anchor: 'team' },
-          { label: 'Investoren', page: 'investors' },
           { label: 'Kontakt', page: 'contact' },
         ],
       },
@@ -490,6 +508,7 @@ export const de = {
   // Orte nach StoryBrand (17.11.2026): Held ist, wer remote arbeitet und Ruhe, gutes Internet und gute Leute sucht.
   // Plan: eintragen → Infos zur Miete → Wohneinheit mieten. Du-Form wie bisher. Nur Miete, kein Verkauf (D45, D48).
   places: {
+    sectionNav: { label: 'Auf dieser Seite', items: typed<{ label: string; anchor: IdKey }[]>([{ label: 'Der Ort', anchor: 'place' }, { label: 'Angebote', anchor: 'offers' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Fragen', anchor: 'faq' }]) },
     hero: {
       label: 'Node001',
       region: 'Karpaten, Westukraine',
@@ -1008,6 +1027,7 @@ export const de = {
   // Investorenseite nach StoryBrand (17.11.2026): Held ist der Investor, XPORTAL der Begleiter mit Nachweisen.
   // Regeln fürs Handy: Antwort zuerst, höchstens 20 Wörter je Satz, Überschriften höchstens 6 Wörter, jede Aussage einmal.
   investors: {
+    sectionNav: { label: 'Auf dieser Seite', items: typed<{ label: string; anchor: IdKey }[]>([{ label: 'Warum', anchor: 'about' }, { label: 'Stand', anchor: 'status' }, { label: 'Node001', anchor: 'hub01' }, { label: 'Erlöse', anchor: 'revenue' }, { label: 'Roadmap', anchor: 'roadmap' }]) },
     opener: {
       label: 'Für Investoren',
       words: ['Talente.', 'Projekte.', 'Orte.'],

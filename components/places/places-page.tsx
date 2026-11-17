@@ -9,6 +9,7 @@ import { ChapterOffers, ChapterPlace, ChapterPlacesFaq, PlaceFacts } from '@/com
 import { WaitlistCard } from '@/components/places/waitlist-card'
 import { WaitlistProvider } from '@/components/places/waitlist-state'
 import { Transparency } from '@/components/site/transparency'
+import { SectionNav } from '@/components/site/section-nav'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, pageHref, type Locale } from '@/lib/i18n/routes'
 import { JsonLd, pageLd } from '@/lib/seo/json-ld'
@@ -65,6 +66,7 @@ export function PlacesPage({ locale }: { locale: Locale }) {
       <WaitlistProvider>
         <main>
           <PlacesHero locale={locale} />
+          <SectionNav locale={locale} {...getDictionary(locale).places.sectionNav} />
           <ChapterPlace locale={locale} />
           <PlaceFacts locale={locale} />
           <ChapterOffers locale={locale} />

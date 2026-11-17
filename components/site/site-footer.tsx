@@ -10,8 +10,8 @@ export function SiteFooter({ locale }: { locale: Locale }) {
   return (
     <footer id="site-footer" className="border-t border-line">
       <Container className="flex flex-col gap-14 py-16">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-[minmax(0,2fr)_repeat(4,minmax(0,1fr))]">
-          <div className="col-span-2 flex flex-col gap-4 md:col-span-1">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 xl:grid-cols-[minmax(0,1.6fr)_repeat(5,minmax(0,1fr))] xl:gap-8">
+          <div className="col-span-2 flex flex-col gap-4 md:col-span-3 xl:col-span-1">
             <Wordmark className="h-7 w-auto self-start text-ink" title="XPORTAL" />
             <p className="max-w-[280px] text-[14px] leading-relaxed text-muted">{text.tagline}</p>
           </div>
