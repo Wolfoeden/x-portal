@@ -227,3 +227,38 @@ Entfallen:
 **Ebenfalls behoben:** In der Anschaffungsliste stand noch „nicht geprüfte KI-Zusammenfassung“.
 
 **Prüfung:** `pruefe_alle.py` meldet jetzt auch „E-Bike … Phase 0“ ohne „keine“ und „Geologie … nicht geprüft“.
+
+## 17.11.2026 (später) · Cockpit im Index: abhaken, nächster Schritt, Bestelltermine, BPMN
+
+**Anlass:** Roman möchte eine Oberfläche, auf der man abhakt, wo man steht, und den nächsten Schritt sieht, auch als BPMN 2.0. Der Plan soll mit den Ergebnissen mitrechnen. Beispiel: Ein Anbieter liefert in 45 Tagen. Das Cockpit zeigt dann den frühesten und den spätesten Bestelltag und den Link zum Anbieter. Davor steht der Anbietervergleich: Lieferzeit, Größe, Lieferform, Montage oben. Unter den Antworten der Entscheidungsseite gibt es dazu keinen Kommentar; die Anforderung stammt aus dem Chat.
+
+**Neu:**
+- **`werkzeug/netz.py`, der Ablauf als Netz:**
+  - 58 Knoten mit Abschnitt, Art, Bahn (Rolle), Vorgängern und Dauer.
+  - Dazu die Bestellkette: Objekte bestellen, Lieferung, Verzollung, Transport, Montagebeginn.
+  - Dauern stehen nur mit Quelle im Netz, sonst „offen“. Eingetragen werden sie im Cockpit.
+  - Prüfung: IDs, keine Kreise, jedes Arbeitspaket ist im Netz.
+- **`werkzeug/cockpit.py`, das Cockpit oben im Index:**
+  - Fortschritt je Abschnitt
+  - „Jetzt dran“ mit den Knöpfen „in Arbeit“ und „erledigt“, Feldern für Dauer, Quelle und Ergebnis, Link in den Baum
+  - Bestellung mit spätestem und frühestem Bestelltag
+  - Werte: Zieltermin, frostfreies Fenster, Zoll, Transport, Puffer, größtes Teil aus der Streckenmessung
+  - Anbietervergleich mit Wahl und Transportprüfung
+  - BPMN-Ansicht mit Bahnen je Rolle, eingefärbt nach Status
+  - Tabelle aller Termine
+- **Speicher (`db`):** `status/{id}`, `angebote/{id}`, `wahl/AP-C1`, `werte/node001`.
+- **`ablauf.json`:** das Netz für Agenten.
+
+**Rechnung:**
+- Vorwärts: frühester Start = max(heute, Ende der Vorgänger).
+- Rückwärts vom Zieltermin: spätester Bestelltag = Ziel − Puffer − Transport − Zoll − Lieferzeit.
+- Der Montagebeginn liegt nur im frostfreien Fenster.
+
+**Getestet** mit einem lokalen Ersatz für den Speicher:
+
+| Fall | Ergebnis |
+|---|---|
+| Ziel 15.05.2027, Lieferzeit 45 Tage, Zoll 7, Transport 3, Puffer 5 | spätestens bestellen am 16.03.2027 |
+| Anbieter mit 60 Tagen | 01.03.2027 |
+| Angebot mit 12 m Länge bei gemessenen 6 m | „zu groß: Länge“ |
+| AP-A0 und AP-A1 abgehakt | AP-A4 erscheint unter „Jetzt dran“ |

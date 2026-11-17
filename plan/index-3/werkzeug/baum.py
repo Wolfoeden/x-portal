@@ -1184,7 +1184,8 @@ js = '''<script>
 </script>
 '''
 
-toc = ('<li><a href="#baum" data-k="baum">Offener Entscheidungsbaum</a><ol>'
+toc = ('<li><a href="#cockpit" data-k="cockpit">Cockpit: jetzt dran, Bestellung, BPMN</a></li>'
+       '<li><a href="#baum" data-k="baum">Offener Entscheidungsbaum</a><ol>'
        '<li><a href="#b-zielblatt" data-k="b-zielblatt">Grundlage: Mission, Ziele, Ort</a></li>'
        '<li><a href="#b-hauptweg" data-k="b-hauptweg">1 Ablaufplan A bis H</a></li>'
        '<li><a href="#b-anforderungen" data-k="b-anforderungen">2 Alltag und Anforderungen</a></li>'
@@ -1376,6 +1377,19 @@ body = body.rstrip() + '\n' + js + '''<script>
 })();
 </script>'''
 
+import netz as _nz, cockpit as _ck
+_ids, _tit, _st = set(), {}, {}
+def _sammle(nodes):
+    for n in nodes:
+        if n.get('id'):
+            _ids.add(n['id']); _tit[n['id']] = re.sub(r'<[^>]+>', '', n.get('title') or ''); _st[n['id']] = n.get('state')
+        _sammle(n.get('kids', []))
+_sammle(tree)
+_NETZFEHLER = _nz.pruefe(_ids, [n['id'] for n in _ab.alle_ap(tree)])
+NETZDATEN = _nz.daten({i: t for i, t in _tit.items() if any(i == k[0] for k in _nz.NETZ)}, _st)
+body = body.replace('<section id="baum">', _ck.html_cockpit(NETZDATEN, _nz.svg()) + '<section id="baum">', 1)
+body = body.replace('</style>', _ck.CSS + '</style>', 1)
+body = body.rstrip() + '\n' + _ck.JS
 def _block(b, start, end):
     i = b.index(start); j = b.index(end, i)
     return b[i:j]
@@ -1425,6 +1439,7 @@ body = re.sub(r'<a ([^>]*?)href="#([^"]+)"[^>]*>(.*?)</a>', _ent, body)
 print('Verweise ohne Ziel entlinkt:', _tot[0])
 _fehler = pruefe_baum(tree)
 _fehler += _ab.pruefe(tree)
+_fehler += _NETZFEHLER
 _g = zielblatt_html()
 _fehler += [f'Grundlage: „{w}“' for w in ALT if w in re.sub(r'<[^>]+>', ' ', _g)]
 for _w in ('Mission:', 'Globalziele, in dieser Rangfolge'):
@@ -1490,6 +1505,7 @@ if len(sys.argv) > 3:
             md += [html.unescape(re.sub(r'<[^>]+>', '', GRUNDLAGE)).strip(), '']
         for k in n.get('kids', []): md += walk(k, 0)
     (outdir / 'entscheidungsbaum.md').write_text('\n'.join(md) + '\n')
+    (outdir / 'ablauf.json').write_text(json.dumps(NETZDATEN, ensure_ascii=False, indent=1))
     ad = outdir / 'auftraege'; ad.mkdir(exist_ok=True)
     for f in ad.glob('AP-*.md'): f.unlink()
     for n in _ab.alle_ap(tree):

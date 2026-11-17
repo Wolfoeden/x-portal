@@ -1,0 +1,996 @@
+{
+ "stand": "2026-11-17",
+ "bahnen": [
+  [
+   "GF",
+   "Geschäftsführung"
+  ],
+  [
+   "PL",
+   "Projektleitung"
+  ],
+  [
+   "FX",
+   "Fachexperten"
+  ],
+  [
+   "KI",
+   "KI"
+  ],
+  [
+   "TE",
+   "Team vor Ort"
+  ],
+  [
+   "EX",
+   "Extern: Anbieter, Labor, Behörden, Spedition"
+  ]
+ ],
+ "abschnitte": [
+  [
+   "A",
+   "Vor dem Investment"
+  ],
+  [
+   "B",
+   "Kapital"
+  ],
+  [
+   "C",
+   "Beschaffung und Transport"
+  ],
+  [
+   "D",
+   "Bau Phase 0"
+  ],
+  [
+   "E",
+   "Abnahme und Einzug"
+  ],
+  [
+   "F",
+   "Erster Winter"
+  ],
+  [
+   "G",
+   "Phase 1"
+  ],
+  [
+   "H",
+   "Phase 2 und Ende"
+  ]
+ ],
+ "arten": {
+  "aufgabe": "Aufgabe",
+  "entscheidung": "Entscheidung",
+  "gate": "Gate",
+  "bestellung": "Bestellung",
+  "lieferung": "Lieferung",
+  "ereignis": "Ereignis",
+  "ende": "Ende"
+ },
+ "knoten": [
+  {
+   "id": "O01",
+   "ab": "A",
+   "art": "ereignis",
+   "bahn": "EX",
+   "nach": [],
+   "titel": "Geologiebericht liegt vor",
+   "lang": "Geologie: Bericht liegt vor. Was sagt er für Phase 0 und Phase 1?",
+   "baum": "b-O01",
+   "erledigt_im_plan": true,
+   "dauer": 0,
+   "quelle": "Ereignis, keine eigene Dauer"
+  },
+  {
+   "id": "lage",
+   "ab": "A",
+   "art": "entscheidung",
+   "bahn": "GF",
+   "nach": [
+    "O01"
+   ],
+   "titel": "Lage Phase 0 festlegen",
+   "lang": "Wo stehen das Objekt Phase 0 und die ersten Wohneinheiten? Im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche",
+   "baum": "b-lage",
+   "erledigt_im_plan": true,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-A0",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "PL",
+   "nach": [],
+   "titel": "Strecke messen MP01–MP08",
+   "lang": "Strecke ablaufen und messen: einspurige, teils enge Straße bis zum Grundstück",
+   "baum": "b-AP-A0",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-A1",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "GF",
+   "nach": [],
+   "titel": "Nachweise in den Plan legen",
+   "lang": "Vorhandene Nachweise in den Plan legen: Geologie-Fachprüfung, Zusatzerkundung, Vermessung",
+   "baum": "b-AP-A1",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-A2",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "PL",
+   "nach": [],
+   "titel": "Rohwasseranalyse im Labor",
+   "lang": "Wasseranalyse im Labor: Umfang der Trinkwasseraufbereitung festlegen",
+   "baum": "b-AP-A2",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-A3",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "PL",
+   "nach": [],
+   "titel": "Netzanschluss anfragen",
+   "lang": "Netzanschluss: wer ist zuständig, was kostet er, wie lange dauert er",
+   "baum": "b-AP-A3",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-A8",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "PL",
+   "nach": [],
+   "titel": "Whitelist einrichten",
+   "lang": "Whitelist der künftigen Mieter einrichten",
+   "baum": "b-AP-A8",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "mieter",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "PL",
+   "nach": [
+    "AP-A8"
+   ],
+   "titel": "Mietinteressenten gewinnen",
+   "lang": "Mietinteressenten gewinnen: Whitelist der künftigen Mieter, ab sofort und vor dem Bau",
+   "baum": "b-mieter",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-A6",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "GF",
+   "nach": [],
+   "titel": "Token: Rechtsprüfung",
+   "lang": "Token über Cardano: Rechtsprüfung",
+   "baum": "b-AP-A6",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-A4",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "FX",
+   "nach": [
+    "lage",
+    "AP-A0",
+    "AP-A1"
+   ],
+   "titel": "Bauplanung mit Bau-KI",
+   "lang": "Bauplanung Phase 0 mit Bau-KI und 3D-Modell (Basis of Design)",
+   "baum": "b-AP-A4",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "hausart",
+   "ab": "A",
+   "art": "entscheidung",
+   "bahn": "GF",
+   "nach": [
+    "AP-A4"
+   ],
+   "titel": "Bauart der Objekte",
+   "lang": "Bauart der Objekte: Holz, Beton, Glas, Metall? Erste Bedingung: transportierbar über die einspurige, enge Straße",
+   "baum": "b-hausart",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-A5",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "PL",
+   "nach": [
+    "AP-A4",
+    "hausart"
+   ],
+   "titel": "Angebote große Posten",
+   "lang": "Angebote für die großen Posten einholen",
+   "baum": "b-AP-A5",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "O03",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "KI",
+   "nach": [
+    "AP-A5"
+   ],
+   "titel": "Selbstkosten je Objekt",
+   "lang": "Selbstkosten je Objekt, daraus Miete und monatliche Pauschale",
+   "baum": "b-O03",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-A9",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "KI",
+   "nach": [
+    "AP-A5"
+   ],
+   "titel": "Zahlen neu rechnen (D53)",
+   "lang": "Zahlen neu rechnen: Kostenhochrechnung 12,5 Mio. € und frühere Erlösrechnung 12 Mio. €",
+   "baum": "b-AP-A9",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-A7",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "KI",
+   "nach": [
+    "O03",
+    "AP-A9",
+    "AP-A6"
+   ],
+   "titel": "Investorenunterlagen",
+   "lang": "Investorenunterlagen auf den Stand bringen",
+   "baum": "b-AP-A7",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "G0",
+   "ab": "B",
+   "art": "gate",
+   "bahn": "GF",
+   "nach": [
+    "O03",
+    "AP-A8"
+   ],
+   "titel": "G0 Können wir vermieten?",
+   "lang": "Können wir vermieten?",
+   "baum": "b-G0",
+   "erledigt_im_plan": false,
+   "dauer": 0,
+   "quelle": "Gate: Beschluss, keine eigene Dauer"
+  },
+  {
+   "id": "AP-B1",
+   "ab": "B",
+   "art": "aufgabe",
+   "bahn": "GF",
+   "nach": [
+    "AP-A7",
+    "G0"
+   ],
+   "titel": "Investorengespräche",
+   "lang": "Investorengespräche",
+   "baum": "b-AP-B1",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "O23",
+   "ab": "B",
+   "art": "entscheidung",
+   "bahn": "GF",
+   "nach": [
+    "AP-B1"
+   ],
+   "titel": "Steigen Investoren ein?",
+   "lang": "Kapital: Steigen Investoren für Infrastruktur und Objekte ein?",
+   "baum": "b-O23",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-B2",
+   "ab": "B",
+   "art": "aufgabe",
+   "bahn": "GF",
+   "nach": [
+    "AP-A6"
+   ],
+   "titel": "Token-Crowdfunding vorbereiten",
+   "lang": "Token-Crowdfunding über Cardano vorbereiten",
+   "baum": "b-AP-B2",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-C1",
+   "ab": "C",
+   "art": "aufgabe",
+   "bahn": "PL",
+   "nach": [
+    "AP-A0",
+    "AP-A4"
+   ],
+   "titel": "Anbieter vergleichen (HU, PL, Alibaba)",
+   "lang": "Objekt Phase 0: Anbieter aus Ungarn, Polen und über Alibaba vergleichen",
+   "baum": "b-AP-C1",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "lieferant",
+   "ab": "C",
+   "art": "entscheidung",
+   "bahn": "GF",
+   "nach": [
+    "AP-C1"
+   ],
+   "titel": "Angebot wählen",
+   "lang": "Wer liefert und baut das Objekt Phase 0, mit oder ohne Montage?",
+   "baum": "b-lieferant",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-C2",
+   "ab": "C",
+   "art": "aufgabe",
+   "bahn": "PL",
+   "nach": [
+    "lieferant"
+   ],
+   "titel": "Importeur und Verzollung klären",
+   "lang": "Import in die Ukraine: Importeur und Verzollung",
+   "baum": "b-AP-C2",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-C3",
+   "ab": "C",
+   "art": "aufgabe",
+   "bahn": "PL",
+   "nach": [
+    "lieferant",
+    "AP-A0"
+   ],
+   "titel": "Spedition und Umschlagplatz",
+   "lang": "Logistik bis zum Fuß der Zufahrt, Übergabe an das kleine Fahrzeug",
+   "baum": "b-AP-C3",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-C5",
+   "ab": "C",
+   "art": "aufgabe",
+   "bahn": "GF",
+   "nach": [
+    "lieferant",
+    "AP-A0"
+   ],
+   "titel": "Charge 1 festlegen",
+   "lang": "Charge 1 festlegen: welche Objekte und welches Material jetzt kaufen und hochbringen",
+   "baum": "b-AP-C5",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-C6",
+   "ab": "C",
+   "art": "aufgabe",
+   "bahn": "GF",
+   "nach": [
+    "AP-A0"
+   ],
+   "titel": "Geländefahrzeug beschaffen",
+   "lang": "Gemeinsames geländegängiges Fahrzeug beschaffen",
+   "baum": "b-AP-C6",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-C4",
+   "ab": "C",
+   "art": "aufgabe",
+   "bahn": "KI",
+   "nach": [
+    "lieferant"
+   ],
+   "titel": "Bestellzeitpunkte rechnen",
+   "lang": "Bestellzeitpunkte rückwärts vom Montagebeginn",
+   "baum": "b-AP-C4",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "G1",
+   "ab": "C",
+   "art": "gate",
+   "bahn": "GF",
+   "nach": [
+    "O23",
+    "AP-C5"
+   ],
+   "titel": "G1 Geld für Charge 1 da?",
+   "lang": "Ist genug Geld für Charge 1 da, ist bestellt?",
+   "baum": "b-G1",
+   "erledigt_im_plan": false,
+   "dauer": 0,
+   "quelle": "Gate: Beschluss, keine eigene Dauer"
+  },
+  {
+   "id": "K-BESTELLEN",
+   "ab": "C",
+   "art": "bestellung",
+   "bahn": "GF",
+   "nach": [
+    "G1",
+    "AP-C2",
+    "AP-C3",
+    "AP-C4"
+   ],
+   "titel": "Objekte bestellen",
+   "lang": "Objekte bestellen",
+   "baum": null,
+   "erledigt_im_plan": false,
+   "dauer": 0,
+   "quelle": "Ereignis, keine eigene Dauer"
+  },
+  {
+   "id": "K-LIEFERUNG",
+   "ab": "C",
+   "art": "lieferung",
+   "bahn": "EX",
+   "nach": [
+    "K-BESTELLEN"
+   ],
+   "titel": "Lieferzeit Anbieter",
+   "lang": "Lieferzeit Anbieter",
+   "baum": null,
+   "erledigt_im_plan": false,
+   "param": "lieferzeit",
+   "quelle": "Lieferzeit aus dem gewählten Angebot (AP-C1)"
+  },
+  {
+   "id": "K-ZOLL",
+   "ab": "C",
+   "art": "aufgabe",
+   "bahn": "EX",
+   "nach": [
+    "K-LIEFERUNG"
+   ],
+   "titel": "Verzollung",
+   "lang": "Verzollung",
+   "baum": null,
+   "erledigt_im_plan": false,
+   "param": "zoll",
+   "quelle": "Tage für Verzollung (Wert im Cockpit)"
+  },
+  {
+   "id": "K-TRANSPORT",
+   "ab": "C",
+   "art": "aufgabe",
+   "bahn": "EX",
+   "nach": [
+    "K-ZOLL"
+   ],
+   "titel": "Transport, Umschlag, Puffer",
+   "lang": "Transport, Umschlag, Puffer",
+   "baum": null,
+   "erledigt_im_plan": false,
+   "param": "transport",
+   "quelle": "Tage für Transport, Umschlag und Puffer (Werte im Cockpit)"
+  },
+  {
+   "id": "zufahrt",
+   "ab": "C",
+   "art": "ereignis",
+   "bahn": "PL",
+   "nach": [],
+   "titel": "Zufahrt Phase 0 entschieden",
+   "lang": "Kommt das Objekt Phase 0 die Zufahrt hoch, im Sommer und im Winter (2.2.4)?",
+   "baum": "b-zufahrt",
+   "erledigt_im_plan": true,
+   "dauer": 0,
+   "quelle": "Ereignis, keine eigene Dauer"
+  },
+  {
+   "id": "AP-D1",
+   "ab": "D",
+   "art": "aufgabe",
+   "bahn": "TE",
+   "nach": [
+    "lage"
+   ],
+   "titel": "Fällen, roden, Holz einlagern",
+   "lang": "Bäume fällen, Baufläche und Trasse roden, Holz einlagern",
+   "baum": "b-AP-D1",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-D2",
+   "ab": "D",
+   "art": "aufgabe",
+   "bahn": "FX",
+   "nach": [
+    "AP-A4",
+    "AP-D1"
+   ],
+   "titel": "Entwässerung und Stütze",
+   "lang": "Entwässerungsgraben und Stützkonstruktion",
+   "baum": "b-AP-D2",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-D3",
+   "ab": "D",
+   "art": "aufgabe",
+   "bahn": "FX",
+   "nach": [
+    "AP-D2"
+   ],
+   "titel": "Fundament",
+   "lang": "Fundament für das Objekt Phase 0",
+   "baum": "b-AP-D3",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-D4",
+   "ab": "D",
+   "art": "aufgabe",
+   "bahn": "FX",
+   "nach": [
+    "AP-D3",
+    "AP-A2",
+    "AP-A3"
+   ],
+   "titel": "Leitungen und Kläranlage",
+   "lang": "Leitungen: Wasser, Abwasser, Strom, Internet",
+   "baum": "b-AP-D4",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "frost",
+   "ab": "D",
+   "art": "ereignis",
+   "bahn": "EX",
+   "nach": [],
+   "titel": "Boden frostfrei",
+   "lang": "Ist der Boden frostfrei?",
+   "baum": "b-frost",
+   "erledigt_im_plan": false,
+   "dauer": 0,
+   "quelle": "Ereignis, keine eigene Dauer"
+  },
+  {
+   "id": "technik",
+   "ab": "D",
+   "art": "entscheidung",
+   "bahn": "GF",
+   "nach": [
+    "hausart"
+   ],
+   "titel": "Technik im Objekt",
+   "lang": "Technik im Objekt: Zugang, Server, Netzwerk. Liefert der Anbieter sie mit, oder beschaffen wir sie selbst?",
+   "baum": "b-technik",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-D5",
+   "ab": "D",
+   "art": "aufgabe",
+   "bahn": "PL",
+   "nach": [
+    "technik"
+   ],
+   "titel": "Zugang über Cardano",
+   "lang": "Zugang über Cardano",
+   "baum": "b-AP-D5",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "K-MONTAGE",
+   "ab": "D",
+   "art": "ereignis",
+   "bahn": "TE",
+   "nach": [
+    "K-TRANSPORT",
+    "AP-D3",
+    "frost"
+   ],
+   "titel": "Montagebeginn",
+   "lang": "Montagebeginn",
+   "baum": null,
+   "erledigt_im_plan": false,
+   "dauer": 0,
+   "quelle": "Ereignis, keine eigene Dauer"
+  },
+  {
+   "id": "AP-E1",
+   "ab": "E",
+   "art": "aufgabe",
+   "bahn": "FX",
+   "nach": [
+    "K-MONTAGE",
+    "AP-D4",
+    "AP-D5"
+   ],
+   "titel": "Abnahmetabelle",
+   "lang": "Abnahmetabelle",
+   "baum": "b-AP-E1",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "G2",
+   "ab": "E",
+   "art": "gate",
+   "bahn": "PL",
+   "nach": [
+    "AP-E1"
+   ],
+   "titel": "G2 Darf eingezogen werden?",
+   "lang": "Darf eingezogen werden?",
+   "baum": "b-G2",
+   "erledigt_im_plan": false,
+   "dauer": 0,
+   "quelle": "Gate: Beschluss, keine eigene Dauer"
+  },
+  {
+   "id": "AP-E2",
+   "ab": "E",
+   "art": "aufgabe",
+   "bahn": "GF",
+   "nach": [
+    "G2",
+    "AP-A8"
+   ],
+   "titel": "Mietvertrag und Einzug",
+   "lang": "Mietvertrag und Einzug der ersten Mieter von der Whitelist",
+   "baum": "b-AP-E2",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "G3",
+   "ab": "F",
+   "art": "gate",
+   "bahn": "GF",
+   "nach": [
+    "G2"
+   ],
+   "titel": "G3 Hält es im Winter?",
+   "lang": "Hält es im Winter?",
+   "baum": "b-G3",
+   "erledigt_im_plan": false,
+   "dauer": 0,
+   "quelle": "Gate: Beschluss, keine eigene Dauer"
+  },
+  {
+   "id": "AP-F1",
+   "ab": "F",
+   "art": "aufgabe",
+   "bahn": "TE",
+   "nach": [
+    "G2"
+   ],
+   "titel": "Messreihen",
+   "lang": "Messreihen: Wärme, Holzfeuchte, Wasser, Strom, Internet",
+   "baum": "b-AP-F1",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-F2",
+   "ab": "F",
+   "art": "aufgabe",
+   "bahn": "PL",
+   "nach": [
+    "G2"
+   ],
+   "titel": "Kamera-KI Normalzustand",
+   "lang": "KI mit Kamera, die den Normalzustand misst",
+   "baum": "b-AP-F2",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-F3",
+   "ab": "F",
+   "art": "aufgabe",
+   "bahn": "KI",
+   "nach": [
+    "AP-E2"
+   ],
+   "titel": "Mieterlöse berichten",
+   "lang": "Mieterlöse und Whitelist monatlich berichten",
+   "baum": "b-AP-F3",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-F4",
+   "ab": "F",
+   "art": "aufgabe",
+   "bahn": "TE",
+   "nach": [
+    "G2",
+    "AP-D5"
+   ],
+   "titel": "Gemeinschaftsarbeit, Anreize",
+   "lang": "Gemeinschaftsarbeit: Bedarfe erfassen, Aufgaben festlegen, Anreize setzen",
+   "baum": "b-AP-F4",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "G4",
+   "ab": "F",
+   "art": "gate",
+   "bahn": "GF",
+   "nach": [
+    "G3",
+    "AP-F1",
+    "AP-F3"
+   ],
+   "titel": "G4 Geld verdient oben?",
+   "lang": "Haben die Leute oben Geld verdient?",
+   "baum": "b-G4",
+   "erledigt_im_plan": false,
+   "dauer": 0,
+   "quelle": "Gate: Beschluss, keine eigene Dauer"
+  },
+  {
+   "id": "ende",
+   "ab": "F",
+   "art": "ende",
+   "bahn": "GF",
+   "nach": [
+    "G4"
+   ],
+   "titel": "Stufe 1 erreicht",
+   "lang": "2–3 Leute wohnen und arbeiten ganzjährig oben und verdienen dort Geld.",
+   "baum": "b-ende",
+   "erledigt_im_plan": false,
+   "dauer": 0,
+   "quelle": "Ereignis, keine eigene Dauer"
+  },
+  {
+   "id": "AP-G2",
+   "ab": "G",
+   "art": "aufgabe",
+   "bahn": "FX",
+   "nach": [
+    "G4"
+   ],
+   "titel": "Kommunalgebäude",
+   "lang": "Kommunalgebäude",
+   "baum": "b-AP-G2",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-G3",
+   "ab": "G",
+   "art": "aufgabe",
+   "bahn": "GF",
+   "nach": [
+    "AP-F3"
+   ],
+   "titel": "Nachbestellen nach Whitelist",
+   "lang": "Nachbestellen in Chargen nach der Whitelist",
+   "baum": "b-AP-G3",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-G4",
+   "ab": "G",
+   "art": "aufgabe",
+   "bahn": "FX",
+   "nach": [
+    "G4"
+   ],
+   "titel": "Solar mit Speicher",
+   "lang": "Solar mit Speicher",
+   "baum": "b-AP-G4",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-G5",
+   "ab": "G",
+   "art": "aufgabe",
+   "bahn": "TE",
+   "nach": [
+    "AP-G2"
+   ],
+   "titel": "Bergkapelle (Gruppenprojekt)",
+   "lang": "Bergkapelle als Gruppenprojekt der Bewohner",
+   "baum": "b-AP-G5",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-H1",
+   "ab": "H",
+   "art": "aufgabe",
+   "bahn": "GF",
+   "nach": [
+    "AP-G2",
+    "AP-G3"
+   ],
+   "titel": "Ausbau nach Nachfrage",
+   "lang": "Ausbau nach Nachfrage",
+   "baum": "b-AP-H1",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-H2",
+   "ab": "H",
+   "art": "aufgabe",
+   "bahn": "KI",
+   "nach": [
+    "G4"
+   ],
+   "titel": "Hypothesen bewerten",
+   "lang": "Hypothesen H1 bis H8 bewerten",
+   "baum": "b-AP-H2",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-H3",
+   "ab": "H",
+   "art": "aufgabe",
+   "bahn": "KI",
+   "nach": [
+    "AP-H2"
+   ],
+   "titel": "Übergabe an nächsten Node",
+   "lang": "Übergabe an den nächsten Node",
+   "baum": "b-AP-H3",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  }
+ ],
+ "reihenfolge": [
+  "O01",
+  "lage",
+  "AP-A0",
+  "AP-A1",
+  "AP-A2",
+  "AP-A3",
+  "AP-A8",
+  "mieter",
+  "AP-A6",
+  "AP-A4",
+  "hausart",
+  "AP-A5",
+  "O03",
+  "AP-A9",
+  "AP-A7",
+  "G0",
+  "AP-B1",
+  "O23",
+  "AP-B2",
+  "AP-C1",
+  "lieferant",
+  "AP-C2",
+  "AP-C3",
+  "AP-C5",
+  "AP-C6",
+  "AP-C4",
+  "G1",
+  "K-BESTELLEN",
+  "K-LIEFERUNG",
+  "K-ZOLL",
+  "K-TRANSPORT",
+  "zufahrt",
+  "AP-D1",
+  "AP-D2",
+  "AP-D3",
+  "AP-D4",
+  "frost",
+  "technik",
+  "AP-D5",
+  "K-MONTAGE",
+  "AP-E1",
+  "G2",
+  "AP-E2",
+  "G3",
+  "AP-F1",
+  "AP-F2",
+  "AP-F3",
+  "AP-F4",
+  "G4",
+  "ende",
+  "AP-G2",
+  "AP-G3",
+  "AP-G4",
+  "AP-G5",
+  "AP-H1",
+  "AP-H2",
+  "AP-H3"
+ ]
+}

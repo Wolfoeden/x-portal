@@ -11,6 +11,8 @@ Was sich wann und warum geändert hat, steht in `aenderungsprotokoll.md`.
 | `index-3.html` / `index-3.body.html` | Die Seite (eigenständig / Artefakt-Inhalt). |
 | `werkzeug/baum.py` | Generator: `python3 werkzeug/baum.py quellen/index-2.0.html index-3.body.html .` |
 | `werkzeug/ablauf.py` | Ast 1: Grundbestimmungen GB1–GB11, KI-Arbeitsteilung, Ablaufplan A–H mit Arbeitspaketen, Unterlagen und Aufträgen. |
+| `werkzeug/netz.py` | Ablauf als Netz (Vorgänger, Dauer, Rolle) für Cockpit und BPMN; Export `ablauf.json`. |
+| `werkzeug/cockpit.py` | Cockpit oben im Index: abhaken, jetzt dran, Bestelltermine, Anbietervergleich, BPMN. Speicher: status, angebote, wahl, werte. |
 | `werkzeug/uebernahme.py` | Aus dem Index 2.0 übernommene Teilergebnisse, Steuerung, Methoden, Prüfaufträge; Liste des Entfallenen. |
 | `auftraege/` | Aufträge für die ausführende KI, aus `ablauf.py` erzeugt. |
 | `../pruefe_alle.py` | Prüft den Text aller Seiten auf alten Stand; der Generator ruft es auf. |
