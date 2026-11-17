@@ -551,7 +551,7 @@ export const de = {
       text: 'So stellen wir uns einen Tag vor. Kommunalgebäude, Feuerstelle und Sauna entstehen in Phase 1.',
       scenes: [
         { time: '07:00', title: 'Morgen am Hang.', text: 'Du trittst auf deine Terrasse. Vor dir Wald und Wiese, unten im Tal zieht der Nebel ab.', imageAlt: 'Drohnenfoto mit KI eingesetzter Wohneinheit: dunkel, große Fenster, Terrasse auf Stützen am Waldrand' },
-        { time: '09:30', title: 'Konzentriert arbeiten.', text: 'Moderne Arbeitsplätze im Kommunalgebäude, kurze Wege, schnelles Internet. Die IT-Umgebung ist sicher, nach DSGVO und ISMS.', imageAlt: 'Schaubild: Kommunalgebäude aus Holz mit Glasfront und Terrasse am Hang, im Tal Nebel über den Karpaten' },
+        { time: '09:30', title: 'Konzentriert arbeiten.', text: 'Moderne Arbeitsplätze im Kommunalgebäude, kurze Wege, schnelles Internet. Sichere IT-Umgebung: Cybersecurity first.', imageAlt: 'Schaubild: Kommunalgebäude aus Holz mit Glasfront und Terrasse am Hang, im Tal Nebel über den Karpaten' },
         { time: '13:00', title: 'Gesund essen.', text: 'Gemüse aus den Hochbeeten, gekocht in der gemeinsamen Küche. Das Wasser kommt aus der eigenen Trinkwasseraufbereitung.', imageAlt: '' },
         { time: '17:00', title: 'Draußen sein.', text: 'Ein Gang über den Hang, Holz für den Winter, Arbeit im Garten. Bewegung gehört hier zum Tag.', imageAlt: '' },
         { time: '20:00', title: 'Ruhig schlafen.', text: 'Sauna oder Feuerstelle, dann Ruhe. Die Siedlung ist autark, Strom, Wärme und Wasser laufen immer.', imageAlt: 'Schaubild des Zielbilds am Abend: Wohneinheiten aus Holz am Hang, in der Mitte das Kommunalgebäude mit beleuchteter Terrasse' },
@@ -619,9 +619,9 @@ export const de = {
       title: 'Häufige Fragen.',
       items: typed<Faq[]>([
         { question: 'Kann ich länger bleiben?', answer: 'Ja, für einige Wochen oder Monate. Konditionen und Leistungen erfährst du in der Whitelist zuerst.' },
-        { question: 'Kann ich auch kaufen?', answer: 'Nein, die Wohneinheiten werden nicht verkauft. Du kannst aber in Node001 investieren und am Erfolg teilhaben. Melde dich bei Interesse, wir schicken dir die Unterlagen.', link: { label: 'Interesse als Investor melden', page: 'contact' } },
+        { question: 'Kann ich auch kaufen?', answer: 'Du kannst in Node001 investieren und am Erfolg teilhaben. Melde dich bei Interesse.', link: { label: 'Interesse als Investor melden', page: 'contact' } },
         { question: 'Wann kann ich einziehen?', answer: 'Den genauen Termin erfährst du in unserer Whitelist. Baubeginn ist 2027.' },
-        { question: 'Kann ich dort wirklich arbeiten?', answer: 'Ja. Moderne Arbeitsplätze im Kommunalgebäude, schnelles Internet und eine sichere IT-Umgebung nach DSGVO und ISMS (ISO 27001).' },
+        { question: 'Kann ich dort wirklich arbeiten?', answer: 'Ja. Moderne Arbeitsplätze im Kommunalgebäude, schnelles Internet und eine sichere IT-Umgebung. Cybersecurity first.' },
         { question: 'Kann ich bei XPORTAL auch arbeiten, ohne vor Ort zu sein?', answer: 'Ja. Die Projekte laufen digital, du arbeitest remote von überall. Node001 ist ein Angebot, keine Pflicht. Vor Ort arbeitest du auch mit echten Kundendaten, remote mit Testdaten.', link: { label: 'Melde dich an: Für digitale Nomaden', page: 'freelancer', anchor: 'profile' } },
         { question: 'Was passiert bei Stromausfall oder Schnee?', answer: 'Kaum etwas: Node001 wird als autarke Siedlung gebaut. Strom, Wärme, Wasser und Internet laufen auch ohne öffentliches Netz weiter.' },
         { question: 'Was hat das mit XPORTAL zu tun?', answer: 'XPORTAL bildet Teams aus digitalen Nomaden mit KI-Know-how für Unternehmen. Auf Node001 leben und arbeiten sie gemeinsam, auch an diesen Projekten.' },

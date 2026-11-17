@@ -536,7 +536,7 @@ export const en: Dictionary = {
       text: 'This is how we picture a day. The community building, fire pit and sauna come in phase 1.',
       scenes: [
         { time: '07:00', title: 'Morning on the slope.', text: 'You step onto your terrace. Forest and meadow in front of you, mist lifting in the valley below.', imageAlt: 'Drone photo with a living unit added with AI: dark, large windows, a terrace on stilts at the edge of the forest' },
-        { time: '09:30', title: 'Focused work.', text: 'Modern workspaces in the community building, short distances, fast internet. The IT environment is secure, GDPR and ISMS compliant.', imageAlt: 'Visualisation: timber community building with a glass front and terrace on the slope, mist over the Carpathians in the valley' },
+        { time: '09:30', title: 'Focused work.', text: 'Modern workspaces in the community building, short distances, fast internet. Secure IT environment: cybersecurity first.', imageAlt: 'Visualisation: timber community building with a glass front and terrace on the slope, mist over the Carpathians in the valley' },
         { time: '13:00', title: 'Eat well.', text: 'Vegetables from the raised beds, cooked in the shared kitchen. The water comes from our own drinking-water treatment.', imageAlt: '' },
         { time: '17:00', title: 'Time outside.', text: 'A walk across the slope, wood for the winter, work in the garden. Moving is part of the day here.', imageAlt: '' },
         { time: '20:00', title: 'Sleep soundly.', text: 'Sauna or fire pit, then quiet. The settlement is self-sufficient, so power, heat and water always run.', imageAlt: 'Visualisation of the target picture in the evening: timber living units on the slope, the community building with a lit terrace in the middle' },
@@ -604,9 +604,9 @@ export const en: Dictionary = {
       title: 'Frequently asked questions.',
       items: [
         { question: 'Can I stay longer?', answer: 'Yes, for a few weeks or months. People on the whitelist hear about terms and services first.' },
-        { question: 'Can I also buy?', answer: 'No, the living units are not sold. But you can invest in Node001 and share in its success. Get in touch if you are interested and we will send you the documents.', link: { label: 'Register interest as an investor', page: 'contact' } },
+        { question: 'Can I also buy?', answer: 'You can invest in Node001 and share in its success. Get in touch if you are interested.', link: { label: 'Register interest as an investor', page: 'contact' } },
         { question: 'When can I move in?', answer: 'You get the exact date on our whitelist. Construction starts in 2027.' },
-        { question: 'Can I really work there?', answer: 'Yes. Modern workspaces in the community building, fast internet and a secure IT environment, GDPR and ISMS compliant (ISO 27001).' },
+        { question: 'Can I really work there?', answer: 'Yes. Modern workspaces in the community building, fast internet and a secure IT environment. Cybersecurity first.' },
         { question: 'Can I work with XPORTAL without being on site?', answer: 'Yes. Projects run digitally, so you work remotely from anywhere. Node001 is an offer, not a requirement. On site you also work with real client data, remotely with test data.', link: { label: 'Sign up: For digital nomads', page: 'freelancer', anchor: 'profile' } },
         { question: 'What happens in a power cut or snow?', answer: 'Hardly anything: Node001 is built as a self-sufficient settlement. Power, heat, water and internet keep running without the public grid.' },
         { question: 'What does this have to do with XPORTAL?', answer: 'XPORTAL builds teams of digital nomads with AI skills for companies. On Node001, they live and work together, including on these projects.' },

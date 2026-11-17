@@ -638,3 +638,14 @@ Vorgabe der Projektleitung vom 17.11.2026; geändert auf Deutsch und Englisch.
 - Die Einwilligungsfassung ist jetzt `orte-2026-11-17b-node001`.
 - Die Benachrichtigungsmail nennt Name, Land und Arbeit.
 - Die Datenschutzerklärung nennt die neuen Angaben.
+
+## 17.11.2026 (später) · FAQ: Kaufen und Arbeiten gekürzt
+
+Vorgabe der Projektleitung vom 17.11.2026; geändert auf Deutsch und Englisch.
+
+- „Kann ich auch kaufen?“:
+  - Neue Antwort: „Du kannst in Node001 investieren und am Erfolg teilhaben. Melde dich bei Interesse.“ Der Link „Interesse als Investor melden“ bleibt.
+  - Gestrichen sind „Die Wohneinheiten werden nicht verkauft“ und der Satz zu den Unterlagen.
+- „Kann ich dort wirklich arbeiten?“:
+  - „nach DSGVO und ISMS (ISO 27001)“ ist ersetzt durch „Cybersecurity first“.
+  - Szene 09:30 und die Limbic-Tabelle im Index sind angeglichen.
