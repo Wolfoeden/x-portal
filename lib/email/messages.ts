@@ -126,7 +126,9 @@ export function waitlistConfirmLink(input: { locale: Locale; link: string }) {
 }
 
 /** An das Postfach des Betreibers, sobald ein Eintrag bestätigt ist. Die Felder heißen wie in public.waitlist_entries. */
-export function waitlistNotification(input: { first_name: string | null; email: string; interest: string; timing: string; campaign: string | null; locale: string }) {
+const WORK_NAMES: Record<string, string> = { has_work: 'hat schon Arbeit', seeks_work: 'sucht Arbeit über XPORTAL' }
+
+export function waitlistNotification(input: { first_name: string | null; last_name?: string | null; email: string; country?: string | null; work?: string | null; interest: string; timing: string; campaign: string | null; locale: string }) {
   const use = INTEREST_NAMES[input.interest] ?? input.interest
   const start = TIMING_NAMES[input.timing] ?? input.timing
   return {
@@ -134,8 +136,10 @@ export function waitlistNotification(input: { first_name: string | null; email: 
     text: [
       `Nutzung: ${use}`,
       `Ab wann: ${start}`,
-      `Vorname: ${input.first_name || '–'}`,
+      `Name: ${[input.first_name, input.last_name].filter(Boolean).join(' ') || '–'}`,
       `E-Mail: ${input.email}`,
+      `Land: ${input.country || '–'}`,
+      `Arbeit: ${(input.work && WORK_NAMES[input.work]) || '–'}`,
       `Kampagne: ${input.campaign || '–'}`,
       `Sprache: ${input.locale === 'en' ? 'Englisch' : 'Deutsch'}`,
       '',

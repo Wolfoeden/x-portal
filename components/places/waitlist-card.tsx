@@ -1,22 +1,24 @@
 'use client'
 
 import { useEffect, useRef, useState, type ComponentType } from 'react'
-import { ArrowRight, Check, Clock, House, Laptop, Mail, User, type LucideProps } from 'lucide-react'
+import { ArrowRight, Check, Clock, Globe, House, Laptop, Mail, type LucideProps } from 'lucide-react'
 import { useLocale } from '@/components/i18n/locale-provider'
 import { useWaitlist, type WaitlistStart, type WaitlistUse } from '@/components/places/waitlist-state'
 import { fill } from '@/lib/i18n/format'
 import { pageHref } from '@/lib/i18n/routes'
+import { countryFromLanguages, countryOptions } from '@/lib/countries'
 import { WAITLIST_RESULT_PARAM, type WaitlistResultValue } from '@/lib/waitlist/result'
 
 const ICONS: Record<WaitlistUse, ComponentType<LucideProps>> = { workation: Laptop, mieten: House }
 
-function Step({ number, children }: { number: number; children: string }) {
+function Step({ number, children, hint }: { number: number; children: string; hint?: string }) {
   return (
     <legend className="mb-3 flex items-center gap-2.5 p-0 text-[15px] font-medium text-ink">
       <span aria-hidden className="grid size-6 place-items-center rounded-full bg-ink text-[12px] font-semibold text-white">
         {number}
       </span>
       {children}
+      {hint ? <span className="text-[13px] font-normal text-faint">({hint})</span> : null}
     </legend>
   )
 }
@@ -24,6 +26,12 @@ function Step({ number, children }: { number: number; children: string }) {
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 
 type Status = 'idle' | 'sending' | 'failed' | 'limit'
+type Work = 'habe' | 'suche'
+
+const FIELD = 'flex h-[52px] items-center gap-2.5 rounded-[14px] border bg-white px-4 focus-within:ring-[3px]'
+const FIELD_OK = 'border-line-strong focus-within:border-brand focus-within:ring-brand/15'
+const FIELD_BAD = 'border-[#a3361f] focus-within:ring-[#a3361f]/15'
+const INPUT = 'h-full min-w-0 flex-1 bg-transparent text-[16px] text-ink outline-none placeholder:text-faint'
 
 /**
  * Karte der Warteliste. Sendet an /api/waitlist; gespeichert wird unbestätigt in waitlist_entries, dazu geht ein Link per Mail.
@@ -35,12 +43,18 @@ export function WaitlistCard() {
   const copy = dict.places.waitlist
   const { email, setEmail, use, setUse, start, setStart } = useWaitlist()
   const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [country, setCountry] = useState('')
+  const [work, setWork] = useState<Work | null>(null)
+  const [countries, setCountries] = useState<ReturnType<typeof countryOptions> | null>(null)
   const [consent, setConsent] = useState(false)
   const [website, setWebsite] = useState('')
   const [tried, setTried] = useState(false)
   const [status, setStatus] = useState<Status>('idle')
   const [done, setDone] = useState(false)
   const [returned, setReturned] = useState<WaitlistResultValue | null>(null)
+  const nameRef = useRef<HTMLInputElement>(null)
+  const countryRef = useRef<HTMLSelectElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const consentRef = useRef<HTMLInputElement>(null)
 
@@ -50,14 +64,26 @@ export function WaitlistCard() {
     if (value === 'ok' || value === 'expired') setReturned(value)
   }, [])
 
+  // Länderliste erst im Browser: Die Namen kommen aus Intl und könnten sonst vom Server abweichen. Vorbelegt aus der Browsersprache.
+  useEffect(() => {
+    setCountries(countryOptions(locale))
+    setCountry((current) => current || countryFromLanguages(navigator.languages ?? [navigator.language]))
+  }, [locale])
+
   const emailError = !email.trim() ? copy.emailMissing : EMAIL.test(email.trim()) ? null : copy.emailInvalid
+  const nameError = firstName.trim() && lastName.trim() ? null : copy.nameMissing
+  const countryError = country ? null : copy.countryMissing
   const consentError = consent ? null : copy.consentMissing
+  const showNameError = tried && nameError
+  const showCountryError = tried && countryError
   const showEmailError = tried && emailError
   const showConsentError = tried && consentError
 
   const submit = async () => {
     setTried(true)
+    if (nameError) return nameRef.current?.focus()
     if (emailError) return emailRef.current?.focus()
+    if (countryError) return countryRef.current?.focus()
     if (consentError) return consentRef.current?.focus()
     if (status === 'sending') return
     setStatus('sending')
@@ -66,7 +92,7 @@ export function WaitlistCard() {
       const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ use, start, firstName: firstName.trim() || undefined, email: email.trim(), consent: true, locale, offer, website: website || undefined }),
+        body: JSON.stringify({ use, start, work: work ?? undefined, firstName: firstName.trim(), lastName: lastName.trim(), email: email.trim(), country, consent: true, locale, offer, website: website || undefined }),
       })
       if (response.ok) {
         setStatus('idle')
@@ -206,15 +232,43 @@ export function WaitlistCard() {
         </fieldset>
 
         <fieldset className="min-w-0">
-          <Step number={3}>{copy.contactQuestion}</Step>
-          <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-            <label className="flex h-[52px] items-center gap-2.5 rounded-[14px] border border-line-strong bg-white px-4 focus-within:border-brand focus-within:ring-[3px] focus-within:ring-brand/15">
-              <User aria-hidden size={18} strokeWidth={1.75} className="text-faint" />
+          <Step number={3} hint={copy.workOptional}>{copy.workQuestion}</Step>
+          <div className="grid grid-cols-2 gap-1 rounded-2xl bg-surface p-1">
+            {copy.works.map((item) => {
+              const on = work === item.id
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  aria-pressed={on}
+                  onClick={() => setWork(on ? null : (item.id as Work))}
+                  className={`min-h-11 rounded-xl px-2 py-1.5 text-[13.5px] font-medium leading-tight transition-colors focus-visible:outline-2 focus-visible:outline-brand ${on ? 'bg-white text-ink shadow-[0_1px_2px_rgb(14_20_17/0.08),0_4px_12px_-6px_rgb(14_20_17/0.25)]' : 'text-muted hover:text-ink'}`}
+                >
+                  {item.label}
+                </button>
+              )
+            })}
+          </div>
+        </fieldset>
+
+        <fieldset className="min-w-0">
+          <Step number={4}>{copy.contactQuestion}</Step>
+          <div className="grid grid-cols-2 gap-2.5">
+            <label className={`${FIELD} ${showNameError && !firstName.trim() ? FIELD_BAD : FIELD_OK}`}>
               <span className="sr-only">{copy.firstName}</span>
-              <input name="vorname" autoComplete="given-name" value={firstName} onChange={(event) => setFirstName(event.target.value)} placeholder={copy.firstName} className="h-full min-w-0 flex-1 bg-transparent text-[16px] text-ink outline-none placeholder:text-faint" />
+              <input ref={nameRef} name="vorname" autoComplete="given-name" required value={firstName} onChange={(event) => setFirstName(event.target.value)} placeholder={copy.firstName} aria-invalid={showNameError && !firstName.trim() ? true : undefined} aria-describedby={showNameError ? 'warteliste-name-fehler' : undefined} className={INPUT} />
             </label>
-            <div className="flex flex-col gap-1.5">
-              <label className={`flex h-[52px] items-center gap-2.5 rounded-[14px] border bg-white px-4 focus-within:ring-[3px] ${showEmailError ? 'border-[#a3361f] focus-within:ring-[#a3361f]/15' : 'border-line-strong focus-within:border-brand focus-within:ring-brand/15'}`}>
+            <label className={`${FIELD} ${showNameError && !lastName.trim() ? FIELD_BAD : FIELD_OK}`}>
+              <span className="sr-only">{copy.lastName}</span>
+              <input name="nachname" autoComplete="family-name" required value={lastName} onChange={(event) => setLastName(event.target.value)} placeholder={copy.lastName} aria-invalid={showNameError && !lastName.trim() ? true : undefined} aria-describedby={showNameError ? 'warteliste-name-fehler' : undefined} className={INPUT} />
+            </label>
+            {showNameError ? (
+              <p id="warteliste-name-fehler" className="col-span-2 text-[13px] font-medium text-[#a3361f]">
+                {nameError}
+              </p>
+            ) : null}
+            <div className="col-span-2 flex flex-col gap-1.5 sm:col-span-1">
+              <label className={`${FIELD} ${showEmailError ? FIELD_BAD : FIELD_OK}`}>
                 <Mail aria-hidden size={18} strokeWidth={1.75} className={showEmailError ? 'text-[#a3361f]' : 'text-faint'} />
                 <span className="sr-only">{copy.email}</span>
                 <input
@@ -228,12 +282,47 @@ export function WaitlistCard() {
                   placeholder={copy.email}
                   aria-invalid={showEmailError ? true : undefined}
                   aria-describedby={showEmailError ? 'warteliste-email-fehler' : undefined}
-                  className="h-full min-w-0 flex-1 bg-transparent text-[16px] text-ink outline-none placeholder:text-faint"
+                  className={INPUT}
                 />
               </label>
               {showEmailError ? (
                 <p id="warteliste-email-fehler" className="text-[13px] font-medium text-[#a3361f]">
                   {emailError}
+                </p>
+              ) : null}
+            </div>
+            <div className="col-span-2 flex flex-col gap-1.5 sm:col-span-1">
+              <label className={`${FIELD} ${showCountryError ? FIELD_BAD : FIELD_OK}`}>
+                <Globe aria-hidden size={18} strokeWidth={1.75} className={showCountryError ? 'text-[#a3361f]' : 'text-faint'} />
+                <span className="sr-only">{copy.country}</span>
+                <select
+                  ref={countryRef}
+                  name="land"
+                  autoComplete="country"
+                  required
+                  value={country}
+                  onChange={(event) => setCountry(event.target.value)}
+                  aria-invalid={showCountryError ? true : undefined}
+                  aria-describedby={showCountryError ? 'warteliste-land-fehler' : undefined}
+                  className={`${INPUT} cursor-pointer appearance-none ${country ? '' : 'text-faint'}`}
+                >
+                  <option value="">{copy.country}</option>
+                  {countries ? (
+                    <>
+                      {countries.top.map((item) => (
+                        <option key={item.code} value={item.code}>{item.name}</option>
+                      ))}
+                      <option disabled>──────────</option>
+                      {countries.rest.map((item) => (
+                        <option key={item.code} value={item.code}>{item.name}</option>
+                      ))}
+                    </>
+                  ) : null}
+                </select>
+              </label>
+              {showCountryError ? (
+                <p id="warteliste-land-fehler" className="text-[13px] font-medium text-[#a3361f]">
+                  {countryError}
                 </p>
               ) : null}
             </div>

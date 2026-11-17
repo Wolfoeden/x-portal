@@ -7,7 +7,12 @@ create type public.waitlist_interest as enum ('workation', 'rent');
 create table public.waitlist_entries (
   id uuid primary key default gen_random_uuid(),
   node text not null default 'node001' check (node ~ '^[a-z0-9-]{1,40}$'),
-  first_name text check (first_name is null or char_length(trim(first_name)) between 2 and 120),
+  first_name text check (first_name is null or char_length(trim(first_name)) between 1 and 120),
+  last_name text check (last_name is null or char_length(trim(last_name)) between 1 and 120),
+  -- Land, in dem die Person lebt (ISO 3166-1 alpha-2, z. B. DE, UA). Formular vom 17.11.2026.
+  country text check (country is null or country ~ '^[A-Z]{2}$'),
+  -- has_work = hat schon Arbeit, seeks_work = sucht Arbeit über XPORTAL (Rollen am Ort, digitale Nomaden). Freiwillig.
+  work text check (work is null or work in ('has_work', 'seeks_work')),
   email extensions.citext not null check (private.valid_email(email::text)),
   interest public.waitlist_interest not null,
   timing text not null check (timing in ('now', 'later')),

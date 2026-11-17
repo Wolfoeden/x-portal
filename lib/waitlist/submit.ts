@@ -15,20 +15,27 @@ const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 // Nur Miete: Es wird nichts verkauft (Plan vom 13.11.2026, D45 und D48; Kommentar vom 17.11.2026).
 export const WAITLIST_USES = ['workation', 'mieten'] as const
 export const WAITLIST_STARTS = ['sofort', 'spaeter'] as const
+/** Arbeit (freiwillig, seit 17.11.2026): hat schon Arbeit oder sucht Arbeit über XPORTAL. */
+export const WAITLIST_WORK = ['habe', 'suche'] as const
 /** Fassung des Einwilligungstexts auf der Seite. Ändert sich der Text, ändert sich diese Kennung. */
-export const WAITLIST_CONSENT_VERSION = 'orte-2026-11-17-node001'
+export const WAITLIST_CONSENT_VERSION = 'orte-2026-11-17b-node001'
 export const WAITLIST_PER_DAY = 5
 const LINK_DAYS = 7
 
 // Werte in der Datenbank, englisch wie die übrigen Aufzählungen dort.
 const INTEREST = { workation: 'workation', mieten: 'rent' } as const
 const TIMING = { sofort: 'now', spaeter: 'later' } as const
+const WORK = { habe: 'has_work', suche: 'seeks_work' } as const
 
 export const WaitlistBody = z.object({
   use: z.enum(WAITLIST_USES),
   start: z.enum(WAITLIST_STARTS),
-  firstName: z.string().trim().max(120).optional(),
+  firstName: z.string().trim().min(1).max(120),
+  lastName: z.string().trim().min(1).max(120),
   email: z.string().trim().max(254).regex(EMAIL),
+  // Land, in dem die Person lebt (ISO 3166-1 alpha-2).
+  country: z.string().trim().regex(/^[A-Z]{2}$/),
+  work: z.enum(WAITLIST_WORK).optional(),
   consent: z.literal(true),
   locale: z.enum(['de', 'en']),
   // Kampagnen-Link, z. B. ?angebot=workation. Nur zur Auswertung, deshalb kurz und frei.
@@ -57,9 +64,11 @@ export async function submitWaitlist(input: WaitlistInput, visitor: Visitor, ori
   if (allowed.data !== true) return { ok: false, reason: 'limit' }
 
   const { error } = await db.from('waitlist_entries').insert({
-    // Der Vorname ist freiwillig; ein einzelner Buchstabe gilt als leer.
-    first_name: input.firstName && input.firstName.length >= 2 ? input.firstName : null,
+    first_name: input.firstName,
+    last_name: input.lastName,
     email: input.email,
+    country: input.country,
+    work: input.work ? WORK[input.work] : null,
     interest: INTEREST[input.use],
     timing: TIMING[input.start],
     campaign: input.offer || null,
@@ -93,7 +102,7 @@ export async function confirmWaitlist(token: string | null, db: SupabaseClient |
     .eq('confirm_token_hash', hashToken(token))
     .eq('status', 'pending')
     .gt('confirm_expires_at', now)
-    .select('first_name, email, interest, timing, campaign, locale')
+    .select('first_name, last_name, email, country, work, interest, timing, campaign, locale')
     .maybeSingle()
   if (error) {
     console.error(JSON.stringify({ event: 'waitlist_failed', stage: 'confirm', code: error.code }))

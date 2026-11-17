@@ -622,3 +622,19 @@ Vorgabe der Projektleitung vom 17.11.2026; geändert auf Deutsch und Englisch.
 - Neuer Einleitungstext: „Wir bauen Node001 von Grund auf, Abschnitt für Abschnitt. Wer früh dabei ist, gestaltet mit: wie es aussieht, wie wir bauen und wie wir zusammen leben.“ Das zahlt auf den Sternbild-Begriff Freiheit ein.
 - Schritt 02 heißt jetzt „Infos bekommen und mitgestalten, wie Node001 entsteht“.
 - Index: Die Limbic-Tabelle führt diese Formulierung in der Zeile Freiheit.
+
+## 17.11.2026 (später) · Whitelist-Formular: Name, Land, Arbeit
+
+Vorgabe der Projektleitung vom 17.11.2026; geändert auf Deutsch und Englisch.
+
+- Bei „Länger bleiben“ steht jetzt „Mehrere Wochen oder Monate“. „Mit eigener Wohneinheit“ ist gestrichen.
+- Pflichtangaben:
+  - Vor- und Nachname
+  - E-Mail-Adresse
+  - Land, in dem man lebt (Ländercode nach ISO 3166-1, vorbelegt aus der Browsersprache)
+- Freiwillig ist die neue Frage „Und deine Arbeit?“ mit zwei Antworten: „Ich habe schon Arbeit“ oder „Ich suche Arbeit über XPORTAL“. Das passt zu den Rollen am Ort (digitale Nomaden).
+- Die Bearbeitungszeit heißt jetzt „unter einer Minute“.
+- Datenbank: Die Migration `20261103090000_warteliste.sql` hat drei neue Felder: `last_name`, `country` und `work`. Sie ist weiter nicht eingespielt; das geschieht nur mit Freigabe.
+- Die Einwilligungsfassung ist jetzt `orte-2026-11-17b-node001`.
+- Die Benachrichtigungsmail nennt Name, Land und Arbeit.
+- Die Datenschutzerklärung nennt die neuen Angaben.

@@ -5,7 +5,7 @@ import { waitlistConfirmLink, waitlistNotification } from '@/lib/email/messages'
 
 const TOKEN = 'a'.repeat(64)
 const visitor = { key: 'k'.repeat(64), bucket: 'analyse' as const }
-const input = WaitlistBody.parse({ use: 'workation', start: 'sofort', firstName: ' Lena ', email: 'lena@example.com', consent: true, locale: 'de', offer: 'workation' })
+const input = WaitlistBody.parse({ use: 'workation', start: 'sofort', work: 'suche', firstName: ' Lena ', lastName: ' Berg ', email: 'lena@example.com', country: 'DE', consent: true, locale: 'de', offer: 'workation' })
 
 type Mail = { to: string; subject: string; text: string; replyTo?: string }
 
@@ -51,7 +51,10 @@ describe('Warteliste Node001: eintragen', () => {
     expect(rows[0]).toMatchObject({
       table: 'waitlist_entries',
       first_name: 'Lena',
+      last_name: 'Berg',
       email: 'lena@example.com',
+      country: 'DE',
+      work: 'seeks_work',
       interest: 'workation',
       timing: 'now',
       campaign: 'workation',
@@ -65,12 +68,21 @@ describe('Warteliste Node001: eintragen', () => {
     expect(mails[0].text).toContain(`https://x-portal.eu/api/waitlist/confirm?token=${TOKEN}&lang=de`)
   })
 
-  it('übersetzt Nutzung und Zeitpunkt in die Werte der Datenbank', async () => {
+  it('übersetzt Nutzung, Zeitpunkt und Arbeit in die Werte der Datenbank; Arbeit ist freiwillig', async () => {
     const { db, rows } = fakeDb()
-    await submitWaitlist({ ...input, use: 'workation', start: 'spaeter', firstName: undefined, offer: undefined }, visitor, 'https://x-portal.eu', db, send, TOKEN)
-    await submitWaitlist({ ...input, use: 'mieten', firstName: 'L' }, visitor, 'https://x-portal.eu', db, send, TOKEN)
-    expect(rows[0]).toMatchObject({ interest: 'workation', timing: 'later', first_name: null, campaign: null })
-    expect(rows[1]).toMatchObject({ interest: 'rent', timing: 'now', first_name: null })
+    await submitWaitlist({ ...input, use: 'workation', start: 'spaeter', work: undefined, offer: undefined }, visitor, 'https://x-portal.eu', db, send, TOKEN)
+    await submitWaitlist({ ...input, use: 'mieten', work: 'habe' }, visitor, 'https://x-portal.eu', db, send, TOKEN)
+    expect(rows[0]).toMatchObject({ interest: 'workation', timing: 'later', work: null, campaign: null })
+    expect(rows[1]).toMatchObject({ interest: 'rent', timing: 'now', work: 'has_work' })
+  })
+
+  it('verlangt Vor- und Nachnamen und ein Land als Ländercode', () => {
+    const base = { use: 'workation', start: 'sofort', firstName: 'Lena', lastName: 'Berg', email: 'lena@example.com', country: 'UA', consent: true, locale: 'de' }
+    expect(WaitlistBody.safeParse(base).success).toBe(true)
+    expect(WaitlistBody.safeParse({ ...base, lastName: ' ' }).success).toBe(false)
+    expect(WaitlistBody.safeParse({ ...base, firstName: undefined }).success).toBe(false)
+    expect(WaitlistBody.safeParse({ ...base, country: 'Ukraine' }).success).toBe(false)
+    expect(WaitlistBody.safeParse({ ...base, work: 'vielleicht' }).success).toBe(false)
   })
 
   it('meldet dem Postfach noch nichts: Der Eintrag ist erst nach dem Klick bestätigt', async () => {
@@ -139,7 +151,11 @@ describe('Warteliste Node001: Mails', () => {
     const text = waitlistNotification({ first_name: null, email: 'lena@example.com', interest: 'rent', timing: 'now', campaign: null, locale: 'de' }).text
     expect(text).toContain('Nutzung: Länger bleiben')
     expect(text).toContain('Ab wann: Sofort')
-    expect(text).toContain('Vorname: –')
+    expect(text).toContain('Name: –')
+    const full = waitlistNotification({ first_name: 'Lena', last_name: 'Berg', email: 'l@x.eu', country: 'UA', work: 'seeks_work', interest: 'workation', timing: 'now', campaign: null, locale: 'de' }).text
+    expect(full).toContain('Name: Lena Berg')
+    expect(full).toContain('Land: UA')
+    expect(full).toContain('Arbeit: sucht Arbeit über XPORTAL')
     expect(text).toContain('Kampagne: –')
   })
 })
