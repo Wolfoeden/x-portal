@@ -1,8 +1,11 @@
-import base64
+import base64, json
 from pathlib import Path
 img = lambda n: 'data:image/jpeg;base64,' + base64.b64encode((Path(__file__).resolve().parent.parent / 'bilder' / n).read_bytes()).decode()
 def cards(items, cls='c3'):
     return f'<div class="grid {cls}">' + ''.join(f'<div class="card"><p class="tag">{t}</p><h3>{h}</h3><p>{p}</p></div>' for t, h, p in items) + '</div>'
+TECH = json.loads((Path(__file__).resolve().parents[2] / 'technik' / 'technik.json').read_text())  # Technik der Company, ohne Beträge nach außen
+import re as _re
+for _t in TECH['stack']: _t['zweck'] = _re.sub(r'\s*\([^)]*(AP-|IT0)[^)]*\)|;\s*läuft auf IT0\d und IT0\d', '', _t['zweck'])
 def lst(items): return '<ul>' + ''.join(f'<li>{x}</li>' for x in items) + '</ul>'
 H = [('H1','Human Value','Erzeugt das Gesamtsystem messbaren Nutzen für die relevanten Nutzerrollen?'),
      ('H2','Autarkie und Resilienz','Erreichen kritische Funktionen die definierten Autonomie- und Ausfallziele?'),
@@ -58,7 +61,7 @@ ol.steps {{ list-style:none; padding:0; margin:0; display:grid; gap:10px; grid-t
 .steps .n {{ font-family:var(--mono); font-size:13px; color:var(--forest); padding-top:2px }} .steps b {{ color:var(--ink); display:block }} .steps span {{ font-size:14.5px }}
 .loop {{ display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:14.5px }} .loop span {{ background:var(--paper); border:1px solid var(--line); border-radius:999px; padding:5px 12px; color:var(--ink) }} .loop i {{ color:var(--muted); font-style:normal }}
 figure {{ margin:0 }} figure img {{ width:100%; height:auto; display:block; border-radius:6px }} figcaption {{ font-size:13px; color:var(--muted); margin-top:6px }}
-table {{ border-collapse:collapse; width:100%; font-size:15px; background:var(--paper) }} th, td {{ text-align:left; vertical-align:top; padding:10px 12px; border-top:1px solid var(--line) }}
+.tablewrap {{ overflow-x:auto }} table {{ border-collapse:collapse; width:100%; font-size:15px; background:var(--paper) }} th, td {{ text-align:left; vertical-align:top; padding:10px 12px; border-top:1px solid var(--line) }}
 th {{ font-family:var(--mono); font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); font-weight:500 }} td:first-child {{ font-family:var(--mono); font-size:13px; color:var(--forest); white-space:nowrap }} td b {{ color:var(--ink) }}
 .tw {{ overflow-x:auto; border:1px solid var(--line); border-radius:6px }}
 .cols {{ display:grid; gap:12px; grid-template-columns:repeat(auto-fit, minmax(min(100%,320px),1fr)) }}
@@ -95,7 +98,7 @@ a {{ color:var(--forest) }}
 
 <section id="erloese"><p class="num">04 · Das Geschäftsmodell</p><h2>Vier Erlösstufen mit unterschiedlichem Reifegrad</h2>
 {cards([('01 · Heute','Kundenprojekte','Bezahlte Leistungen für Unternehmen. Sie liefern Umsatz, Marktfeedback und reale Anwendungsfälle.'),
-        ('02 · In Entwicklung','Technologielösungen','Wiederkehrende Aufgaben sollen als wiederverwendbare oder betriebene Lösungen Erlöse bringen: zuerst KI, perspektivisch auch Robotik, Drohnen und mechanische Systeme.'),
+        ('02 · In Entwicklung','Technologielösungen','Wiederkehrende Aufgaben sollen als wiederverwendbare oder betriebene Lösungen Erlöse bringen: zuerst KI, perspektivisch auch Robotik, Drohnen und mechanische Systeme. Im Pilot mit Kunden: eine ISMS-App, die Zertifizierungen begleitet, unter anderem für Startups.'),
         ('03 · Node001','Miete und Services am Node','Wohnen und Arbeiten zur Miete sowie Leistungen vor Ort. Kein Immobilienverkauf im klassischen Sinn. Der Produktmix wird validiert.'),
         ('04 · Später','System-Skalierung','Standardisierung wird von Anfang an mitgedacht. Erlöse aus Betrieb, Technologie, Standards oder Partnerschaften erst nach nachgewiesener Reproduzierbarkeit.')], 'c4')}
 <h3>Das Geschäftsmodell auf einen Blick</h3>
@@ -132,10 +135,14 @@ a {{ color:var(--forest) }}
 
 <section id="stand"><p class="num">08 · Stand heute</p><h2>Reale Substanz, zentrale Nachweise fehlen noch</h2>
 <div class="status">
-<div class="card s-have"><h3>Vorhanden <span class="pill">belegt</span></h3>{lst(['Plattform x-portal.eu mit KI-Matching und Freelancer-Profilen','Grundstück im Besitz, mit Detailplan und Bebauungsplan','Geologiebericht mit Fachprüfung, Zusatzerkundung und Vermessung','Reference Architecture v0.4 als Arbeitsbaseline'])}</div>
+<div class="card s-have"><h3>Vorhanden <span class="pill">belegt</span></h3>{lst(['Plattform x-portal.eu mit KI-Matching und Freelancer-Profilen','Technische Infrastruktur im Betrieb: KI-Arbeitsplätze, Datenbank, Website, Microsoft 365, Transaktionen auf Cardano','ISMS-App für Zertifizierungen, im Pilot mit Kunden','Grundstück im Besitz, mit Detailplan und Bebauungsplan','Geologiebericht mit Fachprüfung, Zusatzerkundung und Vermessung','Reference Architecture v0.4 als Arbeitsbaseline'])}</div>
 <div class="card s-work"><h3>In Arbeit <span class="pill">läuft</span></h3>{lst(['Bauplanung für den Bereich von Phase 0 (Lage voraussichtlich festgelegt)','Whitelist der künftigen Mieter (wird eingerichtet)','Rechtliche Prüfung von Website, Miet- und Nutzungsmodell','Erste eigene KI-Agenten','Node001 System Architecture und parametrischer Business Case'])}</div>
 <div class="card s-open"><h3>Zu validieren <span class="pill">offen</span></h3>{lst(['Baukosten, Selbstkosten je Objekt und Produktmodell','Rechtliche Struktur der Gesellschaft für Node001','Finanzierung des ersten Bauabschnitts','Nachfrage, Auslastung und Cost-to-Serve','Daten- und Betriebsarchitektur zwischen Standorten und Organisation'])}</div>
-</div><p>Stand November 2026. Künftige Meilensteine sind Ziele, keine Zusagen.</p></section>
+</div>
+<h3>Technik, die schon läuft</h3><p>Die Company arbeitet heute auf einer eigenen digitalen Infrastruktur. Belegt wird sie nicht mit Unterlagen, sondern mit Nachweisen aus dem Betrieb.</p>
+<div class="tablewrap"><table><thead><tr><th>Bereich</th><th>Werkzeug</th><th>Wofür</th><th>Nachweis</th></tr></thead><tbody>{''.join(f'<tr><td>{t["bereich"]}</td><td>{t["werkzeug"]}</td><td>{t["zweck"]}</td><td>{t["nachweis"]}</td></tr>' for t in TECH['stack'])}</tbody></table></div>
+<p>Weitere Erlösquellen in Vorbereitung: Staking auf Cardano nach rechtlicher und steuerlicher Prüfung.</p>
+<p>Stand November 2026. Künftige Meilensteine sind Ziele, keine Zusagen.</p></section>
 
 <section id="roadmap"><p class="num">09 · Der Weg</p><h2>Erst belegen, dann ausbauen</h2>
 <p>Die Roadmap ist eine Folge von Risikoabbau-Schritten, keine Reihe zugesagter Termine. Baubeginn 2027 ist das Ziel, und zwar nur nach technischen, wirtschaftlichen und finanziellen Gates.</p>
@@ -177,4 +184,5 @@ a {{ color:var(--forest) }}
 <footer>Kein öffentliches Angebot von Wertpapieren, Vermögensanlagen oder Kryptowerten; keine Anlageberatung. Vertraulicher Diskussionsstand, November 2026. Künftige Meilensteine sind Ziele, keine Zusagen. Grundlage: X-PORTAL Reference Architecture v0.4 (Working Baseline, 12.11.2026) und Investor Deck, Working Draft, November 2026.</footer>
 </div>'''
 html = html.replace('<p></p>', '')
+_i = html.index('<h3>Technik, die schon läuft</h3>'); assert '€' not in html[_i:html.index('</section>', _i)], 'Beträge zur Technik im Whitepaper (Wahl 14.11.: keine Beträge nach außen)'
 (Path(__file__).resolve().parent.parent / 'x-portal-whitepaper.body.html').write_text(html); print(len(html))

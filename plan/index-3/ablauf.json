@@ -270,6 +270,45 @@
    "quelle": null
   },
   {
+   "id": "AP-A10",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "PL",
+   "nach": [],
+   "titel": "Nachweise der Technik",
+   "lang": "Nachweise der Technik sammeln: was schon läuft",
+   "baum": "b-AP-A10",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-A11",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "PL",
+   "nach": [],
+   "titel": "ISMS-App: Pilot auswerten",
+   "lang": "ISMS-App: Pilot auswerten, Preismodell, Referenz",
+   "baum": "b-AP-A11",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
+   "id": "AP-A12",
+   "ab": "A",
+   "art": "aufgabe",
+   "bahn": "GF",
+   "nach": [],
+   "titel": "Staking: Rechts- und Steuerprüfung",
+   "lang": "Staking und Stake-Pool auf Cardano: Rechts- und Steuerprüfung",
+   "baum": "b-AP-A12",
+   "erledigt_im_plan": false,
+   "dauer": null,
+   "quelle": null
+  },
+  {
    "id": "AP-A7",
    "ab": "A",
    "art": "aufgabe",
@@ -277,10 +316,12 @@
    "nach": [
     "O03",
     "AP-A9",
-    "AP-A6"
+    "AP-A6",
+    "AP-A10",
+    "AP-A11"
    ],
-   "titel": "Investorenunterlagen",
-   "lang": "Investorenunterlagen auf den Stand bringen",
+   "titel": "Geschäftsplan, Whitepaper, Deck",
+   "lang": "Geschäftsplan, Whitepaper und Pitch Deck aus dem Index erzeugen",
    "baum": "b-AP-A7",
    "erledigt_im_plan": false,
    "dauer": null,
@@ -949,6 +990,9 @@
   "AP-A5",
   "O03",
   "AP-A9",
+  "AP-A10",
+  "AP-A11",
+  "AP-A12",
   "AP-A7",
   "G0",
   "AP-B1",
@@ -992,5 +1036,179 @@
   "AP-H1",
   "AP-H2",
   "AP-H3"
- ]
+ ],
+ "technik": {
+  "stand": "2026-11-17",
+  "fix_je_monat_ohne_m365": 248.33,
+  "m365_spanne_je_nutzer": [
+   20.0,
+   22.0
+  ],
+  "stack": [
+   {
+    "id": "IT01",
+    "bereich": "KI",
+    "werkzeug": "ChatGPT",
+    "zweck": "KI-Arbeitsplatz: Recherche, Texte, Code, Agenten",
+    "betrag": 90.0,
+    "einheit": "Monat",
+    "quelle": "Angabe der Projektleitung vom 17.11.2026",
+    "nachweis": "Abo-Rechnung; Nutzung in Projekten",
+    "hinweis": "",
+    "je_monat": 90.0
+   },
+   {
+    "id": "IT02",
+    "bereich": "KI",
+    "werkzeug": "Claude",
+    "zweck": "KI-Arbeitsplatz: Planung, Code, Auswertung",
+    "betrag": 90.0,
+    "einheit": "Monat",
+    "quelle": "Angabe der Projektleitung vom 17.11.2026",
+    "nachweis": "Abo-Rechnung; Repository mit Commits",
+    "hinweis": "",
+    "je_monat": 90.0
+   },
+   {
+    "id": "IT03",
+    "bereich": "Web",
+    "werkzeug": "Website-Hosting",
+    "zweck": "Website und Plattform x-portal.eu",
+    "betrag": 10.0,
+    "einheit": "Monat",
+    "quelle": "Angabe der Projektleitung vom 17.11.2026",
+    "nachweis": "Live-URL; Hosting-Rechnung",
+    "hinweis": "",
+    "je_monat": 10.0
+   },
+   {
+    "id": "IT04",
+    "bereich": "Daten",
+    "werkzeug": "Supabase",
+    "zweck": "Datenbank und Backend der Plattform",
+    "betrag": 25.0,
+    "einheit": "Monat",
+    "quelle": "Angabe der Projektleitung vom 17.11.2026",
+    "nachweis": "Projekt-Dashboard: Tabellen, Nutzer, Abfragen",
+    "hinweis": "",
+    "je_monat": 25.0
+   },
+   {
+    "id": "IT05",
+    "bereich": "Blockchain",
+    "werkzeug": "Cardano-Transaktionen",
+    "zweck": "Nachweise und Zahlungen on-chain; Grundlage für Zugang und Erfassung (AP-D5, AP-F4)",
+    "betrag": 0.02,
+    "einheit": "Transaktion",
+    "quelle": "Angabe der Projektleitung vom 17.11.2026: 0,16 ADA, umgerechnet etwa 2 Cent",
+    "nachweis": "Transaktions-Hashes, öffentlich im Explorer prüfbar",
+    "hinweis": "ADA-Kurs schwankt; Anzahl je Monat offen",
+    "je_monat": null
+   },
+   {
+    "id": "IT06",
+    "bereich": "Marketing",
+    "werkzeug": "X Premium mit Grok-Bot",
+    "zweck": "Marketing und Reichweite auf X; Grok-Bot im Abo enthalten",
+    "betrag": 30.0,
+    "einheit": "Monat",
+    "quelle": "Angabe der Projektleitung vom 17.11.2026",
+    "nachweis": "Profil, Reichweitenzahlen, Abo-Beleg",
+    "hinweis": "",
+    "je_monat": 30.0
+   },
+   {
+    "id": "IT07",
+    "bereich": "Büro",
+    "werkzeug": "Microsoft 365 Business Premium",
+    "zweck": "E-Mail, Teams, OneDrive, Office, Sicherheit und Geräteverwaltung",
+    "betrag": null,
+    "einheit": "Nutzer und Monat",
+    "quelle": "Listenpreis etwa 20–22 € netto je Nutzer und Monat im Jahresabo (Händlerlisten 08/2026; Microsoft-Seite am 17.11.2026 nicht erreichbar); Betrag aus der Rechnung übernehmen",
+    "nachweis": "Rechnung; Mandant mit Nutzern",
+    "hinweis": "Nutzerzahl offen",
+    "je_monat": null
+   },
+   {
+    "id": "IT08",
+    "bereich": "Web",
+    "werkzeug": "Domain",
+    "zweck": "x-portal.eu",
+    "betrag": 40.0,
+    "einheit": "Jahr",
+    "quelle": "Angabe der Projektleitung vom 17.11.2026",
+    "nachweis": "Registrierung",
+    "hinweis": "",
+    "je_monat": 3.33
+   },
+   {
+    "id": "IT09",
+    "bereich": "Plattform",
+    "werkzeug": "Plattform x-portal.eu",
+    "zweck": "KI-Matching und Freelancer-Profile; läuft auf IT03 und IT04",
+    "betrag": null,
+    "einheit": "Monat",
+    "quelle": "eigene Entwicklung; Kosten stecken in IT03 und IT04",
+    "nachweis": "Live-URL, Nutzerzahlen, Repository",
+    "hinweis": "",
+    "je_monat": null
+   }
+  ],
+  "erloese": [
+   {
+    "id": "ER-K",
+    "quelle": "Kundenprojekte über die DT Agentur (Deutschland, Österreich, Schweiz)",
+    "stufe": "01 · Heute",
+    "reife": "läuft",
+    "stand": "Kundenprojekte heute (D51)",
+    "nachweis": "Rechnungen, Referenzen",
+    "naechstes": "erster bezahlter Auftrag mit Testkarte (2.6.1)"
+   },
+   {
+    "id": "ER-I",
+    "quelle": "ISMS-App: Zertifizierungen, unter anderem für Startups",
+    "stufe": "02 · Technologielösungen",
+    "reife": "Pilot mit Kunden",
+    "stand": "Angabe der Projektleitung vom 17.11.2026",
+    "nachweis": "Pilotkunden, Nutzung der App, Kundenstimme",
+    "naechstes": "Pilot auswerten, Preismodell, Referenz (AP-A11)"
+   },
+   {
+    "id": "ER-A",
+    "quelle": "KI-Agenten",
+    "stufe": "02 · Technologielösungen",
+    "reife": "in Entwicklung",
+    "stand": "Teilergebnis 2.6.4: Verkauf über Masumi später",
+    "nachweis": "Repository, erste Nutzung",
+    "naechstes": "Preismodell (2.6.2)"
+   },
+   {
+    "id": "ER-P",
+    "quelle": "Plattform x-portal.eu mit KI-Matching",
+    "stufe": "Plattform",
+    "reife": "läuft, Erlösmodell offen",
+    "stand": "Whitepaper „Vorhanden“",
+    "nachweis": "Live-URL, Profile, Matches",
+    "naechstes": "Erlösmodell festlegen"
+   },
+   {
+    "id": "ER-S",
+    "quelle": "Staking oder Stake-Pool auf Cardano",
+    "stufe": "Blockchain",
+    "reife": "Stand offen",
+    "stand": "Angabe der Projektleitung vom 17.11.2026 (Antwort auf die Frage nach Einnahmen über die Blockchain)",
+    "nachweis": "Stake-Pool-ID oder Staking-Adresse, öffentlich prüfbar",
+    "naechstes": "Rechts- und Steuerprüfung (AP-A12)"
+   },
+   {
+    "id": "ER-N",
+    "quelle": "Miete und Services am Node001",
+    "stufe": "03 · Node001",
+    "reife": "vor dem Bau",
+    "stand": "D45, D48, D50",
+    "nachweis": "Whitelist, später Mietverträge und Mieterlöse (AP-F3)",
+    "naechstes": "Whitelist einrichten (AP-A8)"
+   }
+  ]
+ }
 }

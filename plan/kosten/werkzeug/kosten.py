@@ -181,8 +181,8 @@ def page(D):
         o.append(f'<tr class="sum"><td></td><td>Summe Stufe, alle Varianten</td><td></td><td class="num">{span(lo, hi)}</td><td class="num">{span(lo, hi, "EUR")}</td><td class="num">{h}</td><td></td></tr></tbody></table></div></section>')
     v = V['Optimum']
     o.append(f'''<section><h2>Eigenleistung</h2>
-<p>Im Optimum stecken {v["stunden"]} Stunden eigene Arbeit. Bewertet mit {STUNDENSATZ_UAH} UAH je Stunde (aus dem Register: 30.000 UAH im Monat für eine Betriebsrolle) sind das {n(v["stunden"] * STUNDENSATZ_UAH)} UAH oder {eur(v["stunden"] * STUNDENSATZ_UAH)} €. Mit einem deutschen Stundensatz wäre der Wert ein Vielfaches.</p>
-<ul><li>Stunden, Fotos und Ergebnisse laufend festhalten: Datum, Rolle, Tätigkeit, Dauer. Das ist der Beleg gegenüber Investoren.</li><li>Ob und mit welchem Satz Eigenleistung als Einlage zählt, prüft ein Steuerberater. Die Zahl oben ist eine Annahme.</li><li>Der größere Hebel ist nicht der Stundenwert, sondern das beseitigte Risiko: Ein geprüfter Boden und ein Kostenband aus Angeboten senken den Abschlag, den ein Investor verlangt.</li></ul></section>''')
+<p>Im Optimum stecken {v["stunden"]} Stunden eigene Arbeit. Nach D70 (Antwort vom 17.11.2026) wird sie nur dokumentiert und Investoren gezeigt, nicht in Geld bewertet.</p>
+<ul><li>Stunden, Fotos und Ergebnisse laufend festhalten: Datum, Rolle, Tätigkeit, Dauer. Das ist der Beleg gegenüber Investoren; im Cockpit des Index stehen Dauer und Ergebnis je Schritt.</li><li>Der größere Hebel ist nicht der Stundenwert, sondern das beseitigte Risiko: Angebote statt Richtwerte, eine geklärte Struktur und belegte Nachfrage senken den Abschlag, den ein Investor verlangt.</li></ul></section>''')
     R, K = D['register'], D['investor_ask']
     o.append(f'''<section><h2>Was danach mit Investoren finanziert wird</h2>
 <p>Das Register rechnet für eine kleine Phase 0 (ein Modul mit 18 m², zwei Personen) einmalig {span(*R["einmalig"])} UAH und für zwölf Monate Betrieb {span(*R["betrieb"])} UAH. Nach Abzug der Posten aus dem Paket bleiben:</p>

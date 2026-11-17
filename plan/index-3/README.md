@@ -13,6 +13,7 @@ Was sich wann und warum geändert hat, steht in `aenderungsprotokoll.md`.
 | `werkzeug/ablauf.py` | Ast 1: Grundbestimmungen GB1–GB11, KI-Arbeitsteilung, Ablaufplan A–H mit Arbeitspaketen, Unterlagen und Aufträgen. |
 | `werkzeug/netz.py` | Ablauf als Netz (Vorgänger, Dauer, Rolle) für Cockpit und BPMN; Export `ablauf.json`. |
 | `werkzeug/cockpit.py` | Cockpit oben im Index: abhaken, jetzt dran, Bestelltermine, Anbietervergleich, BPMN. Speicher: status, angebote, wahl, werte. |
+| `../technik/werkzeug/technik.py` | Technik der Company: Werkzeuge IT01–IT09 mit Kosten, Quelle und Nachweis; Erlösquellen. Quelle für Ast 9, Cockpit, Whitepaper. |
 | `werkzeug/uebernahme.py` | Aus dem Index 2.0 übernommene Teilergebnisse, Steuerung, Methoden, Prüfaufträge; Liste des Entfallenen. |
 | `auftraege/` | Aufträge für die ausführende KI, aus `ablauf.py` erzeugt. |
 | `../pruefe_alle.py` | Prüft den Text aller Seiten auf alten Stand; der Generator ruft es auf. |

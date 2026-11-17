@@ -53,6 +53,10 @@ HTML = r'''<section id="cockpit"><h2>Cockpit: wo wir stehen, was jetzt dran ist<
 <p class="ck-note">Je Angebot: Lieferzeit, Lieferform und Maße des größten Teils. Ein Angebot, dessen größtes Teil über dem Wert aus der Streckenmessung (AP-A0) liegt, wird rot markiert. Die Wahl setzt die Lieferzeit in die Rechnung.</p>
 <div class="ck-tw"><table class="ck-tab" id="ck-ang"><thead><tr><th>Wahl</th><th>Anbieter</th><th>Herkunft</th><th>Lieferzeit Tage</th><th>Lieferform</th><th>Montage oben</th><th>Größtes Teil L×B×H m</th><th>Schwerstes Teil kg</th><th>Preis</th><th>Bestell-Link</th><th>Transport</th><th></th></tr></thead><tbody></tbody></table></div>
 <p><button type="button" class="ck-btn" id="ck-neu">Angebot hinzufügen</button></p>
+<h3 class="ck-h3" id="ck-technik">Technik im Betrieb: Kosten und Nachweise</h3>
+<p class="ck-note">Was den Investoren zeigt, dass die Infrastruktur genutzt wird: je Werkzeug ein Nachweis-Link (Rechnung, Live-URL, Dashboard, Transaktions-Hash, Repository), seit wann und wie es genutzt wird. Keine Zugangsdaten und keine personenbezogenen Daten eintragen. Mehr in <a href="#b-digital">Ast 9</a>.</p>
+<div class="ck-order" id="ck-tsum"></div>
+<div class="ck-tw"><table class="ck-tab" id="ck-tech"><thead><tr><th>Nr</th><th>Werkzeug</th><th>Kosten je Monat</th><th>Nachweis-Link</th><th>seit</th><th>Nutzung</th></tr></thead><tbody></tbody></table></div>
 <h3 class="ck-h3" id="ck-bpmn">Ablauf als BPMN 2.0</h3>
 <div class="ck-leg"><span class="l1">erledigt</span><span class="l3">in Arbeit</span><span class="l2">jetzt dran</span><span class="l4">kritisch oder zu spät</span></div>
 <p class="ck-note">Bahnen je Rolle, Abschnitte A bis H. Rechtecke sind Aufgaben, Rauten Entscheidungen und Gates, abgerundete Felder Ereignisse. Antippen springt zum Schritt im Baum. Seitlich scrollen.</p>
@@ -68,7 +72,7 @@ JS = r'''<script>
   var D = JSON.parse(document.getElementById('ck-daten').textContent);
   var K = {}; D.knoten.forEach(function(k){ K[k.id] = k; });
   var AB = {}; D.abschnitte.forEach(function(a){ AB[a[0]] = a[1]; });
-  var S = {}, A = {}, WAHL = null, W = {}, db = null, me = null, schreibbar = false;
+  var S = {}, A = {}, TE = {}, WAHL = null, W = {}, db = null, me = null, schreibbar = false;
   var heute = new Date(); heute.setHours(0,0,0,0);
   var $ = function(id){ return document.getElementById(id); };
   function el(t, cls, txt){ var e = document.createElement(t); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
@@ -205,6 +209,22 @@ JS = r'''<script>
     });
     if (!tb.children.length){ var tr0 = el('tr'), td = el('td', 'ck-note', 'Noch keine Angebote. „Angebot hinzufügen“ legt eine Zeile an.'); td.colSpan = 12; tr0.appendChild(td); tb.appendChild(tr0); }
     $('ck-neu').disabled = !schreibbar;
+    // Technik
+    var T = D.technik || {stack: []}, nutzer = zahl(W.m365_nutzer), spanne = T.m365_spanne_je_nutzer || [null, null];
+    var ts = $('ck-tsum'); ts.textContent = '';
+    var fix = T.fix_je_monat_ohne_m365 || 0, eur = function(x){ return x.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €'; };
+    ts.appendChild(el('span', 'big', 'Fest je Monat: ' + (nutzer != null ? eur(fix + nutzer * spanne[0]) + ' bis ' + eur(fix + nutzer * spanne[1]) : eur(fix) + ' plus Microsoft 365')));
+    ts.appendChild(el('span', 'ck-note', 'Ohne Microsoft 365: ' + eur(fix) + '. Microsoft 365 Business Premium etwa ' + spanne[0] + '–' + spanne[1] + ' € je Nutzer und Monat (Listenpreis laut Händlern; Betrag aus der Rechnung übernehmen). Cardano je Transaktion etwa 2 Cent.'));
+    var nl = el('label', 'ck-note', 'Nutzer Microsoft 365: '), ni = el('input'); ni.type = 'number'; ni.min = '0'; ni.style.width = '5em'; ni.value = W.m365_nutzer || ''; ni.disabled = !schreibbar;
+    ni.onchange = function(){ speichere('werte/node001', {m365_nutzer: ni.value}); }; nl.appendChild(ni); ts.appendChild(nl);
+    var tbt = document.querySelector('#ck-tech tbody'); tbt.textContent = '';
+    T.stack.forEach(function(t){ var r = TE[t.id] || {}, tr = el('tr');
+      tr.appendChild(el('td', null, t.id)); tr.appendChild(el('td', null, t.werkzeug));
+      tr.appendChild(el('td', null, t.je_monat != null ? eur(t.je_monat) : (t.id === 'IT07' ? (nutzer != null ? eur(nutzer * spanne[0]) + '–' + eur(nutzer * spanne[1]) : 'je Nutzer') : (t.einheit === 'Transaktion' ? 'je Transaktion' : 'in anderen enthalten'))));
+      [['link', 'url', '14em'], ['seit', 'date', '9em'], ['nutzung', 'text', '14em']].forEach(function(f){ var td = el('td'), i = el('input'); i.type = f[1]; i.style.width = f[2]; i.value = r[f[0]] || ''; i.disabled = !schreibbar;
+        i.onchange = function(){ var p = {}; p[f[0]] = i.value; if (db && schreibbar) db.doc('technik/' + t.id).set(Object.assign({}, TE[t.id] || {}, p, {von: me || '', am: new Date().toISOString()})); };
+        td.appendChild(i); if (f[0] === 'link' && r.link){ var a2 = el('a', null, ' ↗'); a2.href = r.link; a2.target = '_blank'; a2.rel = 'noreferrer'; td.appendChild(a2); } tr.appendChild(td); });
+      tbt.appendChild(tr); });
     // BPMN färben
     D.knoten.forEach(function(k){ var g = document.getElementById('bp-' + k.id); if (!g) return; var st = status(k.id);
       g.setAttribute('class', 'bp-n ' + (st === 'erledigt' ? 'st-erledigt' : st === 'in Arbeit' ? 'st-arbeit' : dran(k.id) ? 'st-dran' : 'st-offen') + ((R.LS[k.id] && R.ES[k.id] && R.LS[k.id] <= R.ES[k.id]) || (R.LS[k.id] && R.LS[k.id] < heute) ? ' krit' : '')); });
@@ -228,10 +248,11 @@ JS = r'''<script>
       if (user){ try { me = await user.id(); } catch(e){} try { var c = user.can ? await user.can('data.write') : null; schreibbar = c !== false; } catch(e){ schreibbar = true; } } else schreibbar = !!db;
     } catch(e){ db = null; }
     if (!db){ clearTimeout(timer); $('ck-status').textContent = 'Speichern ist hier nicht verfügbar. Auf claude.ai angemeldet öffnen, um abzuhaken und einzutragen. Angezeigt wird der Stand aus dem Plan.'; return; }
-    var geladen = 0, fertig = function(){ if (++geladen >= 4){ clearTimeout(timer); $('ck-status').textContent = schreibbar ? 'Einträge werden gespeichert und sind für alle sichtbar, die den Index öffnen dürfen.' : 'Nur Ansicht: Eintragen dürfen Mitwirkende.'; } };
+    var geladen = 0, fertig = function(){ if (++geladen >= 5){ clearTimeout(timer); $('ck-status').textContent = schreibbar ? 'Einträge werden gespeichert und sind für alle sichtbar, die den Index öffnen dürfen.' : 'Nur Ansicht: Eintragen dürfen Mitwirkende.'; } };
     var fehler = function(e){ clearTimeout(timer); $('ck-status').textContent = 'Laden fehlgeschlagen: ' + (e && e.message || 'unbekannt'); };
     db.collection('status').onSnapshot(function(sn){ S = {}; sn.docs.forEach(function(d){ S[d.id] = d.data() || {}; }); fertig(); render(); }, fehler);
     db.collection('angebote').onSnapshot(function(sn){ A = {}; sn.docs.forEach(function(d){ A[d.id] = d.data() || {}; }); fertig(); render(); }, fehler);
+    db.collection('technik').onSnapshot(function(sn){ TE = {}; sn.docs.forEach(function(d){ TE[d.id] = d.data() || {}; }); fertig(); render(); }, fehler);
     db.doc('wahl/AP-C1').onSnapshot(function(d){ WAHL = d && d.data && d.data() ? d.data().angebot : null; fertig(); render(); }, fehler);
     db.doc('werte/node001').onSnapshot(function(d){ W = (d && d.data && d.data()) || {}; fertig(); render(); }, fehler);
   })();

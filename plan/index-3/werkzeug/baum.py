@@ -187,7 +187,7 @@ THEMA = {'D34': 'Feuerstelle, Gastronomie, Kapelle', 'D35': 'Sauna', 'D36': 'Ess
          'D42': 'Vision und Mission', 'D43': 'Entscheidungsrechte', 'D44': 'Organisation', 'D45': 'Wer oben wohnt', 'D46': 'Kapital Node001', 'D47': 'Kapital Company', 'D48': 'Produktmodell',
          'D49': 'Preislogik', 'D50': 'Start der Vermarktung', 'D51': 'Erlösstufen', 'D52': 'Einkommen der Geschäftsführung', 'D53': 'Zahlen für Investoren', 'D54': 'Geologie',
          'D55': 'Bauphasen', 'D56': 'Bauart', 'D57': 'Zufahrt und Transport', 'D58': 'Termine', 'D59': 'Strom', 'D60': 'Wärme', 'D61': 'Wasser', 'D62': 'Sanitär und Abwasser',
-         'D63': 'Internet', 'D64': 'Kommunalgebäude', 'D65': 'Mobilität', 'D66': 'Betrieb und Abnahme', 'D67': 'Team und Rollen', 'D68': 'Arbeitsweise'}
+         'D63': 'Internet', 'D64': 'Kommunalgebäude', 'D65': 'Mobilität', 'D66': 'Betrieb und Abnahme', 'D67': 'Team und Rollen', 'D68': 'Arbeitsweise', 'D69': 'Paket vor dem Investment', 'D70': 'Eigenleistung bewerten und belegen', 'D71': 'Ab wann Investoren ansprechen', 'D72': 'Welche Kosten zuerst mit Angeboten belegen'}
 
 OPT_TITEL_NEU = {('D55', 'A'): 'Objekt nur Übergang'}
 OPT_TEXT_NEU = {('D55', 'A'): 'Phase 0: ein Objekt als Übergang für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur; Phase 1 Wohn- und Arbeitsobjekte und Kommunalgebäude; Phase 2 Ausbau, die Herrenhaus-Fläche zuletzt (Wortlaut des Kommentars).', ('D45', 'C'): 'Zuerst Team und einige Mieter (Remote-Freelancer, Buchung etwa ein Jahr).', ('D64', 'A'): 'Das Kommunalgebäude ist der erste Bau in Phase 1, vor den übrigen Objekten; Garten daneben.'}
@@ -199,9 +199,10 @@ def karte(k):
     opts = [O(o['v'], OPT_TITEL_NEU.get((i, o['v']), o['titel']), OPT_TEXT_NEU.get((i, o['v']), o['text']), state=('done' if o['v'] == w else None)) for o in k['opts'] if offen or o['v'] == w]
     facts = []
     if a is not None:
-        facts.append(('Antwort 13.11.', (f'per Kommentar gewählt: {w}' + (f' ({SEITE.WAHL_PER_KOMMENTAR[i][1]})' if SEITE.WAHL_PER_KOMMENTAR[i][1] else '')) if (i in SEITE.WAHL_PER_KOMMENTAR and not (a or {}).get('wahl')) else LABEL.get(w, w)))
+        _d = ((a or {}).get('am') or '2026-11-13')[:10]; _lab = f'Antwort {_d[8:10]}.{_d[5:7]}.'
+        facts.append((_lab, (f'per Kommentar gewählt: {w}' + (f' ({SEITE.WAHL_PER_KOMMENTAR[i][1]})' if SEITE.WAHL_PER_KOMMENTAR[i][1] else '')) if (i in SEITE.WAHL_PER_KOMMENTAR and not (a or {}).get('wahl')) else LABEL.get(w, w)))
         if a.get('kommentar'):
-            facts.append(('Kommentar 13.11.', a['kommentar']))
+            facts.append((f'Kommentar {_d[8:10]}.{_d[5:7]}.', a['kommentar']))
     text = ('Gilt: ' + FOLGT[i]) if (not offen and i in FOLGT) else k['warum']
     return N('decision', i, TITEL_NEU.get(i, k['frage']), 'open' if offen else 'done', text=text, opts=opts, facts=facts, page=True)
 
@@ -636,6 +637,27 @@ def beschluss(n):
     keys = ('Vorbereitung', 'Fachliche Prüfung', 'Freigabe', 'Budgetgrenze', 'Gültigkeit', 'Wiedervorlage')
     return '<details class="dt-bb"><summary>Beschlussblatt (M03)</summary>' + facts_html(list(zip(keys, v))) + '</details>'
 
+import importlib.util as _ilu2
+_tsp = _ilu2.spec_from_file_location('technik', Path(__file__).resolve().parents[2] / 'technik' / 'werkzeug' / 'technik.py')
+TECHNIK = _ilu2.module_from_spec(_tsp); _tsp.loader.exec_module(TECHNIK)
+TD = TECHNIK.build()
+assert not TECHNIK.pruefe(TD), TECHNIK.pruefe(TD)
+def _eur(x): return f'{x:,.2f}'.replace(',', 'X').replace('.', ',').replace('X', '.') + ' €'
+def _kosten(t):
+    if t['betrag'] is None: return 'offen' if t['id'] != 'IT07' else f"etwa {TD['m365_spanne_je_nutzer'][0]:.0f}–{TD['m365_spanne_je_nutzer'][1]:.0f} € je Nutzer und Monat netto"
+    return _eur(t['betrag']) + ' je ' + t['einheit'] + (f" (≈ {_eur(t['je_monat'])} im Monat)" if t['einheit'] == 'Jahr' else '')
+REIFE = {'läuft': 'live', 'Pilot mit Kunden': 'run', 'in Entwicklung': 'run', 'läuft, Erlösmodell offen': 'live', 'Stand offen': 'open', 'vor dem Bau': 'later'}
+technik_ast = [
+    N('group', 'b-it', 'Infrastruktur im Betrieb (IT01 bis IT09)', text=f"Feste Kosten je Monat, soweit bekannt: {_eur(TD['fix_je_monat_ohne_m365'])} ohne Microsoft 365; dazu Microsoft 365 Business Premium je Nutzer (Nutzerzahl offen) und Cardano je Transaktion. Quelle: Angaben der Projektleitung vom 17.11.2026; Microsoft-Listenpreis aus Händlerlisten. Nachweise und Nutzung trägt das Team im Cockpit ein (AP-A10).",
+      kids=[N('step', t['id'], f"{t['werkzeug']}: {t['zweck']}", 'live',
+              facts=[('Bereich', t['bereich']), ('Kosten', _kosten(t)), ('Quelle', t['quelle']), ('Nachweis für Investoren', t['nachweis'])] + ([('Hinweis', t['hinweis'])] if t['hinweis'] else []))
+            for t in TD['stack']]),
+    N('group', 'b-erl', 'Digitale und weitere Erlösquellen', text='Zuordnung zu den Erlösstufen des Whitepapers. Beträge erst mit Belegen (D53).',
+      kids=[N('step', e['id'], e['quelle'], REIFE.get(e['reife'], 'open'),
+              facts=[('Erlösstufe', e['stufe']), ('Reifegrad', e['reife']), ('Stand', e['stand']), ('Nachweis', e['nachweis']), ('Nächster Schritt', e['naechstes'])])
+            for e in TD['erloese']]),
+]
+
 tree = [
     N('group', 'b-zielblatt', 'Grundlage: Mission, Ziele, Ort', raw='ZIELBLATT', label='root'),
     N('group', 'b-hauptweg', '1 · Ablaufplan von Schritt 1 bis Projektende: Arbeitspakete mit fertigen Unterlagen', kids=ast1, label='dt-spine',
@@ -651,12 +673,15 @@ tree = [
       text='Je Karte die Antwort und der Kommentar im Wortlaut; die gewählte Möglichkeit ist markiert. Wo der Kommentar die Wahl ändert, gilt der Kommentar.'),
     N('group', 'b-plan', '7 · Offen im Plan, noch ohne Karte auf der Entscheidungsseite', kids=imPlan,
       text='Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, Agentur und Node-Gesellschaft, Kapital, Rollen und Betrieb oben.'),
+    N('group', 'b-digital', '9 · Technik und digitale Erlöse der Company: was schon läuft', kids=technik_ast, opened=True,
+      text='Investoren sehen nicht nur Unterlagen, sondern eine Infrastruktur, die genutzt wird, und Erlösquellen mit Reifegrad. Getrennt von Node001, wie die zwei Investment Cases im Whitepaper. Quelle: plan/technik/technik.json.'),
     N('group', 'b-entschieden', '8 · Entschieden am 13.11.2026', kids=[
         N('group', 'g-13', 'Was seit 13.11.2026 gilt', kids=[N('decision', None, f'{i} · {THEMA[i]}', 'done', text=FOLGT[i]) for i in sorted(FOLGT) if i in ANT and i not in OFFEN_KARTEN and (ANT[i].get('wahl') or '') != 'unklar']),
 
     ]),
 ]
 
+tree = [n for n in tree if n.get('id') != 'b-digital'] + [n for n in tree if n.get('id') == 'b-digital']
 ZIEL = {'lage': ['Z1', 'Z2'], 'mieter': ['Z2'], 'O01': ['Z1', 'Z2'], 'O03': ['Z2'], 'G0': ['Z2'], 'verkauf': ['Z2'], 'O23': ['Z2'], 'G1': ['Z2'], 'frost': ['Z1'], 'G2': ['Z1'],
         'G3': ['Z1'], 'G4': ['Z1', 'Z3'], 'O05': ['Z2'], 'O12': ['Z2'], 'texte': ['Z2'], 'O31': ['Z1', 'Z2'], 'O04': ['Z3', 'X2'], 'preis': ['Z3'],
         'O11': ['X1'], 'D34': ['Z1'], 'D35': ['Z1'], 'D36': ['Z1'], 'D37': ['Z1', 'Z3'], 'D38': ['Z2'], 'D39': ['X1'], 'D40': ['Z2'], 'D41': ['Z2'],
@@ -780,7 +805,7 @@ def linkify(text):
     out.append(esc[last:])
     return ''.join(out)
 
-STATE = {'open': 'offen', 'wait': 'wartet', 'done': 'entschieden', 'rule': 'Regel steht', 'run': 'in Arbeit', 'later': 'später', 'untested': 'nicht geprüft'}
+STATE = {'live': 'läuft', 'open': 'offen', 'wait': 'wartet', 'done': 'entschieden', 'rule': 'Regel steht', 'run': 'in Arbeit', 'later': 'später', 'untested': 'nicht geprüft'}
 LIVE = {'open', 'wait', 'run', 'untested'}
 
 def facts_html(facts):
@@ -1080,7 +1105,7 @@ details.dt-vl pre { white-space:pre-wrap; word-break:break-word; font-size:12.5p
 a.dt-bchip:hover { border-color:var(--ink) }
 .dt-bpill { font-size:11.5px; font-weight:600; padding:2px 8px; border-radius:999px; white-space:nowrap; border:1px solid transparent }
 .st-open { background:var(--wait-bg); color:var(--wait) } .st-wait { background:transparent; color:var(--wait); border:1px dashed var(--wait) }
-.st-done, .st-rule { background:var(--go-bg); color:var(--go) } .st-run { background:var(--run-bg); color:var(--run) } .st-later { background:var(--bg); color:var(--muted); border-color:var(--line) }
+.st-done, .st-rule, .st-live { background:var(--go-bg); color:var(--go) } .st-run { background:var(--run-bg); color:var(--run) } .st-later { background:var(--bg); color:var(--muted); border-color:var(--line) }
 .dt-bgrp > details > summary .dt-bpill.st-open { background:var(--wait-bg); color:var(--wait) } .dt-bgrp > details > summary .dt-bpill.st-wait { background:var(--surface); color:var(--wait) } .dt-bgrp > details > summary .dt-bpill.st-done { background:var(--go-bg); color:var(--go) }
 /* Zeichen */
 .dt-bg { --c:var(--ink); display:inline-block; box-sizing:border-box; width:14px; height:14px; border:2px solid var(--c); background:var(--surface) }
@@ -1184,7 +1209,7 @@ js = '''<script>
 </script>
 '''
 
-toc = ('<li><a href="#cockpit" data-k="cockpit">Cockpit: jetzt dran, Bestellung, BPMN</a></li>'
+toc = ('<li><a href="#cockpit" data-k="cockpit">Cockpit: jetzt dran, Bestellung, Technik, BPMN</a></li>'
        '<li><a href="#baum" data-k="baum">Offener Entscheidungsbaum</a><ol>'
        '<li><a href="#b-zielblatt" data-k="b-zielblatt">Grundlage: Mission, Ziele, Ort</a></li>'
        '<li><a href="#b-hauptweg" data-k="b-hauptweg">1 Ablaufplan A bis H</a></li>'
@@ -1195,6 +1220,7 @@ toc = ('<li><a href="#cockpit" data-k="cockpit">Cockpit: jetzt dran, Bestellung,
        '<li><a href="#b-seite" data-k="b-seite">6 Entscheidungsseite</a></li>'
        '<li><a href="#b-plan" data-k="b-plan">7 Offen im Plan</a></li>'
        '<li><a href="#b-entschieden" data-k="b-entschieden">8 Entschieden</a></li>'
+       '<li><a href="#b-digital" data-k="b-digital">9 Technik und digitale Erlöse</a></li>'
        '</ol></li>')
 
 # ---------- In Index 2.0 einsetzen ----------
@@ -1387,6 +1413,7 @@ def _sammle(nodes):
 _sammle(tree)
 _NETZFEHLER = _nz.pruefe(_ids, [n['id'] for n in _ab.alle_ap(tree)])
 NETZDATEN = _nz.daten({i: t for i, t in _tit.items() if any(i == k[0] for k in _nz.NETZ)}, _st)
+NETZDATEN['technik'] = TD
 body = body.replace('<section id="baum">', _ck.html_cockpit(NETZDATEN, _nz.svg()) + '<section id="baum">', 1)
 body = body.replace('</style>', _ck.CSS + '</style>', 1)
 body = body.rstrip() + '\n' + _ck.JS

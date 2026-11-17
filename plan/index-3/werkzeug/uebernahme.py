@@ -120,4 +120,5 @@ Ukraine
 6. Gilt ein vorgefertigtes Objekt dort als Gebäude oder als bewegliche Sache; was braucht es zum Aufstellen und Bewohnen (2.2.6)?
 7. Mietvertrag: Form, Sprache, Steuern, Meldepflichten.
 8. Wo werden Miete und Pauschale versteuert, in der Ukraine oder in Deutschland?
-9. Einnahmen in USDM über Masumi: Wie werden sie verbucht und versteuert; braucht der Umtausch in Euro eine Erlaubnis?'''
+9. Einnahmen in USDM über Masumi: Wie werden sie verbucht und versteuert; braucht der Umtausch in Euro eine Erlaubnis?
+10. Staking oder Stake-Pool auf Cardano: Erlaubnispflicht, Bilanzierung und Steuer der Erträge in Deutschland und der Ukraine; welche Gesellschaft hält die ADA (AP-A12)?'''

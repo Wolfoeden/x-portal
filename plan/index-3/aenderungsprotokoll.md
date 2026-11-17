@@ -266,3 +266,28 @@ Entfallen:
 ## 17.11.2026 (später) · Zielbild
 
 Wunsch von Roman: Das Bild unter „Zielbild“ in der Grundlage ist jetzt die Konzeptvisualisierung aus dem Whitepaper (`plan/whitepaper/bilder/image-6-1.jpg`). Die Nummern 1–4, 6 und 7 sind neu auf das Bild gesetzt. Restaurant und Bar (5) und die Sauna sind nicht im Bild; die Bildunterschrift sagt das.
+
+## 17.11.2026 (später) · Technik der Company, Erlösquellen, D70 und D71
+
+**Eingänge:** Die Kommentare auf den Seiten sind unverändert. In der Datenbank der Entscheidungsseite sind zwei Antworten neu:
+- **D70:** Wahl B, „nur dokumentieren“.
+- **D71:** Kommentar zum Cockpit. Das ist die Anforderung, die ich in der vorigen Runde nicht gefunden hatte; sie kam erst um 09:26 Uhr in die Datenbank.
+
+| Eingang | Umsetzung | Stelle |
+|---|---|---|
+| D70 Wahl B: Eigenleistung nur dokumentieren, nicht bewerten | Stand-Text D70; Bewertung in Geld entfernt | Entscheidungsseite; Vor dem Investment, Abschnitt Eigenleistung |
+| D71: Investoren ansprechen, sobald Geschäftsplan, Whitepaper und Deck aus dem Index entstehen; Cockpit mit Abhaken, BPMN, mitlaufender Planung und Bestellterminen | Stand-Text D71; AP-A7 heißt jetzt „Geschäftsplan, Whitepaper und Pitch Deck aus dem Index erzeugen“; AP-B1 wartet darauf. Das Cockpit selbst stand schon. | Entscheidungsseite; Index Ast 1 und Netz |
+| Chat 17.11.: Die technische Seite fehlt. Investoren sollen die Infrastruktur sehen, die läuft. Dazu Kosten der Werkzeuge, Einnahmen über die Blockchain und die ISMS-App | Neue Quelle `plan/technik/werkzeug/technik.py` mit IT01–IT09 (Kosten, Quelle, Nachweis) und den Erlösquellen; neuer Ast 9; Cockpit-Karte „Technik im Betrieb“ mit Sammlung `technik/{IT..}` und der Nutzerzahl für Microsoft 365; neue Arbeitspakete AP-A10 (Nachweise der Technik), AP-A11 (ISMS-App), AP-A12 (Staking: Recht und Steuer); neuer Prüfauftrag Nr. 10 bei O05 | Index; Whitepaper („Vorhanden“, Erlösstufe 02, Abschnitt „Technik, die schon läuft“, ohne Beträge); Deck v5 (Folien 5 und 8) |
+
+**Antworten auf die Rückfragen vom 17.11.:**
+- Microsoft 365 Business Premium, die Nutzerzahl ist offen.
+- Grok ist im X-Premium-Abo enthalten.
+- Einnahmen über die Blockchain kommen aus Staking oder einem Stake-Pool.
+- Die ISMS-App läuft im Pilot mit Kunden.
+
+**Kosten:**
+- Fest pro Monat sind es 248,33 € ohne Microsoft 365: ChatGPT 90 €, Claude 90 €, Hosting 10 €, Supabase 25 €, X Premium 30 € und die Domain mit 40 € im Jahr.
+- Microsoft 365 Business Premium kostet laut Händlerlisten vom August 2026 etwa 20–22 € netto pro Nutzer und Monat. Die Seite von Microsoft war am 17.11. nicht erreichbar; der Betrag soll aus der Rechnung übernommen werden.
+- Cardano kostet etwa 2 Cent pro Transaktion.
+
+**Außerdem:** Die Karten zeigen jetzt das Datum der jeweiligen Antwort, statt immer „13.11.“.

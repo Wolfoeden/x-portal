@@ -288,6 +288,8 @@ FOLGT = {
  'D36': 'Essen gegen Mitarbeit. Nach dem St. Galler Managementmodell wird Gemeinschaftsarbeit mit Anreizen gefördert: Bedarfe erfassen, festlegen und umsetzen. Aufgaben wie Schneeräumen, Pflanzenpflege, Kapellenbau und Kehrwoche werden mit wenig Aufwand erfasst, voraussichtlich über Zugangstechnik auf Cardano. Ziel des Teams: wirtschaftlich denken und gemeinschaftliches Leben im Rahmen der X-PORTAL-Vision gestalten; daraus entsteht die Lernkurve für die nächsten Nodes.',
  'D37': 'Mischung aus C und B: Wohnen und Essen frei, dazu ein Anteil. Mitwirkende bekommen keinen Anteil an der Holding, sondern am jeweiligen Node in fraktionalisiertem Eigentum. Die Unternehmensstruktur muss das abbilden.',
  'D38': 'Monatliche Pauschale. Davon abgezogen werden oben erbrachte Leistungen: Gemeinschaftsleistungen wie Kapelle und Gartenarbeit sowie Projektarbeit, zum Beispiel Robotik und Drohnen oder Freelancer-Leistungen für den DACH-Raum über die DT Agentur. Weiter zu besprechen.',
+ 'D70': 'Nur dokumentieren: Stunden, Ergebnisse und Fotos festhalten und Investoren zeigen, ohne sie in Geld zu bewerten.',
+ 'D71': 'Investoren werden angesprochen, sobald aus dem Index ein tragfähiger Geschäftsplan, Whitepaper und Pitch Deck entstehen. Dafür braucht es eine Oberfläche, auf der man abhakt, wo man steht (auch als BPMN 2.0), mit logischer Reihenfolge und einem Plan, der sich mit den Ergebnissen anpasst, zum Beispiel frühester und spätester Bestelltag aus der Lieferzeit des gewählten Anbieters. Umgesetzt als Cockpit im Index am 17.11.2026.',
 }
 UEBERHOLT = {'D45', 'D46', 'D48', 'D49', 'D50'}
 # Wahl steht nur im Kommentar (Analyse 17.11.2026): Karte -> (Möglichkeit, Hinweis)
@@ -313,7 +315,8 @@ def card_html(k, log, alt):
         lab = {'unklar': 'weiß ich noch nicht', 'keine': 'keine davon', '': 'ohne Wahl'}.get(a.get('wahl') or '', a.get('wahl'))
         if not a.get('wahl') and i in WAHL_PER_KOMMENTAR:
             v, h = WAHL_PER_KOMMENTAR[i]; lab = f'per Kommentar gewählt: {v}' + (f' ({h})' if h else '')
-        stand = (f'<div class="st13"><p><b>Stand 13.11.2026:</b> {e(lab)}. {e(FOLGT[i])}</p>'
+        _d = (a.get('am') or '2026-11-13')[:10]; _d = f'{_d[8:10]}.{_d[5:7]}.{_d[:4]}'
+        stand = (f'<div class="st13"><p><b>Antwort vom {_d}:</b> {e(lab)}. {e(FOLGT[i])}</p>'
                  + (f'<blockquote>{e(a["kommentar"])}</blockquote>' if a.get('kommentar') else '')
                  + ('<p class="note">Der Kommentar überholt die Möglichkeiten unten; sie stehen nur noch zur Nachvollziehbarkeit da.</p>' if i in UEBERHOLT else '') + '</div>')
     fr = ''
@@ -374,7 +377,7 @@ def build(src, log, alt):
 <p class="no">Node001 Beregniza · Stand {STAND}</p>
 <h1>Entscheidungen Node001</h1>
 <p class="reset"><b>Am 13.11.2026 sind alle 32 Karten neu beantwortet.</b> Es gelten Wahl und Kommentar zusammen; wo der Kommentar die Wahl ändert, gilt der Kommentar. Jede Karte zeigt oben, was daraus folgt. Die früheren Entscheidungen E01–E85 sind zurückgenommen und stehen unten als Historie.</p>
-<p><b>Nächster Schritt:</b> vier neue Karten D69–D72 zur Frage, was vor dem Investment aus Eigenkapital und Eigenleistung geht. Optimum laut Kostenregister, neu gerechnet am 17.11.2026: {band('Optimum')}. <a href="{VOR}" target="_blank" rel="noreferrer">Vor dem Investment →</a> · <a href="{ANS}" target="_blank" rel="noreferrer">Anschaffungsliste →</a></p>
+<p><b>Nächster Schritt:</b> offen sind noch D69 und D72 zur Frage, was vor dem Investment aus Eigenkapital und Eigenleistung geht; D70 und D71 sind am 17.11. beantwortet. Optimum laut Kostenregister, neu gerechnet am 17.11.2026: {band('Optimum')}. <a href="{VOR}" target="_blank" rel="noreferrer">Vor dem Investment →</a> · <a href="{ANS}" target="_blank" rel="noreferrer">Anschaffungsliste →</a></p>
 <details><summary>Überblick: was seit 13.11. gilt ({len(FOLGT)})</summary><div class="tw2"><table class="ueb"><tbody>{"".join(f"<tr><td class=no>{k}</td><td>{e(v)}</td></tr>" for k, v in sorted(FOLGT.items()))}</tbody></table></div></details>
 <p>Zu jeder Entscheidung: <b>Gefällt mir</b> bei einer Möglichkeit, <b>Weiß ich noch nicht</b>, oder <b>Keine davon</b>, dann machen die Agenten neue Entwürfe. „Vorschlag KI“ ist nur ein Vorschlag und gilt erst, wenn ihr ihn wählt.</p>
 <p class="status" id="status">Lädt …</p>

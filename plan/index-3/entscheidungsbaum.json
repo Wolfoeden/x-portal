@@ -1431,20 +1431,20 @@
       {
        "kind": "step",
        "id": "AP-A7",
-       "title": "Investorenunterlagen auf den Stand bringen",
+       "title": "Geschäftsplan, Whitepaper und Pitch Deck aus dem Index erzeugen",
        "state": "open",
        "facts": [
         {
          "feld": "Wann",
-         "wert": "nach Angeboten (AP-A5) und Selbstkosten (O03)"
+         "wert": "nach Angeboten (AP-A5), Selbstkosten (O03) und Nachweisen der Technik (AP-A10)"
         },
         {
          "feld": "Voraussetzung",
-         "wert": "Kostenband, Selbstkosten, Rechtsprüfung"
+         "wert": "Kostenband, Selbstkosten, Rechtsprüfung, Termine aus dem Cockpit, Technik und Erlösquellen (Ast 9)"
         },
         {
          "feld": "Blockiert",
-         "wert": "Investorengespräche"
+         "wert": "Investorengespräche (D71)"
         },
         {
          "feld": "Grundbestimmungen",
@@ -1460,15 +1460,146 @@
         }
        ],
        "ap": {
-        "wann": "nach Angeboten (AP-A5) und Selbstkosten (O03)",
-        "voraus": "Kostenband, Selbstkosten, Rechtsprüfung",
-        "blockiert": "Investorengespräche",
+        "wann": "nach Angeboten (AP-A5), Selbstkosten (O03) und Nachweisen der Technik (AP-A10)",
+        "voraus": "Kostenband, Selbstkosten, Rechtsprüfung, Termine aus dem Cockpit, Technik und Erlösquellen (Ast 9)",
+        "blockiert": "Investorengespräche (D71)",
         "gb": [
          "GB8",
          "GB9"
         ],
         "rolle": "führt aus: planende KI · prüft: Geschäftsführung, Jurist",
         "ergebnis": "Whitepaper und Deck mit Meilensteinen aus diesem Ablaufplan, Mittelverwendung je Phase, Risiken; Beträge erst nach Angeboten. Nach außen: Mitglieder und Bewohner bauen in den ersten Phasen mit, die Bergkapelle ist ihr Gruppenprojekt (D34)."
+       }
+      },
+      {
+       "kind": "step",
+       "id": "AP-A10",
+       "title": "Nachweise der Technik sammeln: was schon läuft",
+       "state": "open",
+       "text": "Den Investoren zeigen wir nicht Unterlagen, sondern eine Infrastruktur, die wir nutzen (Angabe vom 17.11.2026). Personenbezogene Daten und Zugangsdaten kommen nicht in den Nachweis.",
+       "facts": [
+        {
+         "feld": "Wann",
+         "wert": "jetzt; laufend ergänzen"
+        },
+        {
+         "feld": "Voraussetzung",
+         "wert": "Zugang zu Rechnungen, Dashboards, Repository und Wallet"
+        },
+        {
+         "feld": "Blockiert",
+         "wert": "Geschäftsplan, Whitepaper und Deck (AP-A7)"
+        },
+        {
+         "feld": "Grundbestimmungen",
+         "wert": "GB10, GB11"
+        },
+        {
+         "feld": "Rolle",
+         "wert": "sammelt: Projektleitung · prüft: Geschäftsführung"
+        },
+        {
+         "feld": "Ergebnis",
+         "wert": "Je Werkzeug in Ast 9 ein Nachweis: Rechnung oder Abo-Beleg, Live-URL, Dashboard-Auszug, Transaktions-Hash oder Stake-Pool-ID, Repository; dazu seit wann und Nutzung. Eingetragen im Cockpit („Technik im Betrieb“)."
+        }
+       ],
+       "ap": {
+        "wann": "jetzt; laufend ergänzen",
+        "voraus": "Zugang zu Rechnungen, Dashboards, Repository und Wallet",
+        "blockiert": "Geschäftsplan, Whitepaper und Deck (AP-A7)",
+        "gb": [
+         "GB10",
+         "GB11"
+        ],
+        "rolle": "sammelt: Projektleitung · prüft: Geschäftsführung",
+        "ergebnis": "Je Werkzeug in Ast 9 ein Nachweis: Rechnung oder Abo-Beleg, Live-URL, Dashboard-Auszug, Transaktions-Hash oder Stake-Pool-ID, Repository; dazu seit wann und Nutzung. Eingetragen im Cockpit („Technik im Betrieb“)."
+       }
+      },
+      {
+       "kind": "step",
+       "id": "AP-A11",
+       "title": "ISMS-App: Pilot auswerten, Preismodell, Referenz",
+       "state": "open",
+       "facts": [
+        {
+         "feld": "Wann",
+         "wert": "jetzt; der Pilot mit Kunden läuft (Angabe vom 17.11.2026)"
+        },
+        {
+         "feld": "Voraussetzung",
+         "wert": "Pilotkunden, Nutzungsdaten der App"
+        },
+        {
+         "feld": "Blockiert",
+         "wert": "Erlösstufe 02 im Geschäftsplan, Umsatz der Company (Z3)"
+        },
+        {
+         "feld": "Grundbestimmungen",
+         "wert": "GB9, GB10, GB11"
+        },
+        {
+         "feld": "Rolle",
+         "wert": "führt: Projektleitung · entscheidet: Geschäftsführung"
+        },
+        {
+         "feld": "Ergebnis",
+         "wert": "Auswertung des Pilots (Nutzung, Ergebnis für die Kunden), Preismodell, mindestens eine Referenz mit Zustimmung des Kunden"
+        }
+       ],
+       "ap": {
+        "wann": "jetzt; der Pilot mit Kunden läuft (Angabe vom 17.11.2026)",
+        "voraus": "Pilotkunden, Nutzungsdaten der App",
+        "blockiert": "Erlösstufe 02 im Geschäftsplan, Umsatz der Company (Z3)",
+        "gb": [
+         "GB9",
+         "GB10",
+         "GB11"
+        ],
+        "rolle": "führt: Projektleitung · entscheidet: Geschäftsführung",
+        "ergebnis": "Auswertung des Pilots (Nutzung, Ergebnis für die Kunden), Preismodell, mindestens eine Referenz mit Zustimmung des Kunden"
+       }
+      },
+      {
+       "kind": "step",
+       "id": "AP-A12",
+       "title": "Staking und Stake-Pool auf Cardano: Rechts- und Steuerprüfung",
+       "state": "open",
+       "facts": [
+        {
+         "feld": "Wann",
+         "wert": "vor dem Ausweis als Erlösquelle"
+        },
+        {
+         "feld": "Voraussetzung",
+         "wert": "Anwälte und Steuerberater (O05)"
+        },
+        {
+         "feld": "Blockiert",
+         "wert": "Erlösquelle im Geschäftsplan"
+        },
+        {
+         "feld": "Grundbestimmungen",
+         "wert": "GB9, GB11"
+        },
+        {
+         "feld": "Rolle",
+         "wert": "beauftragt: Geschäftsführung · prüft: Anwälte, Steuerberater"
+        },
+        {
+         "feld": "Ergebnis",
+         "wert": "Schriftliche Einordnung: Erlaubnispflicht, Bilanzierung und Steuer der Staking-Erträge in Deutschland und der Ukraine; welche Gesellschaft sie hält"
+        }
+       ],
+       "ap": {
+        "wann": "vor dem Ausweis als Erlösquelle",
+        "voraus": "Anwälte und Steuerberater (O05)",
+        "blockiert": "Erlösquelle im Geschäftsplan",
+        "gb": [
+         "GB9",
+         "GB11"
+        ],
+        "rolle": "beauftragt: Geschäftsführung · prüft: Anwälte, Steuerberater",
+        "ergebnis": "Schriftliche Einordnung: Erlaubnispflicht, Bilanzierung und Steuer der Staking-Erträge in Deutschland und der Ukraine; welche Gesellschaft sie hält"
        }
       },
       {
@@ -1556,7 +1687,7 @@
        "facts": [
         {
          "feld": "Wann",
-         "wert": "nach Stufe A, Zeitpunkt nach D71"
+         "wert": "sobald Geschäftsplan, Whitepaper und Pitch Deck aus dem Index stehen (D71, Antwort vom 17.11.2026)"
         },
         {
          "feld": "Voraussetzung",
@@ -1580,7 +1711,7 @@
         }
        ],
        "ap": {
-        "wann": "nach Stufe A, Zeitpunkt nach D71",
+        "wann": "sobald Geschäftsplan, Whitepaper und Pitch Deck aus dem Index stehen (D71, Antwort vom 17.11.2026)",
         "voraus": "Unterlagen (AP-A7), Struktur (O05)",
         "blockiert": "Bestellung Phase 0",
         "gb": [
@@ -7006,73 +7137,42 @@
        "kind": "decision",
        "id": "D70",
        "title": "Wie wird Eigenleistung bewertet und belegt?",
-       "state": "open",
-       "text": "Im Optimum stecken rund 431 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.",
+       "state": "done",
+       "text": "Gilt: Nur dokumentieren: Stunden, Ergebnisse und Fotos festhalten und Investoren zeigen, ohne sie in Geld zu bewerten.",
        "opts": [
-        {
-         "kind": "option",
-         "letter": "A",
-         "title": "Stundenbuch plus Steuerberater",
-         "text": "Jede Stunde mit Datum, Rolle, Tätigkeit und Foto festhalten; der Steuerberater legt fest, wie sie in die Gesellschaft eingeht."
-        },
         {
          "kind": "option",
          "letter": "B",
          "title": "Nur dokumentieren",
-         "text": "Stunden und Ergebnisse festhalten und Investoren zeigen, ohne sie zu bewerten."
-        },
-        {
-         "kind": "option",
-         "letter": "C",
-         "title": "Mit deutschem Stundensatz ansetzen",
-         "text": "Eigenleistung mit einem Marktsatz aus Deutschland bewerten und als Einlage verhandeln."
+         "text": "Stunden und Ergebnisse festhalten und Investoren zeigen, ohne sie zu bewerten.",
+         "state": "done"
         }
        ],
        "page": true,
-       "beschlussblatt": {
-        "Vorbereitung": "KI bereitet vor, gilt erst mit Wahl (D43)",
-        "Fachliche Prüfung": "–",
-        "Freigabe": "Geschäftsführung und Projektleitung gemeinsam",
-        "Budgetgrenze": "–",
-        "Gültigkeit": "bis ihr sie ändert",
-        "Wiedervorlage": "Montagsrunde (3.3)"
-       }
+       "facts": [
+        {
+         "feld": "Antwort 17.11.",
+         "wert": "B"
+        }
+       ]
       },
       {
        "kind": "decision",
        "id": "D71",
        "title": "Ab wann sprechen wir Investoren an?",
-       "state": "open",
-       "text": "Für Investoren zählen geprüfte Nachweise. Das Deck nennt als Gate: belastbares Kostenband, validiertes Revenue Model, rechtliche Struktur, messbare Meilensteine, klarer Kapitalbedarf.",
-       "opts": [
-        {
-         "kind": "option",
-         "letter": "A",
-         "title": "Nach Stufe A",
-         "text": "Sobald Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher."
-        },
-        {
-         "kind": "option",
-         "letter": "B",
-         "title": "Sofort mit dem heutigen Stand",
-         "text": "Gespräche jetzt führen, mit offenen Punkten klar benannt."
-        },
-        {
-         "kind": "option",
-         "letter": "C",
-         "title": "Erst nach dem ersten Winter",
-         "text": "Warten, bis Messreihen, trockenes Holz und erste Mieter-Interessenten vorliegen."
-        }
-       ],
+       "state": "done",
+       "text": "Gilt: Investoren werden angesprochen, sobald aus dem Index ein tragfähiger Geschäftsplan, Whitepaper und Pitch Deck entstehen. Dafür braucht es eine Oberfläche, auf der man abhakt, wo man steht (auch als BPMN 2.0), mit logischer Reihenfolge und einem Plan, der sich mit den Ergebnissen anpasst, zum Beispiel frühester und spätester Bestelltag aus der Lieferzeit des gewählten Anbieters. Umgesetzt als Cockpit im Index am 17.11.2026.",
        "page": true,
-       "beschlussblatt": {
-        "Vorbereitung": "KI bereitet vor, gilt erst mit Wahl (D43)",
-        "Fachliche Prüfung": "–",
-        "Freigabe": "Geschäftsführung und Projektleitung gemeinsam",
-        "Budgetgrenze": "–",
-        "Gültigkeit": "bis ihr sie ändert",
-        "Wiedervorlage": "Montagsrunde (3.3)"
-       }
+       "facts": [
+        {
+         "feld": "Antwort 17.11.",
+         "wert": "ohne Wahl, Kommentar gilt"
+        },
+        {
+         "feld": "Kommentar 17.11.",
+         "wert": "sobald wir aus dem plan bzw index 3.0 ein viable geschäftsplan, whitepaper, pitch deck erstellen können. wir müssen es soweit bekommen das man wie in einem game oder einfach auf einer oberfläche abhaken kann wo man ist im plan (auch erischtlich über ein bpmn2.0) und dann die schritte weiter gehen- dafür muss auch eine logische reihenfolge da sein, die von index 3.0 ist ok aber wir müssen es hinbekommen das man diesen plan im fluss während man arbeitet er auch angepasst wird je nachdem was man für ein ergebniss erzielt hat. NUR ALS BEISPIEL: wenn wir wohneinheiten bestellen würden, und die brauchen ca 45tage bis sie da sind, dann muss im \"game/unserer dashboard oberfläche\" einmal der frühstmögoiche zeitpunkt gezeigt werden wo wir auf den bestellknopf auf der verknüpften website wo wir bestellen würden bestellen müssen. aber im schritt davor zB müssen wir ja bewerten welchen von den anbietern wir im endeffekt benutzen werden, die haben auch alle verschiedene liefertermine, verschiedene größen und manche lassen sich einzeln liefern, andere können getrennt gelifert und oben aufgebaut werden. das ist kritisch für den gesamtplan und für die investoren und auswertung."
+        }
+       ]
       },
       {
        "kind": "decision",
@@ -8583,6 +8683,434 @@
        "title": "D68 · Arbeitsweise",
        "state": "done",
        "text": "Repo als Quelle und Regeln der Baseline; vieles ist noch zu klären."
+      },
+      {
+       "kind": "decision",
+       "title": "D70 · Eigenleistung bewerten und belegen",
+       "state": "done",
+       "text": "Nur dokumentieren: Stunden, Ergebnisse und Fotos festhalten und Investoren zeigen, ohne sie in Geld zu bewerten."
+      },
+      {
+       "kind": "decision",
+       "title": "D71 · Ab wann Investoren ansprechen",
+       "state": "done",
+       "text": "Investoren werden angesprochen, sobald aus dem Index ein tragfähiger Geschäftsplan, Whitepaper und Pitch Deck entstehen. Dafür braucht es eine Oberfläche, auf der man abhakt, wo man steht (auch als BPMN 2.0), mit logischer Reihenfolge und einem Plan, der sich mit den Ergebnissen anpasst, zum Beispiel frühester und spätester Bestelltag aus der Lieferzeit des gewählten Anbieters. Umgesetzt als Cockpit im Index am 17.11.2026."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "group",
+   "id": "b-digital",
+   "title": "9 · Technik und digitale Erlöse der Company: was schon läuft",
+   "text": "Investoren sehen nicht nur Unterlagen, sondern eine Infrastruktur, die genutzt wird, und Erlösquellen mit Reifegrad. Getrennt von Node001, wie die zwei Investment Cases im Whitepaper. Quelle: plan/technik/technik.json.",
+   "kids": [
+    {
+     "kind": "group",
+     "id": "b-it",
+     "title": "Infrastruktur im Betrieb (IT01 bis IT09)",
+     "text": "Feste Kosten je Monat, soweit bekannt: 248,33 € ohne Microsoft 365; dazu Microsoft 365 Business Premium je Nutzer (Nutzerzahl offen) und Cardano je Transaktion. Quelle: Angaben der Projektleitung vom 17.11.2026; Microsoft-Listenpreis aus Händlerlisten. Nachweise und Nutzung trägt das Team im Cockpit ein (AP-A10).",
+     "kids": [
+      {
+       "kind": "step",
+       "id": "IT01",
+       "title": "ChatGPT: KI-Arbeitsplatz: Recherche, Texte, Code, Agenten",
+       "state": "live",
+       "facts": [
+        {
+         "feld": "Bereich",
+         "wert": "KI"
+        },
+        {
+         "feld": "Kosten",
+         "wert": "90,00 € je Monat"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Angabe der Projektleitung vom 17.11.2026"
+        },
+        {
+         "feld": "Nachweis für Investoren",
+         "wert": "Abo-Rechnung; Nutzung in Projekten"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "IT02",
+       "title": "Claude: KI-Arbeitsplatz: Planung, Code, Auswertung",
+       "state": "live",
+       "facts": [
+        {
+         "feld": "Bereich",
+         "wert": "KI"
+        },
+        {
+         "feld": "Kosten",
+         "wert": "90,00 € je Monat"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Angabe der Projektleitung vom 17.11.2026"
+        },
+        {
+         "feld": "Nachweis für Investoren",
+         "wert": "Abo-Rechnung; Repository mit Commits"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "IT03",
+       "title": "Website-Hosting: Website und Plattform x-portal.eu",
+       "state": "live",
+       "facts": [
+        {
+         "feld": "Bereich",
+         "wert": "Web"
+        },
+        {
+         "feld": "Kosten",
+         "wert": "10,00 € je Monat"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Angabe der Projektleitung vom 17.11.2026"
+        },
+        {
+         "feld": "Nachweis für Investoren",
+         "wert": "Live-URL; Hosting-Rechnung"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "IT04",
+       "title": "Supabase: Datenbank und Backend der Plattform",
+       "state": "live",
+       "facts": [
+        {
+         "feld": "Bereich",
+         "wert": "Daten"
+        },
+        {
+         "feld": "Kosten",
+         "wert": "25,00 € je Monat"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Angabe der Projektleitung vom 17.11.2026"
+        },
+        {
+         "feld": "Nachweis für Investoren",
+         "wert": "Projekt-Dashboard: Tabellen, Nutzer, Abfragen"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "IT05",
+       "title": "Cardano-Transaktionen: Nachweise und Zahlungen on-chain; Grundlage für Zugang und Erfassung (AP-D5, AP-F4)",
+       "state": "live",
+       "facts": [
+        {
+         "feld": "Bereich",
+         "wert": "Blockchain"
+        },
+        {
+         "feld": "Kosten",
+         "wert": "0,02 € je Transaktion"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Angabe der Projektleitung vom 17.11.2026: 0,16 ADA, umgerechnet etwa 2 Cent"
+        },
+        {
+         "feld": "Nachweis für Investoren",
+         "wert": "Transaktions-Hashes, öffentlich im Explorer prüfbar"
+        },
+        {
+         "feld": "Hinweis",
+         "wert": "ADA-Kurs schwankt; Anzahl je Monat offen"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "IT06",
+       "title": "X Premium mit Grok-Bot: Marketing und Reichweite auf X; Grok-Bot im Abo enthalten",
+       "state": "live",
+       "facts": [
+        {
+         "feld": "Bereich",
+         "wert": "Marketing"
+        },
+        {
+         "feld": "Kosten",
+         "wert": "30,00 € je Monat"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Angabe der Projektleitung vom 17.11.2026"
+        },
+        {
+         "feld": "Nachweis für Investoren",
+         "wert": "Profil, Reichweitenzahlen, Abo-Beleg"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "IT07",
+       "title": "Microsoft 365 Business Premium: E-Mail, Teams, OneDrive, Office, Sicherheit und Geräteverwaltung",
+       "state": "live",
+       "facts": [
+        {
+         "feld": "Bereich",
+         "wert": "Büro"
+        },
+        {
+         "feld": "Kosten",
+         "wert": "etwa 20–22 € je Nutzer und Monat netto"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Listenpreis etwa 20–22 € netto je Nutzer und Monat im Jahresabo (Händlerlisten 08/2026; Microsoft-Seite am 17.11.2026 nicht erreichbar); Betrag aus der Rechnung übernehmen"
+        },
+        {
+         "feld": "Nachweis für Investoren",
+         "wert": "Rechnung; Mandant mit Nutzern"
+        },
+        {
+         "feld": "Hinweis",
+         "wert": "Nutzerzahl offen"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "IT08",
+       "title": "Domain: x-portal.eu",
+       "state": "live",
+       "facts": [
+        {
+         "feld": "Bereich",
+         "wert": "Web"
+        },
+        {
+         "feld": "Kosten",
+         "wert": "40,00 € je Jahr (≈ 3,33 € im Monat)"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "Angabe der Projektleitung vom 17.11.2026"
+        },
+        {
+         "feld": "Nachweis für Investoren",
+         "wert": "Registrierung"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "IT09",
+       "title": "Plattform x-portal.eu: KI-Matching und Freelancer-Profile; läuft auf IT03 und IT04",
+       "state": "live",
+       "facts": [
+        {
+         "feld": "Bereich",
+         "wert": "Plattform"
+        },
+        {
+         "feld": "Kosten",
+         "wert": "offen"
+        },
+        {
+         "feld": "Quelle",
+         "wert": "eigene Entwicklung; Kosten stecken in IT03 und IT04"
+        },
+        {
+         "feld": "Nachweis für Investoren",
+         "wert": "Live-URL, Nutzerzahlen, Repository"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "group",
+     "id": "b-erl",
+     "title": "Digitale und weitere Erlösquellen",
+     "text": "Zuordnung zu den Erlösstufen des Whitepapers. Beträge erst mit Belegen (D53).",
+     "kids": [
+      {
+       "kind": "step",
+       "id": "ER-K",
+       "title": "Kundenprojekte über die DT Agentur (Deutschland, Österreich, Schweiz)",
+       "state": "live",
+       "facts": [
+        {
+         "feld": "Erlösstufe",
+         "wert": "01 · Heute"
+        },
+        {
+         "feld": "Reifegrad",
+         "wert": "läuft"
+        },
+        {
+         "feld": "Stand",
+         "wert": "Kundenprojekte heute (D51)"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "Rechnungen, Referenzen"
+        },
+        {
+         "feld": "Nächster Schritt",
+         "wert": "erster bezahlter Auftrag mit Testkarte (2.6.1)"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "ER-I",
+       "title": "ISMS-App: Zertifizierungen, unter anderem für Startups",
+       "state": "run",
+       "facts": [
+        {
+         "feld": "Erlösstufe",
+         "wert": "02 · Technologielösungen"
+        },
+        {
+         "feld": "Reifegrad",
+         "wert": "Pilot mit Kunden"
+        },
+        {
+         "feld": "Stand",
+         "wert": "Angabe der Projektleitung vom 17.11.2026"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "Pilotkunden, Nutzung der App, Kundenstimme"
+        },
+        {
+         "feld": "Nächster Schritt",
+         "wert": "Pilot auswerten, Preismodell, Referenz (AP-A11)"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "ER-A",
+       "title": "KI-Agenten",
+       "state": "run",
+       "facts": [
+        {
+         "feld": "Erlösstufe",
+         "wert": "02 · Technologielösungen"
+        },
+        {
+         "feld": "Reifegrad",
+         "wert": "in Entwicklung"
+        },
+        {
+         "feld": "Stand",
+         "wert": "Teilergebnis 2.6.4: Verkauf über Masumi später"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "Repository, erste Nutzung"
+        },
+        {
+         "feld": "Nächster Schritt",
+         "wert": "Preismodell (2.6.2)"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "ER-P",
+       "title": "Plattform x-portal.eu mit KI-Matching",
+       "state": "live",
+       "facts": [
+        {
+         "feld": "Erlösstufe",
+         "wert": "Plattform"
+        },
+        {
+         "feld": "Reifegrad",
+         "wert": "läuft, Erlösmodell offen"
+        },
+        {
+         "feld": "Stand",
+         "wert": "Whitepaper „Vorhanden“"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "Live-URL, Profile, Matches"
+        },
+        {
+         "feld": "Nächster Schritt",
+         "wert": "Erlösmodell festlegen"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "ER-S",
+       "title": "Staking oder Stake-Pool auf Cardano",
+       "state": "open",
+       "facts": [
+        {
+         "feld": "Erlösstufe",
+         "wert": "Blockchain"
+        },
+        {
+         "feld": "Reifegrad",
+         "wert": "Stand offen"
+        },
+        {
+         "feld": "Stand",
+         "wert": "Angabe der Projektleitung vom 17.11.2026 (Antwort auf die Frage nach Einnahmen über die Blockchain)"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "Stake-Pool-ID oder Staking-Adresse, öffentlich prüfbar"
+        },
+        {
+         "feld": "Nächster Schritt",
+         "wert": "Rechts- und Steuerprüfung (AP-A12)"
+        }
+       ]
+      },
+      {
+       "kind": "step",
+       "id": "ER-N",
+       "title": "Miete und Services am Node001",
+       "state": "later",
+       "facts": [
+        {
+         "feld": "Erlösstufe",
+         "wert": "03 · Node001"
+        },
+        {
+         "feld": "Reifegrad",
+         "wert": "vor dem Bau"
+        },
+        {
+         "feld": "Stand",
+         "wert": "D45, D48, D50"
+        },
+        {
+         "feld": "Nachweis",
+         "wert": "Whitelist, später Mietverträge und Mieterlöse (AP-F3)"
+        },
+        {
+         "feld": "Nächster Schritt",
+         "wert": "Whitelist einrichten (AP-A8)"
+        }
+       ]
       }
      ]
     }

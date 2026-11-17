@@ -273,13 +273,35 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > 6. Was muss vor einem Angebot an die Öffentlichkeit fertig sein?
       > 
       > Bis zur Antwort wird nichts angeboten oder beworben.
-  - **Schritt:** Investorenunterlagen auf den Stand bringen _[offen]_
-    - Wann: nach Angeboten (AP-A5) und Selbstkosten (O03)
-    - Voraussetzung: Kostenband, Selbstkosten, Rechtsprüfung
-    - Blockiert: Investorengespräche
+  - **Schritt:** Geschäftsplan, Whitepaper und Pitch Deck aus dem Index erzeugen _[offen]_
+    - Wann: nach Angeboten (AP-A5), Selbstkosten (O03) und Nachweisen der Technik (AP-A10)
+    - Voraussetzung: Kostenband, Selbstkosten, Rechtsprüfung, Termine aus dem Cockpit, Technik und Erlösquellen (Ast 9)
+    - Blockiert: Investorengespräche (D71)
     - Grundbestimmungen: GB8, GB9
     - Rolle: führt aus: planende KI · prüft: Geschäftsführung, Jurist
     - Ergebnis: Whitepaper und Deck mit Meilensteinen aus diesem Ablaufplan, Mittelverwendung je Phase, Risiken; Beträge erst nach Angeboten. Nach außen: Mitglieder und Bewohner bauen in den ersten Phasen mit, die Bergkapelle ist ihr Gruppenprojekt (D34).
+  - **Schritt:** Nachweise der Technik sammeln: was schon läuft _[offen]_
+    - Den Investoren zeigen wir nicht Unterlagen, sondern eine Infrastruktur, die wir nutzen (Angabe vom 17.11.2026). Personenbezogene Daten und Zugangsdaten kommen nicht in den Nachweis.
+    - Wann: jetzt; laufend ergänzen
+    - Voraussetzung: Zugang zu Rechnungen, Dashboards, Repository und Wallet
+    - Blockiert: Geschäftsplan, Whitepaper und Deck (AP-A7)
+    - Grundbestimmungen: GB10, GB11
+    - Rolle: sammelt: Projektleitung · prüft: Geschäftsführung
+    - Ergebnis: Je Werkzeug in Ast 9 ein Nachweis: Rechnung oder Abo-Beleg, Live-URL, Dashboard-Auszug, Transaktions-Hash oder Stake-Pool-ID, Repository; dazu seit wann und Nutzung. Eingetragen im Cockpit („Technik im Betrieb“).
+  - **Schritt:** ISMS-App: Pilot auswerten, Preismodell, Referenz _[offen]_
+    - Wann: jetzt; der Pilot mit Kunden läuft (Angabe vom 17.11.2026)
+    - Voraussetzung: Pilotkunden, Nutzungsdaten der App
+    - Blockiert: Erlösstufe 02 im Geschäftsplan, Umsatz der Company (Z3)
+    - Grundbestimmungen: GB9, GB10, GB11
+    - Rolle: führt: Projektleitung · entscheidet: Geschäftsführung
+    - Ergebnis: Auswertung des Pilots (Nutzung, Ergebnis für die Kunden), Preismodell, mindestens eine Referenz mit Zustimmung des Kunden
+  - **Schritt:** Staking und Stake-Pool auf Cardano: Rechts- und Steuerprüfung _[offen]_
+    - Wann: vor dem Ausweis als Erlösquelle
+    - Voraussetzung: Anwälte und Steuerberater (O05)
+    - Blockiert: Erlösquelle im Geschäftsplan
+    - Grundbestimmungen: GB9, GB11
+    - Rolle: beauftragt: Geschäftsführung · prüft: Anwälte, Steuerberater
+    - Ergebnis: Schriftliche Einordnung: Erlaubnispflicht, Bilanzierung und Steuer der Staking-Erträge in Deutschland und der Ukraine; welche Gesellschaft sie hält
   - **Schritt:** Zahlen neu rechnen: Kostenhochrechnung 12,5 Mio. € und frühere Erlösrechnung 12 Mio. € _[offen]_
     - Antwort zu D53 vom 13.11.2026: Wahl C, die KI rechnet beide Zahlen mit Quellen neu, danach entscheidet ihr.
     - Wann: nach Angeboten (AP-A5); vor Investorengesprächen
@@ -301,7 +323,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Beschlussblatt, Gültigkeit: bis zum Investorengespräch (D71)
     - Beschlussblatt, Wiedervorlage: nicht frei: nacharbeiten und neu vorlegen
   - **Schritt:** Investorengespräche _[offen]_
-    - Wann: nach Stufe A, Zeitpunkt nach D71
+    - Wann: sobald Geschäftsplan, Whitepaper und Pitch Deck aus dem Index stehen (D71, Antwort vom 17.11.2026)
     - Voraussetzung: Unterlagen (AP-A7), Struktur (O05)
     - Blockiert: Bestellung Phase 0
     - Grundbestimmungen: GB8, GB9
@@ -1624,28 +1646,14 @@ Je Karte die Antwort und der Kommentar im Wortlaut; die gewählte Möglichkeit i
     - Möglichkeit A: Kern — Wasseranalyse, Planung, Rechtsprüfung und Angebote, Werkzeug und Kurse, Holz schlagen und einlagern, Whitelist und Unterlagen. 2.640–4.901 € (mit Reserve bis 5.636 €).
     - Möglichkeit B: Optimum — Kern, dazu Netzanschluss beantragen und den Entwässerungsgraben bauen. 3.817–6.965 € (mit Reserve bis 8.009 €).
     - Möglichkeit C: Erweitert — Optimum, dazu den Brunnen bohren. Beweist Wasser am Ort; Tiefe unbekannt. 4.533–8.554 € (mit Reserve bis 9.837 €).
-  - **Entscheidung D70:** Wie wird Eigenleistung bewertet und belegt? _[offen]_
-    - Im Optimum stecken rund 431 Stunden eigene Arbeit. Ob und mit welchem Satz sie als Einlage zählt, ist eine Steuer- und Rechtsfrage.
-    - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
-    - Beschlussblatt, Fachliche Prüfung: –
-    - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
-    - Beschlussblatt, Budgetgrenze: –
-    - Beschlussblatt, Gültigkeit: bis ihr sie ändert
-    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
-    - Möglichkeit A: Stundenbuch plus Steuerberater — Jede Stunde mit Datum, Rolle, Tätigkeit und Foto festhalten; der Steuerberater legt fest, wie sie in die Gesellschaft eingeht.
-    - Möglichkeit B: Nur dokumentieren — Stunden und Ergebnisse festhalten und Investoren zeigen, ohne sie zu bewerten.
-    - Möglichkeit C: Mit deutschem Stundensatz ansetzen — Eigenleistung mit einem Marktsatz aus Deutschland bewerten und als Einlage verhandeln.
-  - **Entscheidung D71:** Ab wann sprechen wir Investoren an? _[offen]_
-    - Für Investoren zählen geprüfte Nachweise. Das Deck nennt als Gate: belastbares Kostenband, validiertes Revenue Model, rechtliche Struktur, messbare Meilensteine, klarer Kapitalbedarf.
-    - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
-    - Beschlussblatt, Fachliche Prüfung: –
-    - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
-    - Beschlussblatt, Budgetgrenze: –
-    - Beschlussblatt, Gültigkeit: bis ihr sie ändert
-    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
-    - Möglichkeit A: Nach Stufe A — Sobald Wasser analysiert, Struktur geklärt und je großem Posten drei Angebote da sind. Erste Gespräche zum Kennenlernen schon vorher.
-    - Möglichkeit B: Sofort mit dem heutigen Stand — Gespräche jetzt führen, mit offenen Punkten klar benannt.
-    - Möglichkeit C: Erst nach dem ersten Winter — Warten, bis Messreihen, trockenes Holz und erste Mieter-Interessenten vorliegen.
+  - **Entscheidung D70:** Wie wird Eigenleistung bewertet und belegt? _[entschieden]_
+    - Gilt: Nur dokumentieren: Stunden, Ergebnisse und Fotos festhalten und Investoren zeigen, ohne sie in Geld zu bewerten.
+    - Antwort 17.11.: B
+    - Möglichkeit B: Nur dokumentieren — Stunden und Ergebnisse festhalten und Investoren zeigen, ohne sie zu bewerten. [entschieden]
+  - **Entscheidung D71:** Ab wann sprechen wir Investoren an? _[entschieden]_
+    - Gilt: Investoren werden angesprochen, sobald aus dem Index ein tragfähiger Geschäftsplan, Whitepaper und Pitch Deck entstehen. Dafür braucht es eine Oberfläche, auf der man abhakt, wo man steht (auch als BPMN 2.0), mit logischer Reihenfolge und einem Plan, der sich mit den Ergebnissen anpasst, zum Beispiel frühester und spätester Bestelltag aus der Lieferzeit des gewählten Anbieters. Umgesetzt als Cockpit im Index am 17.11.2026.
+    - Antwort 17.11.: ohne Wahl, Kommentar gilt
+    - Kommentar 17.11.: sobald wir aus dem plan bzw index 3.0 ein viable geschäftsplan, whitepaper, pitch deck erstellen können. wir müssen es soweit bekommen das man wie in einem game oder einfach auf einer oberfläche abhaken kann wo man ist im plan (auch erischtlich über ein bpmn2.0) und dann die schritte weiter gehen- dafür muss auch eine logische reihenfolge da sein, die von index 3.0 ist ok aber wir müssen es hinbekommen das man diesen plan im fluss während man arbeitet er auch angepasst wird je nachdem was man für ein ergebniss erzielt hat. NUR ALS BEISPIEL: wenn wir wohneinheiten bestellen würden, und die brauchen ca 45tage bis sie da sind, dann muss im "game/unserer dashboard oberfläche" einmal der frühstmögoiche zeitpunkt gezeigt werden wo wir auf den bestellknopf auf der verknüpften website wo wir bestellen würden bestellen müssen. aber im schritt davor zB müssen wir ja bewerten welchen von den anbietern wir im endeffekt benutzen werden, die haben auch alle verschiedene liefertermine, verschiedene größen und manche lassen sich einzeln liefern, andere können getrennt gelifert und oben aufgebaut werden. das ist kritisch für den gesamtplan und für die investoren und auswertung.
   - **Entscheidung D72:** Welche offenen Kosten zuerst mit Angeboten belegen? _[offen]_
     - Im Register haben 69 von 137 Positionen keinen Betrag. Die größten Unbekannten bestimmen den Kapitalbedarf.
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
@@ -2111,3 +2119,99 @@ Die offenen Architekturentscheidungen der Baseline, die Aufteilung von Holding, 
     - Rollen wie im Pitch. Der Architekt berät zu Architektur und Bau und ist kein Teammitglied.
   - **Entscheidung:** D68 · Arbeitsweise _[entschieden]_
     - Repo als Quelle und Regeln der Baseline; vieles ist noch zu klären.
+  - **Entscheidung:** D70 · Eigenleistung bewerten und belegen _[entschieden]_
+    - Nur dokumentieren: Stunden, Ergebnisse und Fotos festhalten und Investoren zeigen, ohne sie in Geld zu bewerten.
+  - **Entscheidung:** D71 · Ab wann Investoren ansprechen _[entschieden]_
+    - Investoren werden angesprochen, sobald aus dem Index ein tragfähiger Geschäftsplan, Whitepaper und Pitch Deck entstehen. Dafür braucht es eine Oberfläche, auf der man abhakt, wo man steht (auch als BPMN 2.0), mit logischer Reihenfolge und einem Plan, der sich mit den Ergebnissen anpasst, zum Beispiel frühester und spätester Bestelltag aus der Lieferzeit des gewählten Anbieters. Umgesetzt als Cockpit im Index am 17.11.2026.
+
+## 9 · Technik und digitale Erlöse der Company: was schon läuft
+
+Investoren sehen nicht nur Unterlagen, sondern eine Infrastruktur, die genutzt wird, und Erlösquellen mit Reifegrad. Getrennt von Node001, wie die zwei Investment Cases im Whitepaper. Quelle: plan/technik/technik.json.
+
+- **Ast:** Infrastruktur im Betrieb (IT01 bis IT09)
+  - Feste Kosten je Monat, soweit bekannt: 248,33 € ohne Microsoft 365; dazu Microsoft 365 Business Premium je Nutzer (Nutzerzahl offen) und Cardano je Transaktion. Quelle: Angaben der Projektleitung vom 17.11.2026; Microsoft-Listenpreis aus Händlerlisten. Nachweise und Nutzung trägt das Team im Cockpit ein (AP-A10).
+  - **Schritt:** ChatGPT: KI-Arbeitsplatz: Recherche, Texte, Code, Agenten _[läuft]_
+    - Bereich: KI
+    - Kosten: 90,00 € je Monat
+    - Quelle: Angabe der Projektleitung vom 17.11.2026
+    - Nachweis für Investoren: Abo-Rechnung; Nutzung in Projekten
+  - **Schritt:** Claude: KI-Arbeitsplatz: Planung, Code, Auswertung _[läuft]_
+    - Bereich: KI
+    - Kosten: 90,00 € je Monat
+    - Quelle: Angabe der Projektleitung vom 17.11.2026
+    - Nachweis für Investoren: Abo-Rechnung; Repository mit Commits
+  - **Schritt:** Website-Hosting: Website und Plattform x-portal.eu _[läuft]_
+    - Bereich: Web
+    - Kosten: 10,00 € je Monat
+    - Quelle: Angabe der Projektleitung vom 17.11.2026
+    - Nachweis für Investoren: Live-URL; Hosting-Rechnung
+  - **Schritt:** Supabase: Datenbank und Backend der Plattform _[läuft]_
+    - Bereich: Daten
+    - Kosten: 25,00 € je Monat
+    - Quelle: Angabe der Projektleitung vom 17.11.2026
+    - Nachweis für Investoren: Projekt-Dashboard: Tabellen, Nutzer, Abfragen
+  - **Schritt:** Cardano-Transaktionen: Nachweise und Zahlungen on-chain; Grundlage für Zugang und Erfassung (AP-D5, AP-F4) _[läuft]_
+    - Bereich: Blockchain
+    - Kosten: 0,02 € je Transaktion
+    - Quelle: Angabe der Projektleitung vom 17.11.2026: 0,16 ADA, umgerechnet etwa 2 Cent
+    - Nachweis für Investoren: Transaktions-Hashes, öffentlich im Explorer prüfbar
+    - Hinweis: ADA-Kurs schwankt; Anzahl je Monat offen
+  - **Schritt:** X Premium mit Grok-Bot: Marketing und Reichweite auf X; Grok-Bot im Abo enthalten _[läuft]_
+    - Bereich: Marketing
+    - Kosten: 30,00 € je Monat
+    - Quelle: Angabe der Projektleitung vom 17.11.2026
+    - Nachweis für Investoren: Profil, Reichweitenzahlen, Abo-Beleg
+  - **Schritt:** Microsoft 365 Business Premium: E-Mail, Teams, OneDrive, Office, Sicherheit und Geräteverwaltung _[läuft]_
+    - Bereich: Büro
+    - Kosten: etwa 20–22 € je Nutzer und Monat netto
+    - Quelle: Listenpreis etwa 20–22 € netto je Nutzer und Monat im Jahresabo (Händlerlisten 08/2026; Microsoft-Seite am 17.11.2026 nicht erreichbar); Betrag aus der Rechnung übernehmen
+    - Nachweis für Investoren: Rechnung; Mandant mit Nutzern
+    - Hinweis: Nutzerzahl offen
+  - **Schritt:** Domain: x-portal.eu _[läuft]_
+    - Bereich: Web
+    - Kosten: 40,00 € je Jahr (≈ 3,33 € im Monat)
+    - Quelle: Angabe der Projektleitung vom 17.11.2026
+    - Nachweis für Investoren: Registrierung
+  - **Schritt:** Plattform x-portal.eu: KI-Matching und Freelancer-Profile; läuft auf IT03 und IT04 _[läuft]_
+    - Bereich: Plattform
+    - Kosten: offen
+    - Quelle: eigene Entwicklung; Kosten stecken in IT03 und IT04
+    - Nachweis für Investoren: Live-URL, Nutzerzahlen, Repository
+- **Ast:** Digitale und weitere Erlösquellen
+  - Zuordnung zu den Erlösstufen des Whitepapers. Beträge erst mit Belegen (D53).
+  - **Schritt:** Kundenprojekte über die DT Agentur (Deutschland, Österreich, Schweiz) _[läuft]_
+    - Erlösstufe: 01 · Heute
+    - Reifegrad: läuft
+    - Stand: Kundenprojekte heute (D51)
+    - Nachweis: Rechnungen, Referenzen
+    - Nächster Schritt: erster bezahlter Auftrag mit Testkarte (2.6.1)
+  - **Schritt:** ISMS-App: Zertifizierungen, unter anderem für Startups _[in Arbeit]_
+    - Erlösstufe: 02 · Technologielösungen
+    - Reifegrad: Pilot mit Kunden
+    - Stand: Angabe der Projektleitung vom 17.11.2026
+    - Nachweis: Pilotkunden, Nutzung der App, Kundenstimme
+    - Nächster Schritt: Pilot auswerten, Preismodell, Referenz (AP-A11)
+  - **Schritt:** KI-Agenten _[in Arbeit]_
+    - Erlösstufe: 02 · Technologielösungen
+    - Reifegrad: in Entwicklung
+    - Stand: Teilergebnis 2.6.4: Verkauf über Masumi später
+    - Nachweis: Repository, erste Nutzung
+    - Nächster Schritt: Preismodell (2.6.2)
+  - **Schritt:** Plattform x-portal.eu mit KI-Matching _[läuft]_
+    - Erlösstufe: Plattform
+    - Reifegrad: läuft, Erlösmodell offen
+    - Stand: Whitepaper „Vorhanden“
+    - Nachweis: Live-URL, Profile, Matches
+    - Nächster Schritt: Erlösmodell festlegen
+  - **Schritt:** Staking oder Stake-Pool auf Cardano _[offen]_
+    - Erlösstufe: Blockchain
+    - Reifegrad: Stand offen
+    - Stand: Angabe der Projektleitung vom 17.11.2026 (Antwort auf die Frage nach Einnahmen über die Blockchain)
+    - Nachweis: Stake-Pool-ID oder Staking-Adresse, öffentlich prüfbar
+    - Nächster Schritt: Rechts- und Steuerprüfung (AP-A12)
+  - **Schritt:** Miete und Services am Node001 _[später]_
+    - Erlösstufe: 03 · Node001
+    - Reifegrad: vor dem Bau
+    - Stand: D45, D48, D50
+    - Nachweis: Whitelist, später Mietverträge und Mieterlöse (AP-F3)
+    - Nächster Schritt: Whitelist einrichten (AP-A8)
