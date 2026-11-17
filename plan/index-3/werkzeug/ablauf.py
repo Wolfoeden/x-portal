@@ -9,7 +9,7 @@ Nichts wird automatisch bestellt oder versendet. Termine ohne Quelle gibt es nic
 GB = [
     ('GB1', 'Weg nach oben: transportierbar', 'Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jedes Objekt muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen. Im Winter muss geräumt werden.', 'Kommentar 17.11.2026; Standortangaben vom 04.11.2026; D57'),
     ('GB2', 'Boden und Hang', 'Rutsch- und Fließprozesse; Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Streifen- und Stützfundament, hangseitige Stützkonstruktion und Entwässerungsgraben. Fachprüfung des Berichts, Zusatzerkundung und Vermessung liegen vor, sind aber noch nicht im Plan abgelegt (AP-A1).', 'Geologiebericht 34.11/26; Kommentar 15.11.2026'),
-    ('GB3', 'Lage', 'Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche; Grundlage ist der Detailplan Blatt 3.', 'D55; Detailplan'),
+    ('GB3', 'Lage', 'Phase 0 und die ersten Wohneinheiten stehen im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche (voraussichtlich); Grundlage ist der Detailplan Blatt 3.', 'D55; Antwort 17.11.2026'),
     ('GB4', 'Frost und Termine', 'Gebaut wird nur ohne Frost. Termine sind Ziele und gelten erst nach den Gates.', 'D58'),
     ('GB5', 'Sanitär', 'Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser ab Phase 0 fest eingebaut.', 'D62'),
     ('GB6', 'Wasser', 'Grundwasser, aufbereitet zu Trinkwasser; Anfangsstufe bauen, Ausbau vorbereiten.', 'D61'),
@@ -90,7 +90,7 @@ def bau(N, X, O, alt):
         AP(N, 'AP-A0', 'Strecke ablaufen und messen: einspurige, teils enge Straße bis zum Grundstück', 'open',
            'jetzt; vor jeder Anfrage an Anbieter und Spediteure', 'Maßband, Neigungsmesser, Kamera mit GPS', 'Auswahl des Objekts (hausart, AP-C1), Logistik (AP-C3), Bestellung',
            ['GB1', 'GB11'], 'führt aus: Projektleitung oder Team vor Ort · wertet aus: planende KI',
-           'Streckenprotokoll: schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt',
+           'Streckenprotokoll bis zur Kehre am markierten Bereich (GB3): schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt',
            text='Kommentar vom 17.11.2026: Die Objekte müssen über eine einfache, einspurige und teils enge Straße transportierbar sein; deshalb „leicht“. Breite, Engstellen und Ausweichstellen sind bis zur Messung offen.',
            vorlagen=[('Streckenprotokoll', '''Abschnitt | von (GPS) | bis (GPS) | Länge m | schmalste Breite m | Kurvenradius m | Steigung % | Untergrund | Ausweichstelle ja/nein | Wendestelle ja/nein | Brücke, Lastgrenze t | Foto-Nr. | Bemerkung
 1 | | | | | | | | | | | |
@@ -139,7 +139,7 @@ Mit freundlichen Grüßen
 Ausgabe: Tabelle mit Punkt | Ergebnis | Quelle | Abrufdatum; dazu Kontaktdaten der zuständigen Stelle.'''),
         alt['hausart'],
         AP(N, 'AP-A4', 'Bauplanung Phase 0 mit Bau-KI und 3D-Modell (Basis of Design)', 'open',
-           'nach Lage (O01) und Geologie-Abgleich (AP-A1)', 'Detailplan, Geologiebericht, Lastliste, Raumliste aus Ast 2', 'Angebote, Bestellung, Selbstkosten',
+           'jetzt; die Lage steht voraussichtlich (markierter Bereich, 17.11.2026), Nachweise aus AP-A1 fließen ein', 'Detailplan, Geologiebericht, Lastliste, Raumliste aus Ast 2', 'Angebote, Bestellung, Selbstkosten',
            ['GB1', 'GB2', 'GB3', 'GB5', 'GB6', 'GB7'], 'entscheidet: Geschäftsführung · führt aus: Fachexperte Bau mit Bau-KI · berät: Architekt',
            'Basis of Design: Objekt, Fundament, Entwässerung, Leitungen (Wasser, Abwasser, Strom, Internet), Weg, Lageplan; Grundlage für alle Anfragen', anr='A010',
            auftrag='''Ziel: Das Eingangspaket für die Bauplanung zusammenstellen.
@@ -259,7 +259,7 @@ Ausgabe: Tabelle Anbieter | Strecke | Fahrzeuge | Zoll | Kran | Kontakt | Quelle
         AP(N, 'AP-C5', 'Charge 1 festlegen: welche Objekte und welches Material jetzt kaufen und hochbringen', 'open',
            'nach Angeboten (AP-C1) und Streckenprotokoll (AP-A0)', 'Transportierbarkeit geprüft, Geld nach GB8, Lager oben', 'Bestellung, Logistik (AP-C3)',
            ['GB1', 'GB4', 'GB8'], 'schlägt vor: planende KI · entscheidet: Geschäftsführung',
-           'Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter), Material und A-Nummern; was sich lagern lässt, kommt früh hoch',
+           'Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch',
            text='Business Case (Kommentar vom 17.11.2026): jetzt Objekte oder Material einkaufen und hochbringen; während dessen wächst die Whitelist; ist sie groß genug, wird nachbestellt (AP-G3), und Leute von der Whitelist ziehen ein und zahlen Miete. Die Mieterlöse zeigen wir Investoren (AP-F3).'),
         AP(N, 'AP-C4', 'Bestellzeitpunkte rückwärts vom Montagebeginn', 'open',
            'sobald Angebote mit Lieferzeiten vorliegen', 'Lieferzeiten (AP-C1), Zollabwicklung (AP-C2), Transportdauer (AP-C3), Frostgrenze (GB4)', 'Bestellung',
@@ -270,7 +270,7 @@ Ausgabe: Tabelle Anbieter | Strecke | Fahrzeuge | Zoll | Kran | Kontakt | Quelle
 
     D = G('ab-d', 'D · Bau Phase 0', [
         AP(N, 'AP-D1', 'Bäume fällen, Baufläche und Trasse roden, Holz einlagern', 'open',
-           'nach Fällgenehmigung und Lage (O01); Holz braucht etwa ein Jahr zum Trocknen', 'Fällgenehmigung, Motorsägenkurs, Schutzausrüstung', 'Entwässerung, Fundament; Brennholz für den zweiten Winter',
+           'nach Fällgenehmigung; im markierten Bereich und auf der Trasse dorthin (GB3); Holz braucht etwa ein Jahr zum Trocknen', 'Fällgenehmigung, Motorsägenkurs, Schutzausrüstung', 'Entwässerung, Fundament; Brennholz für den zweiten Winter',
            ['GB2', 'GB3', 'GB9'], 'führt aus: Team (Eigenleistung) · entscheidet: Geschäftsführung',
            'Gerodete Fläche, gestapeltes Holz im Lager, Stundenbuch', anr='A007, A035–A047'),
         AP(N, 'AP-D2', 'Entwässerungsgraben und Stützkonstruktion', 'open',

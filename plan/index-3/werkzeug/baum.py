@@ -44,12 +44,17 @@ hauptweg = [
           X('Fall B', 'Massive, dauerhafte Gebäude: Gründung auf IGE-4, mit Zusatzerkundung.', 'Laut Gutachter für massive Gebäude. Betrifft Kommunalgebäude und Objekte in Phase 1 (Zuordnung Vorschlag KI).', state='open',
             kids=[N('step', None, 'Ergebnis der vorhandenen Zusatzerkundung für die Gebäude in Phase 1 auswerten', 'open', meta='Fachexperte Bau · nach AP-A1')]),
           X('Fall C', 'Flächen mit Grundwasseraustritt und Rutschprozessen.', 'Bohrpunkte 6, 7 und 11. Entwässerungsgraben und Stützkonstruktion nach Empfehlung; die Lage von Phase 0 berücksichtigt diese Punkte.', state='open'),
-          N('decision', 'lage', 'Wo im Detailplan steht das Objekt Phase 0 (unterhalb der Herrenhaus-Fläche, D55)?', 'open',
-            meta='Geschäftsführung mit dem Architekten (Beratung) · vor der Planung von Phase 0',
-            text='Grundlage ist der Detailplan Blatt 3 (2,0 ha, 24 Parzellen, Höhenlinien, Brunnen, lokale Kläranlage; Bild unter „Der Ort“ in der Grundlage). Zu klären: welche Parzelle die Herrenhaus-Fläche ist, wo darunter das Objekt Phase 0 steht und wie Wasser, Strom, Abwasser und Weg dorthin kommen.'),
+          N('decision', 'lage', 'Wo stehen das Objekt Phase 0 und die ersten Wohneinheiten? Im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche', 'done',
+            meta='Antwort der Projektleitung vom 17.11.2026, voraussichtlich · endgültig mit der Bauplanung (AP-A4) und dem Fachexperten Bau · D55',
+            text='Grundlage ist der Detailplan Blatt 3. Der markierte Bereich liegt an der Kehre der Zufahrt, neben den Parzellen 9 (0,0355 ha), 7 (0,0550 ha) und 8 (0,1740 ha). Dort stehen das Objekt Phase 0 und, beim Bauen in Chargen, die ersten Wohneinheiten für Mieter (AP-C5, AP-G3).',
+            facts=[('Antwort 17.11.', '„im screenshot habe ich ein blaues rechteck eingefückt das zeigt wo unterhalb vom herrenhaus die wohneinheiten voraussichtlich stehen werden da es dort ziemlich eben ist und man es von einer einfahrt leicht erreichen könnte“'),
+                   ('Gründe', 'ziemlich eben; von der Einfahrt leicht erreichbar'),
+                   ('Noch zu prüfen', 'Lage der Bohrpunkte 6, 7 und 11 (Grundwasseraustritt) gegenüber dem Bereich, mit dem Lageplan der Bohrungen aus dem Geologiebericht; Abstand zur Straße und zur Kehre; Wege für Wasser, Strom und Abwasser; wie viele Wohneinheiten Platz haben. Das klärt die Bauplanung (AP-A4).'),
+                   ('Quelle', 'quellen/lage-wohneinheiten-2026-11-17.pdf (Detailplan) und das markierte Bild in der Grundlage')],
+            see=[('#b-lage-bild', 'Markierter Ausschnitt in der Grundlage'), ('#b-AP-A4', 'Bauplanung')]),
       ]),
     N('decision', 'hausart', 'Bauart der Objekte: Holz, Beton, Glas, Metall? Erste Bedingung: transportierbar über die einspurige, enge Straße', 'open',
-      meta='Geschäftsführung nach Vorschlag Fachexperte Bau · nach Lage (O01)',
+      meta='Geschäftsführung nach Vorschlag Fachexperte Bau · Lage steht voraussichtlich (17.11.2026)',
       text='Antwort vom 13.11. (D56): Der Plan für die Objekte steht aus; eine Bau-KI bewertet und plant in Abhängigkeit von den lokalen Gegebenheiten (Geologie, Gelände, Zufahrt).',
       see=[('#b-mb-haus', 'Varianten im Make-or-Buy')], ziel=['Z1', 'Z2']),
     N('chance', 'zufahrt', 'Kommt das Objekt Phase 0 die Zufahrt hoch, im Sommer und im Winter (2.2.4)?', 'done',
@@ -534,15 +539,18 @@ GRUNDLAGE = """<h4 class="dt-h4">Mission und Globalziele: der Ausgangspunkt (D42
 <h4 class="dt-h4" id="b-ort">Der Ort: Detailplan Blatt 3 und Geologie</h4>
 <p>Detailplan des Gebiets (Stadium ДПТ, Blatt 3 von 8, M 1:500): 2,0 ha, bebaute Fläche 4.701,2 m², 24 nummerierte Parzellen mit Flächen, Höhenlinien, Straßen mit 6 m Fahrbahn und Gehwegen, Bohrbrunnen und lokale Kläranlage.</p>
 <figure class="dt-plan"><div class="dt-planbox"><img alt="Detailplan Blatt 3: Grundstück mit 24 Parzellen, Straßen, Höhenlinien und Legende" src="DETAILPLAN_SRC"></div><figcaption>Detailplan Blatt 3 (Architekt, Januar 2025). Zum Vergrößern: Bild antippen.</figcaption></figure>
+<p><b>Wo Phase 0 steht (Antwort vom 17.11.2026, voraussichtlich):</b> im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche, neben den Parzellen 9 (0,0355 ha), 7 (0,0550 ha) und 8 (0,1740 ha). Dort stehen das Objekt Phase 0 und die ersten Wohneinheiten (Knoten „lage“ in Ast 1).</p>
+<figure class="dt-plan" id="b-lage-bild"><div class="dt-planbox"><img alt="Ausschnitt aus dem Detailplan Blatt 3 mit blau markiertem Bereich an der Kehre der Zufahrt: hier stehen voraussichtlich das Objekt Phase 0 und die ersten Wohneinheiten" src="LAGE_SRC"></div><figcaption>Blau markiert von der Projektleitung am 17.11.2026: Hier stehen voraussichtlich das Objekt Phase 0 und die ersten Wohneinheiten, unterhalb der Herrenhaus-Fläche. Die Fläche ist ziemlich eben und von der Einfahrt leicht erreichbar. Quelle: quellen/lage-wohneinheiten-2026-11-17.pdf.</figcaption></figure>
 <details class="dt-legende"><summary>Legende des Plans auf Deutsch (17 Objektarten)</summary><ol>
 <li>Wachposten</li><li>Autowäsche</li><li>Müllsammelplatz</li><li>Gästeparkplatz</li><li>Verwaltungs- und Erholungskomplex mit Tiefgarage (Räume mit Doppelnutzung) und Technikräumen für die Siedlung</li>
 <li>Handelspavillon</li><li>Laden mit Café</li><li>Restaurant- und Hotelkomplex</li><li>Handelspavillon</li><li>Kapelle</li><li>Kinderspielplatz</li><li>Handels- und Unterhaltungskomplex</li>
 <li>Aussichtsterrasse, Platz für Sport</li><li>Einfamilienhaus</li><li>Erholungsplatz für Erwachsene</li><li>Lokale Kläranlage</li><li>Wohnhaus mit Büroräumen</li></ol>
 <p>Funktionale Nutzung nach ukrainischem Klassifikator: 02.01 Wohnhaus mit Nebengebäuden; 03.04 Gemeinschafts- und religiöse Gebäude; 03.07 Handel; 03.08 Tourismus und Gastronomie; 10.08 Erholung, Sport und Tourismus.</p></details>
-<p><b>Geologie:</b> Der technische Bericht des Ingenieurgeologen liegt vor (Vertrag 34.11/26). Hang mit Rutsch- und Fließprozessen, Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Empfohlen: Streifen- und Stützfundament, Stützkonstruktion hangseitig, Entwässerungsgraben; Zusatzerkundung für Zufahrt, Stützkonstruktionen und Hauptgebäude. Einzelheiten im Ast 1. Die deutsche Zusammenfassung ist KI-erstellt und wird mit dem Original abgeglichen.</p>
-<p class="note">Offen: welche Parzelle die Herrenhaus-Fläche ist und wo darunter das Objekt Phase 0 steht (Ast 1, Lage). Wie weit das Bauprogramm des Plans (Hotel, Handel, Tiefgarage) zum Mietmodell und zu den Phasen passt, ist nicht entschieden.</p>"""
+<p><b>Geologie:</b> Der technische Bericht des Ingenieurgeologen liegt vor (Vertrag 34.11/26). Hang mit Rutsch- und Fließprozessen, Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Empfohlen: Streifen- und Stützfundament, Stützkonstruktion hangseitig, Entwässerungsgraben; Zusatzerkundung für Zufahrt, Stützkonstruktionen und Hauptgebäude. Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026); die Dokumente kommen in den Plan (AP-A1). Einzelheiten im Ast 1.</p>
+<p class="note">Die Lage von Phase 0 ist seit dem 17.11.2026 voraussichtlich festgelegt (blau markierter Bereich oben). Wie weit das Bauprogramm des Plans (Hotel, Handel, Tiefgarage) zum Mietmodell und zu den Phasen passt, ist nicht entschieden.</p>"""
 
 import base64 as _b64
+LAGE_BILD = 'data:image/jpeg;base64,' + _b64.b64encode((Path(__file__).resolve().parent.parent / 'quellen' / 'lage-wohneinheiten-2026-11-17.jpg').read_bytes()).decode()
 DETAILPLAN = 'data:image/jpeg;base64,' + _b64.b64encode((Path(__file__).resolve().parent.parent / 'quellen' / 'detailplan-blatt-3.jpg').read_bytes()).decode()
 
 def zielblatt_html():
@@ -574,7 +582,7 @@ def zielblatt_html():
     ]
     nu = ''.join(f'<tr><td><b>{a}</b></td><td>{linkify(b)}</td><td>{linkify(c)}</td></tr>' for a, b, c in nutzen)
     nt = f'<div class="tablewrap"><table><thead><tr><th>Globalziel, in dieser Rangfolge (Ausgangspunkt nach D42)</th><th>Was Node001 dafür liefert</th><th>gemessen über</th></tr></thead><tbody>{nu}</tbody></table></div>'
-    return (linkify_html(GRUNDLAGE).replace('DETAILPLAN_SRC', DETAILPLAN)
+    return (linkify_html(GRUNDLAGE).replace('DETAILPLAN_SRC', DETAILPLAN).replace('LAGE_SRC', LAGE_BILD)
             + f'<h4 class="dt-h4" id="b-zielblatt-tab">Ziele (Zielblatt nach M01)</h4><p>Ziel, Messgröße, Zielwert oder Klärungsauftrag, Zeithorizont, Verantwortung und Review. Jeder Ast darunter nennt unter „Dient“, auf welche Zeile er einzahlt.</p>{zb}'
             + '<p class="note">Diese Ziele gelten für Node001. Eigene Ziele für Holding, Agentur und Plattform kommen danach dazu (X1 bis X3 sind bis dahin Klärungsaufträge).</p>'
             + f'<h4 class="dt-h4" id="b-grenzen">Grenzen von Stufe 1, die entscheiden</h4><p>Termine sind Ziele (D58). Beim Geld gilt: Eigenkapital bis zur Bauplanung, danach Investoren (D46, D47). Wirksam wird eine Grenze, wenn feststeht, was passiert, sobald sie reißt.</p>{gt}'
@@ -710,6 +718,8 @@ def pruefe_baum(nodes, pfad=''):
             for w in ALT:
                 if t and w in t:
                     fehler.append(f'{n.get("id") or n.get("title")[:50]}: „{w}“ in „{t[:90]}“')
+        if n.get('id') == 'lage' and n.get('state') != 'done':
+            fehler.append('lage: Antwort vom 17.11.2026 (markierter Bereich) fehlt')
         if n.get('kind') == 'chance' and n.get('id') == 'O01' and n.get('state') == 'wait':
             fehler.append('O01: Geologie steht noch auf „wartet“')
         fehler += pruefe_baum(n.get('kids', []))
@@ -889,7 +899,7 @@ n_wait = count('decision', 'wait')
 n_chance = count('chance')
 n_gates = count('gate')
 
-blockers = [('AP-A0', 'Strecke messen: einspurige, enge Straße', 'Projektleitung · jetzt'), ('AP-A8', 'Whitelist der künftigen Mieter einrichten', 'Projektleitung · jetzt'), ('AP-A1', 'Vorhandene Nachweise in den Plan legen', 'Geschäftsführung · jetzt'), ('lage', 'Lage von Phase 0 im Detailplan', 'Geschäftsführung mit dem Architekten'),
+blockers = [('AP-A0', 'Strecke messen: einspurige, enge Straße', 'Projektleitung · jetzt'), ('AP-A8', 'Whitelist der künftigen Mieter einrichten', 'Projektleitung · jetzt'), ('AP-A1', 'Vorhandene Nachweise in den Plan legen', 'Geschäftsführung · jetzt'), ('AP-A4', 'Bauplanung für den markierten Bereich (Bau-KI, 3D-Modell)', 'Fachexperte Bau · Freigabe Geschäftsführung'),
             ('O12', 'Paket vor dem Investment (D69)', 'Geschäftsführung'), ('O31', 'Angebote für Objekt Phase 0', 'Projektleitung · nach Bauart'),
             ('O05', 'Anwälte und Prüfaufträge', 'Geschäftsführung und Projektleitung · vor G0')]
 

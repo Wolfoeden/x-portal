@@ -66,13 +66,15 @@ Mobilität: ein gemeinsames Fahrzeug; keine E-Bikes in Phase 0 (D65).
 Der Ort: Detailplan Blatt 3 und Geologie
 Detailplan des Gebiets (Stadium ДПТ, Blatt 3 von 8, M 1:500): 2,0 ha, bebaute Fläche 4.701,2 m², 24 nummerierte Parzellen mit Flächen, Höhenlinien, Straßen mit 6 m Fahrbahn und Gehwegen, Bohrbrunnen und lokale Kläranlage.
 Detailplan Blatt 3 (Architekt, Januar 2025). Zum Vergrößern: Bild antippen.
+Wo Phase 0 steht (Antwort vom 17.11.2026, voraussichtlich): im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche, neben den Parzellen 9 (0,0355 ha), 7 (0,0550 ha) und 8 (0,1740 ha). Dort stehen das Objekt Phase 0 und die ersten Wohneinheiten (Knoten „lage“ in Ast 1).
+Blau markiert von der Projektleitung am 17.11.2026: Hier stehen voraussichtlich das Objekt Phase 0 und die ersten Wohneinheiten, unterhalb der Herrenhaus-Fläche. Die Fläche ist ziemlich eben und von der Einfahrt leicht erreichbar. Quelle: quellen/lage-wohneinheiten-2026-11-17.pdf.
 Legende des Plans auf Deutsch (17 Objektarten)
 WachpostenAutowäscheMüllsammelplatzGästeparkplatzVerwaltungs- und Erholungskomplex mit Tiefgarage (Räume mit Doppelnutzung) und Technikräumen für die Siedlung
 HandelspavillonLaden mit CaféRestaurant- und HotelkomplexHandelspavillonKapelleKinderspielplatzHandels- und Unterhaltungskomplex
 Aussichtsterrasse, Platz für SportEinfamilienhausErholungsplatz für ErwachseneLokale KläranlageWohnhaus mit Büroräumen
 Funktionale Nutzung nach ukrainischem Klassifikator: 02.01 Wohnhaus mit Nebengebäuden; 03.04 Gemeinschafts- und religiöse Gebäude; 03.07 Handel; 03.08 Tourismus und Gastronomie; 10.08 Erholung, Sport und Tourismus.
-Geologie: Der technische Bericht des Ingenieurgeologen liegt vor (Vertrag 34.11/26). Hang mit Rutsch- und Fließprozessen, Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Empfohlen: Streifen- und Stützfundament, Stützkonstruktion hangseitig, Entwässerungsgraben; Zusatzerkundung für Zufahrt, Stützkonstruktionen und Hauptgebäude. Einzelheiten im Ast 1. Die deutsche Zusammenfassung ist KI-erstellt und wird mit dem Original abgeglichen.
-Offen: welche Parzelle die Herrenhaus-Fläche ist und wo darunter das Objekt Phase 0 steht (Ast 1, Lage). Wie weit das Bauprogramm des Plans (Hotel, Handel, Tiefgarage) zum Mietmodell und zu den Phasen passt, ist nicht entschieden.
+Geologie: Der technische Bericht des Ingenieurgeologen liegt vor (Vertrag 34.11/26). Hang mit Rutsch- und Fließprozessen, Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Empfohlen: Streifen- und Stützfundament, Stützkonstruktion hangseitig, Entwässerungsgraben; Zusatzerkundung für Zufahrt, Stützkonstruktionen und Hauptgebäude. Fachprüfung, Zusatzerkundung und Vermessung liegen vor (Kommentar vom 15.11.2026); die Dokumente kommen in den Plan (AP-A1). Einzelheiten im Ast 1.
+Die Lage von Phase 0 ist seit dem 17.11.2026 voraussichtlich festgelegt (blau markierter Bereich oben). Wie weit das Bauprogramm des Plans (Hotel, Handel, Tiefgarage) zum Mietmodell und zu den Phasen passt, ist nicht entschieden.
 
 
 ## 1 · Ablaufplan von Schritt 1 bis Projektende: Arbeitspakete mit fertigen Unterlagen
@@ -107,16 +109,14 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
         - Fachexperte Bau · nach AP-A1
     - **Ausgang (Fall C):** Flächen mit Grundwasseraustritt und Rutschprozessen. _[offen]_
       - Bohrpunkte 6, 7 und 11. Entwässerungsgraben und Stützkonstruktion nach Empfehlung; die Lage von Phase 0 berücksichtigt diese Punkte.
-    - **Entscheidung:** Wo im Detailplan steht das Objekt Phase 0 (unterhalb der Herrenhaus-Fläche, D55)? _[offen]_
-      - Geschäftsführung mit dem Architekten (Beratung) · vor der Planung von Phase 0
-      - Grundlage ist der Detailplan Blatt 3 (2,0 ha, 24 Parzellen, Höhenlinien, Brunnen, lokale Kläranlage; Bild unter „Der Ort“ in der Grundlage). Zu klären: welche Parzelle die Herrenhaus-Fläche ist, wo darunter das Objekt Phase 0 steht und wie Wasser, Strom, Abwasser und Weg dorthin kommen.
+    - **Entscheidung:** Wo stehen das Objekt Phase 0 und die ersten Wohneinheiten? Im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche _[entschieden]_
+      - Antwort der Projektleitung vom 17.11.2026, voraussichtlich · endgültig mit der Bauplanung (AP-A4) und dem Fachexperten Bau · D55
+      - Grundlage ist der Detailplan Blatt 3. Der markierte Bereich liegt an der Kehre der Zufahrt, neben den Parzellen 9 (0,0355 ha), 7 (0,0550 ha) und 8 (0,1740 ha). Dort stehen das Objekt Phase 0 und, beim Bauen in Chargen, die ersten Wohneinheiten für Mieter (AP-C5, AP-G3).
+      - Antwort 17.11.: „im screenshot habe ich ein blaues rechteck eingefückt das zeigt wo unterhalb vom herrenhaus die wohneinheiten voraussichtlich stehen werden da es dort ziemlich eben ist und man es von einer einfahrt leicht erreichen könnte“
+      - Gründe: ziemlich eben; von der Einfahrt leicht erreichbar
+      - Noch zu prüfen: Lage der Bohrpunkte 6, 7 und 11 (Grundwasseraustritt) gegenüber dem Bereich, mit dem Lageplan der Bohrungen aus dem Geologiebericht; Abstand zur Straße und zur Kehre; Wege für Wasser, Strom und Abwasser; wie viele Wohneinheiten Platz haben. Das klärt die Bauplanung (AP-A4).
+      - Quelle: quellen/lage-wohneinheiten-2026-11-17.pdf (Detailplan) und das markierte Bild in der Grundlage
       - Dient: Z1, Z2
-      - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
-      - Beschlussblatt, Fachliche Prüfung: Fachexperte; Architekt berät (D67)
-      - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung; Bestellung und Betrag: Geschäftsführung (D43)
-      - Beschlussblatt, Budgetgrenze: festlegen; Obergrenze aus 2.1.3
-      - Beschlussblatt, Gültigkeit: bis ihr sie ändert
-      - Beschlussblatt, Wiedervorlage: vor der Planung von Phase 0
   - **Schritt:** Strecke ablaufen und messen: einspurige, teils enge Straße bis zum Grundstück _[offen]_
     - Kommentar vom 17.11.2026: Die Objekte müssen über eine einfache, einspurige und teils enge Straße transportierbar sein; deshalb „leicht“. Breite, Engstellen und Ausweichstellen sind bis zur Messung offen.
     - Wann: jetzt; vor jeder Anfrage an Anbieter und Spediteure
@@ -124,7 +124,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Blockiert: Auswahl des Objekts (hausart, AP-C1), Logistik (AP-C3), Bestellung
     - Grundbestimmungen: GB1, GB11
     - Rolle: führt aus: Projektleitung oder Team vor Ort · wertet aus: planende KI
-    - Ergebnis: Streckenprotokoll: schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt
+    - Ergebnis: Streckenprotokoll bis zur Kehre am markierten Bereich (GB3): schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt
     - Unterlage: Streckenprotokoll
       > Abschnitt | von (GPS) | bis (GPS) | Länge m | schmalste Breite m | Kurvenradius m | Steigung % | Untergrund | Ausweichstelle ja/nein | Wendestelle ja/nein | Brücke, Lastgrenze t | Foto-Nr. | Bemerkung
       > 1 | | | | | | | | | | | |
@@ -183,7 +183,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       > [Geschäftsführung, Node-Gesellschaft bzw. Eigentümer]
     - Auftrag für die ausführende KI: auftraege/AP-A3.md
   - **Entscheidung:** Bauart der Objekte: Holz, Beton, Glas, Metall? Erste Bedingung: transportierbar über die einspurige, enge Straße _[offen]_
-    - Geschäftsführung nach Vorschlag Fachexperte Bau · nach Lage (O01)
+    - Geschäftsführung nach Vorschlag Fachexperte Bau · Lage steht voraussichtlich (17.11.2026)
     - Antwort vom 13.11. (D56): Der Plan für die Objekte steht aus; eine Bau-KI bewertet und plant in Abhängigkeit von den lokalen Gegebenheiten (Geologie, Gelände, Zufahrt).
     - Dient: Z1, Z2
     - Beschlussblatt, Vorbereitung: KI bereitet vor, gilt erst mit Wahl (D43)
@@ -191,9 +191,9 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Beschlussblatt, Freigabe: Geschäftsführung und Projektleitung gemeinsam
     - Beschlussblatt, Budgetgrenze: –
     - Beschlussblatt, Gültigkeit: bis ihr sie ändert
-    - Beschlussblatt, Wiedervorlage: nach Lage (O01)
+    - Beschlussblatt, Wiedervorlage: Montagsrunde (3.3)
   - **Schritt:** Bauplanung Phase 0 mit Bau-KI und 3D-Modell (Basis of Design) _[offen]_
-    - Wann: nach Lage (O01) und Geologie-Abgleich (AP-A1)
+    - Wann: jetzt; die Lage steht voraussichtlich (markierter Bereich, 17.11.2026), Nachweise aus AP-A1 fließen ein
     - Voraussetzung: Detailplan, Geologiebericht, Lastliste, Raumliste aus Ast 2
     - Blockiert: Angebote, Bestellung, Selbstkosten
     - Grundbestimmungen: GB1, GB2, GB3, GB5, GB6, GB7
@@ -443,7 +443,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Blockiert: Bestellung, Logistik (AP-C3)
     - Grundbestimmungen: GB1, GB4, GB8
     - Rolle: schlägt vor: planende KI · entscheidet: Geschäftsführung
-    - Ergebnis: Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter), Material und A-Nummern; was sich lagern lässt, kommt früh hoch
+    - Ergebnis: Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch
   - **Schritt:** Bestellzeitpunkte rückwärts vom Montagebeginn _[offen]_
     - Wann: sobald Angebote mit Lieferzeiten vorliegen
     - Voraussetzung: Lieferzeiten (AP-C1), Zollabwicklung (AP-C2), Transportdauer (AP-C3), Frostgrenze (GB4)
@@ -454,7 +454,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Anschaffungen: alle Positionen mit Phase 0
 - **Ast:** D · Bau Phase 0
   - **Schritt:** Bäume fällen, Baufläche und Trasse roden, Holz einlagern _[offen]_
-    - Wann: nach Fällgenehmigung und Lage (O01); Holz braucht etwa ein Jahr zum Trocknen
+    - Wann: nach Fällgenehmigung; im markierten Bereich und auf der Trasse dorthin (GB3); Holz braucht etwa ein Jahr zum Trocknen
     - Voraussetzung: Fällgenehmigung, Motorsägenkurs, Schutzausrüstung
     - Blockiert: Entwässerung, Fundament; Brennholz für den zweiten Winter
     - Grundbestimmungen: GB2, GB3, GB9
@@ -700,8 +700,8 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
       - Fertig, wenn: Lageplan auf Grundlage des Detailplans, vom Fachexperten geprüft
       - Rolle: Architekt (Beratung) mit Fachexperte Bau
       - Abhängig: lage, AP-A4
-      - Stand: offen; Grundlage Detailplan Blatt 3
-      - Quelle: D55, D56
+      - Stand: Bereich für Phase 0 und erste Wohneinheiten voraussichtlich festgelegt (17.11.2026); Lageplan im Einzelnen offen
+      - Quelle: D55, D56; Antwort 17.11.2026
     - **Schritt:** 2.2.3 · Objekt Phase 0 gewählt: in Teilen geliefert, über die einspurige, enge Straße transportierbar _[offen]_
       - Fertig, wenn: Angebot mit Preis, Lieferform, größtem und schwerstem Teil, Montageaufwand
       - Rolle: Projektleitung · entscheidet: Geschäftsführung

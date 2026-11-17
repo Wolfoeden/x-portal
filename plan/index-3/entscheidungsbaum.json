@@ -17,8 +17,8 @@
   {
    "nr": "GB3",
    "thema": "Lage",
-   "gilt": "Phase 0: ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche; Grundlage ist der Detailplan Blatt 3.",
-   "quelle": "D55; Detailplan"
+   "gilt": "Phase 0 und die ersten Wohneinheiten stehen im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche (voraussichtlich); Grundlage ist der Detailplan Blatt 3.",
+   "quelle": "D55; Antwort 17.11.2026"
   },
   {
    "nr": "GB4",
@@ -889,22 +889,42 @@
         {
          "kind": "decision",
          "id": "lage",
-         "title": "Wo im Detailplan steht das Objekt Phase 0 (unterhalb der Herrenhaus-Fläche, D55)?",
-         "state": "open",
-         "meta": "Geschäftsführung mit dem Architekten (Beratung) · vor der Planung von Phase 0",
-         "text": "Grundlage ist der Detailplan Blatt 3 (2,0 ha, 24 Parzellen, Höhenlinien, Brunnen, lokale Kläranlage; Bild unter „Der Ort“ in der Grundlage). Zu klären: welche Parzelle die Herrenhaus-Fläche ist, wo darunter das Objekt Phase 0 steht und wie Wasser, Strom, Abwasser und Weg dorthin kommen.",
+         "title": "Wo stehen das Objekt Phase 0 und die ersten Wohneinheiten? Im blau markierten Bereich an der Kehre der Zufahrt, unterhalb der Herrenhaus-Fläche",
+         "state": "done",
+         "meta": "Antwort der Projektleitung vom 17.11.2026, voraussichtlich · endgültig mit der Bauplanung (AP-A4) und dem Fachexperten Bau · D55",
+         "text": "Grundlage ist der Detailplan Blatt 3. Der markierte Bereich liegt an der Kehre der Zufahrt, neben den Parzellen 9 (0,0355 ha), 7 (0,0550 ha) und 8 (0,1740 ha). Dort stehen das Objekt Phase 0 und, beim Bauen in Chargen, die ersten Wohneinheiten für Mieter (AP-C5, AP-G3).",
          "ziel": [
           "Z1",
           "Z2"
          ],
-         "beschlussblatt": {
-          "Vorbereitung": "KI bereitet vor, gilt erst mit Wahl (D43)",
-          "Fachliche Prüfung": "Fachexperte; Architekt berät (D67)",
-          "Freigabe": "Geschäftsführung und Projektleitung; Bestellung und Betrag: Geschäftsführung (D43)",
-          "Budgetgrenze": "festlegen; Obergrenze aus 2.1.3",
-          "Gültigkeit": "bis ihr sie ändert",
-          "Wiedervorlage": "vor der Planung von Phase 0"
-         }
+         "facts": [
+          {
+           "feld": "Antwort 17.11.",
+           "wert": "„im screenshot habe ich ein blaues rechteck eingefückt das zeigt wo unterhalb vom herrenhaus die wohneinheiten voraussichtlich stehen werden da es dort ziemlich eben ist und man es von einer einfahrt leicht erreichen könnte“"
+          },
+          {
+           "feld": "Gründe",
+           "wert": "ziemlich eben; von der Einfahrt leicht erreichbar"
+          },
+          {
+           "feld": "Noch zu prüfen",
+           "wert": "Lage der Bohrpunkte 6, 7 und 11 (Grundwasseraustritt) gegenüber dem Bereich, mit dem Lageplan der Bohrungen aus dem Geologiebericht; Abstand zur Straße und zur Kehre; Wege für Wasser, Strom und Abwasser; wie viele Wohneinheiten Platz haben. Das klärt die Bauplanung (AP-A4)."
+          },
+          {
+           "feld": "Quelle",
+           "wert": "quellen/lage-wohneinheiten-2026-11-17.pdf (Detailplan) und das markierte Bild in der Grundlage"
+          }
+         ],
+         "see": [
+          [
+           "#b-lage-bild",
+           "Markierter Ausschnitt in der Grundlage"
+          ],
+          [
+           "#b-AP-A4",
+           "Bauplanung"
+          ]
+         ]
         }
        ],
        "ziel": [
@@ -967,7 +987,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Streckenprotokoll: schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt"
+         "wert": "Streckenprotokoll bis zur Kehre am markierten Bereich (GB3): schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt"
         }
        ],
        "ap": {
@@ -979,7 +999,7 @@
          "GB11"
         ],
         "rolle": "führt aus: Projektleitung oder Team vor Ort · wertet aus: planende KI",
-        "ergebnis": "Streckenprotokoll: schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt"
+        "ergebnis": "Streckenprotokoll bis zur Kehre am markierten Bereich (GB3): schmalste Stelle, Kurven mit Radius, Steigungen, Ausweich- und Wendestellen, Brücken und Lastgrenzen, Untergrund, Fotos mit Ort; daraus das größte Maß und Gewicht, das hochkommt"
        },
        "vorlagen": [
         {
@@ -1147,7 +1167,7 @@
        "id": "hausart",
        "title": "Bauart der Objekte: Holz, Beton, Glas, Metall? Erste Bedingung: transportierbar über die einspurige, enge Straße",
        "state": "open",
-       "meta": "Geschäftsführung nach Vorschlag Fachexperte Bau · nach Lage (O01)",
+       "meta": "Geschäftsführung nach Vorschlag Fachexperte Bau · Lage steht voraussichtlich (17.11.2026)",
        "text": "Antwort vom 13.11. (D56): Der Plan für die Objekte steht aus; eine Bau-KI bewertet und plant in Abhängigkeit von den lokalen Gegebenheiten (Geologie, Gelände, Zufahrt).",
        "ziel": [
         "Z1",
@@ -1165,7 +1185,7 @@
         "Freigabe": "Geschäftsführung und Projektleitung gemeinsam",
         "Budgetgrenze": "–",
         "Gültigkeit": "bis ihr sie ändert",
-        "Wiedervorlage": "nach Lage (O01)"
+        "Wiedervorlage": "Montagsrunde (3.3)"
        }
       },
       {
@@ -1176,7 +1196,7 @@
        "facts": [
         {
          "feld": "Wann",
-         "wert": "nach Lage (O01) und Geologie-Abgleich (AP-A1)"
+         "wert": "jetzt; die Lage steht voraussichtlich (markierter Bereich, 17.11.2026), Nachweise aus AP-A1 fließen ein"
         },
         {
          "feld": "Voraussetzung",
@@ -1204,7 +1224,7 @@
         }
        ],
        "ap": {
-        "wann": "nach Lage (O01) und Geologie-Abgleich (AP-A1)",
+        "wann": "jetzt; die Lage steht voraussichtlich (markierter Bereich, 17.11.2026), Nachweise aus AP-A1 fließen ein",
         "voraus": "Detailplan, Geologiebericht, Lastliste, Raumliste aus Ast 2",
         "blockiert": "Angebote, Bestellung, Selbstkosten",
         "gb": [
@@ -1908,7 +1928,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter), Material und A-Nummern; was sich lagern lässt, kommt früh hoch"
+         "wert": "Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch"
         }
        ],
        "ap": {
@@ -1921,7 +1941,7 @@
          "GB8"
         ],
         "rolle": "schlägt vor: planende KI · entscheidet: Geschäftsführung",
-        "ergebnis": "Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter), Material und A-Nummern; was sich lagern lässt, kommt früh hoch"
+        "ergebnis": "Liste der Charge 1 mit Anzahl Objekte (Team und erste Mieter) für den markierten Bereich (GB3), Material und A-Nummern; was sich lagern lässt, kommt früh hoch"
        }
       },
       {
@@ -1986,7 +2006,7 @@
        "facts": [
         {
          "feld": "Wann",
-         "wert": "nach Fällgenehmigung und Lage (O01); Holz braucht etwa ein Jahr zum Trocknen"
+         "wert": "nach Fällgenehmigung; im markierten Bereich und auf der Trasse dorthin (GB3); Holz braucht etwa ein Jahr zum Trocknen"
         },
         {
          "feld": "Voraussetzung",
@@ -2014,7 +2034,7 @@
         }
        ],
        "ap": {
-        "wann": "nach Fällgenehmigung und Lage (O01); Holz braucht etwa ein Jahr zum Trocknen",
+        "wann": "nach Fällgenehmigung; im markierten Bereich und auf der Trasse dorthin (GB3); Holz braucht etwa ein Jahr zum Trocknen",
         "voraus": "Fällgenehmigung, Motorsägenkurs, Schutzausrüstung",
         "blockiert": "Entwässerung, Fundament; Brennholz für den zweiten Winter",
         "gb": [
@@ -3132,11 +3152,11 @@
           },
           {
            "feld": "Stand",
-           "wert": "offen; Grundlage Detailplan Blatt 3"
+           "wert": "Bereich für Phase 0 und erste Wohneinheiten voraussichtlich festgelegt (17.11.2026); Lageplan im Einzelnen offen"
           },
           {
            "feld": "Quelle",
-           "wert": "D55, D56"
+           "wert": "D55, D56; Antwort 17.11.2026"
           }
          ]
         },

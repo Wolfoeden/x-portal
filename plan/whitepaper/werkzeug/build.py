@@ -133,7 +133,7 @@ a {{ color:var(--forest) }}
 <section id="stand"><p class="num">08 · Stand heute</p><h2>Reale Substanz, zentrale Nachweise fehlen noch</h2>
 <div class="status">
 <div class="card s-have"><h3>Vorhanden <span class="pill">belegt</span></h3>{lst(['Plattform x-portal.eu mit KI-Matching und Freelancer-Profilen','Grundstück im Besitz, mit Detailplan und Bebauungsplan','Geologiebericht mit Fachprüfung, Zusatzerkundung und Vermessung','Reference Architecture v0.4 als Arbeitsbaseline'])}</div>
-<div class="card s-work"><h3>In Arbeit <span class="pill">läuft</span></h3>{lst(['Lage von Phase 0 im Detailplan und Bauplanung','Whitelist der künftigen Mieter (wird eingerichtet)','Rechtliche Prüfung von Website, Miet- und Nutzungsmodell','Erste eigene KI-Agenten','Node001 System Architecture und parametrischer Business Case'])}</div>
+<div class="card s-work"><h3>In Arbeit <span class="pill">läuft</span></h3>{lst(['Bauplanung für den Bereich von Phase 0 (Lage voraussichtlich festgelegt)','Whitelist der künftigen Mieter (wird eingerichtet)','Rechtliche Prüfung von Website, Miet- und Nutzungsmodell','Erste eigene KI-Agenten','Node001 System Architecture und parametrischer Business Case'])}</div>
 <div class="card s-open"><h3>Zu validieren <span class="pill">offen</span></h3>{lst(['Baukosten, Selbstkosten je Objekt und Produktmodell','Rechtliche Struktur der Gesellschaft für Node001','Finanzierung des ersten Bauabschnitts','Nachfrage, Auslastung und Cost-to-Serve','Daten- und Betriebsarchitektur zwischen Standorten und Organisation'])}</div>
 </div><p>Stand November 2026. Künftige Meilensteine sind Ziele, keine Zusagen.</p></section>
 

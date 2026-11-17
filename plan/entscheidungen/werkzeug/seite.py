@@ -290,7 +290,7 @@ FOLGT = {
  'D38': 'Monatliche Pauschale; erbrachte Projekt- und Gemeinschaftsleistungen werden abgezogen. Weiter zu besprechen.',
 }
 UEBERHOLT = {'D45', 'D46', 'D48', 'D49', 'D50'}
-PHASEN = [('Phase 0', 'Objekt als Übergang', 'Ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Die Bauart ist offen.'),
+PHASEN = [('Phase 0', 'Objekt als Übergang', 'Ein Objekt für Team und Bauarbeiter unterhalb der Herrenhaus-Fläche, voraussichtlich im blau markierten Bereich an der Kehre der Zufahrt (Antwort 17.11.2026, Bild im Index 3.0); dort später auch die ersten Wohneinheiten. Mit skalierbarer Infrastruktur für Wasser, Strom und Internet. Die Bauart ist offen.'),
           ('Phase 1', 'Objekte und Kommunalgebäude', 'Wohn- und Arbeitsobjekte und das Kommunalgebäude. Material und Bauart plant eine Bau-KI nach den lokalen Gegebenheiten. Zuerst das Kommunalgebäude.'),
           ('Phase 2', 'Ausbau', 'Weitere Objekte nach Nachfrage; die Herrenhaus-Fläche wird zuletzt bebaut.')]
 

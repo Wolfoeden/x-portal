@@ -158,3 +158,24 @@ Entfallen:
 - `plan/pruefe_alle.py` liest den fertigen Text aller sechs Seiten und meldet alten Stand (Käufer, Plot, Papierrechnung, Verkauf ab, Pre-Seed, Tiny House, Namen, Fachperson, Warteliste als vorhanden, Geologie-Fachprüfung als offen). Ausgenommen: Kommentare im Wortlaut, Spalten „bisher“, Historie der Entscheidungsseite, Frage und Möglichkeiten beantworteter Karten, die gewählten Namen im Team-Abschnitt. Ergebnis am 17.11.2026: keine Stelle.
 - Der Index-Generator ruft die Prüfung vor dem Schreiben auf und bricht ab, wenn etwas gefunden wird. Verweise auf entfernte Stellen werden als Text gelassen und gezählt.
 
+
+## 17.11.2026 (später) · Lage von Phase 0 und den ersten Wohneinheiten
+
+**Eingänge:** Kommentare auf allen sechs Seiten und die Datenbank der Entscheidungsseite gelesen. Seit der letzten Runde ist nichts Neues dazugekommen.
+
+| Eingang | Umsetzung | Stelle |
+|---|---|---|
+| Chat 17.11., Screenshot des Detailplans mit blauem Rechteck: „zeigt wo unterhalb vom herrenhaus die wohneinheiten voraussichtlich stehen werden da es dort ziemlich eben ist und man es von einer einfahrt leicht erreichen könnte“ | Entscheidung „lage“ ist jetzt entschieden, mit dem Vermerk „voraussichtlich“; endgültig mit Bauplanung und Fachexperte. Das markierte Bild und der Wortlaut sind eingetragen, die offenen Prüfpunkte stehen am Knoten. | Index: Knoten „lage“, Grundlage „Der Ort“, GB3, AP-A0, AP-A4, AP-C5, AP-D1, hausart, 2.2.2, Blocker-Liste; Entscheidungsseite: Bauphasen; Whitepaper: In Arbeit; Deck v4: Folie 8 |
+
+**Quellen:**
+- `quellen/lage-wohneinheiten-2026-11-17.pdf`: Detailplan, ohne Markierung.
+- `quellen/lage-wohneinheiten-2026-11-17.jpg`: der Screenshot mit der Markierung.
+
+**Laut Plan:**
+- Der markierte Bereich liegt an der Kehre der Zufahrt, neben den Parzellen 9, 7 und 8.
+- Welche Parzelle die Herrenhaus-Fläche ist, steht nicht im Plan. Es gilt die Angabe der Projektleitung.
+
+**Prüfung erweitert:**
+- Der Generator bricht ab, wenn „lage“ wieder offen ist.
+- `pruefe_alle.py` meldet „Lage von Phase 0 im Detailplan“ als offenen Punkt.
+- Ebenso meldet es den Satz „wird mit dem Original abgeglichen“ zur Geologie. Den hatte die Prüfung bisher nicht erfasst; er stand noch in der Grundlage und ist korrigiert.

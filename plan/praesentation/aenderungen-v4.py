@@ -7,7 +7,7 @@ ERSATZ = {
     8: {'Warteliste für Node001': 'Grundstück im Besitz, mit Detailplan und Bebauungsplan',
         'Grundstück für Node001 gesichert': 'Geologiebericht mit Fachprüfung, Zusatzerkundung, Vermessung',
         'Geologischer Bericht und Reference Architecture v0.4': 'Reference Architecture v0.4 als Arbeitsbaseline',
-        'Fachprüfung des Geologieberichts und Lageplan': 'Lage im Detailplan, Bauplanung, Whitelist künftiger Mieter'},
+        'Fachprüfung des Geologieberichts und Lageplan': 'Bauplanung für Phase 0, Whitelist künftiger Mieter'},
     13: {'Boden': 'Transport',
          'Fachprüfung der Geologie, Zusatzerkundung, Vermessung': 'Enge, einspurige Zufahrt vermessen; Objekte in Teilen',
          'Mietinteressenten und bezahlte Kundenprojekte': 'Whitelist künftiger Mieter, bezahlte Kundenprojekte',
