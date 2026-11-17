@@ -1,16 +1,18 @@
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { getDictionary } from '@/lib/i18n/dictionary'
-import { IDS, type Locale } from '@/lib/i18n/routes'
+import { IDS, pagePath, type Locale } from '@/lib/i18n/routes'
 
-// Preise wie auf der heutigen Preisseite von XPORTAL (netto, monatlich kündbar).
+// Je Baustein: wirtschaftlicher Zweck und was noch nachzuweisen ist. Kundenprojekte verweisen auf die Plattform auf der Startseite.
 export function ChapterRevenue({ locale }: { locale: Locale }) {
   const copy = getDictionary(locale).investors.revenue
   return (
     <section id={IDS[locale].revenue} className="scroll-mt-16 py-28 md:py-40" aria-labelledby="erloese-title">
       <Container className="flex flex-col gap-14">
         <div className="flex max-w-[760px] flex-col gap-5">
-          <ChapterLabel number="04">{copy.label}</ChapterLabel>
+          <ChapterLabel number="03">{copy.label}</ChapterLabel>
           <h2 id="erloese-title" className={`${chapterTitle} text-ink`}>
             {copy.title}
           </h2>
@@ -26,16 +28,22 @@ export function ChapterRevenue({ locale }: { locale: Locale }) {
               <h3 className="mt-8 text-[32px] font-medium tracking-[-0.025em] text-ink">{stream.name}</h3>
               <dl className="mt-6 flex flex-col">
                 {stream.items.map((item) => (
-                  <div key={item.label} className="flex items-baseline justify-between gap-4 border-t border-line py-3 text-[15px]">
-                    <dt className="text-ink">{item.label}</dt>
-                    <dd className="text-right tabular-nums text-muted">{item.value}</dd>
+                  <div key={item.label} className="flex flex-col gap-1 border-t border-line py-3">
+                    <dt className="text-[13px] text-faint">{item.label}</dt>
+                    <dd className="text-[15px] leading-relaxed text-ink">{item.value}</dd>
                   </div>
                 ))}
               </dl>
+              {stream.link ? (
+                <Link href={pagePath('home', locale)} className="group mt-6 inline-flex w-fit items-center gap-2 text-[15px] font-medium text-brand underline decoration-brand/30 underline-offset-[6px] hover:decoration-brand">
+                  {stream.link}
+                  <ArrowRight aria-hidden size={16} strokeWidth={2} className="transition-transform group-hover:translate-x-1" />
+                </Link>
+              ) : null}
             </article>
           ))}
         </div>
-        <p className="text-[13px] text-faint">{copy.note}</p>
+        {copy.note ? <p className="text-[13px] text-faint">{copy.note}</p> : null}
       </Container>
     </section>
   )

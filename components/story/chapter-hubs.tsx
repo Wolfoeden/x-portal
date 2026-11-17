@@ -8,13 +8,17 @@ import { ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { MARK } from '@/components/brand/logo-paths'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
-import { EUROPE_DOTS, EUROPE_VIEWBOX, MAP, projectLonLat } from '@/lib/map/europe'
+import { HubPreview } from '@/components/investors/hub-preview'
+import { MAP } from '@/lib/map/europe'
 import { useMediaQuery } from '@/lib/use-media-query'
 import { useLocale } from '@/components/i18n/locale-provider'
 import { pagePath } from '@/lib/i18n/routes'
 
-// Hub 01: nur das Land wird gezeigt, nicht der genaue Ort.
-const [HUB_X, HUB_Y] = projectLonLat(31, 49)
+// Kartenausschnitt mit etwas Luft oben für die hohen Blöcke in Skandinavien.
+const VIEW = { y: -50, height: MAP.height + 50 }
+
+/** relief: Höhenblöcke der Karte (components/map/relief-map.tsx), auf dem Server gezeichnet. hub: Node001 oben auf seinem Block. */
+type MapProps = { relief: ReactNode; hub: { x: number; top: number } }
 
 // Geometrie der Bildmarke (Einheiten der viewBox 123 × 100).
 const MARK_CENTER = { x: 61.5, y: 50 }
@@ -39,9 +43,10 @@ const clamp01 = (value: number) => Math.min(1, Math.max(0, value))
 const easeOut = (t: number) => 1 - Math.pow(1 - t, 3)
 const easeInOut = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
 
-function HubsContent() {
+function HubsContent({ relief, hub }: MapProps) {
   const { locale, dict } = useLocale()
   const copy = dict.home.hubs
+  const opener = dict.investors.opener
   return (
     <Container className="relative grid h-full grid-cols-[minmax(0,1fr)] items-center gap-10 py-16 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
       <div className="relative z-10 flex flex-col gap-5">
@@ -68,17 +73,21 @@ function HubsContent() {
       </div>
 
       <div className="relative">
-        <svg viewBox={EUROPE_VIEWBOX} className="h-auto w-full" role="img" aria-label={copy.mapLabel}>
-          <path d={EUROPE_DOTS} fill="#bfd8c8" opacity="0.42" />
-          <circle cx={HUB_X} cy={HUB_Y} r="16" fill="none" stroke="#fff" strokeWidth="2" className="hub-pulse" />
-          <circle cx={HUB_X} cy={HUB_Y} r="9" fill="#fff" />
+        <svg viewBox={`0 ${VIEW.y} ${MAP.width} ${VIEW.height}`} className="h-auto w-full" role="img" aria-label={copy.mapLabel}>
+          {relief}
         </svg>
-        <div
-          className="absolute rounded-2xl bg-white px-4 py-3 shadow-[0_24px_48px_-24px_rgb(0_0_0/0.5)]"
-          style={{ left: `calc(${(HUB_X / MAP.width) * 100}% - 210px)`, top: `calc(${(HUB_Y / MAP.height) * 100}% + 26px)` }}
-        >
-          <p className="text-[15px] font-medium text-ink">{copy.hubName}</p>
-          <p className="text-[13px] text-muted">{copy.hubStatus}</p>
+        <div className="absolute z-10" style={{ left: `${(hub.x / MAP.width) * 100}%`, top: `${((hub.top - VIEW.y) / VIEW.height) * 100}%` }}>
+          <HubPreview
+            href={pagePath('places', locale)}
+            name={copy.hubName}
+            status={copy.hubStatus}
+            show={opener.hubShow}
+            title={opener.hubPreviewTitle}
+            text={opener.hubPreviewText}
+            action={opener.hubPreviewAction}
+            label={opener.hubPreviewLabel}
+            imageAlt={opener.hubImageAlt}
+          />
         </div>
       </div>
     </Container>
@@ -172,19 +181,19 @@ function ApertureStage({ desktop, zoomEnd, children }: { desktop: boolean; zoomE
   )
 }
 
-function DesktopContent({ progress }: { progress: MotionValue<number> }) {
+function DesktopContent({ progress, map }: { progress: MotionValue<number>; map: MapProps }) {
   const opacity = useTransform(progress, [0.6, 0.74], [0, 1])
   const y = useTransform(progress, [0.6, 0.74], [18, 0])
   const [live, setLive] = useState(false)
   useMotionValueEvent(progress, 'change', (value) => setLive(value > 0.66))
   return (
     <motion.div style={{ opacity, y }} className="absolute inset-0" inert={!live}>
-      <HubsContent />
+      <HubsContent {...map} />
     </motion.div>
   )
 }
 
-export function ChapterHubs() {
+export function ChapterHubs(map: MapProps) {
   const reduceMotion = useReducedMotion()
   // Am Desktop erscheint der Inhalt in der gehaltenen Szene, darunter folgt er nach dem Flug durch das X.
   const desktop = useMediaQuery('(min-width: 1024px)', true)
@@ -193,7 +202,7 @@ export function ChapterHubs() {
   if (reduceMotion) {
     return (
       <section id={ids.hubs} aria-labelledby="hubs-title" className="relative scroll-mt-16 bg-brand-deep">
-        <HubsContent />
+        <HubsContent {...map} />
       </section>
     )
   }
@@ -202,7 +211,7 @@ export function ChapterHubs() {
     return (
       <section id={ids.hubs} aria-labelledby="hubs-title" className="relative">
         <ApertureStage desktop zoomEnd={0.6}>
-          {(progress) => <DesktopContent progress={progress} />}
+          {(progress) => <DesktopContent progress={progress} map={map} />}
         </ApertureStage>
       </section>
     )
@@ -212,7 +221,7 @@ export function ChapterHubs() {
     <section id={ids.hubs} aria-labelledby="hubs-title" className="relative">
       <ApertureStage desktop={false} zoomEnd={0.9} />
       <div className="bg-brand-deep">
-        <HubsContent />
+        <HubsContent {...map} />
       </div>
     </section>
   )

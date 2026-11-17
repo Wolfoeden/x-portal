@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import { LayoutGroup, motion } from 'motion/react'
-import { FlaskConical, Lock } from 'lucide-react'
+import Link from 'next/link'
+import { ArrowRight, FlaskConical, Lock } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, TalentAvatar, chapterTitle } from '@/components/story/talent-avatar'
 import { useDraft } from '@/components/freelancer/draft-context'
@@ -10,13 +11,14 @@ import { ProfileAvatar } from '@/components/freelancer/profile-card'
 import type { WorkMode } from '@/lib/freelancer/profile'
 import { talentById } from '@/lib/demo/scenarios'
 import { useLocale } from '@/components/i18n/locale-provider'
+import { pagePath } from '@/lib/i18n/routes'
 
 const onSiteTeam = ['mara', 'tobias']
 const remoteTeam = ['noah', 'ben']
 
 export function ChapterMode() {
   const { shown, own, setDraft } = useDraft()
-  const { dict, ids } = useLocale()
+  const { dict, ids, locale } = useLocale()
   const copy = dict.freelancer.mode
   const zones = dict.home.europe
   const [localMode, setLocalMode] = useState<WorkMode>(shown.mode ?? 'both')
@@ -102,7 +104,13 @@ export function ChapterMode() {
           </div>
         </LayoutGroup>
 
-        <p className="text-[14px] text-muted">{copy.hubNote}</p>
+        <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[14px] text-muted">
+          {copy.hubNote}
+          <Link href={pagePath('places', locale)} className="inline-flex items-center gap-1.5 font-medium text-brand underline decoration-brand/30 underline-offset-4 hover:decoration-brand">
+            {copy.hubLink}
+            <ArrowRight aria-hidden size={14} strokeWidth={2} />
+          </Link>
+        </p>
       </Container>
     </section>
   )
