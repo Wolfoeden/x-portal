@@ -117,8 +117,8 @@ export function InvestorOpener({ locale }: { locale: Locale }) {
         {copy.deck}
         <ArrowRight aria-hidden size={17} strokeWidth={2} />
       </Link>
-      <Link href={`#${ids.roadmap}`} className="inline-flex h-12 items-center gap-2 rounded-full border border-white/25 px-5 text-[15px] font-medium text-white transition-colors hover:border-white/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-        {copy.roadmap}
+      <Link href={`#${ids.status}`} className="inline-flex h-12 items-center gap-2 rounded-full border border-white/25 px-5 text-[15px] font-medium text-white transition-colors hover:border-white/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+        {copy.statusLink}
         <ArrowDown aria-hidden size={16} strokeWidth={2} />
       </Link>
     </div>
@@ -184,15 +184,15 @@ export function InvestorOpener({ locale }: { locale: Locale }) {
       </div>
 
       {/* Darunter: Text oben, Karte mit Node001 darunter, Zahlen am Ende. */}
-      <div className="relative flex flex-col items-center gap-8 px-5 pb-12 pt-12 text-center md:px-8 xl:hidden">
+      <div className="relative flex flex-col items-center gap-7 px-5 pb-10 pt-10 text-center md:px-8 xl:hidden">
         {dataPill}
         <div className="flex flex-col items-center gap-4">
           <p className="text-[14px] text-[#bfd8c8]">{copy.label}</p>
           {words}
         </div>
         {title}
-        {actions}
-        <div className="relative w-full max-w-[640px]">
+        <div className="relative z-10">{actions}</div>
+        <div className="relative mt-6 w-[70%] max-w-[640px] sm:w-full">
           <svg viewBox={`${SMALL.x.toFixed(1)} ${SMALL.y.toFixed(1)} ${SMALL.width} ${SMALL.height}`} className="h-auto w-full overflow-visible" aria-hidden>
             <g transform={`translate(${S_MAP_X.toFixed(1)} ${S_MAP_Y.toFixed(1)}) scale(${S_SCALE})`} opacity="0.85">
               <ReliefLayer focus={HUB_01} tone="dark" animate={false} density={1} />

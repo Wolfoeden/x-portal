@@ -18,14 +18,14 @@ export const IMAGES: Record<ImageKey, { src: string; kind: ImageKind }> = {
   target: { src: '/orte/zielbild-node001.webp', kind: 'render' },
 }
 
-/** Wo welches Bild zu sehen ist, für den Bildnachweis. */
+/** Wo welches Bild zu sehen ist, für den Bildnachweis. blocks, path und terrace stehen seit dem 17.11.2026 auf keiner Seite (Abschnitt „Alltag“ entfallen). */
 export const IMAGE_USE: Record<ImageKey, ('places' | 'investors')[]> = {
   hub01: ['places', 'investors'],
   community: ['places'],
   unit: ['places'],
-  blocks: ['places'],
-  path: ['places'],
-  terrace: ['places'],
+  blocks: [],
+  path: [],
+  terrace: [],
   slope: ['places', 'investors'],
   target: ['places', 'investors'],
 }

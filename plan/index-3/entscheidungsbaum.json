@@ -1631,7 +1631,7 @@
         },
         {
          "feld": "Ergebnis",
-         "wert": "Seiten /investoren und /orte nach diesem Plan (nur Miete, Wohneinheiten, Kreislauf, Technik ohne Beträge, Bildnachweis); Impressum und Datenschutz ohne Platzhalter; Migration der Whitelist eingespielt; „pnpm check:golive“ meldet nichts mehr; Merge auf main"
+         "wert": "Seiten /investoren und /orte nach diesem Plan (nur Miete, Wohneinheiten, Kreislauf, Technik ohne Beträge, Bildnachweis); alle Texte nach StoryBrand, fürs Handy geschrieben (pnpm check:copy), mit Sitemap, JSON-LD und /llms.txt; Impressum und Datenschutz ohne Platzhalter; Migration der Whitelist eingespielt; „pnpm check:golive“ meldet nichts mehr; Merge auf main"
         }
        ],
        "ap": {
@@ -1643,7 +1643,7 @@
          "GB10"
         ],
         "rolle": "baut: planende KI · liefert Daten und gibt frei: Geschäftsführung · prüft: Jurist",
-        "ergebnis": "Seiten /investoren und /orte nach diesem Plan (nur Miete, Wohneinheiten, Kreislauf, Technik ohne Beträge, Bildnachweis); Impressum und Datenschutz ohne Platzhalter; Migration der Whitelist eingespielt; „pnpm check:golive“ meldet nichts mehr; Merge auf main"
+        "ergebnis": "Seiten /investoren und /orte nach diesem Plan (nur Miete, Wohneinheiten, Kreislauf, Technik ohne Beträge, Bildnachweis); alle Texte nach StoryBrand, fürs Handy geschrieben (pnpm check:copy), mit Sitemap, JSON-LD und /llms.txt; Impressum und Datenschutz ohne Platzhalter; Migration der Whitelist eingespielt; „pnpm check:golive“ meldet nichts mehr; Merge auf main"
        }
       },
       {

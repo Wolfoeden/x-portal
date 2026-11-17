@@ -33,7 +33,15 @@ try {
   blockers.push(`Texte mit altem Stand: ${out.trim().split('\n').pop() ?? 'pruefe_alle.py meldet Fehler'}`)
 }
 
-// 5. Produktion muss indexierbar sein und die echte Adresse kennen (Netlify-Umgebung, nicht im Repository).
+// 5. Schreibregeln der Texte (StoryBrand, fürs Handy; scripts/copy-check.ts).
+try {
+  execFileSync(process.execPath, [join(root, 'scripts/copy-check.ts')], { stdio: 'pipe' })
+} catch (error) {
+  const out = String((error as { stdout?: Buffer }).stdout ?? '')
+  blockers.push(`Texte: ${out.trim().split('\n')[0] ?? 'copy-check meldet Fehler'}`)
+}
+
+// 6. Produktion muss indexierbar sein und die echte Adresse kennen (Netlify-Umgebung, nicht im Repository).
 blockers.push('Netlify Produktion: SITE_INDEXABLE=true und NEXT_PUBLIC_SITE_URL=https://x-portal.eu setzen und prüfen (hier nicht sichtbar)')
 
 if (blockers.length) {

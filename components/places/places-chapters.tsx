@@ -74,7 +74,7 @@ export function ChapterOffers({ locale }: { locale: Locale }) {
   const copy = dict.offers
   return (
     <section id={IDS[locale].offers} aria-labelledby="angebote-title" className="scroll-mt-16">
-      <Container className="flex flex-col gap-12 py-24 md:py-32">
+      <Container className="flex flex-col gap-8 py-14 md:gap-12 md:py-32">
         <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-5">
           <div className="flex flex-col gap-5">
             <ChapterLabel number="02">{copy.label}</ChapterLabel>
@@ -84,17 +84,18 @@ export function ChapterOffers({ locale }: { locale: Locale }) {
           </div>
           <p className="max-w-[440px] text-[16px] leading-relaxed text-muted">{copy.text}</p>
         </div>
-        <ul className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] gap-4">
+        {/* Auf dem Handy eine Reihe zum Wischen (alle Karten bleiben im Seitentext), ab sm das Raster. */}
+        <ul className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0">
           {copy.items.map((item, index) => {
             const offer = OFFERS[index]
             const tone = offerTones[offer.tone]
             return (
-              <li key={item.title} className={`flex flex-col overflow-hidden rounded-[28px] ${tone.card} ${card}`}>
-                <div className="group/media relative aspect-[1122/1402] overflow-hidden">
+              <li key={item.title} className={`flex w-[84%] shrink-0 snap-start flex-col overflow-hidden rounded-[28px] sm:w-auto ${tone.card} ${card}`}>
+                <div className="group/media relative aspect-[4/3] overflow-hidden sm:aspect-[1122/1402]">
                   <Image src={offer.image.src} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, 100vw" className={`object-cover ${offer.position} transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover/media:scale-[1.04]`} />
                   <KindBadge kind={offer.image.kind} words={dict} />
                 </div>
-                <div className="flex flex-1 flex-col gap-3 p-7">
+                <div className="flex flex-1 flex-col gap-3 p-6">
                   <span className={`self-start rounded-full px-2.5 py-1 text-[13px] font-medium ${tone.tag}`}>{item.tag}</span>
                   <h3 className={`text-[26px] font-medium leading-[1.1] tracking-[-0.03em] md:text-[28px] ${tone.title}`}>{item.title}</h3>
                   <p className={tone.text}>{item.text}</p>
@@ -111,59 +112,18 @@ export function ChapterOffers({ locale }: { locale: Locale }) {
   )
 }
 
-// Bilder zu „Alltag“; die Kennzeichnung kommt aus lib/images.ts.
-const EVERYDAY = [IMAGES.blocks, IMAGES.path, IMAGES.terrace]
-
-export function ChapterEveryday({ locale }: { locale: Locale }) {
-  const dict = getDictionary(locale).places
-  const copy = dict.everyday
-  return (
-    <section id={IDS[locale].everyday} aria-labelledby="alltag-title" className="scroll-mt-16 border-y border-line bg-surface">
-      <Container className="flex flex-col gap-12 py-24 md:py-32">
-        <div className="grid grid-cols-[minmax(0,1fr)] gap-x-16 gap-y-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-end">
-          <div className="flex flex-col gap-5">
-            <ChapterLabel number="03">{copy.label}</ChapterLabel>
-            <h2 id="alltag-title" className={`${chapterTitle} max-w-[820px] text-ink`}>
-              {copy.title}
-            </h2>
-          </div>
-          <div className="flex max-w-[520px] flex-col gap-4 text-[17px] leading-relaxed text-muted">
-            {copy.text.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </div>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] gap-4">
-          {copy.items.map((item, index) => (
-            <figure key={item.title} className={`overflow-hidden rounded-[28px] border border-line bg-white ${card}`}>
-              <div className="group/media relative aspect-[1122/1402] overflow-hidden">
-                <Image src={EVERYDAY[index].src} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, 100vw" className="object-cover transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover/media:scale-[1.04]" />
-                <KindBadge kind={EVERYDAY[index].kind} words={dict} />
-              </div>
-              <figcaption className="flex flex-col gap-1 px-6 pb-6 pt-5">
-                <strong className="text-[20px] font-medium tracking-[-0.02em] text-ink">{item.title}</strong>
-                <span className="text-muted">{item.text}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </Container>
-    </section>
-  )
-}
-
 export function ChapterPlacesFaq({ locale }: { locale: Locale }) {
   const copy = getDictionary(locale).places.faq
   return (
     <section aria-labelledby="orte-fragen-title">
-      <Container className="max-w-[960px] py-24 md:py-28">
+      <Container className="max-w-[960px] py-14 md:py-28">
         <h2 id="orte-fragen-title" className="mb-8 text-[clamp(2.25rem,4vw,3.5rem)] font-medium leading-none tracking-[-0.04em] text-ink">
           {copy.title}
         </h2>
         <div className="border-t border-line">
           {copy.items.map((item) => (
             <details key={item.question} className="group border-b border-line">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[18px] font-medium text-ink [&::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-4 text-[17px] font-medium text-ink md:py-5 md:text-[18px] [&::-webkit-details-marker]:hidden">
                 {item.question}
                 <span aria-hidden className="text-[22px] font-normal text-faint transition-transform group-open:rotate-45">
                   +

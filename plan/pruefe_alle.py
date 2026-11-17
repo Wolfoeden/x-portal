@@ -84,7 +84,7 @@ ALT_WEB = {
     r'\b[Bb]uy(ing|er)?\b|\b[Pp]urchase|[Tt]iny house|[Pp]re-seed|ten nodes|Hungarian border|border with Hungary|\b[Rr]estaurant|\b[Ff]or sale\b(?<!nothing for sale)|living modules?|\bmodules?\b': 'englisch: nur Miete, Begriffe nach Plan',
 }
 # Ausnahmen: verneinte Aussagen, die genau das Richtige sagen.
-OK_WEB = [r'Verkauft wird nichts', r'verkaufen keine', r'kein Verkauf', r'Kann ich auch kaufen\?', r'Nothing is sold', r'nothing is sold', r'do not sell', r'Can I also buy\?', r'nothing for sale', r'Lösungen mehrfach verkaufen', r'Sell or run solutions']
+OK_WEB = [r'Verkauft wird nichts', r'verkaufen keine', r'[Kk]ein Verkauf', r'verkaufen sie nicht', r'do not sell them', r'Kann ich auch kaufen\?', r'Nothing is sold', r'nothing is sold', r'do not sell', r'Can I also buy\?', r'nothing for sale', r'Lösungen mehrfach verkaufen', r'Sell or run solutions']
 
 def pruefe_website(name, path):
     s = path.read_text()

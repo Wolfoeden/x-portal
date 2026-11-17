@@ -3,6 +3,7 @@ import { SiteFooter } from '@/components/site/site-footer'
 import { Container } from '@/components/ui/primitives'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import type { Locale } from '@/lib/i18n/routes'
+import { JsonLd, pageLd } from '@/lib/seo/json-ld'
 
 /** Platzhalter stehen als ⟦…⟧ im Wörterbuch und werden sichtbar markiert, bis die Daten da sind (scripts/go-live-check.ts findet sie). */
 function Marked({ text }: { text: string }) {
@@ -27,6 +28,7 @@ export function LegalPage({ locale, kind }: { locale: Locale; kind: 'imprint' | 
   const copy = legal[kind]
   return (
     <>
+      <JsonLd data={pageLd(kind, locale)} />
       <SiteHeader />
       <main>
         <Container className="max-w-[860px] py-20 md:py-28">

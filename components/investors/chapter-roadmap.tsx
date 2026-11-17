@@ -7,7 +7,7 @@ import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { useLocale } from '@/components/i18n/locale-provider'
 
-// Nach der Roadmap „Von Talenten zu zehn Nodes“ von XPORTAL; Texte im Wörterbuch.
+// Roadmap nach dem Ablaufplan im Index 3.0; Texte im Wörterbuch.
 export function ChapterRoadmap() {
   const reduceMotion = useReducedMotion()
   const { dict, ids } = useLocale()
@@ -21,10 +21,10 @@ export function ChapterRoadmap() {
   const shown = reduceMotion ? milestones.length : reached
 
   return (
-    <section id={ids.roadmap} className="scroll-mt-16 py-28 md:py-40" aria-labelledby="roadmap-title">
-      <Container className="flex flex-col gap-14">
+    <section id={ids.roadmap} className="scroll-mt-16 py-14 md:py-32" aria-labelledby="roadmap-title">
+      <Container className="flex flex-col gap-8 md:gap-14">
         <div className="flex max-w-[760px] flex-col gap-5">
-          <ChapterLabel number="08">{copy.label}</ChapterLabel>
+          <ChapterLabel number="06">{copy.label}</ChapterLabel>
           <h2 id="roadmap-title" className={`${chapterTitle} text-ink`}>
             {copy.title}
           </h2>
@@ -39,11 +39,11 @@ export function ChapterRoadmap() {
             style={{ scaleY: reduceMotion ? 1 : progress }}
           />
           <motion.div aria-hidden className="absolute left-0 top-[11px] hidden h-0.5 w-full origin-left bg-brand md:block" style={{ scaleX: reduceMotion ? 1 : progress }} />
-          <ol ref={trackRef} className="relative grid grid-cols-[minmax(0,1fr)] gap-10 md:grid-cols-6 md:gap-5">
+          <ol ref={trackRef} className="relative grid grid-cols-[minmax(0,1fr)] gap-4 md:grid-cols-6 md:gap-5">
             {milestones.map((milestone, index) => {
               const on = index < shown
               return (
-                <li key={milestone.title} className="flex gap-5 md:flex-col md:gap-6">
+                <li key={milestone.title} className="flex gap-4 md:flex-col md:gap-6">
                   <span
                     className={`relative mt-0.5 grid size-6 shrink-0 place-items-center rounded-full border-2 transition-colors duration-300 md:mt-0 ${
                       on ? 'border-brand bg-brand' : 'border-line-strong bg-white'
@@ -51,10 +51,10 @@ export function ChapterRoadmap() {
                   >
                     {on && milestone.live ? <span className="size-2 rounded-full bg-white" /> : null}
                   </span>
-                  <span className={`flex flex-col gap-2 transition-opacity duration-500 ${on ? 'opacity-100' : 'opacity-40'}`}>
+                  <span className={`flex flex-col gap-1 transition-opacity duration-500 md:gap-2 ${on ? 'opacity-100' : 'opacity-40'}`}>
                     <span className="text-[14px] font-medium text-brand-ink">{milestone.when}</span>
-                    <span className="text-[22px] font-medium leading-tight tracking-[-0.015em] text-ink md:text-[18px] lg:text-[20px]">{milestone.title}</span>
-                    <span className={`w-fit rounded-full px-2.5 py-1 text-[12.5px] font-medium ${milestone.live ? 'bg-brand-soft text-brand-ink' : 'bg-surface text-muted'}`}>
+                    <span className="text-[18px] font-medium leading-tight tracking-[-0.015em] text-ink lg:text-[20px]">{milestone.title}</span>
+                    <span className={`w-fit rounded-full px-2.5 py-0.5 text-[12.5px] font-medium md:py-1 ${milestone.live ? 'bg-brand-soft text-brand-ink' : 'bg-surface text-muted'}`}>
                       {milestone.status}
                     </span>
                   </span>
@@ -64,17 +64,6 @@ export function ChapterRoadmap() {
           </ol>
         </div>
 
-        <div className="rounded-[28px] bg-surface p-6 md:p-8">
-          <p className="text-[13px] text-faint">{copy.parallelLabel}</p>
-          <ul className="mt-4 grid grid-cols-[minmax(0,1fr)] gap-4 md:grid-cols-2">
-            {copy.parallel.map((item) => (
-              <li key={item.title} className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-white px-5 py-4">
-                <span className="text-[16px] font-medium text-ink">{item.title}</span>
-                <span className="rounded-full border border-line-strong px-2.5 py-1 text-[12.5px] text-muted">{item.status}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
         <p className="text-[13px] text-faint">{copy.disclaimer}</p>
       </Container>
     </section>

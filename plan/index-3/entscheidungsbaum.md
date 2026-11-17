@@ -309,7 +309,7 @@ Abschnitte A bis H in der Reihenfolge, in der sie gebraucht werden. Jedes Arbeit
     - Blockiert: Whitelist (AP-A8), Anfragen nach Whitepaper und Deck (AP-B1)
     - Grundbestimmungen: GB9, GB10
     - Rolle: baut: planende KI · liefert Daten und gibt frei: Geschäftsführung · prüft: Jurist
-    - Ergebnis: Seiten /investoren und /orte nach diesem Plan (nur Miete, Wohneinheiten, Kreislauf, Technik ohne Beträge, Bildnachweis); Impressum und Datenschutz ohne Platzhalter; Migration der Whitelist eingespielt; „pnpm check:golive“ meldet nichts mehr; Merge auf main
+    - Ergebnis: Seiten /investoren und /orte nach diesem Plan (nur Miete, Wohneinheiten, Kreislauf, Technik ohne Beträge, Bildnachweis); alle Texte nach StoryBrand, fürs Handy geschrieben (pnpm check:copy), mit Sitemap, JSON-LD und /llms.txt; Impressum und Datenschutz ohne Platzhalter; Migration der Whitelist eingespielt; „pnpm check:golive“ meldet nichts mehr; Merge auf main
   - **Schritt:** Zahlen neu rechnen: Kostenhochrechnung 12,5 Mio. € und frühere Erlösrechnung 12 Mio. € _[offen]_
     - Antwort zu D53 vom 13.11.2026: Wahl C, die KI rechnet beide Zahlen mit Quellen neu, danach entscheidet ihr.
     - Wann: nach Angeboten (AP-A5); vor Investorengesprächen

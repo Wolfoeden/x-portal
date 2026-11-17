@@ -2,7 +2,7 @@
 
 import { MotionConfig, motion } from 'motion/react'
 import { useReducedMotion } from '@/lib/use-reduced-motion'
-import { House, Network, NotebookPen, Sprout, Undo2, Users, Workflow, type LucideIcon } from 'lucide-react'
+import { House, Network, NotebookPen, Sprout, Users, Workflow, type LucideIcon } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { LogoMark, Wordmark } from '@/components/brand/logo'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
@@ -41,8 +41,8 @@ export function ChapterLoop() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <section id={ids.loop} className="scroll-mt-16 py-28 md:py-40" aria-labelledby="kreislauf-title">
-        <Container className="flex flex-col gap-14 md:gap-10">
+      <section id={ids.loop} className="scroll-mt-16 py-14 md:py-32" aria-labelledby="kreislauf-title">
+        <Container className="flex flex-col gap-8 md:gap-10">
           <div className="flex max-w-[860px] flex-col gap-5">
             <ChapterLabel number="02">{copy.label}</ChapterLabel>
             <h2 id="kreislauf-title" className={`${chapterTitle} text-ink`}>
@@ -149,27 +149,6 @@ export function ChapterLoop() {
             ))}
           </ol>
 
-          <p className="mx-auto flex max-w-[760px] items-start gap-3 text-[16px] leading-relaxed text-ink md:text-center">
-            <Undo2 aria-hidden size={18} strokeWidth={1.75} className="mt-1 shrink-0 text-brand" />
-            {copy.closing}
-          </p>
-
-          <div className="grid grid-cols-[minmax(0,1fr)] gap-4 md:mt-6 md:grid-cols-2">
-            <article className="rounded-[28px] border border-line p-7 md:p-8">
-              <h3 className="text-[20px] font-medium tracking-[-0.015em] text-ink">{copy.flowsTitle}</h3>
-              <ul className="mt-4 flex flex-col">
-                {copy.flows.map((flow) => (
-                  <li key={flow} className="border-t border-line py-3 text-[15px] leading-relaxed text-muted">
-                    {flow}
-                  </li>
-                ))}
-              </ul>
-            </article>
-            <article className="rounded-[28px] bg-brand-deep p-7 text-white md:p-8">
-              <h3 className="text-[20px] font-medium tracking-[-0.015em]">{copy.scaleTitle}</h3>
-              <p className="mt-4 text-[16px] leading-relaxed text-[#cfe2d6]">{copy.scale}</p>
-            </article>
-          </div>
         </Container>
       </section>
     </MotionConfig>

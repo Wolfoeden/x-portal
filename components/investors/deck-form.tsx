@@ -59,10 +59,10 @@ export function DeckForm() {
   const field = 'h-12 w-full rounded-2xl border border-line-strong bg-white px-4 text-[16px] text-ink outline-none transition-colors placeholder:text-faint focus:border-ink/50'
 
   return (
-    <section id={ids.deck} className="scroll-mt-16 pb-28 md:pb-36" aria-labelledby="deck-title">
+    <section id={ids.deck} className="scroll-mt-16 pb-16 md:pb-36" aria-labelledby="deck-title">
       <Container>
-        <div className="grid grid-cols-[minmax(0,1fr)] gap-10 overflow-hidden rounded-[36px] bg-brand-deep p-7 text-white sm:p-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-16 lg:p-16">
-          <div className="flex flex-col gap-6">
+        <div className="grid grid-cols-[minmax(0,1fr)] gap-6 overflow-hidden rounded-[32px] bg-brand-deep p-5 text-white sm:gap-10 sm:p-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-16 lg:p-16">
+          <div className="flex flex-col gap-4 sm:gap-6">
             <h2 id="deck-title" className="text-[clamp(2.5rem,5vw,4.5rem)] font-medium leading-[0.98] tracking-[-0.04em]">
               {copy.title}
             </h2>
@@ -72,7 +72,7 @@ export function DeckForm() {
             </p>
           </div>
 
-          <div className="rounded-[28px] bg-white p-6 text-ink sm:p-8">
+          <div className="rounded-[24px] bg-white p-5 text-ink sm:p-8">
             {sent ? (
               <div className="flex min-h-[360px] flex-col justify-center gap-4" role="status">
                 <span className="grid size-12 place-items-center rounded-full bg-brand text-white">

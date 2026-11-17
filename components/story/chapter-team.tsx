@@ -22,7 +22,7 @@ function initials(name: string) {
 export function ChapterTeam({ locale, number = '07' }: { locale: Locale; number?: string }) {
   const copy = getDictionary(locale).team
   return (
-    <section id={IDS[locale].team} className="scroll-mt-16 pb-28 pt-12 md:pb-36" aria-labelledby="team-title">
+    <section id={IDS[locale].team} className="scroll-mt-16 pb-16 pt-12 md:pb-36" aria-labelledby="team-title">
       <Container className="flex flex-col gap-12">
         <div className="flex flex-col gap-5">
           <ChapterLabel number={number}>{copy.label}</ChapterLabel>

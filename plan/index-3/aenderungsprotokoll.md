@@ -367,3 +367,40 @@ Wunsch von Roman: Das Bild unter „Zielbild“ in der Grundlage ist jetzt die K
 - `pnpm check:golive` listet die Blocker vor dem Merge: Platzhalter, juristische Prüfung, Migration, Netlify-Einstellungen für die Produktion.
 - Typprüfung, 80 Tests und Build laufen durch.
 - Screenshots auf Desktop und Handy, deutsch und englisch; keine Seite ist breiter als der Bildschirm.
+
+## 17.11.2026 (später) · Website mobil neu getextet: StoryBrand, SEO, KI-Einordnung
+
+**Eingang:** Roman zur Vorschau von PR #6: Die mobile Seite muss überarbeitet werden, bei Wortlänge und Formulierungen.
+- Grundlage soll eine Copywriting-Methode sein, mit drei Zielen: SEO, richtige Einordnung durch KI und vor allem Verständlichkeit für Nutzer.
+- Antworten: ganze Website; StoryBrand; ein Text für alle Geräte, fürs Handy geschrieben.
+
+**Gemessen auf dem iPhone 13, vorher und nachher:**
+
+| Seite | Bildschirme vorher | nachher | Wörter vorher | nachher |
+|---|---|---|---|---|
+| /investoren | 27,4 | 12,5 (ohne Fußzeile 11,7) | 1.598 | 706 |
+| /orte | 16,8 | 9,3 | 841 | 466 |
+| Startseite | 10,5 | 10,5 | 463 | 457 |
+| /freelancer | 8,9 | 9,0 | 337 | 340 |
+
+**Investoren:** von 13 auf 10 Blöcke.
+- Hero, Warum (Problem und Begleiter mit Mission), Kreislauf, Stand (Technik zum Aufklappen), Node001, Erlöse und Kapital, Roadmap, Bildnachweis, Team, Formular.
+- Weggefallen sind Doppelungen: „Für wen“, „Nachweisweg“, „Zurück fließt mehr als Geld“, die Mietschritte (stehen auf /orte) und die Parallel-Liste.
+
+**Orte:**
+- H1 „Wohnen und arbeiten in den Karpaten.“
+- Der Abschnitt „Alltag“ ist entfallen.
+- Die Angebote wischen sich auf dem Handy seitlich.
+- Plan in 3 Schritten, FAQ in 1–2 Sätzen.
+
+**SEO und KI:**
+- Titel und Beschreibungen sind neu.
+- Neu sind Sitemap, JSON-LD (Organization, WebSite, WebPage; FAQPage auf /orte und /freelancer) und /llms.txt mit Definitionssatz und Fakten aus den Wörterbüchern.
+- Der Definitionssatz steht jetzt in der Fußzeile jeder Seite.
+
+**Prüfung:**
+- `pnpm check:copy` prüft Satzlänge, Überschriften, Titel und Wiederholungen und meldet nichts mehr.
+- `check:golive` ruft diese Prüfung mit auf.
+- `pruefe_alle.py`: 0 Treffer.
+- 80 Tests grün, Build grün.
+- Jede Seite hat genau eine H1 und kein seitlicher Überlauf.

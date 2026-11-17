@@ -5,18 +5,19 @@ import { SiteFooter } from '@/components/site/site-footer'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { PlacesHero } from '@/components/places/places-hero'
-import { ChapterEveryday, ChapterOffers, ChapterPlace, ChapterPlacesFaq, PlaceFacts } from '@/components/places/places-chapters'
+import { ChapterOffers, ChapterPlace, ChapterPlacesFaq, PlaceFacts } from '@/components/places/places-chapters'
 import { WaitlistCard } from '@/components/places/waitlist-card'
 import { WaitlistProvider } from '@/components/places/waitlist-state'
 import { Transparency } from '@/components/site/transparency'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, pageHref, type Locale } from '@/lib/i18n/routes'
+import { JsonLd, pageLd } from '@/lib/seo/json-ld'
 
 function ChapterWaitlist({ locale }: { locale: Locale }) {
   const copy = getDictionary(locale).places.waitlist
   return (
     <section id={IDS[locale].waitlist} aria-labelledby="warteliste-title" className="scroll-mt-16 bg-brand-deep text-white">
-      <Container className="grid grid-cols-[minmax(0,1fr)] items-start gap-14 py-24 md:py-32 lg:grid-cols-2">
+      <Container className="grid grid-cols-[minmax(0,1fr)] items-start gap-10 py-14 md:gap-14 md:py-32 lg:grid-cols-2">
         <div className="flex flex-col gap-5">
           <ChapterLabel number="04" tone="light">
             {copy.label}
@@ -54,10 +55,12 @@ function ChapterWaitlist({ locale }: { locale: Locale }) {
   )
 }
 
-/** Seite Orte: Wohnen, arbeiten, zusammenkommen. Die Whitelist (im Code „waitlist“) ist das Ziel aller Knöpfe. */
+/** Seite Orte nach StoryBrand (17.11.2026): Hero → Problem und Begleiter (Der Ort) → Fakten → Angebote → Plan und Whitelist → Fragen → Transparenz.
+ *  Die Whitelist (im Code „waitlist“) ist das Ziel aller Knöpfe. */
 export function PlacesPage({ locale }: { locale: Locale }) {
   return (
     <>
+      <JsonLd data={pageLd('places', locale)} />
       <SiteHeader />
       <WaitlistProvider>
         <main>
@@ -65,7 +68,6 @@ export function PlacesPage({ locale }: { locale: Locale }) {
           <ChapterPlace locale={locale} />
           <PlaceFacts locale={locale} />
           <ChapterOffers locale={locale} />
-          <ChapterEveryday locale={locale} />
           <ChapterWaitlist locale={locale} />
           <ChapterPlacesFaq locale={locale} />
           <Transparency locale={locale} page="places" />

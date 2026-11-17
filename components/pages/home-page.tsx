@@ -13,12 +13,14 @@ import { ReliefLayer, reliefPoint } from '@/components/map/relief-map'
 import { HUB_01 } from '@/lib/map/hubs'
 import type { Locale } from '@/lib/i18n/routes'
 import { showcaseTalents } from '@/lib/showcase'
+import { JsonLd, pageLd } from '@/lib/seo/json-ld'
 
 export async function HomePage({ locale }: { locale: Locale }) {
   // Echte Profile mit Einwilligung zuerst im Talentpool; alle fünf Minuten neu gelesen.
   const pool = await showcaseTalents()
   return (
     <StoryProvider>
+      <JsonLd data={pageLd('home', locale)} />
       <SiteHeader />
       <main>
         <Opener pool={pool} />
