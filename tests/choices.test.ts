@@ -33,10 +33,10 @@ describe('Beispielszenarien', () => {
 })
 
 describe('teamMix', () => {
-  it('zählt Freelancer, Agenten und Ihr Team', () => {
-    expect(teamMix(scenario('chatbot').team, de.common.mix)).toBe('3 Freelancer · 1 KI-Agent')
-    expect(teamMix(apply('chatbot', { internal: ['mara'] }).team, de.common.mix)).toBe('2 Freelancer · 1 KI-Agent · 1 aus Ihrem Team')
-    expect(teamMix(apply('chatbot', { internal: ['noah'] }, en).team, en.common.mix)).toBe('2 freelancers · 1 AI agent · 1 from your team')
+  it('zählt digitale Nomaden, Agenten und Ihr Team', () => {
+    expect(teamMix(scenario('chatbot').team, de.common.mix)).toBe('3 digitale Nomaden · 1 KI-Agent')
+    expect(teamMix(apply('chatbot', { internal: ['mara'] }).team, de.common.mix)).toBe('2 digitale Nomaden · 1 KI-Agent · 1 aus Ihrem Team')
+    expect(teamMix(apply('chatbot', { internal: ['noah'] }, en).team, en.common.mix)).toBe('2 digital nomads · 1 AI agent · 1 from your team')
   })
 })
 

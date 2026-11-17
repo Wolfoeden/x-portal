@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import '../globals.css'
 import { inter } from '@/lib/fonts'
 import { AuthStateScript } from '@/components/auth/auth-state-script'
+import { JsonLd, siteLd } from '@/lib/seo/json-ld'
 import { LocaleProvider } from '@/components/i18n/locale-provider'
 import { en } from '@/lib/i18n/en'
 import { siteMetadata } from '@/lib/i18n/metadata'
@@ -20,6 +21,7 @@ export default function EnglishLayout({ children }: { children: ReactNode }) {
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
         <AuthStateScript />
+        <JsonLd data={siteLd('en')} />
       </head>
       <body className="font-sans">
         <LocaleProvider locale="en" dict={en}>

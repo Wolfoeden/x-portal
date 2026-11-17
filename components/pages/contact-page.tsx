@@ -3,6 +3,7 @@ import { SiteFooter } from '@/components/site/site-footer'
 import { ContactSection } from '@/components/contact/contact-section'
 import { topicFromSearch } from '@/lib/contact/topics'
 import type { Locale } from '@/lib/i18n/routes'
+import { JsonLd, pageLd } from '@/lib/seo/json-ld'
 
 type Search = Record<string, string | string[] | undefined>
 
@@ -11,6 +12,7 @@ export async function ContactPage({ locale, searchParams }: { locale: Locale; se
   const params = new URLSearchParams(Object.entries(search).flatMap(([key, value]) => (typeof value === 'string' ? [[key, value]] : [])))
   return (
     <>
+      <JsonLd data={pageLd('contact', locale)} />
       <SiteHeader />
       <main>
         <ContactSection topic={topicFromSearch(params, locale)} />

@@ -1,0 +1,222 @@
+{
+ "stand": "2026-11-17",
+ "fix_je_monat_ohne_m365": 248.33,
+ "m365_spanne_je_nutzer": [
+  20.0,
+  22.0
+ ],
+ "stack": [
+  {
+   "id": "IT01",
+   "bereich": "KI",
+   "werkzeug": "ChatGPT",
+   "zweck": "KI-Arbeitsplatz: Recherche, Texte, Code, Agenten",
+   "betrag": 90.0,
+   "einheit": "Monat",
+   "quelle": "Angabe der Projektleitung vom 17.11.2026",
+   "nachweis": "Abo-Rechnung; Nutzung in Projekten",
+   "hinweis": "",
+   "je_monat": 90.0,
+   "stand": "im Betrieb"
+  },
+  {
+   "id": "IT02",
+   "bereich": "KI",
+   "werkzeug": "Claude",
+   "zweck": "KI-Arbeitsplatz: Planung, Code, Auswertung",
+   "betrag": 90.0,
+   "einheit": "Monat",
+   "quelle": "Angabe der Projektleitung vom 17.11.2026",
+   "nachweis": "Abo-Rechnung; Repository mit Commits",
+   "hinweis": "",
+   "je_monat": 90.0,
+   "stand": "im Betrieb"
+  },
+  {
+   "id": "IT03",
+   "bereich": "Web",
+   "werkzeug": "Website-Hosting",
+   "zweck": "Website und Plattform x-portal.eu",
+   "betrag": 10.0,
+   "einheit": "Monat",
+   "quelle": "Angabe der Projektleitung vom 17.11.2026",
+   "nachweis": "Live-URL; Hosting-Rechnung",
+   "hinweis": "",
+   "je_monat": 10.0,
+   "stand": "im Betrieb"
+  },
+  {
+   "id": "IT04",
+   "bereich": "Daten",
+   "werkzeug": "Supabase",
+   "zweck": "Datenbank und Backend der Plattform",
+   "betrag": 25.0,
+   "einheit": "Monat",
+   "quelle": "Angabe der Projektleitung vom 17.11.2026",
+   "nachweis": "Projekt-Dashboard: Tabellen, Nutzer, Abfragen",
+   "hinweis": "",
+   "je_monat": 25.0,
+   "stand": "im Betrieb"
+  },
+  {
+   "id": "IT05",
+   "bereich": "Blockchain",
+   "werkzeug": "Cardano-Transaktionen",
+   "zweck": "Nachweise und Zahlungen on-chain; Grundlage für Zugang und Erfassung (AP-D5, AP-F4)",
+   "betrag": 0.02,
+   "einheit": "Transaktion",
+   "quelle": "Angabe der Projektleitung vom 17.11.2026: 0,16 ADA, umgerechnet etwa 2 Cent",
+   "nachweis": "Transaktions-Hashes, öffentlich im Explorer prüfbar",
+   "hinweis": "ADA-Kurs schwankt; Anzahl je Monat offen",
+   "je_monat": null,
+   "stand": "im Betrieb"
+  },
+  {
+   "id": "IT06",
+   "bereich": "Marketing",
+   "werkzeug": "X Premium mit Grok-Bot",
+   "zweck": "Marketing und Reichweite auf X; Grok-Bot im Abo enthalten",
+   "betrag": 30.0,
+   "einheit": "Monat",
+   "quelle": "Angabe der Projektleitung vom 17.11.2026",
+   "nachweis": "Profil, Reichweitenzahlen, Abo-Beleg",
+   "hinweis": "",
+   "je_monat": 30.0,
+   "stand": "im Betrieb"
+  },
+  {
+   "id": "IT07",
+   "bereich": "Büro",
+   "werkzeug": "Microsoft 365 Business Premium",
+   "zweck": "E-Mail, Teams, OneDrive, Office, Sicherheit und Geräteverwaltung",
+   "betrag": null,
+   "einheit": "Nutzer und Monat",
+   "quelle": "Listenpreis etwa 20–22 € netto je Nutzer und Monat im Jahresabo (Händlerlisten 08/2026; Microsoft-Seite am 17.11.2026 nicht erreichbar); Betrag aus der Rechnung übernehmen",
+   "nachweis": "Rechnung; Mandant mit Nutzern",
+   "hinweis": "Nutzerzahl offen",
+   "je_monat": null,
+   "stand": "im Betrieb"
+  },
+  {
+   "id": "IT08",
+   "bereich": "Web",
+   "werkzeug": "Domain",
+   "zweck": "x-portal.eu",
+   "betrag": 40.0,
+   "einheit": "Jahr",
+   "quelle": "Angabe der Projektleitung vom 17.11.2026",
+   "nachweis": "Registrierung",
+   "hinweis": "",
+   "je_monat": 3.33,
+   "stand": "im Betrieb"
+  },
+  {
+   "id": "IT09",
+   "bereich": "Plattform",
+   "werkzeug": "Plattform x-portal.eu",
+   "zweck": "KI-Matching und Freelancer-Profile; läuft auf IT03 und IT04",
+   "betrag": null,
+   "einheit": "Monat",
+   "quelle": "eigene Entwicklung; Kosten stecken in IT03 und IT04",
+   "nachweis": "Live-URL, Nutzerzahlen, Repository",
+   "hinweis": "",
+   "je_monat": null,
+   "stand": "im Betrieb"
+  },
+  {
+   "id": "IT10",
+   "bereich": "Internet",
+   "werkzeug": "Internetanschluss Ukraine",
+   "zweck": "Hauptanschluss am Node001 über einen lokalen Internetanbieter (D63)",
+   "betrag": null,
+   "einheit": "Monat",
+   "quelle": "Kommentar der Projektleitung im Index vom 17.11.2026",
+   "nachweis": "Vertrag, gemessene Bandbreite",
+   "hinweis": "Anbieter oben und Bandbreite werden verglichen (D63)",
+   "je_monat": null,
+   "stand": "geplant für Node001"
+  },
+  {
+   "id": "IT11",
+   "bereich": "Internet",
+   "werkzeug": "Starlink",
+   "zweck": "Redundanter Zugang am Node001 für Ausfälle des Hauptanschlusses (D63)",
+   "betrag": null,
+   "einheit": "Monat",
+   "quelle": "Kommentar der Projektleitung im Index vom 17.11.2026",
+   "nachweis": "Gerät, Vertrag, Test bei Schnee",
+   "hinweis": "Kostenregister vom 13.11.: Gerät 24.000 UAH, Tarif 1.363 UAH im Monat (Richtwerte, kein Angebot)",
+   "je_monat": null,
+   "stand": "geplant für Node001"
+  },
+  {
+   "id": "IT12",
+   "bereich": "Internet",
+   "werkzeug": "Internetanschluss Deutschland",
+   "zweck": "Anschluss in Deutschland über den Anbieter Teledata",
+   "betrag": null,
+   "einheit": "Monat",
+   "quelle": "Kommentar der Projektleitung im Index vom 17.11.2026",
+   "nachweis": "Vertrag",
+   "hinweis": "Kosten offen",
+   "je_monat": null,
+   "stand": "Anbieter genannt, Stand offen"
+  }
+ ],
+ "erloese": [
+  {
+   "id": "ER-K",
+   "quelle": "Kundenprojekte über die DT Agentur (Deutschland, Österreich, Schweiz)",
+   "stufe": "01 · Heute",
+   "reife": "läuft",
+   "stand": "Kundenprojekte heute (D51)",
+   "nachweis": "Rechnungen, Referenzen",
+   "naechstes": "erster bezahlter Auftrag mit Testkarte (2.6.1)"
+  },
+  {
+   "id": "ER-I",
+   "quelle": "ISMS-App: Zertifizierungen, unter anderem für Startups",
+   "stufe": "02 · Technologielösungen",
+   "reife": "Pilot mit Kunden",
+   "stand": "Angabe der Projektleitung vom 17.11.2026",
+   "nachweis": "Pilotkunden, Nutzung der App, Kundenstimme",
+   "naechstes": "Pilot auswerten, Preismodell, Referenz (AP-A11)"
+  },
+  {
+   "id": "ER-A",
+   "quelle": "KI-Agenten",
+   "stufe": "02 · Technologielösungen",
+   "reife": "in Entwicklung",
+   "stand": "Teilergebnis 2.6.4: Verkauf über Masumi später",
+   "nachweis": "Repository, erste Nutzung",
+   "naechstes": "Preismodell (2.6.2)"
+  },
+  {
+   "id": "ER-P",
+   "quelle": "Plattform x-portal.eu mit KI-Matching",
+   "stufe": "Plattform",
+   "reife": "läuft, Erlösmodell offen",
+   "stand": "Whitepaper „Vorhanden“",
+   "nachweis": "Live-URL, Profile, Matches",
+   "naechstes": "Erlösmodell festlegen"
+  },
+  {
+   "id": "ER-S",
+   "quelle": "Staking oder Stake-Pool auf Cardano",
+   "stufe": "Blockchain",
+   "reife": "Stand offen",
+   "stand": "Angabe der Projektleitung vom 17.11.2026 (Antwort auf die Frage nach Einnahmen über die Blockchain)",
+   "nachweis": "Stake-Pool-ID oder Staking-Adresse, öffentlich prüfbar",
+   "naechstes": "Rechts- und Steuerprüfung (AP-A12)"
+  },
+  {
+   "id": "ER-N",
+   "quelle": "Miete und Services am Node001",
+   "stufe": "03 · Node001",
+   "reife": "vor dem Bau",
+   "stand": "D45, D48, D50",
+   "nachweis": "Whitelist, später Mietverträge und Mieterlöse (AP-F3)",
+   "naechstes": "Whitelist einrichten (AP-A8)"
+  }
+ ]
+}

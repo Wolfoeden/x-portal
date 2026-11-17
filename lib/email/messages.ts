@@ -1,15 +1,15 @@
-import type { ContactTopic } from '@/lib/contact/topics'
+import type { RequestTopic } from '@/lib/contact/topics'
 import type { Locale } from '@/lib/i18n/routes'
 
 // Texte der Vorgangsmails. Reiner Text, kurz. Die Bestätigung an Absender wiederholt keine Eingaben:
 // Sonst ließe sich das Formular nutzen, um beliebigen Text an fremde Adressen zu schicken.
 
-const TOPIC_NAMES: Record<Locale, Record<ContactTopic, string>> = {
-  de: { automation: 'KI-Automatisierung', training: 'KI-Schulung', isms: 'ISMS', general: 'Allgemein' },
-  en: { automation: 'AI automation', training: 'AI training', isms: 'ISMS', general: 'General' },
+const TOPIC_NAMES: Record<Locale, Record<RequestTopic, string>> = {
+  de: { automation: 'KI-Automatisierung', training: 'KI-Schulung', isms: 'ISMS', places: 'Orte und Node001', general: 'Allgemein', investors: 'Whitepaper und Deck' },
+  en: { automation: 'AI automation', training: 'AI training', isms: 'ISMS', places: 'Places and Node001', general: 'General', investors: 'Whitepaper and deck' },
 }
 
-type ContactMail = { topic: ContactTopic; name: string; email: string; company?: string | null; message: string; locale: Locale }
+type ContactMail = { topic: RequestTopic; name: string; email: string; company?: string | null; message: string; locale: Locale }
 
 /** An das Postfach des Betreibers. Antworten gehen direkt an den Absender. */
 export function contactNotification(input: ContactMail) {
@@ -71,6 +71,80 @@ export function freelancerPublishedNotification(input: { firstName: string; role
       `Konto: ${input.email ?? '–'}`,
       '',
       'Details in Supabase unter ops.freelancer und ops.posteingang.',
+    ].join('\n'),
+  }
+}
+
+// Whitelist Node001 (Seite Orte; im Code „waitlist“). Die Seite spricht in Du-Form, die Mails auch.
+
+// Datenbankwert „rent“ bleibt intern; nach außen heißt die Option seit 17.11.2026 „Länger bleiben“.
+const INTEREST_NAMES: Record<string, string> = { workation: 'Workation', rent: 'Länger bleiben' }
+const TIMING_NAMES: Record<string, string> = { now: 'Sofort', later: 'Nur Interesse, für später' }
+
+/** Bestätigungslink für die Whitelist Node001, in der Sprache des Eintrags. Wiederholt keine Eingaben, auch nicht den Vornamen. */
+export function waitlistConfirmLink(input: { locale: Locale; link: string }) {
+  if (input.locale === 'en') {
+    return {
+      subject: 'Please confirm: whitelist for Node001',
+      text: [
+        'Hello,',
+        '',
+        'please confirm that you would like to join the whitelist for Node001:',
+        '',
+        input.link,
+        '',
+        'The link is valid for seven days. Joining is not binding and involves no payment. We will write to you once terms and services are set, and you will be among the first to hear when a living unit becomes free.',
+        '',
+        'If you later no longer want to hear from us, simply reply to one of our emails and we will remove your address.',
+        '',
+        'XPORTAL',
+        'https://x-portal.eu/en/places',
+        '',
+        'You are receiving this email because this address was entered on the whitelist at x-portal.eu. If that was not you, simply ignore it; without confirmation nothing happens.',
+      ].join('\n'),
+    }
+  }
+  return {
+    subject: 'Bitte bestätigen: Whitelist Node001',
+    text: [
+      'Hallo,',
+      '',
+      'bitte bestätige, dass du in die Whitelist für Node001 möchtest:',
+      '',
+      input.link,
+      '',
+      'Der Link gilt sieben Tage. Der Eintrag ist unverbindlich und ohne Zahlung. Wir schreiben dir, sobald Konditionen und Leistungen feststehen, und du erfährst als Erstes, wann eine Wohneinheit frei wird.',
+      '',
+      'Möchtest du später keine Nachrichten mehr von uns, antworte einfach auf eine unserer Mails, dann löschen wir deine Adresse.',
+      '',
+      'XPORTAL',
+      'https://x-portal.eu/orte',
+      '',
+      'Du bekommst diese Mail, weil diese Adresse auf x-portal.eu in die Whitelist eingetragen wurde. Warst du das nicht, ignoriere sie einfach; ohne Bestätigung passiert nichts.',
+    ].join('\n'),
+  }
+}
+
+/** An das Postfach des Betreibers, sobald ein Eintrag bestätigt ist. Die Felder heißen wie in public.waitlist_entries. */
+const WORK_NAMES: Record<string, string> = { has_work: 'hat schon Arbeit', seeks_work: 'sucht Arbeit über XPORTAL' }
+
+export function waitlistNotification(input: { first_name: string | null; last_name?: string | null; email: string; country?: string | null; work?: string | null; interest: string; timing: string; campaign: string | null; locale: string }) {
+  const use = INTEREST_NAMES[input.interest] ?? input.interest
+  const start = TIMING_NAMES[input.timing] ?? input.timing
+  return {
+    subject: `Whitelist Node001 bestätigt: ${use} · ${start}`.slice(0, 160),
+    text: [
+      `Nutzung: ${use}`,
+      `Ab wann: ${start}`,
+      `Name: ${[input.first_name, input.last_name].filter(Boolean).join(' ') || '–'}`,
+      `E-Mail: ${input.email}`,
+      `Land: ${input.country || '–'}`,
+      `Arbeit: ${(input.work && WORK_NAMES[input.work]) || '–'}`,
+      `Kampagne: ${input.campaign || '–'}`,
+      `Sprache: ${input.locale === 'en' ? 'Englisch' : 'Deutsch'}`,
+      '',
+      '—',
+      'Bestätigt per Link. Alle Einträge in Supabase unter public.waitlist_entries, die Zählung unter ops.warteliste.',
     ].join('\n'),
   }
 }

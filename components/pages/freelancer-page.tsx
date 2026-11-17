@@ -9,10 +9,12 @@ import { ChapterFree } from '@/components/freelancer/chapter-free'
 import { ChapterFaq } from '@/components/freelancer/chapter-faq'
 import { Closer } from '@/components/freelancer/closer'
 import type { Locale } from '@/lib/i18n/routes'
+import { JsonLd, pageLd } from '@/lib/seo/json-ld'
 
 export function FreelancerPage({ locale }: { locale: Locale }) {
   return (
     <DraftProvider>
+      <JsonLd data={pageLd('freelancer', locale)} />
       <SiteHeader />
       <main>
         <Builder />

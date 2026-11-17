@@ -5,11 +5,14 @@ export type Locale = (typeof LOCALES)[number]
 
 export const PAGES = {
   home: { de: '/', en: '/en' },
-  freelancer: { de: '/freelancer', en: '/en/freelancers' },
+  freelancer: { de: '/digitale-nomaden', en: '/en/digital-nomads' }, // bis 17.11.2026 /freelancer, /en/freelancers (Weiterleitung in next.config.ts)
   investors: { de: '/investoren', en: '/en/investors' },
+  places: { de: '/orte', en: '/en/places' },
   contact: { de: '/kontakt', en: '/en/contact' },
   signIn: { de: '/anmelden', en: '/en/sign-in' },
   account: { de: '/konto', en: '/en/account' },
+  imprint: { de: '/impressum', en: '/en/imprint' },
+  privacy: { de: '/datenschutz', en: '/en/privacy' },
 } as const
 export type PageKey = keyof typeof PAGES
 
@@ -20,7 +23,7 @@ export const IDS = {
     reasons: 'begruendung',
     platform: 'plattform',
     data: 'daten',
-    hubs: 'hubs',
+    hubs: 'nodes',
     start: 'einstieg',
     team: 'team',
     services: 'leistungen',
@@ -31,7 +34,7 @@ export const IDS = {
     terms: 'agb',
     signIn: 'anmelden',
     doorCompanies: 'unternehmen',
-    doorFreelancers: 'freelancer',
+    doorFreelancers: 'nomaden',
     doorInvestors: 'investoren',
     profile: 'profil',
     requests: 'anfragen',
@@ -42,19 +45,29 @@ export const IDS = {
     loop: 'kreislauf',
     whyNow: 'warum-jetzt',
     revenue: 'erloese',
-    hub01: 'hub-01',
+    hub01: 'node001',
+    plots: 'mieten',
+    about: 'wer-wir-sind',
+    status: 'stand',
+    capital: 'kapital',
     roadmap: 'roadmap',
     deck: 'deck',
+    place: 'ort',
+    offers: 'angebote',
+    day: 'ein-tag',
+    everyday: 'alltag',
+    waitlist: 'warteliste',
     topicAutomation: 'ki-automatisierung',
     topicTraining: 'ki-schulung',
     topicIsms: 'isms',
+    topicPlaces: 'orte',
   },
   en: {
     project: 'project',
     reasons: 'reasons',
     platform: 'platform',
     data: 'data',
-    hubs: 'hubs',
+    hubs: 'nodes',
     start: 'start',
     team: 'team',
     services: 'services',
@@ -65,7 +78,7 @@ export const IDS = {
     terms: 'terms',
     signIn: 'sign-in',
     doorCompanies: 'companies',
-    doorFreelancers: 'freelancers',
+    doorFreelancers: 'nomads',
     doorInvestors: 'investors',
     profile: 'profile',
     requests: 'requests',
@@ -76,12 +89,22 @@ export const IDS = {
     loop: 'flywheel',
     whyNow: 'why-now',
     revenue: 'revenue',
-    hub01: 'hub-01',
+    hub01: 'node001',
+    plots: 'rent',
+    about: 'about',
+    status: 'status',
+    capital: 'capital',
     roadmap: 'roadmap',
     deck: 'deck',
+    place: 'place',
+    offers: 'offers',
+    day: 'a-day',
+    everyday: 'everyday',
+    waitlist: 'waitlist',
     topicAutomation: 'ai-automation',
     topicTraining: 'ai-training',
     topicIsms: 'isms',
+    topicPlaces: 'places',
   },
 } satisfies Record<Locale, Record<string, string>>
 export type Ids = (typeof IDS)['de']
@@ -93,7 +116,7 @@ export function pagePath(page: PageKey, locale: Locale) {
 
 /** Kontaktthemen stehen in der Adresse, damit auch ein Klick im Menü auf der Kontaktseite das Thema wechselt. */
 export const TOPIC_PARAM = { de: 'thema', en: 'topic' } as const
-export const TOPIC_ANCHORS = ['topicAutomation', 'topicTraining', 'topicIsms'] as const satisfies readonly IdKey[]
+export const TOPIC_ANCHORS = ['topicAutomation', 'topicTraining', 'topicIsms', 'topicPlaces'] as const satisfies readonly IdKey[]
 
 /** Pfad mit Anker, z. B. pageHref('home', 'en', 'deck') → /en#deck. Themen der Kontaktseite → /kontakt?thema=isms. */
 export function pageHref(page: PageKey, locale: Locale, anchor?: IdKey) {

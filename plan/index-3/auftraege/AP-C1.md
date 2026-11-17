@@ -1,0 +1,75 @@
+# Auftrag AP-C1: Wohneinheit Phase 0: Anbieter aus Ungarn, Polen und über Alibaba vergleichen
+
+Für die ausführende KI (kleineres Modell). Das Ergebnis prüft die planende KI, dann ein Mensch.
+
+## Rahmen
+
+- Wann: nach der Bauplanung (AP-A4); bestellen spätestens Lieferzeit plus Zoll plus Transport vor dem Montagebeginn (AP-C4)
+- Voraussetzung: Basis of Design
+- Ergebnis wird gebraucht für: Bestellung, Logistik, Zoll
+- Grundbestimmungen: GB1, GB2, GB4, GB5, GB8
+
+  - GB1 Weg nach oben: transportierbar: Die Straße ist einfach, einspurig und teils eng; die letzten etwa 200 m haben über 15 % Steigung und sind unbefestigt. Jede Wohneinheit muss sich in Teilen auf kleinem Fahrzeug hochbringen lassen; Maße und Gewicht des größten Teils sind das erste Prüfkriterium. Bis 2,6 m Breite Transport ohne Genehmigung, über 3,5 m nur mit Begleitfahrzeug. Breite, Engstellen und Ausweichstellen sind bis zur Messung (AP-A0) offen; die Route und acht kritische Messpunkte MP01 bis MP08 stehen in AP-A0. Im Winter muss geräumt werden.
+  - GB2 Boden und Hang: Rutsch- und Fließprozesse; Grundwasseraustritte an den Bohrpunkten 6, 7 und 11. Streifen- und Stützfundament, hangseitige Stützkonstruktion und Entwässerungsgraben. Fachprüfung des Berichts, Zusatzerkundung und Vermessung liegen vor, sind aber noch nicht im Plan abgelegt (AP-A1).
+  - GB4 Frost und Termine: Gebaut wird nur ohne Frost. Termine sind Ziele und gelten erst nach den Gates.
+  - GB5 Sanitär: Spültoilette (Klopapier spülbar), Dusche, Warmwasser und Abwasser ab Phase 0 fest eingebaut; die dauerhafte Kläranlage kommt schon in Phase 0.
+  - GB8 Geld und Freigabe: So viel wie möglich mit Eigenkapital. Bis zu welchem Punkt, und ab wann Investoren dazukommen, ist offen: D69 und D71, Seite „Vor dem Investment“. Bestellt wird in Chargen, nur mit Freigabe der Geschäftsführung und Geld auf dem Konto. Kein Verkauf; Erlöse kommen aus Miete.
+
+## Auftrag
+
+Hinweis: Internet und Netzwerk gehören zur Ausstattung der Wohneinheiten (D63): Leerrohr, Netzwerkdose, Platz für Router abfragen.
+Ziel: Anbieter gedämmter Wohn- und Arbeitsmodule (auch Container-Bauweise und Bausätze in Teilen) in Ungarn, Polen und über Alibaba finden und nach den Grundbestimmungen vergleichen.
+Prüfkriterien, in dieser Reihenfolge: zuerst Transportierbarkeit, also Maße und Gewicht des größten und schwersten Teils (Zufahrt: einspurige, teils enge Straße, zuletzt über 15 % Steigung, bis 2,6 m Breite ohne Genehmigung; Werte aus AP-A0, sobald gemessen); dann Eignung für −20 °C, Sanitär vorbereitet (Spültoilette, Dusche, Warmwasser), Lieferform, Montageaufwand, Lieferzeit, Preis und Lieferbedingung, Gewährleistung, Bewertungen.
+Ausgabe: Tabelle mit Herkunft | Anbieter | Modell | Fläche | Teile und Gewicht | Wintertauglichkeit | Sanitär | Lieferzeit | Preis | Lieferbedingung | passt zu GB1 ja/nein/offen | Quelle.
+
+Regeln: Jede Angabe mit Quelle (Link) und Abrufdatum. Was nicht belegt ist, als OFFEN kennzeichnen, nicht schätzen. Nichts bestellen, nichts versenden, keine Konten anlegen, keine Entscheidung treffen. Ergebnis als Markdown-Tabelle und als JSON-Liste mit denselben Feldern.
+
+## Unterlage: Anfrage an Anbieter (Deutsch, für Ungarn und Polen)
+
+```text
+Betreff: Angebotsanfrage – gedämmtes Wohn- und Arbeitsmodul, Karpaten (Ukraine), Lieferung in Teilen
+
+Sehr geehrte Damen und Herren,
+
+wir planen ein Wohn- und Arbeitsmodul für 2–3 Personen in den ukrainischen Karpaten (etwa 1.050 m Höhe, Winter bis −20 °C). Bitte senden Sie uns ein Angebot mit:
+
+1. Modell, Fläche, Raumhöhe, Aufbau und U-Werte von Wand, Dach und Boden; Eignung für −20 °C.
+2. Lieferform: in Teilen oder als ganzes Modul. Maße und Gewicht des schwersten und des größten Teils. Die Zufahrt ist eine einfache, einspurige, teils enge Straße; die letzten 200 m sind unbefestigt mit über 15 % Steigung. Jedes Teil muss auf kleinem Fahrzeug hochkommen; Transportbreite bis 2,6 m ohne Genehmigung. Bitte nennen Sie die kleinste Lieferform, die Sie anbieten.
+3. Sanitär: vorbereitet oder eingebaut für Spültoilette, Dusche, Warmwasser, Abwasseranschluss.
+4. Elektroinstallation, Heizung (Holzofen mit Schornstein, elektrische Reserve).
+5. Anforderungen an das Fundament (Punktlasten); unser Gutachten empfiehlt Streifen- und Stützfundament.
+6. Montage: Dauer, Personen, Werkzeug, Hebegerät; ist Montage durch ein kleines Team möglich?
+7. Preis, Lieferbedingung (FCA oder DAP ukrainische Grenze), Lieferzeit, Zahlungsbedingungen, Gewährleistung.
+8. Unterlagen für Export und Import: Rechnung, Packliste, Ursprungszeugnis, Warennummer.
+
+Dies ist eine Anfrage, keine Bestellung.
+
+Mit freundlichen Grüßen
+[Projektleitung, X-PORTAL]
+```
+
+## Unterlage: Request for quotation (English, for Alibaba and others)
+
+```text
+Subject: Request for quotation – insulated living/working module, Carpathians (Ukraine), delivery in parts
+
+Dear Sir or Madam,
+
+we are planning a living and working module for 2–3 persons in the Ukrainian Carpathians (approx. 1,050 m above sea level, winters down to −20 °C). Please send us a quotation including:
+
+1. Model, floor area, interior height, wall/roof/floor build-up and U-values; suitability for −20 °C.
+2. Delivery form: in parts or as complete module. Dimensions and weight of the heaviest and the largest part. Access is a simple single-lane road, narrow in places; the last 200 m are unpaved with more than 15 % gradient. Every part must be transportable on a small vehicle; transport width up to 2.6 m without permit. Please state the smallest delivery form you offer.
+3. Sanitary: prepared or installed flush toilet, shower, hot water, drainage connection.
+4. Electrical installation, heating options (wood stove with chimney, electric backup).
+5. Foundation requirements (point loads); our soil report recommends strip and retaining foundations.
+6. Assembly: time, crew, tools, lifting equipment required; can a small team assemble it?
+7. Price, Incoterms (FCA/DAP Ukrainian border), delivery time, payment terms, warranty.
+8. Documents for export/import: invoice, packing list, certificate of origin, HS code.
+
+This is a request for information and quotation only, not an order.
+
+Kind regards
+[Projektleitung, X-PORTAL]
+```
+
+Quelle: Index 3.0, Ast 1 (werkzeug/ablauf.py). Diese Datei wird erzeugt; Änderungen in ablauf.py vornehmen.

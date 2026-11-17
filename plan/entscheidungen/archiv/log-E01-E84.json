@@ -1,0 +1,338 @@
+[
+ {
+  "id": "E01",
+  "text": "Ziel der ersten Stufe: zwei bis drei Leute wohnen und arbeiten ganzjährig oben."
+ },
+ {
+  "id": "E02",
+  "text": "Gebaut wird im Sommer, gewohnt auch im Winter. Der Winter muss in jedem Paket bedacht sein."
+ },
+ {
+  "id": "E03",
+  "text": "Paul braucht 8.000 € netto im Monat, um sich zu 100 % auf X-PORTAL zu konzentrieren. Das kommt vor den Kosten auf dem Berg."
+ },
+ {
+  "id": "E04",
+  "text": "Kein Investor. Eigenleistung einbringen."
+ },
+ {
+  "id": "E05",
+  "text": "Reihenfolge des Geldes: Pauls Lebensunterhalt, dann Kosten auf dem Berg, dann Einnahmen aus Projekten für Weiterentwicklung, dann Investitionen über fraktionalisiertes Landeigentum auf der Chain."
+ },
+ {
+  "id": "E06",
+  "text": "Den Kontakt zu Nazar hält Paul, nicht Roman."
+ },
+ {
+  "id": "E07",
+  "text": "Kundenprojekte entstehen über x-portal.eu; die DT Agentur bearbeitet sie. x-portal.eu ist auch die Oberfläche für neue Freelancer und Siedler."
+ },
+ {
+  "id": "E08",
+  "text": "Die DT Agentur hat bisher keinen Umsatz, keine dauerhaften Nutzer, keinen Gewinn."
+ },
+ {
+  "id": "E09",
+  "text": "Keine Nachfrage messen, solange es kein Produkt gibt."
+ },
+ {
+  "id": "E10",
+  "text": "Die Grundstücksdaten als Modell reichen für die Planung; nicht neu einsammeln."
+ },
+ {
+  "id": "E11",
+  "text": "Wiederholbar sind Schema, Planung, Nutzbarkeit und Sinn. Geologie und Gelände sind an jedem Ort neu."
+ },
+ {
+  "id": "E12",
+  "text": "Ablage ist OneDrive in Microsoft 365. KI soll sicher und DSGVO-konform darauf arbeiten."
+ },
+ {
+  "id": "E13",
+  "text": "Aufgaben, die eine KI erledigen kann, macht die KI; ein Mensch prüft."
+ },
+ {
+  "id": "E14",
+  "text": "Reihenfolge der Grundversorgung nach Maslow: Toilette, Küche, Strom, Wasser, Internet, Schlafplatz. Zuerst sollen die Leute oben Geld verdienen können."
+ },
+ {
+  "id": "E15",
+  "text": "Vor Ort prüfen, was es gibt und genutzt oder angeboten werden kann: Holz, Milch, Käse, Sauna, Reparatur, Kraftstoff."
+ },
+ {
+  "id": "E16",
+  "text": "Die Methodenbewertung V1.0 ist vollständig zu berücksichtigen."
+ },
+ {
+  "id": "E17",
+  "text": "Unternehmensform: UG, später GmbH, keine AG; ein SPV je Grundstück, später tokenisiert."
+ },
+ {
+  "id": "E18",
+  "text": "Grundstücke: das eigene plus höchstens ein weiteres, die übrigen von Dritten. Tester aus Romans Community (etwa 300 Leute)."
+ },
+ {
+  "id": "E19",
+  "text": "Marketing für x-portal.eu macht Roman. Roman ist Projektmanager und führt aus."
+ },
+ {
+  "id": "E20",
+  "text": "Kosten mit Internetpreisen ansetzen, Unklares markieren. Wechselkurs jeden Montag neu, etwa 50 UAH/EUR."
+ },
+ {
+  "id": "E21",
+  "text": "Baubeginn oben erst, wenn kein Frost mehr ist und das Wetter es erlaubt."
+ },
+ {
+  "id": "E22",
+  "text": "Paul und Roman sind nicht vom Bau. Technische Werte (Temperaturen, Lasten, Mengen, Schall) legt eine Fachperson fest; die KI schlägt mit Quelle vor."
+ },
+ {
+  "id": "E23",
+  "text": "Von Anfang an sind 2–3 Personen oben."
+ },
+ {
+  "id": "E24",
+  "text": "Roman ist von Anfang an oben dabei."
+ },
+ {
+  "id": "E25",
+  "text": "Maslow und Sinne ist als Gliederung der Anforderungen gut und wird laufend weiterentwickelt."
+ },
+ {
+  "id": "E26",
+  "text": "Im Notfall ist man in unter 2 Stunden unten (Angabe Roman). Wasser: 50 l je Person und Tag für den Anfang, Durchschnitt in Deutschland laut Roman etwa 120 l."
+ },
+ {
+  "id": "E27",
+  "text": "Nazar übernimmt die Abnahmen für Wärme, Wasser und Strom; der Preis ist noch unbekannt."
+ },
+ {
+  "id": "E28",
+  "text": "Mission ist die neue Fassung: „Wir schaffen und vernetzen menschenzentrierte Innovationshubs, in denen Menschen leben, arbeiten und gemeinsam neue Lösungen entwickeln. Dafür verbinden wir moderne Technologien, geeignete Arbeits- und Lebensbedingungen und einen verantwortungsvollen Umgang mit Ressourcen.“ Die alte Fassung war zu operativ."
+ },
+ {
+  "id": "E29",
+  "text": "Globalziel 1 heißt „Wirtschaftliche Tragfähigkeit und Resilienz“ (robust, auf das Unternehmen bezogen, nicht „finanzielle Unabhängigkeit“). Reihenfolge: Tragfähigkeit und Resilienz, internationale Skalierung, gesellschaftlicher Nutzen."
+ },
+ {
+  "id": "E30",
+  "text": "Externes Kapital kommt über fraktionalisierte Grundstücke auf der Blockchain, und erst, wenn Umsatz da ist."
+ },
+ {
+  "id": "E31",
+  "text": "Umsatz kommt aus Projekten aus Deutschland: über x-portal.eu, Freelancermap oder andere Projektseiten an Land gezogen, oder auf dem Berg geschaffen."
+ },
+ {
+  "id": "E32",
+  "text": "Pauls Geld kommt aus der eigenen Wertschöpfung. Wird Finanzierung aufgenommen, ist Paul mit 8.000 € netto zu 100 % die feste Kostenstelle und der Richtwert."
+ },
+ {
+  "id": "E33",
+  "text": "Entwürfe liegen vor: Generalplan in zwei Varianten (M 1:500, Kataster 2620885502:02:001:0013, Bereschnyzja, Ortsteil Hrun, Auftraggeber Paul) und 3D-Renderings (`plan/quellen/generalplan-variante-*.pdf`)."
+ },
+ {
+  "id": "E34",
+  "text": "Zuerst werden Container aufgestellt, auf der Fläche unten links im Generalplan (D02 C). Darin können am Anfang auch Bauarbeiter wohnen, die danach baut. Die Häuser im Generalplan sind nur ein Entwurf; ob Häuser oder eine andere Wohnbauart kommen, ist offen."
+ },
+ {
+  "id": "E35",
+  "text": "Strom: Netz mit Batterie oder Generator, dazu regenerative Energie wie Solar (D03 C). Ob das Netz nah genug ist, sagt Nazar."
+ },
+ {
+  "id": "E36",
+  "text": "Die Einfahrt liegt wahrscheinlich oben links beim großen roten Haus in Generalplan Variante 1 (Angabe Roman, noch nicht sicher)."
+ },
+ {
+  "id": "E37",
+  "text": "Generalplan Variante 1 (D01 A)."
+ },
+ {
+  "id": "E38",
+  "text": "Container ab Frühjahr, sobald der Boden frostfrei ist, und auch über den Winter bewohnt. Vor dem ersten Frost fertig: Heizung nach Heizlast, frostfreie Wasserleitung, Toilette im Warmen, Batterie im Warmen, Generator draußen; Nazar legt fest und nimmt ab. Gekauft wird nach der Reihenfolge E05 (D05 A)."
+ },
+ {
+  "id": "E39",
+  "text": "Neue gedämmte Wohncontainer, zum Beispiel BlokModul BK1 (6 × 2,5 m, 100 mm Basaltwolle, Listenpreis ab 444.000 UAH je Container ohne Heizung) (D06 A)."
+ },
+ {
+  "id": "E40",
+  "text": "Für jede Person ein eigener Container mit allem drin, dazu ein Gemeinschaftsplatz zum Arbeiten mit Küche und Sanitär (D07 A mit Kommentar)."
+ },
+ {
+  "id": "E41",
+  "text": "Geld für die Container: eher stufenweise, mit weniger Leuten und Containern anfangen und anpassen (D08 C). Offen bleibt, ob die Container nur Übergang sind oder das Bausystem für alles werden; davon hängt ab, ob mehr investiert wird (Kredit oder Kapital nach E30)."
+ },
+ {
+  "id": "E42",
+  "text": "Wer oben wohnt und arbeitet, können auch Remote-Freelancer aus Deutschland sein: deutsche Arbeit, niedrige Lebenshaltungskosten, Buchung zum Beispiel für ein Jahr. Nach Romans Einschätzung sind solche Leute wegen der politischen Lage leicht zu finden."
+ },
+ {
+  "id": "E43",
+  "text": "Generalplan Variante 2 bleibt unverändert als Modell des bisherigen Entwurfs. Auf einer Kopie von Variante 1 wird gezeigt, wie es nach den Entscheidungen aussehen könnte (`plan/entwuerfe/generalplan-v1-stufe1.pdf`)."
+ },
+ {
+  "id": "E44",
+  "text": "Die Container sind Übergang (D09 A). Sie stehen auch für Bauarbeiter bereit, die längere Zeit oben übernachten, um das zu bauen, wofür ihr euch wirtschaftlich entscheidet; ob das Container, Module oder feste Häuser werden, ist offen."
+ },
+ {
+  "id": "E45",
+  "text": "Die Fläche unten links, auf der jetzt die Container stehen, wird als letztes fest bebaut."
+ },
+ {
+  "id": "E46",
+  "text": "Vorrang: das Grundstück voll bekommen, immer auf Autarkie hinarbeiten, und alles muss immer laufen: kein Serverausfall, keine Probleme mit Strom oder Wasser. Die Maslow-Grundlagen werden von Anfang an geklärt und schrittweise mit dem Betrieb oben skaliert, bei den Daten und Servern ebenso wie bei den Leuten vor Ort."
+ },
+ {
+  "id": "E47",
+  "text": "Plätze für Remote-Freelancer: Monatsmiete nach dem Einzug, kein Geld vorab (D10 C)."
+ },
+ {
+  "id": "E49",
+  "text": "Internet: ein eigener Internetanschluss, dazu Starlink als sichere Reserve; Mobilfunk gibt es oben nicht (D12)."
+ },
+ {
+  "id": "E50",
+  "text": "Geschäftsmodell Stufe 1: Plots auf dem Grundstück werden als fraktionalisierte Grundstücke on chain verkauft, damit sie den Käufern wirklich gehören. Käufer sind deutsche Remote-Freelancer und Leute, die remote arbeiten und aus Deutschland wegziehen wollen; X-PORTAL bietet ihnen einen sicheren und günstigen Platz zum Wohnen und Arbeiten. Käufer bestimmen Ausstattung wie bei einem Auto. Preis nach Romans Vorstellung etwa 30.000 € je Plot, noch zu rechnen; Käufer können finanzieren. Das Geld wird über die Blockchain eingenommen und direkt für Plots und Container verwendet."
+ },
+ {
+  "id": "E51",
+  "text": "Ablauf: einen passenden Container wählen; nach der Geologie planen, wo Container auf dem Grundstück stehen können; die Plots ausmessen; Werbematerial zeigen, wie die Container auf dem Grundstück aussehen; veröffentlichen; Whitelist (Warteliste) für Interessenten. Die Geologie bestimmt, wie viele Plots verkauft werden; die Whitelist zeigt die Nachfrage, bei großem Andrang mehr Plots. Im Januar, wenn es technisch fertig ist, kaufen die Leute auf der Whitelist. Im März, spätestens wenn der Frost endgültig weg ist, kommen die Container hoch; vorher wird geplant, wohin Wasser, Strom und Internet verlegt werden."
+ },
+ {
+  "id": "E52",
+  "text": "Kaufen und mieten: beides ist möglich, angeboten über die Blockchain. Am Anfang zahlen Interessenten von der Whitelist den Kaufpreis: Ihnen gehört das Tiny House auf dem Grundstück, das X-PORTAL tokenisiert; das Grundstück pachten sie. Später soll auch ein Teilverkauf möglich sein: Wer einen Teil seines Grundstücks verkauft, zahlt dem Käufer monatlich einen Prozentsatz wie einen Zins; um nicht mehr zu zahlen, kauft er den Teil zum Marktpreis zurück. Dieses System wird noch ausgearbeitet. Bezug: E47 (Miete), E50 (Verkauf)."
+ },
+ {
+  "id": "E53",
+  "text": "Bevor jemand oben übernachtet oder Kundenarbeit macht, ist jede Anforderung mit Stufe „von Anfang an“ (M02) gerechnet oder abgenommen; Nazar oder eine von ihm genannte Fachperson bestätigt Heizung, Wasser, Strom und Brandschutz schriftlich (D14 A). Diese Abnahmeliste wird noch ausgearbeitet („das ist das Ding, das müssen wir ausarbeiten“)."
+ },
+ {
+  "id": "E54",
+  "text": "Der Betrieb oben soll autark laufen, wie ein organisches System, das selbst arbeitet und sich entwickelt; X-PORTAL stellt die Basis immer zur Verfügung (D16, statt einer Stundenzahl für Roman)."
+ },
+ {
+  "id": "E55",
+  "text": "Die Container kommen frühestens im März hoch. Bestellt wird so, dass sie im März da sein können; ist der Boden dann noch gefroren, wird gewartet, bis er frei ist (E21). Die Werbung nennt „Einzug ab Frühjahr 2027“ (D17 A)."
+ },
+ {
+  "id": "E56",
+  "text": "Oben auf dem Berg werden KI-Automatisierungen gebaut: einen Ablauf finden, der sich automatisieren lässt, ihn als Agent entwickeln und als API anbieten, bezahlt je Aufruf. Verkauft wird über Masumi als Marktplatz; andere KI-Agenten rufen unsere Agenten auf, die die Arbeit automatisch erledigen. Der Fokus oben ist Agenten entwickeln: Use Cases finden, automatisieren, entwickeln. Daneben laufen Projekte aus Deutschland und Freelancer-Projekte aus Deutschland weiter und bauen ein Portfolio auf. Leios auf Cardano soll die Nutzungskosten senken (Romans Einschätzung). Bezug: E31."
+ },
+ {
+  "id": "E57",
+  "text": "Kein Investor gilt nur für den Ort Node001: Er trägt sich aus dem Geld der Käufer; das ist Umsatz, kein Kapital, und kommt zuerst. Die Firma X-PORTAL (Plattform, Team) darf eine Pre-Seed-Runde von einem VC und aus Start-up BW aufnehmen; der Pitch bleibt so (D19 A). Bezug: E04, E05, E30."
+ },
+ {
+  "id": "E58",
+  "text": "Die Warteliste ist die Ausnahme zu E09: Sie hat ein echtes Angebot (Bilder, Ablauf, später Preis) und zeigt, wie viele kaufen oder mieten wollen. E09 gilt weiter für Umfragen ohne Angebot (D20 A)."
+ },
+ {
+  "id": "E59",
+  "text": "Die Container sind die Tiny Houses der Käufer und bleiben stehen; für sie gilt E44 (Übergang) nicht mehr. Den Grund pachten die Käufer; E52 gilt vor E50 (D21 B)."
+ },
+ {
+  "id": "E60",
+  "text": "Die Angaben zu Node001 im Pitch stimmen: 2 ha, im eigenen Bestand, gewerblich baufähig, Genehmigung und Planung liegen vor, 12,5 Mio. € privat finanziert. Paul liefert die Belege: Grundbuch- oder Katasterauszug, Bescheid, Finanzierungszusage (D22 A)."
+ },
+ {
+  "id": "E61",
+  "text": "Heute tritt Romans Einzelunternehmen auf; die UG wird noch gegründet (D23 A). Roman: „Pauls Tochterunternehmen ist Romans Unternehmen.“ Der Sitz der UG ist offen (W09)."
+ },
+ {
+  "id": "E62",
+  "text": "Rollen wie im Pitch: Paul ist CEO zu 100 % (Gesellschaft, Geld, Nodes, Grundstücke), Roman führt Produkt und Projekt und ist oben (D24 A)."
+ },
+ {
+  "id": "E63",
+  "text": "Der Ort heißt überall Node001, der Oberbegriff ist Nodes („Node001, der erste von zehn Nodes“). Oben werden nur KI-Agenten gebaut und je Aufruf verkauft; Drohnen, Robotik und Testgelände fallen weg. Das Team, das oben arbeitet, ist getrennt von den Deutschen, die ihr Tiny House kaufen oder pachten; diese arbeiten an eigenen Sachen oder im Team, wenn ihre Fähigkeiten passen. Oben ist eine Community (D25 C, D26 A)."
+ },
+ {
+  "id": "E64",
+  "text": "Nazar ist beauftragt; die Ergebnisse sind offen (Roman)."
+ },
+ {
+  "id": "E65",
+  "text": "Die 12,5 Mio. € sind eine Hochrechnung der Kosten in Werchowyna durch Paul und Roman, keine Finanzierung und keine Zusage (Roman)."
+ },
+ {
+  "id": "E66",
+  "text": "Auf der Website heißt der Ort, wenn überhaupt, nur „Ukraine“; dazu wird von europaweiten Standorten gesprochen (Roman)."
+ },
+ {
+  "id": "E67",
+  "text": "Pauls 8.000 € netto im Monat sind unabdingbar, aber nur, wenn er Vollzeit dabei ist. Sie stehen nicht im Mittelpunkt des Plans (Roman: „es stört, dass es so primär in den Fokus gesetzt wird“)."
+ },
+ {
+  "id": "E68",
+  "text": "Der eine Plan liegt in `plan/PLAN.md` im Repo; alles andere wird daraus abgeleitet. Abgelöste Dateien kommen in ein Archiv (Antwort auf die Rückfrage: „Repo-Datei plan/PLAN.md“, „In ein Archiv verschieben“)."
+ },
+ {
+  "id": "E69",
+  "text": "Die erste Runde des einen Plans umfasst nur Node001 Stufe 1. Pitch, Website, DT Agentur, Plattform, weitere Nodes und Chain kommen erst danach als eigene Teile dazu (Antwort auf die Rückfrage: „Nur Node001 Stufe 1“)."
+ },
+ {
+  "id": "E70",
+  "text": "Das Team oben liefert alle Projekte aus Deutschland, auch Cybersecurity und Blockchain. „Nur Agenten“ in E63 heißt: Das eigene Produkt sind nur Agenten (D28 A)."
+ },
+ {
+  "id": "E71",
+  "text": "Paul hat die Entscheidungsgewalt über Bestellungen und den Betrag (D30 B; Roman: „Paul Entscheidungsgewalt für Bestellungen und Betrag“)."
+ },
+ {
+  "id": "E72",
+  "text": "Grundmodell eines Node: leichter Transport, kommunal, gemeinschaftlich, autark. Privatsphäre ist vorhanden, Community und Gesellschaft sind vorausgesetzt (Roman, mit zwei Entwurfsbildern)."
+ },
+ {
+  "id": "E73",
+  "text": "Mobilität oben mit elektrischen Bikes, damit niemand Benzin holen muss; das elektrische Netz wird dafür ausgebaut (Roman)."
+ },
+ {
+  "id": "E74",
+  "text": "Der Gemeinschaftsbereich ist ein eigenes Kommunalgebäude. Der Gemüsegarten daran steht für die weitere Autarkie (Roman)."
+ },
+ {
+  "id": "E75",
+  "text": "Die Tiny Houses kommen in Teilen (Rahmen oder Paneele) auf kleinem Fahrzeug hoch und werden oben montiert (D18 C)."
+ },
+ {
+  "id": "E76",
+  "text": "Der Einstieg ist ein einzelner automatisierter Ablauf ab 490 €; der Pitch rechnet mit kleinen Abläufen statt mit Projekten ab 20.000 € (D27 C). Roman: „wird im Laufe der Planung ersichtlich, mit mehr Daten Einfluss für Kosten und mögliche Marge.“"
+ },
+ {
+  "id": "E77",
+  "text": "Der erste bezahlte Auftrag steht bis zum Verkaufsstart im Januar 2027 (D29 A)."
+ },
+ {
+  "id": "E78",
+  "text": "Bestellt wird, wenn 5 Käufer ihr Geld belegt haben; etwa 30.000 € je Käufer sind der Ausgangspunkt der Rechnung. Käufergeld und Eigenleistung zahlen Häuser, Leitungen, Team-Plätze und das Kommunalgebäude. Mit diesem Nachweis und 100 auf der Warteliste geht die Firma in die Pre-Seed-Runde für Plattform und Lieferteam (D31 A, Romans Kommentar)."
+ },
+ {
+  "id": "E79",
+  "text": "Strom, Wasser und Wärme werden im ersten Winter für das Team (die 2–3 Leute aus E01 und E23) plus die ersten 5 Käufer ausgelegt, sobald die Geologie zeigt, dass so viele Häuser Platz haben (D32 A)."
+ },
+ {
+  "id": "E80",
+  "text": "Vorschläge der KI im Plan gelten, bis Roman oder Paul widersprechen (D33 A)."
+ },
+ {
+  "id": "E81",
+  "text": "Der Alltag oben verbindet Arbeit mit Gesundheit und Freizeit: Jour fixe im Team am Morgen, gemeinsam oder privat essen, Sauna und Wellness, Wandern und Spazieren, frische Luft; abgelegen und doch im Team arbeiten. Wem ein Haus gehört, der kann morgens joggen und Yoga machen (Roman, mit zwei neuen Zielbildern)."
+ },
+ {
+  "id": "E82",
+  "text": "Das Grundstück hat 2 ha. Die Angabe 0,4479 ha ist falsch und wird nicht verwendet (Roman)."
+ },
+ {
+  "id": "E83",
+  "text": "Für die Agenten gibt es noch keinen Preis; das Preismodell ist offen: Abo, Einmalzahlung mit Betreuung und Instandhaltung, oder nach Nutzung. Projekte werden verkauft, ihr Preis ist offen. Die Kosten werden später bestimmt (Roman)."
+ },
+ {
+  "id": "E84",
+  "text": "Papierrechnung für den Business Case: 30.000 € je Plot, ein Haus angenommen 45 m²; 10 Häuser sind 450 m² bebaut und bringen 300.000 €. Auf 2 ha (20.000 m²) ließe sich das auf dem Papier rund 40-mal bauen, in der Realität nicht; das rechtfertigt ein Invest von etwa 12 Mio. € (Roman)."
+ },
+ {
+  "id": "E85",
+  "text": "Das Matching der BW Bank geht in IT in Deutschland: Rechner, Server, Hardware. Die Server oben werden für personenbezogene Daten mit denen in Deutschland verbunden; ob das nach den Vorschriften geht, wird geprüft. Betrag laut Roman 450.000–640.000 €, Beleg fehlt (Roman)."
+ }
+]
