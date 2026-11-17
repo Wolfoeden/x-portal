@@ -5,7 +5,8 @@ import { SiteFooter } from '@/components/site/site-footer'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { PlacesHero } from '@/components/places/places-hero'
-import { ChapterOffers, ChapterPlace, ChapterPlacesFaq, PlaceFacts } from '@/components/places/places-chapters'
+import { ChapterPlace, ChapterPlacesFaq, PlaceFacts } from '@/components/places/places-chapters'
+import { ChapterDay } from '@/components/places/chapter-day'
 import { WaitlistCard } from '@/components/places/waitlist-card'
 import { WaitlistProvider } from '@/components/places/waitlist-state'
 import { Transparency } from '@/components/site/transparency'
@@ -56,7 +57,7 @@ function ChapterWaitlist({ locale }: { locale: Locale }) {
   )
 }
 
-/** Seite Orte nach StoryBrand (17.11.2026): Hero → Problem und Begleiter (Der Ort) → Fakten → Angebote → Plan und Whitelist → Fragen → Transparenz.
+/** Seite Orte nach StoryBrand (17.11.2026): Hero → Problem und Begleiter (Der Ort) → Fakten → Ein Tag auf Node001 → Plan und Whitelist → Fragen → Transparenz.
  *  Die Whitelist (im Code „waitlist“) ist das Ziel aller Knöpfe. */
 export function PlacesPage({ locale }: { locale: Locale }) {
   return (
@@ -69,10 +70,10 @@ export function PlacesPage({ locale }: { locale: Locale }) {
           <SectionNav locale={locale} {...getDictionary(locale).places.sectionNav} />
           <ChapterPlace locale={locale} />
           <PlaceFacts locale={locale} />
-          <ChapterOffers locale={locale} />
+          <ChapterDay locale={locale} />
           <ChapterWaitlist locale={locale} />
           <ChapterPlacesFaq locale={locale} />
-          <Transparency locale={locale} page="places" />
+          <Transparency locale={locale} page="places" compact />
         </main>
       </WaitlistProvider>
       <SiteFooter locale={locale} />

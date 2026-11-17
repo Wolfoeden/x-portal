@@ -433,3 +433,39 @@ Bisher stand überall „Interesse vormerken“ für /orte.
 **Prüfung:**
 - 390, 768, 1.024, 1.100, 1.280 und 1.440 px: kein Überlauf, der Knopf je Seite stimmt.
 - Escape schließt Menü und Dropdown; `aria-expanded` und `aria-current` stimmen.
+
+## 17.11.2026 (später) · Website ohne „Miete“, Story „Ein Tag auf Node001“, Sternbild-Tool zur Limbic Map
+
+**Eingang:** Roman möchte drei Dinge:
+- Auf der Seite soll nichts mit Miete stehen.
+- Die User-Story soll interessanter werden.
+- Zur Limbic Map ein eigenes Artefakt, in dem man Wörter anklickt und ein Sternbild mit sortierbarer Legende entsteht. Es dient zum Planen und kommt nicht auf x-portal.
+
+Antworten: ganze Website; Ersatz „Wohnen, ohne Preismodell“; Story „Ein Tag auf Node001“; ein Sternbild auf einmal.
+
+**Website ohne Miete (de und en):**
+- „zur Miete“ wird zu „eigene Wohneinheit, Arbeitsplatz, Gemeinschaft“; „mieten“ zu „länger bleiben“; die Miete als Betrag zu „Konditionen nennen wir in der Whitelist“; „Mieter“ zu „künftige Bewohner“.
+- Investoren: Die Erlöse heißen „wiederkehrende Erlöse aus Aufenthalten und Leistungen vor Ort“. „Kein Verkauf“ bleibt.
+- Die Formular-Option heißt „Länger bleiben“. Der Kampagnen-Link ist `?angebot=bleiben`; alte Links mit `mieten` funktionieren weiter. Die interne Kennung `mieten` und der Datenbankwert `rent` bleiben.
+- Mails, Metadaten, JSON-LD und /llms.txt sind angepasst. `pruefe_alle.py` meldet „Miete/mieten/Mieter/vermieten/rent/tenant“ auf der Website künftig als alten Stand.
+- Im Plan bleibt die Miete das interne Modell (D45, D48, D38). Index, Whitepaper und Deck sind unverändert.
+
+**Story „Ein Tag auf Node001“ (/orte):** Sie ersetzt die Angebotskarten. Fünf Szenen mit den Limbic-Begriffen:
+- 07:00 Nebel im Tal: Natur, Genuss, Geborgenheit
+- 09:30 Konzentriert arbeiten: Leistung, Autonomie, Freiheit
+- 13:00 Zusammen kochen: Geselligkeit, Freundschaft
+- 17:00 Mit anpacken: Neugier, Abwechslung, Kreativität
+- 20:00 Feuer und Sterne: Genuss, Abenteuer, Heimat
+
+Gekennzeichnet als Vorstellung; Kommunalgebäude, Feuerstelle und Sauna entstehen in Phase 1. „Was echt ist, was geplant“ steht jetzt kompakt in zwei Sätzen.
+
+**Sternbild-Tool:** eigenes, privates Artefakt „Limbic Sternbild“ (https://claude.ai/artifact/1eTvbSo16JXhi8rvjU85RF).
+- Die Wörter sitzen an ihren Stellen aus der Vorlage; das ist am Raster geprüft.
+- Ein Klick macht ein Wort zum Stern, die Linien folgen der Legende.
+- Die Legende lässt sich per Ziehen oder Pfeilen sortieren und zeigt Pol und Feld je Wort.
+- Optionen: „Nur Sternbild“, Nachthimmel, Sternbild schließen, Text und Bild.
+
+**Prüfung:**
+- 80 Tests, Build, `check:copy` und `pruefe_alle.py` grün.
+- Alle Seiten, JSON-LD und /llms.txt ohne Treffer zu Miete.
+- /orte auf dem Handy 10,1 Bildschirme.

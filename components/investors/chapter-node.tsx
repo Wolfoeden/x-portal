@@ -10,8 +10,8 @@ import { IDS, pagePath, type Locale } from '@/lib/i18n/routes'
 
 // Node001 in einem Abschnitt (seit 17.11.2026; ersetzt „Der erste Ort“ und „Mieten, in Abschnitten gebaut“):
 // Phasen, Bilder mit Kennzeichnung aus lib/images.ts und die wichtigsten Fakten; weitere Fakten klappen auf. Wie gemietet wird, steht auf /orte.
-// Verkauft wird nichts (D45, D48). Der Knopf führt zur Whitelist auf der Seite Orte und wählt „Mieten“ vor.
-const RENT_OFFER = { de: 'angebot=mieten', en: 'offer=rent' } as const
+// Verkauft wird nichts (D45, D48). Der Knopf führt zur Whitelist auf der Seite Orte und wählt „Länger bleiben“ vor.
+const STAY_OFFER = { de: 'angebot=bleiben', en: 'offer=stay' } as const
 const frames = [
   { image: IMAGES.hub01, position: 'object-center', className: 'col-span-2 aspect-[2/1] md:col-span-2 md:aspect-[4/3]' },
   { image: IMAGES.slope, position: 'object-[80%_50%]', className: 'aspect-[4/3] md:aspect-auto' },
@@ -90,7 +90,7 @@ export function ChapterNode({ locale }: { locale: Locale }) {
               </dl>
             </details>
             <Link
-              href={`${pagePath('places', locale)}?${RENT_OFFER[locale]}#${ids.waitlist}`}
+              href={`${pagePath('places', locale)}?${STAY_OFFER[locale]}#${ids.waitlist}`}
               className="mt-1 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-brand text-[15px] font-medium text-white transition-colors hover:bg-brand-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:w-fit sm:px-7"
             >
               {copy.cta}

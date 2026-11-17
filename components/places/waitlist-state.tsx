@@ -19,9 +19,10 @@ type WaitlistState = {
 
 const WaitlistContext = createContext<WaitlistState | null>(null)
 
-/** Kampagnen-Links wie /orte?angebot=workation (englisch ?offer=workation|rent) belegen die Nutzung vor. */
+/** Kampagnen-Links wie /orte?angebot=workation (englisch ?offer=workation|stay) belegen die Nutzung vor. */
 const OFFER_PARAM = { de: 'angebot', en: 'offer' } as const
-const OFFER_VALUES: Record<string, WaitlistUse> = { workation: 'workation', mieten: 'mieten', rent: 'mieten' }
+// „bleiben“/„stay“ seit 17.11.2026 (auf der Website steht nichts von Miete); die alten Links mit mieten/rent gelten weiter.
+const OFFER_VALUES: Record<string, WaitlistUse> = { workation: 'workation', bleiben: 'mieten', stay: 'mieten', mieten: 'mieten', rent: 'mieten' }
 
 export function WaitlistProvider({ children }: { children: ReactNode }) {
   const { locale, ids } = useLocale()

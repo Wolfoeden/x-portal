@@ -3,7 +3,7 @@ import { KindBadge } from '@/components/places/ai-badge'
 import { IMAGES } from '@/lib/images'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
-import { HeroEmailForm, OfferAction } from '@/components/places/hero-form'
+import { HeroEmailForm } from '@/components/places/hero-form'
 import { ReappearEmail } from '@/components/places/sticky-email'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, type Locale } from '@/lib/i18n/routes'
@@ -50,62 +50,6 @@ export function PlaceFacts({ locale }: { locale: Locale }) {
               <span className="text-[14px] text-muted">{fact.text}</span>
             </li>
           ))}
-        </ul>
-      </Container>
-    </section>
-  )
-}
-
-// Bilder seit 17.11.2026: Arbeiten und Gemeinschaft zeigen die Schaubilder aus dem Whitepaper (Kommunalgebäude, Zielbild).
-const OFFERS = [
-  { use: 'mieten' as const, tone: 'light' as const, image: IMAGES.unit, position: 'object-center' },
-  { use: 'workation' as const, tone: 'soft' as const, image: IMAGES.slope, position: 'object-[78%_50%]' },
-  { use: 'mieten' as const, tone: 'deep' as const, image: IMAGES.target, position: 'object-[48%_50%]' },
-]
-
-const offerTones = {
-  light: { card: 'border border-line bg-white', tag: 'bg-brand-soft text-brand-ink', text: 'text-muted', title: 'text-ink', action: 'bg-ink text-white hover:bg-ink/85' },
-  soft: { card: 'bg-brand-soft', tag: 'bg-white text-brand-ink', text: 'text-brand-ink', title: 'text-ink', action: 'bg-brand text-white hover:bg-brand-hover hover:shadow-[0_12px_26px_-12px_rgb(23_100_59/0.7)]' },
-  deep: { card: 'bg-brand-deep text-white', tag: 'bg-white/12 text-white', text: 'text-[#bfd8c8]', title: 'text-white', action: 'bg-white text-ink hover:bg-brand-soft' },
-}
-
-export function ChapterOffers({ locale }: { locale: Locale }) {
-  const dict = getDictionary(locale).places
-  const copy = dict.offers
-  return (
-    <section id={IDS[locale].offers} aria-labelledby="angebote-title" className="scroll-mt-16">
-      <Container className="flex flex-col gap-8 py-14 md:gap-12 md:py-32">
-        <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-5">
-          <div className="flex flex-col gap-5">
-            <ChapterLabel number="02">{copy.label}</ChapterLabel>
-            <h2 id="angebote-title" className={`${chapterTitle} max-w-[760px] text-ink`}>
-              {copy.title}
-            </h2>
-          </div>
-          <p className="max-w-[440px] text-[16px] leading-relaxed text-muted">{copy.text}</p>
-        </div>
-        {/* Auf dem Handy eine Reihe zum Wischen (alle Karten bleiben im Seitentext), ab sm das Raster. */}
-        <ul className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0">
-          {copy.items.map((item, index) => {
-            const offer = OFFERS[index]
-            const tone = offerTones[offer.tone]
-            return (
-              <li key={item.title} className={`flex w-[84%] shrink-0 snap-start flex-col overflow-hidden rounded-[28px] sm:w-auto ${tone.card} ${card}`}>
-                <div className="group/media relative aspect-[4/3] overflow-hidden sm:aspect-[1122/1402]">
-                  <Image src={offer.image.src} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, 100vw" className={`object-cover ${offer.position} transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover/media:scale-[1.04]`} />
-                  <KindBadge kind={offer.image.kind} words={dict} />
-                </div>
-                <div className="flex flex-1 flex-col gap-3 p-6">
-                  <span className={`self-start rounded-full px-2.5 py-1 text-[13px] font-medium ${tone.tag}`}>{item.tag}</span>
-                  <h3 className={`text-[26px] font-medium leading-[1.1] tracking-[-0.03em] md:text-[28px] ${tone.title}`}>{item.title}</h3>
-                  <p className={tone.text}>{item.text}</p>
-                  <div className="mt-auto pt-2">
-                    <OfferAction use={offer.use} label={copy.action} className={tone.action} />
-                  </div>
-                </div>
-              </li>
-            )
-          })}
         </ul>
       </Container>
     </section>

@@ -33,11 +33,11 @@ export const de = {
     },
     investors: {
       title: 'Investoren · XPORTAL und Node001 in den Karpaten',
-      description: 'XPORTAL verbindet KI-Projekte mit Orten zum Leben und Arbeiten. Stand, Erlöse, Roadmap und Node001 zur Miete. Whitepaper und Deck auf Anfrage.',
+      description: 'XPORTAL verbindet KI-Projekte mit Orten zum Leben und Arbeiten. Stand, Erlöse, Roadmap und Node001 in den Karpaten. Whitepaper und Deck auf Anfrage.',
     },
     places: {
       title: 'Wohnen und arbeiten in den Karpaten · XPORTAL',
-      description: 'Eigene Wohneinheit zur Miete, Arbeitsplatz und Gemeinschaft auf Node001 in den Karpaten der Westukraine. Workation oder länger. Jetzt vormerken.',
+      description: 'Eigene Wohneinheit, Arbeitsplatz und Gemeinschaft auf Node001 in den Karpaten der Westukraine. Für eine Workation oder länger. Jetzt vormerken.',
     },
     contact: {
       title: 'Kontakt: KI-Automatisierung, Schulung, ISMS · XPORTAL',
@@ -120,7 +120,7 @@ export const de = {
     definition: 'XPORTAL bildet Teams aus KI-Freelancern, führt Projekte bis zur Abnahme und baut mit Node001 einen Ort zum Leben und Arbeiten.',
     facts: [
       'Node001 liegt in den Karpaten der Westukraine, auf einem eigenen Grundstück mit 2 ha.',
-      'Die Wohneinheiten werden nur vermietet. Verkauft wird nichts.',
+      'Die Wohneinheiten werden nicht verkauft.',
       'Baubeginn ist für 2027 geplant, erst nach den nötigen Prüfungen. Termine sind Ziele, keine Zusagen.',
       'Freelancer zahlen nichts und keine Provision.',
       'Die Investorenseite ist kein Angebot von Wertpapieren, Vermögensanlagen oder Kryptowerten und keine Anlageberatung.',
@@ -506,15 +506,16 @@ export const de = {
 
   // Kontaktseite: Leistungen aus dem Menü und allgemeine Anfragen.
   // Orte nach StoryBrand (17.11.2026): Held ist, wer remote arbeitet und Ruhe, gutes Internet und gute Leute sucht.
-  // Plan: eintragen → Infos zur Miete → Wohneinheit mieten. Du-Form wie bisher. Nur Miete, kein Verkauf (D45, D48).
+  // Plan: eintragen → Infos zu Konditionen → einziehen, sobald eine Wohneinheit frei ist. Du-Form wie bisher. Kein Verkauf (D45, D48).
+  // Seit 17.11.2026 steht auf der Website nichts von Miete (Vorgabe Roman); Konditionen nennen wir in der Whitelist.
   places: {
-    sectionNav: { label: 'Auf dieser Seite', items: typed<{ label: string; anchor: IdKey }[]>([{ label: 'Der Ort', anchor: 'place' }, { label: 'Angebote', anchor: 'offers' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Fragen', anchor: 'faq' }]) },
+    sectionNav: { label: 'Auf dieser Seite', items: typed<{ label: string; anchor: IdKey }[]>([{ label: 'Der Ort', anchor: 'place' }, { label: 'Ein Tag', anchor: 'day' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Fragen', anchor: 'faq' }]) },
     hero: {
       label: 'Node001',
       region: 'Karpaten, Westukraine',
       eyebrow: 'Node001 · Karpaten, Westukraine',
       title: 'Wohnen und arbeiten in den Karpaten.',
-      pill: 'Whitelist · Workation oder Miete',
+      pill: 'Whitelist · Workation oder länger bleiben',
       emailLabel: 'E-Mail-Adresse',
       emailPlaceholder: 'Deine E-Mail-Adresse',
       submit: 'Interesse vormerken',
@@ -532,30 +533,34 @@ export const de = {
       titleGray: 'Ein Ort.',
       title: 'Für Dich.',
       imageAlt: 'Drohnenfoto des Hangs mit KI eingesetztem Kommunalgebäude: dunkle Fassade, große Fenster, überdachte Terrasse, dahinter Fichten und das Tal',
-      text: 'Remote arbeiten geht überall. Ruhe, gutes Internet und gute Leute an einem Ort sind selten. Genau das planen wir auf Node001: eigene Wohneinheiten zur Miete, Arbeitsplätze und Gemeinschaft.',
+      text: 'Remote arbeiten geht überall. Ruhe, gutes Internet und gute Leute an einem Ort sind selten. Genau das planen wir auf Node001: eigene Wohneinheiten, Arbeitsplätze und Gemeinschaft.',
     },
     facts: [
       { value: '2 ha', text: 'eigenes Grundstück' },
       { value: '1.077 m', text: 'höchster Punkt des Grundstücks' },
-      { value: 'Miete', text: 'kein Verkauf' },
+      { value: 'Phase 0', text: 'erste Wohneinheit für das Team' },
       { value: '2027', text: 'Baubeginn als Ziel' },
     ],
-    offers: {
-      label: 'Angebote',
-      title: 'Wohnen. Arbeiten. Freizeit.',
-      text: 'Alles auf einem Grundstück. In Planung.',
-      action: 'Interesse vormerken',
-      items: [
-        { tag: 'Wohnen & Mieten', title: 'Deine Wohneinheit. Deine Ruhe.', text: 'Für einige Wochen oder länger, mit Privatsphäre und Natur vor der Tür.', imageAlt: 'Drohnenfoto mit KI eingesetzter Wohneinheit: dunkel, große Fenster, Terrasse auf Stützen am Waldrand' },
-        { tag: 'Remote arbeiten', title: 'Dein Arbeitsplatz nebenan.', text: 'Arbeitsplätze im Kommunalgebäude, Internet mit Starlink als Reserve.', imageAlt: 'Schaubild: Kommunalgebäude aus Holz mit Glasfront und Terrasse am Hang, dahinter Fichten, Wassertanks und Solarmodule' },
-        { tag: 'Freizeit & Gemeinschaft', title: 'Zusammen kochen. Leute treffen.', text: 'Gemeinsame Küche, Feuerstelle und Sauna in Phase 1. Du entscheidest, wann du dazukommst.', imageAlt: 'Schaubild des Zielbilds: Wohneinheiten aus Holz am Hang, in der Mitte das Kommunalgebäude mit Terrasse, rechts Hochbeete und Wassertanks' },
+    // StoryBrand-Erfolgsbild als Tagesablauf; Limbic Map je Szene im Kommentar der Komponente (components/places/chapter-day.tsx).
+    day: {
+      label: 'Ein Tag auf Node001',
+      title: 'Ein Tag in den Karpaten.',
+      text: 'So stellen wir uns einen Tag vor. Kommunalgebäude, Feuerstelle und Sauna entstehen in Phase 1.',
+      scenes: [
+        { time: '07:00', title: 'Nebel im Tal.', text: 'Der erste Kaffee auf deiner Terrasse. Unter dir zieht der Nebel durchs Tal, um dich nur Wald und Wiese.', imageAlt: 'Drohnenfoto mit KI eingesetzter Wohneinheit: dunkel, große Fenster, Terrasse auf Stützen am Waldrand' },
+        { time: '09:30', title: 'Konzentriert arbeiten.', text: 'Dein Platz im Kommunalgebäude ist ruhig, das Internet stabil. Fällt der Anschluss aus, springt Starlink ein.', imageAlt: 'Schaubild: Kommunalgebäude aus Holz mit Glasfront und Terrasse am Hang, im Tal Nebel über den Karpaten' },
+        { time: '13:00', title: 'Zusammen kochen.', text: 'Wer mag, trifft sich mittags in der gemeinsamen Küche. Es geht um Projekte, Pläne und den nächsten Ausflug.', imageAlt: '' },
+        { time: '17:00', title: 'Mit anpacken.', text: 'Hochbeete, Holz für den Winter, die Bergkapelle: Wer mitbaut, gestaltet den Ort mit.', imageAlt: '' },
+        { time: '20:00', title: 'Feuer und Sterne.', text: 'Am Abend Feuerstelle oder Sauna. Danach Stille und Sterne über den Karpaten.', imageAlt: 'Schaubild des Zielbilds am Abend: Wohneinheiten aus Holz am Hang, in der Mitte das Kommunalgebäude mit beleuchteter Terrasse' },
       ],
+      ctaText: 'So möchtest du deine Tage verbringen?',
+      cta: 'Interesse vormerken',
     },
     waitlist: {
       label: 'Whitelist',
       title: 'So möchtest du leben und arbeiten?',
       text: 'Wir bauen in Abschnitten. Wer sich einträgt, erfährt zuerst, wann eine Wohneinheit frei wird.',
-      steps: ['Eintragen und E-Mail bestätigen, kostenlos', 'Infos zu Miete und Leistungen bekommen', 'Wohneinheit mieten, sobald sie frei ist'],
+      steps: ['Eintragen und E-Mail bestätigen, kostenlos', 'Infos zu Konditionen und Leistungen bekommen', 'Einziehen, sobald eine Wohneinheit frei ist'],
       quote: '„Ich bin von Anfang an oben. Frag mich.“',
       quoteName: 'Roman Dering',
       quoteAction: 'Kontakt',
@@ -567,7 +572,7 @@ export const de = {
       contactQuestion: 'Wohin dürfen wir schreiben?',
       uses: [
         { id: 'workation', title: 'Workation', text: 'Ein paar Wochen wohnen und remote arbeiten' },
-        { id: 'mieten', title: 'Mieten', text: 'Länger bleiben, eine Wohneinheit mieten' },
+        { id: 'mieten', title: 'Länger bleiben', text: 'Mehrere Monate oder länger, mit eigener Wohneinheit' },
       ],
       starts: [
         { id: 'sofort', label: 'Sofort' },
@@ -575,7 +580,7 @@ export const de = {
       ],
       firstName: 'Vorname (optional)',
       email: 'E-Mail-Adresse',
-      consent: 'Ich möchte Infos zu Node001 per E-Mail. Unverbindlich, kein Mietangebot. Abmelden jederzeit.',
+      consent: 'Ich möchte Infos zu Node001 per E-Mail. Unverbindlich, kein Angebot. Abmelden jederzeit.',
       privacy: 'Datenschutz',
       selection: 'Deine Auswahl:',
       submit: 'Interesse vormerken',
@@ -590,9 +595,9 @@ export const de = {
       doneText: 'Wir haben dir einen Link an {email} geschickt. Erst mit dem Klick stehst du in der Whitelist.',
       doneUse: 'Nutzung',
       doneStart: 'Ab wann',
-      doneSteps: ['Link in der E-Mail anklicken', 'Infos zu Miete und Leistungen bekommen', 'Als Erstes erfahren, wann eine Wohneinheit frei wird'],
+      doneSteps: ['Link in der E-Mail anklicken', 'Infos zu Konditionen und Leistungen bekommen', 'Als Erstes erfahren, wann eine Wohneinheit frei wird'],
       confirmedTitle: 'Du stehst in der Whitelist.',
-      confirmedText: 'Danke, deine E-Mail-Adresse ist bestätigt. Wir melden uns, sobald Miete und Leistungen feststehen.',
+      confirmedText: 'Danke, deine E-Mail-Adresse ist bestätigt. Wir melden uns, sobald Konditionen und Leistungen feststehen.',
       expiredTitle: 'Der Link gilt nicht mehr.',
       expiredText: 'Er ist abgelaufen oder wurde schon benutzt. Trag dich einfach noch einmal ein.',
       again: 'Auswahl ändern',
@@ -600,8 +605,8 @@ export const de = {
     faq: {
       title: 'Häufige Fragen.',
       items: typed<Faq[]>([
-        { question: 'Kann ich eine Wohneinheit mieten?', answer: 'Ja, für einige Wochen oder länger. Die Miete richtet sich nach den Selbstkosten; du erfährst sie in der Whitelist zuerst.' },
-        { question: 'Kann ich auch kaufen?', answer: 'Nein. Wir vermieten die Wohneinheiten, wir verkaufen sie nicht.' },
+        { question: 'Kann ich länger bleiben?', answer: 'Ja, für einige Wochen oder viele Monate. Konditionen und Leistungen erfährst du in der Whitelist zuerst.' },
+        { question: 'Kann ich auch kaufen?', answer: 'Nein. Die Wohneinheiten werden nicht verkauft.' },
         { question: 'Wann kann ich einziehen?', answer: 'Nach Fertigstellung und Abnahme. Baubeginn ist 2027 geplant; einen Termin nennen wir erst, wenn er feststeht.' },
         { question: 'Kann ich dort wirklich arbeiten?', answer: 'Ja. Es gibt Arbeitsplätze im Kommunalgebäude, Internet von einem lokalen Anbieter und Starlink als Reserve.' },
         { question: 'Wie kommt man hin?', answer: 'Über eine schmale, einspurige Zufahrt den Hang hinauf. Oben gibt es ein gemeinsames Geländefahrzeug.' },
@@ -620,7 +625,7 @@ export const de = {
       automation: { label: 'KI-Automatisierung', text: 'Ein Ablauf automatisiert, Preis nach Absprache', placeholder: 'Welcher Ablauf kostet Sie heute am meisten Zeit?' },
       training: { label: 'KI-Schulung', text: 'Pflicht nach EU AI Act, Art. 4', placeholder: 'Wie viele Personen sollen geschult werden, und wo stehen sie heute?' },
       isms: { label: 'ISMS', text: 'Informationssicherheit nach ISO 27001', placeholder: 'Wo stehen Sie heute, und bis wann brauchen Sie das Zertifikat?' },
-      places: { label: 'Orte und Node001', text: 'Wohnen zur Miete, Workation, Whitelist', placeholder: 'Was möchtest du über Node001 wissen?' },
+      places: { label: 'Orte und Node001', text: 'Wohnen, Workation, Whitelist', placeholder: 'Was möchtest du über Node001 wissen?' },
       general: { label: 'Etwas anderes', text: 'Partnerschaft, Presse oder eine Frage', placeholder: 'Worum geht es?' },
     }),
     formTitle: 'Ihre Anfrage: {topic}',
@@ -751,7 +756,7 @@ export const de = {
       andThen: 'Und dann …',
       label: 'Nodes',
       title: 'Und dann bauen wir Orte.',
-      text: 'Orte zum Leben und Arbeiten, mit eigenen Wohneinheiten zur Miete. Der erste in den Karpaten der Westukraine ist geplant.',
+      text: 'Orte zum Leben und Arbeiten, mit eigenen Wohneinheiten. Der erste in den Karpaten der Westukraine ist geplant.',
       count: 'Node001 · der erste Standort; weitere erst nach den Nachweisen',
       investors: 'Für Investoren',
       disclaimer: 'Schematische Darstellung. Künftige Meilensteine sind Ziele, keine Zusagen.',
@@ -1031,10 +1036,10 @@ export const de = {
     opener: {
       label: 'Für Investoren',
       words: ['Talente.', 'Projekte.', 'Orte.'],
-      text: 'XPORTAL verbindet KI-Projekte mit Orten zum Leben und Arbeiten. Der erste entsteht in den Karpaten, nur zur Miete.',
-      textAfterLogo: 'verbindet KI-Projekte mit Orten zum Leben und Arbeiten. Der erste entsteht in den Karpaten, nur zur Miete.',
+      text: 'XPORTAL verbindet KI-Projekte mit Orten zum Leben und Arbeiten. Der erste entsteht in den Karpaten der Westukraine.',
+      textAfterLogo: 'verbindet KI-Projekte mit Orten zum Leben und Arbeiten. Der erste entsteht in den Karpaten der Westukraine.',
       hubShow: 'Node001 · Karpaten: Vorschau zeigen',
-      hubPreviewTitle: 'Eigene Wohneinheiten zur Miete.',
+      hubPreviewTitle: 'Eigene Wohneinheit, Arbeit, Gemeinschaft.',
       hubPreviewText: 'Karpaten, Westukraine · kein Verkauf',
       hubPreviewAction: 'Orte',
       hubPreviewLabel: 'Node001 ansehen: zur Seite Orte',
@@ -1065,10 +1070,10 @@ export const de = {
       title: 'Vom ersten Node zum Netzwerk.',
       text: 'Menschen, bezahlte Arbeit und gemeinsame Orte stärken sich gegenseitig. Was Node001 misst, verbessert den nächsten Node. Jeder Standort wird einzeln finanziert.',
       steps: [
-        { title: 'Menschen verbinden', text: 'Team, Freelancer und künftige Mieter zusammenbringen.' },
+        { title: 'Menschen verbinden', text: 'Team, Freelancer und künftige Bewohner zusammenbringen.' },
         { title: 'Wert schaffen', text: 'Kundenprojekte umsetzen, KI-Agenten und die ISMS-App entwickeln.' },
         { title: 'In Abschnitten bauen', text: 'Wohneinheiten in Chargen bestellen, wenn die Whitelist wächst.' },
-        { title: 'Leben und arbeiten', text: 'Wohneinheiten zur Miete, mit Arbeitsplatz und Gemeinschaft.' },
+        { title: 'Leben und arbeiten', text: 'Eigene Wohneinheiten mit Arbeitsplatz und Gemeinschaft.' },
         { title: 'Messen und lernen', text: 'Strom, Wasser, Internet und Kosten messen; Bewährtes wird Standard.' },
         { title: 'Weitere Nodes aufbauen', text: 'Bewährtes übertragen und an Menschen und Standort anpassen.' },
       ],
@@ -1082,7 +1087,7 @@ export const de = {
       text: 'Stand: 17. November 2026.',
       columns: [
         { title: 'Vorhanden', live: true, items: ['Plattform und Technik im Betrieb', 'ISMS-App im Pilot mit Kunden', 'Grundstück, 2 ha, mit Bebauungsplan', 'Geologiebericht, fachlich geprüft'] },
-        { title: 'In Arbeit', live: false, items: ['Bauplanung der ersten Wohneinheit', 'Whitelist, startet mit der Website', 'Rechtsprüfung des Mietmodells'] },
+        { title: 'In Arbeit', live: false, items: ['Bauplanung der ersten Wohneinheit', 'Whitelist, startet mit der Website', 'Rechtsprüfung des Nutzungsmodells'] },
         { title: 'Offen', live: false, items: ['Selbstkosten je Wohneinheit', 'Gesellschaft und Finanzierung', 'Internetanbieter am Standort'] },
       ],
       tech: {
@@ -1104,12 +1109,12 @@ export const de = {
     node: {
       label: 'Node001',
       title: 'Der erste Ort.',
-      text: 'In den Karpaten der Westukraine, bis 1.077 m hoch. Eigene Wohneinheiten, nur zur Miete.',
+      text: 'In den Karpaten der Westukraine, bis 1.077 m hoch. Eigene Wohneinheiten mit Arbeitsplatz und Gemeinschaft.',
       link: 'Node001 ansehen',
       phasesLabel: 'In drei Phasen',
       phases: [
         { name: 'Phase 0', text: 'Eine Wohneinheit für Team und Bau; die Infrastruktur wächst mit' },
-        { name: 'Phase 1', text: 'Erst das Kommunalgebäude, dann Wohneinheiten zur Miete' },
+        { name: 'Phase 1', text: 'Erst das Kommunalgebäude, dann Wohneinheiten mit Arbeitsplatz' },
         { name: 'Phase 2', text: 'Weitere Wohneinheiten nach Nachfrage' },
       ],
       frames: ['Grundstück', 'Kommunalgebäude', 'Zielbild'],
@@ -1125,10 +1130,10 @@ export const de = {
       more: [
         { label: 'Gemeinsam', value: 'Kommunalgebäude mit Arbeitsplätzen und Küche, Phase 1' },
         { label: 'Anfahrt', value: 'schmale, einspurige Zufahrt' },
-        { label: 'Miete', value: 'steht fest, wenn die Selbstkosten feststehen' },
+        { label: 'Konditionen', value: 'folgen aus den Selbstkosten, zuerst für die Whitelist' },
       ],
       cta: 'In die Whitelist eintragen',
-      note: 'Kein Angebot. Miete, Verträge und Termine folgen nach Planung und Prüfung.',
+      note: 'Kein Angebot. Konditionen, Verträge und Termine folgen nach Planung und Prüfung.',
     },
     money: {
       label: 'Erlöse und Kapital',
@@ -1138,7 +1143,7 @@ export const de = {
       streams: [
         { name: 'Kundenprojekte', status: 'läuft', live: true, text: 'Bezahlte KI-Projekte für Unternehmen.' },
         { name: 'Technologielösungen', status: 'Pilot', live: false, text: 'ISMS-App mit Kunden im Pilot, KI-Agenten in Entwicklung.' },
-        { name: 'Node001', status: 'ab Einzug', live: false, text: 'Miete der Wohneinheiten und Leistungen vor Ort. Kein Verkauf.' },
+        { name: 'Node001', status: 'ab Einzug', live: false, text: 'Wiederkehrende Erlöse aus Aufenthalten und Leistungen vor Ort. Kein Verkauf.' },
       ],
       capitalLabel: 'Kapital, getrennt nach Fall',
       capital: [
@@ -1186,9 +1191,9 @@ export const de = {
   transparency: {
     label: 'Transparenz',
     title: 'Was echt ist, was geplant.',
-    text: 'Belegtes und Geplantes stehen hier getrennt. Jedes Bild sagt mit einem kleinen i, wie es entstanden ist.',
+    text: 'Echt sind das Grundstück, Detail- und Bebauungsplan, der Geologiebericht und die Drohnenfotos. Geplant sind alle Gebäude, die Ausstattung und alle Termine. Jedes Bild sagt mit einem kleinen i, wie es entstanden ist.',
     real: { title: 'Echt und belegt', items: ['Grundstück, 2 ha, in unserem Besitz', 'Detail- und Bebauungsplan', 'Geologiebericht mit Fachprüfung und Vermessung', 'Drohnenfotos des Hangs'] },
-    planned: { title: 'Geplant', items: ['Alle Gebäude auf den Bildern', 'Wohneinheiten, Kommunalgebäude, Ausstattung', 'Termine: Ziele, keine Zusagen', 'Miete: folgt aus den Selbstkosten'] },
+    planned: { title: 'Geplant', items: ['Alle Gebäude auf den Bildern', 'Wohneinheiten, Kommunalgebäude, Ausstattung', 'Termine: Ziele, keine Zusagen', 'Konditionen: folgen aus den Selbstkosten'] },
     imagesTitle: 'Bildnachweis',
     imagesText: 'Gebäude in Drohnenfotos und alle Schaubilder sind mit einem KI-Bildwerkzeug erstellt. Sie zeigen keine finale Planung.',
     kinds: { drone: 'Drohnenfoto des Grundstücks, Gebäude mit KI eingesetzt', render: 'Schaubild, vollständig mit KI erstellt' },

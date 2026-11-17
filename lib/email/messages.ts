@@ -77,7 +77,8 @@ export function freelancerPublishedNotification(input: { firstName: string; role
 
 // Whitelist Node001 (Seite Orte; im Code „waitlist“). Die Seite spricht in Du-Form, die Mails auch.
 
-const INTEREST_NAMES: Record<string, string> = { workation: 'Workation', rent: 'Mieten' }
+// Datenbankwert „rent“ bleibt intern; nach außen heißt die Option seit 17.11.2026 „Länger bleiben“.
+const INTEREST_NAMES: Record<string, string> = { workation: 'Workation', rent: 'Länger bleiben' }
 const TIMING_NAMES: Record<string, string> = { now: 'Sofort', later: 'Nur Interesse, für später' }
 
 /** Bestätigungslink für die Whitelist Node001, in der Sprache des Eintrags. Wiederholt keine Eingaben, auch nicht den Vornamen. */
@@ -92,7 +93,7 @@ export function waitlistConfirmLink(input: { locale: Locale; link: string }) {
         '',
         input.link,
         '',
-        'The link is valid for seven days. Joining is not binding and involves no payment. We will write to you once rent and services are set, and you will be among the first to hear when a living unit becomes free.',
+        'The link is valid for seven days. Joining is not binding and involves no payment. We will write to you once terms and services are set, and you will be among the first to hear when a living unit becomes free.',
         '',
         'If you later no longer want to hear from us, simply reply to one of our emails and we will remove your address.',
         '',
@@ -112,7 +113,7 @@ export function waitlistConfirmLink(input: { locale: Locale; link: string }) {
       '',
       input.link,
       '',
-      'Der Link gilt sieben Tage. Der Eintrag ist unverbindlich und ohne Zahlung. Wir schreiben dir, sobald Miete und Leistungen feststehen, und du erfährst als Erstes, wann eine Wohneinheit frei wird.',
+      'Der Link gilt sieben Tage. Der Eintrag ist unverbindlich und ohne Zahlung. Wir schreiben dir, sobald Konditionen und Leistungen feststehen, und du erfährst als Erstes, wann eine Wohneinheit frei wird.',
       '',
       'Möchtest du später keine Nachrichten mehr von uns, antworte einfach auf eine unserer Mails, dann löschen wir deine Adresse.',
       '',

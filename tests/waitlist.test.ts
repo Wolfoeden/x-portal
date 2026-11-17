@@ -114,7 +114,7 @@ describe('Warteliste Node001: bestätigen', () => {
     expect(filters).toContainEqual(['eq', 'status', 'pending'])
     expect(filters.some(([op, column]) => op === 'gt' && column === 'confirm_expires_at')).toBe(true)
     expect(sent).toHaveLength(1)
-    expect(sent[0]).toMatchObject({ to: 'info@x-portal.eu', replyTo: 'lena@example.com', subject: 'Whitelist Node001 bestätigt: Mieten · Nur Interesse, für später' })
+    expect(sent[0]).toMatchObject({ to: 'info@x-portal.eu', replyTo: 'lena@example.com', subject: 'Whitelist Node001 bestätigt: Länger bleiben · Nur Interesse, für später' })
     expect(sent[0].text).toContain('Kampagne: mieten')
   })
 
@@ -137,7 +137,7 @@ describe('Warteliste Node001: Mails', () => {
 
   it('nennen dem Betreiber Nutzung und Zeitpunkt, auch ohne Vorname und Kampagne', () => {
     const text = waitlistNotification({ first_name: null, email: 'lena@example.com', interest: 'rent', timing: 'now', campaign: null, locale: 'de' }).text
-    expect(text).toContain('Nutzung: Mieten')
+    expect(text).toContain('Nutzung: Länger bleiben')
     expect(text).toContain('Ab wann: Sofort')
     expect(text).toContain('Vorname: –')
     expect(text).toContain('Kampagne: –')
