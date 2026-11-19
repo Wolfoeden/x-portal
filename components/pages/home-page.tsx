@@ -11,8 +11,6 @@ import { ChapterHubs } from '@/components/story/chapter-hubs'
 import { ChapterDoors } from '@/components/story/chapter-doors'
 import { ChapterTeam } from '@/components/story/chapter-team'
 import { CommandBar } from '@/components/story/command-bar'
-import { ReliefLayer, reliefPoint } from '@/components/map/relief-map'
-import { HUB_01 } from '@/lib/map/hubs'
 import type { Locale } from '@/lib/i18n/routes'
 import { showcaseTalents } from '@/lib/showcase'
 import { JsonLd, pageLd } from '@/lib/seo/json-ld'
@@ -25,12 +23,12 @@ export async function HomePage({ locale }: { locale: Locale }) {
       <JsonLd data={pageLd('home', locale)} />
       <SiteHeader />
       <main>
-        <MissionSystem />
+        <MissionSystem locale={locale} />
         <Opener pool={pool} />
         <ChapterReasons />
         <ChapterWorkspace />
         <ChapterEurope />
-        <ChapterHubs relief={<ReliefLayer focus={HUB_01} animate={false} />} hub={reliefPoint(HUB_01[0], HUB_01[1])} />
+        <ChapterHubs locale={locale} />
         <GlobalPath locale={locale} />
         <ChapterDoors locale={locale} />
         <ChapterTeam locale={locale} />

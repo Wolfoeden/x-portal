@@ -69,11 +69,11 @@ export function PlacesPage({ locale }: { locale: Locale }) {
           <ChapterPlace locale={locale} />
           <PlaceFacts locale={locale} />
           <SupplyBoard locale={locale} />
-          <SafetyLayers />
+          <SafetyLayers locale={locale} />
           <PlacesTimeline locale={locale} />
           <DetailPlan />
           <ChapterDay locale={locale} />
-          <Constellation />
+          <Constellation locale={locale} />
           <ChapterWaitlist locale={locale} />
           <ChapterPlacesFaq locale={locale} />
           <Transparency locale={locale} page="places" compact />

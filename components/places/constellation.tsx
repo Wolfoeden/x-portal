@@ -1,104 +1,60 @@
-'use client'
-
-import { useState } from 'react'
+import type { CSSProperties } from 'react'
+import { ArrowDownRight } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
-import { useLocale } from '@/components/i18n/locale-provider'
+import { getDictionary } from '@/lib/i18n/dictionary'
+import { IDS, type Locale } from '@/lib/i18n/routes'
 
-// Lage im Limbic-Feld: x Balance (links) bis Dominanz (rechts), y nach Emotionsraum.
-const STAR: Record<string, { x: number; y: number }> = {
-  health: { x: 28, y: 30 },
-  security: { x: 40, y: 44 },
-  nature: { x: 30, y: 72 },
-  efficiency: { x: 72, y: 32 },
-  freedom: { x: 74, y: 70 },
+// Balance on the left, dominance on the right. The lower arms divide fantasy from adventure.
+const stars: Record<string, [number, number]> = {
+  health: [18, 37], security: [41, 20], efficiency: [78, 33], nature: [28, 68], freedom: [77, 68],
 }
+const edges = [['nature', 'health'], ['health', 'security'], ['security', 'efficiency'], ['nature', 'security'], ['security', 'freedom'], ['freedom', 'efficiency']]
 
-/** Sternbild X-Portal Node001. Auswahl leuchtet auf und führt zur Whitelist. */
-export function Constellation() {
-  const { ids, dict } = useLocale()
-  const copy = dict.places.stars
-  const [picked, setPicked] = useState<string | null>(copy.values[0]?.id ?? null)
-  const active = copy.values.find((value) => value.id === picked) ?? copy.values[0]
-
+export function Constellation({ locale }: { locale: Locale }) {
+  const { stars: copy } = getDictionary(locale).places
   return (
-    <section id={ids.stars} aria-labelledby="sternbild-title" className="scroll-mt-16 border-b border-line bg-surface text-ink">
-      <Container className="grid items-center gap-10 py-16 md:py-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)]">
-        <div>
-          <p className="text-[13px] tracking-[0.14em] text-brand-ink uppercase">{copy.label}</p>
-          <h2 id="sternbild-title" className="mt-3 text-[clamp(2rem,4vw,3.2rem)] font-medium leading-[1.02] tracking-[-0.04em]">
-            {copy.title}
-          </h2>
-          <p className="mt-3 max-w-[36rem] text-[15px] leading-relaxed text-muted">{copy.hint}</p>
-          <p className="mt-2 text-[13px] text-brand-ink">{copy.note}</p>
-          <div className="relative mt-8 aspect-[6/5] w-full max-w-[640px]">
-            <svg viewBox="0 0 100 84" className="absolute inset-0 h-full w-full" aria-hidden>
-              <line x1="12" y1="42" x2="88" y2="42" className="stroke-line-strong" />
-              <g className="hidden sm:block">
-                <text x="12" y="10" className="fill-muted" fontSize="3.2">
-                  {copy.fields.discipline}
-                </text>
-                <text x="12" y="78" className="fill-muted" fontSize="3.2">
-                  {copy.fields.fantasy}
-                </text>
-                <text x="62" y="78" className="fill-muted" fontSize="3.2">
-                  {copy.fields.thrill}
-                </text>
-                <text x="8" y="40" className="fill-brand-ink" fontSize="3.1">
-                  {copy.balance}
-                </text>
-                <text x="74" y="40" className="fill-brand-ink" fontSize="3.1">
-                  {copy.dominance}
-                </text>
+    <section id={IDS[locale].stars} aria-labelledby="sternbild-title" className="diagram-section constellation-section">
+      <Container>
+        <div className="star-system" role="radiogroup" aria-labelledby="sternbild-title">
+          <header className="star-heading">
+            <p className="diagram-kicker">{copy.label}</p>
+            <h2 id="sternbild-title">{copy.title}</h2>
+            <p>{copy.hint}</p>
+          </header>
+          <div className="star-plane">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <g className="celestial-grid">
+                <path d="M-8 80 Q45 66 110 83 M-8 53 Q46 36 110 50 M-8 23 Q46 5 110 20 M17 -6 Q46 44 28 104 M54 -5 Q67 53 60 105 M86 -5 Q90 39 91 100" />
               </g>
-              {copy.values.map((value) => {
-                const at = STAR[value.id]
-                const on = value.id === active?.id
-                if (!at) return null
-                return <circle key={value.id} cx={at.x} cy={at.y} r={on ? 2.3 : 1.15} className={on ? 'fill-brand' : 'fill-faint'} />
-              })}
+              <g className="sky-grain" fill="currentColor">
+                {[[7,18],[13,76],[23,9],[33,47],[37,82],[51,13],[55,74],[64,52],[70,9],[82,82],[87,18],[92,48]].map(([x,y]) => <circle key={x} cx={x} cy={y} r=".16" />)}
+              </g>
+              <g className="star-lines">
+                {edges.map(([from, to]) => (
+                  <line key={from + to} x1={stars[from][0]} y1={stars[from][1]} x2={stars[to][0]} y2={stars[to][1]} vectorEffect="non-scaling-stroke" />
+                ))}
+              </g>
             </svg>
-            <div className="pointer-events-none absolute inset-0 text-sm leading-tight sm:hidden">
-              <p className="absolute inset-x-1 top-1 text-muted">{copy.fields.discipline}</p>
-              <div className="absolute inset-x-0 bottom-[52%] flex justify-between text-brand-ink">
-                <span>{copy.balance}</span><span>{copy.dominance}</span>
-              </div>
-              <div className="absolute inset-x-1 top-[89%] grid grid-cols-2 gap-2 text-muted">
-                <span>{copy.fields.fantasy}</span><span className="text-right">{copy.fields.thrill}</span>
-              </div>
-            </div>
+            <div className="star-poles"><span>{copy.balance}</span><span>{copy.dominance}</span></div>
           </div>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {copy.values.map((value) => {
-              const on = value.id === active?.id
-              return (
-                <button
-                  key={value.id}
-                  type="button"
-                  aria-pressed={on}
-                  onClick={() => setPicked(value.id)}
-                  className={`min-h-11 rounded-full border px-3 py-1.5 text-[14px] font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:min-h-0 ${on ? 'border-brand bg-brand text-white' : 'border-line-strong bg-white text-ink hover:border-brand'}`}
-                >
-                  {value.name}
-                </button>
-              )
-            })}
-          </div>
+          {copy.values.map((value, i) => {
+            const [x, y] = stars[value.id]
+            return (
+              <div key={value.id} className="star-option" style={{ '--x': `${x}%`, '--y': `${y}%` } as CSSProperties}>
+                <label className="star-target" data-label={y < 50 ? 'above' : 'below'}>
+                  <input type="radio" name="constellation-value" defaultChecked={i === 0} aria-describedby={`star-detail-${value.id}`} />
+                  <span className="star-light" aria-hidden="true" /><span className="star-name">{value.name}</span>
+                </label>
+                <div className="star-detail" id={`star-detail-${value.id}`}>
+                  <p className="star-field">{value.pole} · {value.field}</p>
+                  <h3>{value.name}</h3><p>{value.text}</p>
+                </div>
+              </div>
+            )
+          })}
+          <a className="diagram-cta star-cta" href={`#${IDS[locale].waitlist}`}>{copy.cta}<ArrowDownRight size={17} aria-hidden /></a>
+          <p className="star-note">{copy.note}</p>
         </div>
-        {active ? (
-          <div className="rounded-[28px] border border-line bg-white p-6">
-            <p className="text-[13px] text-brand-ink">
-              {active.pole} · {active.field}
-            </p>
-            <h3 className="mt-2 text-[28px] font-medium tracking-[-0.03em]">{active.name}</h3>
-            <p className="mt-3 text-[16px] leading-relaxed text-body">{active.text}</p>
-            <a
-              href={`#${ids.waitlist}`}
-              className="mt-6 inline-flex rounded-full bg-brand hover:bg-brand-hover px-4 py-2 text-[14px] font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-            >
-              {copy.cta}
-            </a>
-          </div>
-        ) : null}
       </Container>
     </section>
   )

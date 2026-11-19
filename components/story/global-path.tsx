@@ -1,67 +1,63 @@
+import { NodeSymbol } from '@/components/diagrams/node-symbol'
+import { UsersRound, Waypoints } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, type Locale } from '@/lib/i18n/routes'
 
-/** Drei Globalziele in der festgelegten Folge. Die Karte zeigt nur Node001 als Ort. */
+function StationDrawing({ stage }: { stage: number }) {
+  return (
+    <svg className="goal-drawing" viewBox="0 0 160 90" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round">
+      {stage === 0 && <>
+        <path d="m22 58 58 27 58-27-58-27Z" className="goal-ground" />
+        <path d="m41 58 39 18 39-18" className="goal-guide" />
+        <g transform="translate(47 9) scale(1.38)"><NodeSymbol /></g>
+      </>}
+      {stage === 1 && <>
+        <path d="m35 61 52-37 42 34-94 3" className="goal-link" strokeDasharray="3 4" />
+        <g transform="translate(15 40) scale(.84)"><NodeSymbol /></g>
+        <g transform="translate(67 6) scale(.84)" className="goal-future"><NodeSymbol /></g>
+        <g transform="translate(108 39) scale(.84)" className="goal-future"><NodeSymbol /></g>
+      </>}
+      {stage === 2 && <>
+        <ellipse cx="78" cy="55" rx="65" ry="23" className="goal-guide" />
+        <ellipse cx="78" cy="55" rx="43" ry="15" className="goal-guide" />
+        <g transform="translate(55 23)"><NodeSymbol /></g>
+        {[[26, 46], [125, 42], [89, 74]].map(([x, y]) => (
+          <g key={x} transform={`translate(${x} ${y})`} fill="white">
+            <circle cy="-6" r="4" /><path d="M-7 6a7 7 0 0 1 14 0v2H-7Z" />
+          </g>
+        ))}
+      </>}
+    </svg>
+  )
+}
+
 export function GlobalPath({ locale }: { locale: Locale }) {
   const copy = getDictionary(locale).home.goals
   return (
-    <section id={IDS[locale].goals} aria-labelledby="ziele-title" className="scroll-mt-16 border-b border-line bg-surface text-ink">
-      <Container className="py-16 md:py-24">
-        <p className="text-[13px] tracking-[0.14em] text-brand-ink uppercase">{copy.label}</p>
-        <h2 id="ziele-title" className="mt-3 max-w-[16ch] text-[clamp(2rem,4vw,3.4rem)] font-medium leading-[1.02] tracking-[-0.04em]">
-          {copy.title}
-        </h2>
-        <p className="mt-4 max-w-[36rem] text-[16px] leading-relaxed text-muted">{copy.note}</p>
-        <ol className="mt-10 grid gap-4 lg:grid-cols-3">
-          {copy.steps.map((step) => (
-            <li key={step.rank} className="flex flex-col gap-3 rounded-[24px] border border-line bg-white p-5">
-              <span className="text-[13px] tracking-[0.16em] text-brand-ink">{step.rank}</span>
-              <h3 className="text-[22px] font-medium tracking-[-0.03em]">{step.title}</h3>
-              <p className="text-[15px] leading-relaxed text-muted">{step.text}</p>
+    <section id={IDS[locale].goals} aria-labelledby="ziele-title" className="diagram-section goals-section">
+      <Container>
+        <header className="diagram-heading">
+          <div><p className="diagram-kicker">{copy.label}</p><h2 id="ziele-title">{copy.title}</h2></div>
+          <p className="diagram-body">{copy.note}</p>
+        </header>
+        <ol className="goal-path" data-goal-path="">
+          {copy.steps.map((step, i) => (
+            <li key={step.rank}>
+              <StationDrawing stage={i} />
+              <span className="goal-mobile-symbol" aria-hidden="true">
+                {i === 0 && <svg viewBox="0 0 48 44"><NodeSymbol /></svg>}
+                {i === 1 && <Waypoints strokeWidth={1.5} />}
+                {i === 2 && <UsersRound strokeWidth={1.5} />}
+              </span>
+              <div className="goal-rail" aria-hidden="true"><i /></div>
+              <div className="goal-description">
+                <div className="goal-rank"><span>{step.rank}</span>{i === 0 && <span>{copy.known} · {copy.now}</span>}{i === 1 && <span>{copy.open}</span>}</div>
+                <h3>{step.title}</h3><p>{step.text}</p>
+              </div>
             </li>
           ))}
         </ol>
-        <figure className="mt-8 overflow-hidden rounded-[28px] border border-line bg-white">
-          <div className="relative mx-4 mt-4 h-32 sm:hidden" role="img" aria-label={copy.mapLabel}>
-            <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 size-full" aria-hidden>
-              <path d="M2 73 Q21 31 40 50 T73 62 T98 36" fill="none" stroke="var(--color-line-strong)" vectorEffect="non-scaling-stroke" />
-              <path d="M2 84 Q26 56 46 72 T98 55" fill="none" stroke="var(--color-line)" vectorEffect="non-scaling-stroke" />
-            </svg>
-            <div className="relative grid h-full grid-cols-4 items-start text-center text-sm">
-              {[copy.known, copy.open, copy.open, copy.open].map((label, index) => (
-                <div key={index} className={`flex flex-col items-center gap-2 ${index === 0 ? 'pt-10 font-medium text-brand-ink' : 'pt-4 text-muted even:pt-12'}`}>
-                  {label}
-                  <span className={index === 0 ? 'size-3 rounded-full bg-brand' : 'size-2.5 rounded-full border border-muted bg-white'} />
-                </div>
-              ))}
-            </div>
-          </div>
-          <svg viewBox="0 0 960 280" className="hidden h-auto w-full sm:block" role="img" aria-label={copy.mapLabel}>
-            <path d="M40 190 C 160 120, 240 80, 340 110 S 520 200, 640 150 S 820 70, 920 120" fill="none" stroke="var(--color-line-strong)" />
-            <path d="M30 210 C 180 160, 300 140, 430 170 S 620 230, 760 180 S 880 140, 940 160" fill="none" stroke="var(--color-line)" />
-            <path d="M70 150 C 200 90, 360 70, 500 100 S 700 160, 900 90" fill="none" stroke="var(--color-brand)" strokeOpacity="0.28" />
-            <g>
-              <circle cx="250" cy="132" r="7" fill="var(--color-brand)" />
-              <text x="250" y="112" textAnchor="middle" fill="var(--color-brand)" fontSize="14" fontFamily="inherit">
-                {copy.known}
-              </text>
-            </g>
-            {[
-              [470, 150],
-              [640, 118],
-              [790, 156],
-            ].map(([x, y]) => (
-              <g key={`${x}-${y}`}>
-                <circle cx={x} cy={y} r="4" fill="none" stroke="var(--color-muted)" />
-                <text x={x} y={y - 14} textAnchor="middle" fill="var(--color-muted)" fontSize="12" fontFamily="inherit">
-                  {copy.open}
-                </text>
-              </g>
-            ))}
-          </svg>
-          <figcaption className="px-5 py-3 text-[13px] text-muted">{copy.mapLabel}</figcaption>
-        </figure>
       </Container>
     </section>
   )

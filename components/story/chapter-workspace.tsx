@@ -1,7 +1,7 @@
 'use client'
 
-import { useRef, useState } from 'react'
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'motion/react'
+import { useState } from 'react'
+import { AnimatePresence, motion } from 'motion/react'
 import { useReducedMotion } from '@/lib/use-reduced-motion'
 import { Check, FileSignature, Lock, Mail } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
@@ -134,19 +134,15 @@ export function ChapterWorkspace() {
   const copy = dict.home.workspace
   const steps = copy.steps
   const reduceMotion = useReducedMotion()
-  const trackRef = useRef<HTMLElement>(null)
-  const [scrolledStep, setScrolledStep] = useState(0)
-  const { scrollYProgress } = useScroll({ target: trackRef, offset: ['start start', 'end end'] })
-  useMotionValueEvent(scrollYProgress, 'change', (value) => setScrolledStep(Math.max(0, Math.min(4, Math.floor(value * 5.4)))))
-  const step = reduceMotion ? 4 : scrolledStep
+  const [step, setStep] = useState(0)
   // Die letzten vier Einträge; neue kommen unten dazu.
   const entries = logEntries(scenario, dict).filter((entry) => entry.step <= step)
   const recent = entries.slice(-4)
   const latest = entries.at(-1)
 
   return (
-    <section ref={trackRef} id={ids.platform} aria-labelledby="workspace-title" className={reduceMotion ? 'py-28' : 'relative h-[320vh]'}>
-      <div className={reduceMotion ? '' : 'sticky top-16 flex h-[calc(100svh-4rem)] items-center overflow-hidden'}>
+    <section id={ids.platform} aria-labelledby="workspace-title" className="scroll-mt-16 py-16 md:py-24">
+      <div>
         <Container className="grid grid-cols-[minmax(0,1fr)] items-center gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
           <div className="flex flex-col gap-5">
             <ChapterLabel number="03">{copy.label}</ChapterLabel>
@@ -159,7 +155,7 @@ export function ChapterWorkspace() {
                 const done = index < step
                 const now = index === step
                 return (
-                  <li key={label} className={`flex items-center gap-3 py-1.5 text-[17px] transition-colors duration-300 ${now ? 'text-ink' : done ? 'text-brand-ink' : 'text-[#a3aaa5]'}`}>
+                  <li key={label} className={`flex items-center gap-3 py-1.5 text-[17px] transition-colors duration-300 ${now ? 'text-ink' : done ? 'text-brand-ink' : 'text-muted'}`}>
                     <span
                       className={`grid size-7 place-items-center rounded-full text-[12px] font-semibold transition-colors duration-300 ${
                         now ? 'bg-ink text-white' : done ? 'bg-brand-soft text-brand-ink' : 'border border-line-strong'
@@ -187,8 +183,10 @@ export function ChapterWorkspace() {
                 <ol className="mt-4 flex gap-1.5">
                   {steps.map((label, index) => (
                     <li key={label} className="min-w-0 flex-1">
-                      <span className={`block h-1.5 rounded-full transition-colors duration-500 ${index <= step ? 'bg-brand' : 'bg-surface-2'}`} />
-                      <span className={`mt-2 block truncate text-[12px] ${index === step ? 'font-medium text-ink' : 'text-faint'}`}>{label}</span>
+                      <button type="button" aria-pressed={index === step} onClick={() => setStep(index)} className="w-full min-h-11 text-left focus-visible:outline-brand">
+                        <span className={`block h-1.5 rounded-full transition-colors duration-500 ${index <= step ? 'bg-brand' : 'bg-surface-2'}`} />
+                        <span className={`mt-2 block text-[14px] ${index === step ? 'font-medium text-ink' : 'text-faint'}`}>{label}</span>
+                      </button>
                     </li>
                   ))}
                 </ol>
@@ -238,6 +236,11 @@ export function ChapterWorkspace() {
               </aside>
             </div>
 
+            <noscript>
+              {steps.slice(1).map((label, i) => <details key={label} className="mt-3"><summary>{label}</summary>
+                <StepBody step={i + 1} scenario={scenario} budgetChanged={scenario.budget !== base.budget} query={query} dict={dict} />
+              </details>)}
+            </noscript>
             {latest ? (
               <p className="mt-4 truncate text-[13px] text-body lg:hidden">
                 <span className="text-faint">{copy.log.title} · </span>

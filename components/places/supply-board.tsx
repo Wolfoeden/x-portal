@@ -1,39 +1,35 @@
+import { Flame, Radio, UtilityPole, Waves } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, type Locale } from '@/lib/i18n/routes'
 
-/** Versorgungszielbild. Keine Messwerte: nur Quelle und Reserve, als geplant gekennzeichnet. */
+const symbols = { power: UtilityPole, heat: Flame, water: Waves, net: Radio } as const
+
 export function SupplyBoard({ locale }: { locale: Locale }) {
   const copy = getDictionary(locale).places.supply
   return (
-    <section id={IDS[locale].supply} aria-labelledby="versorgung-title" className="scroll-mt-16 border-b border-line bg-surface text-ink">
-      <Container className="py-16 md:py-24">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="text-[13px] tracking-[0.14em] text-brand-ink uppercase">{copy.label}</p>
-            <h2 id="versorgung-title" className="mt-3 text-[clamp(2rem,4vw,3.2rem)] font-medium leading-none tracking-[-0.04em]">
-              {copy.title}
-            </h2>
-          </div>
-          <p className="rounded-full border border-brand/20 bg-brand-soft px-3 py-1 text-[13px] text-brand-ink">{copy.badge}</p>
-        </div>
-        <p className="mt-4 max-w-[40rem] text-[16px] leading-relaxed text-muted">{copy.text}</p>
-        <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-          {copy.items.map((item) => (
-            <li key={item.id} className="rounded-[24px] border border-line bg-white p-5">
-              <p className="text-[13px] tracking-[0.12em] text-muted uppercase">{item.title}</p>
-              <dl className="mt-4 grid grid-cols-2 gap-4">
-                <div>
-                  <dt className="text-[12px] text-muted">{copy.sourceLabel}</dt>
-                  <dd className="mt-1 text-[18px] font-medium">{item.source}</dd>
+    <section id={IDS[locale].supply} aria-labelledby="versorgung-title" className="diagram-section supply-section">
+      <Container>
+        <header className="diagram-heading">
+          <div><p className="diagram-kicker">{copy.label}</p><h2 id="versorgung-title">{copy.title}</h2></div>
+          <div className="supply-note"><span>{copy.badge}</span><p className="diagram-body">{copy.text}</p></div>
+        </header>
+        <ul className="supply-grid">
+          {copy.items.map((item) => {
+            const Icon = symbols[item.id as keyof typeof symbols]
+            return (
+              <li className="supply-card" key={item.id}>
+                <div className="supply-identity">
+                  <span className="supply-icon"><Icon aria-hidden strokeWidth={1.5} /></span>
+                  <h3>{item.title}</h3>
                 </div>
-                <div>
-                  <dt className="text-[12px] text-muted">{copy.reserveLabel}</dt>
-                  <dd className="mt-1 text-[18px] font-medium text-brand-ink">{item.reserve}</dd>
-                </div>
-              </dl>
-            </li>
-          ))}
+                <dl className="supply-flow">
+                  <div><dt>{copy.sourceLabel}</dt><dd>{item.source}</dd></div>
+                  <div><dt>{copy.reserveLabel}</dt><dd>{item.reserve}</dd></div>
+                </dl>
+              </li>
+            )
+          })}
         </ul>
       </Container>
     </section>

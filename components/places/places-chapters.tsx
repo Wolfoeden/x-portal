@@ -5,7 +5,6 @@ import { IMAGES } from '@/lib/images'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { HeroEmailForm } from '@/components/places/hero-form'
-import { ReappearEmail } from '@/components/places/sticky-email'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, pageHref, type Locale } from '@/lib/i18n/routes'
 
@@ -20,9 +19,9 @@ export function ChapterPlace({ locale }: { locale: Locale }) {
     <section id={IDS[locale].place} aria-labelledby="ort-title" className="scroll-mt-16 bg-surface lg:h-[calc(100svh-4rem)] lg:min-h-[600px]">
       <Container className="grid h-full grid-cols-[minmax(0,1fr)] gap-8 py-16 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-16 lg:py-8">
         <div className="flex flex-col gap-5">
-          <ReappearEmail>
+          <div className="w-full max-w-[520px]">
             <HeroEmailForm id="orte-ort-email" />
-          </ReappearEmail>
+          </div>
           <ChapterLabel number="01">{copy.label}</ChapterLabel>
           <h2 id="ort-title" className="text-[clamp(3rem,7vw,6.5rem)] font-medium leading-[0.94] tracking-[-0.045em] text-ink">
             <span className="block whitespace-nowrap text-[#7c847f]">{copy.titleGray}</span>

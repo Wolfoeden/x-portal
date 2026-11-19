@@ -1,0 +1,292 @@
+/* Shared figure language: one line weight, quiet surfaces, and a single active port. */
+.diagram-section, .location-atlas {
+  --diagram-radius: 24px;
+  --diagram-rule: 1.5px;
+  --diagram-gold: #ffca06;
+  --diagram-ease: cubic-bezier(.16, 1, .3, 1);
+  color: var(--color-ink);
+}
+.diagram-section {
+  padding-block: clamp(42px, 5.4vw, 76px);
+  border-bottom: 1px solid var(--color-line);
+  scroll-margin-top: 64px;
+}
+.diagram-kicker {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; font-weight: 550; line-height: 1.4;
+  color: var(--color-brand-ink);
+}
+.diagram-kicker::before { content: ''; width: 22px; height: 2px; background: currentColor; }
+.diagram-section h2, .location-atlas h2 {
+  margin-top: 12px; font-weight: 500; letter-spacing: -.055em;
+  font-size: clamp(36px, 4.3vw, 62px); line-height: 1.02; text-wrap: balance;
+}
+.diagram-body, .mission-figure figcaption, .network-info p, .goal-description p, .safety-detail p { color: var(--color-muted); }
+.diagram-body { font-size: 16px; line-height: 1.56; }
+.diagram-heading { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 32px; }
+.diagram-heading > .diagram-body, .supply-note { max-width: 360px; }
+.diagram-section input[type='radio'] {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+.diagram-section label:has(input:focus-visible), .diagram-section a:focus-visible,
+.mission-vision summary:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 4px; border-radius: 9px; }
+.diagram-cta {
+  display: inline-flex; width: fit-content; min-height: 44px; align-items: center; justify-content: center;
+  gap: 14px; border-radius: 30px; background: var(--color-brand); padding: 10px 20px;
+  color: white; font-size: 15px; font-weight: 550;
+}
+.diagram-cta:hover { background: var(--color-brand-hover); }
+
+/* Mission: the node is a pavilion, its five inputs are selectable native controls. */
+.mission-section { background: var(--color-surface); }
+.mission-layout { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); align-items: center; gap: clamp(32px, 5vw, 76px); }
+.mission-copy h1 { font-size: clamp(50px,5.7vw,80px); line-height: .98; font-weight: 500; letter-spacing: -.065em; max-width: 12ch; margin: 18px 0 22px; text-wrap: balance; }
+.mission-lead { font-size: clamp(18px,1.55vw,22px); line-height: 1.5; color: var(--color-body); max-width: 46ch; }
+.mission-copy > .diagram-body { margin-top: 12px; max-width: 46ch; }
+.mission-vision { margin: 22px 0; max-width: 42ch; border-block: 1px solid var(--color-line-strong); font-size: 15px; }
+.mission-vision summary { list-style: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; min-height: 44px; font-weight: 550; }
+.mission-vision summary::-webkit-details-marker { display: none; }
+.mission-vision summary span { width: 8px; height: 8px; border-right: 1.5px solid; border-bottom: 1.5px solid; margin-right: 6px; transform: rotate(45deg); }
+.mission-vision[open] summary span { transform: rotate(225deg); }
+.mission-vision div { padding: 0 12px 15px 0; color: var(--color-muted); }
+.mission-vision div p + p { margin-top: 4px; }
+.mission-figure { min-width: 0; }
+.node-network {
+  display: grid; position: relative; isolation: isolate; grid-template-areas: 'plane' 'info'; grid-template-columns: minmax(0,1fr);
+  border: 1px solid var(--color-line-strong); overflow: hidden; border-radius: var(--diagram-radius);
+  background: white; box-shadow: 0 10px 38px -30px var(--color-muted);
+}
+.network-plane { position: relative; grid-area: plane; aspect-ratio: 1.65; min-height: 294px; background: radial-gradient(ellipse at center,var(--color-brand-soft),transparent 61%); }
+.network-orbit { position: absolute; inset: 12% 15% 22%; border: 1px dashed var(--color-line-strong); border-radius: 50%; }
+.network-wires, .star-plane > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.mobile-wires { display: none; }
+.network-wire, .network-impulse { fill: none; stroke-width: var(--diagram-rule); }
+.network-wire { stroke: var(--color-brand); stroke-opacity: .44; }
+.network-impulse { stroke: var(--color-brand); stroke-width: 3px; stroke-linecap: round; stroke-dasharray: .08 1.1; opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  [data-entered] .network-impulse { animation: diagram-flow 840ms var(--diagram-ease) 1; }
+  [data-entered] .atlas-beacon::after { animation: diagram-pulse 820ms var(--diagram-ease) 1; }
+}
+@keyframes diagram-flow { 0% { opacity: 0; stroke-dashoffset: .08; } 15% { opacity: 1; } 82% { opacity: 1; } 100% { opacity: 0; stroke-dashoffset: -1; } }
+@keyframes diagram-pulse { from { transform: scale(.75); opacity: 1; } to { transform: scale(2.3); opacity: 0; } }
+.network-core {
+  position: absolute; top: 45%; left: 50%; transform: translate(-50%,-50%);
+  --node-base: var(--color-brand); --node-roof: var(--color-brand-deep);
+  width: 78px; height: 78px; border-radius: 50%; display: grid; align-content: center; justify-items: center;
+  background: var(--color-brand-deep); color: white; font-size: 15px; font-weight: 550;
+  box-shadow: 0 0 0 6px white,0 0 0 7px var(--color-line-strong);
+}
+.network-core svg { width: 39px; height: 32px; }
+.network-option, .star-option, .safety-option { display: contents; }
+.network-station {
+  --port: 44px; position: absolute; grid-area: plane; z-index: 2;
+  top: calc(var(--y) - var(--port)/2); left: var(--x); transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 3px; cursor: pointer;
+}
+.station-port {
+  display: grid; width: var(--port); height: var(--port); place-items: center;
+  border: 1px solid var(--color-line-strong); background: white; border-radius: 50%; color: var(--color-brand);
+}
+.station-name { padding: 1px 6px; border-radius: 6px; background: white; font-size: 15px; line-height: 1.35; font-weight: 550; }
+.network-station:has(:checked) .station-port, .network-station:hover .station-port {
+  background: var(--color-brand-soft); border-color: var(--color-brand); box-shadow: 0 0 0 3px var(--color-brand-soft);
+}
+.network-info, .star-detail, .safety-detail { visibility: hidden; }
+.network-option:has(input:checked) .network-info,
+.safety-option:has(input:checked) .safety-detail, .star-option:has(input:checked) .star-detail { visibility: visible; }
+@media (hover: hover) {
+  .node-network:has(.network-station:hover):not(:has(:focus-visible)) .network-info { visibility: hidden; }
+  .node-network:has(.network-station:hover):not(:has(:focus-visible)) .network-station:hover + .network-info { visibility: visible; }
+}
+.network-info { grid-area: info; display: flex; align-items: start; gap: 14px; border-top: 1px solid var(--color-line); padding: 19px 24px; background: var(--color-surface); }
+.network-info > svg { flex: none; color: var(--color-brand); margin-top: 2px; }
+.network-info strong, .safety-detail strong { font-size: 17px; font-weight: 550; }
+.network-info p, .safety-detail p { margin-top: 3px; font-size: 15px; line-height: 1.45; }
+.mission-figure figcaption { margin: 10px 4px 0; font-size: 14px; }
+
+/* A single ordered path, with the same architectural symbol at three different scales. */
+.goals-section { background: white; }
+.goal-path { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border: 1px solid var(--color-line-strong); border-radius: var(--diagram-radius); overflow: hidden; background: linear-gradient(180deg,var(--color-surface),white 75%); }
+.goal-path li { min-width: 0; padding: 26px 28px; position: relative; }
+.goal-drawing { display: block; width: min(100%,204px); height: 114px; margin: 0 auto 8px; color: var(--color-brand-deep); }
+.goal-mobile-symbol { display: none; }
+.goal-ground { fill: var(--color-brand-soft); stroke: var(--color-line-strong); }
+.goal-guide { stroke: var(--color-line-strong); }
+.goal-future { color: var(--color-muted); --node-base: white; }
+.goal-link { stroke: var(--color-brand); }
+.goal-rail { position: relative; height: 16px; display: flex; align-items: center; justify-content: center; }
+.goal-rail::after { content: ''; position: absolute; top: 50%; left: 50%; width: calc(100% + 56px); border-top: var(--diagram-rule) dashed var(--color-muted); opacity: .55; }
+.goal-path li:last-child .goal-rail::after { display: none; }
+.goal-rail i { z-index: 1; width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid var(--color-muted); background: white; }
+.goal-path li:first-child .goal-rail i { border-color: var(--color-brand); background: var(--color-brand); box-shadow: 0 0 0 4px var(--color-brand-soft); }
+.goal-rank { display: flex; align-items: center; gap: 10px; min-height: 23px; font-size: 14px; font-variant-numeric: tabular-nums; color: var(--color-muted); margin: 14px 0 6px; }
+.goal-rank span + span { border-left: 1px solid var(--color-line-strong); padding-left: 10px; color: var(--color-brand-ink); }
+.goal-description h3, .supply-identity h3 { font-weight: 550; font-size: clamp(22px,2.1vw,30px); line-height: 1.17; letter-spacing: -.04em; }
+.goal-description p { margin-top: 9px; font-size: 16px; line-height: 1.5; }
+
+/* Supply: a solid terminal for the source, an open terminal for the reserve. */
+.supply-section { background: var(--color-surface); }
+.supply-note > span { display: inline-flex; font-size: 14px; font-weight: 550; color: var(--color-brand-ink); margin-bottom: 4px; }
+.supply-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; }
+.supply-card { padding: 24px; background: white; border: 1px solid var(--color-line-strong); border-radius: var(--diagram-radius); min-width: 0; }
+.supply-icon { display: grid; place-items: center; margin-bottom: 22px; background: var(--color-brand-soft); width: 50px; height: 50px; color: var(--color-brand-ink); border-radius: 15px; }
+.supply-icon svg { width: 27px; height: 27px; }
+.supply-flow { margin-top: 23px; padding-top: 18px; border-top: 1px solid var(--color-line); }
+.supply-flow > div { padding-left: 20px; position: relative; }
+.supply-flow > div:first-child { padding-bottom: 18px; }
+.supply-flow > div::before { content: ''; position: absolute; left: 0; top: 6px; width: 9px; height: 9px; border-radius: 50%; border: var(--diagram-rule) solid var(--color-brand); background: white; }
+.supply-flow > div:first-child::before { background: var(--color-brand); }
+.supply-flow > div:first-child::after { content: ''; position: absolute; left: 4px; top: 15px; height: calc(100% - 9px); border-left: 1px solid var(--color-line-strong); }
+.supply-flow dt { font-size: 14px; color: var(--color-muted); }
+.supply-flow dd { font-size: 17px; font-weight: 500; color: var(--color-body); line-height: 1.3; margin-top: 3px; hyphens: auto; overflow-wrap: anywhere; }
+
+/* Safety: every ring and its keyed row activate the same native radio. */
+.safety-system {
+  display: grid; grid-template-columns: minmax(0,1fr) minmax(0,.85fr);
+  grid-template-rows: repeat(5,minmax(43px,auto)) auto;
+  position: relative; column-gap: clamp(28px,6vw,80px);
+  padding: 25px clamp(22px,4vw,52px); border: 1px solid var(--color-line-strong); border-radius: var(--diagram-radius);
+  background: linear-gradient(110deg,var(--color-surface),white 69%);
+}
+.dial-base, .dial-ring { grid-column: 1; grid-row: 1 / -1; width: min(100%,360px); aspect-ratio: 1; place-self: center; }
+.dial-base svg, .dial-ring svg { width: 100%; height: 100%; }
+.dial-base { color: var(--color-brand-deep); }
+.dial-axis { stroke: var(--color-line); fill: none; stroke-dasharray: 2 6; }
+.dial-ring { pointer-events: none; }
+.ring-hit { stroke: transparent; pointer-events: stroke; cursor: pointer; }
+.ring-line { stroke: var(--color-muted); stroke-width: var(--diagram-rule); }
+.ring-band { stroke: var(--color-brand); stroke-width: 17; opacity: .035; }
+.ring-port { fill: white; stroke: var(--color-muted); }
+.safety-option:has(input:checked) .ring-line { stroke: var(--color-brand); stroke-width: 2.5px; }
+.safety-option:has(input:checked) .ring-band { opacity: .15; }
+.safety-option:has(input:checked) .ring-port { fill: var(--diagram-gold); stroke: var(--color-brand-deep); }
+.safety-item { grid-column: 2; grid-row: var(--row); position: relative; display: flex; gap: 12px; align-items: center; min-height: 44px; padding: 6px 12px; border-bottom: 1px solid var(--color-line); cursor: pointer; font-size: 16px; font-weight: 500; }
+.safety-index { font-size: 14px; font-variant-numeric: tabular-nums; color: var(--color-muted); }
+.safety-item svg { margin-left: auto; opacity: 0; }
+.safety-item:has(:checked) { color: var(--color-brand-ink); background: var(--color-brand-soft); border-radius: 9px; border-color: transparent; }
+.safety-item:has(:checked) svg { opacity: 1; }
+.safety-item:hover { color: var(--color-brand); }
+.safety-detail { grid-column: 2; grid-row: 6; padding: 18px 12px 0; }
+.safety-note { display: inline-block; margin-top: 14px; font-size: 14px; color: var(--color-muted); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Five luminous, labelled stars. Only the selected value carries the gold accent. */
+.constellation-section {
+  background: radial-gradient(ellipse at 78% 42%,var(--color-brand-deep),transparent 56%), var(--color-ink);
+  color: white; border-bottom-color: var(--color-brand-deep);
+}
+.star-system {
+  display: grid; grid-template: 'heading plot' auto 'detail plot' auto 'action plot' auto '. note' auto / minmax(0,.8fr) minmax(0,1.2fr);
+  align-items: start; column-gap: clamp(30px,6vw,76px); position: relative;
+}
+.star-heading { grid-area: heading; margin: 14px 0 25px; }
+.star-heading .diagram-kicker, .star-field { color: var(--color-brand-soft); }
+.star-heading > p:last-child { color: var(--color-line-strong); font-size: 16px; line-height: 1.55; margin-top: 16px; max-width: 40ch; }
+.star-plane {
+  grid-area: plot; position: relative; overflow: hidden; height: 100%; min-height: 360px;
+  background: radial-gradient(ellipse at 42% 32%,color-mix(in srgb,var(--color-brand) 27%,transparent),transparent 65%);
+  border: 1px solid color-mix(in srgb,var(--color-brand-soft) 24%,transparent); border-radius: var(--diagram-radius);
+}
+.celestial-grid path { vector-effect: non-scaling-stroke; fill: none; stroke: white; opacity: .065; }
+.sky-grain { color: white; opacity: .45; }
+.star-lines line { stroke: var(--color-line-strong); stroke-opacity: .64; stroke-width: var(--diagram-rule); }
+.star-target {
+  grid-area: plot; position: absolute; left: var(--x); top: var(--y);
+  display: grid; place-items: center; transform: translate(-50%,-50%);
+  min-width: 46px; height: 46px; cursor: pointer;
+}
+.star-light { width: 36px; height: 36px; display: grid; place-items: center; position: relative; color: white; }
+.star-light { background: radial-gradient(circle, rgb(255 255 255/.28),transparent 59%); }
+.star-light::before { content: ''; width: 17px; height: 17px; background: currentColor; clip-path: polygon(50% 0,60% 37%,100% 50%,61% 60%,50% 100%,39% 61%,0 50%,39% 39%); }
+.star-light::after { content: ''; position: absolute; inset: 4px; border: 1px solid currentColor; border-radius: 50%; opacity: 0; }
+.star-name { position: absolute; top: calc(50% + 14px); font-size: 15px; font-weight: 500; line-height: 1.3; white-space: nowrap; color: white; text-shadow: 0 1px 4px var(--color-ink); }
+.star-target[data-label='above'] .star-name { top: auto; bottom: calc(50% + 15px); }
+.star-target:has(:checked) .star-light { color: var(--diagram-gold); background: radial-gradient(circle,color-mix(in srgb,var(--diagram-gold) 45%,transparent),transparent 72%); }
+.star-target:has(:checked) .star-light::before { width: 21px; height: 21px; }
+.star-target:has(:checked) .star-light::after, .star-target:hover .star-light::after { opacity: .7; }
+.star-target:has(:checked) .star-name { color: var(--diagram-gold); }
+.constellation-section label:has(input:focus-visible), .constellation-section a:focus-visible { outline-color: var(--diagram-gold); }
+.star-poles { position: absolute; inset: auto 6% 5%; display: flex; justify-content: space-between; border-top: 1px solid color-mix(in srgb,white 26%,transparent); padding-top: 8px; color: var(--color-line-strong); font-size: 14px; }
+.star-detail { grid-area: detail; border-left: 2px solid var(--diagram-gold); padding-left: 17px; }
+.star-field { font-size: 14px; line-height: 1.4; }
+.star-detail h3 { font-weight: 500; font-size: 27px; letter-spacing: -.035em; margin: 5px 0; }
+.star-detail > p:last-child { font-size: 16px; line-height: 1.5; color: var(--color-line); max-width: 43ch; }
+.star-cta { grid-area: action; margin-top: 22px; align-self: end; background: var(--color-brand-soft); color: var(--color-brand-deep); }
+.star-cta:hover { background: white; }
+.star-note { grid-area: note; margin: 10px 2px 0; color: var(--color-line-strong); font-size: 14px; }
+
+/* The whole projected continent fits on one sheet; labels keep their CSS type size. */
+.location-atlas {
+  display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,.7fr); align-items: center; gap: clamp(20px,4vw,60px);
+  border-radius: var(--diagram-radius); background: var(--color-surface); padding: clamp(20px,3vw,42px); scroll-margin-top: 80px;
+}
+.atlas-plate { position: relative; isolation: isolate; width: 100%; aspect-ratio: 3/2; background: var(--color-surface); border-radius: 18px; }
+.atlas-plate img { display: block; width: 100%; height: auto; border-radius: inherit; }
+.atlas-origin { position: absolute; width: 0; height: 0; }
+.atlas-beacon { position: absolute; width: 15px; height: 15px; left: -7.5px; top: -7.5px; background: var(--diagram-gold); border: 2px solid var(--color-brand-deep); border-radius: 50%; box-shadow: 0 0 0 3px white; }
+.atlas-beacon::after { content: ''; position: absolute; inset: -5px; border: 1px solid var(--color-brand-deep); border-radius: inherit; opacity: .55; }
+.atlas-name { position: absolute; bottom: 10px; left: 12px; background: var(--color-brand-deep); color: white; padding: 3px 10px; border-radius: 8px; font-size: 14px; font-weight: 550; }
+.atlas-status { margin-top: 20px; color: var(--color-muted); font-size: 15px; }
+/* Narrow displays have their own diagram arrangements; text is always set in CSS pixels. */
+@media (max-width: 900px) {
+  .supply-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .mission-layout { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 25px; }
+  .star-system { column-gap: 26px; }
+}
+@media (max-width: 700px) {
+  .location-atlas { grid-template-columns: minmax(0,1fr); gap: 18px; padding: 20px 14px 14px; }
+  .location-atlas figcaption { grid-row: 1; padding: 0 4px; }
+  .location-atlas h2 { font-size: 33px; }
+  .atlas-status { margin-top: 8px; }
+  .diagram-section { padding-block: 40px; }
+  .diagram-heading { display: block; margin-bottom: 24px; }
+  .diagram-heading > .diagram-body, .supply-note { max-width: none; margin-top: 12px; }
+  .mission-layout { grid-template-columns: minmax(0,1fr); gap: 26px; }
+  .mission-copy h1 { max-width: 13ch; font-size: clamp(44px,10vw,62px); margin: 12px 0 16px; }
+  .mission-copy .diagram-body { margin-top: 10px; }
+  .mission-vision { margin: 16px 0; }
+  .network-plane { aspect-ratio: auto; min-height: 254px; }
+  .wide-wires, .network-orbit { display: none; }
+  .mobile-wires { display: block; }
+  .network-core { left: 18%; top: 50%; width: 63px; height: 63px; }
+  .network-core svg { width: 30px; height: 26px; }
+  .network-station { --port: 36px; left: calc(48% - 18px); top: calc(var(--mobile-y) - 22px); transform: none; min-height: 44px; flex-direction: row; gap: 5px; }
+  .network-info { padding: 16px; }
+  .goal-path { grid-template-columns: minmax(0,1fr); }
+  .goal-path li { display: grid; grid-template-columns: 48px minmax(0,1fr); align-items: start; gap: 14px; padding: 18px 16px; }
+  .goal-path li + li { border-left: 0; border-top: 1px solid var(--color-line); }
+  .goal-rail { grid-column: 1; grid-row: 1; height: 100%; }
+  .goal-rail i { display: none; }
+  .goal-rail::after { width: 0; height: calc(100% + 36px); top: 22px; border-top: 0; border-left: var(--diagram-rule) dashed var(--color-line-strong); }
+  .goal-mobile-symbol { grid-column: 1; grid-row: 1; position: relative; z-index: 1; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: white; color: var(--color-brand-deep); border: 1px solid var(--color-line-strong); }
+  .goal-path li:first-child .goal-mobile-symbol { background: var(--color-brand-soft); border-color: var(--color-brand); }
+  .goal-mobile-symbol svg { width: 28px; height: 28px; }
+  .goal-rank { margin: 0 0 6px; }
+  .goal-description { grid-column: 2; grid-row: 1; }
+  .goal-description p { font-size: 15px; }
+  .goal-drawing { display: none; }
+  .supply-grid { grid-template-columns: minmax(0,1fr); gap: 9px; }
+  .supply-card { padding: 14px 16px; border-radius: 17px; }
+  .supply-identity { display: flex; gap: 10px; align-items: center; }
+  .supply-icon { width: 32px; height: 32px; margin: 0; border-radius: 10px; }
+  .supply-icon svg { width: 21px; height: 21px; }
+  .supply-identity h3 { font-size: 20px; }
+  .supply-flow { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.55fr); gap: 8px; padding: 0; margin: 10px 0 0; border: 0; }
+  .supply-flow > div { padding-left: 0; }
+  .supply-flow > div:first-child { padding: 0; }
+  .supply-flow > div::before, .supply-flow > div:first-child::after { display: none; }
+  .supply-flow dd { margin-top: 1px; font-size: 15px; }
+  .safety-system { grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 8px; padding: 14px 10px; }
+  .dial-base, .dial-ring { grid-row: 1 / 6; }
+  .safety-item { padding-inline: 6px; gap: 6px; font-size: 14px; }
+  .safety-item svg { display: none; }
+  .safety-detail { grid-column: 1 / -1; margin: 12px 6px 0; padding: 12px 0 0; border-top: 1px solid var(--color-line-strong); }
+  .star-system { grid-template: 'heading' auto 'plot' auto 'note' auto 'detail' auto 'action' auto / minmax(0,1fr); }
+  .star-heading { margin: 0 0 18px; }
+  .star-heading > p:last-child { margin-top: 10px; }
+  .star-plane { height: 260px; min-height: 0; }
+  .star-name { font-size: 14px; }
+  .star-note { margin: 8px 0 20px; }
+  .star-detail h3 { font-size: 24px; }
+  .star-cta { margin-top: 16px; }
+}

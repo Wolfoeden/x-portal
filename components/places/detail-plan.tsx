@@ -18,6 +18,8 @@ function PlanFigure({ active, enlarged = false }: { active: string | null; enlar
         <img
           src={IMAGES.detail.src}
           alt={enlarged ? '' : copy.imageAlt}
+          loading="lazy"
+          decoding="async"
           width={2801}
           height={2592}
           className={`block h-auto w-auto max-w-full bg-white ${enlarged ? '' : 'max-h-[42vh] lg:max-h-[calc(100dvh-18.5rem)]'} ${active ? 'plan-dim' : ''}`}

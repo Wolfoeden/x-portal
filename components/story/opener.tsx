@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useId, useMemo, useRef, useState, type CSSProperties, type FormEvent, type PointerEvent as ReactPointerEvent } from 'react'
-import { AnimatePresence, LayoutGroup, MotionConfig, motion, useMotionValue, useSpring, useTransform } from 'motion/react'
+import { AnimatePresence, LayoutGroup, MotionConfig, motion, useInView, useMotionValue, useSpring, useTransform } from 'motion/react'
 import { useReducedMotion } from '@/lib/use-reduced-motion'
 import { ArrowDown, ArrowRight, Check, Plus } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
@@ -58,6 +58,8 @@ export function Opener({ pool = [] }: { pool?: Talent[] }) {
   const reduceMotion = useReducedMotion()
   const inputId = useId()
   const inputRef = useRef<HTMLTextAreaElement>(null)
+  const sectionRef = useRef<HTMLElement>(null)
+  const inView = useInView(sectionRef)
   const story = useStory()
   const { setStory, ask } = story
   const { locale, dict, ids } = useLocale()
@@ -83,7 +85,7 @@ export function Opener({ pool = [] }: { pool?: Talent[] }) {
   const [waiting, setWaiting] = useState(false)
   const runId = useRef(0)
 
-  const autoRunning = auto && !reduceMotion
+  const autoRunning = auto && !reduceMotion && inView
   useAutoHeight(inputRef, text)
 
   // Parallaxe: Profile weiter vorn folgen der Maus stärker.
@@ -221,7 +223,7 @@ export function Opener({ pool = [] }: { pool?: Talent[] }) {
 
   return (
     <MotionConfig reducedMotion="user">
-      <section id={ids.project} className="relative overflow-x-clip" aria-labelledby="opener-title">
+      <section ref={sectionRef} id={ids.project} className="relative overflow-x-clip" aria-labelledby="opener-title">
         <Container className="grid min-h-[calc(100svh-4rem)] grid-cols-[minmax(0,1fr)] content-center gap-8 pb-16 pt-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-x-10 lg:gap-y-0 lg:pb-16 lg:pt-4">
           <div className="flex flex-col lg:col-start-1 lg:row-start-1 lg:self-end">
             {/* „One sentence.“ ist breiter als „Ein Satz.“: auf schmalen Handys (360 px) wird Englisch etwas kleiner, Deutsch bleibt gleich. */}

@@ -1,78 +1,51 @@
-'use client'
-
-import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'motion/react'
+import type { CSSProperties } from 'react'
+import { ArrowDownRight } from 'lucide-react'
+import { NodeSymbol } from '@/components/diagrams/node-symbol'
 import { Container } from '@/components/ui/primitives'
-import { useLocale } from '@/components/i18n/locale-provider'
-import { useReducedMotion } from '@/lib/use-reduced-motion'
+import { getDictionary } from '@/lib/i18n/dictionary'
+import { IDS, type Locale } from '@/lib/i18n/routes'
 
-/** Schutzschichten von außen nach innen. Auf dem Desktop öffnet Scrollen sie, mobil stehen sie untereinander. */
-export function SafetyLayers() {
-  const { ids, dict } = useLocale()
-  const copy = dict.places.safety
-  const reduce = useReducedMotion()
-  const ref = useRef<HTMLElement>(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end end'] })
-
+export function SafetyLayers({ locale }: { locale: Locale }) {
+  const copy = getDictionary(locale).places.safety
   return (
-    <section ref={ref} id={ids.safety} aria-labelledby="schutz-title" className="scroll-mt-16 border-b border-line bg-white lg:h-[240vh]">
-      <div className="lg:sticky lg:top-0 lg:flex lg:h-svh lg:items-center">
-        <Container className="grid items-center gap-10 py-16 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:py-0">
-          <div>
-            <p className="text-[13px] tracking-[0.14em] text-brand-ink uppercase">{copy.label}</p>
-            <h2 id="schutz-title" className="mt-3 text-[clamp(2rem,4vw,3.2rem)] font-medium leading-[1.02] tracking-[-0.04em] text-ink">
-              {copy.title}
-            </h2>
-            <p className="mt-4 max-w-[28rem] text-[16px] leading-relaxed text-body">{copy.text}</p>
-            <p className="mt-4 max-w-[28rem] text-[14px] leading-snug text-muted">{copy.faqNote}</p>
+    <section id={IDS[locale].safety} aria-labelledby="schutz-title" className="diagram-section protection-section">
+      <Container>
+        <header className="diagram-heading">
+          <div><p className="diagram-kicker">{copy.label}</p><h2 id="schutz-title">{copy.title}</h2></div>
+          <p className="diagram-body">{copy.text}</p>
+        </header>
+        <div className="safety-system" role="radiogroup" aria-labelledby="schutz-title">
+          <div className="dial-base" aria-hidden="true">
+            <svg viewBox="0 0 320 320">
+              <path d="M160 7v306M7 160h306" className="dial-axis" />
+              <g transform="translate(136 138)"><NodeSymbol /></g>
+            </svg>
           </div>
-          <ol className="flex flex-col gap-3 lg:hidden">
-            {copy.layers.map((layer) => (
-              <li key={layer.id} className="rounded-[22px] border border-line bg-white p-4">
-                <p className="text-[12px] tracking-[0.14em] text-brand-ink uppercase">{layer.title}</p>
-                <p className="mt-1 text-[15px] leading-snug text-ink">{layer.text}</p>
-              </li>
-            ))}
-          </ol>
-          <ol className="relative mx-auto hidden h-[520px] w-full max-w-[460px] lg:block">
-            {copy.layers.map((layer, index) => (
-              <Layer key={layer.id} index={index} total={copy.layers.length} title={layer.title} text={layer.text} progress={scrollYProgress} reduce={reduce} />
-            ))}
-          </ol>
-        </Container>
-      </div>
+          {copy.layers.map((layer, i) => {
+            const id = `safety-${layer.id}`
+            const r = 140 - i * 24
+            return (
+              <div className="safety-option" key={id} style={{ '--row': i + 1 } as CSSProperties}>
+                <label className="safety-item" htmlFor={id}>
+                  <input type="radio" name="protection-layer" id={id} defaultChecked={i === 0} aria-describedby={`${id}-info`} />
+                  <span className="safety-index" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                  <span>{layer.title}</span><ArrowDownRight size={18} aria-hidden />
+                </label>
+                <label className="dial-ring" htmlFor={id} aria-hidden="true">
+                  <svg viewBox="0 0 320 320" fill="none">
+                    <circle cx="160" cy="160" r={r} className="ring-band" />
+                    <circle cx="160" cy="160" r={r} className="ring-line" vectorEffect="non-scaling-stroke" />
+                    <circle cx="160" cy={160 - r} r="4" className="ring-port" />
+                    <circle cx="160" cy="160" r={r} className="ring-hit" strokeWidth="23" />
+                  </svg>
+                </label>
+                <div className="safety-detail" id={`${id}-info`}><strong>{layer.title}</strong><p>{layer.text}</p></div>
+              </div>
+            )
+          })}
+        </div>
+        <a className="safety-note" href={`#${IDS[locale].faq}`}>{copy.faqNote}</a>
+      </Container>
     </section>
-  )
-}
-
-function Layer({
-  index,
-  total,
-  title,
-  text,
-  progress,
-  reduce,
-}: {
-  index: number
-  total: number
-  title: string
-  text: string
-  progress: ReturnType<typeof useScroll>['scrollYProgress']
-  reduce: boolean
-}) {
-  const start = index / total
-  const end = (index + 0.85) / total
-  const passed = useTransform(progress, [start, end], [0, 1])
-  const y = useTransform(passed, [0, 1], [0, -70])
-  const opacity = useTransform(passed, [0, 1], [1, index === total - 1 ? 1 : 0])
-  const offset = index * 14
-  return (
-    <motion.li
-      style={reduce ? { top: 8 + index * 92, left: 12, right: 12 } : { top: offset, left: offset, right: offset, y, opacity, zIndex: total - index }}
-      className="absolute rounded-[22px] border border-line bg-white p-4 shadow-field"
-    >
-      <p className="text-[12px] tracking-[0.14em] text-brand-ink uppercase">{title}</p>
-      <p className="mt-1 text-[15px] leading-snug text-ink">{text}</p>
-    </motion.li>
   )
 }
