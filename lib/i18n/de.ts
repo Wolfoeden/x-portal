@@ -555,7 +555,7 @@ export const de = {
       text: 'So stellen wir uns einen Tag vor. Kommunalgebäude, Feuerstelle und Sauna entstehen in Phase 1.',
       scenes: [
         { time: '07:00', title: 'Morgen am Hang.', text: 'Du trittst auf deine Terrasse. Vor dir Wald und Wiese, unten im Tal zieht der Nebel ab.', imageAlt: 'Drohnenfoto mit KI eingesetzter Wohneinheit: dunkel, große Fenster, Terrasse auf Stützen am Waldrand' },
-        { time: '09:30', title: 'Frei und konzentriert.', text: 'Du wählst den Platz: Terrasse, Kommunalgebäude oder remote. Kurze Wege, schnelles Internet. Schnelles, sicheres Netz.', imageAlt: 'Schaubild: Kommunalgebäude aus Holz mit Glasfront und Terrasse am Hang, im Tal Nebel über den Karpaten' },
+        { time: '09:30', title: 'Frei und konzentriert.', text: 'Du wählst den Platz: Terrasse, Kommunalgebäude oder remote. Kurze Wege, schnelles und sicheres Netz.', imageAlt: 'Schaubild: Kommunalgebäude aus Holz mit Glasfront und Terrasse am Hang, im Tal Nebel über den Karpaten' },
         { time: '13:00', title: 'Gesund essen.', text: 'Gemüse aus den Hochbeeten, gekocht in der gemeinsamen Küche. Das Wasser kommt aus der eigenen Trinkwasseraufbereitung.', imageAlt: '' },
         { time: '17:00', title: 'Draußen sein.', text: 'Ein Gang über den Hang, Holz für den Winter, Arbeit im Garten. Bewegung gehört hier zum Tag.', imageAlt: '' },
         { time: '20:00', title: 'Ruhig schlafen.', text: 'Sauna oder Feuerstelle, dann Ruhe. Autark geplant, mit Reserve für Strom, Wärme und Wasser.', imageAlt: 'Schaubild des Zielbilds am Abend: Wohneinheiten aus Holz am Hang, in der Mitte das Kommunalgebäude mit beleuchteter Terrasse' },
@@ -627,7 +627,7 @@ export const de = {
     },
     forInvestors: {
       label: 'Für Investoren',
-      title: 'Das Gespräch.',
+      title: 'Für Investoren.',
       text: 'Node001 ist der erste Ort von XPORTAL. Hier arbeiten Teams aus digitalen Nomaden mit KI-Know-how für Unternehmen.',
       whyTitle: 'Warum dieser Ort',
       why: 'Abgeschiedene Lage in den Karpaten, eigenes Grundstück, Versorgung mit Reserve.',

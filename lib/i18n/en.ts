@@ -540,7 +540,7 @@ export const en: Dictionary = {
       text: 'This is how we picture a day. The community building, fire pit and sauna come in phase 1.',
       scenes: [
         { time: '07:00', title: 'Morning on the slope.', text: 'You step onto your terrace. Forest and meadow in front of you, mist lifting in the valley below.', imageAlt: 'Drone photo with a living unit added with AI: dark, large windows, a terrace on stilts at the edge of the forest' },
-        { time: '09:30', title: 'Free and focused.', text: 'You choose the spot: terrace, community building or remote. Short distances, fast internet. Fast, secure network.', imageAlt: 'Visualisation: timber community building with a glass front and terrace on the slope, mist over the Carpathians in the valley' },
+        { time: '09:30', title: 'Free and focused.', text: 'You choose the spot: terrace, community building or remote. Short distances and a fast, secure network.', imageAlt: 'Visualisation: timber community building with a glass front and terrace on the slope, mist over the Carpathians in the valley' },
         { time: '13:00', title: 'Eat well.', text: 'Vegetables from the raised beds, cooked in the shared kitchen. The water comes from our own drinking-water treatment.', imageAlt: '' },
         { time: '17:00', title: 'Time outside.', text: 'A walk across the slope, wood for the winter, work in the garden. Moving is part of the day here.', imageAlt: '' },
         { time: '20:00', title: 'Sleep soundly.', text: 'Sauna or fire pit, then quiet. Planned to be self-sufficient, with backup for power, heat and water.', imageAlt: 'Visualisation of the target picture in the evening: timber living units on the slope, the community building with a lit terrace in the middle' },
@@ -612,7 +612,7 @@ export const en: Dictionary = {
     },
     forInvestors: {
       label: 'For investors',
-      title: 'The conversation.',
+      title: 'For investors.',
       text: 'Node001 is the first place of XPORTAL. Teams of digital nomads with AI skills work here for companies.',
       whyTitle: 'Why this place',
       why: 'A remote setting in the Carpathians, our own site, supply with backup.',
