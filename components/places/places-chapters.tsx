@@ -53,7 +53,6 @@ export function PlaceFacts({ locale }: { locale: Locale }) {
             </li>
           ))}
         </ul>
-        <p className="max-w-[760px] pb-6 text-[14px] leading-relaxed text-muted md:pb-8">{places.factsNote}</p>
       </Container>
     </section>
   )

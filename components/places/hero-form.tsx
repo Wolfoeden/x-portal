@@ -2,7 +2,7 @@
 
 import { ArrowRight } from 'lucide-react'
 import { useLocale } from '@/components/i18n/locale-provider'
-import { useWaitlist, type WaitlistUse } from '@/components/places/waitlist-state'
+import { useWaitlist } from '@/components/places/waitlist-state'
 
 /** E-Mail im Hero: übernimmt die Adresse in die Warteliste und springt zum Formular. */
 export function HeroEmailForm({ id = 'orte-hero-email' }: { id?: string }) {
@@ -40,16 +40,15 @@ export function HeroEmailForm({ id = 'orte-hero-email' }: { id?: string }) {
   )
 }
 
-/** Knopf einer Angebotskarte: wählt die Nutzung im Formular vor und springt dorthin. */
-export function OfferAction({ use, label, className }: { use: WaitlistUse; label: string; className: string }) {
+/** Knopf unter dem Tagesablauf: springt zur Whitelist. */
+export function OfferAction({ label, className }: { label: string; className: string }) {
   const { ids } = useLocale()
-  const { setUse, goToForm } = useWaitlist()
+  const { goToForm } = useWaitlist()
   return (
     <a
       href={`#${ids.waitlist}`}
       onClick={(event) => {
         event.preventDefault()
-        setUse(use)
         goToForm()
       }}
       className={`group inline-flex h-11 items-center gap-2 self-start rounded-full px-5 text-[15px] font-medium transition-[background-color,box-shadow] ${className}`}

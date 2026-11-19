@@ -16,7 +16,7 @@ import { IDS, type Locale } from '@/lib/i18n/routes'
  *   17:00 Draußen sein           Gesundheit, Natur        (Balance)
  *   20:00 Ruhig schlafen         Sicherheit               (Balance · Disziplin & Kontrolle)
  * Freiheit ist die freie Wahl von Platz und Dauer, nicht Abenteuerurlaub. Schwerpunkt bleibt 3 × Balance, 2 × Dominanz.
- * Fakten nur nach Plan: Kommunalgebäude (D64), Feuerstelle (D34), Sauna (D35), Gemüsegarten (M02-23) in Phase 1; Internet mit Starlink als Reserve (D63);
+ * Fakten nur nach Plan: Kommunalgebäude (D64), Feuerstelle (D34), Sauna (D35), Gemüsegarten (M02-23) in Phase 1; Internet: Anbieter vor Ort, Starlink als Reserve (D63, bestätigt 19.11.2026);
  * Trinkwasseraufbereitung (D61), Holz für den Winter (D60), Generator als Reserve (D59).
  */
 const SCENE_IMAGES: (ImageKey | null)[] = ['unit', 'slope', null, null, 'target']
@@ -66,7 +66,7 @@ export function ChapterDay({ locale }: { locale: Locale }) {
 
         <div className="flex flex-wrap items-center gap-x-5 gap-y-3 rounded-[24px] bg-brand-soft p-6 md:p-8">
           <p className="text-[20px] font-medium tracking-[-0.015em] text-ink md:text-[24px]">{copy.ctaText}</p>
-          <OfferAction use="workation" label={copy.cta} className="bg-brand text-white hover:bg-brand-hover" />
+          <OfferAction label={copy.cta} className="bg-brand text-white hover:bg-brand-hover" />
         </div>
       </Container>
     </section>
