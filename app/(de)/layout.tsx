@@ -4,7 +4,7 @@ import '../globals.css'
 import { inter } from '@/lib/fonts'
 import { AuthStateScript } from '@/components/auth/auth-state-script'
 import { JsonLd, siteLd } from '@/lib/seo/json-ld'
-import { LocaleProvider } from '@/components/i18n/locale-provider'
+import { GermanProvider } from '@/components/i18n/de-provider'
 import { de } from '@/lib/i18n/de'
 import { siteMetadata } from '@/lib/i18n/metadata'
 
@@ -24,9 +24,9 @@ export default function GermanLayout({ children }: { children: ReactNode }) {
         <JsonLd data={siteLd('de')} />
       </head>
       <body className="font-sans">
-        <LocaleProvider locale="de" dict={de}>
+        <GermanProvider>
           {children}
-        </LocaleProvider>
+        </GermanProvider>
       </body>
     </html>
   )

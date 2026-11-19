@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { SiteHeader } from '@/components/site/site-header'
 import { SiteFooter } from '@/components/site/site-footer'
 import { StoryProvider } from '@/components/story/story-context'
@@ -22,12 +23,16 @@ export async function HomePage({ locale }: { locale: Locale }) {
     <StoryProvider>
       <JsonLd data={pageLd('home', locale)} />
       <SiteHeader />
-      <main>
+      <main className="node-story">
         <MissionSystem locale={locale} />
-        <Opener pool={pool} />
-        <ChapterReasons />
-        <ChapterWorkspace />
-        <ChapterEurope />
+        <Suspense>
+          <Opener pool={pool} />
+        </Suspense>
+        <Suspense>
+          <ChapterReasons />
+          <ChapterWorkspace />
+          <ChapterEurope />
+        </Suspense>
         <ChapterHubs locale={locale} />
         <GlobalPath locale={locale} />
         <ChapterDoors locale={locale} />

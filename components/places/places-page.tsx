@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import Link from 'next/link'
 import { SiteHeader } from '@/components/site/site-header'
 import { SiteFooter } from '@/components/site/site-footer'
@@ -63,7 +64,7 @@ export function PlacesPage({ locale }: { locale: Locale }) {
       <JsonLd data={pageLd('places', locale)} />
       <SiteHeader />
       <WaitlistProvider>
-        <main>
+        <main className="node-story">
           <PlacesHero locale={locale} />
           <SectionNav locale={locale} {...getDictionary(locale).places.sectionNav} />
           <ChapterPlace locale={locale} />
@@ -71,12 +72,14 @@ export function PlacesPage({ locale }: { locale: Locale }) {
           <SupplyBoard locale={locale} />
           <SafetyLayers locale={locale} />
           <PlacesTimeline locale={locale} />
-          <DetailPlan />
-          <ChapterDay locale={locale} />
-          <Constellation locale={locale} />
-          <ChapterWaitlist locale={locale} />
-          <ChapterPlacesFaq locale={locale} />
-          <Transparency locale={locale} page="places" compact />
+          <Suspense>
+            <DetailPlan />
+            <ChapterDay locale={locale} />
+            <Constellation locale={locale} />
+            <ChapterWaitlist locale={locale} />
+            <ChapterPlacesFaq locale={locale} />
+            <Transparency locale={locale} page="places" compact />
+          </Suspense>
         </main>
       </WaitlistProvider>
       <SiteFooter locale={locale} />

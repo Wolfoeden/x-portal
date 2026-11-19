@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { getImageProps } from 'next/image'
 import { Container } from '@/components/ui/primitives'
 import { EuropeAtlas } from '@/components/map/europe-atlas'
 import { KindBadge } from '@/components/places/ai-badge'
@@ -14,21 +14,19 @@ import type { Locale } from '@/lib/i18n/routes'
 export function PlacesHero({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale).places
   const copy = dict.hero
+  const mobilePhoto = '/orte/hub-01-hang-mobil.avif'
+  const { props: widePhoto } = getImageProps({ src: IMAGES.hub01.src, alt: copy.imageAlt, fill: true, sizes: '100vw', loading: 'eager', fetchPriority: 'high' })
 
   return (
     <section id="top" aria-labelledby="orte-title" className="relative bg-brand-deep text-white">
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden bg-[radial-gradient(ellipse_at_30%_85%,#1b5c39_0%,transparent_55%)]" />
       <div className="relative flex flex-col gap-10 pb-16 md:pb-24">
         <div className="relative h-[min(calc(100svh-4rem),860px)] min-h-[560px] overflow-hidden">
-          <Image
-            src={IMAGES.hub01.src}
-            alt={copy.imageAlt}
-            fill
-            fetchPriority="high"
-            loading="eager"
-            sizes="100vw"
-            className="object-cover object-[62%_50%] md:object-center"
-          />
+          <link rel="preload" as="image" href={mobilePhoto} media="(max-width: 599px)" fetchPriority="high" />
+          <picture>
+            <source media="(max-width: 599px)" type="image/avif" srcSet={mobilePhoto} />
+            <img {...widePhoto} className="object-cover object-[62%_50%] md:object-center" />
+          </picture>
           <div aria-hidden className="absolute inset-0 bg-[linear-gradient(180deg,rgb(10_30_20/0.15)_0%,rgb(10_30_20/0)_30%,rgb(10_30_20/0.55)_62%,rgb(10_30_20/0.9)_100%)] md:bg-[linear-gradient(90deg,rgb(10_30_20/0.88)_0%,rgb(10_30_20/0.55)_45%,rgb(10_30_20/0)_75%)]" />
           <Container className="relative flex h-full flex-col justify-end pb-[calc(1.5rem+140px)] sm:pb-[calc(3rem+76px)] md:pb-[calc(4.5rem+76px)]">
             <KindBadge kind={IMAGES.hub01.kind} words={dict} className="left-5 top-5 md:left-8 md:top-8" />

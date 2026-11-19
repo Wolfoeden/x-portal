@@ -187,6 +187,23 @@
   animation: float 12s ease-in-out infinite;
 }
 
+/* Independent flow sections can lay out in isolation while remaining fully painted. */
+.node-story > section { contain: layout style; }
+
+section:not([data-active]) .talent-depth .float { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: no-preference) {
+  @media (min-width: 64rem) {
+    .talent-depth {
+      transform: translate(calc(var(--pointer-x, 0) * var(--depth)), calc(var(--pointer-y, 0) * var(--depth)));
+      transition: transform 400ms ease-out;
+    }
+  }
+  .story-arrive { animation: story-settle 420ms ease-out both; }
+}
+
+@keyframes story-settle { from { transform: translateY(4px); } to { transform: none; } }
+
 .hub-pulse {
   transform-box: fill-box;
   transform-origin: center;
