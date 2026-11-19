@@ -4,8 +4,8 @@
 //   render: Schaubild, vollständig mit KI erstellt
 // Neu am 17.11.2026: hang-kommunalgebaeude und zielbild-node001 aus dem Whitepaper (plan/whitepaper/bilder).
 
-export type ImageKind = 'drone' | 'render'
-export type ImageKey = 'hub01' | 'community' | 'unit' | 'blocks' | 'path' | 'terrace' | 'slope' | 'target'
+export type ImageKind = 'drone' | 'render' | 'plan'
+export type ImageKey = 'hub01' | 'community' | 'unit' | 'blocks' | 'path' | 'terrace' | 'slope' | 'target' | 'detail'
 
 export const IMAGES: Record<ImageKey, { src: string; kind: ImageKind }> = {
   hub01: { src: '/orte/hub-01-hang.webp', kind: 'drone' },
@@ -16,6 +16,7 @@ export const IMAGES: Record<ImageKey, { src: string; kind: ImageKind }> = {
   terrace: { src: '/orte/terrasse-abend.webp', kind: 'drone' },
   slope: { src: '/orte/hang-kommunalgebaeude.webp', kind: 'render' },
   target: { src: '/orte/zielbild-node001.webp', kind: 'render' },
+  detail: { src: '/orte/detailplan.webp', kind: 'plan' },
 }
 
 /** Wo welches Bild zu sehen ist, für den Bildnachweis. blocks, path und terrace stehen seit dem 17.11.2026 auf keiner Seite (Abschnitt „Alltag“ entfallen). */
@@ -28,4 +29,5 @@ export const IMAGE_USE: Record<ImageKey, ('places' | 'investors')[]> = {
   terrace: [],
   slope: ['places', 'investors'],
   target: ['places', 'investors'],
+  detail: ['places', 'investors'],
 }

@@ -499,7 +499,7 @@ export const en: Dictionary = {
   },
 
   places: {
-    sectionNav: { label: 'On this page', items: [{ label: 'The place', anchor: 'place' }, { label: 'Plan', anchor: 'plan' }, { label: 'A day', anchor: 'day' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Investors', anchor: 'placeInvestors' }, { label: 'Questions', anchor: 'faq' }] },
+    sectionNav: { label: 'On this page', items: [{ label: 'The place', anchor: 'place' }, { label: 'Plan', anchor: 'plan' }, { label: 'The drawing', anchor: 'detail' }, { label: 'A day', anchor: 'day' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Investors', anchor: 'placeInvestors' }, { label: 'Questions', anchor: 'faq' }] },
     hero: {
       label: 'Node001',
       region: 'Carpathians, western Ukraine',
@@ -519,6 +519,8 @@ export const en: Dictionary = {
     aiImageLabel: 'Image information: drone photo of the site, buildings added with AI',
     renderImage: 'Visualisation, fully created with AI. Not final plans.',
     renderImageLabel: 'Image information: visualisation created with AI',
+    planImage: 'Original detailed plan, not altered with AI.',
+    planImageLabel: 'Image information: original detailed plan, not altered with AI',
     place: {
       label: 'The place',
       titleGray: 'A place.',
@@ -527,7 +529,7 @@ export const en: Dictionary = {
       text: 'Remote work is possible anywhere. A place where you live healthily, safely and freely, and work with focus, surrounded by nature, is rare. That is what we are planning on Node001. The setting is remote, with an emergency plan and backup for power, heat, water and internet. Short distances and shared infrastructure keep the work focused.',
     },
     facts: [
-      { value: '2 ha', text: 'our own site' },
+      { value: '2.0 ha', text: 'area in the detailed plan' },
       { value: '1,077 m', text: 'highest point of the site' },
       { value: 'Self-sufficient', text: 'power, heat, water, internet' },
       { value: '2027', text: 'target start of construction' },
@@ -581,11 +583,31 @@ export const en: Dictionary = {
       label: 'Plan',
       title: 'In stages. As a target.',
       note: 'Dates are goals, not promises.',
+      proof: 'The evidence is the detailed plan of 01/2025.',
+      proofLink: 'See the plan',
       phases: [
         { state: 'Done', items: ['Site of 2 ha', 'Detailed and zoning plan', 'Drone photos'] },
         { state: 'Under way', items: ['Geological survey', 'Offers for modular houses', 'Legal structure'] },
         { state: 'Stage 0', items: ['Container', 'First residents', 'Construction start 2027 as a target'] },
         { state: 'Stage 1', items: ['Living units and houses', 'Community building', 'Sauna'] },
+      ],
+    },
+    detailPlan: {
+      label: 'The drawing',
+      title: 'The detailed plan.',
+      area: 'The plan covers 2.0 ha. The building area is about 4,700 m².',
+      note: 'Detailed plan, as of 01/2025. It is the legal frame for building. How XPORTAL uses it can differ.',
+      limit: 'Chapel, hotel or shops are not our building programme.',
+      zoom: 'Enlarge',
+      close: 'Close',
+      zoomLabel: 'Show the detailed plan enlarged',
+      imageAlt: 'Detailed plan of the site from January 2025, with paths, houses and the treatment plant drawn in. The title block and signatures are removed.',
+      spots: [
+        { id: 'houses', title: 'Houses', text: 'The plan shows houses and one house with offices. XPORTAL will set the built form later.' },
+        { id: 'admin', title: 'Administration', text: 'The administration and recreation complex in the plan is the reference for our community building. Place and size are not fixed.' },
+        { id: 'view', title: 'Outlook', text: 'A viewing terrace with space for sport is drawn in the plan. That is not a promise.' },
+        { id: 'plant', title: 'Treatment', text: 'A local treatment plant is drawn in. It belongs to the supply. The plant itself is not built.' },
+        { id: 'paths', title: 'Paths', text: 'Roads and footpaths connect the areas. The access in the plan is narrow.' },
       ],
     },
     forInvestors: {
@@ -599,6 +621,9 @@ export const en: Dictionary = {
       stagesTitle: 'Stages',
       stages: 'The plan shows what is done, what is under way and what is a target.',
       stagesLink: 'To the plan',
+      planTitle: 'Detailed plan',
+      plan: 'As of 01/2025, the legal frame. The building area is about 4,700 m².',
+      planLink: 'See the detailed plan',
       capitalTitle: 'Capital',
       capital: '⟦Placeholder capital and valuation⟧ No promise on terms or return.',
       teamTitle: 'Team',
@@ -1199,7 +1224,7 @@ export const en: Dictionary = {
     planned: { title: 'Planned or under way', items: ['Geological survey under way. Results expected around the end of November 2026.', 'All buildings in the images', 'Living units, community building, equipment', 'Dates: goals, not promises', 'Terms: follow from the cost per unit'] },
     imagesTitle: 'Image credits',
     imagesText: 'Buildings in drone photos and all visualisations were made with an AI image tool. They do not show final plans.',
-    kinds: { drone: 'Drone photo of the site, buildings added with AI', render: 'Visualisation, fully created with AI' },
+    kinds: { drone: 'Drone photo of the site, buildings added with AI', render: 'Visualisation, fully created with AI', plan: 'Original detailed plan, not altered with AI' },
     images: {
       hub01: 'Slope with living units',
       community: 'Community building on the slope',
@@ -1209,6 +1234,7 @@ export const en: Dictionary = {
       terrace: 'Terrace in the evening',
       slope: 'Community building with glass front',
       target: 'Target picture Node001',
+      detail: 'Detailed plan Node001',
     },
     madeWith: 'This website is built with the help of AI. We check content and figures against our planning.',
   },

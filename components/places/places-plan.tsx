@@ -31,6 +31,12 @@ export function PlacesTimeline({ locale }: { locale: Locale }) {
           {copy.title}
         </h2>
         <p className="mt-4 max-w-[520px] text-[16px] leading-relaxed text-muted md:text-[17px]">{copy.note}</p>
+        <p className="mt-2 text-[15px] text-muted">
+          {copy.proof}{' '}
+          <a href={`#${IDS[locale].detail}`} className="font-medium text-brand underline-offset-4 hover:underline">
+            {copy.proofLink} →
+          </a>
+        </p>
         <ol className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {copy.phases.map((phase) => (
             <li key={phase.state} className="flex flex-col gap-3 rounded-[24px] border border-line bg-white p-5">
@@ -95,6 +101,15 @@ export function PlacesForInvestors({ locale }: { locale: Locale }) {
           </ul>
           <p className="mt-3 text-[15px] text-muted">
             <Marks text={copy.photo} />
+          </p>
+        </div>
+        <div className="mt-8 border-t border-line pt-4">
+          <p className="text-[14px] font-medium text-ink">{copy.planTitle}</p>
+          <p className="mt-2 text-[15.5px] leading-relaxed text-muted">
+            {copy.plan}{' '}
+            <a href={`#${IDS[locale].detail}`} className="font-medium text-brand underline-offset-4 hover:underline">
+              {copy.planLink} →
+            </a>
           </p>
         </div>
         <div className="mt-8 flex flex-col items-start gap-3">

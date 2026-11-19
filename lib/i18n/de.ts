@@ -513,7 +513,7 @@ export const de = {
   // Plan: eintragen → Infos zu Konditionen → einziehen, sobald eine Wohneinheit frei ist. Du-Form wie bisher. Kein Verkauf (D45, D48).
   // Seit 17.11.2026 steht auf der Website nichts von Miete (Vorgabe Roman); Konditionen nennen wir in der Whitelist.
   places: {
-    sectionNav: { label: 'Auf dieser Seite', items: typed<{ label: string; anchor: IdKey }[]>([{ label: 'Der Ort', anchor: 'place' }, { label: 'Fahrplan', anchor: 'plan' }, { label: 'Ein Tag', anchor: 'day' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Investoren', anchor: 'placeInvestors' }, { label: 'Fragen', anchor: 'faq' }]) },
+    sectionNav: { label: 'Auf dieser Seite', items: typed<{ label: string; anchor: IdKey }[]>([{ label: 'Der Ort', anchor: 'place' }, { label: 'Fahrplan', anchor: 'plan' }, { label: 'Der Plan', anchor: 'detail' }, { label: 'Ein Tag', anchor: 'day' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Investoren', anchor: 'placeInvestors' }, { label: 'Fragen', anchor: 'faq' }]) },
     hero: {
       label: 'Node001',
       region: 'Karpaten, Westukraine',
@@ -533,6 +533,8 @@ export const de = {
     aiImageLabel: 'Bildinformation: Drohnenfoto des Grundstücks, Gebäude mit KI eingesetzt',
     renderImage: 'Schaubild, vollständig mit KI erstellt. Keine finale Planung.',
     renderImageLabel: 'Bildinformation: Schaubild, mit KI erstellt',
+    planImage: 'Original-Detailplan, nicht mit KI verändert.',
+    planImageLabel: 'Bildinformation: Original-Detailplan, nicht mit KI verändert',
     place: {
       label: 'Der Ort',
       titleGray: 'Ein Ort.',
@@ -541,7 +543,7 @@ export const de = {
       text: 'Remote arbeiten geht überall. Einen Ort, an dem du gesund, sicher und frei lebst und konzentriert arbeitest, mitten in der Natur, gibt es selten. Genau das planen wir auf Node001. Die Lage ist abgeschieden, mit Notfallplan und Reserve für Strom, Wärme, Wasser und Internet. Kurze Wege und eine gemeinsame Infrastruktur halten die Arbeit fokussiert.',
     },
     facts: [
-      { value: '2 ha', text: 'eigenes Grundstück' },
+      { value: '2,0 ha', text: 'Fläche laut Detailplan' },
       { value: '1.077 m', text: 'höchster Punkt des Grundstücks' },
       { value: 'Autark', text: 'Strom, Wärme, Wasser, Internet' },
       { value: '2027', text: 'Baubeginn als Ziel' },
@@ -596,11 +598,31 @@ export const de = {
       label: 'Fahrplan',
       title: 'In Stufen. Als Ziel.',
       note: 'Termine sind Ziele, keine Zusagen.',
+      proof: 'Der Beleg ist der Detailplan von 01/2025.',
+      proofLink: 'Zum Plan',
       phases: [
         { state: 'Erledigt', items: ['Grundstück, 2 ha', 'Detail- und Bebauungsplan', 'Drohnenaufnahmen'] },
         { state: 'Läuft', items: ['Geologische Untersuchung', 'Angebote für Modulhäuser', 'Rechtliche Struktur'] },
         { state: 'Stufe 0', items: ['Container', 'Erste Bewohner', 'Baubeginn 2027 als Ziel'] },
         { state: 'Stufe 1', items: ['Wohneinheiten und Häuser', 'Kommunalgebäude', 'Sauna'] },
+      ],
+    },
+    detailPlan: {
+      label: 'Der Plan',
+      title: 'Der Detailplan.',
+      area: 'Der Plan umfasst 2,0 ha. Die Bebauungsfläche liegt bei rund 4.700 m².',
+      note: 'Detailplan, Stand 01/2025. Rechtlicher Rahmen für die Bebauung. Die konkrete Nutzung durch XPORTAL kann abweichen.',
+      limit: 'Kapelle, Hotel oder Handel sind nicht unser Bauprogramm.',
+      zoom: 'Vergrößern',
+      close: 'Schließen',
+      zoomLabel: 'Detailplan vergrößert anzeigen',
+      imageAlt: 'Detailplan des Grundstücks von Januar 2025, mit Wegen, Wohnhäusern und der eingezeichneten Kläranlage. Stempel und Unterschriften sind entfernt.',
+      spots: [
+        { id: 'houses', title: 'Wohnhäuser', text: 'Im Plan stehen Wohnhäuser und ein Haus mit Büroräumen. Die gebaute Form legt XPORTAL später fest.' },
+        { id: 'admin', title: 'Verwaltung', text: 'Der Verwaltungs- und Erholungskomplex im Plan ist der Bezug für unser Kommunalgebäude. Lage und Maß sind nicht festgelegt.' },
+        { id: 'view', title: 'Aussicht', text: 'Aussichtsterrasse mit Platz für Sport, im Plan eingezeichnet. Das ist keine Zusage.' },
+        { id: 'plant', title: 'Kläranlage', text: 'Eine lokale Kläranlage ist eingezeichnet. Sie gehört zur Versorgung, die Anlage selbst steht noch nicht.' },
+        { id: 'paths', title: 'Wege', text: 'Fahr- und Fußwege verbinden die Flächen. Die Zufahrt im Plan ist schmal.' },
       ],
     },
     forInvestors: {
@@ -614,6 +636,9 @@ export const de = {
       stagesTitle: 'Stufen',
       stages: 'Der Fahrplan zeigt, was erledigt ist, was läuft und was Ziel ist.',
       stagesLink: 'Zum Fahrplan',
+      planTitle: 'Detailplan',
+      plan: 'Stand 01/2025, der rechtliche Rahmen. Die Bebauungsfläche liegt bei rund 4.700 m².',
+      planLink: 'Zum Detailplan',
       capitalTitle: 'Kapital',
       capital: '⟦Platzhalter Kapital und Bewertung⟧ Keine Zusage zu Konditionen oder Ertrag.',
       teamTitle: 'Team',
@@ -1220,7 +1245,7 @@ export const de = {
     planned: { title: 'Geplant oder laufend', items: ['Geologische Untersuchung läuft. Ergebnis voraussichtlich Ende November 2026.', 'Alle Gebäude auf den Bildern', 'Wohneinheiten, Kommunalgebäude, Ausstattung', 'Termine: Ziele, keine Zusagen', 'Konditionen: folgen aus den Selbstkosten'] },
     imagesTitle: 'Bildnachweis',
     imagesText: 'Gebäude in Drohnenfotos und alle Schaubilder sind mit einem KI-Bildwerkzeug erstellt. Sie zeigen keine finale Planung.',
-    kinds: { drone: 'Drohnenfoto des Grundstücks, Gebäude mit KI eingesetzt', render: 'Schaubild, vollständig mit KI erstellt' },
+    kinds: { drone: 'Drohnenfoto des Grundstücks, Gebäude mit KI eingesetzt', render: 'Schaubild, vollständig mit KI erstellt', plan: 'Original-Detailplan, nicht mit KI verändert' },
     images: {
       hub01: 'Hang mit Wohneinheiten',
       community: 'Kommunalgebäude am Hang',
@@ -1230,6 +1255,7 @@ export const de = {
       terrace: 'Terrasse am Abend',
       slope: 'Kommunalgebäude mit Glasfront',
       target: 'Zielbild Node001',
+      detail: 'Detailplan Node001',
     },
     madeWith: 'Die Website entsteht mit KI-Hilfe. Inhalte und Zahlen prüfen wir gegen unsere Planung.',
   },

@@ -7,6 +7,7 @@ import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { PlacesHero } from '@/components/places/places-hero'
 import { ChapterPlace, ChapterPlacesFaq, PlaceFacts } from '@/components/places/places-chapters'
 import { PlacesForInvestors, PlacesTimeline } from '@/components/places/places-plan'
+import { DetailPlan } from '@/components/places/detail-plan'
 import { ChapterDay } from '@/components/places/chapter-day'
 import { WaitlistCard } from '@/components/places/waitlist-card'
 import { WaitlistProvider } from '@/components/places/waitlist-state'
@@ -72,6 +73,7 @@ export function PlacesPage({ locale }: { locale: Locale }) {
           <ChapterPlace locale={locale} />
           <PlaceFacts locale={locale} />
           <PlacesTimeline locale={locale} />
+          <DetailPlan />
           <ChapterDay locale={locale} />
           <ChapterWaitlist locale={locale} />
           <PlacesForInvestors locale={locale} />

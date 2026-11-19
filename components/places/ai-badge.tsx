@@ -18,11 +18,18 @@ export function AiBadge({ text, label, className = 'left-3.5 top-3.5' }: { text:
   )
 }
 
-type BadgeWords = { aiImage: string; aiImageLabel: string; renderImage: string; renderImageLabel: string }
+type BadgeWords = {
+  aiImage: string
+  aiImageLabel: string
+  renderImage: string
+  renderImageLabel: string
+  planImage: string
+  planImageLabel: string
+}
 
-/** Kennzeichnung nach der Art des Bildes aus lib/images.ts: Drohnenfoto mit eingesetzten Gebäuden oder reines Schaubild. */
+/** Kennzeichnung nach der Art des Bildes aus lib/images.ts. */
 export function KindBadge({ kind, words, className }: { kind: ImageKind; words: BadgeWords; className?: string }) {
-  return kind === 'render'
-    ? <AiBadge text={words.renderImage} label={words.renderImageLabel} className={className} />
-    : <AiBadge text={words.aiImage} label={words.aiImageLabel} className={className} />
+  if (kind === 'render') return <AiBadge text={words.renderImage} label={words.renderImageLabel} className={className} />
+  if (kind === 'plan') return <AiBadge text={words.planImage} label={words.planImageLabel} className={className} />
+  return <AiBadge text={words.aiImage} label={words.aiImageLabel} className={className} />
 }
