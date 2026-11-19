@@ -40,9 +40,10 @@ export function ChapterPlace({ locale }: { locale: Locale }) {
 }
 
 export function PlaceFacts({ locale }: { locale: Locale }) {
-  const facts = getDictionary(locale).places.facts
+  const places = getDictionary(locale).places
+  const facts = places.facts
   return (
-    <section aria-label={getDictionary(locale).places.place.label} className="border-b border-line">
+    <section aria-label={places.place.label} className="border-b border-line">
       <Container>
         <ul className="grid grid-cols-2 lg:grid-cols-4">
           {facts.map((fact, index) => (
@@ -52,6 +53,7 @@ export function PlaceFacts({ locale }: { locale: Locale }) {
             </li>
           ))}
         </ul>
+        <p className="max-w-[760px] pb-6 text-[14px] leading-relaxed text-muted md:pb-8">{places.factsNote}</p>
       </Container>
     </section>
   )
@@ -68,7 +70,7 @@ export function ChapterPlacesFaq({ locale }: { locale: Locale }) {
         <div className="border-t border-line">
           {copy.items.map((item) => (
             <details key={item.question} className="group border-b border-line">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-4 text-[17px] font-medium text-ink md:py-5 md:text-[18px] [&::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-4 text-[17px] font-medium text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand md:py-5 md:text-[18px] [&::-webkit-details-marker]:hidden">
                 {item.question}
                 <span aria-hidden className="text-[22px] font-normal text-faint transition-transform group-open:rotate-45">
                   +

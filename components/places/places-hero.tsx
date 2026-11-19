@@ -41,6 +41,9 @@ export function PlacesHero({ locale }: { locale: Locale }) {
           <div aria-hidden className="absolute inset-0 bg-[linear-gradient(180deg,rgb(10_30_20/0.15)_0%,rgb(10_30_20/0)_30%,rgb(10_30_20/0.55)_62%,rgb(10_30_20/0.9)_100%)] md:bg-[linear-gradient(90deg,rgb(10_30_20/0.88)_0%,rgb(10_30_20/0.55)_45%,rgb(10_30_20/0)_75%)]" />
           <Container className="relative flex h-full flex-col justify-end pb-[calc(1.5rem+140px)] sm:pb-[calc(3rem+76px)] md:pb-[calc(4.5rem+76px)]">
             <KindBadge kind={IMAGES.hub01.kind} words={dict} className="left-5 top-5 md:left-8 md:top-8" />
+            <p className="absolute left-[3.25rem] top-5 z-10 max-w-[min(280px,calc(100%-5.5rem))] rounded-2xl bg-[rgb(10_30_20/0.72)] px-3 py-1.5 text-[12.5px] leading-snug text-white md:left-[4.5rem] md:top-8 md:max-w-[360px] md:text-[13px]">
+              {copy.caption}
+            </p>
             <div className="flex max-w-[780px] flex-col items-start gap-4 md:gap-5">
               <p className="text-[clamp(1rem,1.6vw,1.375rem)] tracking-[0.01em] text-[#bfd8c8]">{copy.eyebrow}</p>
               <h1 id="orte-title" className="text-[clamp(2.5rem,5vw,4.25rem)] font-medium leading-[1.02] tracking-[-0.035em] text-balance">

@@ -27,7 +27,12 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           ))}
         </div>
         <div className="flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6 text-[13px] text-faint">
-          <p>{text.legal}</p>
+          <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <span>{text.legal}</span>
+            <Link href={`${pageHref('privacy', locale)}#cookies`} className="underline decoration-line underline-offset-4 transition-colors hover:text-ink">
+              {text.cookies}
+            </Link>
+          </p>
           <LanguageLink className="transition-colors hover:text-ink">{text.otherLanguage}</LanguageLink>
         </div>
       </Container>

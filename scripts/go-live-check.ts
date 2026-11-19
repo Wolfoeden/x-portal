@@ -42,7 +42,7 @@ try {
 }
 
 // 6. Produktion muss indexierbar sein und die echte Adresse kennen (Netlify-Umgebung, nicht im Repository).
-blockers.push('Netlify Produktion: SITE_INDEXABLE=true und NEXT_PUBLIC_SITE_URL=https://x-portal.eu setzen und prüfen (hier nicht sichtbar)')
+blockers.push('Netlify Produktion: SITE_INDEXABLE=true nur im Production-Kontext und NEXT_PUBLIC_SITE_URL=https://x-portal.eu setzen. x-portal.eu sendet Stand 19.11.2026 noch noindex. Vorschau-Kontexte bleiben im Code noindex, auch wenn die Variable global true ist (hier nicht sichtbar)')
 
 if (blockers.length) {
   console.log(`Noch nicht bereit für main (${blockers.length}):`)

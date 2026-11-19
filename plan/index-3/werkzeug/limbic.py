@@ -33,9 +33,9 @@ STERNBILD = {'name': 'X-Portal Node001', 'datum': '17.11.2026', 'von': 'Projektl
 # Brücke zu Maslow und M02 (Vorschlag KI) und wie die Website es sagt (Stand 17.11.2026).
 BRUECKE = {
     'Gesundheit': ('Grundbedürfnisse', 'H05 Waschen und duschen, H07 Essen, H08 Gute Luft; Trinkwasseraufbereitung (D61), Sanitär ab Phase 0 (D62)', '„Gesund essen“: Gemüse aus den Hochbeeten, Trinkwasser aus eigener Aufbereitung'),
-    'Sicherheit': ('Sicherheit', 'S04 Privatheit; Versorgung bei Störung (Ast 3): Generator (D59), Wasservorrat 10 Tage (D61), Ofen mit Holzlager (D60), Starlink (D63); Notfallplan', '„Autarke Siedlung“: Kennzahl „Autark“, Szene „Ruhig schlafen“, FAQ zu Stromausfall und Schnee (Vorgabe Projektleitung 17.11.)'),
-    'Effizienz': ('Wertschätzung und Leistung', 'D01 Gleichzeitige Nutzung, D03 Licht, D05 Wärme und Luft am Platz; Internet (D63)', '„Moderne Arbeitsplätze“, schnelles Internet, sichere IT-Umgebung: „Cybersecurity first“ (Vorgabe Projektleitung 17.11.)'),
-    'Freiheit': ('Selbstverwirklichung', 'Arbeitsort frei wählbar: remote, vor Ort oder beides (Whitepaper 04 „Mitarbeiten ohne Ortsbindung“); frei in Arbeit und Tagesablauf (Spielregeln, D36, D38); kommen und länger bleiben (Rollen am Ort)', 'FAQ „Kann ich bei XPORTAL auch arbeiten, ohne vor Ort zu sein?“, „remote von überall“, „Workation oder länger bleiben“; Whitelist: „von Grund auf, Abschnitt für Abschnitt … gestaltet mit“ (Vorgabe Projektleitung 17.11.)'),
+    'Sicherheit': ('Sicherheit', 'S04 Privatheit; Versorgung bei Störung (Ast 3): Generator (D59), Wasservorrat 10 Tage (D61), Ofen mit Holzlager (D60), Starlink (D63); Notfallplan', 'Kennzahl „Mit Reserve“; FAQ Stromausfall: Netz, Generator, Ofen, Brunnen, Starlink als Reserve. Nicht „läuft immer“ und nicht „Off-grid“.'),
+    'Effizienz': ('Wertschätzung und Leistung', 'D01 Gleichzeitige Nutzung, D03 Licht, D05 Wärme und Luft am Platz; Internet (D63)', '„Frei und konzentriert“, kurze Wege, schnelles Internet, „Cybersecurity first“. Arbeitsplätze als Plan, Phase 1.'),
+    'Freiheit': ('Selbstverwirklichung', 'Arbeitsort frei wählbar: remote, vor Ort oder beides (Whitepaper 04 „Mitarbeiten ohne Ortsbindung“); frei in Arbeit und Tagesablauf (Spielregeln, D36, D38); kommen und länger bleiben (Rollen am Ort)', 'Hero „Gesund leben, frei arbeiten.“, Pill „du wählst die Dauer“, Szene 09:30 „Du wählst den Platz“. Feld Abenteuer & Thrill, ohne die Wörter Abenteuer oder Ausflug.'),
     'Natur': ('Grundbedürfnisse und Erholung', 'M02-23 Gemüsegarten, M02-14 Gemeinsamer Weg, Lage am Hang (1.016–1.077 m)', '„Morgen am Hang“, „Draußen sein“; Titel „Ein Tag in der Natur“'),
 }
 
@@ -115,7 +115,7 @@ def html():
     return (CSS + f'<div class="dt-limbic" id="u-limbic"><h4>Limbic Map für Node001: Sternbild „{s["name"]}“ · verbindlich</h4>'
             f'<p>Auswahl der {s["von"]} vom {s["datum"]} im Artefakt <a href="https://claude.ai/artifact/1eTvbSo16JXhi8rvjU85RF" target="_blank" rel="noreferrer">Limbic Sternbild</a>. '
             f'Schwerpunkt: {schwerpunkt()}. <b>Verbindlich für die Planung (Vorgabe der {s["von"]} vom {s["datum"]}):</b> Kommunikation zu Node001 greift diese {len(s["order"])} Begriffe auf: '
-            f'{", ".join(s["order"])}. Stimulanz-Begriffe wie Abenteuer, Neugier oder Ausflug treten zurück; Freiheit steht für freie Wahl von Arbeitsort und Aufenthaltsdauer. '
+            f'{", ".join(s["order"])}. Freiheit liegt auf Dominanz · Abenteuer & Thrill und steht für die freie Wahl von Arbeitsort und Dauer. Die Wörter Abenteuer, Neugier und Ausflug bleiben aus der Werbung, der Schwerpunkt bleibt bei Balance. '
             'Danach richten sich das Wording der Website (Seite Orte, Node001 auf Startseite und Investorenseite) und die <a href="#b-rollen">Rollen am Ort</a>.</p>'
             f'<div class="lm-wrap">{svg()}</div>'
             '<div class="lm-tw"><table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"></colgroup><thead><tr><th>Nr</th><th>Begriff</th><th>Pol · Feld</th><th>Maslow-Bezug (Vorschlag KI)</th><th>Anforderungen und Entscheidungen im Plan</th><th>So sagt es die Website</th></tr></thead><tbody>'

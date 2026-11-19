@@ -1,7 +1,9 @@
 import type { NextConfig } from 'next'
+import { siteIsIndexable } from './lib/site'
 
-// Läuft als Server auf Netlify (Funktionen für /api). Vorschau und Staging senden noindex, bis SITE_INDEXABLE=true gesetzt ist.
-const indexable = process.env.SITE_INDEXABLE === 'true'
+// Läuft als Server auf Netlify (Funktionen für /api).
+// noindex, solange SITE_INDEXABLE nicht true ist. Previews bleiben noindex, auch mit gesetzter Variable.
+const indexable = siteIsIndexable(process.env.CONTEXT, process.env.SITE_INDEXABLE)
 
 const securityHeaders = [
   { key: 'X-Content-Type-Options', value: 'nosniff' },

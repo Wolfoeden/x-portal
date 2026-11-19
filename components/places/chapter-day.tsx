@@ -11,10 +11,11 @@ import { IDS, type Locale } from '@/lib/i18n/routes'
  * „Ein Tag auf Node001“ (17.11.2026): das StoryBrand-Erfolgsbild als Tagesablauf, statt der Angebotskarten.
  * Wording nach dem Limbic-Sternbild „X-Portal Node001“ (Projektleitung, 17.11.2026; Index 3.0, Limbic Map beim Maslow-Teil):
  *   07:00 Morgen am Hang         Natur                    (Balance · Fantasie & Genuss)
- *   09:30 Konzentriert arbeiten  Effizienz                (Dominanz · Disziplin & Kontrolle)
+ *   09:30 Frei und konzentriert  Effizienz, Freiheit      (Dominanz · Disziplin & Kontrolle / Abenteuer & Thrill)
  *   13:00 Gesund essen           Gesundheit               (Balance · Disziplin & Kontrolle)
  *   17:00 Draußen sein           Gesundheit, Natur        (Balance)
  *   20:00 Ruhig schlafen         Sicherheit               (Balance · Disziplin & Kontrolle)
+ * Freiheit ist die freie Wahl von Platz und Dauer, nicht Abenteuerurlaub. Schwerpunkt bleibt 3 × Balance, 2 × Dominanz.
  * Fakten nur nach Plan: Kommunalgebäude (D64), Feuerstelle (D34), Sauna (D35), Gemüsegarten (M02-23) in Phase 1; Internet mit Starlink als Reserve (D63);
  * Trinkwasseraufbereitung (D61), Holz für den Winter (D60), Generator als Reserve (D59).
  */

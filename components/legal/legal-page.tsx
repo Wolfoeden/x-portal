@@ -39,7 +39,7 @@ export function LegalPage({ locale, kind }: { locale: Locale; kind: 'imprint' | 
           </p>
           <div className="mt-12 flex flex-col">
             {copy.sections.map((section) => (
-              <section key={section.title} className="grid grid-cols-[minmax(0,1fr)] gap-2 border-t border-line py-6 md:grid-cols-[220px_minmax(0,1fr)] md:gap-8">
+              <section id={section.title.startsWith('Cookies') ? 'cookies' : undefined} key={section.title} className="grid grid-cols-[minmax(0,1fr)] gap-2 border-t border-line py-6 md:grid-cols-[220px_minmax(0,1fr)] md:gap-8">
                 <h2 className="text-[16px] font-medium text-ink">{section.title}</h2>
                 <div className="flex flex-col gap-3 text-[15.5px] leading-relaxed text-muted">
                   {section.lines.map((line) => (

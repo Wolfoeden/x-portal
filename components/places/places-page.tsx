@@ -21,7 +21,7 @@ function ChapterWaitlist({ locale }: { locale: Locale }) {
     <section id={IDS[locale].waitlist} aria-labelledby="warteliste-title" className="scroll-mt-16 bg-brand-deep text-white">
       <Container className="grid grid-cols-[minmax(0,1fr)] items-start gap-10 py-14 md:gap-14 md:py-32 lg:grid-cols-2">
         <div className="flex flex-col gap-5">
-          <ChapterLabel number="04" tone="light">
+          <ChapterLabel number="03" tone="light">
             {copy.label}
           </ChapterLabel>
           <h2 id="warteliste-title" className={`${chapterTitle} text-white`}>
