@@ -14,7 +14,7 @@ const easeInOut = (t: number) => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2,
 /**
  * E-Mail-Feld im Hero, ganz an der Scrollposition ausgerichtet (rückwärts läuft alles zurück):
  * erst unter dem Bild, dann gleitet es oben mitlaufend auf die rechte Seite,
- * über der Karte (Westukraine) wird es kleiner und verschwindet. Danach taucht es in „Ein Ort. Für Dich.“ links wieder auf (ReappearEmail).
+ * über der Karte (Westukraine) wird es kleiner und verschwindet. Danach taucht es in „Ein Ort. Für dich.“ links wieder auf (ReappearEmail).
  */
 export function StickyEmail({ children }: { children: ReactNode }) {
   const outer = useRef<HTMLDivElement>(null)
@@ -75,7 +75,7 @@ export function StickyEmail({ children }: { children: ReactNode }) {
   )
 }
 
-/** Das E-Mail-Feld taucht links über „Ein Ort. Für Dich.“ wieder auf, wenn der Abschnitt hereinscrollt, und bleibt dann dort stehen. */
+/** Das E-Mail-Feld taucht links über „Ein Ort. Für dich.“ wieder auf, wenn der Abschnitt hereinscrollt, und bleibt dann dort stehen. */
 export function ReappearEmail({ children }: { children: ReactNode }) {
   const outer = useRef<HTMLDivElement>(null)
 

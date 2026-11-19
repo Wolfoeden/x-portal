@@ -513,7 +513,7 @@ export const de = {
   // Plan: eintragen → Infos zu Konditionen → einziehen, sobald eine Wohneinheit frei ist. Du-Form wie bisher. Kein Verkauf (D45, D48).
   // Seit 17.11.2026 steht auf der Website nichts von Miete (Vorgabe Roman); Konditionen nennen wir in der Whitelist.
   places: {
-    sectionNav: { label: 'Auf dieser Seite', items: typed<{ label: string; anchor: IdKey }[]>([{ label: 'Der Ort', anchor: 'place' }, { label: 'Ein Tag', anchor: 'day' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Fragen', anchor: 'faq' }]) },
+    sectionNav: { label: 'Auf dieser Seite', items: typed<{ label: string; anchor: IdKey }[]>([{ label: 'Der Ort', anchor: 'place' }, { label: 'Fahrplan', anchor: 'plan' }, { label: 'Ein Tag', anchor: 'day' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Investoren', anchor: 'placeInvestors' }, { label: 'Fragen', anchor: 'faq' }]) },
     hero: {
       label: 'Node001',
       region: 'Karpaten, Westukraine',
@@ -526,7 +526,7 @@ export const de = {
       submit: 'Interesse vormerken',
       mapLabel: 'Europakarte mit Geländehöhen. Node001 liegt in den Karpaten der Westukraine.',
       hubName: 'Node001 · Westukraine',
-      hubStatus: 'Baubeginn 2027 · Ziel',
+      hubStatus: 'Ziele, keine Zusagen',
       imageAlt: 'Drohnenfoto des Grundstücks: grüner Hang in den Karpaten, dazwischen einzelne Wohneinheiten zwischen Fichten und Birken, mit KI eingesetzt',
     },
     aiImage: 'Drohnenfoto unseres Grundstücks in der Natur. Gebäude mit KI eingesetzt, keine finale Planung.',
@@ -536,9 +536,9 @@ export const de = {
     place: {
       label: 'Der Ort',
       titleGray: 'Ein Ort.',
-      title: 'Für Dich.',
+      title: 'Für dich.',
       imageAlt: 'Drohnenfoto des Hangs mit KI eingesetztem Kommunalgebäude: dunkle Fassade, große Fenster, überdachte Terrasse, dahinter Fichten und das Tal',
-      text: 'Remote arbeiten geht überall. Einen Ort, an dem du gesund, sicher und frei lebst und konzentriert arbeitest, mitten in der Natur, gibt es selten. Genau das planen wir auf Node001.',
+      text: 'Remote arbeiten geht überall. Einen Ort, an dem du gesund, sicher und frei lebst und konzentriert arbeitest, mitten in der Natur, gibt es selten. Genau das planen wir auf Node001. Die Lage ist abgeschieden, mit Notfallplan und Reserve für Strom, Wärme, Wasser und Internet. Kurze Wege und eine gemeinsame Infrastruktur halten die Arbeit fokussiert.',
     },
     facts: [
       { value: '2 ha', text: 'eigenes Grundstück' },
@@ -553,7 +553,7 @@ export const de = {
       text: 'So stellen wir uns einen Tag vor. Kommunalgebäude, Feuerstelle und Sauna entstehen in Phase 1.',
       scenes: [
         { time: '07:00', title: 'Morgen am Hang.', text: 'Du trittst auf deine Terrasse. Vor dir Wald und Wiese, unten im Tal zieht der Nebel ab.', imageAlt: 'Drohnenfoto mit KI eingesetzter Wohneinheit: dunkel, große Fenster, Terrasse auf Stützen am Waldrand' },
-        { time: '09:30', title: 'Frei und konzentriert.', text: 'Du wählst den Platz: Terrasse, Kommunalgebäude oder remote. Kurze Wege, schnelles Internet. Cybersecurity first.', imageAlt: 'Schaubild: Kommunalgebäude aus Holz mit Glasfront und Terrasse am Hang, im Tal Nebel über den Karpaten' },
+        { time: '09:30', title: 'Frei und konzentriert.', text: 'Du wählst den Platz: Terrasse, Kommunalgebäude oder remote. Kurze Wege, schnelles Internet. Schnelles, sicheres Netz.', imageAlt: 'Schaubild: Kommunalgebäude aus Holz mit Glasfront und Terrasse am Hang, im Tal Nebel über den Karpaten' },
         { time: '13:00', title: 'Gesund essen.', text: 'Gemüse aus den Hochbeeten, gekocht in der gemeinsamen Küche. Das Wasser kommt aus der eigenen Trinkwasseraufbereitung.', imageAlt: '' },
         { time: '17:00', title: 'Draußen sein.', text: 'Ein Gang über den Hang, Holz für den Winter, Arbeit im Garten. Bewegung gehört hier zum Tag.', imageAlt: '' },
         { time: '20:00', title: 'Ruhig schlafen.', text: 'Sauna oder Feuerstelle, dann Ruhe. Autark geplant, mit Reserve für Strom, Wärme und Wasser.', imageAlt: 'Schaubild des Zielbilds am Abend: Wohneinheiten aus Holz am Hang, in der Mitte das Kommunalgebäude mit beleuchteter Terrasse' },
@@ -591,6 +591,39 @@ export const de = {
       expiredTitle: 'Der Link gilt nicht mehr.',
       expiredText: 'Er ist abgelaufen oder wurde schon benutzt. Trag dich einfach noch einmal ein.',
       again: 'Andere E-Mail',
+    },
+    timeline: {
+      label: 'Fahrplan',
+      title: 'In Stufen. Als Ziel.',
+      note: 'Termine sind Ziele, keine Zusagen.',
+      phases: [
+        { state: 'Erledigt', items: ['Grundstück, 2 ha', 'Detail- und Bebauungsplan', 'Drohnenaufnahmen'] },
+        { state: 'Läuft', items: ['Geologische Untersuchung', 'Angebote für Modulhäuser', 'Rechtliche Struktur'] },
+        { state: 'Stufe 0', items: ['Container', 'Erste Bewohner', 'Baubeginn 2027 als Ziel'] },
+        { state: 'Stufe 1', items: ['Wohneinheiten und Häuser', 'Kommunalgebäude', 'Sauna'] },
+      ],
+    },
+    forInvestors: {
+      label: 'Für Investoren',
+      title: 'Das Gespräch.',
+      text: 'Node001 ist der erste Ort von XPORTAL. Hier arbeiten Teams aus digitalen Nomaden mit KI-Know-how für Unternehmen.',
+      whyTitle: 'Warum dieser Ort',
+      why: 'Abgeschiedene Lage in den Karpaten, eigenes Grundstück, Versorgung mit Reserve.',
+      needTitle: 'Welcher Bedarf',
+      need: '⟦Platzhalter Bedarf in Zahlen⟧',
+      stagesTitle: 'Stufen',
+      stages: 'Der Fahrplan zeigt, was erledigt ist, was läuft und was Ziel ist.',
+      stagesLink: 'Zum Fahrplan',
+      capitalTitle: 'Kapital',
+      capital: '⟦Platzhalter Kapital und Bewertung⟧ Keine Zusage zu Konditionen oder Ertrag.',
+      teamTitle: 'Team',
+      people: [
+        { name: 'Paul Dering', role: 'CEO' },
+        { name: 'Roman Dering', role: 'Produkt' },
+      ],
+      photo: '⟦Platzhalter Foto folgt⟧',
+      cta: 'Investorengespräch anfragen',
+      note: 'Kein Angebot von Wertpapieren oder Vermögensanlagen.',
     },
     faq: {
       title: 'Häufige Fragen.',
@@ -1077,8 +1110,8 @@ export const de = {
       title: 'Was schon steht.',
       text: 'Stand: 17. November 2026.',
       columns: [
-        { title: 'Vorhanden', live: true, items: ['Plattform und Technik im Betrieb', 'ISMS-App im Pilot mit Kunden', 'Grundstück, 2 ha, mit Bebauungsplan', 'Geologiebericht, fachlich geprüft'] },
-        { title: 'In Arbeit', live: false, items: ['Bauplanung der ersten Wohneinheit', 'Whitelist, startet mit der Website', 'Rechtsprüfung des Nutzungsmodells'] },
+        { title: 'Vorhanden', live: true, items: ['Plattform und Technik im Betrieb', 'ISMS-App im Pilot mit Kunden', 'Grundstück, 2 ha, mit Bebauungsplan', 'Drohnenfotos des Hangs'] },
+        { title: 'In Arbeit', live: false, items: ['Geologische Untersuchung läuft', 'Bauplanung der ersten Wohneinheit', 'Whitelist, startet mit der Website', 'Rechtsprüfung des Nutzungsmodells'] },
         { title: 'Offen', live: false, items: ['Selbstkosten je Wohneinheit', 'Gesellschaft und Finanzierung'] },
       ],
       tech: {
@@ -1182,9 +1215,9 @@ export const de = {
   transparency: {
     label: 'Transparenz',
     title: 'Was echt ist, was geplant.',
-    text: 'Echt sind das Grundstück, Detail- und Bebauungsplan, der Geologiebericht und die Drohnenfotos. Geplant sind alle Gebäude, die Ausstattung und alle Termine. Jedes Bild sagt mit einem kleinen i, wie es entstanden ist.',
-    real: { title: 'Echt und belegt', items: ['Grundstück, 2 ha, in unserem Besitz', 'Detail- und Bebauungsplan', 'Geologiebericht mit Fachprüfung und Vermessung', 'Drohnenfotos des Hangs'] },
-    planned: { title: 'Geplant', items: ['Alle Gebäude auf den Bildern', 'Wohneinheiten, Kommunalgebäude, Ausstattung', 'Termine: Ziele, keine Zusagen', 'Konditionen: folgen aus den Selbstkosten'] },
+    text: 'Echt sind das Grundstück, Detail- und Bebauungsplan und die Drohnenfotos. Die geologische Untersuchung läuft. Geplant sind alle Gebäude, die Ausstattung und alle Termine. Jedes Bild sagt mit einem kleinen i, wie es entstanden ist.',
+    real: { title: 'Echt und belegt', items: ['Grundstück, 2 ha, in unserem Besitz', 'Detail- und Bebauungsplan', 'Drohnenfotos des Hangs'] },
+    planned: { title: 'Geplant oder laufend', items: ['Geologische Untersuchung läuft. Ergebnis voraussichtlich Ende November 2026.', 'Alle Gebäude auf den Bildern', 'Wohneinheiten, Kommunalgebäude, Ausstattung', 'Termine: Ziele, keine Zusagen', 'Konditionen: folgen aus den Selbstkosten'] },
     imagesTitle: 'Bildnachweis',
     imagesText: 'Gebäude in Drohnenfotos und alle Schaubilder sind mit einem KI-Bildwerkzeug erstellt. Sie zeigen keine finale Planung.',
     kinds: { drone: 'Drohnenfoto des Grundstücks, Gebäude mit KI eingesetzt', render: 'Schaubild, vollständig mit KI erstellt' },

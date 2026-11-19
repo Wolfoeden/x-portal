@@ -12,9 +12,6 @@ import type { Locale } from '@/lib/i18n/routes'
 
 // Kartenausschnitt: ganz Europa, oben etwas Luft für die hohen Blöcke in Skandinavien.
 const VIEW = { x: 0, y: -50, width: MAP.width, height: MAP.height + 50 }
-const leftOf = (x: number) => `${((x - VIEW.x) / VIEW.width) * 100}%`
-const topOf = (y: number) => `${((y - VIEW.y) / VIEW.height) * 100}%`
-
 /**
  * Hero der Seite Orte wie das Vorschaubild beim Teilen: Drohnenbild über die ganze Breite, links abgedunkelt,
  * darauf „Node001 · Westukraine“, die Überschrift und der Weg zur Warteliste. Darunter läuft das E-Mail-Feld mit, dann die Höhenkarte.
@@ -67,13 +64,6 @@ export function PlacesHero({ locale }: { locale: Locale }) {
               <circle cx={hub.x} cy={hub.top} r="20" fill="none" stroke="#fff" strokeWidth="2.5" className="hub-pulse" />
               <circle cx={hub.x} cy={hub.top} r="11" fill="#fff" />
             </svg>
-            <div
-              className="pointer-events-none absolute hidden whitespace-nowrap rounded-2xl bg-white px-3.5 py-2.5 text-ink shadow-[0_24px_48px_-24px_rgb(0_0_0/0.5)] md:block"
-              style={{ left: `calc(${leftOf(hub.x)} - 250px)`, top: `calc(${topOf(hub.top)} - 104px)` }}
-            >
-              <p className="text-[14px] font-medium">{copy.hubName}</p>
-              <p className="text-[12.5px] text-muted">{copy.hubStatus}</p>
-            </div>
           </figure>
           <div className="flex flex-col gap-4">
             <p className="text-[13px] tracking-[0.02em] text-[#bfd8c8]">{copy.label}</p>

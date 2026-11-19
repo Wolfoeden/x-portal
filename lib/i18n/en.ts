@@ -499,7 +499,7 @@ export const en: Dictionary = {
   },
 
   places: {
-    sectionNav: { label: 'On this page', items: [{ label: 'The place', anchor: 'place' }, { label: 'A day', anchor: 'day' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Questions', anchor: 'faq' }] },
+    sectionNav: { label: 'On this page', items: [{ label: 'The place', anchor: 'place' }, { label: 'Plan', anchor: 'plan' }, { label: 'A day', anchor: 'day' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Investors', anchor: 'placeInvestors' }, { label: 'Questions', anchor: 'faq' }] },
     hero: {
       label: 'Node001',
       region: 'Carpathians, western Ukraine',
@@ -512,7 +512,7 @@ export const en: Dictionary = {
       submit: 'Register interest',
       mapLabel: 'Map of Europe with terrain height. Node001 is in the Carpathians of western Ukraine.',
       hubName: 'Node001 · Western Ukraine',
-      hubStatus: 'Construction 2027 · target',
+      hubStatus: 'Goals, not promises',
       imageAlt: 'Drone photo of the site: green slope in the Carpathians with single living units between spruces and birches, added with AI',
     },
     aiImage: 'Drone photo of our site in nature. Buildings were added with AI and are not final plans.',
@@ -524,7 +524,7 @@ export const en: Dictionary = {
       titleGray: 'A place.',
       title: 'For you.',
       imageAlt: 'Drone photo of the slope with a community building added with AI: dark facade, large windows, covered terrace, spruces and the valley behind',
-      text: 'Remote work is possible anywhere. A place where you live healthily, safely and freely, and work with focus, surrounded by nature, is rare. That is what we are planning on Node001.',
+      text: 'Remote work is possible anywhere. A place where you live healthily, safely and freely, and work with focus, surrounded by nature, is rare. That is what we are planning on Node001. The setting is remote, with an emergency plan and backup for power, heat, water and internet. Short distances and shared infrastructure keep the work focused.',
     },
     facts: [
       { value: '2 ha', text: 'our own site' },
@@ -538,7 +538,7 @@ export const en: Dictionary = {
       text: 'This is how we picture a day. The community building, fire pit and sauna come in phase 1.',
       scenes: [
         { time: '07:00', title: 'Morning on the slope.', text: 'You step onto your terrace. Forest and meadow in front of you, mist lifting in the valley below.', imageAlt: 'Drone photo with a living unit added with AI: dark, large windows, a terrace on stilts at the edge of the forest' },
-        { time: '09:30', title: 'Free and focused.', text: 'You choose the spot: terrace, community building or remote. Short distances, fast internet. Cybersecurity first.', imageAlt: 'Visualisation: timber community building with a glass front and terrace on the slope, mist over the Carpathians in the valley' },
+        { time: '09:30', title: 'Free and focused.', text: 'You choose the spot: terrace, community building or remote. Short distances, fast internet. Fast, secure network.', imageAlt: 'Visualisation: timber community building with a glass front and terrace on the slope, mist over the Carpathians in the valley' },
         { time: '13:00', title: 'Eat well.', text: 'Vegetables from the raised beds, cooked in the shared kitchen. The water comes from our own drinking-water treatment.', imageAlt: '' },
         { time: '17:00', title: 'Time outside.', text: 'A walk across the slope, wood for the winter, work in the garden. Moving is part of the day here.', imageAlt: '' },
         { time: '20:00', title: 'Sleep soundly.', text: 'Sauna or fire pit, then quiet. Planned to be self-sufficient, with backup for power, heat and water.', imageAlt: 'Visualisation of the target picture in the evening: timber living units on the slope, the community building with a lit terrace in the middle' },
@@ -576,6 +576,39 @@ export const en: Dictionary = {
       expiredTitle: 'This link is no longer valid.',
       expiredText: 'It has expired or has already been used. Simply register again.',
       again: 'Different email',
+    },
+    timeline: {
+      label: 'Plan',
+      title: 'In stages. As a target.',
+      note: 'Dates are goals, not promises.',
+      phases: [
+        { state: 'Done', items: ['Site of 2 ha', 'Detailed and zoning plan', 'Drone photos'] },
+        { state: 'Under way', items: ['Geological survey', 'Offers for modular houses', 'Legal structure'] },
+        { state: 'Stage 0', items: ['Container', 'First residents', 'Construction start 2027 as a target'] },
+        { state: 'Stage 1', items: ['Living units and houses', 'Community building', 'Sauna'] },
+      ],
+    },
+    forInvestors: {
+      label: 'For investors',
+      title: 'The conversation.',
+      text: 'Node001 is the first place of XPORTAL. Teams of digital nomads with AI skills work here for companies.',
+      whyTitle: 'Why this place',
+      why: 'A remote setting in the Carpathians, our own site, supply with backup.',
+      needTitle: 'What demand',
+      need: '⟦Placeholder demand in numbers⟧',
+      stagesTitle: 'Stages',
+      stages: 'The plan shows what is done, what is under way and what is a target.',
+      stagesLink: 'To the plan',
+      capitalTitle: 'Capital',
+      capital: '⟦Placeholder capital and valuation⟧ No promise on terms or return.',
+      teamTitle: 'Team',
+      people: [
+        { name: 'Paul Dering', role: 'CEO' },
+        { name: 'Roman Dering', role: 'Product' },
+      ],
+      photo: '⟦Placeholder photo to follow⟧',
+      cta: 'Request an investor conversation',
+      note: 'Not an offer of securities or investment products.',
     },
     faq: {
       title: 'Frequently asked questions.',
@@ -1056,8 +1089,8 @@ export const en: Dictionary = {
       title: 'What already stands.',
       text: 'As of 17 November 2026.',
       columns: [
-        { title: 'In place', live: true, items: ['Platform and technology in operation', 'ISMS app in a pilot with clients', 'Site of 2 ha with zoning plan', 'Geological report, expert-reviewed'] },
-        { title: 'In progress', live: false, items: ['Planning of the first living unit', 'Whitelist, starting with the website', 'Legal review of the usage model'] },
+        { title: 'In place', live: true, items: ['Platform and technology in operation', 'ISMS app in a pilot with clients', 'Site of 2 ha with zoning plan', 'Drone photos of the slope'] },
+        { title: 'In progress', live: false, items: ['Geological survey under way', 'Planning of the first living unit', 'Whitelist, starting with the website', 'Legal review of the usage model'] },
         { title: 'Open', live: false, items: ['Cost per living unit', 'Company and financing'] },
       ],
       tech: {
@@ -1161,9 +1194,9 @@ export const en: Dictionary = {
   transparency: {
     label: 'Transparency',
     title: 'What is real, what is planned.',
-    text: 'Real are the site, the detailed and zoning plan, the geological report and the drone photos. Planned are all buildings, the equipment and all dates. Every image says with a small i how it was made.',
-    real: { title: 'Real and documented', items: ['Site of 2 ha, owned by us', 'Detailed and zoning plan', 'Geological report with expert review and survey', 'Drone photos of the slope'] },
-    planned: { title: 'Planned', items: ['All buildings in the images', 'Living units, community building, equipment', 'Dates: goals, not promises', 'Terms: follow from the cost per unit'] },
+    text: 'Real are the site, the detailed and zoning plan and the drone photos. The geological survey is under way. Planned are all buildings, the equipment and all dates. Every image says with a small i how it was made.',
+    real: { title: 'Real and documented', items: ['Site of 2 ha, owned by us', 'Detailed and zoning plan', 'Drone photos of the slope'] },
+    planned: { title: 'Planned or under way', items: ['Geological survey under way. Results expected around the end of November 2026.', 'All buildings in the images', 'Living units, community building, equipment', 'Dates: goals, not promises', 'Terms: follow from the cost per unit'] },
     imagesTitle: 'Image credits',
     imagesText: 'Buildings in drone photos and all visualisations were made with an AI image tool. They do not show final plans.',
     kinds: { drone: 'Drone photo of the site, buildings added with AI', render: 'Visualisation, fully created with AI' },
