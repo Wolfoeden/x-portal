@@ -5,6 +5,9 @@ import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { PlacesHero } from '@/components/places/places-hero'
 import { ChapterPlace, ChapterPlacesFaq, PlaceFacts } from '@/components/places/places-chapters'
+import { SupplyBoard } from '@/components/places/supply-board'
+import { SafetyLayers } from '@/components/places/safety-layers'
+import { Constellation } from '@/components/places/constellation'
 import { PlacesTimeline } from '@/components/places/places-plan'
 import { DetailPlan } from '@/components/places/detail-plan'
 import { ChapterDay } from '@/components/places/chapter-day'
@@ -65,9 +68,12 @@ export function PlacesPage({ locale }: { locale: Locale }) {
           <SectionNav locale={locale} {...getDictionary(locale).places.sectionNav} />
           <ChapterPlace locale={locale} />
           <PlaceFacts locale={locale} />
+          <SupplyBoard locale={locale} />
+          <SafetyLayers />
           <PlacesTimeline locale={locale} />
           <DetailPlan />
           <ChapterDay locale={locale} />
+          <Constellation />
           <ChapterWaitlist locale={locale} />
           <ChapterPlacesFaq locale={locale} />
           <Transparency locale={locale} page="places" compact />

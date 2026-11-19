@@ -1,6 +1,8 @@
 import { SiteHeader } from '@/components/site/site-header'
 import { SiteFooter } from '@/components/site/site-footer'
 import { StoryProvider } from '@/components/story/story-context'
+import { MissionSystem } from '@/components/story/mission-system'
+import { GlobalPath } from '@/components/story/global-path'
 import { Opener } from '@/components/story/opener'
 import { ChapterReasons } from '@/components/story/chapter-reasons'
 import { ChapterWorkspace } from '@/components/story/chapter-workspace'
@@ -23,11 +25,13 @@ export async function HomePage({ locale }: { locale: Locale }) {
       <JsonLd data={pageLd('home', locale)} />
       <SiteHeader />
       <main>
+        <MissionSystem />
         <Opener pool={pool} />
         <ChapterReasons />
         <ChapterWorkspace />
         <ChapterEurope />
         <ChapterHubs relief={<ReliefLayer focus={HUB_01} animate={false} />} hub={reliefPoint(HUB_01[0], HUB_01[1])} />
+        <GlobalPath locale={locale} />
         <ChapterDoors locale={locale} />
         <ChapterTeam locale={locale} />
       </main>

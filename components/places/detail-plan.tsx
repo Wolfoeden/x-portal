@@ -8,16 +8,7 @@ import { useLocale } from '@/components/i18n/locale-provider'
 import { IMAGES } from '@/lib/images'
 import { PLAN_MARKS, PLAN_VIEW } from '@/components/places/plan-marks'
 
-// Lagen auf dem beschnittenen Plan (Stempel und Unterschriften sind nicht im Bild). Anteile in Prozent.
-const SPOTS = [
-  { id: 'houses', x: 43.8, y: 44.2 },
-  { id: 'admin', x: 67.4, y: 64.4 },
-  { id: 'view', x: 52.4, y: 35.8 },
-  { id: 'plant', x: 36.4, y: 48.1 },
-  { id: 'paths', x: 52.3, y: 59.4 },
-] as const
-
-function PlanFigure({ active, onSelect, enlarged = false }: { active: string | null; onSelect: (id: string) => void; enlarged?: boolean }) {
+function PlanFigure({ active, enlarged = false }: { active: string | null; enlarged?: boolean }) {
   const { dict } = useLocale()
   const copy = dict.places.detailPlan
   return (
@@ -45,24 +36,6 @@ function PlanFigure({ active, onSelect, enlarged = false }: { active: string | n
         </g>
       </svg>
       {enlarged ? null : <KindBadge kind="plan" words={dict.places} className="left-3 top-3" />}
-      {copy.spots.map((item, index) => {
-        const spot = SPOTS.find((entry) => entry.id === item.id)
-        if (!spot) return null
-        const on = active === item.id
-        return (
-          <button
-            key={item.id}
-            type="button"
-            aria-pressed={on}
-            aria-label={item.title}
-            onClick={() => onSelect(item.id)}
-            className={`absolute grid size-8 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full text-[13px] font-medium shadow-[0_8px_20px_-10px_rgb(0_0_0/0.7)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${on ? 'bg-brand text-white' : 'bg-white text-ink'}`}
-            style={{ left: `${spot.x}%`, top: `${spot.y}%` }}
-          >
-            {index + 1}
-          </button>
-        )
-      })}
     </div>
   )
 }
@@ -99,7 +72,7 @@ export function DetailPlan() {
         <div className="mt-3 lg:grid lg:grid-cols-[minmax(0,63%)_minmax(240px,1fr)] lg:items-start lg:gap-4">
           <div className="lg:sticky lg:top-16">
             <figure className="overflow-hidden rounded-[28px] border border-line bg-white">
-              <PlanFigure active={active} onSelect={choose} />
+              <PlanFigure active={active} />
               <figcaption className="flex items-center justify-between gap-3 border-t border-line px-4 py-2.5">
                 <span className="text-[13px] leading-snug text-muted">{dict.places.planImage}</span>
                 <button
@@ -122,7 +95,7 @@ export function DetailPlan() {
                 >
                   {copy.reset}
                 </button>
-                {copy.spots.map((spot, index) => {
+                {copy.spots.map((spot) => {
                   const on = active === spot.id
                   return (
                     <button
@@ -132,7 +105,7 @@ export function DetailPlan() {
                       onClick={() => choose(spot.id)}
                       className={`shrink-0 rounded-full border px-3 py-1.5 text-[13px] font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${on ? 'border-brand bg-brand text-white' : 'border-line bg-white text-ink'}`}
                     >
-                      {index + 1} {spot.title}
+                      {spot.title}
                     </button>
                   )
                 })}
@@ -149,8 +122,8 @@ export function DetailPlan() {
             >
               {copy.reset}
             </button>
-            <ol className="flex flex-col gap-2">
-              {copy.spots.map((spot, index) => {
+            <ul className="flex flex-col gap-2">
+              {copy.spots.map((spot) => {
                 const on = active === spot.id
                 return (
                   <li key={spot.id}>
@@ -158,18 +131,15 @@ export function DetailPlan() {
                       type="button"
                       aria-pressed={on}
                       onClick={() => choose(spot.id)}
-                      className={`flex w-full gap-3 rounded-2xl border px-3.5 py-2.5 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${on ? 'border-brand bg-brand-soft' : 'border-line bg-white'}`}
+                      className={`flex w-full flex-col gap-0.5 rounded-2xl border px-3.5 py-2.5 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${on ? 'border-brand bg-brand-soft' : 'border-line bg-white'}`}
                     >
-                      <span className={`grid size-7 shrink-0 place-items-center rounded-full text-[13px] font-medium ${on ? 'bg-brand text-white' : 'bg-surface text-ink'}`}>{index + 1}</span>
-                      <span className="flex min-w-0 flex-col gap-0.5">
-                        <span className="text-[15px] font-medium text-ink">{spot.title}</span>
-                        <span className="text-[13px] leading-snug text-muted">{spot.text}</span>
-                      </span>
+                      <span className="text-[15px] font-medium text-ink">{spot.title}</span>
+                      <span className="text-[13px] leading-snug text-muted">{spot.text}</span>
                     </button>
                   </li>
                 )
               })}
-            </ol>
+            </ul>
           </div>
         </div>
       </Container>
@@ -181,7 +151,7 @@ export function DetailPlan() {
           </button>
         </div>
         <div className="overflow-auto">
-          <PlanFigure active={active} onSelect={choose} enlarged />
+          <PlanFigure active={active} enlarged />
         </div>
       </dialog>
     </section>

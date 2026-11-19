@@ -225,13 +225,13 @@ export function Opener({ pool = [] }: { pool?: Talent[] }) {
         <Container className="grid min-h-[calc(100svh-4rem)] grid-cols-[minmax(0,1fr)] content-center gap-8 pb-16 pt-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-x-10 lg:gap-y-0 lg:pb-16 lg:pt-4">
           <div className="flex flex-col lg:col-start-1 lg:row-start-1 lg:self-end">
             {/* „One sentence.“ ist breiter als „Ein Satz.“: auf schmalen Handys (360 px) wird Englisch etwas kleiner, Deutsch bleibt gleich. */}
-            <h1
+            <h2
               id="opener-title"
               className={`${locale === 'en' ? 'text-[clamp(min(3.25rem,13.5vw),7.2vw,6.5rem)]' : 'text-[clamp(3.25rem,7.2vw,6.5rem)]'} font-medium leading-[0.94] tracking-[-0.045em] text-ink`}
             >
               <span className="block text-[#7c847f]">{copy.titleGray}</span>
               <span className="block">{copy.title}</span>
-            </h1>
+            </h2>
 
             <form onSubmit={onSubmit} className="mt-10 w-full max-w-[600px] lg:mt-12">
               <label htmlFor={inputId} className="sr-only">

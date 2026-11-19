@@ -513,7 +513,7 @@ export const de = {
   // Plan: eintragen → Infos zu Konditionen → einziehen, sobald eine Wohneinheit frei ist. Du-Form wie bisher. Kein Verkauf (D45, D48).
   // Seit 17.11.2026 steht auf der Website nichts von Miete (Vorgabe Roman); Konditionen nennen wir in der Whitelist.
   places: {
-    sectionNav: { label: 'Auf dieser Seite', items: typed<{ label: string; anchor: IdKey }[]>([{ label: 'Der Ort', anchor: 'place' }, { label: 'Fahrplan', anchor: 'plan' }, { label: 'Der Plan', anchor: 'detail' }, { label: 'Ein Tag', anchor: 'day' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Fragen', anchor: 'faq' }]) },
+    sectionNav: { label: 'Auf dieser Seite', items: typed<{ label: string; anchor: IdKey }[]>([{ label: 'Der Ort', anchor: 'place' }, { label: 'Versorgung', anchor: 'supply' }, { label: 'Schutz', anchor: 'safety' }, { label: 'Sternbild', anchor: 'stars' }, { label: 'Fahrplan', anchor: 'plan' }, { label: 'Der Plan', anchor: 'detail' }, { label: 'Ein Tag', anchor: 'day' }, { label: 'Whitelist', anchor: 'waitlist' }, { label: 'Fragen', anchor: 'faq' }]) },
     hero: {
       label: 'Node001',
       region: 'Karpaten, Westukraine',
@@ -548,6 +548,50 @@ export const de = {
       { value: 'Autark', text: 'Strom, Wärme, Wasser, Internet' },
       { value: '2027', text: 'Baubeginn als Ziel' },
     ],
+    supply: {
+      label: 'Versorgung',
+      title: 'Autark geplant.',
+      badge: 'Zielbild',
+      text: 'So soll die Versorgung aussehen. Gemessen ist noch nichts, in Betrieb auch nicht.',
+      sourceLabel: 'Quelle',
+      reserveLabel: 'Reserve',
+      items: [
+        { id: 'power', title: 'Strom', source: 'Stromnetz', reserve: 'Generator' },
+        { id: 'heat', title: 'Wärme', source: 'Ofen', reserve: 'Noch keine zweite Quelle' },
+        { id: 'water', title: 'Wasser', source: 'Eigener Brunnen', reserve: 'Trinkwasseraufbereitung' },
+        { id: 'net', title: 'Internet', source: 'Anbieter vor Ort', reserve: 'Starlink' },
+      ],
+    },
+    safety: {
+      label: 'Sicherheit',
+      title: 'Von außen nach innen.',
+      text: 'Fünf Schichten, die wir planen. Keine davon ist eine Garantie.',
+      faqNote: 'Zur Reisewarnung steht die Antwort bei den Fragen.',
+      layers: [
+        { id: 'site', title: 'Lage', text: 'Abgeschieden in den Karpaten. Abgeschieden heißt nicht abgeschnitten.' },
+        { id: 'reserve', title: 'Reserve', text: 'Strom, Wärme, Wasser und Internet mit Reserve. Das bleibt ein Zielbild.' },
+        { id: 'plan', title: 'Notfallplan', text: 'Den Plan legen wir offen, bevor jemand einzieht.' },
+        { id: 'it', title: 'Sichere IT', text: 'Kundendaten nur vor Ort. Remote arbeitet mit Testdaten.' },
+        { id: 'access', title: 'Zugang', text: 'Wer kommt, ist bekannt. Das klären wir vor dem Einzug.' },
+      ],
+    },
+    stars: {
+      label: 'X-Portal Node001',
+      title: 'Was zählt für dich?',
+      note: 'Schwerpunkt: dreimal Balance, zweimal Dominanz.',
+      hint: 'Wähle einen Wert. Das Sternbild zeigt, wie Node001 ihn einlösen will.',
+      cta: 'Interesse vormerken',
+      balance: 'Balance',
+      dominance: 'Dominanz',
+      fields: { discipline: 'Disziplin & Kontrolle', fantasy: 'Fantasie & Genuss', thrill: 'Abenteuer & Thrill' },
+      values: [
+        { id: 'health', name: 'Gesundheit', pole: 'Balance', field: 'Disziplin & Kontrolle', text: 'Licht, eigenes Essen, Bewegung. So stellen wir uns einen gesunden Tag vor.' },
+        { id: 'security', name: 'Sicherheit', pole: 'Balance', field: 'Disziplin & Kontrolle', text: 'Lage, Reserve, Notfallplan. Geplant, nicht versprochen.' },
+        { id: 'nature', name: 'Natur', pole: 'Balance', field: 'Fantasie & Genuss', text: 'Wald, Wiese, Hang. Der Ort liegt mitten in der Natur.' },
+        { id: 'efficiency', name: 'Effizienz', pole: 'Dominanz', field: 'Disziplin & Kontrolle', text: 'Kurze Wege, sicheres Netz, freier Platz zum Arbeiten.' },
+        { id: 'freedom', name: 'Freiheit', pole: 'Dominanz', field: 'Abenteuer & Thrill', text: 'Du wählst Arbeitsort und Dauer. Node001 ist ein Angebot, keine Pflicht.' },
+      ],
+    },
     // StoryBrand-Erfolgsbild als Tagesablauf; Limbic Map je Szene im Kommentar der Komponente (components/places/chapter-day.tsx).
     day: {
       label: 'Ein Tag auf Node001',
@@ -794,6 +838,43 @@ export const de = {
         { key: 'freelancers', who: 'Digitale Nomaden', title: 'Profil in drei Minuten.', text: 'Sofort sichtbar, ohne Provision. Vor Ort im Node oder remote.', action: 'Profil anlegen' },
         { key: 'investors', who: 'Investoren', title: 'Whitepaper und Deck.', text: 'Plan, Stand und Meilensteine, auf Anfrage.', action: 'Unterlagen anfordern' },
       ]),
+    },
+    mission: {
+      label: 'Mission',
+      title: 'Wir bauen ein System.',
+      lead: 'Wir schaffen und vernetzen menschenzentrierte Innovationshubs, in denen Menschen leben, arbeiten und gemeinsam neue Lösungen entwickeln.',
+      lead2: 'Dafür verbinden wir moderne Technologien, geeignete Arbeits- und Lebensbedingungen und einen verantwortungsvollen Umgang mit Ressourcen.',
+      visionLabel: 'Vision',
+      vision: [
+        'Orte zum Leben, Arbeiten und Bleiben.',
+        'Menschenzentriert, weitgehend versorgungsautark, operativ autonom.',
+        'Resilient und wirtschaftlich tragfähig.',
+        'Mensch, Ort, Services, Organisation und Technologie wirken als ein lernendes System zusammen.',
+      ],
+      nodes: [
+        { id: 'human', name: 'Mensch', text: 'Leben und Arbeit' },
+        { id: 'place', name: 'Ort', text: 'Die physische Welt' },
+        { id: 'supply', name: 'Versorgung', text: 'Strom, Wärme, Wasser, Netz' },
+        { id: 'org', name: 'Organisation', text: 'Wie der Ort geführt wird' },
+        { id: 'tech', name: 'Technologie', text: 'Werkzeuge, die mitlernen' },
+      ],
+      center: 'Knoten',
+      caption: 'Ein lernendes Gesamtsystem. Ziele, keine Zusagen.',
+      diagramLabel: 'Schaubild: Mensch, Ort, Versorgung, Organisation und Technologie verbinden sich zu einem Knoten.',
+      toPlace: 'Node001 ansehen',
+    },
+    goals: {
+      label: 'Globalziele',
+      title: 'In dieser Folge.',
+      note: 'Erst tragen, dann skalieren, dann nutzen. Ziele, keine Zusagen.',
+      steps: [
+        { rank: '01', title: 'Tragfähig werden.', text: 'Node001 soll wirtschaftlich tragen und Rückschläge aushalten.' },
+        { rank: '02', title: 'In Europa skalieren.', text: 'Weitere Nodes folgen, sobald der erste trägt. Standorte sind noch offen.' },
+        { rank: '03', title: 'Nutzen stiften.', text: 'Gesellschaftlicher Nutzen kommt danach: Orte, die Menschen stärken.' },
+      ],
+      mapLabel: 'Abstrakte Karte. Nur Node001 ist ein Ort. Die anderen Punkte sind keine Standorte.',
+      known: 'Node001',
+      open: 'Offen',
     },
   },
 

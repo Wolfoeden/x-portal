@@ -18,7 +18,7 @@ export function CommandBar() {
 
   useEffect(() => {
     const states = new Map<string, boolean>()
-    const targets = [ids.project, ids.hubs, ids.start, 'site-footer']
+    const targets = [ids.project, ids.hubs, ids.start, ids.mission, ids.goals, 'site-footer']
       .map((id) => document.getElementById(id))
       .filter((element): element is HTMLElement => Boolean(element))
     const observer = new IntersectionObserver(
