@@ -928,7 +928,7 @@ export const en: Dictionary = {
       {
         id: 'ki',
         label: 'AI engineer',
-        tone: 'amber',
+        tone: 'forest',
         skills: ['LLM', 'RAG', 'Evaluation', 'Agents', 'Python', 'Azure OpenAI'],
         match: {
           scenario: 'chatbot',

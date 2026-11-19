@@ -2,7 +2,7 @@
 // Echte Treffer kommen von /api/analyse in derselben Form (source: 'live'); ohne Server antwortet dieser Motor.
 // Die Texte der Szenarien und Rollen stehen je Sprache in lib/i18n.
 
-export type Tone = 'green' | 'amber' | 'slate' | 'stone'
+export type Tone = 'green' | 'forest' | 'slate' | 'stone'
 
 /** Freelancer (Beispiel oder echtes Profil), KI-Agent von XPORTAL oder jemand aus dem Team des Auftraggebers. */
 export type MemberKind = 'freelancer' | 'agent' | 'client'
@@ -61,19 +61,19 @@ export type Scenario = {
 
 export const TALENTS: Talent[] = [
   { id: 'mara', name: 'Mara', initials: 'MA', tone: 'green', onSite: true },
-  { id: 'leon', name: 'Leon', initials: 'LE', tone: 'amber', onSite: true },
+  { id: 'leon', name: 'Leon', initials: 'LE', tone: 'forest', onSite: true },
   { id: 'eva', name: 'Eva', initials: 'EV', tone: 'slate', onSite: true },
   { id: 'noah', name: 'Noah', initials: 'NO', tone: 'stone', onSite: false },
   { id: 'jonas', name: 'Jonas', initials: 'JO', tone: 'green', onSite: false },
   { id: 'aylin', name: 'Aylin', initials: 'AY', tone: 'slate', onSite: true },
-  { id: 'sara', name: 'Sara', initials: 'SA', tone: 'amber', onSite: false },
+  { id: 'sara', name: 'Sara', initials: 'SA', tone: 'forest', onSite: false },
   { id: 'clara', name: 'Clara', initials: 'CL', tone: 'stone', onSite: false },
   { id: 'tobias', name: 'Tobias', initials: 'TO', tone: 'green', onSite: true },
-  { id: 'lena', name: 'Lena', initials: 'LN', tone: 'amber', onSite: false },
+  { id: 'lena', name: 'Lena', initials: 'LN', tone: 'forest', onSite: false },
   { id: 'malik', name: 'Malik', initials: 'MK', tone: 'slate', onSite: true },
   { id: 'ines', name: 'Ines', initials: 'IN', tone: 'stone', onSite: false },
   { id: 'paul', name: 'Paul', initials: 'PA', tone: 'green', onSite: false },
-  { id: 'yara', name: 'Yara', initials: 'YA', tone: 'amber', onSite: true },
+  { id: 'yara', name: 'Yara', initials: 'YA', tone: 'forest', onSite: true },
   { id: 'ben', name: 'Ben', initials: 'BE', tone: 'slate', onSite: false },
   { id: 'mira', name: 'Mira', initials: 'MI', tone: 'stone', onSite: false },
 ]

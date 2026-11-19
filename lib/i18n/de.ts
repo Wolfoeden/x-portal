@@ -946,7 +946,7 @@ export const de = {
       {
         id: 'ki',
         label: 'KI-Engineer',
-        tone: 'amber',
+        tone: 'forest',
         skills: ['LLM', 'RAG', 'Evaluierung', 'Agenten', 'Python', 'Azure OpenAI'],
         match: {
           scenario: 'chatbot',
