@@ -33,21 +33,23 @@ export function Constellation() {
           <div className="relative mt-8 aspect-[6/5] w-full max-w-[640px]">
             <svg viewBox="0 0 100 84" className="absolute inset-0 h-full w-full" aria-hidden>
               <line x1="12" y1="42" x2="88" y2="42" className="stroke-line-strong" />
-              <text x="12" y="10" className="fill-muted" fontSize="3.2">
-                {copy.fields.discipline}
-              </text>
-              <text x="12" y="78" className="fill-muted" fontSize="3.2">
-                {copy.fields.fantasy}
-              </text>
-              <text x="62" y="78" className="fill-muted" fontSize="3.2">
-                {copy.fields.thrill}
-              </text>
-              <text x="8" y="40" className="fill-brand-ink" fontSize="3.1">
-                {copy.balance}
-              </text>
-              <text x="74" y="40" className="fill-brand-ink" fontSize="3.1">
-                {copy.dominance}
-              </text>
+              <g className="hidden sm:block">
+                <text x="12" y="10" className="fill-muted" fontSize="3.2">
+                  {copy.fields.discipline}
+                </text>
+                <text x="12" y="78" className="fill-muted" fontSize="3.2">
+                  {copy.fields.fantasy}
+                </text>
+                <text x="62" y="78" className="fill-muted" fontSize="3.2">
+                  {copy.fields.thrill}
+                </text>
+                <text x="8" y="40" className="fill-brand-ink" fontSize="3.1">
+                  {copy.balance}
+                </text>
+                <text x="74" y="40" className="fill-brand-ink" fontSize="3.1">
+                  {copy.dominance}
+                </text>
+              </g>
               {copy.values.map((value) => {
                 const at = STAR[value.id]
                 const on = value.id === active?.id
@@ -55,6 +57,15 @@ export function Constellation() {
                 return <circle key={value.id} cx={at.x} cy={at.y} r={on ? 2.3 : 1.15} className={on ? 'fill-brand' : 'fill-faint'} />
               })}
             </svg>
+            <div className="pointer-events-none absolute inset-0 text-sm leading-tight sm:hidden">
+              <p className="absolute inset-x-1 top-1 text-muted">{copy.fields.discipline}</p>
+              <div className="absolute inset-x-0 bottom-[52%] flex justify-between text-brand-ink">
+                <span>{copy.balance}</span><span>{copy.dominance}</span>
+              </div>
+              <div className="absolute inset-x-1 top-[89%] grid grid-cols-2 gap-2 text-muted">
+                <span>{copy.fields.fantasy}</span><span className="text-right">{copy.fields.thrill}</span>
+              </div>
+            </div>
           </div>
           <div className="mt-4 flex flex-wrap gap-2">
             {copy.values.map((value) => {
@@ -65,7 +76,7 @@ export function Constellation() {
                   type="button"
                   aria-pressed={on}
                   onClick={() => setPicked(value.id)}
-                  className={`rounded-full border px-3 py-1.5 text-[14px] font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${on ? 'border-brand bg-brand text-white' : 'border-line-strong bg-white text-ink hover:border-brand'}`}
+                  className={`min-h-11 rounded-full border px-3 py-1.5 text-[14px] font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:min-h-0 ${on ? 'border-brand bg-brand text-white' : 'border-line-strong bg-white text-ink hover:border-brand'}`}
                 >
                   {value.name}
                 </button>

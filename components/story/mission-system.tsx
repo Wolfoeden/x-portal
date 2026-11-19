@@ -55,7 +55,20 @@ export function MissionSystem() {
           </Link>
         </div>
         <figure className="relative">
-          <svg viewBox="0 0 580 320" className="h-auto w-full rounded-[28px] border border-line bg-white" role="img" aria-label={copy.diagramLabel}>
+          <div className="rounded-[28px] border border-line bg-white p-5 sm:hidden">
+            <p className="inline-flex items-center gap-2 rounded-full bg-brand-soft px-3 py-1.5 font-medium text-brand-ink">
+              <span aria-hidden className="size-2.5 rounded-full bg-brand" />{copy.center}
+            </p>
+            <ul className="ml-4">
+              {copy.nodes.map((node) => (
+                <li key={node.id} className="relative pt-3 pl-5 before:absolute before:inset-y-0 before:left-0 before:border-l before:border-brand/40 last:before:h-6 after:absolute after:top-6 after:left-0 after:w-3 after:border-t after:border-brand/40">
+                  <p className="font-medium text-ink">{node.name}</p>
+                  <p className="text-sm text-muted">{node.text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <svg viewBox="0 0 580 320" className="hidden h-auto w-full rounded-[28px] border border-line bg-white sm:block" role="img" aria-label={copy.diagramLabel}>
             {NODES.map((node) => (
               <line key={node.id} x1={CENTER.x} y1={CENTER.y} x2={node.x} y2={node.y} stroke="var(--color-brand)" strokeOpacity="0.55" strokeWidth="1.4" className="system-line" />
             ))}

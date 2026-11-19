@@ -23,7 +23,21 @@ export function GlobalPath({ locale }: { locale: Locale }) {
           ))}
         </ol>
         <figure className="mt-8 overflow-hidden rounded-[28px] border border-line bg-white">
-          <svg viewBox="0 0 960 280" className="h-auto w-full" role="img" aria-label={copy.mapLabel}>
+          <div className="relative mx-4 mt-4 h-32 sm:hidden" role="img" aria-label={copy.mapLabel}>
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 size-full" aria-hidden>
+              <path d="M2 73 Q21 31 40 50 T73 62 T98 36" fill="none" stroke="var(--color-line-strong)" vectorEffect="non-scaling-stroke" />
+              <path d="M2 84 Q26 56 46 72 T98 55" fill="none" stroke="var(--color-line)" vectorEffect="non-scaling-stroke" />
+            </svg>
+            <div className="relative grid h-full grid-cols-4 items-start text-center text-sm">
+              {[copy.known, copy.open, copy.open, copy.open].map((label, index) => (
+                <div key={index} className={`flex flex-col items-center gap-2 ${index === 0 ? 'pt-10 font-medium text-brand-ink' : 'pt-4 text-muted even:pt-12'}`}>
+                  {label}
+                  <span className={index === 0 ? 'size-3 rounded-full bg-brand' : 'size-2.5 rounded-full border border-muted bg-white'} />
+                </div>
+              ))}
+            </div>
+          </div>
+          <svg viewBox="0 0 960 280" className="hidden h-auto w-full sm:block" role="img" aria-label={copy.mapLabel}>
             <path d="M40 190 C 160 120, 240 80, 340 110 S 520 200, 640 150 S 820 70, 920 120" fill="none" stroke="var(--color-line-strong)" />
             <path d="M30 210 C 180 160, 300 140, 430 170 S 620 230, 760 180 S 880 140, 940 160" fill="none" stroke="var(--color-line)" />
             <path d="M70 150 C 200 90, 360 70, 500 100 S 700 160, 900 90" fill="none" stroke="var(--color-brand)" strokeOpacity="0.28" />
