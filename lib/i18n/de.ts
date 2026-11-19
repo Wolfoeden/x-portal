@@ -569,7 +569,7 @@ export const de = {
       faqNote: 'Zur Reisewarnung steht die Antwort bei den Fragen.',
       layers: [
         { id: 'site', title: 'Lage', text: 'Abgeschieden in den Karpaten. Abgeschieden heißt nicht abgeschnitten.' },
-        { id: 'reserve', title: 'Reserve', text: 'Strom, Wärme, Wasser und Internet mit Reserve. Das bleibt ein Zielbild.' },
+        { id: 'reserve', title: 'Reserve in der Versorgung', text: 'Strom, Wärme, Wasser und Internet mit Reserve. Das bleibt ein Zielbild.' },
         { id: 'plan', title: 'Notfallplan', text: 'Den Plan legen wir offen, bevor jemand einzieht.' },
         { id: 'it', title: 'Sichere IT', text: 'Kundendaten nur vor Ort. Remote arbeitet mit Testdaten.' },
         { id: 'access', title: 'Zugang', text: 'Wer kommt, ist bekannt. Das klären wir vor dem Einzug.' },

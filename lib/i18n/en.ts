@@ -555,7 +555,7 @@ export const en: Dictionary = {
       faqNote: 'The travel warning is answered in the questions.',
       layers: [
         { id: 'site', title: 'Setting', text: 'Remote in the Carpathians. Remote does not mean cut off.' },
-        { id: 'reserve', title: 'Backup', text: 'Power, heat, water and internet with a backup. That stays a target.' },
+        { id: 'reserve', title: 'Supply backup', text: 'Power, heat, water and internet with a backup. That stays a target.' },
         { id: 'plan', title: 'Emergency plan', text: 'We lay the plan open before anyone moves in.' },
         { id: 'it', title: 'Secure IT', text: 'Customer data only on site. Remote work uses test data.' },
         { id: 'access', title: 'Access', text: 'We know who comes. We settle that before move-in.' },

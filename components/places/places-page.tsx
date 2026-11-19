@@ -1,4 +1,3 @@
-import { Suspense } from 'react'
 import Link from 'next/link'
 import { SiteHeader } from '@/components/site/site-header'
 import { SiteFooter } from '@/components/site/site-footer'
@@ -72,14 +71,12 @@ export function PlacesPage({ locale }: { locale: Locale }) {
           <SupplyBoard locale={locale} />
           <SafetyLayers locale={locale} />
           <PlacesTimeline locale={locale} />
-          <Suspense>
-            <DetailPlan />
-            <ChapterDay locale={locale} />
-            <Constellation locale={locale} />
-            <ChapterWaitlist locale={locale} />
-            <ChapterPlacesFaq locale={locale} />
-            <Transparency locale={locale} page="places" compact />
-          </Suspense>
+          <DetailPlan />
+          <ChapterDay locale={locale} />
+          <Constellation locale={locale} />
+          <ChapterWaitlist locale={locale} />
+          <ChapterPlacesFaq locale={locale} />
+          <Transparency locale={locale} page="places" compact />
         </main>
       </WaitlistProvider>
       <SiteFooter locale={locale} />
