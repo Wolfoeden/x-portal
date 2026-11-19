@@ -21,38 +21,38 @@ export function Constellation() {
   const active = copy.values.find((value) => value.id === picked) ?? copy.values[0]
 
   return (
-    <section id={ids.stars} aria-labelledby="sternbild-title" className="scroll-mt-16 border-b border-white/10 bg-[#0f1016] text-white">
+    <section id={ids.stars} aria-labelledby="sternbild-title" className="scroll-mt-16 border-b border-line bg-surface text-ink">
       <Container className="grid items-center gap-10 py-16 md:py-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)]">
         <div>
-          <p className="text-[13px] tracking-[0.14em] text-[#ffca06] uppercase">{copy.label}</p>
+          <p className="text-[13px] tracking-[0.14em] text-brand-ink uppercase">{copy.label}</p>
           <h2 id="sternbild-title" className="mt-3 text-[clamp(2rem,4vw,3.2rem)] font-medium leading-[1.02] tracking-[-0.04em]">
             {copy.title}
           </h2>
-          <p className="mt-3 max-w-[36rem] text-[15px] leading-relaxed text-white/70">{copy.hint}</p>
-          <p className="mt-2 text-[13px] text-[#ffca06]">{copy.note}</p>
+          <p className="mt-3 max-w-[36rem] text-[15px] leading-relaxed text-muted">{copy.hint}</p>
+          <p className="mt-2 text-[13px] text-brand-ink">{copy.note}</p>
           <div className="relative mt-8 aspect-[6/5] w-full max-w-[640px]">
             <svg viewBox="0 0 100 84" className="absolute inset-0 h-full w-full" aria-hidden>
-              <line x1="12" y1="42" x2="88" y2="42" stroke="white" strokeOpacity="0.18" />
-              <text x="12" y="10" fill="white" fillOpacity="0.45" fontSize="3.2">
+              <line x1="12" y1="42" x2="88" y2="42" className="stroke-line-strong" />
+              <text x="12" y="10" className="fill-muted" fontSize="3.2">
                 {copy.fields.discipline}
               </text>
-              <text x="12" y="78" fill="white" fillOpacity="0.45" fontSize="3.2">
+              <text x="12" y="78" className="fill-muted" fontSize="3.2">
                 {copy.fields.fantasy}
               </text>
-              <text x="62" y="78" fill="white" fillOpacity="0.45" fontSize="3.2">
+              <text x="62" y="78" className="fill-muted" fontSize="3.2">
                 {copy.fields.thrill}
               </text>
-              <text x="8" y="40" fill="#ffca06" fontSize="3.1">
+              <text x="8" y="40" className="fill-brand-ink" fontSize="3.1">
                 {copy.balance}
               </text>
-              <text x="74" y="40" fill="#ffca06" fontSize="3.1">
+              <text x="74" y="40" className="fill-brand-ink" fontSize="3.1">
                 {copy.dominance}
               </text>
               {copy.values.map((value) => {
                 const at = STAR[value.id]
                 const on = value.id === active?.id
                 if (!at) return null
-                return <circle key={value.id} cx={at.x} cy={at.y} r={on ? 2.3 : 1.15} fill={on ? '#ffca06' : 'white'} fillOpacity={on ? 1 : 0.35} />
+                return <circle key={value.id} cx={at.x} cy={at.y} r={on ? 2.3 : 1.15} className={on ? 'fill-brand' : 'fill-faint'} />
               })}
             </svg>
           </div>
@@ -65,7 +65,7 @@ export function Constellation() {
                   type="button"
                   aria-pressed={on}
                   onClick={() => setPicked(value.id)}
-                  className={`rounded-full px-3 py-1.5 text-[14px] font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffca06] ${on ? 'bg-[#ffca06] text-[#0f1016]' : 'bg-white/10 text-white'}`}
+                  className={`rounded-full border px-3 py-1.5 text-[14px] font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${on ? 'border-brand bg-brand text-white' : 'border-line-strong bg-white text-ink hover:border-brand'}`}
                 >
                   {value.name}
                 </button>
@@ -74,15 +74,15 @@ export function Constellation() {
           </div>
         </div>
         {active ? (
-          <div className="rounded-[28px] border border-[#ffca06]/40 bg-white/[0.04] p-6">
-            <p className="text-[13px] text-[#ffca06]">
+          <div className="rounded-[28px] border border-line bg-white p-6">
+            <p className="text-[13px] text-brand-ink">
               {active.pole} · {active.field}
             </p>
             <h3 className="mt-2 text-[28px] font-medium tracking-[-0.03em]">{active.name}</h3>
-            <p className="mt-3 text-[16px] leading-relaxed text-white/80">{active.text}</p>
+            <p className="mt-3 text-[16px] leading-relaxed text-body">{active.text}</p>
             <a
               href={`#${ids.waitlist}`}
-              className="mt-6 inline-flex rounded-full bg-[#ffca06] px-4 py-2 text-[14px] font-medium text-[#0f1016] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffca06]"
+              className="mt-6 inline-flex rounded-full bg-brand hover:bg-brand-hover px-4 py-2 text-[14px] font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               {copy.cta}
             </a>

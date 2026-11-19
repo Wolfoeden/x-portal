@@ -23,7 +23,7 @@ function PlanFigure({ active, enlarged = false }: { active: string | null; enlar
           className={`block h-auto w-auto max-w-full bg-white ${enlarged ? '' : 'max-h-[42vh] lg:max-h-[calc(100dvh-18.5rem)]'} ${active ? 'plan-dim' : ''}`}
         />
       </picture>
-      {active ? <div className="pointer-events-none absolute inset-0 bg-[rgb(20_16_8/0.22)]" aria-hidden /> : null}
+      {active ? <div className="pointer-events-none absolute inset-0 bg-ink/10" aria-hidden /> : null}
       <svg
         viewBox={`${PLAN_VIEW.x} ${PLAN_VIEW.y} ${PLAN_VIEW.width} ${PLAN_VIEW.height}`}
         className="pointer-events-none absolute inset-0 h-full w-full"
@@ -52,9 +52,9 @@ export function DetailPlan() {
   return (
     <section id={ids.detail} aria-labelledby="detailplan-title" className="scroll-mt-16 border-b border-line">
       <style>{`
-        .plan-dim { filter: brightness(0.52) saturate(0.72); transition: filter 0.45s ease }
-        .plan-mark { fill: rgb(255 202 6 / 0.58); stroke: #ffca06; stroke-width: 1.5; stroke-linejoin: round; vector-effect: non-scaling-stroke }
-        .plan-glow { filter: drop-shadow(0 0 2px #ffca06) drop-shadow(0 0 6px rgb(255 202 6 / 0.75)) }
+        .plan-dim { filter: brightness(0.78) saturate(0.72); transition: filter 0.45s ease }
+        .plan-mark { fill: var(--color-brand); fill-opacity: 0.65; stroke: var(--color-brand-deep); stroke-width: 1.5; stroke-linejoin: round; vector-effect: non-scaling-stroke }
+        .plan-glow { filter: drop-shadow(0 0 2px var(--color-brand-soft)) }
         @media (prefers-reduced-motion: no-preference) {
           .plan-mark { animation: plan-in 0.35s ease }
           @keyframes plan-in { from { opacity: 0 } to { opacity: 1 } }
