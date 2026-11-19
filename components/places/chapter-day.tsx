@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { KindBadge } from '@/components/places/ai-badge'
-import { OfferAction } from '@/components/places/hero-form'
 import { IMAGES, type ImageKey } from '@/lib/images'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, type Locale } from '@/lib/i18n/routes'
@@ -63,11 +62,6 @@ export function ChapterDay({ locale }: { locale: Locale }) {
             )
           })}
         </ol>
-
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-3 rounded-[24px] bg-brand-soft p-6 md:p-8">
-          <p className="text-[20px] font-medium tracking-[-0.015em] text-ink md:text-[24px]">{copy.ctaText}</p>
-          <OfferAction label={copy.cta} className="bg-brand text-white hover:bg-brand-hover" />
-        </div>
       </Container>
     </section>
   )

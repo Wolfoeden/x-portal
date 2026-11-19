@@ -6,6 +6,7 @@ import { Container } from '@/components/ui/primitives'
 import { chapterTitle } from '@/components/story/talent-avatar'
 import { useLocale } from '@/components/i18n/locale-provider'
 import { IMAGES } from '@/lib/images'
+import { PLAN_MARKS, PLAN_VIEW } from '@/components/places/plan-marks'
 
 // Lagen auf dem beschnittenen Plan (Stempel und Unterschriften sind nicht im Bild). Anteile in Prozent.
 const SPOTS = [
@@ -28,9 +29,18 @@ function PlanFigure({ active, onSelect, enlarged = false }: { active: string | n
           alt={enlarged ? '' : copy.imageAlt}
           width={2801}
           height={2592}
-          className="h-auto w-full bg-white"
+          className={`h-auto w-full bg-white ${active ? 'plan-dim' : ''}`}
         />
       </picture>
+      <svg
+        viewBox={`${PLAN_VIEW.x} ${PLAN_VIEW.y} ${PLAN_VIEW.width} ${PLAN_VIEW.height}`}
+        className="pointer-events-none absolute inset-0 h-full w-full"
+        aria-hidden
+      >
+        {active
+          ? (PLAN_MARKS[active] ?? []).map((d, index) => <path key={index} d={d} pathLength={100} className="plan-mark" />)
+          : null}
+      </svg>
       {enlarged ? null : <KindBadge kind="plan" words={dict.places} className="left-3 top-3" />}
       {copy.spots.map((item, index) => {
         const spot = SPOTS.find((entry) => entry.id === item.id)
@@ -58,11 +68,20 @@ function PlanFigure({ active, onSelect, enlarged = false }: { active: string | n
 export function DetailPlan() {
   const { ids, dict } = useLocale()
   const copy = dict.places.detailPlan
-  const [active, setActive] = useState<string | null>(SPOTS[0].id)
+  const [active, setActive] = useState<string | null>(null)
   const dialog = useRef<HTMLDialogElement>(null)
+  const choose = (id: string) => setActive((current) => (current === id ? null : id))
 
   return (
     <section id={ids.detail} aria-labelledby="detailplan-title" className="scroll-mt-16 border-b border-line">
+      <style>{`
+        .plan-dim { filter: grayscale(0.62) brightness(0.78); transition: filter 0.6s ease }
+        .plan-mark { fill: rgb(255 202 6 / 0.5); stroke: #ffca06; stroke-width: 2.2; stroke-linejoin: round; vector-effect: non-scaling-stroke }
+        @media (prefers-reduced-motion: no-preference) {
+          .plan-mark { stroke-dasharray: 100; stroke-dashoffset: 100; animation: plan-draw 0.65s ease forwards }
+          @keyframes plan-draw { to { stroke-dashoffset: 0 } }
+        }
+      `}</style>
       <Container className="py-14 md:py-24">
         <p className="text-[13px] tracking-[0.02em] text-faint">{copy.label}</p>
         <h2 id="detailplan-title" className={`${chapterTitle} mt-3 text-ink`}>
@@ -74,7 +93,7 @@ export function DetailPlan() {
 
         <div className="mt-8 grid grid-cols-1 items-start gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(280px,0.7fr)]">
           <figure className="overflow-hidden rounded-[28px] border border-line bg-white">
-            <PlanFigure active={active} onSelect={setActive} />
+            <PlanFigure active={active} onSelect={choose} />
             <figcaption className="flex items-center justify-between gap-3 border-t border-line px-4 py-3">
               <span className="text-[13px] leading-snug text-muted">{dict.places.planImage}</span>
               <button
@@ -87,6 +106,16 @@ export function DetailPlan() {
               </button>
             </figcaption>
           </figure>
+          <div className="mb-2 flex justify-end">
+            <button
+              type="button"
+              onClick={() => setActive(null)}
+              aria-pressed={active === null}
+              className="rounded-full border border-line px-3 py-1.5 text-[13px] font-medium text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            >
+              {copy.reset}
+            </button>
+          </div>
           <ol className="flex flex-col gap-2">
             {copy.spots.map((spot, index) => {
               const on = active === spot.id
@@ -95,7 +124,7 @@ export function DetailPlan() {
                   <button
                     type="button"
                     aria-pressed={on}
-                    onClick={() => setActive(spot.id)}
+                    onClick={() => choose(spot.id)}
                     className={`flex w-full gap-3 rounded-2xl border px-3.5 py-3 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ${on ? 'border-brand bg-brand-soft' : 'border-line bg-white'}`}
                   >
                     <span className={`grid size-7 shrink-0 place-items-center rounded-full text-[13px] font-medium ${on ? 'bg-brand text-white' : 'bg-surface text-ink'}`}>{index + 1}</span>
@@ -118,7 +147,7 @@ export function DetailPlan() {
           </button>
         </div>
         <div className="overflow-auto">
-          <PlanFigure active={active} onSelect={setActive} enlarged />
+          <PlanFigure active={active} onSelect={choose} enlarged />
         </div>
       </dialog>
     </section>

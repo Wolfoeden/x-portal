@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { SiteHeader } from '@/components/site/site-header'
 import { SiteFooter } from '@/components/site/site-footer'
@@ -6,7 +5,7 @@ import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { PlacesHero } from '@/components/places/places-hero'
 import { ChapterPlace, ChapterPlacesFaq, PlaceFacts } from '@/components/places/places-chapters'
-import { PlacesForInvestors, PlacesTimeline } from '@/components/places/places-plan'
+import { PlacesTimeline } from '@/components/places/places-plan'
 import { DetailPlan } from '@/components/places/detail-plan'
 import { ChapterDay } from '@/components/places/chapter-day'
 import { WaitlistCard } from '@/components/places/waitlist-card'
@@ -38,18 +37,12 @@ function ChapterWaitlist({ locale }: { locale: Locale }) {
               </li>
             ))}
           </ol>
-          <figure className="mt-6 flex items-center gap-4">
-            <Image src="/team/roman-dering.webp" alt={copy.quoteName} width={64} height={64} className="size-16 rounded-full object-cover" />
-            <figcaption className="flex flex-col gap-0.5">
-              <span className="text-[16px]">{copy.quote}</span>
-              <span className="text-[14px] text-[#bfd8c8]">
-                {copy.quoteName} ·{' '}
-                <Link href={pageHref('contact', locale, 'topicPlaces')} className="text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">
-                  {copy.quoteAction}
-                </Link>
-              </span>
-            </figcaption>
-          </figure>
+            <p className="mt-6 text-[16px] leading-relaxed text-[#bfd8c8]">
+              {copy.ask}{' '}
+              <Link href={pageHref('contact', locale, 'topicPlaces')} className="text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">
+                {copy.askLink}
+              </Link>
+            </p>
         </div>
         <div data-waitlist-card className="scroll-mt-20 overflow-hidden rounded-[32px] bg-white text-ink shadow-[0_1px_2px_rgb(0_0_0/0.06),0_40px_80px_-32px_rgb(0_0_0/0.55)]">
           <WaitlistCard />
@@ -76,7 +69,6 @@ export function PlacesPage({ locale }: { locale: Locale }) {
           <DetailPlan />
           <ChapterDay locale={locale} />
           <ChapterWaitlist locale={locale} />
-          <PlacesForInvestors locale={locale} />
           <ChapterPlacesFaq locale={locale} />
           <Transparency locale={locale} page="places" compact />
         </main>
