@@ -10,11 +10,11 @@ import { PLAN_MARKS, PLAN_VIEW } from '@/components/places/plan-marks'
 
 // Lagen auf dem beschnittenen Plan (Stempel und Unterschriften sind nicht im Bild). Anteile in Prozent.
 const SPOTS = [
-  { id: 'houses', x: 45.1, y: 32.9 },
-  { id: 'admin', x: 62.2, y: 59.8 },
-  { id: 'view', x: 48.2, y: 32.6 },
-  { id: 'plant', x: 32.4, y: 44.8 },
-  { id: 'paths', x: 34.0, y: 46.5 },
+  { id: 'houses', x: 43.8, y: 44.2 },
+  { id: 'admin', x: 67.4, y: 64.4 },
+  { id: 'view', x: 52.4, y: 35.8 },
+  { id: 'plant', x: 36.4, y: 48.1 },
+  { id: 'paths', x: 52.3, y: 59.4 },
 ] as const
 
 function PlanFigure({ active, onSelect, enlarged = false }: { active: string | null; onSelect: (id: string) => void; enlarged?: boolean }) {
