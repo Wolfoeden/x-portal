@@ -165,7 +165,7 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-40 border-b bg-white/90 backdrop-blur-md transition-colors duration-200 ${
+      className={`sticky top-0 z-40 border-b bg-white lg:bg-white/90 lg:backdrop-blur-md transition-colors duration-200 ${
         scrolled || mobileOpen ? 'border-line' : 'border-transparent'
       }`}
     >

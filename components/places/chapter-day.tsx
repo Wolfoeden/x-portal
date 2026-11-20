@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { SitePhoto } from '@/components/places/site-photo'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { KindBadge } from '@/components/places/ai-badge'
@@ -53,7 +53,7 @@ export function ChapterDay({ locale }: { locale: Locale }) {
                   </div>
                   {image ? (
                     <figure className="relative aspect-[16/10] overflow-hidden rounded-[22px]">
-                      <Image src={image.src} alt={scene.imageAlt} fill sizes="(min-width: 1024px) 560px, 100vw" className={`object-cover ${POSITION[key as string]}`} />
+                      <SitePhoto src={image.src} alt={scene.imageAlt} sizes="(min-width: 1024px) 560px, 100vw" className={`object-cover ${POSITION[key as string]}`} />
                       <KindBadge kind={image.kind} words={dict} />
                     </figure>
                   ) : null}

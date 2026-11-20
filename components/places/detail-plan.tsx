@@ -1,12 +1,14 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { lazy, Suspense, useRef, useState } from 'react'
 import { KindBadge } from '@/components/places/ai-badge'
 import { Container } from '@/components/ui/primitives'
 import { chapterTitle } from '@/components/story/talent-avatar'
 import { useLocale } from '@/components/i18n/locale-provider'
 import { IMAGES } from '@/lib/images'
-import { PLAN_MARKS, PLAN_VIEW } from '@/components/places/plan-marks'
+
+// The optional zoning paths are fetched on the first selection. The base plan is always in HTML.
+const PlanOverlay = lazy(() => import('@/components/places/plan-overlay'))
 
 function PlanFigure({ active, enlarged = false }: { active: string | null; enlarged?: boolean }) {
   const { dict } = useLocale()
@@ -26,17 +28,7 @@ function PlanFigure({ active, enlarged = false }: { active: string | null; enlar
         />
       </picture>
       {active ? <div className="pointer-events-none absolute inset-0 bg-ink/10" aria-hidden /> : null}
-      <svg
-        viewBox={`${PLAN_VIEW.x} ${PLAN_VIEW.y} ${PLAN_VIEW.width} ${PLAN_VIEW.height}`}
-        className="pointer-events-none absolute inset-0 h-full w-full"
-        aria-hidden
-      >
-        <g className={active ? 'plan-glow' : undefined}>
-          {active
-            ? (PLAN_MARKS[active] ?? []).map((d, index) => <path key={index} d={d} className="plan-mark" />)
-            : null}
-        </g>
-      </svg>
+      {active ? <Suspense fallback={null}><PlanOverlay active={active} /></Suspense> : null}
       {enlarged ? null : <KindBadge kind="plan" words={dict.places} className="left-3 top-3" />}
     </div>
   )

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import { SitePhoto } from '@/components/places/site-photo'
 import { KindBadge } from '@/components/places/ai-badge'
 import { IMAGES } from '@/lib/images'
 import { Container } from '@/components/ui/primitives'
@@ -30,7 +30,7 @@ export function ChapterPlace({ locale }: { locale: Locale }) {
           <p className="max-w-[460px] text-[17px] leading-relaxed text-muted md:text-[18px]">{copy.text}</p>
         </div>
         <figure className="group relative aspect-[1122/1402] w-full overflow-hidden rounded-[28px] shadow-[0_1px_2px_rgb(14_20_17/0.04),0_30px_70px_-30px_rgb(14_20_17/0.35)] lg:h-full lg:max-h-[820px] lg:w-auto lg:self-center">
-          <Image src={IMAGES.community.src} alt={copy.imageAlt} fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.03]" />
+          <SitePhoto src={IMAGES.community.src} mobileSrc="/orte/gemeinschaftshaus-mobil.avif" alt={copy.imageAlt} sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.03]" />
           <KindBadge kind={IMAGES.community.kind} words={dict} />
         </figure>
       </Container>
