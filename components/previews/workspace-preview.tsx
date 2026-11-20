@@ -4,7 +4,7 @@ import { AppRail, Avatar, Pill, Stepper, type AvatarTone } from './app-parts'
 
 const team: { name: string; role: string; initials: string; tone: AvatarTone; place: string; hours: string; access: string; onSite: boolean; amount: string }[] = [
   { name: 'Mara', role: 'Projektleitung', initials: 'MA', tone: 'green', place: 'Node Ukraine', hours: '120 h', access: 'Personendaten', onSite: true, amount: '4.800' },
-  { name: 'Leon', role: 'Data Engineer', initials: 'LE', tone: 'amber', place: 'Node Ukraine', hours: '80 h', access: 'Personendaten', onSite: true, amount: '2.800' },
+  { name: 'Leon', role: 'Data Engineer', initials: 'LE', tone: 'forest', place: 'Node Ukraine', hours: '80 h', access: 'Personendaten', onSite: true, amount: '2.800' },
   { name: 'Eva', role: 'Qualitätssicherung', initials: 'EV', tone: 'slate', place: 'Node Ukraine', hours: '60 h', access: 'Personendaten', onSite: true, amount: '1.800' },
   { name: 'Noah', role: 'Design', initials: 'NO', tone: 'stone', place: 'Remote', hours: '60 h', access: 'Synthetische Daten', onSite: false, amount: '2.100' },
 ]
@@ -25,7 +25,7 @@ export function WorkspacePreview() {
           <span className="text-faint">Projekte</span>
           <ChevronRight size={14} className="text-faint" />
           <span className="font-medium">Wissensassistent Kundenservice</span>
-          <Pill tone="amber">Simulation</Pill>
+          <Pill tone="neutral">Simulation</Pill>
           <span className="ml-auto text-faint">Budget 12.000 SIM</span>
         </div>
 

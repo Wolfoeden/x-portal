@@ -5,7 +5,7 @@ import { waitlistConfirmLink, waitlistNotification } from '@/lib/email/messages'
 
 const TOKEN = 'a'.repeat(64)
 const visitor = { key: 'k'.repeat(64), bucket: 'analyse' as const }
-const input = WaitlistBody.parse({ use: 'workation', start: 'sofort', work: 'suche', firstName: ' Lena ', lastName: ' Berg ', email: 'lena@example.com', country: 'DE', consent: true, locale: 'de', offer: 'workation' })
+const input = WaitlistBody.parse({ email: 'lena@example.com', consent: true, locale: 'de', offer: 'workation' })
 
 type Mail = { to: string; subject: string; text: string; replyTo?: string }
 
@@ -31,11 +31,10 @@ function fakeDb({ allowed = true, insertError = null as null | { code: string },
 }
 
 describe('Warteliste Node001: Eingaben', () => {
-  it('verlangt E-Mail, Einwilligung und eine bekannte Nutzung', () => {
+  it('verlangt nur eine gültige E-Mail und die Einwilligung', () => {
     expect(() => WaitlistBody.parse({ ...input, email: 'lena@example' })).toThrow()
     expect(() => WaitlistBody.parse({ ...input, consent: false })).toThrow()
-    expect(() => WaitlistBody.parse({ ...input, use: 'tauschen' })).toThrow()
-    expect(() => WaitlistBody.parse({ ...input, start: 'bald' })).toThrow()
+    expect(WaitlistBody.parse({ email: 'lena@example.com', consent: true, locale: 'en' })).toMatchObject({ email: 'lena@example.com', locale: 'en' })
   })
 })
 
@@ -50,39 +49,26 @@ describe('Warteliste Node001: eintragen', () => {
     expect(rows).toHaveLength(1)
     expect(rows[0]).toMatchObject({
       table: 'waitlist_entries',
-      first_name: 'Lena',
-      last_name: 'Berg',
       email: 'lena@example.com',
-      country: 'DE',
-      work: 'seeks_work',
-      interest: 'workation',
-      timing: 'now',
       campaign: 'workation',
       locale: 'de',
       consent_text_version: WAITLIST_CONSENT_VERSION,
       confirm_token_hash: hashToken(TOKEN),
     })
+    expect(rows[0]).not.toHaveProperty('first_name')
+    expect(rows[0]).not.toHaveProperty('interest')
     expect(JSON.stringify(rows[0])).not.toContain(TOKEN)
     expect(mails).toHaveLength(1)
     expect(mails[0].to).toBe('lena@example.com')
     expect(mails[0].text).toContain(`https://x-portal.eu/api/waitlist/confirm?token=${TOKEN}&lang=de`)
   })
 
-  it('übersetzt Nutzung, Zeitpunkt und Arbeit in die Werte der Datenbank; Arbeit ist freiwillig', async () => {
+  it('speichert eine Kampagne nur, wenn der Link eine mitbringt', async () => {
     const { db, rows } = fakeDb()
-    await submitWaitlist({ ...input, use: 'workation', start: 'spaeter', work: undefined, offer: undefined }, visitor, 'https://x-portal.eu', db, send, TOKEN)
-    await submitWaitlist({ ...input, use: 'mieten', work: 'habe' }, visitor, 'https://x-portal.eu', db, send, TOKEN)
-    expect(rows[0]).toMatchObject({ interest: 'workation', timing: 'later', work: null, campaign: null })
-    expect(rows[1]).toMatchObject({ interest: 'rent', timing: 'now', work: 'has_work' })
-  })
-
-  it('verlangt Vor- und Nachnamen und ein Land als Ländercode', () => {
-    const base = { use: 'workation', start: 'sofort', firstName: 'Lena', lastName: 'Berg', email: 'lena@example.com', country: 'UA', consent: true, locale: 'de' }
-    expect(WaitlistBody.safeParse(base).success).toBe(true)
-    expect(WaitlistBody.safeParse({ ...base, lastName: ' ' }).success).toBe(false)
-    expect(WaitlistBody.safeParse({ ...base, firstName: undefined }).success).toBe(false)
-    expect(WaitlistBody.safeParse({ ...base, country: 'Ukraine' }).success).toBe(false)
-    expect(WaitlistBody.safeParse({ ...base, work: 'vielleicht' }).success).toBe(false)
+    await submitWaitlist({ email: 'lena@example.com', consent: true, locale: 'de' }, visitor, 'https://x-portal.eu', db, send, TOKEN)
+    await submitWaitlist({ ...input, offer: 'bleiben' }, visitor, 'https://x-portal.eu', db, send, TOKEN)
+    expect(rows[0]).toMatchObject({ email: 'lena@example.com', campaign: null })
+    expect(rows[1]).toMatchObject({ campaign: 'bleiben' })
   })
 
   it('meldet dem Postfach noch nichts: Der Eintrag ist erst nach dem Klick bestätigt', async () => {

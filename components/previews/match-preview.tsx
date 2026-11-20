@@ -2,7 +2,7 @@ import { Check, CircleDashed, Search } from 'lucide-react'
 import { AppRail, Avatar, Pill, type AvatarTone } from './app-parts'
 
 const matches: { name: string; role: string; initials: string; tone: AvatarTone; meta: string; score: string; met: string[]; open: string[] }[] = [
-  { name: 'Lena B.', role: 'KI-Engineer, LLM und RAG', initials: 'LB', tone: 'amber', meta: '950 € / Tag · ab 01.12.', score: '4 von 4', met: ['RAG', 'Azure OpenAI', 'Deutsch', 'Start Dezember'], open: [] },
+  { name: 'Lena B.', role: 'KI-Engineer, LLM und RAG', initials: 'LB', tone: 'forest', meta: '950 € / Tag · ab 01.12.', score: '4 von 4', met: ['RAG', 'Azure OpenAI', 'Deutsch', 'Start Dezember'], open: [] },
   { name: 'Tobias K.', role: 'AI Solutions Architect', initials: 'TK', tone: 'green', meta: '1.100 € / Tag · ab Januar', score: '3 von 4', met: ['RAG', 'Azure OpenAI', 'Deutsch'], open: ['Start'] },
   { name: 'Sara M.', role: 'Data und AI Engineer', initials: 'SM', tone: 'slate', meta: '110 € / Std · sofort', score: '3 von 4', met: ['RAG', 'Deutsch', 'Start Dezember'], open: ['Azure'] },
 ]
@@ -19,7 +19,7 @@ export function MatchPreview() {
 
         <div className="flex items-center justify-between">
           <p className="text-[14px] font-medium">3 passende Profile</p>
-          <Pill tone="amber">Beispielprofile</Pill>
+          <Pill tone="neutral">Beispielprofile</Pill>
         </div>
 
         <ul className="flex flex-col gap-2.5">

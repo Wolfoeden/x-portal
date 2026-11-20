@@ -1,3 +1,3 @@
-// Lage der Hubs auf der Europakarte, nur ungefähr: Region, nicht das Grundstück.
-// Node001 liegt in den Karpaten der Westukraine, an der Grenze zu Ungarn.
-export const HUB_01: [number, number] = [23.2, 48.5]
+// Regional reference near Node001: Verkhovyna (GeoNames 689817), longitude, latitude.
+// https://www.geonames.org/689817/verkhovyna.html
+export const HUB_01: [number, number] = [24.82986, 48.15536]

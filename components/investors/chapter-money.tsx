@@ -26,7 +26,7 @@ export function ChapterMoney({ locale }: { locale: Locale }) {
                 <li key={stream.name} className="flex flex-col gap-1 border-t border-line py-3">
                   <span className="flex flex-wrap items-center justify-between gap-2">
                     <span className="text-[17px] font-medium text-ink">{stream.name}</span>
-                    <span className={`rounded-full px-2.5 py-0.5 text-[12.5px] font-medium ${stream.live ? 'bg-brand-soft text-brand-ink' : 'bg-amber-soft text-amber-ink'}`}>{stream.status}</span>
+                    <span className={`rounded-full px-2.5 py-0.5 text-[12.5px] font-medium ${stream.live ? 'bg-brand-soft text-brand-ink' : 'bg-surface-2 text-body'}`}>{stream.status}</span>
                   </span>
                   <span className="text-[15px] leading-relaxed text-muted">{stream.text}</span>
                 </li>

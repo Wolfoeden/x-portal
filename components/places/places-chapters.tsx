@@ -1,11 +1,10 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import { SitePhoto } from '@/components/places/site-photo'
 import { KindBadge } from '@/components/places/ai-badge'
 import { IMAGES } from '@/lib/images'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { HeroEmailForm } from '@/components/places/hero-form'
-import { ReappearEmail } from '@/components/places/sticky-email'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, pageHref, type Locale } from '@/lib/i18n/routes'
 
@@ -20,9 +19,9 @@ export function ChapterPlace({ locale }: { locale: Locale }) {
     <section id={IDS[locale].place} aria-labelledby="ort-title" className="scroll-mt-16 bg-surface lg:h-[calc(100svh-4rem)] lg:min-h-[600px]">
       <Container className="grid h-full grid-cols-[minmax(0,1fr)] gap-8 py-16 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-16 lg:py-8">
         <div className="flex flex-col gap-5">
-          <ReappearEmail>
+          <div className="w-full max-w-[520px]">
             <HeroEmailForm id="orte-ort-email" />
-          </ReappearEmail>
+          </div>
           <ChapterLabel number="01">{copy.label}</ChapterLabel>
           <h2 id="ort-title" className="text-[clamp(3rem,7vw,6.5rem)] font-medium leading-[0.94] tracking-[-0.045em] text-ink">
             <span className="block whitespace-nowrap text-[#7c847f]">{copy.titleGray}</span>
@@ -31,7 +30,7 @@ export function ChapterPlace({ locale }: { locale: Locale }) {
           <p className="max-w-[460px] text-[17px] leading-relaxed text-muted md:text-[18px]">{copy.text}</p>
         </div>
         <figure className="group relative aspect-[1122/1402] w-full overflow-hidden rounded-[28px] shadow-[0_1px_2px_rgb(14_20_17/0.04),0_30px_70px_-30px_rgb(14_20_17/0.35)] lg:h-full lg:max-h-[820px] lg:w-auto lg:self-center">
-          <Image src={IMAGES.community.src} alt={copy.imageAlt} fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.03]" />
+          <SitePhoto src={IMAGES.community.src} mobileSrc="/orte/gemeinschaftshaus-mobil.avif" alt={copy.imageAlt} sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover transition-transform duration-1000 ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.03]" />
           <KindBadge kind={IMAGES.community.kind} words={dict} />
         </figure>
       </Container>
@@ -40,9 +39,10 @@ export function ChapterPlace({ locale }: { locale: Locale }) {
 }
 
 export function PlaceFacts({ locale }: { locale: Locale }) {
-  const facts = getDictionary(locale).places.facts
+  const places = getDictionary(locale).places
+  const facts = places.facts
   return (
-    <section aria-label={getDictionary(locale).places.place.label} className="border-b border-line">
+    <section aria-label={places.place.label} className="border-b border-line">
       <Container>
         <ul className="grid grid-cols-2 lg:grid-cols-4">
           {facts.map((fact, index) => (
@@ -68,7 +68,7 @@ export function ChapterPlacesFaq({ locale }: { locale: Locale }) {
         <div className="border-t border-line">
           {copy.items.map((item) => (
             <details key={item.question} className="group border-b border-line">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-4 text-[17px] font-medium text-ink md:py-5 md:text-[18px] [&::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-4 text-[17px] font-medium text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand md:py-5 md:text-[18px] [&::-webkit-details-marker]:hidden">
                 {item.question}
                 <span aria-hidden className="text-[22px] font-normal text-faint transition-transform group-open:rotate-45">
                   +

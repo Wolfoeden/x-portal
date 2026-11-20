@@ -165,12 +165,12 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-40 border-b bg-white/90 backdrop-blur-md transition-colors duration-200 ${
+      className={`sticky top-0 z-40 border-b bg-white lg:bg-white/90 lg:backdrop-blur-md transition-colors duration-200 ${
         scrolled || mobileOpen ? 'border-line' : 'border-transparent'
       }`}
     >
       <Container className="flex h-16 items-center gap-4 xl:gap-6">
-        <Link href={pagePath('home', locale)} className="shrink-0 rounded-md text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand" aria-label={text.homeLabel}>
+        <Link prefetch={false} href={pagePath('home', locale)} className="shrink-0 rounded-md text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand" aria-label={text.homeLabel}>
           <Wordmark className="h-7 w-auto max-[359px]:h-6" />
         </Link>
 
@@ -195,6 +195,7 @@ export function SiteHeader() {
 
         <div className="ml-auto flex items-center gap-1">
           <Link
+            prefetch={false}
             href={language.href}
             onClick={language.onClick}
             hrefLang={language.other}
@@ -212,7 +213,7 @@ export function SiteHeader() {
           <Link href={pagePath('account', locale)} className="auth-in hidden h-10 items-center rounded-full px-3 text-[15px] text-ink transition-colors hover:text-brand sm:inline-flex">
             {text.account}
           </Link>
-          <ButtonLink href={ctaHref} onClick={() => setMobileOpen(false)} className="auth-out ml-1 h-10 px-[18px] max-sm:h-9 max-sm:px-4 max-sm:text-[14px]">
+          <ButtonLink prefetch={false} href={ctaHref} onClick={() => setMobileOpen(false)} className="auth-out ml-1 h-10 px-[18px] max-sm:h-9 max-sm:px-4 max-sm:text-[14px]">
             {/* Auf schmalen Handys der kurze Text, sonst wird die Kopfzeile breiter als der Bildschirm. */}
             {/* Kurz auf schmalen Handys und zwischen 1.024 und 1.280 px, wo die Menüleiste schon steht. */}
             <span className="sm:hidden lg:inline xl:hidden">{cta.short}</span>

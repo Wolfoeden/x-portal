@@ -1,4 +1,5 @@
--- Whitelist für Node001 (Seite Orte; Tabellen heißen „waitlist“): künftige Mieter, Workation oder Miete.
+-- Whitelist für Node001 (Seite Orte; Tabellen heißen „waitlist“).
+-- Seit 19.11.2026 fragt das Formular nur E-Mail und Einwilligung. Name, Land, Nutzung und Zeitpunkt bleiben leer.
 -- Kein Kauf: Es wird nichts verkauft (Plan vom 13.11.2026, D45 und D48; Kommentar vom 17.11.2026).
 -- Double-Opt-in: Ein Eintrag zählt erst, wenn der Link aus der Mail geklickt wurde. Nur der Server liest und schreibt.
 
@@ -14,8 +15,8 @@ create table public.waitlist_entries (
   -- has_work = hat schon Arbeit, seeks_work = sucht Arbeit über XPORTAL (Rollen am Ort, digitale Nomaden). Freiwillig.
   work text check (work is null or work in ('has_work', 'seeks_work')),
   email extensions.citext not null check (private.valid_email(email::text)),
-  interest public.waitlist_interest not null,
-  timing text not null check (timing in ('now', 'later')),
+  interest public.waitlist_interest,
+  timing text check (timing is null or timing in ('now', 'later')),
   campaign text check (char_length(campaign) <= 40),
   locale public.app_locale not null default 'de',
   consent_text_version text not null check (char_length(consent_text_version) between 1 and 40),

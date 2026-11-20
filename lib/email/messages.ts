@@ -128,14 +128,15 @@ export function waitlistConfirmLink(input: { locale: Locale; link: string }) {
 /** An das Postfach des Betreibers, sobald ein Eintrag bestätigt ist. Die Felder heißen wie in public.waitlist_entries. */
 const WORK_NAMES: Record<string, string> = { has_work: 'hat schon Arbeit', seeks_work: 'sucht Arbeit über XPORTAL' }
 
-export function waitlistNotification(input: { first_name: string | null; last_name?: string | null; email: string; country?: string | null; work?: string | null; interest: string; timing: string; campaign: string | null; locale: string }) {
-  const use = INTEREST_NAMES[input.interest] ?? input.interest
-  const start = TIMING_NAMES[input.timing] ?? input.timing
+export function waitlistNotification(input: { first_name: string | null; last_name?: string | null; email: string; country?: string | null; work?: string | null; interest: string | null; timing: string | null; campaign: string | null; locale: string }) {
+  const use = input.interest ? (INTEREST_NAMES[input.interest] ?? input.interest) : null
+  const start = input.timing ? (TIMING_NAMES[input.timing] ?? input.timing) : null
+  const subject = use && start ? `Whitelist Node001 bestätigt: ${use} · ${start}` : `Whitelist Node001 bestätigt: ${input.email}`
   return {
-    subject: `Whitelist Node001 bestätigt: ${use} · ${start}`.slice(0, 160),
+    subject: subject.slice(0, 160),
     text: [
-      `Nutzung: ${use}`,
-      `Ab wann: ${start}`,
+      `Nutzung: ${use ?? '–'}`,
+      `Ab wann: ${start ?? '–'}`,
       `Name: ${[input.first_name, input.last_name].filter(Boolean).join(' ') || '–'}`,
       `E-Mail: ${input.email}`,
       `Land: ${input.country || '–'}`,

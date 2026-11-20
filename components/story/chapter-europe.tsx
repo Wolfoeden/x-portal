@@ -1,11 +1,8 @@
 'use client'
 
-import { motion } from 'motion/react'
-import { useReducedMotion } from '@/lib/use-reduced-motion'
 import { Cloud, Database, FlaskConical, Lock, MessageSquareOff, ScrollText, Server } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { useStory } from '@/components/story/story-context'
-import { useMediaQuery } from '@/lib/use-media-query'
 import { ChapterLabel, TalentAvatar, chapterTitle } from '@/components/story/talent-avatar'
 import { kindOf, roleOf, talentOf } from '@/lib/demo/scenarios'
 import { useLocale } from '@/components/i18n/locale-provider'
@@ -17,9 +14,6 @@ export function ChapterEurope() {
   const { scenario, choices } = useStory()
   const { dict, ids } = useLocale()
   const copy = dict.home.europe
-  const reduceMotion = useReducedMotion()
-  // Gestapelt auf dem Handy: dort gleiten die Zonen nicht auseinander.
-  const sideBySide = useMediaQuery('(min-width: 768px)', true)
   // Die Zonen gelten für externe Freelancer; Ihr Team und die Agenten arbeiten nach Ihren Regeln.
   const freelancers = scenario.team.filter((member) => kindOf(member) === 'freelancer')
   const onSite = freelancers.filter((member) => talentOf(member).onSite)
@@ -32,13 +26,6 @@ export function ChapterEurope() {
     ...(model === 'claude' || model === 'openai' ? [{ text: fill(copy.modelCloud, { provider: dict.choices.model.options[model].provider }), Icon: Cloud }] : []),
   ]
 
-  const zone = (side: 'left' | 'right') => ({
-    initial: reduceMotion || !sideBySide ? false : { x: 0 },
-    whileInView: { x: sideBySide ? (side === 'left' ? -10 : 10) : 0 },
-    viewport: { once: true, amount: 0.6 },
-    transition: { type: 'spring' as const, stiffness: 90, damping: 18, delay: 0.25 },
-  })
-
   return (
     <section id={ids.data} className="scroll-mt-16 py-28 md:py-40" aria-labelledby="daten-title">
       <Container className="flex flex-col gap-14">
@@ -50,8 +37,8 @@ export function ChapterEurope() {
           <p className="max-w-[460px] text-[18px] leading-relaxed text-muted">{copy.text}</p>
         </div>
 
-        <div className="relative grid grid-cols-[minmax(0,1fr)] gap-3 md:grid-cols-2 md:gap-0">
-          <motion.div {...zone('left')} className="flex min-h-[300px] flex-col justify-between rounded-[28px] bg-brand-soft p-7 md:p-10">
+        <div className="relative grid grid-cols-[minmax(0,1fr)] gap-3 md:grid-cols-2 md:gap-4">
+          <div className="flex min-h-[300px] flex-col justify-between rounded-[28px] bg-brand-soft p-7 md:p-10">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <p className="text-[15px] font-medium text-brand-ink">{copy.onSiteZone}</p>
               <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white px-3 py-1.5 text-[13px] font-medium text-brand-ink">
@@ -74,9 +61,9 @@ export function ChapterEurope() {
                 )
               })}
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div {...zone('right')} className="flex min-h-[300px] flex-col justify-between rounded-[28px] border border-line bg-white p-7 md:p-10">
+          <div className="flex min-h-[300px] flex-col justify-between rounded-[28px] border border-line bg-white p-7 md:p-10">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <p className="text-[15px] font-medium text-ink">{copy.remoteZone}</p>
               <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-surface px-3 py-1.5 text-[13px] font-medium text-muted">
@@ -99,7 +86,7 @@ export function ChapterEurope() {
                 )
               })}
             </ul>
-          </motion.div>
+          </div>
         </div>
 
         <ul className="flex flex-wrap gap-x-8 gap-y-3">

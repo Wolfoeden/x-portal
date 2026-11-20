@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { SitePhoto } from '@/components/places/site-photo'
 import { Check, ChevronDown, PencilRuler } from 'lucide-react'
 import { Container } from '@/components/ui/primitives'
 import { chapterTitle } from '@/components/story/talent-avatar'
@@ -58,7 +58,7 @@ export function Transparency({ locale, page, compact = false }: { locale: Locale
             {shown.map((key) => (
               <li key={key} className="flex items-center gap-4 rounded-2xl border border-line p-3">
                 <span className="relative block h-16 w-24 shrink-0 overflow-hidden rounded-xl">
-                  <Image src={IMAGES[key].src} alt="" fill sizes="96px" className="object-cover" />
+                  <SitePhoto src={IMAGES[key].src} alt="" sizes="96px" className="object-cover" />
                 </span>
                 <span className="flex min-w-0 flex-col gap-0.5">
                   <span className="text-[15px] font-medium text-ink">{copy.images[key]}</span>

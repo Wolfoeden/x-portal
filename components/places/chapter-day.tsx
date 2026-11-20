@@ -1,8 +1,7 @@
-import Image from 'next/image'
+import { SitePhoto } from '@/components/places/site-photo'
 import { Container } from '@/components/ui/primitives'
 import { ChapterLabel, chapterTitle } from '@/components/story/talent-avatar'
 import { KindBadge } from '@/components/places/ai-badge'
-import { OfferAction } from '@/components/places/hero-form'
 import { IMAGES, type ImageKey } from '@/lib/images'
 import { getDictionary } from '@/lib/i18n/dictionary'
 import { IDS, type Locale } from '@/lib/i18n/routes'
@@ -11,11 +10,12 @@ import { IDS, type Locale } from '@/lib/i18n/routes'
  * „Ein Tag auf Node001“ (17.11.2026): das StoryBrand-Erfolgsbild als Tagesablauf, statt der Angebotskarten.
  * Wording nach dem Limbic-Sternbild „X-Portal Node001“ (Projektleitung, 17.11.2026; Index 3.0, Limbic Map beim Maslow-Teil):
  *   07:00 Morgen am Hang         Natur                    (Balance · Fantasie & Genuss)
- *   09:30 Konzentriert arbeiten  Effizienz                (Dominanz · Disziplin & Kontrolle)
+ *   09:30 Frei und konzentriert  Effizienz, Freiheit      (Dominanz · Disziplin & Kontrolle / Abenteuer & Thrill)
  *   13:00 Gesund essen           Gesundheit               (Balance · Disziplin & Kontrolle)
  *   17:00 Draußen sein           Gesundheit, Natur        (Balance)
  *   20:00 Ruhig schlafen         Sicherheit               (Balance · Disziplin & Kontrolle)
- * Fakten nur nach Plan: Kommunalgebäude (D64), Feuerstelle (D34), Sauna (D35), Gemüsegarten (M02-23) in Phase 1; Internet mit Starlink als Reserve (D63);
+ * Freiheit ist die freie Wahl von Platz und Dauer, nicht Abenteuerurlaub. Schwerpunkt bleibt 3 × Balance, 2 × Dominanz.
+ * Fakten nur nach Plan: Kommunalgebäude (D64), Feuerstelle (D34), Sauna (D35), Gemüsegarten (M02-23) in Phase 1; Internet: Anbieter vor Ort, Starlink als Reserve (D63, bestätigt 19.11.2026);
  * Trinkwasseraufbereitung (D61), Holz für den Winter (D60), Generator als Reserve (D59).
  */
 const SCENE_IMAGES: (ImageKey | null)[] = ['unit', 'slope', null, null, 'target']
@@ -53,7 +53,7 @@ export function ChapterDay({ locale }: { locale: Locale }) {
                   </div>
                   {image ? (
                     <figure className="relative aspect-[16/10] overflow-hidden rounded-[22px]">
-                      <Image src={image.src} alt={scene.imageAlt} fill sizes="(min-width: 1024px) 560px, 100vw" className={`object-cover ${POSITION[key as string]}`} />
+                      <SitePhoto src={image.src} alt={scene.imageAlt} sizes="(min-width: 1024px) 560px, 100vw" className={`object-cover ${POSITION[key as string]}`} />
                       <KindBadge kind={image.kind} words={dict} />
                     </figure>
                   ) : null}
@@ -62,11 +62,6 @@ export function ChapterDay({ locale }: { locale: Locale }) {
             )
           })}
         </ol>
-
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-3 rounded-[24px] bg-brand-soft p-6 md:p-8">
-          <p className="text-[20px] font-medium tracking-[-0.015em] text-ink md:text-[24px]">{copy.ctaText}</p>
-          <OfferAction use="workation" label={copy.cta} className="bg-brand text-white hover:bg-brand-hover" />
-        </div>
       </Container>
     </section>
   )

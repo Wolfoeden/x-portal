@@ -1,4 +1,4 @@
-import { MARK, WORDMARK } from './logo-paths'
+import { MARK } from './logo-paths'
 
 /** Bildmarke allein, z. B. in der App-Leiste. Farbe über `color`. */
 export function LogoMark({ className = '', title }: { className?: string; title?: string }) {
@@ -21,7 +21,7 @@ export function LogoMark({ className = '', title }: { className?: string; title?
 export function Wordmark({ className = '', title }: { className?: string; title?: string }) {
   return (
     <svg
-      viewBox={WORDMARK.viewBox}
+      viewBox="0 0 511 100"
       fill="currentColor"
       className={className}
       role={title ? 'img' : undefined}
@@ -29,7 +29,7 @@ export function Wordmark({ className = '', title }: { className?: string; title?
       focusable="false"
     >
       {title ? <title>{title}</title> : null}
-      <path fillRule="evenodd" d={WORDMARK.d} />
+      <use href="/brand/wordmark-path.svg#wordmark" />
     </svg>
   )
 }

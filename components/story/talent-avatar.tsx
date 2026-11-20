@@ -4,7 +4,7 @@ import type { Dictionary } from '@/lib/i18n/dictionary'
 
 export const toneClass: Record<Tone, string> = {
   green: 'bg-brand-soft text-brand-ink',
-  amber: 'bg-amber-soft text-amber-ink',
+  forest: 'bg-brand-deep text-white',
   slate: 'bg-[#e3ecef] text-[#24515e]',
   stone: 'bg-surface-2 text-body',
 }

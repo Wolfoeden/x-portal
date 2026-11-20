@@ -8,5 +8,11 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# Indexierung nicht hier einschalten. In der Netlify-Oberfläche nur für Production:
+#   SITE_INDEXABLE = "true"
+#   NEXT_PUBLIC_SITE_URL = "https://x-portal.eu"
+# Deploy Previews und Branch Deploys bleiben noindex (Code und Netlify).
+# Stand 19.11.2026 sendet https://x-portal.eu noch X-Robots-Tag: noindex, nofollow.
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"

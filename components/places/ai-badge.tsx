@@ -7,22 +7,29 @@ export function AiBadge({ text, label, className = 'left-3.5 top-3.5' }: { text:
       <button
         type="button"
         aria-label={label}
-        className="grid size-[30px] place-items-center rounded-full bg-[rgb(14_20_17/0.66)] font-serif text-[14px] font-semibold italic text-white backdrop-blur-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        className="grid size-[30px] place-items-center rounded-full bg-[rgb(14_20_17/0.82)] font-serif text-[14px] font-semibold italic text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
         i
       </button>
-      <span role="tooltip" className="pointer-events-none ml-2 w-max max-w-[min(300px,70vw)] rounded-2xl bg-[rgb(14_20_17/0.82)] px-3.5 py-2 leading-snug text-[12.5px] font-medium text-white opacity-0 backdrop-blur-md transition-opacity group-hover/ki:opacity-100 group-focus-within/ki:opacity-100">
+      <span role="tooltip" className="pointer-events-none ml-2 w-max max-w-[min(300px,70vw)] rounded-2xl bg-[rgb(14_20_17/0.94)] px-3.5 py-2 leading-snug text-[12.5px] font-medium text-white opacity-0 transition-opacity group-hover/ki:opacity-100 group-focus-within/ki:opacity-100">
         {text}
       </span>
     </span>
   )
 }
 
-type BadgeWords = { aiImage: string; aiImageLabel: string; renderImage: string; renderImageLabel: string }
+type BadgeWords = {
+  aiImage: string
+  aiImageLabel: string
+  renderImage: string
+  renderImageLabel: string
+  planImage: string
+  planImageLabel: string
+}
 
-/** Kennzeichnung nach der Art des Bildes aus lib/images.ts: Drohnenfoto mit eingesetzten Gebäuden oder reines Schaubild. */
+/** Kennzeichnung nach der Art des Bildes aus lib/images.ts. */
 export function KindBadge({ kind, words, className }: { kind: ImageKind; words: BadgeWords; className?: string }) {
-  return kind === 'render'
-    ? <AiBadge text={words.renderImage} label={words.renderImageLabel} className={className} />
-    : <AiBadge text={words.aiImage} label={words.aiImageLabel} className={className} />
+  if (kind === 'render') return <AiBadge text={words.renderImage} label={words.renderImageLabel} className={className} />
+  if (kind === 'plan') return <AiBadge text={words.planImage} label={words.planImageLabel} className={className} />
+  return <AiBadge text={words.aiImage} label={words.aiImageLabel} className={className} />
 }
